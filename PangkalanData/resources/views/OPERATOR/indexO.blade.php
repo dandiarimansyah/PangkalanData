@@ -33,8 +33,8 @@
 
         <div class="container footer">
             <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
-            <h5>Meteseh 0865162376123</h5>
-            <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
+            <h5>Jalan Elang Raya 1, Mangunharjo, Tembalang, Semarang</h5>
+            <h5>Pos-el: balaibahasa.jateng@kemdikbud.go.id</h5>
         </div>
         
         <script>
