@@ -6,7 +6,6 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"> </script>
     <link rel="stylesheet" href="vlogin.css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vlogin.css') }}">
-
     <title>Halaman Masuk</title>
   </head>
 
@@ -72,6 +71,6 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="{{ asset("js/app.js")}}"></script>
   </body>
 </html>
