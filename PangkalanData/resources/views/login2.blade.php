@@ -41,7 +41,7 @@
 
       <div class="panels-container">
         <div class="panel left-panel">
-          <img src="img/validator.svg" class="image"/>
+          <img src="{{ asset("img/validator.svg")}}" class="image"/>
         </div>
 
         

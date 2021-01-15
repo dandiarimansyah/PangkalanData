@@ -54,7 +54,7 @@
               Operator
             </button>
           </div>
-          <img src="img/validator.svg" class="image"/>
+          <img src="{{ asset("img/validator.svg")}}" class="image"/>
         </div>
 
         <div class="panel right-panel" >
@@ -67,7 +67,7 @@
               Validator
             </button>
           </div>
-          <img src="img/operator.svg" class="image"/>
+          <img src="{{ asset("img/operator.svg")}}" class="image"/>
         </div>
       </div>
     </div>
