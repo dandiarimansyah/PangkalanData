@@ -21,4 +21,7 @@ Route::get('/', function () {
 //Sementara hanya return view dulu
 Route::view('masuk', 'login');
 Route::view('masuk2', 'login2');
-Route::view('/validator/index', 'VALIDATOR.index');
+
+Route::view('/validator/indexV', 'VALIDATOR.indexV');
+
+Route::view('/operator/indexO', 'OPERATOR.indexO');

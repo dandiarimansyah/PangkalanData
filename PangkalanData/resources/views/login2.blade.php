@@ -13,29 +13,29 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
+
           <form action="#" class="sign-in-form">
             <h2 class="title">Masuk Validator / Operator</h2>
+        
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Nama Pengguna" />
             </div>
+        
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Kata Sandi" />
             </div>
+        
             <input type="submit" value="Masuk" class="btn solid" />
 
 
             <a href="#" class="kembali"> 
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
                 Kembali ke Laman Utama
-              </a>
+            </a>
 
-            <!-- <input class="kembali" type="submit" value="Kembali ke Laman Utama" class="btn solid" /> -->
           </form>
-         
-          
-
         </div>
       </div>
 
@@ -44,7 +44,6 @@
           <img src="{{ asset("img/validator.svg")}}" class="image"/>
         </div>
 
-        
     </div>
 
     <script src="{{ asset("js/app.js")}}"></script>
