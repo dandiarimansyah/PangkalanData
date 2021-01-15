@@ -14,7 +14,6 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-
           <form action="#" class="sign-in-form">
             <h2 class="title">Masuk sebagai Validator</h2>
             <div class="input-field">

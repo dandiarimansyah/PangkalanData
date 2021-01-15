@@ -22,19 +22,12 @@
             
             <input type="checkbox" id="btn">
             <ul>
-                <li><a href="#">BERANDA</a></li>
-                
-                <li><a href="#">VALIDASI</a></li>
-                
+                <li><a href="#">VALIDASI</a></li>    
                 <li><a href="#">MEDIA</a></li>
-
                 <li><a href="#">LAPORAN</a></li>
-
                 <li><a href="#">GRAFIK</a></li>
-
                 <li><a href="#">FORUM</a></li>
-
-                <li class="logout" ><a href="#">KELUAR</a></li>
+                <li><a href="#" class="logout">KELUAR</a></li>
                
                 <!--  -->
 <!-- 
@@ -63,7 +56,7 @@
 
                 <!--  -->
 
-                <!-- <li><a href="#">Portfolio</a></li>
+                <!-- <li><a href="#">Portfolio</a></li> -->
                 
                 <!--  -->
 
