@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"> </script>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vlogin2.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vlogin2.css') }}">
     <title>Halaman Masuk</title>
   </head>
 

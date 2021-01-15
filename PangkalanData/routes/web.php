@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//Sementara hanya return view dulu
+Route::view('masuk', 'login');
+Route::view('masuk2', 'login2');
+Route::view('/validator/index', 'VALIDATOR.index');
