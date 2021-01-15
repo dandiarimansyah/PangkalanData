@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +29,12 @@
 
         <div class="content">
             <header>OPERATOR</header>
+        </div>
+
+        <div class="container footer">
+            <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
+            <h5>Meteseh 0865162376123</h5>
+            <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
         </div>
         
         <script>

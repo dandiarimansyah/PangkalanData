@@ -29,6 +29,12 @@
         <div class="content">
             <header>Validator</header>
         </div>
+
+        <div class="container footer">
+            <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
+            <h5>Meteseh 0865162376123</h5>
+            <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
+        </div>
         
         <script>
             $('.icon').click(function(){
