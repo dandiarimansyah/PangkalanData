@@ -5,7 +5,6 @@
         <meta charset="utf-8">
         <!-- <title>Responsive Drop-down Menu Bar</title> -->
         <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
-
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
