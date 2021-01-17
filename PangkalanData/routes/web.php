@@ -22,6 +22,15 @@ Route::get('/', function () {
 Route::view('masuk', 'login');
 Route::view('masuk2', 'login2');
 
+Route::view('/media', 'media');
+Route::view('/laporan', 'laporan');
+Route::view('/grafik', 'grafik');
+Route::view('/forum', 'forum');
+
+
+//VALIDATOR
 Route::view('/validator/index', 'VALIDATOR.indexV');
 
-Route::view('/operator/index', 'OPERATOR.indexO');
+//OPERATOR
+Route::view('/operator/input', 'OPERATOR.input');
+Route::view('/operator/edit', 'OPERATOR.edit');

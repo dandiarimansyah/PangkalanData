@@ -17,24 +17,22 @@
             
             <input type="checkbox" id="btn">
             <ul>
-                <li><a href="#">INPUT</a></li>    
-                <li><a href="#">EDIT</a></li>    
-                <li><a href="#">MEDIA</a></li>
-                <li><a href="#">LAPORAN</a></li>
-                <li><a href="#">GRAFIK</a></li>
-                <li><a href="#">FORUM</a></li>
+                <li><a href="/operator/input">INPUT</a></li>    
+                <li><a href="/operator/edit">EDIT</a></li>    
+                <li><a href="/media">MEDIA</a></li>
+                <li><a href="/laporan">LAPORAN</a></li>
+                <li><a href="/grafik">GRAFIK</a></li>
+                <li><a href="/forum">FORUM</a></li>
                 <li><a href="#" class="logout">KELUAR</a></li>
             </ul>
         </nav>
 
-        <div class="content">
-            <header>OPERATOR</header>
-        </div>
+        @yield('content')
 
         <div class="container footer">
             <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
-            <h5>Meteseh 0865162376123</h5>
-            <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
+            <h5>Jalan Elang Raya No.1, Mangunharjo, Tembalang, Sendangmulyo, Tembalang, Kota Semarang, Jawa Tengah 50272</h5>
+            <h5>Telepon: (024) 70769945 || Faksimile: (024) 76744358</h5>
         </div>
         
         <script>
