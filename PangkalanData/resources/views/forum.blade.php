@@ -8,7 +8,6 @@
         <header>HALAMAN FORUM</header>
     </div>
 
-<<<<<<< HEAD
     <div class="menu">
         <!-- KATEGORI FORUM INTERNAL -->
         <div class="btn-group kategori">
@@ -27,6 +26,4 @@
      
     </div>
 
-=======
->>>>>>> 5f3374b6821c53a3217593c17dbd383389f69293
 @endsection
