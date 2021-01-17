@@ -29,7 +29,7 @@ Route::view('/forum', 'forum');
 
 
 //VALIDATOR
-Route::view('/validator/index', 'VALIDATOR.indexV');
+Route::view('/validator/validasi', 'VALIDATOR.validasi');
 
 //OPERATOR
 Route::view('/operator/input', 'OPERATOR.input');

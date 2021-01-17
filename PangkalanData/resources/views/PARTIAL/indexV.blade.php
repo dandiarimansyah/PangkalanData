@@ -17,18 +17,16 @@
             
             <input type="checkbox" id="btn">
             <ul>
-                <li><a href="#">VALIDASI</a></li>    
-                <li><a href="#">MEDIA</a></li>
-                <li><a href="#">LAPORAN</a></li>
-                <li><a href="#">GRAFIK</a></li>
-                <li><a href="#">FORUM</a></li>
+                <li><a href="/validator/validasi">VALIDASI</a></li>        
+                <li><a href="/media">MEDIA</a></li>
+                <li><a href="/laporan">LAPORAN</a></li>
+                <li><a href="/grafik">GRAFIK</a></li>
+                <li><a href="/forum">FORUM</a></li>
                 <li><a href="#" class="logout">KELUAR</a></li>
             </ul>
         </nav>
 
-        <div class="content">
-            <header>Validator</header>
-        </div>
+        @yield('content')
 
         <div class="container footer">
             <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
