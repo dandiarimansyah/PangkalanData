@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
     <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
