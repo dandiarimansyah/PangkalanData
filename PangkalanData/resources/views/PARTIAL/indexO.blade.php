@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-<<<<<<< HEAD
-    <meta charset="utf-8">
-=======
         <meta charset="utf-8">
->>>>>>> 129798d649f780a5dbcf7f7cb447bd8cd1a1e724
         <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
