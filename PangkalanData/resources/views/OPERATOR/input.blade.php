@@ -73,16 +73,6 @@
                 <a class="dropdown-item" href="#">Penelitian</a>
             </div>
         </div>
-
-        <!-- KATEGORI DATA PENELITIAN -->
-        <div class="btn-group kategori">
-            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Data Penelitian
-                </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Penelitian</a>
-            </div>
-        </div>
     </div>
 
 @endsection

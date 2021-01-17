@@ -11,7 +11,7 @@ body {
 }
 nav {
     background: #0247bd;
-    max-height: 70px ;
+    max-height: 70px;
 }
 nav:after {
     content: "";
@@ -49,6 +49,7 @@ nav ul li a:hover {
     color: yellow;
     border-radius: 30px;
     box-shadow: 0 0 5px #fafdfd, 0 0 10px #ffffff;
+    text-decoration: none;
 }
 
 .show,
@@ -163,4 +164,13 @@ p {
     font-size: 13px;
     color: rgb(255, 255, 255);
     padding: 1px 0px 1px 0px;
+}
+
+.kategori {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.menu {
+    display: flex;
 }
