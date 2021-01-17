@@ -11,6 +11,7 @@ body {
 }
 nav {
     background: #028b40;
+    max-height: 70px ;
 }
 nav:after {
     content: "";
@@ -162,4 +163,13 @@ p {
     font-size: 13px;
     color: rgb(255, 255, 255);
     padding: 1px 0px 1px 0px;
+}
+
+.kategori {
+    margin-left:10px ;
+    margin-top:10px;
+}
+
+.menu {
+    display: flex;
 }
