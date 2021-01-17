@@ -33,7 +33,7 @@
         <div class="container footer">
             <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
             <h5>Jalan Elang Raya No.1, Mangunharjo, Tembalang, Sendangmulyo, Tembalang, Kota Semarang, Jawa Tengah 50272</h5>
-            <h5>Telepon: (024) 70769945 || Faksimile: (024) 76744358</h5>
+            <h5>Pos-el: balaibahasa.jateng@kemdikbud.go.id</h5>
         </div>
         
         <script>
