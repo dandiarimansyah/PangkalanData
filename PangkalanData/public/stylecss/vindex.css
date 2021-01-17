@@ -11,7 +11,7 @@ body {
 }
 nav {
     background: #028b40;
-    max-height: 70px ;
+    max-height: 70px;
 }
 nav:after {
     content: "";
@@ -49,6 +49,7 @@ nav ul li a:hover {
     color: yellow;
     border-radius: 30px;
     box-shadow: 0 0 5px #fafdfd, 0 0 10px #ffffff;
+    text-decoration: none;
 }
 
 .show,
@@ -166,8 +167,8 @@ p {
 }
 
 .kategori {
-    margin-left:10px ;
-    margin-top:10px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .menu {
