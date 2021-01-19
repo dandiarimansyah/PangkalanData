@@ -151,10 +151,8 @@ p {
 .footer {
     width: 100%;
     padding: 10px 0 10px 0;
-    /* margin-bottom: 30px; */
     text-align: center;
     bottom: 0;
-    position: fixed;
     background-color: #0247bd;
 }
 

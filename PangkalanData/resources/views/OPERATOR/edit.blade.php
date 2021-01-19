@@ -9,7 +9,7 @@
     <div class="menu">
         <!-- KATEGORI SEKRETARIAT -->
         <div class="btn-group kategori">
-            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-warning" aria-haspopup="true" aria-expanded="false">
                 Profil Balai/Kantor
             </button>
         </div>

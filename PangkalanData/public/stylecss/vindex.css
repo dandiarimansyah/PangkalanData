@@ -151,10 +151,8 @@ p {
 .footer {
     width: 100%;
     padding: 10px 0 10px 0;
-    /* margin-bottom: 30px; */
     text-align: center;
     bottom: 0;
-    position: fixed;
     background-color: #028b40;
 }
 
@@ -173,4 +171,66 @@ p {
 
 .menu {
     display: flex;
+}
+
+/* CSS TABLE */
+
+.content-table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-right: 70px;
+}
+
+.content-table thead tr {
+    background-color: rgb(26, 180, 96);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th {
+    padding: 10px 15px 10px 15px;
+}
+
+.content-table td {
+    padding: 5px 15px 5px 15px;
+}
+
+.kanan td {
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;   
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(26, 180, 96);
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: rgb(26, 180, 96);
+}  
+
+.validasi {
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+}
+
+.judul {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 35px;
 }
