@@ -72,7 +72,26 @@
     </div>
 
     <div class="judul">
-        <th>VALIDASI DATA</th>
+        <th>VALIDASI DATA KEPEGAWAIAN UNIT/SATUAN KERJA</th>
+    </div>
+
+    <div class="menu" style="display:flex; justify-content:center">
+        <!-- KATEGORI SEKRETARIAT -->
+        <div class="btn-group kategori">
+            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+                KEMBALI KE MENU
+            </button>
+        </div>
+
+        <div class="btn-group kategori">
+            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+                CETAK
+            </button>
+        </div>
+    </div>
+
+    <div class="ketjudul">
+        <th>Klik CENTANG untuk melakukan validasi data.</th>
     </div>
 
     <!-- TABLE -->
@@ -80,161 +99,92 @@
         <table class="content-table">
             <thead>
                 <tr>
-                    <th colspan="2">Data yang belum tervalidasi</th>
+                    <th rowspan="2">NO</th>
+                    <th rowspan="2">EDIT</th>
+                    <th rowspan="2">VALIDASI</th>
+                    <th rowspan="2">TANGGAL DIPERBAHARUI</th>
+                    <th rowspan="2">UNIT/SATUAN KERJA</th>
+                    <th colspan="3">JUMLAH PEGAWAI</th>
+                    <!-- <th>KESELURUHAN</th>
+                    <th>LAKI-LAKI</th>
+                    <th>PEREMPUAN</th> -->
+                    <th colspan="7">TINGKAT PENDIDIKAN</th>
+                    <th colspan="17">PANGKAT/GOLONGAN</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td style="font-weight:bold">Data Kebahasaan</td>
-                    <td>Penyuluhan: 59</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td>11-12-2018</td>
+                    <td>Balai Bahasa Jawa Tengah</td>
+                    <td>47</td>
+                    <td>25</td>
+                    <td>22</td>
+                    <td>1</td>
+                    <td>18</td>
+                    <td>15</td>
+                    <td>2</td>
+                    <td>11</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>15</td>
+                    <td>14</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
                 </tr>
                 <tr>
-                    <td style="font-weight:bold">Data Kesastraan</td>
-                    <td>Penghargaan Sastra: 3</td>
-                </tr>
-                <tr>
-                    <td style="font-weight:bold">Data Komunitas</td>
-                </tr>
-                <tr>
-                    <td style="font-weight:bold">Data Penelitian</td>
-                    <td>Penelitian: 8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
 
-        <!-- TABLE -->
-        <table class="content-table kanan">
-            <thead>
-                <tr>
-                    <th>Kategori</th>
-                    <th>Jenis Data</th>
-                    <th>Data Terinput</th>
-                    <th>Data Tervalidasi</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td style="font-weight:bold">Data Kebahasaan</td>
-                    <td style="text-align:left">Kamus/Ensiklopedia</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Jurnal/Majalah</td>
-                    <td>11</td>
-                    <td>11</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Terbitan Umum</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Penyuluhan</td>
-                    <td>127</td>
-                    <td>68</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Pesuluh</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Penghargaan Bahasa</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Duta Bahasa Nasional</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Duta Bahasa Provinsi</td>
-                    <td>5</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td style="font-weight:bold">143</td>
-                    <td style="font-weight:bold">84</td>
-                </tr>
-
-                <tr>
-                    <td style="font-weight:bold">Data Kesastraan</td>
-                    <td style="text-align:left">Bengkel Satra</td>
-                    <td>23</td>
-                    <td>23</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Penghargaan Satra</td>
-                    <td>3</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Musikalisasi Puisi Nasional</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td style="text-align:left">Musikalisasi Puisi Provinsi</td>
-                    <td>4</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td style="font-weight:bold">30</td>
-                    <td style="font-weight:bold">27</td>
-                </tr>
-            
-                <tr>
-                    <td style="font-weight:bold">Data Komunitas</td>
-                    <td style="text-align:left">Komunitas Bahasa dan Sastra</td>
-                    <td>392</td>
-                    <td>392</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td style="font-weight:bold">392</td>
-                    <td style="font-weight:bold">392</td>
-                </tr>
-
-                <tr>
-                    <td style="font-weight:bold">Data Penelitian</td>
-                    <td style="text-align:left">Penelitian</td>
-                    <td>255</td>
-                    <td>247</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td style="font-weight:bold">255</td>
-                    <td style="font-weight:bold">247</td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td style="font-weight:bold">TOTAL</td>
-                    <td style="font-weight:bold">255</td>
-                    <td style="font-weight:bold">247</td>
-                </tr>
-
-        </table>
     </div>
 
     
