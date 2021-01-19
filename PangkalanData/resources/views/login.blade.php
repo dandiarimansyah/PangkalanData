@@ -14,36 +14,38 @@
       <div class="forms-container">
         <div class="signin-signup">
 
-          <form action="#" class="sign-in-form">
+          <form action="{{url('proses_login')}}" method="POST" id="logForm" class="sign-in-form">
+            @csrf
             <h2 class="title">Masuk sebagai Validator</h2>
 
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Nama Pengguna" />
+              <input type="text" name="username" placeholder="Nama Pengguna" />
             </div>
           
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Kata Sandi" />
+              <input type="password" name="password" placeholder="Kata Sandi" />
             </div>
         
-            <input type="submit" value="Masuk" class="btn solid" />
+            <button class="btn" type="submit">Masuk</button>
           </form>
 
-          <form action="#" class="sign-up-form">
+          <form action="{{url('proses_login')}}" method="POST" id="logForm" class="sign-up-form">
+            @csrf
             <h2 class="title">Masuk sebagai Operator</h2>
 
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Nama Pengguna" />
+              <input type="text" name="username" placeholder="Nama Pengguna" />
             </div>
             
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Kata Sandi" />
+              <input type="password" name="password" placeholder="Kata Sandi" />
             </div>
             
-            <input type="submit" class="btn" value="Masuk" />
+            <button class="btn" type="submit">Masuk</button>
           </form>
         
         </div>

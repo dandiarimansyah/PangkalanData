@@ -27,7 +27,7 @@
                 <li><a href="/laporan">LAPORAN</a></li>
                 <li><a href="/grafik">GRAFIK</a></li>
                 <li><a href="/forum">FORUM</a></li>
-                <li><a href="#" class="logout">KELUAR</a></li>
+                <li><a href="/logout" class="logout">KELUAR</a></li>
             </ul>
         </nav>
 

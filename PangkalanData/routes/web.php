@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OperatorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,20 +14,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 //Sementara hanya return view dulu
-Route::view('masuk', 'login');
-Route::view('masuk2', 'login2');
+// Route::view('login', 'login');
+Route::view('login', 'login2');
+// Route::view('login', 'login3');
+Route::post('proses_login', [AuthController::class, 'proses_login']);
+
+Route::get('/logout', function () {
+    auth()->logout();
+    return redirect('/login');
+});
 
 Route::view('/media', 'media');
 Route::view('/laporan', 'laporan');
 Route::view('/grafik', 'grafik');
 Route::view('/forum', 'forum');
 
+//OPERATOR
+Route::group(['middleware' => ['AkunLoginMiddleware:operator']], function () {
+    Route::get('/operator/input', [OperatorController::class, 'input']);
+    Route::get('/operator/edit', [OperatorController::class, 'edit']);
+});
+
+
+//VALIDATOR
+Route::group(['middleware' => ['AkunLoginMiddleware:validator']], function () {
+});
 
 //VALIDATOR
 Route::view('/validator/validasi', 'VALIDATOR.validasi');
@@ -62,7 +75,3 @@ Route::view('/validator/komunitas/d2', 'VALIDATOR.KOMUNITAS.d2');
 
 //VALIDATOR KATEGORI E
 Route::view('/validator/penelitian/e1', 'VALIDATOR.PENELITIAN.e1');
-
-//OPERATOR
-Route::view('/operator/input', 'OPERATOR.input');
-Route::view('/operator/edit', 'OPERATOR.edit');
