@@ -10,17 +10,8 @@
         <!-- KATEGORI SEKRETARIAT -->
         <div class="btn-group kategori">
             <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sekretariat
+                Profil Balai/Kantor
             </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Anggaran</a>
-                <a class="dropdown-item" href="#">Realisasi Anggaran</a>
-                <a class="dropdown-item" href="#">Kepegawaian</a>
-                <a class="dropdown-item" href="#">Kerja Sama</a>
-                <a class="dropdown-item" href="#">Tanah dan Bangunan</a>
-                <a class="dropdown-item" href="#">Perpustakaan</a>
-                <a class="dropdown-item" href="#">Invetarisasi BMN</a>
-            </div>
         </div>
 
         <!-- KATEGORI DATA KEBAHASAAN -->
