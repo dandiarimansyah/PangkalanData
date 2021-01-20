@@ -2,7 +2,15 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
+
+        @if (Auth::user()->level == 'operator')
+            <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
+        @elseif (Auth::user()->level == 'validator')
+            <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
+        @else
+            <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/gindex.css') }}">
+        @endif
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -21,7 +29,21 @@
             
             <input type="checkbox" id="btn">
             <ul>
-                <li><a href="/validator/validasi">VALIDASI</a></li>        
+                @auth
+                    @if (auth()->user()->level == 'operator')
+                        <li><a href="/operator/input">INPUT</a></li>    
+                        <li><a href="/operator/edit">EDIT</a></li> 
+                    @else
+                        <li><a href="/validator/validasi">VALIDASI</a></li>        
+                    @endif
+                @endauth
+
+                @guest
+                    <li><a href="/operator/input">INPUT</a></li>    
+                    <li><a href="/operator/edit">EDIT</a></li>
+                    <li><a href="/validator/validasi">VALIDASI</a></li>        
+                @endguest
+                 
                 <li><a href="/media">MEDIA</a></li>
                 <li><a href="/laporan">LAPORAN</a></li>
                 <li><a href="/grafik">GRAFIK</a></li>
