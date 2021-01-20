@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OperatorController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ValidatorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,10 +27,11 @@ Route::get('/logout', function () {
     return redirect('/login');
 });
 
-Route::view('/media', 'media');
-Route::view('/laporan', 'laporan');
-Route::view('/grafik', 'grafik');
-Route::view('/forum', 'forum');
+//MenuController
+Route::get('/media', [MenuController::class, 'media']);
+Route::get('/laporan', [MenuController::class, 'laporan']);
+Route::get('/grafik', [MenuController::class, 'grafik']);
+Route::get('/forum', [MenuController::class, 'forum']);
 
 //OPERATOR
 Route::group(['middleware' => ['AkunLoginMiddleware:operator']], function () {
@@ -39,10 +42,8 @@ Route::group(['middleware' => ['AkunLoginMiddleware:operator']], function () {
 
 //VALIDATOR
 Route::group(['middleware' => ['AkunLoginMiddleware:validator']], function () {
+    Route::get('/validator/validasi', [ValidatorController::class, 'validasi']);
 });
-
-//VALIDATOR
-Route::view('/validator/validasi', 'VALIDATOR.validasi');
 
 //VALIDATOR KATEGORI A
 Route::view('/validator/sekretariat/a1', 'VALIDATOR.SEKRETARIAT.a1');

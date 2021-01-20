@@ -1,6 +1,11 @@
 {{-- if login by operator maka extend operator, kalo validator ya validator --}}
+{{-- @extends(\Auth::check() ? 'layouts.adminPanel' : 'layouts.home') --}}
 
-@extends('PARTIAL.indexO')
+@if ($role == 'operator')
+    @extends('PARTIAL.indexO')
+@elseif ($role == 'validator')
+    @extends('PARTIAL.indexV')
+@endif
 
 @section('content')
 
