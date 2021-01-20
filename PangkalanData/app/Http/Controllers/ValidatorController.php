@@ -8,6 +8,6 @@ class ValidatorController extends Controller
 {
     public function validasi()
     {
-        return view('OPERATOR.input');
+        return view('VALIDATOR.validasi');
     }
 }
