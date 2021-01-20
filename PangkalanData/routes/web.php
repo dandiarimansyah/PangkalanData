@@ -15,8 +15,8 @@ use App\Http\Controllers\OperatorController;
 */
 
 //Sementara hanya return view dulu
-// Route::view('login', 'login');
-Route::view('login', 'login2');
+Route::view('login', 'login');
+// Route::view('login', 'login2');
 // Route::view('login', 'login3');
 Route::post('proses_login', [AuthController::class, 'proses_login']);
 
