@@ -30,13 +30,15 @@
             </ul>
         </nav>
 
-        @yield('content')
+        <div style="min-height: 80vh; margin:0">
+            @yield('content')
+        </div>
 
-        <div class="footer">
+        <footer class="footer">
             <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
             <h5>Jalan Elang Raya No.1, Mangunharjo, Tembalang, Sendangmulyo, Tembalang, Kota Semarang, Jawa Tengah 50272</h5>
             <h5>Pos-el: balaibahasa.jateng@kemdikbud.go.id</h5>
-        </div>
+        </footer>
         
         <script>
             $('.icon').click(function(){

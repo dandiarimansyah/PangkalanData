@@ -31,7 +31,9 @@
             </ul>
         </nav>
 
-        @yield('content')
+        <div style="min-height: 80vh; margin:0">
+            @yield('content')
+        </div>
 
         <div class="footer">
             <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
