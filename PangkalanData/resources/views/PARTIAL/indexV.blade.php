@@ -31,23 +31,23 @@
             <ul>
                 @auth
                     @if (auth()->user()->level == 'operator')
-                        <li><a href="/operator/input">INPUT</a></li>    
-                        <li><a href="/operator/edit">EDIT</a></li> 
+                        <li class="{{ (request()->is('operator/input*')) ? 'aktif' : '' }}"><a href="/operator/input">INPUT</a></li>    
+                        <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li> 
                     @else
-                        <li><a href="/validator/validasi">VALIDASI</a></li>        
+                        <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}"><a href="/validator/validasi">VALIDASI</a></li>        
                     @endif
                 @endauth
 
                 @guest
-                    <li><a href="/operator/input">INPUT</a></li>    
-                    <li><a href="/operator/edit">EDIT</a></li>
-                    <li><a href="/validator/validasi">VALIDASI</a></li>        
+                    <li class="{{ (request()->is('operator/input*')) ? 'aktif' : '' }}"><a href="/operator/input">INPUT</a></li>    
+                    <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li>
+                    <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}><a href="/validator/validasi">VALIDASI</a></li>        
                 @endguest
                  
-                <li><a href="/media">MEDIA</a></li>
-                <li><a href="/laporan">LAPORAN</a></li>
-                <li><a href="/grafik">GRAFIK</a></li>
-                <li><a href="/forum">FORUM</a></li>
+                <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
+                <li class="{{ (request()->is('laporan*')) ? 'aktif' : '' }}"><a href="/laporan">LAPORAN</a></li>
+                <li class="{{ (request()->is('grafik*')) ? 'aktif' : '' }}"><a href="/grafik">GRAFIK</a></li>
+                <li class="{{ (request()->is('forum*')) ? 'aktif' : '' }}"><a href="/forum">FORUM</a></li>
                 <li><a href="/logout" class="logout">KELUAR</a></li>
             </ul>
         </nav>

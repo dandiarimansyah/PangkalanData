@@ -95,6 +95,7 @@
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Komunitas</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Penelitian</td>
@@ -227,11 +228,10 @@
                     <td style="font-weight:bold">247</td>
                 </tr>
 
-                <tr>
-                    <td></td>
-                    <td style="font-weight:bold">TOTAL</td>
-                    <td style="font-weight:bold">255</td>
-                    <td style="font-weight:bold">247</td>
+                <tr class="total">
+                    <td colspan="2">TOTAL</td>
+                    <td>255</td>
+                    <td>247</td>
                 </tr>
 
         </table>

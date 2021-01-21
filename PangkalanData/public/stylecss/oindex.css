@@ -9,6 +9,12 @@
 body {
     background: #f2f2f2;
 }
+
+.aktif a {
+    border-bottom: 4px solid white;
+    border-radius: 13px;
+}
+
 nav {
     background: #0247bd;
     max-height: 70px;
