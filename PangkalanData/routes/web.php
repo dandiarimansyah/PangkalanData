@@ -2,9 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GuestController;
 use App\Http\Controllers\OperatorController;
-use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ValidatorController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\MediaController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\GrafikController;
+use App\Http\Controllers\ForumController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +22,7 @@ use App\Http\Controllers\ValidatorController;
 |
 */
 
-//Sementara hanya return view dulu
+// Login
 Route::view('login', 'login');
 // Route::view('login', 'login2');
 // Route::view('login', 'login3');
@@ -26,6 +32,9 @@ Route::get('/logout', function () {
     auth()->logout();
     return redirect('/login');
 });
+
+Route::get('/', [GuestController::class, 'index']);
+
 
 //MenuController
 Route::get('/media', [MenuController::class, 'media']);
@@ -38,7 +47,6 @@ Route::group(['middleware' => ['AkunLoginMiddleware:operator']], function () {
     Route::get('/operator/input', [OperatorController::class, 'input']);
     Route::get('/operator/edit', [OperatorController::class, 'edit']);
 });
-
 
 //VALIDATOR
 Route::group(['middleware' => ['AkunLoginMiddleware:validator']], function () {
@@ -71,7 +79,6 @@ Route::group(['middleware' => ['AkunLoginMiddleware:validator']], function () {
     Route::get('/validator/komunitas/d2', [ValidatorController::class, 'd2']);
     //VALIDATOR KATEGORI E
     Route::get('/validator/penelitian/e1', [ValidatorController::class, 'e1']);
-
 });
 
 ////========================================== MEDIA ===================

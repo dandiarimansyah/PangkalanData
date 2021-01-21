@@ -11,29 +11,25 @@ class MenuController extends Controller
     public function media()
     {
         $user = Auth::user();
-        $role = $user->level;
 
-        return view('media', compact('role', 'user'));
+        return view('media', compact('user'));
     }
     public function laporan()
     {
         $user = Auth::user();
-        $role = $user->level;
 
-        return view('laporan', compact('role', 'user'));
+        return view('laporan', compact('user'));
     }
     public function grafik()
     {
         $user = Auth::user();
-        $role = $user->level;
 
-        return view('grafik', compact('role', 'user'));
+        return view('grafik', compact('user'));
     }
     public function forum()
     {
         $user = Auth::user();
-        $role = $user->level;
 
-        return view('forum', compact('role', 'user'));
+        return view('forum', compact('user'));
     }
 }

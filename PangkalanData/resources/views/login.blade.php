@@ -29,6 +29,11 @@
             </div>
         
             <button class="btn" type="submit">Masuk</button>
+
+            <a href="{{url('/')}}" class="btn kembali"> 
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Kembali ke Laman Utama
+            </a>
           </form>
 
           <form action="{{url('proses_login')}}" method="POST" id="logForm" class="sign-up-form">
@@ -46,8 +51,13 @@
             </div>
             
             <button class="btn" type="submit">Masuk</button>
+
+            <a href="{{url('/')}}" class="btn kembali"> 
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Kembali ke Laman Utama
+            </a>
           </form>
-        
+
         </div>
       </div>
 

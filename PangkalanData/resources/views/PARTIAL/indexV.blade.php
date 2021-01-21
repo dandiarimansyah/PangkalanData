@@ -3,13 +3,15 @@
     <head>
         <meta charset="utf-8">
 
-        @if (Auth::user()->level == 'operator')
-            <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
-        @elseif (Auth::user()->level == 'validator')
-            <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
-        @else
-            <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/gindex.css') }}">
-        @endif
+        @auth
+            @if (Auth::user()->level == 'operator')
+                <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
+            @elseif (Auth::user()->level == 'validator')
+                <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
+            @endif
+        @endauth
+            <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/guest.css') }}">
+        
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -28,23 +30,28 @@
                 @auth
                     @if (auth()->user()->level == 'operator')
                         <li class="{{ (request()->is('operator/input*')) ? 'aktif' : '' }}"><a href="/operator/input">INPUT</a></li>    
-                        <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li> 
+                        <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li>
                     @else
                         <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}"><a href="/validator/validasi">VALIDASI</a></li>        
                     @endif
+                    <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
                 @endauth
 
                 @guest
-                    <li class="{{ (request()->is('operator/input*')) ? 'aktif' : '' }}"><a href="/operator/input">INPUT</a></li>    
-                    <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li>
-                    <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}><a href="/validator/validasi">VALIDASI</a></li>        
+                    <li class="{{ (request()->is('/*')) ? 'aktif' : '' }}"><a href="/">INDEX</a></li>
                 @endguest
                  
-                <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
                 <li class="{{ (request()->is('laporan*')) ? 'aktif' : '' }}"><a href="/laporan">LAPORAN</a></li>
                 <li class="{{ (request()->is('grafik*')) ? 'aktif' : '' }}"><a href="/grafik">GRAFIK</a></li>
                 <li class="{{ (request()->is('forum*')) ? 'aktif' : '' }}"><a href="/forum">FORUM</a></li>
-                <li><a href="/logout" class="logout">KELUAR</a></li>
+                
+                @auth
+                    <li><a href="/logout" class="logout">KELUAR</a></li>
+                @endauth
+
+                @guest
+                    <li><a href="/login" class="login">LOGIN</a></li>
+                @endguest
             </ul>
         </nav>
 
