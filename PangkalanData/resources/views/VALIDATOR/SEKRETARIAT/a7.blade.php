@@ -106,8 +106,21 @@
                     <th rowspan="2">BALAI/KANTOR</th>
                     <th rowspan="2">TAHUN ANGGARAN</th>
                     <th colspan="8">ELEKTRONIK</th>
-                    <th>FURNITURE</th>
+                    <th rowspan="2">FURNITURE</th>
                     <th colspan="3">KENDARAAN</th>
+                </tr>
+                <tr>
+                    <th>LAPTOP</th>
+                    <th>KOMPUTER</th>
+                    <th>PRINTER</th>
+                    <th>FOTOCOPY</th>
+                    <th>FAXIMILI</th>
+                    <th>LCD PROJECTOR</th>
+                    <th>TV</th>
+                    <th>LAIN-LAIN</th>
+                    <th>RODA 2</th>
+                    <th>RODA 4</th>
+                    <th>RODA 6</th>
                 </tr>
             </thead>
 

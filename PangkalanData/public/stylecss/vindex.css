@@ -194,11 +194,12 @@ p {
 }
 
 .content-table th {
-    padding: 10px 15px 10px 15px;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
 }
 
 .content-table td {
-    padding: 5px 15px 5px 15px;
+    padding: 5px 10px 5px 10px;
 }
 
 .kanan td {

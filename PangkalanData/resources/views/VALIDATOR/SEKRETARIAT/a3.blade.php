@@ -105,12 +105,38 @@
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
                     <th rowspan="2">UNIT/SATUAN KERJA</th>
                     <th colspan="3">JUMLAH PEGAWAI</th>
-                    <!-- <th>KESELURUHAN</th>
-                    <th>LAKI-LAKI</th>
-                    <th>PEREMPUAN</th> -->
                     <th colspan="7">TINGKAT PENDIDIKAN</th>
                     <th colspan="17">PANGKAT/GOLONGAN</th>
                 </tr>
+                <tr>
+                    <th>K</th>
+                    <th>L</th>
+                    <th>P</th>
+                    <th>S3</th>
+                    <th>S2</th>
+                    <th>S1</th>
+                    <th>D3</th>
+                    <th>SMA</th>
+                    <th>SMP</th>
+                    <th>SD</th>
+                    <th>IV/e</th>
+                    <th>IV/d</th>
+                    <th>IV/c</th>
+                    <th>IV/b</th>
+                    <th>IV/a</th>
+                    <th>III/d</th>
+                    <th>III/c</th>
+                    <th>III/b</th>
+                    <th>III/a</th>
+                    <th>II/d</th>
+                    <th>II/c</th>
+                    <th>II/b</th>
+                    <th>II/a</th>
+                    <th>I/d</th>
+                    <th>I/c</th>
+                    <th>I/b</th>
+                    <th>I/a</th>
+                </tr> 
             </thead>
 
             <tbody>

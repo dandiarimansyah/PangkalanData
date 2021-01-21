@@ -111,6 +111,12 @@
                     <th rowspan="2">KETERANGAN</th>
                     <th rowspan="2">MEDIA</th>
                 </tr>
+                <tr>
+                    <th>STATUS</th>
+                    <th>SERTIFIKAT</th>
+                    <th>STATUS</th>
+                    <th>IMB</th>
+                </tr>
             </thead>
 
             <tbody>
@@ -119,8 +125,7 @@
                     <td></td>
                     <td></td>
                     <td>11-12-2018</td>
-                    <td>Balai Bahasa Jawa Tengah
-Jalan Elang raya nomor 1, Mangunharjo, Tembalang, Semarang, Jawa Tengah</td>
+                    <td>Balai Bahasa Jawa Tengah Jalan Elang raya nomor 1, Mangunharjo, Tembalang, Semarang, Jawa Tengah</td>
                     <td>PINJAM PAKAI</td>
                     <td>TIDAK ADA/-</td>
                     <td>MILIK SENDIRI</td>
