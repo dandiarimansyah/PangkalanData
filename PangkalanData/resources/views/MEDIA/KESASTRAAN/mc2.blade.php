@@ -1,15 +1,8 @@
-{{-- if login by operator maka extend operator, kalo validator ya validator --}}
-{{-- @extends(\Auth::check() ? 'layouts.adminPanel' : 'layouts.home') --}}
-
 @extends('PARTIAL.indexV')
 
 @section('content')
 
-    <div class="content">
-        <header>HALAMAN MEDIA</header>
-    </div>
-
-    <div class="menu">
+<div class="menu">
         <!-- KATEGORI SEKRETARIAT -->
         <div class="btn-group kategori">
             <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,5 +53,90 @@
             </div>
         </div>
     </div>
+
+    <div class="judul">
+        <th>MEDIA DATA PENGHARGAAN SATRA</th>
+    </div>
+
+    <div class="menu" style="display:flex; justify-content:center">
+        <!-- KATEGORI SEKRETARIAT -->
+        <div class="btn-group kategori">
+            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+                KEMBALI KE MENU
+            </button>
+        </div>
+    </div>
+
+    <div class="ketjudul">
+        <th>PR SEARCH BAR</th>
+    </div>
+
+    <!-- TABLE -->
+    <div class="validasi">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>UNGGAH</th>
+                    <th>MEDIA</th>
+                    <th>KATEGORI</th>
+                    <th>TAHUN</th>
+                    <th>DESKRIPSI</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td>Anugerah Tokoh Kesastraan</td>
+                    <td>2017</td>
+                    <td>Penerima Prasidatama 2017
+
+ 
+
+Tokoh bahasa dan sastra Indonesia
+Penerima: Sosiawan Leak untuk
+
+Nomine: Handry Tm dan Mukti Sutarman Espe
+
+Tokoh bahasa dan sastra Jawa
+Penerima: Triman Laksana
+
+Nomine: Sucipto Hadi Purnomo dan Hadi Utomo
+
+Tokoh penggiat bahasa dan sastra Indonesia
+Penerima: Bandung Mawardi
+
+Nomine: Bandung Mawardi dan Adin Hysteria
+
+Penggiat bahasa dan sastra
+Penerima: Jawa Sayuti Anggoro
+
+Nomine: RMA Sudijatmana dan Wanto Tirto
+Pendidik peduli bahasa dan sastra
+Penerima: S. Prasetyo Uyomo
+
+Nomine: Sawali Tuhu Setya dan Sus S.Hardjono
+Penggiat sastra panggung 
+Penerima: Gigok Anurogo
+
+Nomine: Thomas Haryanto Sukiran dan Eko Tunas</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    
 
 @endsection

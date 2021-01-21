@@ -72,7 +72,7 @@
     </div>
 
     <div class="judul">
-        <th>VALIDASI DATA PENGHARGAAN BAHASA</th>
+        <th>VALIDASI DATA DUTA BAHASA NASIONAL</th>
     </div>
 
     <div class="menu" style="display:flex; justify-content:center">
@@ -102,9 +102,13 @@
                     <th>NO</th>
                     <th>EDIT</th>
                     <th>VALIDASI</th>
-                    <th>KATEGORI</th>
                     <th>TAHUN</th>
-                    <th>DESKRIPSI</th>
+                    <th>ASAL PROVINSI</th>
+                    <th>PEMENANG I</th>
+                    <th>PEMENANG II</th>
+                    <th>PEMENANG III</th>
+                    <th>KETERANGAN</th>
+                    <th>MEDIA</th>
                 </tr>
             </thead>
 
@@ -116,8 +120,16 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

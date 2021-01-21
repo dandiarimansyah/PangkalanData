@@ -72,7 +72,7 @@
     </div>
 
     <div class="judul">
-        <th>VALIDASI DATA PESULUH</th>
+        <th>VALIDASI DATA PENGHARGAAN BAHASA</th>
     </div>
 
     <div class="menu" style="display:flex; justify-content:center">
@@ -101,15 +101,10 @@
                 <tr>
                     <th>NO</th>
                     <th>EDIT</th>
-                    <th>PROVINSI</th>
-                    <th>KABUPATEN/KOTA</th>
-                    <th>PENYULUHAN</th>
-                    <th>PERIODE</th>
-                    <th>NAMA</th>
-                    <th>TEMPAT LAHIR</th>
-                    <th>TGL LAHIR</th>
-                    <th>SEKOLAH</th>
-                    <th>TINGKAT</th>
+                    <th>VALIDASI</th>
+                    <th>KATEGORI</th>
+                    <th>TAHUN</th>
+                    <th>DESKRIPSI</th>
                 </tr>
             </thead>
 
@@ -121,18 +116,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

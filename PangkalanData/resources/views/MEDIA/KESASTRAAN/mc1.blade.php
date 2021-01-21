@@ -9,13 +9,8 @@
                 Sekretariat
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="/validator/sekretariat/a1">Anggaran</a>
-                <a class="dropdown-item" href="/validator/sekretariat/a2">Realisasi Anggaran</a>
-                <a class="dropdown-item" href="/validator/sekretariat/a3">Kepegawaian</a>
-                <a class="dropdown-item" href="/validator/sekretariat/a4">Kerja Sama</a>
-                <a class="dropdown-item" href="/validator/sekretariat/a5">Tanah dan Bangunan</a>
-                <a class="dropdown-item" href="/validator/sekretariat/a6">Perpustakaan</a>
-                <a class="dropdown-item" href="/validator/sekretariat/a7">Invetarisasi BMN</a>
+                <a class="dropdown-item" href="/media/sekretariat/ma1">Kerja Sama</a>
+                <a class="dropdown-item" href="/media/sekretariat/ma2">Tanah dan Bangunan</a>
             </div>
         </div>
 
@@ -25,14 +20,13 @@
                 Data Kebahasaan
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="/validator/kebahasaan/b1">Kamus/Ensiklopedia</a>
-                <a class="dropdown-item" href="/validator/kebahasaan/b2">Jurnal/Majalah</a>
-                <a class="dropdown-item" href="/validator/kebahasaan/b3">Terbitan Umum</a>
-                <a class="dropdown-item" href="/validator/kebahasaan/b4">Penyuluhan</a>
-                <a class="dropdown-item" href="/validator/kebahasaan/b5">Pesuluh</a>
-                <a class="dropdown-item" href="/validator/kebahasaan/b6">Penghargaan Bahasa</a>
-                <a class="dropdown-item" href="/validator/kebahasaan/b7">Duta Bahasa Nasional</a>
-                <a class="dropdown-item" href="/validator/kebahasaan/b8">Duta Bahasa Provinsi</a>
+                <a class="dropdown-item" href="/media/kebahasaan/mb1">Kamus/Ensiklopedia</a>
+                <a class="dropdown-item" href="/media/kebahasaan/mb2">Jurnal/Majalah</a>
+                <a class="dropdown-item" href="/media/kebahasaan/mb3">Terbitan Umum</a>
+                <a class="dropdown-item" href="/media/kebahasaan/mb4">Penyuluhan</a>
+                <a class="dropdown-item" href="/media/kebahasaan/mb5">Penghargaan Bahasa</a>
+                <a class="dropdown-item" href="/media/kebahasaan/mb6">Duta Bahasa Nasional</a>
+                <a class="dropdown-item" href="/media/kebahasaan/mb7">Duta Bahasa Provinsi</a>
             </div>
         </div>
 
@@ -42,21 +36,10 @@
                 Data Kesastraan
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="/validator/kesastraan/c1">Bengkel Sastra dan Bahasa</a>
-                <a class="dropdown-item" href="/validator/kesastraan/c2">Penghargaan Sastra</a>
-                <a class="dropdown-item" href="/validator/kesastraan/c3">Musikalisasi Puisi Nasional</a>
-                <a class="dropdown-item" href="/validator/kesastraan/c4">Musikalisasi Puisi Provinsi</a>
-            </div>
-        </div>
-
-        <!-- KATEGORI DATA KOMUNITAS -->
-        <div class="btn-group kategori">
-            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Data Komunitas
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="/validator/komunitas/d1">Komunitas Bahasa</a>
-                <a class="dropdown-item" href="/validator/komunitas/d2">Komunitas Sastra</a>
+                <a class="dropdown-item" href="/media/kesastraan/mc1">Bengkel Sastra dan Bahasa</a>
+                <a class="dropdown-item" href="/media/kesastraan/mc2">Penghargaan Sastra</a>
+                <a class="dropdown-item" href="/media/kesastraan/mc3">Musikalisasi Puisi Nasional</a>
+                <a class="dropdown-item" href="/media/kesastraan/mc4">Musikalisasi Puisi Provinsi</a>
             </div>
         </div>
 
@@ -66,13 +49,13 @@
                 Data Penelitian
                 </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="/validator/penelitian/e1">Penelitian</a>
+                <a class="dropdown-item" href="/media/penelitian/me1">Penelitian</a>
             </div>
         </div>
     </div>
 
     <div class="judul">
-        <th>VALIDASI DATA BENGKEL SASTRA DAN BAHASA</th>
+        <th>MEDIA DATA BENGKEL SASTRA DAN BAHASA</th>
     </div>
 
     <div class="menu" style="display:flex; justify-content:center">
@@ -82,16 +65,10 @@
                 KEMBALI KE MENU
             </button>
         </div>
-
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
-            </button>
-        </div>
     </div>
 
     <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
+        <th>PR SEARCH BAR</th>
     </div>
 
     <!-- TABLE -->
@@ -100,8 +77,8 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
+                    <th>UNGGAH</th>
+                    <th>MEDIA</th>
                     <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>

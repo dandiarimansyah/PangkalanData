@@ -42,37 +42,53 @@ Route::group(['middleware' => ['AkunLoginMiddleware:operator']], function () {
 
 //VALIDATOR
 Route::group(['middleware' => ['AkunLoginMiddleware:validator']], function () {
+    //INDEX
     Route::get('/validator/validasi', [ValidatorController::class, 'validasi']);
+    //VALIDATOR KATEGORI A
+    Route::get('/validator/sekretariat/a1', [ValidatorController::class, 'a1']);
+    Route::get('/validator/sekretariat/a2', [ValidatorController::class, 'a2']);
+    Route::get('/validator/sekretariat/a3', [ValidatorController::class, 'a3']);
+    Route::get('/validator/sekretariat/a4', [ValidatorController::class, 'a4']);
+    Route::get('/validator/sekretariat/a5', [ValidatorController::class, 'a5']);
+    Route::get('/validator/sekretariat/a6', [ValidatorController::class, 'a6']);
+    Route::get('/validator/sekretariat/a7', [ValidatorController::class, 'a7']);
+    //VALIDATOR KATEGORI B
+    Route::get('/validator/kebahasaan/b1', [ValidatorController::class, 'b1']);
+    Route::get('/validator/kebahasaan/b2', [ValidatorController::class, 'b2']);
+    Route::get('/validator/kebahasaan/b3', [ValidatorController::class, 'b3']);
+    Route::get('/validator/kebahasaan/b4', [ValidatorController::class, 'b4']);
+    Route::get('/validator/kebahasaan/b5', [ValidatorController::class, 'b5']);
+    Route::get('/validator/kebahasaan/b6', [ValidatorController::class, 'b6']);
+    Route::get('/validator/kebahasaan/b7', [ValidatorController::class, 'b7']);
+    Route::get('/validator/kebahasaan/b8', [ValidatorController::class, 'b8']);
+    //VALIDATOR KATEGORI C
+    Route::get('/validator/kesastraan/c1', [ValidatorController::class, 'c1']);
+    Route::get('/validator/kesastraan/c2', [ValidatorController::class, 'c2']);
+    Route::get('/validator/kesastraan/c3', [ValidatorController::class, 'c3']);
+    Route::get('/validator/kesastraan/c4', [ValidatorController::class, 'c4']);
+    //VALIDATOR KATEGORI D
+    Route::get('/validator/komunitas/d1', [ValidatorController::class, 'd1']);
+    Route::get('/validator/komunitas/d2', [ValidatorController::class, 'd2']);
+    //VALIDATOR KATEGORI E
+    Route::get('/validator/penelitian/e1', [ValidatorController::class, 'e1']);
+
 });
 
-//VALIDATOR KATEGORI A
-Route::view('/validator/sekretariat/a1', 'VALIDATOR.SEKRETARIAT.a1');
-Route::view('/validator/sekretariat/a2', 'VALIDATOR.SEKRETARIAT.a2');
-Route::view('/validator/sekretariat/a3', 'VALIDATOR.SEKRETARIAT.a3');
-Route::view('/validator/sekretariat/a4', 'VALIDATOR.SEKRETARIAT.a4');
-Route::view('/validator/sekretariat/a5', 'VALIDATOR.SEKRETARIAT.a5');
-Route::view('/validator/sekretariat/a6', 'VALIDATOR.SEKRETARIAT.a6');
-Route::view('/validator/sekretariat/a7', 'VALIDATOR.SEKRETARIAT.a7');
-
-//VALIDATOR KATEGORI B
-Route::view('/validator/kebahasaan/b1', 'VALIDATOR.KEBAHASAAN.b1');
-Route::view('/validator/kebahasaan/b2', 'VALIDATOR.KEBAHASAAN.b2');
-Route::view('/validator/kebahasaan/b3', 'VALIDATOR.KEBAHASAAN.b3');
-Route::view('/validator/kebahasaan/b4', 'VALIDATOR.KEBAHASAAN.b4');
-Route::view('/validator/kebahasaan/b5', 'VALIDATOR.KEBAHASAAN.b5');
-Route::view('/validator/kebahasaan/b6', 'VALIDATOR.KEBAHASAAN.b6');
-Route::view('/validator/kebahasaan/b7', 'VALIDATOR.KEBAHASAAN.b7');
-Route::view('/validator/kebahasaan/b8', 'VALIDATOR.KEBAHASAAN.b8');
-
-//VALIDATOR KATEGORI C
-Route::view('/validator/kesastraan/c1', 'VALIDATOR.KESASTRAAN.c1');
-Route::view('/validator/kesastraan/c2', 'VALIDATOR.KESASTRAAN.c2');
-Route::view('/validator/kesastraan/c3', 'VALIDATOR.KESASTRAAN.c3');
-Route::view('/validator/kesastraan/c4', 'VALIDATOR.KESASTRAAN.c4');
-
-//VALIDATOR KATEGORI D
-Route::view('/validator/komunitas/d1', 'VALIDATOR.KOMUNITAS.d1');
-Route::view('/validator/komunitas/d2', 'VALIDATOR.KOMUNITAS.d2');
-
-//VALIDATOR KATEGORI E
-Route::view('/validator/penelitian/e1', 'VALIDATOR.PENELITIAN.e1');
+//MEDIA S 1
+Route::view('/media/sekretariat/ma1', 'MEDIA.SEKRETARIAT.ma1');
+Route::view('/media/sekretariat/ma2', 'MEDIA.SEKRETARIAT.ma2');
+//MEDIA S 2
+Route::view('/media/kebahasaan/mb1', 'MEDIA.KEBAHASAAN.mb1');
+Route::view('/media/kebahasaan/mb2', 'MEDIA.KEBAHASAAN.mb2');
+Route::view('/media/kebahasaan/mb3', 'MEDIA.KEBAHASAAN.mb3');
+Route::view('/media/kebahasaan/mb4', 'MEDIA.KEBAHASAAN.mb4');
+Route::view('/media/kebahasaan/mb5', 'MEDIA.KEBAHASAAN.mb5');
+Route::view('/media/kebahasaan/mb6', 'MEDIA.KEBAHASAAN.mb6');
+Route::view('/media/kebahasaan/mb7', 'MEDIA.KEBAHASAAN.mb7');
+//MEDIA S 3
+Route::view('/media/kesastraan/mc1', 'MEDIA.KESASTRAAN.mc1');
+Route::view('/media/kesastraan/mc2', 'MEDIA.KESASTRAAN.mc2');
+Route::view('/media/kesastraan/mc3', 'MEDIA.KESASTRAAN.mc3');
+Route::view('/media/kesastraan/mc4', 'MEDIA.KESASTRAAN.mc4');
+//MEDIA S 5
+Route::view('/media/penelitian/me1', 'MEDIA.PENELITIAN.me1');

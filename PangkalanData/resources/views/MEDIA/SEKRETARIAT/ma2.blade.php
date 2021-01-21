@@ -1,13 +1,6 @@
-{{-- if login by operator maka extend operator, kalo validator ya validator --}}
-{{-- @extends(\Auth::check() ? 'layouts.adminPanel' : 'layouts.home') --}}
-
 @extends('PARTIAL.indexV')
 
 @section('content')
-
-    <div class="content">
-        <header>HALAMAN MEDIA</header>
-    </div>
 
     <div class="menu">
         <!-- KATEGORI SEKRETARIAT -->
@@ -60,5 +53,78 @@
             </div>
         </div>
     </div>
+
+    <div class="judul">
+        <th>MEDIA DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
+    </div>
+
+    <div class="menu" style="display:flex; justify-content:center">
+        <!-- KATEGORI SEKRETARIAT -->
+        <div class="btn-group kategori">
+            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+                KEMBALI KE MENU
+            </button>
+        </div>
+    </div>
+
+  <!-- TABLE -->
+  <div class="validasi">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th rowspan="2">NO</th>
+                    <th rowspan="2">UNGGAH</th>
+                    <th rowspan="2">MEDIA</th>
+                    <th rowspan="2">TANGGAL DATA</th>
+                    <th rowspan="2">BALAI/KANTOR</th>
+                    <th colspan="2">TANAH</th>
+                    <th colspan="2">BANGUNAN</th>
+                    <th rowspan="2">KONDISI</th>
+                    <th rowspan="2">STATUS PEMEROLEHAN</th>
+                    <th rowspan="2">KETERANGAN</th>
+                </tr>
+                <tr>
+                    <th>STATUS</th>
+                    <th>SERTIFIKAT</th>
+                    <th>STATUS</th>
+                    <th>IMB</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <td>11-12-2018</td>
+                    <td>Balai Bahasa Jawa Tengah Jalan Elang raya nomor 1, Mangunharjo, Tembalang, Semarang, Jawa Tengah</td>
+                    <td>PINJAM PAKAI</td>
+                    <td>TIDAK ADA/-</td>
+                    <td>MILIK SENDIRI</td>
+                    <td>ADA/ASLI</td>
+                    <td>Baik</td>
+                    <td>Baik</td>
+                    <td>Status tanah pinjam pakai sampai dengan tahun 2021</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    
 
 @endsection
