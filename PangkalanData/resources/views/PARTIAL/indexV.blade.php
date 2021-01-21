@@ -23,11 +23,7 @@
     <body>
         <nav>
             <div class="logo"> Pangkalan Data </div>
-            <label for="btn" class="icon">
-                <span class="fa fa-bars"></span>
-            </label>
-            
-            <input type="checkbox" id="btn">
+
             <ul>
                 @auth
                     @if (auth()->user()->level == 'operator')
