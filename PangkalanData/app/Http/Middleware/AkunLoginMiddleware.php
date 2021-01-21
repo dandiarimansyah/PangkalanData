@@ -18,7 +18,7 @@ class AkunLoginMiddleware
     public function handle(Request $request, Closure $next, $role)
     {
         if (!Auth::check()) {
-            return redirect('login');
+            return redirect('/login');
         }
 
         $user = Auth::user();
@@ -27,6 +27,6 @@ class AkunLoginMiddleware
             return $next($request);
         }
 
-        return redirect('login')->with('error', "Tidak Punya Akses, Harus Login!");
+        return redirect('/login')->with('error', "Tidak Punya Akses, Harus Login!");
     }
 }

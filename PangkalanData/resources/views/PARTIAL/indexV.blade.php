@@ -10,7 +10,10 @@
                 <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
             @endif
         @endauth
+    
+        @guest
             <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/guest.css') }}">
+        @endguest
         
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -31,10 +34,11 @@
                     @if (auth()->user()->level == 'operator')
                         <li class="{{ (request()->is('operator/input*')) ? 'aktif' : '' }}"><a href="/operator/input">INPUT</a></li>    
                         <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li>
+                        <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
                     @else
-                        <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}"><a href="/validator/validasi">VALIDASI</a></li>        
+                        <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}"><a href="/validator/validasi">VALIDASI</a></li>
+                        <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
                     @endif
-                    <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
                 @endauth
 
                 @guest

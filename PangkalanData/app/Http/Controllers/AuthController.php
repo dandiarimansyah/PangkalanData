@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    public function login()
+    {
+        return view('login');
+    }
+
     public function proses_login(Request $request)
     {
         request()->validate([
@@ -26,6 +31,5 @@ class AuthController extends Controller
             return redirect()->intended('/');
         }
         return redirect('login');
-        // return back();
     }
 }
