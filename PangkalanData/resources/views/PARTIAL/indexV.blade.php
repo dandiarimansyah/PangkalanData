@@ -48,7 +48,7 @@
             </ul>
         </nav>
 
-        <div style="min-height: 83vh; margin:0">
+        <div style="min-height: 78vh; margin:0">
             @yield('content')
         </div>
 
