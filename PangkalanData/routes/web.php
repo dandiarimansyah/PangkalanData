@@ -71,4 +71,24 @@ Route::group(['middleware' => ['AkunLoginMiddleware:validator']], function () {
     Route::get('/validator/komunitas/d2', [ValidatorController::class, 'd2']);
     //VALIDATOR KATEGORI E
     Route::get('/validator/penelitian/e1', [ValidatorController::class, 'e1']);
+
 });
+
+//MEDIA S 1
+Route::view('/media/sekretariat/ma1', 'MEDIA.SEKRETARIAT.ma1');
+Route::view('/media/sekretariat/ma2', 'MEDIA.SEKRETARIAT.ma2');
+//MEDIA S 2
+Route::view('/media/kebahasaan/mb1', 'MEDIA.KEBAHASAAN.mb1');
+Route::view('/media/kebahasaan/mb2', 'MEDIA.KEBAHASAAN.mb2');
+Route::view('/media/kebahasaan/mb3', 'MEDIA.KEBAHASAAN.mb3');
+Route::view('/media/kebahasaan/mb4', 'MEDIA.KEBAHASAAN.mb4');
+Route::view('/media/kebahasaan/mb5', 'MEDIA.KEBAHASAAN.mb5');
+Route::view('/media/kebahasaan/mb6', 'MEDIA.KEBAHASAAN.mb6');
+Route::view('/media/kebahasaan/mb7', 'MEDIA.KEBAHASAAN.mb7');
+//MEDIA S 3
+Route::view('/media/kesastraan/mc1', 'MEDIA.KESASTRAAN.mc1');
+Route::view('/media/kesastraan/mc2', 'MEDIA.KESASTRAAN.mc2');
+Route::view('/media/kesastraan/mc3', 'MEDIA.KESASTRAAN.mc3');
+Route::view('/media/kesastraan/mc4', 'MEDIA.KESASTRAAN.mc4');
+//MEDIA S 5
+Route::view('/media/penelitian/me1', 'MEDIA.PENELITIAN.me1');
