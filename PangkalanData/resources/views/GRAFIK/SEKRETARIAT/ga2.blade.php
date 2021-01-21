@@ -52,7 +52,8 @@
                 Data Komunitas
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="/grafik/komunitas/gd1">Komunitas Bahasa dan Sastra</a>
+                <a class="dropdown-item" href="/grafik/komunitas/gd1">Komunitas Bahasa</a>
+                <a class="dropdown-item" href="/grafik/komunitas/gd2">Komunitas Sastra</a>
             </div>
         </div>
 
