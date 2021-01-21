@@ -55,7 +55,7 @@
     </div>
 
     <div class="judul">
-        <th>VALIDASI DATA PENELITIAN</th>
+        <th>MEDIA DATA PENELITIAN</th>
     </div>
 
     <div class="menu" style="display:flex; justify-content:center">

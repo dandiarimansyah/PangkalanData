@@ -74,6 +74,7 @@ Route::group(['middleware' => ['AkunLoginMiddleware:validator']], function () {
 
 });
 
+////========================================== MEDIA ===================
 //MEDIA S 1
 Route::view('/media/sekretariat/ma1', 'MEDIA.SEKRETARIAT.ma1');
 Route::view('/media/sekretariat/ma2', 'MEDIA.SEKRETARIAT.ma2');
@@ -92,3 +93,50 @@ Route::view('/media/kesastraan/mc3', 'MEDIA.KESASTRAAN.mc3');
 Route::view('/media/kesastraan/mc4', 'MEDIA.KESASTRAAN.mc4');
 //MEDIA S 5
 Route::view('/media/penelitian/me1', 'MEDIA.PENELITIAN.me1');
+
+////========================================== LAPORAN ===================
+//LAPORAN S 1
+Route::view('/laporan/sekretariat/la1', 'LAPORAN.SEKRETARIAT.la1');
+Route::view('/laporan/sekretariat/la2', 'LAPORAN.SEKRETARIAT.la2');
+Route::view('/laporan/sekretariat/la3', 'LAPORAN.SEKRETARIAT.la3');
+Route::view('/laporan/sekretariat/la4', 'LAPORAN.SEKRETARIAT.la4');
+Route::view('/laporan/sekretariat/la5', 'LAPORAN.SEKRETARIAT.la5');
+Route::view('/laporan/sekretariat/la6', 'LAPORAN.SEKRETARIAT.la6');
+Route::view('/laporan/sekretariat/la7', 'LAPORAN.SEKRETARIAT.la7');
+//LAPORAN S 2
+Route::view('/laporan/kebahasaan/lb1', 'LAPORAN.KEBAHASAAN.lb1');
+Route::view('/laporan/kebahasaan/lb2', 'LAPORAN.KEBAHASAAN.lb2');
+Route::view('/laporan/kebahasaan/lb3', 'LAPORAN.KEBAHASAAN.lb3');
+Route::view('/laporan/kebahasaan/lb4', 'LAPORAN.KEBAHASAAN.lb4');
+Route::view('/laporan/kebahasaan/lb5', 'LAPORAN.KEBAHASAAN.lb5');
+Route::view('/laporan/kebahasaan/lb6', 'LAPORAN.KEBAHASAAN.lb6');
+Route::view('/laporan/kebahasaan/lb7', 'LAPORAN.KEBAHASAAN.lb7');
+Route::view('/laporan/kebahasaan/lb8', 'LAPORAN.KEBAHASAAN.lb8');
+//LAPORAN S 3
+Route::view('/laporan/kesastraan/lc1', 'LAPORAN.KESASTRAAN.lc1');
+Route::view('/laporan/kesastraan/lc2', 'LAPORAN.KESASTRAAN.lc2');
+Route::view('/laporan/kesastraan/lc3', 'LAPORAN.KESASTRAAN.lc3');
+Route::view('/laporan/kesastraan/lc4', 'LAPORAN.KESASTRAAN.lc4');
+//LAPORAN S 4
+Route::view('/laporan/komunitas/ld1', 'LAPORAN.KOMUNITAS.ld1');
+Route::view('/laporan/komunitas/ld2', 'LAPORAN.KOMUNITAS.ld2');
+//LAPORAN S 5
+Route::view('/laporan/penelitian/le1', 'LAPORAN.PENELITIAN.le1');
+
+////========================================== GRAFIK ===================
+//GRAFIK S 1
+Route::view('/grafik/sekretariat/ga1', 'GRAFIK.SEKRETARIAT.ga1');
+Route::view('/grafik/sekretariat/ga2', 'GRAFIK.SEKRETARIAT.ga2');
+Route::view('/grafik/sekretariat/ga3', 'GRAFIK.SEKRETARIAT.ga3');
+Route::view('/grafik/sekretariat/ga4', 'GRAFIK.SEKRETARIAT.ga4');
+//GRAFIK S 2
+Route::view('/grafik/kebahasaan/gb1', 'GRAFIK.KEBAHASAAN.gb1');
+Route::view('/grafik/kebahasaan/gb2', 'GRAFIK.KEBAHASAAN.gb2');
+Route::view('/grafik/kebahasaan/gb3', 'GRAFIK.KEBAHASAAN.gb3');
+Route::view('/grafik/kebahasaan/gb4', 'GRAFIK.KEBAHASAAN.gb4');
+//GRAFIK S 3
+Route::view('/grafik/kesastraan/gc1', 'GRAFIK.KESASTRAAN.gc1');
+//GRAFIK S 4
+Route::view('/grafik/komunitas/gd1', 'GRAFIK.KOMUNITAS.gd1');
+//GRAFIK S 5
+Route::view('/grafik/penelitian/ge1', 'GRAFIK.PENELITIAN.ge1');
