@@ -5,13 +5,13 @@
             Sekretariat
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/laporan/sekretariat/la1">Anggaran</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/la2">Realisasi Anggaran</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/la3">Kepegawaian</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/la4">Kerja Sama</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/la5">Tanah dan Bangunan</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/la6">Perpustakaan</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/la7">Invetarisasi BMN</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/anggaran">Anggaran</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/realisasi_anggaran">Realisasi Anggaran</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/kepegawaian">Kepegawaian</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/kerja_sama">Kerja Sama</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/tanah_dan_bangunan">Tanah dan Bangunan</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/perpustakaan">Perpustakaan</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/invetarisasi_bmn">Invetarisasi BMN</a>
         </div>
     </div>
 
@@ -21,14 +21,14 @@
             Data Kebahasaan
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/laporan/kebahasaan/lb1">Kamus/Ensiklopedia</a>
-            <a class="dropdown-item" href="/laporan/kebahasaan/lb2">Jurnal/Majalah</a>
-            <a class="dropdown-item" href="/laporan/kebahasaan/lb3">Terbitan Umum</a>
-            <a class="dropdown-item" href="/laporan/kebahasaan/lb4">Penyuluhan</a>
-            <a class="dropdown-item" href="/laporan/kebahasaan/lb5">Pesuluh</a>
-            <a class="dropdown-item" href="/laporan/kebahasaan/lb6">Penghargaan Bahasa</a>
-            <a class="dropdown-item" href="/laporan/kebahasaan/lb7">Duta Bahasa Nasional</a>
-            <a class="dropdown-item" href="/laporan/kebahasaan/lb8">Duta Bahasa Provinsi</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/kamus_ensiklopedia">Kamus/Ensiklopedia</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/jurnal_umum">Jurnal/Majalah</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/terbitan_umum">Terbitan Umum</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/penyuluhan">Penyuluhan</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/pesuluh">Pesuluh</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/penghargaan_nasional">Penghargaan Bahasa</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/duta_bahasa_nasional">Duta Bahasa Nasional</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/duta_bahasa_provinsi">Duta Bahasa Provinsi</a>
         </div>
     </div>
 
@@ -38,10 +38,10 @@
             Data Kesastraan
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/laporan/kesastraan/lc1">Bengkel Sastra dan Bahasa</a>
-            <a class="dropdown-item" href="/laporan/kesastraan/lc2">Penghargaan Sastra</a>
-            <a class="dropdown-item" href="/laporan/kesastraan/lc3">Musikalisasi Puisi Nasional</a>
-            <a class="dropdown-item" href="/laporan/kesastraan/lc4">Musikalisasi Puisi Provinsi</a>
+            <a class="dropdown-item" href="/laporan/kesastraan/bengkel_sastra_dan_bahasa">Bengkel Sastra dan Bahasa</a>
+            <a class="dropdown-item" href="/laporan/kesastraan/penghargaan_sastra">Penghargaan Sastra</a>
+            <a class="dropdown-item" href="/laporan/kesastraan/musikalisasi_puisi_nasional">Musikalisasi Puisi Nasional</a>
+            <a class="dropdown-item" href="/laporan/kesastraan/musikalisasi_puisi_provinsi">Musikalisasi Puisi Provinsi</a>
         </div>
     </div>
 
@@ -51,8 +51,8 @@
             Data Komunitas
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/laporan/komunitas/ld1">Komunitas Bahasa</a>
-            <a class="dropdown-item" href="/laporan/komunitas/ld2">Komunitas Sastra</a>
+            <a class="dropdown-item" href="/laporan/komunitas/komunitas_bahasa">Komunitas Bahasa</a>
+            <a class="dropdown-item" href="/laporan/komunitas/komunitas_sastra">Komunitas Sastra</a>
         </div>
     </div>
 
@@ -62,7 +62,7 @@
             Data Penelitian
             </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/laporan/penelitian/le1">Penelitian</a>
+            <a class="dropdown-item" href="/laporan/penelitian/penelitian">Penelitian</a>
         </div>
     </div>
 </div>
