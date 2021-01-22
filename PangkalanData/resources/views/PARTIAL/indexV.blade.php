@@ -27,7 +27,17 @@
 
     <body>
         <nav>
-            <div class="logo"> Pangkalan Data </div>
+            @auth
+            @if (Auth::user()->level == 'operator')
+                <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Operator</span> </div>
+            @elseif (Auth::user()->level == 'validator')
+                <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Validator</span> </div>
+            @endif
+        @endauth
+    
+        @guest
+            <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Tamu</span> </div>
+        @endguest
 
             <ul>
                 @auth
@@ -50,11 +60,11 @@
                 <li class="{{ (request()->is('forum*')) ? 'aktif' : '' }}"><a href="/forum">FORUM</a></li>
                 
                 @auth
-                    <li><a href="/logout" class="logout">KELUAR</a></li>
+                    <li><a href="{{ url("/logout")}}" class="logout">KELUAR</a></li>
                 @endauth
 
                 @guest
-                    <li><a href="/login" class="login">LOGIN</a></li>
+                    <li><a href="{{ url("/login")}}" class="login">LOGIN</a></li>
                 @endguest
             </ul>
         </nav>

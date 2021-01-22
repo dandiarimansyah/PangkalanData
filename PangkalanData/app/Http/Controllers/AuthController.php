@@ -14,10 +14,16 @@ class AuthController extends Controller
 
     public function proses_login(Request $request)
     {
-        request()->validate([
-            'username' => 'required',
-            'password' => 'required',
-        ]);
+        request()->validate(
+            [
+                'username' => 'required',
+                'password' => 'required',
+            ],
+            [
+                'username.required' => 'Nama Pengguna harus diisi',
+                'password.required' => 'Kata Sandi harus diisi'
+            ]
+        );
 
         $emailPassword = $request->only('username', 'password');
 
