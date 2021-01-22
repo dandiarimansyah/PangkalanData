@@ -5,8 +5,8 @@
             Sekretariat
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/media/sekretariat/ma1">Kerja Sama</a>
-            <a class="dropdown-item" href="/media/sekretariat/ma2">Tanah dan Bangunan</a>
+            <a class="dropdown-item" href="/media/sekretariat/kerja_sama">Kerja Sama</a>
+            <a class="dropdown-item" href="/media/sekretariat/tanah_dan_bangunan">Tanah dan Bangunan</a>
         </div>
     </div>
 
@@ -16,13 +16,13 @@
             Data Kebahasaan
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/media/kebahasaan/mb1">Kamus/Ensiklopedia</a>
-            <a class="dropdown-item" href="/media/kebahasaan/mb2">Jurnal/Majalah</a>
-            <a class="dropdown-item" href="/media/kebahasaan/mb3">Terbitan Umum</a>
-            <a class="dropdown-item" href="/media/kebahasaan/mb4">Penyuluhan</a>
-            <a class="dropdown-item" href="/media/kebahasaan/mb5">Penghargaan Bahasa</a>
-            <a class="dropdown-item" href="/media/kebahasaan/mb6">Duta Bahasa Nasional</a>
-            <a class="dropdown-item" href="/media/kebahasaan/mb7">Duta Bahasa Provinsi</a>
+            <a class="dropdown-item" href="/media/kebahasaan/kamus_ensiklopedia">Kamus/Ensiklopedia</a>
+            <a class="dropdown-item" href="/media/kebahasaan/jurnal_majalah">Jurnal/Majalah</a>
+            <a class="dropdown-item" href="/media/kebahasaan/terbitan_umum">Terbitan Umum</a>
+            <a class="dropdown-item" href="/media/kebahasaan/penyuluhan">Penyuluhan</a>
+            <a class="dropdown-item" href="/media/kebahasaan/penghargaan_bahasa">Penghargaan Bahasa</a>
+            <a class="dropdown-item" href="/media/kebahasaan/duta_bahasa_nasional">Duta Bahasa Nasional</a>
+            <a class="dropdown-item" href="/media/kebahasaan/duta_bahasa_provinsi">Duta Bahasa Provinsi</a>
         </div>
     </div>
 
@@ -32,10 +32,10 @@
             Data Kesastraan
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/media/kesastraan/mc1">Bengkel Sastra dan Bahasa</a>
-            <a class="dropdown-item" href="/media/kesastraan/mc2">Penghargaan Sastra</a>
-            <a class="dropdown-item" href="/media/kesastraan/mc3">Musikalisasi Puisi Nasional</a>
-            <a class="dropdown-item" href="/media/kesastraan/mc4">Musikalisasi Puisi Provinsi</a>
+            <a class="dropdown-item" href="/media/kesastraan/bengkel_sastra_dan_bahasa">Bengkel Sastra dan Bahasa</a>
+            <a class="dropdown-item" href="/media/kesastraan/penghargaan_sastra">Penghargaan Sastra</a>
+            <a class="dropdown-item" href="/media/kesastraan/musikalisasi_puisi_nasional">Musikalisasi Puisi Nasional</a>
+            <a class="dropdown-item" href="/media/kesastraan/musikalisasi_puisi_provinsi">Musikalisasi Puisi Provinsi</a>
         </div>
     </div>
 
@@ -45,7 +45,7 @@
             Data Penelitian
             </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/media/penelitian/me1">Penelitian</a>
+            <a class="dropdown-item" href="/media/penelitian/penelitian">Penelitian</a>
         </div>
     </div>
 </div>

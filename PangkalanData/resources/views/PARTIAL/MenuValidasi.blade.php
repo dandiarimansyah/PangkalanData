@@ -5,13 +5,13 @@
             Sekretariat
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/validator/sekretariat/a1">Anggaran</a>
-            <a class="dropdown-item" href="/validator/sekretariat/a2">Realisasi Anggaran</a>
-            <a class="dropdown-item" href="/validator/sekretariat/a3">Kepegawaian</a>
-            <a class="dropdown-item" href="/validator/sekretariat/a4">Kerja Sama</a>
-            <a class="dropdown-item" href="/validator/sekretariat/a5">Tanah dan Bangunan</a>
-            <a class="dropdown-item" href="/validator/sekretariat/a6">Perpustakaan</a>
-            <a class="dropdown-item" href="/validator/sekretariat/a7">Invetarisasi BMN</a>
+            <a class="dropdown-item" href="/validator/sekretariat/anggaran">Anggaran</a>
+            <a class="dropdown-item" href="/validator/sekretariat/realisasi_anggaran">Realisasi Anggaran</a>
+            <a class="dropdown-item" href="/validator/sekretariat/kepegawaian">Kepegawaian</a>
+            <a class="dropdown-item" href="/validator/sekretariat/kerja_sama">Kerja Sama</a>
+            <a class="dropdown-item" href="/validator/sekretariat/tanah_dan_bangunan">Tanah dan Bangunan</a>
+            <a class="dropdown-item" href="/validator/sekretariat/perpustakaan">Perpustakaan</a>
+            <a class="dropdown-item" href="/validator/sekretariat/invetarisasi_bmn">Invetarisasi BMN</a>
         </div>
     </div>
 
@@ -21,14 +21,14 @@
             Data Kebahasaan
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/validator/kebahasaan/b1">Kamus/Ensiklopedia</a>
-            <a class="dropdown-item" href="/validator/kebahasaan/b2">Jurnal/Majalah</a>
-            <a class="dropdown-item" href="/validator/kebahasaan/b3">Terbitan Umum</a>
-            <a class="dropdown-item" href="/validator/kebahasaan/b4">Penyuluhan</a>
-            <a class="dropdown-item" href="/validator/kebahasaan/b5">Pesuluh</a>
-            <a class="dropdown-item" href="/validator/kebahasaan/b6">Penghargaan Bahasa</a>
-            <a class="dropdown-item" href="/validator/kebahasaan/b7">Duta Bahasa Nasional</a>
-            <a class="dropdown-item" href="/validator/kebahasaan/b8">Duta Bahasa Provinsi</a>
+            <a class="dropdown-item" href="/validator/kebahasaan/kamus_ensiklopedia">Kamus/Ensiklopedia</a>
+            <a class="dropdown-item" href="/validator/kebahasaan/jurnal_majalah">Jurnal/Majalah</a>
+            <a class="dropdown-item" href="/validator/kebahasaan/terbitan_umum">Terbitan Umum</a>
+            <a class="dropdown-item" href="/validator/kebahasaan/penyuluhan">Penyuluhan</a>
+            <a class="dropdown-item" href="/validator/kebahasaan/pesuluh">Pesuluh</a>
+            <a class="dropdown-item" href="/validator/kebahasaan/penghargaan_bahasa">Penghargaan Bahasa</a>
+            <a class="dropdown-item" href="/validator/kebahasaan/duta_bahasa_nasional">Duta Bahasa Nasional</a>
+            <a class="dropdown-item" href="/validator/kebahasaan/duta_bahasa_provinsi">Duta Bahasa Provinsi</a>
         </div>
     </div>
 
@@ -38,10 +38,10 @@
             Data Kesastraan
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/validator/kesastraan/c1">Bengkel Sastra dan Bahasa</a>
-            <a class="dropdown-item" href="/validator/kesastraan/c2">Penghargaan Sastra</a>
-            <a class="dropdown-item" href="/validator/kesastraan/c3">Musikalisasi Puisi Nasional</a>
-            <a class="dropdown-item" href="/validator/kesastraan/c4">Musikalisasi Puisi Provinsi</a>
+            <a class="dropdown-item" href="/validator/kesastraan/bengkel_sastra_dan_bahasa">Bengkel Sastra dan Bahasa</a>
+            <a class="dropdown-item" href="/validator/kesastraan/penghargaan_sastra">Penghargaan Sastra</a>
+            <a class="dropdown-item" href="/validator/kesastraan/musikalisasi_puisi_nasional">Musikalisasi Puisi Nasional</a>
+            <a class="dropdown-item" href="/validator/kesastraan/musikalisasi_puisi_provinsi">Musikalisasi Puisi Provinsi</a>
         </div>
     </div>
 
@@ -51,8 +51,8 @@
             Data Komunitas
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/validator/komunitas/d1">Komunitas Bahasa</a>
-            <a class="dropdown-item" href="/validator/komunitas/d2">Komunitas Sastra</a>
+            <a class="dropdown-item" href="/validator/komunitas/komunitas_bahasa">Komunitas Bahasa</a>
+            <a class="dropdown-item" href="/validator/komunitas/komunitas_sastra">Komunitas Sastra</a>
         </div>
     </div>
 
@@ -62,7 +62,7 @@
             Data Penelitian
             </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="/validator/penelitian/e1">Penelitian</a>
+            <a class="dropdown-item" href="/validator/penelitian/penelitian">Penelitian</a>
         </div>
     </div>
 </div>
