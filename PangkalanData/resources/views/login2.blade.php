@@ -21,16 +21,15 @@
         
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="username" placeholder="Nama Pengguna" />
+              <input type="text" name="username" placeholder="Nama Pengguna" required/>
             </div>
         
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" name="password" placeholder="Kata Sandi" />
+              <input type="password" name="password" placeholder="Kata Sandi" required/>
             </div>
         
             <button class="btn solid" type="submit">Masuk</button>
-
 
             <a href="{{url('/')}}" class="kembali"> 
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
