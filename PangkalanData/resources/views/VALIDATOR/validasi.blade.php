@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('PARTIAL.MenuValidasi')
+@include('PARTIAL.MenuValidasi')
 
     <div class="judul">
         <th>VALIDASI DATA</th>
