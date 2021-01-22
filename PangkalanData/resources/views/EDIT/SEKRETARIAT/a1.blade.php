@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('PARTIAL.MenuValidasi')
+@include('PARTIAL.MenuEdit')
 
     <div class="judul">
         <th>VALIDASI DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
@@ -34,7 +34,6 @@
                 <tr>
                     <th>NO</th>
                     <th>EDIT</th>
-                    <th>VALIDASI</th>
                     <th>TAHUN ANGGARAN</th>
                     <th>UNIT/SATUAN KERJA</th>
                     <th>NILAI ANGGARAN(Rp.)</th>
@@ -48,10 +47,8 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

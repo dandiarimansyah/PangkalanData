@@ -10,6 +10,8 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\GrafikController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\InputController;
+use App\Http\Controllers\EditController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,8 +50,65 @@ Route::group(['middleware' => ['auth']], function () {
 
     //OPERATOR
     Route::group(['middleware' => ['AkunLoginMiddleware:operator']], function () {
+        //INDEX OPERATOR
         Route::get('/operator/input', [OperatorController::class, 'input']);
         Route::get('/operator/edit', [OperatorController::class, 'edit']);
+
+        //INPUT KATEGORI A
+        Route::get('/operator/input/sekretariat/anggaran', [InputController::class, 'a1']);
+        Route::get('/operator/input/sekretariat/realisasi_anggaran', [InputController::class, 'a2']);
+        Route::get('/operator/input/sekretariat/kepegawaian', [InputController::class, 'a3']);
+        Route::get('/operator/input/sekretariat/kerja_sama', [InputController::class, 'a4']);
+        Route::get('/operator/input/sekretariat/tanah_dan_bangunan', [InputController::class, 'a5']);
+        Route::get('/operator/input/sekretariat/perpustakaan', [InputController::class, 'a6']);
+        Route::get('/operator/input/sekretariat/invetarisasi_bmn', [InputController::class, 'a7']);
+        //INPUT KATEGORI B
+        Route::get('/operator/input/kebahasaan/kamus_ensiklopedia', [InputController::class, 'b1']);
+        Route::get('/operator/input/kebahasaan/jurnal_majalah', [InputController::class, 'b2']);
+        Route::get('/operator/input/kebahasaan/terbitan_umum', [InputController::class, 'b3']);
+        Route::get('/operator/input/kebahasaan/penyuluhan', [InputController::class, 'b4']);
+        Route::get('/operator/input/kebahasaan/pesuluh', [InputController::class, 'b5']);
+        Route::get('/operator/input/kebahasaan/penghargaan_bahasa', [InputController::class, 'b6']);
+        Route::get('/operator/input/kebahasaan/duta_bahasa_nasional', [InputController::class, 'b7']);
+        Route::get('/operator/input/kebahasaan/duta_bahasa_provinsi', [InputController::class, 'b8']);
+        //INPUT KATEGORI C
+        Route::get('/operator/input/kesastraan/bengkel_sastra_dan_bahasa', [InputController::class, 'c1']);
+        Route::get('/operator/input/kesastraan/penghargaan_sastra', [InputController::class, 'c2']);
+        Route::get('/operator/input/kesastraan/musikalisasi_puisi_nasional', [InputController::class, 'c3']);
+        Route::get('/operator/input/kesastraan/musikalisasi_puisi_provinsi', [InputController::class, 'c4']);
+        //INPUT KATEGORI D
+        Route::get('/operator/input/komunitas/komunitas_bahasa', [InputController::class, 'd1']);
+        Route::get('/operator/input/komunitas/komunitas_sastra', [InputController::class, 'd2']);
+        //INPUT KATEGORI E
+        Route::get('/operator/input/penelitian/penelitian', [InputController::class, 'e1']);
+
+        //EDIT KATEGORI A
+        Route::get('/operator/edit/sekretariat/anggaran', [EditController::class, 'a1']);
+        Route::get('/operator/edit/sekretariat/realisasi_anggaran', [EditController::class, 'a2']);
+        Route::get('/operator/edit/sekretariat/kepegawaian', [EditController::class, 'a3']);
+        Route::get('/operator/edit/sekretariat/kerja_sama', [EditController::class, 'a4']);
+        Route::get('/operator/edit/sekretariat/tanah_dan_bangunan', [EditController::class, 'a5']);
+        Route::get('/operator/edit/sekretariat/perpustakaan', [EditController::class, 'a6']);
+        Route::get('/operator/edit/sekretariat/invetarisasi_bmn', [EditController::class, 'a7']);
+        //EDIT KATEGORI B
+        Route::get('/operator/edit/kebahasaan/kamus_ensiklopedia', [EditController::class, 'b1']);
+        Route::get('/operator/edit/kebahasaan/jurnal_majalah', [EditController::class, 'b2']);
+        Route::get('/operator/edit/kebahasaan/terbitan_umum', [EditController::class, 'b3']);
+        Route::get('/operator/edit/kebahasaan/penyuluhan', [EditController::class, 'b4']);
+        Route::get('/operator/edit/kebahasaan/pesuluh', [EditController::class, 'b5']);
+        Route::get('/operator/edit/kebahasaan/penghargaan_bahasa', [EditController::class, 'b6']);
+        Route::get('/operator/edit/kebahasaan/duta_bahasa_nasional', [EditController::class, 'b7']);
+        Route::get('/operator/edit/kebahasaan/duta_bahasa_provinsi', [EditController::class, 'b8']);
+        //EDIT KATEGORI C
+        Route::get('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa', [EditController::class, 'c1']);
+        Route::get('/operator/edit/kesastraan/penghargaan_sastra', [EditController::class, 'c2']);
+        Route::get('/operator/edit/kesastraan/musikalisasi_puisi_nasional', [EditController::class, 'c3']);
+        Route::get('/operator/edit/kesastraan/musikalisasi_puisi_provinsi', [EditController::class, 'c4']);
+        //EDIT KATEGORI D
+        Route::get('/operator/edit/komunitas/komunitas_bahasa', [EditController::class, 'd1']);
+        Route::get('/operator/edit/komunitas/komunitas_sastra', [EditController::class, 'd2']);
+        //EDIT KATEGORI E
+        Route::get('/operator/edit/penelitian/penelitian', [EditController::class, 'e1']);
     });
 
     //VALIDATOR

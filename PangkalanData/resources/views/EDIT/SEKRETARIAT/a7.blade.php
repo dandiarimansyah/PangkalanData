@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('PARTIAL.MenuValidasi')
+@include('PARTIAL.MenuEdit')
 
     <div class="judul">
         <th>VALIDASI DATA INVENTARISASI BARANG MILIK NEGARA</th>
@@ -34,7 +34,6 @@
                 <tr>
                     <th rowspan="2">NO</th>
                     <th rowspan="2">EDIT</th>
-                    <th rowspan="2">VALIDASI</th>
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
                     <th rowspan="2">BALAI/KANTOR</th>
                     <th rowspan="2">TAHUN ANGGARAN</th>
@@ -61,7 +60,6 @@
                 <tr>
                     <td>1</td>
                     <td></td>
-                    <td></td>
                     <td>11-12-2018</td>
                     <td>Balai Bahasa Provinsi Jawa Tengah</td>
                     <td>2018</td>
@@ -79,7 +77,6 @@
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

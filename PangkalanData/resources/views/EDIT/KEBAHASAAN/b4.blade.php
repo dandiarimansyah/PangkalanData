@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('PARTIAL.MenuValidasi')
+@include('PARTIAL.MenuEdit')
 
     < class="judul">
         <th>VALIDASI DATA PENYULUHAN</th>
@@ -34,7 +34,6 @@
                 <tr>
                     <th>NO</th>
                     <th>EDIT</th>
-                    <th>VALIDASI</th>
                     <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
@@ -51,7 +50,6 @@
                 <tr>
                     <td>1</td>
                     <td></td>
-                    <td></td>
                     <td>Jawa Tengah</td>
                     <td>Kabupaten Klaten</td>
                     <td>16-10-2019 - 03-11-2020</td>
@@ -67,7 +65,6 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

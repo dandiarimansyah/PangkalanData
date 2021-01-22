@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('PARTIAL.MenuValidasi')
+@include('PARTIAL.MenuEdit')
 
     <div class="judul">
         <th>VALIDASI DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
@@ -34,7 +34,6 @@
                 <tr>
                     <th rowspan="2">NO</th>
                     <th rowspan="2">KOREKSI</th>
-                    <th rowspan="2">VALIDASI</th>
                     <th rowspan="2">TANGGAL DATA</th>
                     <th rowspan="2">BALAI/KANTOR</th>
                     <th colspan="2">TANAH</th>
@@ -56,7 +55,6 @@
                 <tr>
                     <td>1</td>
                     <td></td>
-                    <td></td>
                     <td>11-12-2018</td>
                     <td>Balai Bahasa Jawa Tengah Jalan Elang raya nomor 1, Mangunharjo, Tembalang, Semarang, Jawa Tengah</td>
                     <td>PINJAM PAKAI</td>
@@ -69,7 +67,6 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

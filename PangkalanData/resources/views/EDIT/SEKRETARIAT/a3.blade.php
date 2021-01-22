@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('PARTIAL.MenuValidasi')
+@include('PARTIAL.MenuEdit')
 
     <div class="judul">
         <th>VALIDASI DATA KEPEGAWAIAN UNIT/SATUAN KERJA</th>
@@ -34,7 +34,6 @@
                 <tr>
                     <th rowspan="2">NO</th>
                     <th rowspan="2">EDIT</th>
-                    <th rowspan="2">VALIDASI</th>
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
                     <th rowspan="2">UNIT/SATUAN KERJA</th>
                     <th colspan="3">JUMLAH PEGAWAI</th>
@@ -76,7 +75,6 @@
                 <tr>
                     <td>1</td>
                     <td></td>
-                    <td></td>
                     <td>11-12-2018</td>
                     <td>Balai Bahasa Jawa Tengah</td>
                     <td>47</td>
@@ -108,7 +106,6 @@
                     <td>0</td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

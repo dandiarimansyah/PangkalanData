@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('PARTIAL.MenuValidasi')
+@include('PARTIAL.MenuInput')
 
     < class="judul">
         <th>VALIDASI DATA PENYULUHAN</th>

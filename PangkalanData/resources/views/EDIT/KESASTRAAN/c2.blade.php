@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('PARTIAL.MenuValidasi')
+@include('PARTIAL.MenuEdit')
 
     <div class="judul">
         <th>VALIDASI DATA PENGHARGAAN SATRA</th>
@@ -34,7 +34,6 @@
                 <tr>
                     <th>NO</th>
                     <th>EDIT</th>
-                    <th>VALIDASI</th>
                     <th>KATEGORI</th>
                     <th>TAHUN</th>
                     <th>DESKRIPSI</th>
@@ -44,7 +43,6 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td></td>
                     <td></td>
                     <td>Anugerah Tokoh Kesastraan</td>
                     <td>2017</td>
@@ -81,7 +79,6 @@ Penerima: Gigok Anurogo
 Nomine: Thomas Haryanto Sukiran dan Eko Tunas</td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
