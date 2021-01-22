@@ -138,18 +138,18 @@ Route::get('/laporan/penelitian/le1', [LaporanController::class, 'le1']);
 
 ////========================================== GRAFIK ===================
 //GRAFIK S 1
-Route::view('/grafik/sekretariat/ga1', 'GRAFIK.SEKRETARIAT.ga1');
-Route::view('/grafik/sekretariat/ga2', 'GRAFIK.SEKRETARIAT.ga2');
-Route::view('/grafik/sekretariat/ga3', 'GRAFIK.SEKRETARIAT.ga3');
-Route::view('/grafik/sekretariat/ga4', 'GRAFIK.SEKRETARIAT.ga4');
+Route::get('/grafik/sekretariat/ga1', [GrafikController::class, 'ga1']);
+Route::get('/grafik/sekretariat/ga2', [GrafikController::class, 'ga2']);
+Route::get('/grafik/sekretariat/ga3', [GrafikController::class, 'ga3']);
+Route::get('/grafik/sekretariat/ga4', [GrafikController::class, 'ga4']);
 //GRAFIK S 2
-Route::view('/grafik/kebahasaan/gb1', 'GRAFIK.KEBAHASAAN.gb1');
-Route::view('/grafik/kebahasaan/gb2', 'GRAFIK.KEBAHASAAN.gb2');
-Route::view('/grafik/kebahasaan/gb3', 'GRAFIK.KEBAHASAAN.gb3');
-Route::view('/grafik/kebahasaan/gb4', 'GRAFIK.KEBAHASAAN.gb4');
+Route::get('/grafik/kebahasaan/gb1', [GrafikController::class, 'gb1']);
+Route::get('/grafik/kebahasaan/gb2', [GrafikController::class, 'gb2']);
+Route::get('/grafik/kebahasaan/gb3', [GrafikController::class, 'gb3']);
+Route::get('/grafik/kebahasaan/gb4', [GrafikController::class, 'gb4']);
 //GRAFIK S 3
-Route::view('/grafik/kesastraan/gc1', 'GRAFIK.KESASTRAAN.gc1');
+Route::get('/grafik/kesastraan/gc1', [GrafikController::class, 'gc1']);
 //GRAFIK S 4
-Route::view('/grafik/komunitas/gd1', 'GRAFIK.KOMUNITAS.gd1');
+Route::get('/grafik/komunitas/gd1', [GrafikController::class, 'gd1']);
 //GRAFIK S 5
-Route::view('/grafik/penelitian/ge1', 'GRAFIK.PENELITIAN.ge1');
+Route::get('/grafik/penelitian/ge1', [GrafikController::class, 'ge1']);
