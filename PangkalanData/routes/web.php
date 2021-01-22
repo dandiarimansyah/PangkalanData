@@ -109,32 +109,32 @@ Route::get('/media/penelitian/me1', [MediaController::class, 'me1']);
 
 ////========================================== LAPORAN ===================
 //LAPORAN S 1
-Route::view('/laporan/sekretariat/la1', 'LAPORAN.SEKRETARIAT.la1');
-Route::view('/laporan/sekretariat/la2', 'LAPORAN.SEKRETARIAT.la2');
-Route::view('/laporan/sekretariat/la3', 'LAPORAN.SEKRETARIAT.la3');
-Route::view('/laporan/sekretariat/la4', 'LAPORAN.SEKRETARIAT.la4');
-Route::view('/laporan/sekretariat/la5', 'LAPORAN.SEKRETARIAT.la5');
-Route::view('/laporan/sekretariat/la6', 'LAPORAN.SEKRETARIAT.la6');
-Route::view('/laporan/sekretariat/la7', 'LAPORAN.SEKRETARIAT.la7');
+Route::get('/laporan/sekretariat/la1', [LaporanController::class, 'la1']);
+Route::get('/laporan/sekretariat/la2', [LaporanController::class, 'la2']);
+Route::get('/laporan/sekretariat/la3', [LaporanController::class, 'la3']);
+Route::get('/laporan/sekretariat/la4', [LaporanController::class, 'la4']);
+Route::get('/laporan/sekretariat/la5', [LaporanController::class, 'la5']);
+Route::get('/laporan/sekretariat/la6', [LaporanController::class, 'la6']);
+Route::get('/laporan/sekretariat/la7', [LaporanController::class, 'la7']);
 //LAPORAN S 2
-Route::view('/laporan/kebahasaan/lb1', 'LAPORAN.KEBAHASAAN.lb1');
-Route::view('/laporan/kebahasaan/lb2', 'LAPORAN.KEBAHASAAN.lb2');
-Route::view('/laporan/kebahasaan/lb3', 'LAPORAN.KEBAHASAAN.lb3');
-Route::view('/laporan/kebahasaan/lb4', 'LAPORAN.KEBAHASAAN.lb4');
-Route::view('/laporan/kebahasaan/lb5', 'LAPORAN.KEBAHASAAN.lb5');
-Route::view('/laporan/kebahasaan/lb6', 'LAPORAN.KEBAHASAAN.lb6');
-Route::view('/laporan/kebahasaan/lb7', 'LAPORAN.KEBAHASAAN.lb7');
-Route::view('/laporan/kebahasaan/lb8', 'LAPORAN.KEBAHASAAN.lb8');
+Route::get('/laporan/kebahasaan/lb1', [LaporanController::class, 'lb1']);
+Route::get('/laporan/kebahasaan/lb2', [LaporanController::class, 'lb2']);
+Route::get('/laporan/kebahasaan/lb3', [LaporanController::class, 'lb3']);
+Route::get('/laporan/kebahasaan/lb4', [LaporanController::class, 'lb4']);
+Route::get('/laporan/kebahasaan/lb5', [LaporanController::class, 'lb5']);
+Route::get('/laporan/kebahasaan/lb6', [LaporanController::class, 'lb6']);
+Route::get('/laporan/kebahasaan/lb7', [LaporanController::class, 'lb7']);
+Route::get('/laporan/kebahasaan/lb8', [LaporanController::class, 'lb8']);
 //LAPORAN S 3
-Route::view('/laporan/kesastraan/lc1', 'LAPORAN.KESASTRAAN.lc1');
-Route::view('/laporan/kesastraan/lc2', 'LAPORAN.KESASTRAAN.lc2');
-Route::view('/laporan/kesastraan/lc3', 'LAPORAN.KESASTRAAN.lc3');
-Route::view('/laporan/kesastraan/lc4', 'LAPORAN.KESASTRAAN.lc4');
+Route::get('/laporan/kesastraan/lc1', [LaporanController::class, 'lc1']);
+Route::get('/laporan/kesastraan/lc2', [LaporanController::class, 'lc2']);
+Route::get('/laporan/kesastraan/lc3', [LaporanController::class, 'lc3']);
+Route::get('/laporan/kesastraan/lc4', [LaporanController::class, 'lc4']);
 //LAPORAN S 4
-Route::view('/laporan/komunitas/ld1', 'LAPORAN.KOMUNITAS.ld1');
-Route::view('/laporan/komunitas/ld2', 'LAPORAN.KOMUNITAS.ld2');
+Route::get('/laporan/komunitas/ld1', [LaporanController::class, 'ld1']);
+Route::get('/laporan/komunitas/ld2', [LaporanController::class, 'ld2']);
 //LAPORAN S 5
-Route::view('/laporan/penelitian/le1', 'LAPORAN.PENELITIAN.le1');
+Route::get('/laporan/penelitian/le1', [LaporanController::class, 'le1']);
 
 ////========================================== GRAFIK ===================
 //GRAFIK S 1
