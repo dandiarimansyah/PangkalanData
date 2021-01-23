@@ -17,7 +17,7 @@ body {
 }
 
 nav {
-    background: #c99016;
+    background: #ff7b54;
     max-height: 70px;
 }
 nav:after {
@@ -42,7 +42,7 @@ nav ul {
 nav ul li {
     float: left;
     display: inline-block;
-    background: #c99016;
+    background: #ff7b54;
     margin: 0 5px;
 }
 nav ul li a {
@@ -161,7 +161,7 @@ p {
     text-align: center;
     left: 0;
     bottom: 0;
-    background-color: #c99016;
+    background-color: #ff7b54;
 }
 
 .footer h5 {
