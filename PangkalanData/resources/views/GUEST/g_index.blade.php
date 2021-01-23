@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="content">
-        <header>HALAMAN MEDIA</header>
+        <header>HALAMAN DEPAN</header>
     </div>
 
 @endsection

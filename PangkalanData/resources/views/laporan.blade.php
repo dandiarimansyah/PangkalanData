@@ -5,5 +5,9 @@
 @section('content')
 
 @include('PARTIAL.MenuLaporan')
+
+<div class="content">
+    <header>HALAMAN LAPORAN</header>
+</div>
     
 @endsection

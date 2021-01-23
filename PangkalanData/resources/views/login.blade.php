@@ -31,8 +31,8 @@
             <button class="btn" type="submit">Masuk</button>
 
             <a href="{{url('/')}}" class="btn kembali"> 
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              Kembali ke Laman Utama
+              {{-- <i class="fa fa-arrow-left" aria-hidden="true"></i> --}}
+              Masuk Sebagai Tamu
             </a>
           </form>
 
@@ -53,8 +53,8 @@
             <button class="btn" type="submit">Masuk</button>
 
             <a href="{{url('/')}}" class="btn kembali"> 
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              Kembali ke Laman Utama
+              {{-- <i class="fa fa-arrow-left" aria-hidden="true"></i> --}}
+              Masuk Sebagai Tamu
             </a>
           </form>
 
