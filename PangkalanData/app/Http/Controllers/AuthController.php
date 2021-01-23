@@ -12,6 +12,11 @@ class AuthController extends Controller
         return view('login');
     }
 
+    public function login2()
+    {
+        return view('login2');
+    }
+
     public function proses_login(Request $request)
     {
         request()->validate(

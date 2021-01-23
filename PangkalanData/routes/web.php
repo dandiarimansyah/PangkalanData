@@ -29,6 +29,7 @@ use App\Http\Controllers\EditController;
 // Route::view('login', 'login2');
 // Route::view('login', 'login3');
 Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::get('login2', [AuthController::class, 'login2'])->name('login2');
 Route::post('proses_login', [AuthController::class, 'proses_login'])->name('proses_login');
 
 Route::get('/logout', function () {

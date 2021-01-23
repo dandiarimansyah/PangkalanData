@@ -32,8 +32,8 @@
             <button class="btn solid" type="submit">Masuk</button>
 
             <a href="{{url('/')}}" class="kembali"> 
-                <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                Kembali ke Laman Utama
+                {{-- <i class="fa fa-arrow-left" aria-hidden="true"></i> --}}
+                Masuk Sebagai Tamu
             </a>
 
           </form>
@@ -42,7 +42,7 @@
 
       <div class="panels-container">
         <div class="panel left-panel">
-          <img src="{{ asset("img/validator.svg")}}" class="image"/>
+          <img src="{{ asset("img/validator.png")}}" class="image"/>
         </div>
 
     </div>
