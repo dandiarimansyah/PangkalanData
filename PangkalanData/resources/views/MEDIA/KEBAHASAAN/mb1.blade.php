@@ -9,14 +9,12 @@
     </div>
 
     <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
         <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
+            <a type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/media">
+                KEMBALI KE MENU MEDIA
+            </a>
         </div>
     </div>
-
     <div class="ketjudul">
         <th>PR SEARCH BAR</th>
     </div>
