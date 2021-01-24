@@ -4,16 +4,15 @@
 
 @include('PARTIAL.MenuValidasi')
 
-    < class="judul">
+    <div class="judul">
         <th>VALIDASI DATA PENYULUHAN</th>
-    </>
+    </div>
 
     <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
         <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
+            <a type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/validator/validasi">
+                KEMBALI KE MENU VALIDASI
+            </a>
         </div>
 
         <div class="btn-group kategori">
