@@ -5,7 +5,7 @@
 
         @auth
             @if (Auth::user()->level == 'operator')
-                <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
+                <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/cobaform.css') }}">
             @elseif (Auth::user()->level == 'validator')
                 <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
             @endif

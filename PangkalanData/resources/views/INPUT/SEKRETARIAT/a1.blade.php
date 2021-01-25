@@ -4,64 +4,59 @@
 
 @include('PARTIAL.MenuInput')
 
-    <div class="judul">
-        <th>VALIDASI DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
+<div class="wrapper">
+    <div class="title">
+      Registration Form
     </div>
+    <div class="form">
+       <div class="inputfield">
+          <label>First Name</label>
+          <input type="text" class="input">
+       </div>  
+        <div class="inputfield">
+          <label>Last Name</label>
+          <input type="text" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Password</label>
+          <input type="password" class="input">
+       </div>  
+      <div class="inputfield">
+          <label>Confirm Password</label>
+          <input type="password" class="input">
+       </div> 
+        <div class="inputfield">
+          <label>Gender</label>
+          <div class="custom_select">
+            <select>
+              <option value="">Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+       </div> 
+        <div class="inputfield">
+          <label>Email Address</label>
+          <input type="text" class="input">
+       </div> 
+      <div class="inputfield">
+          <label>Phone Number</label>
+          <input type="text" class="input">
+       </div> 
+      <div class="inputfield">
+          <label>Address</label>
+          <textarea class="textarea"></textarea>
+       </div> 
+      <div class="inputfield">
+          <label>Postal Code</label>
+          <input type="text" class="input">
+       </div> 
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
-        </div>
-
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
-            </button>
-        </div>
+      <div class="inputfield">
+        <input type="submit" value="Register" class="btn">
+      </div>
     </div>
-
-    <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
-    </div>
-
-    <!-- TABLE -->
-    <div class="validasi">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
-                    <th>TAHUN ANGGARAN</th>
-                    <th>UNIT/SATUAN KERJA</th>
-                    <th>NILAI ANGGARAN(Rp.)</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
+</div>	
 
     
 
