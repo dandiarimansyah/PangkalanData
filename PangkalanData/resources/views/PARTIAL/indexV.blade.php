@@ -5,7 +5,7 @@
 
         @auth
             @if (Auth::user()->level == 'operator')
-                <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/cobaform.css') }}">
+                <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
             @elseif (Auth::user()->level == 'validator')
                 <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
             @endif
@@ -89,7 +89,7 @@
             </div>
           </div>
 
-        <div style="min-height: 78vh; margin:0">
+        <div class="dalam-konten">
             @yield('content')
         </div>
 
