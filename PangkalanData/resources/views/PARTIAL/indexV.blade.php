@@ -59,7 +59,7 @@
                 <li class="{{ (request()->is('forum*')) ? 'aktif' : '' }}"><a href="/forum">FORUM</a></li>
                 
                 @auth
-                    <li><a href="{{ url("/logout")}}" class="logout">KELUAR</a></li>
+                    <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
                 @endauth
 
                 @guest
@@ -67,6 +67,27 @@
                 @endguest
             </ul>
         </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Yakin ingin Keluar?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Klik "YA" untuk Keluar
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">BATAL</button>
+                  <a href="{{ url("/logout")}}" type="button" class="btn btn-primary">YA</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
         <div style="min-height: 78vh; margin:0">
             @yield('content')
