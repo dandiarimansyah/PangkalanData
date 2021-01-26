@@ -4,83 +4,79 @@
 
 @include('PARTIAL.MenuInput')
 
-    <div class="judul">
-        <th>VALIDASI DATA KERJA SAMA</th>
-    </div>
+<div class="isi-konten">
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
+  <div class="judul">
+    <th>INPUT DATA KERJA SAMA</th>
+  </div>
+
+  <div class="wrapper">
+      <div class="form">
+
+        <div class="inputfield">
+            <label>Kategori</label>
+            <div class="custom_select">
+              <select>
+                <option value="">Balai Bahasa Jawa Tengah</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+            <label>Jumlah Pegawai Laki-Laki</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Jumlah Pegawai Perempuan</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Jumlah Pegawai Keseluruhan</label>
+            <input type="text" class="input">
+        </div> 
+
+
+        <div class="tombol">
+          <input type="reset" value="Ulangi" class="reset">
+          <input type="submit" value="Simpan" class="inputan">
+        </div> 
+        
+        <div class="">
+          <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
         </div>
 
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
-            </button>
-        </div>
-    </div>
 
-    <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
-    </div>
+          <!-- <div class="inputfield">
+            <label>Last Name</label>
+            <input type="text" class="input">
+        </div>  
+        <div class="inputfield">
+            <label>Password</label>
+            <input type="password" class="input">
+        </div>  
+        <div class="inputfield">
+            <label>Confirm Password</label>
+            <input type="password" class="input">
+        </div> 
+        
+          <div class="inputfield">
+            <label>Email Address</label>
+            <input type="text" class="input">
+        </div> 
+        <div class="inputfield">
+            <label>Phone Number</label>
+            <input type="text" class="input">
+        </div> 
+        
+        <div class="inputfield">
+            <label>Postal Code</label>
+            <input type="text" class="input">
+        </div>  -->
 
-    <!-- TABLE -->
-    <div class="validasi">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>NO</th>
-                    <th>KOREKSI</th>
-                    <th>VALIDASI</th>
-                    <th>TANGGAL KERJA SAMA</th>
-                    <th>UNIT/SATUAN KERJA</th>
-                    <th>INSTANSI</th>
-                    <th>KATEGORI</th>
-                    <th>NO. KERJA SAMA</th>
-                    <th>PERIHAL</th>
-                    <th>KETERANGAN</th>
-                    <th>DITANDATANGANI</th>
-                    <th>MEDIA</th>
-                </tr>
-            </thead>
+      </div>
+  </div>	
 
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    
-
+</div>
 @endsection

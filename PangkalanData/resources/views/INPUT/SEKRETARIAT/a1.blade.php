@@ -12,53 +12,34 @@
 
   <div class="wrapper">
       <div class="form">
+
         <div class="inputfield">
-            <label>First Name</label>
-            <input type="text" class="input">
-        </div>  
-          <div class="inputfield">
-            <label>Last Name</label>
-            <input type="text" class="input">
-        </div>  
-        <div class="inputfield">
-            <label>Password</label>
-            <input type="password" class="input">
-        </div>  
-        <div class="inputfield">
-            <label>Confirm Password</label>
-            <input type="password" class="input">
-        </div> 
-          <div class="inputfield">
-            <label>Gender</label>
+            <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
               <select>
-                <option value="">Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
         </div> 
-          <div class="inputfield">
-            <label>Email Address</label>
+
+        <div class="inputfield">
+            <label>Tahun Anggaran*</label>
             <input type="text" class="input">
         </div> 
+
         <div class="inputfield">
-            <label>Phone Number</label>
+            <label>Nilai Anggaran (Rp.)</label>
             <input type="text" class="input">
-        </div> 
-        <div class="inputfield">
-            <label>Address</label>
-            <textarea class="textarea"></textarea>
-        </div> 
-        <div class="inputfield">
-            <label>Postal Code</label>
-            <input type="text" class="input">
-        </div> 
+        </div>  
         
         <div class="tombol">
-          <input type="reset" value="Reset" class="reset">
-          <input type="submit" value="Input" class="inputan">
+          <input type="reset" value="Ulangi" class="reset">
+          <input type="submit" value="Simpan" class="inputan">
         </div> 
+        
+        <div class="">
+          <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
+        </div>
 
       </div>
   </div>	
