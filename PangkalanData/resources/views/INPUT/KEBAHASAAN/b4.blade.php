@@ -4,87 +4,75 @@
 
 @include('PARTIAL.MenuInput')
 
-    < class="judul">
-        <th>VALIDASI DATA PENYULUHAN</th>
-    </>
+<div class="isi-konten">
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
+  <div class="judul">
+    <th>INPUT DATA PENYULUHAN</th>
+  </div>
+
+  <div class="wrapper">
+      <div class="form">
+
+        <div class="inputfield">
+            <label>Provinsi*</label>
+            <div class="custom_select">
+              <select>
+                <option value="">Jawa Tengah</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+            <label>Kabupaten/Kota*</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Nama Kegiatan</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Tanggal Awal Pelaksanaan</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Tanggal Akhir Pelaksanaan</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>narasumber</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Sasaran</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Jumlah Peserta</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Materi</label>
+            <textarea class="textarea"></textarea>
+        </div>  
+        
+        <div class="tombol">
+          <input type="reset" value="Ulangi" class="reset">
+          <input type="submit" value="Simpan" class="inputan">
+        </div> 
+        
+        <div class="">
+          <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
         </div>
 
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
-            </button>
-        </div>
-    </div>
+      </div>
+  </div>	
 
-    <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
-    </div>
-
-    <!-- TABLE -->
-    <div class="validasi">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
-                    <th>PROVINSI</th>
-                    <th>KABUPATEN/KOTA</th>
-                    <th>TANGGAL</th>
-                    <th>KEGIATAN</th>
-                    <th>NARASUMBER</th>
-                    <th>SASARAN</th>
-                    <th>JUMLAH</th>
-                    <th>MATERI</th>
-                    <th>MEDIA</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>Jawa Tengah</td>
-                    <td>Kabupaten Klaten</td>
-                    <td>16-10-2019 - 03-11-2020</td>
-                    <td>Penyuluhan Penggunaan Bahasa Media Massa Kabupaten Klaten</td>
-                    <td>1. Drs. Jaka Suwandi, M.M. ; 2. Dr. Tirto Suwondo, M.Hum. ;3. Shintya, M.S.</td>
-                    <td>Pejabat struktural di lingkungan Pemerintah Daerah Kabupaten Klaten</td>
-                    <td>40 Orang</td>
-                    <td>
-                        1. Kebijakan Pemerintah Kabupaten Klaten dalam Penggunaan Bahasa Indonesia di Kabupaten Klaten
-                        2. Pemaparan Rekomendasi Penggunaan Bahasa Media Massa di Kabupaten Klaten
-                        3. Sosialisasi Hasil Pemantauan Penggunaan Bahasa Media Massa di Kabupaten Klaten
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    
-
+</div>
 @endsection
