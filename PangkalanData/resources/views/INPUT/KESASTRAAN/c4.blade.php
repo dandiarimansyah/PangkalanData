@@ -4,80 +4,64 @@
 
 @include('PARTIAL.MenuInput')
 
+<div class="isi-konten">
     <div class="judul">
-        <th>VALIDASI DATA MUSIKALISASI PUISI PROVINSI</th>
+        <th>INPUT DATA MUSIKALISASI PUISI PROVINSI</th>
     </div>
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
-        </div>
+  <div class="wrapper">
+      <div class="form">
 
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
-            </button>
-        </div>
-    </div>
+        <div class="inputfield-select">
+            <label>Provinsi*</label>
+            <div class="custom_select">
+              <select>
+                <option value="">-- Pilih Provinsi--</option>
+                <option value="">Jawa Tengah</option>
+              </select>
+            </div>
+        </div> 
 
-    <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
-    </div>
+        <div class="inputfield-kecil">
+            <label>Tahun</label>
+            <input type="text" class="input">
+        </div> 
 
-    <!-- TABLE -->
-    <div class="validasi">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
-                    <th>TAHUN</th>
-                    <th>PROVINSI</th>
-                    <th>PEMENANG I</th>
-                    <th>PEMENANG II</th>
-                    <th>PEMENANG III</th>
-                    <th>FAVORIT</th>
-                    <th>KETERANGAN</th>
-                    <th>MEDIA</th>
-                </tr>
-            </thead>
+        <div class="inputfield">
+            <label>Pemenang I</label>
+            <input type="text" class="input">
+        </div> 
 
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="inputfield">
+            <label>Pemenang II</label>
+            <input type="text" class="input">
+        </div> 
 
-    </div>
+        <div class="inputfield">
+            <label>Pemenang III</label>
+            <input type="text" class="input">
+        </div> 
 
-    
+        <div class="inputfield">
+            <label>Favorit</label>
+            <input type="text" class="input">
+        </div>     
+
+        <div class="inputfield">
+            <label>Keterangan</label>
+            <textarea class="textarea"></textarea>
+        </div> 
+
+        <div class="">
+            <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
+          </div>
+
+        <div class="tombol">
+          <input type="reset" value="Ulangi" class="reset">
+          <input type="submit" value="Simpan" class="inputan">
+        </div>         
+        
+      </div>
+  </div>
 
 @endsection

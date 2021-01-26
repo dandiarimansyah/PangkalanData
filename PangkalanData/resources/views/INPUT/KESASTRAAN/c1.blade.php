@@ -4,89 +4,93 @@
 
 @include('PARTIAL.MenuInput')
 
+<div class="isi-konten">
+
     <div class="judul">
-        <th>VALIDASI DATA BENGKEL SASTRA DAN BAHASA</th>
+      <th>INPUT BENGKEL SASTRA DAN BAHASA</th>
     </div>
+  
+    <div class="wrapper">
+        <div class="form">
+  
+          <div class="inputfield-select">
+              <label>Provinsi*</label>
+              <div class="custom_select">
+                <select>
+                  <option value="">Jawa Tengah</option>
+                </select>
+              </div>
+          </div> 
+  
+          <div class="inputfield">
+              <label>Kabupaten/Kota*</label>
+              <input type="text" class="input">
+          </div> 
+  
+          <div class="inputfield">
+              <label>Nama Kegiatan</label>
+              <input type="text" class="input">
+          </div> 
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
+          <div class="inputfield-date">
+            <label>Tanggal Awal Pelaksanaan</label>
+            <input type="date" class="input">
+        </div> 
+
+        <div class="inputfield-date">
+            <label>Tanggal Akhir Pelaksanaan</label>
+            <input type="date" class="input">
+        </div> 
+  
+        <div class="inputfield">
+            <label>Pemateri</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield-kecil">
+            <label>Jumlah Peserta</label>
+            <input type="text" class="input">
+            <p>Orang</p>
+        </div> 
+
+        <div class="inputfield-kecil">
+            <label>Jumlah Sekolah</label>
+            <input type="text" class="input">
+            <p>Sekolah</p>
+        </div> 
+
+        <div class="inputfield-kecil">
+            <label>Jumlah Sekolah yang Dibina</label>
+            <input type="text" class="input">
+            <p>Sekolah</p>
+        </div> 
+        
+        <div class="inputfield">
+            <label>Nama Sekolah yang Dibina</label>
+            <textarea class="textarea"></textarea>
+        </div> 
+
+        <div class="inputfield">
+            <label>Aktivitas</label>
+            <textarea class="textarea"></textarea>
+        </div> 
+  
+          <div class="tombol">
+            <input type="reset" value="Ulangi" class="reset">
+            <input type="submit" value="Simpan" class="inputan">
+          </div> 
+          
+          <div class="">
+            <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
+          </div>
+          
+          <div class="">
+              <label style="font-weight:bold;">** Gunakan tanda koma jika lebih dari satu</label>
+          </div>
+          
         </div>
-
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
-            </button>
-        </div>
-    </div>
-
-    <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
-    </div>
-
-    <!-- TABLE -->
-    <div class="validasi">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
-                    <th>PROVINSI</th>
-                    <th>KABUPATEN/KOTA</th>
-                    <th>TANGGAL</th>
-                    <th>KATEGORI</th>
-                    <th>KEGIATAN</th>
-                    <th>PEMATERI</th>
-                    <th>JUMLAH PESERTA</th>
-                    <th>JUMLAH SEKOLAH</th>
-                    <th>JUMLAH DIBINA</th>
-                    <th>SEKOLAH YANG DIBINA</th>
-                    <th>AKTIVITAS</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    
+    </div>	
+  
+  </div>
 
 @endsection

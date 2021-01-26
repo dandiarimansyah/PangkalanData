@@ -130,6 +130,7 @@ nav ul li a:hover {
         content: "\f00d";
     }
 }
+
 .content {
     z-index: -1;
     position: absolute;
@@ -138,11 +139,13 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 header {
     font-size: 35px;
     font-weight: 600;
     padding: 10px 0;
 }
+
 p {
     font-size: 30px;
     font-weight: 500;
@@ -286,60 +289,97 @@ p {
     padding: 25px;
     border: 1px solid;
     box-shadow: 5px 10px #888888;
-    background-color: rgb(223, 240, 255);
+    background-color: rgb(212, 239, 255);
     border-radius: 10px;
 }
 
-.wrapper .form .inputfield {
+.inputfield,
+.inputfield-date,
+.inputfield-select,
+.inputfield-kecil {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
 
-.wrapper .form .inputfield label {
-    width: 260px;
+.inputfield label {
+    width: 200px;
     color: #000000;
     margin-right: 30px;
     font-size: 14px;
 }
 
-.wrapper .form .inputfield .input,
-.wrapper .form .inputfield .textarea {
+.inputfield .input,
+.inputfield .textarea {
     width: 100%;
     outline: none;
-    border: 1px solid #313131;
+    border: 1px solid #000000;
     font-size: 15px;
     padding: 8px 10px;
     border-radius: 3px;
     transition: all 0.3s ease;
 }
 
-.inputfield-kecil{
+.inputfield-select label,
+.inputfield-kecil label,
+.inputfield-date label {
+    width: 148px;
+    color: #000000;
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+/* KECIL */
+.inputfield-kecil .input {
+    width: 100px;
+    outline: none;
+    border: 1px solid #000000;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.inputfield-kecil p {
+    font-size: 15px;
+    margin: auto 15px;
+}
+
+/* DATE */
+.inputfield-date .input {
+    width: 250px;
+    outline: none;
+    border: 1px solid #000000;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+/* LIST */
+.inputfield-list {
     margin-bottom: 10px;
     margin-left: 25px;
     display: flex;
     align-items: center;
 }
 
-.inputfield-kecil .input-kecil {
+.inputfield-list .input {
     width: 80px;
     outline: none;
-    border: 1px solid #313131;
+    border: 1px solid #000000;
     font-size: 15px;
     padding: 4px 5px;
     border-radius: 3px;
     transition: all 0.3s ease;
 }
 
-.inputfield-kecil label {
+.inputfield-list label {
     /* text-align: right ; */
-    width:120px;
+    width: 120px;
     color: #000000;
     margin-right: 15px;
     margin-bottom: 0;
     font-size: 14px;
 }
-
 
 .wrapper .form .inputfield .textarea {
     width: 100%;
@@ -347,13 +387,13 @@ p {
     resize: none;
 }
 
-.wrapper .form .inputfield .custom_select {
+.custom_select {
     position: relative;
-    width: 100%;
+    width: 250px;
     height: 38px;
 }
 
-.wrapper .form .inputfield .custom_select:before {
+.custom_select:before {
     content: "";
     position: absolute;
     top: 12px;
@@ -363,7 +403,7 @@ p {
     pointer-events: none;
 }
 
-.wrapper .form .inputfield .custom_select select {
+.custom_select select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -377,10 +417,10 @@ p {
     border-radius: 3px;
 }
 
-.wrapper .form .inputfield .input:focus,
-.wrapper .form .inputfield .textarea:focus,
-.wrapper .form .inputfield .custom_select select:focus {
-    border: 1px solid #3755ff;
+.input:focus,
+.textarea:focus,
+.custom_select select:focus {
+    border: 1px solid #ff9a17;
 }
 
 .tombol {

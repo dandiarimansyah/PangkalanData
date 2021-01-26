@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
               <select>
