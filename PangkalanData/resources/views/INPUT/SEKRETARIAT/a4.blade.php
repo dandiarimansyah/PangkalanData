@@ -21,7 +21,7 @@
                 <option value="">Eksternal</option>
               </select>
             </div>
-        </div> 
+        </div>
 
         <div class="inputfield">
             <label>Nama Instansi*</label>
