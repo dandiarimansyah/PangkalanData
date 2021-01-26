@@ -80,7 +80,7 @@
         </div> 
         
         <div class="">
-          <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
+          <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
         </div>
         
         <div class="">

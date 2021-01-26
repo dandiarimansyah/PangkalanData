@@ -4,89 +4,101 @@
 
 @include('PARTIAL.MenuInput')
 
+<div class="isi-konten">
     <div class="judul">
-        <th>VALIDASI DATA PENELITIAN</th>
+        <th>INPUT DATA PENELITIAN</th>
     </div>
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
-        </div>
+  <div class="wrapper">
+      <div class="form">
 
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
-            </button>
-        </div>
-    </div>
+        <div class="inputfield-select">
+            <label>Kategori Penelitian*</label>
+            <div class="custom_select">
+              <select>
+                <option value="">Bahasa</option>
+                <option value="">Sastra</option>
+              </select>
+            </div>
+        </div> 
 
-    <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
-    </div>
+        <div class="inputfield-select">
+            <label>Unit/Satuan Kerja*</label>
+            <div class="custom_select">
+              <select>
+                <option value="">Balai Bahasa Jawa Tengah</option>
+              </select>
+            </div>
+        </div> 
 
-    <!-- TABLE -->
-    <div class="validasi">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
-                    <th>TGL.MULAI</th>
-                    <th>TGL.SELESAI</th>
-                    <th>UNIT/SATUAN KERJA</th>
-                    <th>JUDUL</th>
-                    <th>PENELITI</th>
-                    <th>KERJA SAMA</th>
-                    <th>ABSTRAK</th>
-                    <th>LAMA PENELITIAN</th>
-                    <th>PUBLIKASI</th>
-                    <th>TAHUN TERBIT</th>
-                    <th>MEDIA</th>
-                </tr>
-            </thead>
+        <div class="inputfield">
+            <label>Peneliti*</label>
+            <input type="text" class="input">
+        </div> 
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>01-02-2017</td>
-                    <td>30-11-2017</td>
-                    <td>Balai Bahasa Jawa Tengah</td>
-                    <td>Kajian Penggunaan Bahasa Media Massa di Jawa Tengah</td>
-                    <td>Endro Nugroho Wasono Aji, Sri Wahyuni, Kahar Dwi Prihantono, Inni Inayati Istiana</td>
-                    <td></td>
-                    <td>...Selengkapnya</td>
-                    <td>10 BULAN</td>
-                    <td>BELUM TERBIT</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="inputfield">
+            <label>Judul*</label>
+            <textarea class="textarea"></textarea>
+        </div> 
 
-    </div>
+        <div class="inputfield">
+            <label>Kerja Sama</label>
+            <input type="text" class="input">
+        </div> 
 
-    
+        <div class="inputfield-date">
+            <label>Tanggal Mulai Penelitian</label>
+            <input type="date" class="input">
+        </div> 
+
+        <div class="inputfield-date">
+            <label>Tanggal Selesai Penelitian</label>
+            <input type="date" class="input">
+        </div> 
+
+        <div class="inputfield-kecil">
+            <label>Lama Penelitian</label>
+            <input type="text" class="input">
+            <div class="custom_select" style="margin-left: 30px; width: 120px">
+                <select>
+                <option value="">Tahun</option>
+                <option value="">Bulan</option>
+                <option value="">Minggu</option>
+                <option value="">Hari</option>
+                </select>
+            </div>
+        </div> 
+
+        <div class="inputfield-select">
+            <label>Publikasi</label>
+            <div class="custom_select">
+              <select>
+                <option value="">Terbit</option>
+                <option value="">Belum Terbit</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield-kecil">
+            <label>Tahun Terbit</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="inputfield">
+            <label>Abstrak*</label>
+            <textarea class="textarea"></textarea>
+        </div> 
+
+        <div class="tombol">
+          <input type="reset" value="Ulangi" class="reset">
+          <input type="submit" value="Simpan" class="inputan">
+        </div> 
+        
+        <div class="">
+            <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
+          </div>
+        
+      </div>
+  </div>
 
 @endsection

@@ -104,18 +104,13 @@
             </div>
         </div>
         
-        
-
-        
-
-        
 
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">
           <input type="submit" value="Simpan" class="inputan">
         </div> 
         
-        <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
+        <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
         
           <!-- 
             

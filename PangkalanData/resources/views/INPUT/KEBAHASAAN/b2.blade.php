@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Kategori*</label>
             <div class="custom_select">
               <select>
@@ -43,7 +43,7 @@
             <input type="text" class="input">
         </div> 
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Lingkup*</label>
             <div class="custom_select">
               <select>
@@ -52,9 +52,8 @@
                 <option value="">INTERNASIONAL</option>
               </select>
             </div>
-            <div class="custom_select">
+            <div class="custom_select" style="margin-left: 20px">
               <select>
-                <option value=""></option>
                 <option value="">TERAKREDITASI</option>
                 <option value="">TIDAK TERAKREDITASI</option>
               </select>
@@ -76,7 +75,7 @@
             <textarea class="textarea"></textarea>
         </div>  
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Info Produk</label>
             <div class="custom_select">
               <select>
@@ -94,7 +93,7 @@
         </div> 
         
         <div class="">
-          <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
+          <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
         </div>
 
       </div>

@@ -37,14 +37,16 @@
             <textarea class="textarea"></textarea>
         </div> 
 
+        <div class="">
+            <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
+          </div>
+
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">
           <input type="submit" value="Simpan" class="inputan">
         </div> 
         
-        <div class="">
-          <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
-        </div>
+        
         
       </div>
   </div>	

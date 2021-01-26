@@ -344,6 +344,14 @@ p {
     margin: auto 15px;
 }
 
+.inputfield-kecil a {
+    padding: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: rgb(149, 255, 181);
+    color: black;
+}
+
 /* DATE */
 .inputfield-date .input {
     width: 250px;
@@ -426,7 +434,7 @@ p {
 .tombol {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 15px 0;
     padding: 10px;
 }
 
@@ -471,7 +479,7 @@ p {
     border-radius: 3px;
     outline: none;
     border: 1px solid;
-    box-shadow: 3px 4px #5c0000;
+    box-shadow: 3px 4px rgb(0, 0, 105);
 }
 
 @media (max-width: 420px) {
