@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Provinsi*</label>
             <div class="custom_select">
               <select>
@@ -22,7 +22,7 @@
             </div>
         </div> 
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Unit Kerja*</label>
             <div class="custom_select">
               <select>
@@ -41,7 +41,7 @@
             <input type="text" class="input">
         </div> 
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Jenis Buku**</label>
             <div class="custom_select">
               <select>

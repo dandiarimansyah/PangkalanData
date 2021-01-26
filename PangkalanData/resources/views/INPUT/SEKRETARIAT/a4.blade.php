@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Kategori</label>
             <div class="custom_select">
               <select>
@@ -60,7 +60,7 @@
 
         <div class="inputfield">
             <label>Instansi (1)</label>
-            <div class="custom_select">
+            <div class="custom_select" style="width: 100%">
               <select>
                 <option value="">Badan Pengembangan Bahasa dan Perbukuan</option>
                 <option value="">Balai Bahasa Jawa Tengah</option>
@@ -75,7 +75,7 @@
 
         <div class="inputfield">
             <label>Instansi (2)</label>
-            <div class="custom_select">
+            <div class="custom_select" style="width: 100%">
               <select>
                 <option value="">Badan Pengembangan Bahasa dan Perbukuan</option>
                 <option value="">Balai Bahasa Jawa Tengah</option>

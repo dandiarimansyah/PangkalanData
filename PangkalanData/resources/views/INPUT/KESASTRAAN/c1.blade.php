@@ -52,22 +52,28 @@
             <input type="text" class="input">
             <p>Orang</p>
         </div> 
-  
-          <div class="inputfield">
-              <label></label>
-              <textarea class="textarea"></textarea>
-          </div>   
-  
-          <div class="inputfield">
-              <label>Jumlah Pengunjung</label>
-              <input type="text" class="input">
-          </div> 
-  
-          <div class="inputfield">
-              <label>Sumber Data</label>
-              <input type="text" class="input">
-          </div> 
+
+        <div class="inputfield-kecil">
+            <label>Jumlah Sekolah</label>
+            <input type="text" class="input">
+            <p>Sekolah</p>
+        </div> 
+
+        <div class="inputfield-kecil">
+            <label>Jumlah Sekolah yang Dibina</label>
+            <input type="text" class="input">
+            <p>Sekolah</p>
+        </div> 
         
+        <div class="inputfield">
+            <label>Nama Sekolah yang Dibina</label>
+            <textarea class="textarea"></textarea>
+        </div> 
+
+        <div class="inputfield">
+            <label>Aktivitas</label>
+            <textarea class="textarea"></textarea>
+        </div> 
   
           <div class="tombol">
             <input type="reset" value="Ulangi" class="reset">

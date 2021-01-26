@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>	Balai/Kantor*</label>
             <div class="custom_select">
               <select>
@@ -27,7 +27,7 @@
             <textarea class="textarea"></textarea>
         </div>  
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Kondisi Bangunan</label>
             <div class="custom_select">
               <select>
@@ -38,7 +38,7 @@
             </div>
         </div> 
 
-        <div class="inputfield">
+        <div class="inputfield-select">
             <label>Status Pemerolehan Tanah/Bangunan</label>
             <div class="custom_select">
               <select>

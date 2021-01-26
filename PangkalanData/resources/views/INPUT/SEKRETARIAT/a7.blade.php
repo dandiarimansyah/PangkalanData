@@ -14,7 +14,7 @@
       <div class="form">
 
         <div class="inputfield-select">
-            <label>Unit Satuan Kerja*</label>
+            <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
               <select>
                 <option value="">Balai Bahasa Jawa Tengah</option>
