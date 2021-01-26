@@ -155,7 +155,7 @@ p {
 }
 
 .footer {
-    margin-top: 30px;
+    margin-top: 15px;
     width: 100%;
     padding: 10px 0 10px 0;
     text-align: center;
@@ -178,6 +178,7 @@ p {
 
 .menu {
     display: flex;
+    margin-left: 15px;
 }
 
 /* CSS TABLE */
@@ -269,18 +270,24 @@ p {
 
 .isi-konten {
     border: 1px solid rgb(78, 78, 78);
-    margin: 10px;
+    margin: 25px;
     margin-top: 15px;
+    border-radius: 10px;
 }
 
 /* FORM INPUT */
 
 .wrapper {
     margin: 20px auto;
-    max-width: 700px;
+    min-width: fit-content;
+    max-width: 750px;
     width: 100%;
     background: #fff;
-    padding: 10px;
+    padding: 25px;
+    border: 1px solid;
+    box-shadow: 5px 10px #888888;
+    background-color: rgb(223, 240, 255);
+    border-radius: 10px;
 }
 
 .wrapper .form .inputfield {
@@ -290,9 +297,9 @@ p {
 }
 
 .wrapper .form .inputfield label {
-    width: 200px;
+    width: 260px;
     color: #000000;
-    margin-right: 40px;
+    margin-right: 30px;
     font-size: 14px;
 }
 
@@ -306,6 +313,33 @@ p {
     border-radius: 3px;
     transition: all 0.3s ease;
 }
+
+.inputfield-kecil{
+    margin-bottom: 10px;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.inputfield-kecil .input-kecil {
+    width: 80px;
+    outline: none;
+    border: 1px solid #313131;
+    font-size: 15px;
+    padding: 4px 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.inputfield-kecil label {
+    /* text-align: right ; */
+    width:120px;
+    color: #000000;
+    margin-right: 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
 
 .wrapper .form .inputfield .textarea {
     width: 100%;
@@ -351,13 +385,14 @@ p {
 
 .tombol {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px;
 }
 
 .inputan {
-    width: 130px;
-    padding: 6px 8px;
+    width: 180px;
+    padding: 8px 8px;
     font-size: 18px;
     border: 0px;
     background: #15af06;
@@ -365,19 +400,38 @@ p {
     cursor: pointer;
     border-radius: 3px;
     outline: none;
+    border: 1px solid;
+    box-shadow: 3px 4px #1d5c00;
 }
 
 .reset {
-    margin-right: 20px;
-    width: 130px;
-    padding: 6px 8px;
+    margin-right: 30px;
+    width: 180px;
+    padding: 8px 8px;
     font-size: 18px;
     border: 0px;
-    background: #962a00;
+    background: #b11111;
     color: #fff;
     cursor: pointer;
     border-radius: 3px;
     outline: none;
+    border: 1px solid;
+    box-shadow: 3px 4px #5c0000;
+}
+
+.import {
+    margin-right: 30px;
+    width: 180px;
+    padding: 8px 8px;
+    font-size: 18px;
+    border: 0px;
+    background: blue;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid;
+    box-shadow: 3px 4px #5c0000;
 }
 
 @media (max-width: 420px) {

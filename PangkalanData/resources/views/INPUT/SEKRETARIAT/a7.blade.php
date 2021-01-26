@@ -4,105 +4,156 @@
 
 @include('PARTIAL.MenuInput')
 
-    <div class="judul">
-        <th>VALIDASI DATA INVENTARISASI BARANG MILIK NEGARA</th>
-    </div>
+<div class="isi-konten">
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <!-- KATEGORI SEKRETARIAT -->
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                KEMBALI KE MENU
-            </button>
+  <div class="judul">
+    <th>INPUT DATA INVENTARISASI BARANG MILIK NEGARA</th>
+  </div>
+
+  <div class="wrapper">
+      <div class="form">
+
+        <div class="inputfield">
+            <label>Unit Satuan Kerja*</label>
+            <div class="custom_select">
+              <select>
+                <option value="">Balai Bahasa Jawa Tengah</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="inputfield">
+            <label>Tahun Anggaran*</label>
+            <input type="text" class="input">
+        </div> 
+
+        <div class="row">
+            <div class="col">
+                <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
+                    <label >Barang Elektronik</label>
+                </div> 
+                
+                <div class="inputfield-kecil">
+                    <li> <label>Laptop</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>Komputer</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+            
+                <div class="inputfield-kecil">
+                    <li> <label>Printer</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>Fotocopy</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>Faximili</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>LCD Projector</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>TV</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>Lain-Lain</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+            </div>
+
+            <div class="col">
+                <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
+                    <label >Furniture/Meubelair</label>
+                </div> 
+                <div class="inputfield-kecil">
+                    <li> <label>Jumlah Furniture</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
+                    <label >Kendaraan</label>
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>Roda Dua</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>Roda Empat</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+
+                <div class="inputfield-kecil">
+                    <li> <label>Roda Enam</label> </li>
+                    <input type="text" class="input-kecil">
+                </div> 
+            </div>
         </div>
+        
+        
 
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
-            </button>
-        </div>
-    </div>
+        
 
-    <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
-    </div>
+        
 
-    <!-- TABLE -->
-    <div class="validasi">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th rowspan="2">NO</th>
-                    <th rowspan="2">EDIT</th>
-                    <th rowspan="2">VALIDASI</th>
-                    <th rowspan="2">TANGGAL DIPERBAHARUI</th>
-                    <th rowspan="2">BALAI/KANTOR</th>
-                    <th rowspan="2">TAHUN ANGGARAN</th>
-                    <th colspan="8">ELEKTRONIK</th>
-                    <th rowspan="2">FURNITURE</th>
-                    <th colspan="3">KENDARAAN</th>
-                </tr>
-                <tr>
-                    <th>LAPTOP</th>
-                    <th>KOMPUTER</th>
-                    <th>PRINTER</th>
-                    <th>FOTOCOPY</th>
-                    <th>FAXIMILI</th>
-                    <th>LCD PROJECTOR</th>
-                    <th>TV</th>
-                    <th>LAIN-LAIN</th>
-                    <th>RODA 2</th>
-                    <th>RODA 4</th>
-                    <th>RODA 6</th>
-                </tr>
-            </thead>
+        <div class="tombol">
+          <input type="reset" value="Ulangi" class="reset">
+          <input type="submit" value="Simpan" class="inputan">
+        </div> 
+        
+        <label style="font-weight:bold; font-style:italic;">* Data WAJIB diisi</label>
+        
+          <!-- 
+            
+        <div class="inputfield">
+            <label>Keterangan</label>
+            <textarea class="textarea"></textarea>
+        </div>   
+        
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>11-12-2018</td>
-                    <td>Balai Bahasa Provinsi Jawa Tengah</td>
-                    <td>2018</td>
-                    <td>13</td>
-                    <td>46</td>
-                    <td>29</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>7</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>437</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+            <div class="inputfield">
+            <label>Last Name</label>
+            <input type="text" class="input">
+        </div>  
+        <div class="inputfield">
+            <label>Password</label>
+            <input type="password" class="input">
+        </div>  
+        <div class="inputfield">
+            <label>Confirm Password</label>
+            <input type="password" class="input">
+        </div> 
+        
+          <div class="inputfield">
+            <label>Email Address</label>
+            <input type="text" class="input">
+        </div> 
+        <div class="inputfield">
+            <label>Phone Number</label>
+            <input type="text" class="input">
+        </div> 
+        
+        <div class="inputfield">
+            <label>Postal Code</label>
+            <input type="text" class="input">
+        </div>  -->
 
-    </div>
+      </div>
+  </div>	
 
-    
-
+</div>
 @endsection
