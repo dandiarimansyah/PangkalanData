@@ -7,7 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 body {
-    width: auto;
+    /* width: auto; */
     background: #f2f2f2;
 }
 
@@ -156,20 +156,20 @@ p {
 }
 
 .footer {
+    margin-top: 30px;
     width: 100%;
-    padding: 10px 0 5px 0;
+    padding: 10px 0 10px 0;
     text-align: center;
-    left: 0;
     bottom: 0;
     background-color: #ff7b54;
 }
 
 .footer h5 {
-    font-family: "Arial";
-    font-weight: 300;
-    font-size: 14px;
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: 13px;
     color: rgb(255, 255, 255);
-    /* padding: 1px 0px 1px 0px; */
+    padding: 1px 0px 1px 0px;
 }
 
 .kategori {
@@ -179,6 +179,17 @@ p {
 
 .menu {
     display: flex;
+}
+
+.dalam-konten {
+    min-height: 74vh;
+    margin: 0;
+}
+
+.isi-konten {
+    border: 1px solid rgb(78, 78, 78);
+    margin: 10px;
+    margin-top: 15px;
 }
 
 /* CSS TABLE */
