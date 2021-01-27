@@ -34,7 +34,7 @@ Route::post('proses_login', [AuthController::class, 'proses_login'])->name('pros
 
 Route::get('/logout', function () {
     auth()->logout();
-    return redirect('/login');
+    return redirect('/');
 });
 
 Route::get('/', [GuestController::class, 'index']);

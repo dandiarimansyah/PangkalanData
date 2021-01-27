@@ -53,7 +53,7 @@ nav ul li a {
     padding: 8px 15px;
 }
 nav ul li a:hover {
-    color: yellow;
+    color: white;
     border-radius: 30px;
     box-shadow: 0 0 5px #fafdfd, 0 0 10px #ffffff;
     text-decoration: none;
@@ -181,6 +181,17 @@ p {
     display: flex;
 }
 
+.tombol-menu {
+    padding: 2px 10px;
+    width: max-content;
+    height: 35px;
+    background-color: #ffea83;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: 1px 2px #ddb800;
+    cursor: pointer;
+}
+
 /* CSS TABLE */
 
 .content-table {
@@ -194,9 +205,9 @@ p {
 }
 
 .content-table thead tr {
-    border-right: 1px solid rgb(26, 180, 96);
-    border-left: 1px solid rgb(26, 180, 96);
-    background-color: rgb(26, 180, 96);
+    border-right: 1px solid#028b40;
+    border-left: 1px solid#028b40;
+    background-color: #028b40;
     color: #ffffff;
     text-align: center;
     /* font-weight: bold; */
@@ -210,8 +221,8 @@ p {
 }
 
 .content-table td {
-    border-right: 1px solid green;
-    border-left: 1px solid green;
+    border-right: 1px solid #028b40;
+    border-left: 1px solid #028b40;
     padding: 5px 15px 5px 15px;
 }
 
@@ -229,18 +240,18 @@ p {
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid rgb(26, 180, 96);
+    border-bottom: 2px solid#028b40;
 }
 
 .content-table tbody tr.active-row {
     font-weight: bold;
-    color: rgb(26, 180, 96);
+    color: #028b40;
 }
 
 .total td {
-    background-color: #fffde4;
+    background-color: #e0ffe2d5;
     font-weight: bold;
-    border-top: 1px solid green;
+    border-top: 1px solid #028b40;
 }
 
 .validasi {

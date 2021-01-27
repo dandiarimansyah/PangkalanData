@@ -1,7 +1,7 @@
 <div class="menu">
     <!-- KATEGORI SEKRETARIAT -->
     <div class="btn-group kategori">
-        <button type="button" class="tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sekretariat
         </button>
         <div class="dropdown-menu">
@@ -14,7 +14,7 @@
 
     <!-- KATEGORI DATA KEBAHASAAN -->
     <div class="btn-group kategori">
-        <button type="button" class="tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Data Kebahasaan
         </button>
         <div class="dropdown-menu">
@@ -27,7 +27,7 @@
 
     <!-- KATEGORI DATA KESASTRAAN -->
     <div class="btn-group kategori">
-        <button type="button" class=" tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Data Kesastraan
         </button>
         <div class="dropdown-menu">
@@ -37,7 +37,7 @@
 
     <!-- KATEGORI DATA KOMUNITAS -->
     <div class="btn-group kategori">
-        <button type="button" class=" tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Data Komunitas
         </button>
         <div class="dropdown-menu">
@@ -47,7 +47,7 @@
 
     <!-- KATEGORI DATA PENELITIAN -->
     <div class="btn-group kategori">
-        <button type="button" class=" tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn tombol-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Data Penelitian
             </button>
         <div class="dropdown-menu">

@@ -64,7 +64,7 @@
                 @endauth
 
                 @guest
-                    <li><a href="{{ url("/login")}}" class="login">LOGIN</a></li>
+                    <li><a href="{{ url("/login")}}" class="login">MASUK</a></li>
                 @endguest
             </ul>
         </nav>
