@@ -11,6 +11,21 @@ input {
     font-family: "Poppins", sans-serif;
 }
 
+.wajib-diisi {
+    display: block;
+    color: red;
+    text-align: right;
+    width: 350px;
+}
+
+.salah-login {
+    display: block;
+    color: red;
+    text-align: center;
+    width: 350px;
+    font-weight: bold;
+}
+
 .container {
     position: relative;
     width: 100%;
