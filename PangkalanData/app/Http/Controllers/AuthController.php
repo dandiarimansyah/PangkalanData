@@ -25,8 +25,8 @@ class AuthController extends Controller
                 'password' => 'required',
             ],
             [
-                'username.required' => 'Nama Pengguna harus diisi',
-                'password.required' => 'Kata Sandi harus diisi'
+                'username.required' => 'Nama Pengguna WAJIB diisi!',
+                'password.required' => 'Kata Sandi WAJIB diisi!'
             ]
         );
 
@@ -41,6 +41,6 @@ class AuthController extends Controller
             }
             return redirect()->intended('/');
         }
-        return redirect('login');
+        return redirect('login')->with(['error' => 'Nama Pengguna/Password salah!']);
     }
 }

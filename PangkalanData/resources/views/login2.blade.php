@@ -18,15 +18,31 @@
             @csrf
             
             <h2 class="title">Masuk Validator / Operator</h2>
+
+            @if (session('error'))
+              <div class="salah-login">{{ session('error') }}</div>
+            @endif
+
+            @error('username')
+                <span class="wajib-diisi" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="username" placeholder="Nama Pengguna" required/>
+              <input type="text" name="username" placeholder="Nama Pengguna"/>
             </div>
+
+            @error('password')
+                <span class="wajib-diisi" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" name="password" placeholder="Kata Sandi" required/>
+              <input type="password" name="password" placeholder="Kata Sandi"/>
             </div>
         
             <button class="btn solid" type="submit">Masuk</button>
