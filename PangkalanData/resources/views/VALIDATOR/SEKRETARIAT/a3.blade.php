@@ -33,7 +33,7 @@
 
     <div class="menu" style="display:flex; justify-content:center; margin-top:3px;">
         <div class="btn-group kategori">
-            <button onclick="myFunction()" id="valid" type="button" class="btn btn-warning" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+            <button onclick="VALIDATOR()" id="valid" type="button" class="btn btn-warning" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
                 PILIH SEMUA <span id="uncheck" style="display:inline">⬜</span> <span id="check" style="display:none">✅</span> 
             </button>
             <input type="checkbox">
@@ -46,8 +46,6 @@
             <input type="checkbox">
         </div>
     </div>
-
-    
 
     <!-- TABLE -->
     <div class="validasi">
@@ -167,20 +165,5 @@
         </table>
 
     </div>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("valid");
-            var y = document.getElementById("uncheck");
-            var z = document.getElementById("check");
-            if (y.style.display === "inline") {
-                y.style.display = "none";
-                z.style.display = "inline";
-            } else {
-                y.style.display = "inline";
-                z.style.display = "none";
-            }
-        }
-    </script>
 
 @endsection

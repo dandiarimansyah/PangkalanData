@@ -104,6 +104,20 @@
             $('.icon').click(function(){
             $('span').toggleClass("cancel");
             });
+      
+            function VALIDATOR() {
+                var x = document.getElementById("valid");
+                var y = document.getElementById("uncheck");
+                var z = document.getElementById("check");
+                if (y.style.display === "inline") {
+                    y.style.display = "none";
+                    z.style.display = "inline";
+                } else {
+                    y.style.display = "inline";
+                    z.style.display = "none";
+                }
+            }
         </script>
+
     </body>
 </html>

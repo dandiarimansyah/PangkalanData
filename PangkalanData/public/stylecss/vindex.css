@@ -270,8 +270,8 @@ p {
 .ketjudul {
     text-align: center;
     margin-top: 20px;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .dalam-konten {
