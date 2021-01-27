@@ -32,7 +32,7 @@
 
             <a href="{{url('/')}}" class="btn kembali"> 
               {{-- <i class="fa fa-arrow-left" aria-hidden="true"></i> --}}
-              Masuk Sebagai Tamu
+              Kembali ke Halaman Tamu
             </a>
           </form>
 
@@ -54,7 +54,7 @@
 
             <a href="{{url('/')}}" class="btn kembali"> 
               {{-- <i class="fa fa-arrow-left" aria-hidden="true"></i> --}}
-              Masuk Sebagai Tamu
+              Kembali ke Halaman Tamu
             </a>
           </form>
 

@@ -17,13 +17,23 @@
 
         <div class="btn-group kategori">
             <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
+                EXPORT KE PDF
             </button>
         </div>
+
     </div>
 
     <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
+        <th>Klik ✅ untuk melakukan validasi data.</th>
+    </div>
+
+    <div class="menu" style="display:flex; justify-content:center; margin-top:3px;">
+        <div class="btn-group kategori">
+            <a type="button" class="btn btn-warning" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+                SELECT ALL ⬜
+            </a>
+            <input type="checkbox">
+        </div>
     </div>
 
     <!-- TABLE -->

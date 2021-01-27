@@ -17,14 +17,37 @@
 
         <div class="btn-group kategori">
             <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                CETAK
+                EXPORT KE PDF
             </button>
         </div>
+
     </div>
 
     <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
+        <th>Klik ✅ untuk Memilih Data yang akan divalidasi</th>
     </div>
+
+    <div class="ketjudul">
+        <th>Kemudian Klik Tombol "Validasi Data" untuk Melakukan Validasi</th>
+    </div>
+
+    <div class="menu" style="display:flex; justify-content:center; margin-top:3px;">
+        <div class="btn-group kategori">
+            <button onclick="myFunction()" id="valid" type="button" class="btn btn-warning" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+                PILIH SEMUA <span id="uncheck" style="display:inline">⬜</span> <span id="check" style="display:none">✅</span> 
+            </button>
+            <input type="checkbox">
+        </div>
+
+        <div class="btn-group kategori">
+            <button type="button" class="btn btn-success" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+                VALIDASI DATA
+            </button>
+            <input type="checkbox">
+        </div>
+    </div>
+
+    
 
     <!-- TABLE -->
     <div class="validasi">
@@ -145,6 +168,19 @@
 
     </div>
 
-    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("valid");
+            var y = document.getElementById("uncheck");
+            var z = document.getElementById("check");
+            if (y.style.display === "inline") {
+                y.style.display = "none";
+                z.style.display = "inline";
+            } else {
+                y.style.display = "inline";
+                z.style.display = "none";
+            }
+        }
+    </script>
 
 @endsection
