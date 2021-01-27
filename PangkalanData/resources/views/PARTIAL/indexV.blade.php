@@ -40,6 +40,7 @@
 
             <ul>
                 @auth
+
                     @if (auth()->user()->level == 'operator')
                         <li class="{{ (request()->is('operator/input*')) ? 'aktif' : '' }}"><a href="/operator/input">INPUT</a></li>    
                         <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li>
@@ -48,14 +49,14 @@
                         <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}"><a href="/validator/validasi">VALIDASI</a></li>
                         <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
                     @endif
+                    <li class="{{ (request()->is('laporan*')) ? 'aktif' : '' }}"><a href="/laporan">LAPORAN</a></li>
+                    <li class="{{ (request()->is('grafik*')) ? 'aktif' : '' }}"><a href="/grafik">GRAFIK</a></li>
                 @endauth
 
                 @guest
-                    <li class="{{ (request()->is('/*')) ? 'aktif' : '' }}"><a href="/">INDEX</a></li>
+                    <li class="{{ (request()->is('/*')) ? 'aktif' : '' }}"><a href="/">DATA</a></li>
                 @endguest
                  
-                <li class="{{ (request()->is('laporan*')) ? 'aktif' : '' }}"><a href="/laporan">LAPORAN</a></li>
-                <li class="{{ (request()->is('grafik*')) ? 'aktif' : '' }}"><a href="/grafik">GRAFIK</a></li>
                 <li class="{{ (request()->is('forum*')) ? 'aktif' : '' }}"><a href="/forum">FORUM</a></li>
                 
                 @auth
@@ -94,7 +95,7 @@
         </div>
 
         <footer class="footer">
-            <h5>Kantor Balai Bahasa Provinsi Jawa Tengah</h5>
+            <h5>Balai Bahasa Provinsi Jawa Tengah</h5>
             <h5>Jalan Elang Raya No.1, Mangunharjo, Tembalang, Sendangmulyo, Tembalang, Kota Semarang, Jawa Tengah 50272</h5>
             <h5>Pos-el: balaibahasa.jateng@kemdikbud.go.id</h5>
         </footer>
