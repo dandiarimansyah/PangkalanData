@@ -207,9 +207,9 @@ p {
 }
 
 .content-table thead tr {
-    border-right: 1px solid #00587a;
-    border-left: 1px solid #00587a;
-    background-color: #00587a;
+    border-right: 1px solid #222a31cc;
+    border-left: 1px solid #222a31cc;
+    background-color: #222a31cc;
     color: #ffffff;
     text-align: center;
     /* font-weight: bold; */
@@ -223,8 +223,8 @@ p {
 }
 
 .content-table td {
-    border-right: 1px solid #00587a;
-    border-left: 1px solid #00587a;
+    border-right: 1px solid #222a31cc;
+    border-left: 1px solid #222a31cc;
     padding: 5px 15px 5px 15px;
 }
 
@@ -242,18 +242,18 @@ p {
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #00587a;
+    border-bottom: 2px solid #222a31cc;
 }
 
 .content-table tbody tr.active-row {
     font-weight: bold;
-    color: #00587a;
+    color: #222a31cc;
 }
 
 .total td {
-    background-color: #d1f2ffb7;
+    background-color: #7c7c7c2d;
     font-weight: bold;
-    border-top: 1px solid #00587a;
+    border-top: 2px solid #222a31cc;
 }
 
 .validasi {

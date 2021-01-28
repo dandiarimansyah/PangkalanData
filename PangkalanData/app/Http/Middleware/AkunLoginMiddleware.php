@@ -27,6 +27,6 @@ class AkunLoginMiddleware
             return $next($request);
         }
 
-        return redirect('/login')->with('error', "Tidak Punya Akses, Harus Login!");
+        return redirect('/login')->with('error', "Silahkan Login Kembali");
     }
 }

@@ -217,9 +217,9 @@ p {
 }
 
 .content-table thead tr {
-    border-right: 1px solid rgb(26, 180, 96);
-    border-left: 1px solid rgb(26, 180, 96);
-    background-color: rgb(26, 180, 96);
+    border-right: 1px solid #222a31cc;
+    border-left: 1px solid #222a31cc;
+    background-color: #222a31cc;
     color: #ffffff;
     text-align: center;
     /* font-weight: bold; */
@@ -252,18 +252,18 @@ p {
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid rgb(26, 180, 96);
+    border-bottom: 2px solid #222a31cc;
 }
 
 .content-table tbody tr.active-row {
     font-weight: bold;
-    color: rgb(26, 180, 96);
+    color: #222a31cc;
 }
 
 .total td {
-    background-color: #fffde4;
+    background-color: #7c7c7c2d;
     font-weight: bold;
-    border-top: 1px solid green;
+    border-top: 2px solid #222a31cc;
 }
 
 .validasi {
