@@ -24,11 +24,7 @@
             </button>
         </div>
     </div>
-
-    <div class="ketjudul">
-        <th>Klik CENTANG untuk melakukan validasi data.</th>
-    </div>
-
+    
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
