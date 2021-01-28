@@ -7,7 +7,10 @@
 <div class="isi-konten">
 
   <div class="judul">
-    <th>INPUT DATA REALISASI ANGGARAN UNIT/SATUAN KERJA</th>
+    <th>INPUT DATA KEPEGAWAIAN UNIT/SATUAN KERJA</th>
+  </div>
+  <div class="judul">
+    <th>MASIH BELUM SELESAI</th>
   </div>
 
   <div class="wrapper">

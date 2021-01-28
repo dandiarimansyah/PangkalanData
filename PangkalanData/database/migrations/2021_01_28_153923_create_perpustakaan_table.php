@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreatePerpustakaanTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('perpustakaan', function (Blueprint $table) {
+            $table->id();
+            $table->string('provinsi');
+            $table->string('unit');
+            $table->integer('jumlah_buku');
+            $table->integer('jumlah_judul');
+            $table->longText('jenis_buku');
+            $table->integer('jumlah_pengunjung');
+            $table->string('sumber_data');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('perpustakaan');
+    }
+}
