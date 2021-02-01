@@ -17,7 +17,7 @@ class CreateAnggaranTable extends Migration
             $table->id();
             $table->string('unit');
             $table->string('tahun_anggaran');
-            $table->integer('nilai_anggaran');
+            $table->bigInteger('nilai_anggaran');
             $table->timestamps();
         });
     }

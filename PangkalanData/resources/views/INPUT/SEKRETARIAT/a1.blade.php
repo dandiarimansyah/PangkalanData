@@ -12,30 +12,37 @@
 
   <div class="wrapper">
       <div class="form">
+        <form role="form" action="/operator/input/sekretariat/anggaran" method="POST">
+          @csrf
 
+        <div class="alert-danger">{{ $errors->first('unit') }}</div>
         <div class="inputfield-select">
             <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
-              <select>
-                <option value="">Balai Bahasa Jawa Tengah</option>
+              <select name="unit">
+                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
-        </div> 
-
+        </div>
+        
+        <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
         <div class="inputfield">
             <label>Tahun Anggaran*</label>
-            <input type="text" class="input">
+            <input name="tahun_anggaran" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('nilai_anggaran') }}</div>
         <div class="inputfield">
             <label>Nilai Anggaran (Rp.)</label>
-            <input type="text" class="input">
+            <input name="nilai_anggaran" type="text" class="input">
         </div>  
         
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">
           <input type="submit" value="Simpan" class="inputan">
-        </div> 
+        </div>
+
+      </form>
         
         <div class="">
           <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>

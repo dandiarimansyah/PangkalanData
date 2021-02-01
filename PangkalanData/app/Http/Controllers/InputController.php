@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Anggaran;
 
 class InputController extends Controller
 {
+
     //INPUT KATEGORI A
     public function a1()
     {
@@ -102,5 +104,22 @@ class InputController extends Controller
     public function e1()
     {
         return view('INPUT.PENELITIAN.e1');
+    }
+
+    public function store_a1(Request $request)
+    {
+        $request->validate([
+            'unit' => ['required'],
+            'tahun_anggaran' => ['required'],
+            'nilai_anggaran' => ['required', 'numeric']
+        ]);
+
+        $data = new Anggaran();
+        $data->unit = $request->unit;
+        $data->tahun_anggaran = $request->tahun_anggaran;
+        $data->nilai_anggaran = $request->nilai_anggaran;
+        $data->save();
+
+        return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Ditambahkan!');
     }
 }
