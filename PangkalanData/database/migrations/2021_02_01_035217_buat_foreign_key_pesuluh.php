@@ -26,7 +26,8 @@ class BuatForeignKeyPesuluh extends Migration
      */
     public function down()
     {
-        $table->dropForeign(['id_penyuluhan']);
-        $table->dropColumn(['id_penyuluhan']);
+        Schema::table('pesuluh', function (Blueprint $table) {
+            //
+        });
     }
 }

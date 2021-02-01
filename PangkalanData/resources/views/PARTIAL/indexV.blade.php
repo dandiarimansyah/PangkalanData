@@ -116,6 +116,9 @@
                     z.style.display = "none";
                 }
             }
+
+            @stack('scripts')
+
         </script>
 
     </body>
