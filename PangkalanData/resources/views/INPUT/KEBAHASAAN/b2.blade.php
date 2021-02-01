@@ -52,12 +52,6 @@
                 <option value="">INTERNASIONAL</option>
               </select>
             </div>
-            <div class="custom_select" style="margin-left: 20px">
-              <select>
-                <option value="">TERAKREDITASI</option>
-                <option value="">TIDAK TERAKREDITASI</option>
-              </select>
-            </div>
         </div> 
 
         <div class="inputfield">
