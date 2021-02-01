@@ -38,7 +38,9 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                    </td>
                     <td>Jawa Tengah</td>
                     <td>Kabupaten Klaten</td>
                     <td>16-10-2019 - 03-11-2020</td>
@@ -55,7 +57,8 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td></td>
+                    <td>
+                    </td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -68,9 +71,82 @@
                 </tr>
             </tbody>
         </table>
-
     </div>
-
     
+    <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="modal-edit" class="modal-dialog" role="document">
+          <div id="modal-content" class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="wrapper" style="margin: 0">
+                    <div class="form">
+                <form>
+                    
+                    <div class="inputfield-select">
+                        <label>Provinsi*</label>
+                        <div class="custom_select">
+                        <select>
+                            <option value="">Jawa Tengah</option>
+                        </select>
+                        </div>
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Kabupaten/Kota*</label>
+                        <input type="text" class="input">
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Nama Kegiatan</label>
+                        <input type="text" class="input">
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Tanggal Awal Pelaksanaan</label>
+                        <input type="text" class="input">
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Tanggal Akhir Pelaksanaan</label>
+                        <input type="text" class="input">
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>narasumber</label>
+                        <input type="text" class="input">
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Sasaran</label>
+                        <input type="text" class="input">
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Jumlah Peserta</label>
+                        <input type="text" class="input">
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Materi</label>
+                        <textarea class="textarea"></textarea>
+                    </div> 
+
+                </form>
+            </div>
+            </div>
+        </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
 @endsection

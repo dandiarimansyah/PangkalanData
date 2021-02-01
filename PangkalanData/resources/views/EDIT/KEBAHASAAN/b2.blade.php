@@ -88,6 +88,7 @@
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
               <form>
+
                 <div class="inputfield-select">
                     <label>Kategori*</label>
                     <div class="custom_select">
@@ -155,6 +156,7 @@
                       </select>
                     </div>
                 </div> 
+                
               </form>
             </div>
             </div>

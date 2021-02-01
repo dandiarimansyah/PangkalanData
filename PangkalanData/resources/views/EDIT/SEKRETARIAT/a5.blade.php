@@ -43,7 +43,9 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                    </td>
                     <td>11-12-2018</td>
                     <td>Balai Bahasa Jawa Tengah Jalan Elang raya nomor 1, Mangunharjo, Tembalang, Semarang, Jawa Tengah</td>
                     <td>PINJAM PAKAI</td>
@@ -73,6 +75,72 @@
         </table>
 
     </div>
+
+    <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="modal-edit" class="modal-dialog" role="document">
+          <div id="modal-content" class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="wrapper" style="margin: 0">
+                    <div class="form">
+                <form>
+                    
+                  <div class="inputfield-select">
+                      <label>	Balai/Kantor*</label>
+                      <div class="custom_select">
+                        <select>
+                          <option value="">Balai Bahasa Jawa Tengah</option>
+                        </select>
+                      </div>
+                  </div> 
+
+                  <div class="inputfield">
+                      <label>Alamat</label>
+                      <textarea class="textarea"></textarea>
+                  </div>  
+
+                  <div class="inputfield-select">
+                      <label>Kondisi Bangunan</label>
+                      <div class="custom_select">
+                        <select>
+                          <option value="">Baik</option>
+                          <option value="">Rusak Sedang</option>
+                          <option value="">Rusak Berat</option>
+                        </select>
+                      </div>
+                  </div> 
+
+                  <div class="inputfield-select">
+                      <label>Status Pemerolehan Tanah/Bangunan</label>
+                      <div class="custom_select">
+                        <select>
+                          <option value="">Hibah</option>
+                          <option value="">Beli</option>
+                        </select>
+                      </div>
+                  </div> 
+
+                  <div class="inputfield">
+                      <label>Keterangan</label>
+                      <textarea class="textarea"></textarea>
+                  </div>  
+
+                </form>
+            </div>
+            </div>
+        </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     
 

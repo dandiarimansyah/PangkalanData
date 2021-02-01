@@ -75,6 +75,7 @@
 
     </div>
 
+    <!-- EDIT MODAL -->
     <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
@@ -88,6 +89,7 @@
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
               <form>
+
                 <div class="inputfield-select">
                     <label>Kategori*</label>
                     <div class="custom_select">
@@ -158,6 +160,7 @@
                       </select>
                     </div>
                 </div> 
+                
               </form>
             </div>
             </div>
