@@ -29,7 +29,7 @@
 
         <div class="inputfield-select">
             <label>Berdasarkan Unit/Satuan Kerja</label>
-            <div class="custom_select">
+            <div class="custom_select" style="width: 520px">
                 <select>
                 <option value="">Badan Pengembangan Bahasa dan Perbukuan</option>
                 <option value="">Sekretariat Badan</option>
