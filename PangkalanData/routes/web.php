@@ -59,7 +59,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/operator/input/sekretariat/kerja_sama', [InputController::class, 'a4']);
         Route::get('/operator/input/sekretariat/tanah_dan_bangunan', [InputController::class, 'a5']);
         Route::get('/operator/input/sekretariat/perpustakaan', [InputController::class, 'a6']);
-        Route::get('/operator/input/sekretariat/invetarisasi_bmn', [InputController::class, 'a7']);
+        Route::get('/operator/input/sekretariat/inventarisasi_bmn', [InputController::class, 'a7']);
         //INPUT KATEGORI B
         Route::get('/operator/input/kebahasaan/kamus_ensiklopedia', [InputController::class, 'b1']);
         Route::get('/operator/input/kebahasaan/jurnal_majalah', [InputController::class, 'b2']);
@@ -87,7 +87,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/operator/edit/sekretariat/kerja_sama', [EditController::class, 'a4']);
         Route::get('/operator/edit/sekretariat/tanah_dan_bangunan', [EditController::class, 'a5']);
         Route::get('/operator/edit/sekretariat/perpustakaan', [EditController::class, 'a6']);
-        Route::get('/operator/edit/sekretariat/invetarisasi_bmn', [EditController::class, 'a7']);
+        Route::get('/operator/edit/sekretariat/inventarisasi_bmn', [EditController::class, 'a7']);
         //EDIT KATEGORI B
         Route::get('/operator/edit/kebahasaan/kamus_ensiklopedia', [EditController::class, 'b1']);
         Route::get('/operator/edit/kebahasaan/jurnal_majalah', [EditController::class, 'b2']);
@@ -120,7 +120,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/validator/sekretariat/kerja_sama', [ValidatorController::class, 'a4']);
         Route::get('/validator/sekretariat/tanah_dan_bangunan', [ValidatorController::class, 'a5']);
         Route::get('/validator/sekretariat/perpustakaan', [ValidatorController::class, 'a6']);
-        Route::get('/validator/sekretariat/invetarisasi_bmn', [ValidatorController::class, 'a7']);
+        Route::get('/validator/sekretariat/inventarisasi_bmn', [ValidatorController::class, 'a7']);
         //VALIDATOR KATEGORI B
         Route::get('/validator/kebahasaan/kamus_ensiklopedia', [ValidatorController::class, 'b1']);
         Route::get('/validator/kebahasaan/jurnal_majalah', [ValidatorController::class, 'b2']);
@@ -172,7 +172,7 @@ Route::get('/laporan/sekretariat/kepegawaian', [LaporanController::class, 'la3']
 Route::get('/laporan/sekretariat/kerja_sama', [LaporanController::class, 'la4']);
 Route::get('/laporan/sekretariat/tanah_dan_bangunan', [LaporanController::class, 'la5']);
 Route::get('/laporan/sekretariat/perpustakaan', [LaporanController::class, 'la6']);
-Route::get('/laporan/sekretariat/invetarisasi_bmn', [LaporanController::class, 'la7']);
+Route::get('/laporan/sekretariat/inventarisasi_bmn', [LaporanController::class, 'la7']);
 //LAPORAN S 2
 Route::get('/laporan/kebahasaan/kamus_ensiklopedia', [LaporanController::class, 'lb1']);
 Route::get('/laporan/kebahasaan/jurnal_umum', [LaporanController::class, 'lb2']);
