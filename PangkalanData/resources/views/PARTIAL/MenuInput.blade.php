@@ -11,7 +11,7 @@
             <a class="dropdown-item" href="/operator/input/sekretariat/kerja_sama">Kerja Sama</a>
             <a class="dropdown-item" href="/operator/input/sekretariat/tanah_dan_bangunan">Tanah dan Bangunan</a>
             <a class="dropdown-item" href="/operator/input/sekretariat/perpustakaan">Perpustakaan</a>
-            <a class="dropdown-item" href="/operator/input/sekretariat/invetarisasi_bmn">Invetarisasi BMN</a>
+            <a class="dropdown-item" href="/operator/input/sekretariat/inventarisasi_bmn">Inventarisasi BMN</a>
         </div>
     </div>
 
