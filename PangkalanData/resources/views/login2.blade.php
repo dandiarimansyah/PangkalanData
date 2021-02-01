@@ -48,8 +48,8 @@
             <button class="btn solid" type="submit">Masuk</button>
 
             <a href="{{url('/')}}" class="kembali"> 
-                {{-- <i class="fa fa-arrow-left" aria-hidden="true"></i> --}}
-                Masuk Sebagai Tamu
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+                Kembali ke Halaman Tamu
             </a>
 
           </form>
