@@ -16,47 +16,52 @@
       <form role="form" action="/operator/input/sekretariat/perpustakaan" method="POST">
           @csrf
 
+        <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
         <div class="inputfield-select">
             <label>Provinsi*</label>
             <div class="custom_select">
-              <select>
-                <option value="">Jawa Tengah</option>
+              <select name="provinsi">
+                <option value="Jawa Tengah">Jawa Tengah</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('unit_kerja') }}</div>
         <div class="inputfield-select">
             <label>Unit Kerja*</label>
             <div class="custom_select">
-              <select>
-                <option value="">Balai Bahasa Jawa Tengah</option>
+              <select name="unit_kerja">
+                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('jumlah_buku') }}</div>
         <div class="inputfield">
             <label>Jumlah Buku</label>
-            <input type="text" class="input">
+            <input name="jumlah_buku" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('jumlah_judul') }}</div>
         <div class="inputfield">
             <label>Jumlah Judul</label>
-            <input type="text" class="input">
+            <input name="jumlah_judul" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('jenis_buku') }}</div>
         <div class="inputfield-select">
             <label>Jenis Buku**</label>
             <div class="custom_select">
-              <select>
+              <select name="jenis_buku">
                 <option value="">-- Pilih --</option>
-                <option value="">Umum</option>
-                <option value="">Karya Sastra</option>
-                <option value="">Kritik Sastra</option>
-                <option value="">Umum</option>
-                <option value="">Teori Sastra/Bahasa</option>
-                <option value="">Kamus</option>
-                <option value="">Ensiklopedia</option>
-                <option value="">Lain-lain</option>
+                <option value="Umum">Umum</option>
+                <option value="Karya Sastra">Karya Sastra</option>
+                <option value="Kritik Sastra">Kritik Sastra</option>
+                <option value="Umum">Umum</option>
+                <option value="Teori Sastra/Bahasa">Teori Sastra/Bahasa</option>
+                <option value="Kamus">Kamus</option>
+                <option value="Ensiklopedia">Ensiklopedia</option>
+                <option value="Lain-lain">Lain-lain</option>
               </select>
             </div>
         </div> 
@@ -66,17 +71,18 @@
             <textarea class="textarea"></textarea>
         </div>   
 
+        <div class="alert-danger">{{ $errors->first('jumlah_pengunjung') }}</div>
         <div class="inputfield">
             <label>Jumlah Pengunjung</label>
-            <input type="text" class="input">
+            <input name="jumlah_pengunjung" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('sumber_data') }}</div>
         <div class="inputfield">
             <label>Sumber Data</label>
-            <input type="text" class="input">
+            <input name="sumber_data" type="text" class="input">
         </div> 
       
-
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">
           <input type="submit" value="Simpan" class="inputan">

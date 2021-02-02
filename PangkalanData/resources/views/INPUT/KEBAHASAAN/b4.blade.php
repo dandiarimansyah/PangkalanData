@@ -16,53 +16,62 @@
       <form role="form" action="/operator/input/sekretariat/penyuluhan" method="POST">
           @csrf
 
+        <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
         <div class="inputfield-select">
             <label>Provinsi*</label>
             <div class="custom_select">
-              <select>
-                <option value="">Jawa Tengah</option>
+              <select name="provinsi">
+                <option value="Jawa Tengah">Jawa Tengah</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('kabupaten') }}</div>
         <div class="inputfield">
             <label>Kabupaten/Kota*</label>
-            <input type="text" class="input">
+            <input name="kabupaten" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>
         <div class="inputfield">
             <label>Nama Kegiatan</label>
-            <input type="text" class="input">
+            <input name="nama_kegiatan" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tgl_awal') }}</div>
         <div class="inputfield">
             <label>Tanggal Awal Pelaksanaan</label>
-            <input type="text" class="input">
+            <input name="tgl_awal" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tgl_akhir') }}</div>
         <div class="inputfield">
             <label>Tanggal Akhir Pelaksanaan</label>
-            <input type="text" class="input">
+            <input name="tgl_akhir" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('narasumber') }}</div>
         <div class="inputfield">
             <label>narasumber</label>
-            <input type="text" class="input">
+            <input name="narasumber" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('sasaran') }}</div>
         <div class="inputfield">
             <label>Sasaran</label>
-            <input type="text" class="input">
+            <input name="sasaran" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('jumlah_peserta') }}</div>
         <div class="inputfield">
             <label>Jumlah Peserta</label>
-            <input type="text" class="input">
+            <input name="jumlah_peserta" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('materi') }}</div>
         <div class="inputfield">
             <label>Materi</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="materi" class="textarea"></textarea>
         </div>  
         
         <div class="tombol">

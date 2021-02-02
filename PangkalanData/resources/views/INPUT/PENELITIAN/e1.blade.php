@@ -15,81 +15,92 @@
       <form role="form" action="/operator/input/sekretariat/penelitian" method="POST">
           @csrf
 
+        <div class="alert-danger">{{ $errors->first('kategori_penelitian') }}</div>
         <div class="inputfield-select">
             <label>Kategori Penelitian*</label>
             <div class="custom_select">
-              <select>
-                <option value="">Bahasa</option>
-                <option value="">Sastra</option>
+              <select name="kategori_penelitian">
+                <option value="Bahasa">Bahasa</option>
+                <option value="Sastra">Sastra</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('unit') }}</div>
         <div class="inputfield-select">
             <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
-              <select>
-                <option value="">Balai Bahasa Jawa Tengah</option>
+              <select name="unit">
+                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('peneliti') }}</div>
         <div class="inputfield">
             <label>Peneliti*</label>
-            <input type="text" class="input">
+            <input name="peneliti" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('judul') }}</div>
         <div class="inputfield">
             <label>Judul*</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="judul" class="textarea"></textarea>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('kerja_sama') }}</div>
         <div class="inputfield">
             <label>Kerja Sama</label>
-            <input type="text" class="input">
+            <input name="kerja_sama" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tgl_mulai') }}</div>
         <div class="inputfield-date">
             <label>Tanggal Mulai Penelitian</label>
-            <input type="date" class="input">
+            <input name="tgl_mulai" type="date" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tgl_selesai') }}</div>
         <div class="inputfield-date">
             <label>Tanggal Selesai Penelitian</label>
-            <input type="date" class="input">
+            <input name="tgl_selesai" type="date" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('lama_penelitian') }}</div>
         <div class="inputfield-kecil">
             <label>Lama Penelitian</label>
             <input type="text" class="input">
             <div class="custom_select" style="margin-left: 30px; width: 120px">
-                <select>
-                <option value="">Tahun</option>
-                <option value="">Bulan</option>
-                <option value="">Minggu</option>
-                <option value="">Hari</option>
+                <select name="lama_penelitian">
+                  <option value="Tahun">Tahun</option>
+                  <option value="Bulan">Bulan</option>
+                  <option value="Minggu">Minggu</option>
+                  <option value="Hari">Hari</option>
                 </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('publikasi') }}</div>
         <div class="inputfield-select">
             <label>Publikasi</label>
             <div class="custom_select">
-              <select>
-                <option value="">Terbit</option>
-                <option value="">Belum Terbit</option>
+              <select name="publikasi">
+                <option value="Terbit">Terbit</option>
+                <option value="Belum Terbit">Belum Terbit</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
         <div class="inputfield-kecil">
             <label>Tahun Terbit</label>
-            <input type="text" class="input">
+            <input name="tahun_terbit" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('abstrak') }}</div>
         <div class="inputfield">
             <label>Abstrak*</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="abstrak" class="textarea"></textarea>
         </div> 
 
         <div class="tombol">

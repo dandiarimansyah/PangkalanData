@@ -16,27 +16,30 @@
       <form role="form" action="/operator/input/sekretariat/penghargaan_bahasa" method="POST">
           @csrf
 
+        <div class="alert-danger">{{ $errors->first('kategori') }}</div>
         <div class="inputfield-select">
             <label>Kategori*</label>
             <div class="custom_select">
-              <select>
+              <select name="kategori">
                 <option value="">-- Pilih Kategori --</option>
-                <option value="">Anugerah Toko Kebahasaan</option>
-                <option value="">Adibahasa</option>
-                <option value="">Taruna Bahasa</option>
-                <option value="">Wajah Bahasa</option>
+                <option value="Anugerah Toko Kebahasaan">Anugerah Toko Kebahasaan</option>
+                <option value="Adibahasa">Adibahasa</option>
+                <option value="Taruna Bahasa">Taruna Bahasa</option>
+                <option value="Wajah Bahasa">Wajah Bahasa</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tahun') }}</div>
         <div class="inputfield">
             <label>Tahun</label>
-            <input type="text" class="input">
+            <input name="tahun" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('deskripsi') }}</div>
         <div class="inputfield">
             <label>Deskripsi</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="deskripsi" class="textarea"></textarea>
         </div>  
         
         <div class="tombol">

@@ -15,29 +15,32 @@
       <form role="form" action="/operator/input/sekretariat/penghargaan_sastra" method="POST">
           @csrf
 
+        <div class="alert-danger">{{ $errors->first('kategori') }}</div>
         <div class="inputfield-select">
             <label>Kategori</label>
             <div class="custom_select">
-              <select>
+              <select name="kategori">
                 <option value="">-- Pilih Kategori--</option>
-                <option value="">Acarya Sastra</option>
-                <option value="">Taruna Sastra</option>
-                <option value="">Anugrah Tokoh Kesastraan</option>
-                <option value="">Sastra Badan Bahasa</option>
-                <option value="">Sea Write Awards</option>
-                <option value="">Sayembara Menulis</option>
+                <option value="Acarya Sastra">Acarya Sastra</option>
+                <option value="Taruna Sastra">Taruna Sastra</option>
+                <option value="Anugrah Tokoh Kesastraan">Anugrah Tokoh Kesastraan</option>
+                <option value="Sastra Badan Bahasa">Sastra Badan Bahasa</option>
+                <option value="Sea Write Awards">Sea Write Awards</option>
+                <option value="Sayembara Menulis">Sayembara Menulis</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tahun') }}</div>
         <div class="inputfield-kecil">
             <label>Tahun</label>
-            <input type="text" class="input">
+            <input name="tahun" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('deskripsi') }}</div>
         <div class="inputfield">
             <label>Deskripsi</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="deskripsi" class="textarea"></textarea>
         </div> 
 
         <div class="">

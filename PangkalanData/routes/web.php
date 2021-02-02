@@ -56,7 +56,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/operator/input/sekretariat/anggaran', [InputController::class, 'a1']);
         Route::post('/operator/input/sekretariat/anggaran', [InputController::class, 'store_a1']);
         
-        Route::get('/operator/input/sekretariat/realisasi_anggaran', [InputController::class, 'a2']);
+        Route::get('/operator/input/sekretaria t/realisasi_anggaran', [InputController::class, 'a2']);
         Route::post('/operator/input/sekretariat/realisasi_anggaran', [InputController::class, 'store_a2']);
         
         Route::get('/operator/input/sekretariat/kepegawaian', [InputController::class, 'a3']);

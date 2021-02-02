@@ -16,37 +16,41 @@
       <form role="form" action="/operator/input/sekretariat/tanah_dan_bangunan" method="POST">
           @csrf
 
+        <div class="alert-danger">{{ $errors->first('balai') }}</div>
         <div class="inputfield-select">
             <label>	Balai/Kantor*</label>
             <div class="custom_select">
-              <select>
-                <option value="">Balai Bahasa Jawa Tengah</option>
+              <select name="balai">
+                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('alamat') }}</div>
         <div class="inputfield">
             <label>Alamat</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="alamat" class="textarea"></textarea>
         </div>  
 
+        <div class="alert-danger">{{ $errors->first('kondisi_bangunan') }}</div>
         <div class="inputfield-select">
             <label>Kondisi Bangunan</label>
             <div class="custom_select">
-              <select>
-                <option value="">Baik</option>
-                <option value="">Rusak Sedang</option>
-                <option value="">Rusak Berat</option>
+              <select name="kondisi_bangunan">
+                <option value="Baik">Baik</option>
+                <option value="Rusak Sedang">Rusak Sedang</option>
+                <option value="Rusak Berat">Rusak Berat</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('status_peroleh') }}</div>
         <div class="inputfield-select">
             <label>Status Pemerolehan Tanah/Bangunan</label>
             <div class="custom_select">
-              <select>
-                <option value="">Hibah</option>
-                <option value="">Beli</option>
+              <select name="status_peroleh">
+                <option value="Hibah">Hibah</option>
+                <option value="Beli">Beli</option>
               </select>
             </div>
         </div> 

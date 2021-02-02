@@ -16,39 +16,45 @@
       <form role="form" action="/operator/input/sekretariat/kerja_sama" method="POST">
           @csrf
 
+        <div class="alert-danger">{{ $errors->first('kategori') }}</div>
         <div class="inputfield-select">
             <label>Kategori</label>
             <div class="custom_select">
-              <select>
-                <option value="">Internal</option>
-                <option value="">Eksternal</option>
+              <select name="kategori">
+                <option value="Internal">Internal</option>
+                <option value="Eksternal">Eksternal</option>
               </select>
             </div>
         </div>
 
+        <div class="alert-danger">{{ $errors->first('nama_instansi') }}</div>
         <div class="inputfield">
             <label>Nama Instansi*</label>
-            <input type="text" class="input">
+            <input name="nama_instansi" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tanggal_kerja') }}</div>
         <div class="inputfield">
             <label>Tanggal Kerja sama*</label>
-            <input type="text" class="input">
+            <input name="tanggal_kerja" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
         <div class="inputfield">
             <label>Tanggal Berakhir</label>
-            <input type="text" class="input">
+            <input name="tanggal_akhir" type="text" class="input">
         </div> 
         
+        <div class="alert-danger">{{ $errors->first('no_kerja') }}</div>
         <div class="inputfield">
             <label>No.Kerja sama</label>
-            <input type="text" class="input">
+            <input name="no_kerja" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('perihal') }}</div>
         <div class="inputfield">
             <label>Perihal</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="perihal" class="textarea"></textarea>
         </div>   
 
         <div class="inputfield">
@@ -56,32 +62,36 @@
             <textarea class="textarea"></textarea>
         </div>   
 
+        <div class="alert-danger">{{ $errors->first('ttd_satu') }}</div>
         <div class="inputfield">
             <label>Ditandatangani Oleh (1)</label>
-            <input type="text" class="input">
+            <input name="ttd_satu" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('in_satu') }}</div>
         <div class="inputfield">
             <label>Instansi (1)</label>
             <div class="custom_select" style="width: 100%">
-              <select>
-                <option value="">Badan Pengembangan Bahasa dan Perbukuan</option>
-                <option value="">Balai Bahasa Jawa Tengah</option>
+              <select name="in_satu">
+                <option value="Badan Pengembangan Bahasa dan Perbukuan">Badan Pengembangan Bahasa dan Perbukuan</option>
+                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('ttd_dua') }}</div>
         <div class="inputfield">
             <label>Ditandatangani Oleh (2)</label>
-            <input type="text" class="input">
+            <input name="ttd_dua" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('in_dua') }}</div>
         <div class="inputfield">
             <label>Instansi (2)</label>
             <div class="custom_select" style="width: 100%">
-              <select>
-                <option value="">Badan Pengembangan Bahasa dan Perbukuan</option>
-                <option value="">Balai Bahasa Jawa Tengah</option>
+              <select name="in_dua">
+                <option value="Badan Pengembangan Bahasa dan Perbukuan">Badan Pengembangan Bahasa dan Perbukuan</option>
+                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
         </div> 

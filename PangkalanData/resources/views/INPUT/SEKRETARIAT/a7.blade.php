@@ -16,64 +16,74 @@
       <form role="form" action="/operator/input/sekretariat/inventarisasi_bmn" method="POST">
           @csrf
 
+        <div class="alert-danger">{{ $errors->first('unit') }}</div>
         <div class="inputfield-select">
             <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
-              <select>
-                <option value="">Balai Bahasa Jawa Tengah</option>
+              <select name="unit">
+                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
         <div class="inputfield">
             <label>Tahun Anggaran*</label>
-            <input type="text" class="input">
+            <input name="tahun_anggaran" type="text" class="input">
         </div> 
 
         <div class="row">
             <div class="col">
                 <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
-                    <label >Barang Elektronik</label>
+                    <label>Barang Elektronik</label>
                 </div> 
-                
+
+                <div class="alert-danger">{{ $errors->first('laptop') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Laptop</label> </li>
-                    <input type="text" class="input">
+                    <input name="laptop" type="text" class="input">
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('komputer') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Komputer</label> </li>
-                    <input type="text" class="input">
+                    <input name="komputer" type="text" class="input">
                 </div> 
             
+                <div class="alert-danger">{{ $errors->first('printer') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Printer</label> </li>
-                    <input type="text" class="input">
+                    <input name="printer" type="text" class="input">
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('fotocopy') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Fotocopy</label> </li>
-                    <input type="text" class="input">
+                    <input name="fotocopy" type="text" class="input">
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('faximili') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Faximili</label> </li>
-                    <input type="text" class="input">
+                    <input name="faximili" type="text" class="input">
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('lcd') }}</div>
                 <div class="inputfield-list">
                     <li> <label>LCD Projector</label> </li>
-                    <input type="text" class="input">
+                    <input name="lcd" type="text" class="input">
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('tv') }}</div>
                 <div class="inputfield-list">
                     <li> <label>TV</label> </li>
-                    <input type="text" class="input">
+                    <input name="tv" type="text" class="input">
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('lain-lain') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Lain-Lain</label> </li>
-                    <input type="text" class="input">
+                    <input name="lain-lain" type="text" class="input">
                 </div> 
             </div>
 
@@ -81,28 +91,33 @@
                 <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
                     <label >Furniture/Meubelair</label>
                 </div> 
+
+                <div class="alert-danger">{{ $errors->first('furniture') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Jumlah Furniture</label> </li>
-                    <input type="text" class="input">
+                    <input name="furniture" type="text" class="input">
                 </div> 
 
                 <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
-                    <label >Kendaraan</label>
+                    <label>Kendaraan</label>
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('roda_dua') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Roda Dua</label> </li>
-                    <input type="text" class="input">
+                    <input name="roda_dua" type="text" class="input">
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('roda_empat') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Roda Empat</label> </li>
-                    <input type="text" class="input">
+                    <input name="roda_empat" type="text" class="input">
                 </div> 
 
+                <div class="alert-danger">{{ $errors->first('roda_enam') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Roda Enam</label> </li>
-                    <input type="text" class="input">
+                    <input name="roda_enam" type="text" class="input">
                 </div> 
             </div>
         </div>

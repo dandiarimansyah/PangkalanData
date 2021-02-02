@@ -15,12 +15,12 @@
         <form role="form" action="/operator/input/sekretariat/realisasi_anggaran" method="POST">
           @csrf
 
-          <div class="alert-danger">{{ $errors->first('unit') }}</div>
+        <div class="alert-danger">{{ $errors->first('unit') }}</div>
         <div class="inputfield-select">
             <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
               <select name="unit">
-                <option value="">Balai Bahasa Jawa Tengah</option>
+                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
         </div> 

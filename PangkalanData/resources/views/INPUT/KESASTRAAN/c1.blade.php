@@ -16,66 +16,77 @@
         <form role="form" action="/operator/input/sekretariat/bengkel_sastra_dan_bahasa" method="POST">
           @csrf
   
+          <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
           <div class="inputfield-select">
               <label>Provinsi*</label>
               <div class="custom_select">
-                <select>
-                  <option value="">Jawa Tengah</option>
+                <select name="provinsi">
+                  <option value="Jawa Tengah">Jawa Tengah</option>
                 </select>
               </div>
           </div> 
   
+          <div class="alert-danger">{{ $errors->first('kabupaten') }}</div>
           <div class="inputfield">
               <label>Kabupaten/Kota*</label>
-              <input type="text" class="input">
+              <input name="kabupaten" type="text" class="input">
           </div> 
   
+          <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>
           <div class="inputfield">
               <label>Nama Kegiatan</label>
-              <input type="text" class="input">
+              <input name="nama_kegiatan" type="text" class="input">
           </div> 
 
+          <div class="alert-danger">{{ $errors->first('tgl_awal') }}</div>
           <div class="inputfield-date">
             <label>Tanggal Awal Pelaksanaan</label>
-            <input type="date" class="input">
+            <input name="tgl_awal" type="date" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tgl_akhir') }}</div>
         <div class="inputfield-date">
             <label>Tanggal Akhir Pelaksanaan</label>
-            <input type="date" class="input">
+            <input name="tgl_akhir" type="date" class="input">
         </div> 
   
+        <div class="alert-danger">{{ $errors->first('pemateri') }}</div>
         <div class="inputfield">
             <label>Pemateri</label>
-            <input type="text" class="input">
+            <input name="pemateri" type="text" class="input">
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('jumlah_peserta') }}</div>
         <div class="inputfield-kecil">
             <label>Jumlah Peserta</label>
-            <input type="text" class="input">
+            <input name="jumlah_peserta" type="text" class="input">
             <p>Orang</p>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('jumlah_sekolah') }}</div>
         <div class="inputfield-kecil">
             <label>Jumlah Sekolah</label>
-            <input type="text" class="input">
+            <input name="jumlah_sekolah" type="text" class="input">
             <p>Sekolah</p>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('jumlah_sekolah_dibina') }}</div>
         <div class="inputfield-kecil">
             <label>Jumlah Sekolah yang Dibina</label>
-            <input type="text" class="input">
+            <input name="jumlah_sekolah_dibina" type="text" class="input">
             <p>Sekolah</p>
         </div> 
         
+        <div class="alert-danger">{{ $errors->first('nama_sekolah_dibina') }}</div>
         <div class="inputfield">
             <label>Nama Sekolah yang Dibina</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="nama_sekolah_dibina" class="textarea"></textarea>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('aktivitas') }}</div>
         <div class="inputfield">
             <label>Aktivitas</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="aktivitas" class="textarea"></textarea>
         </div> 
   
           <div class="tombol">
