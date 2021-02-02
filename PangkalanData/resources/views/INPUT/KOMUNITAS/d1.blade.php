@@ -12,6 +12,9 @@
   <div class="wrapper">
       <div class="form">
 
+      <form role="form" action="/operator/input/sekretariat/komunitas_bahasa" method="POST">
+          @csrf
+
         <div class="inputfield">
             <label>Nama Komunitas</label>
             <input type="text" class="input">
@@ -96,6 +99,8 @@
           <input type="reset" value="Ulangi" class="reset">
           <input type="submit" value="Simpan" class="inputan">
         </div> 
+
+      </form>
         
         <div class="">
             <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>

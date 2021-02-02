@@ -12,6 +12,9 @@
 
   <div class="wrapper">
       <div class="form">
+  
+      <form role="form" action="/operator/input/sekretariat/kamus_ensiklopedia" method="POST">
+          @csrf
 
         <div class="inputfield-select">
             <label>Kategori*</label>
@@ -88,6 +91,8 @@
           <input type="reset" value="Ulangi" class="reset">
           <input type="submit" value="Simpan" class="inputan">
         </div> 
+
+      </form>
         
         <div class="">
           <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>

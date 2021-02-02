@@ -13,6 +13,9 @@
   <div class="wrapper">
       <div class="form">
 
+      <form role="form" action="/operator/input/sekretariat/kerja_sama" method="POST">
+          @csrf
+
         <div class="inputfield-select">
             <label>Kategori</label>
             <div class="custom_select">
@@ -88,6 +91,8 @@
           <input type="Import" value="Import Ms.Excel" class="import">
           <input type="submit" value="Simpan" class="inputan">
         </div> 
+
+        </form>
         
         <div class="">
           <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>

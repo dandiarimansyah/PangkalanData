@@ -13,6 +13,9 @@
   <div class="wrapper">
       <div class="form">
 
+      <form role="form" action="/operator/input/sekretariat/inventarisasi_bmn" method="POST">
+          @csrf
+
         <div class="inputfield-select">
             <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
@@ -110,6 +113,8 @@
           <input type="submit" value="Simpan" class="inputan">
         </div> 
         
+        </form>
+
         <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
         
           <!-- 

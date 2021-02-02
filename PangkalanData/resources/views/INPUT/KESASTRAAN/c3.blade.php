@@ -12,6 +12,9 @@
   <div class="wrapper">
       <div class="form">
 
+      <form role="form" action="/operator/input/sekretariat/musikalisasi_puisi_nasional" method="POST">
+          @csrf
+
         <div class="inputfield-kecil">
             <label>Tahun</label>
             <input type="text" class="input">
@@ -47,6 +50,8 @@
           <input type="submit" value="Simpan" class="inputan">
         </div> 
         
+        </form>
+
       </div>
   </div>
 
