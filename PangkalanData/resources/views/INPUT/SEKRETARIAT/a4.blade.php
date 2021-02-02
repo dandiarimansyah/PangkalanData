@@ -30,13 +30,13 @@
         <div class="alert-danger">{{ $errors->first('nama_instansi') }}</div>
         <div class="inputfield">
             <label>Nama Instansi*</label>
-            <input name="nama_instansi" type="text" class="input">
+            <input name="instansi" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('tanggal_kerja') }}</div>
         <div class="inputfield">
             <label>Tanggal Kerja sama*</label>
-            <input name="tanggal_kerja" type="text" class="input">
+            <input name="tanggal_awal" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
@@ -48,7 +48,7 @@
         <div class="alert-danger">{{ $errors->first('no_kerja') }}</div>
         <div class="inputfield">
             <label>No.Kerja sama</label>
-            <input name="no_kerja" type="text" class="input">
+            <input name="nomor" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('perihal') }}</div>
@@ -59,20 +59,20 @@
 
         <div class="inputfield">
             <label>Keterangan</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="keterangan" class="textarea"></textarea>
         </div>   
 
         <div class="alert-danger">{{ $errors->first('ttd_satu') }}</div>
         <div class="inputfield">
             <label>Ditandatangani Oleh (1)</label>
-            <input name="ttd_satu" type="text" class="input">
+            <input name="ttd_1" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('in_satu') }}</div>
         <div class="inputfield">
             <label>Instansi (1)</label>
             <div class="custom_select" style="width: 100%">
-              <select name="in_satu">
+              <select name="instansi_1">
                 <option value="Badan Pengembangan Bahasa dan Perbukuan">Badan Pengembangan Bahasa dan Perbukuan</option>
                 <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
@@ -82,14 +82,14 @@
         <div class="alert-danger">{{ $errors->first('ttd_dua') }}</div>
         <div class="inputfield">
             <label>Ditandatangani Oleh (2)</label>
-            <input name="ttd_dua" type="text" class="input">
+            <input name="ttd_2" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('in_dua') }}</div>
         <div class="inputfield">
             <label>Instansi (2)</label>
             <div class="custom_select" style="width: 100%">
-              <select name="in_dua">
+              <select name="instansi_2">
                 <option value="Badan Pengembangan Bahasa dan Perbukuan">Badan Pengembangan Bahasa dan Perbukuan</option>
                 <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>

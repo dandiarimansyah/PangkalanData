@@ -9,6 +9,9 @@
   <div class="judul">
     <th>INPUT INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
   </div>
+  <div class="judul">
+    <th>MASIH BELUM SELESAI</th>
+  </div>
 
   <div class="wrapper">
       <div class="form">
