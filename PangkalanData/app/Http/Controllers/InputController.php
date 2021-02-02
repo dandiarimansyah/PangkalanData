@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Anggaran;
+use App\Models\Realisasi_Anggaran;
 
 class InputController extends Controller
 {
@@ -132,12 +133,13 @@ class InputController extends Controller
             'keterangan' => ['required']
         ]);
 
-        $data = new Anggaran();
+        $data = new Realisasi_Anggaran();
         $data->unit = $request->unit;
         $data->nilai_realisasi = $request->nilai_realisasi;
         $data->besar_dana = $request->besar_dana;
+        $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/edit/sekretariat/realisasi_anggaran')->with('success', 'Data Berhasil Ditambahkan!');
     }
 }

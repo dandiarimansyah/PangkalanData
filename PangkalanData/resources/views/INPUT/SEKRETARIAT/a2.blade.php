@@ -39,7 +39,7 @@
         
         <div class="inputfield">
             <label>Keterangan</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="keterangan" class="textarea"></textarea>
         </div> 
         
         <div class="tombol">

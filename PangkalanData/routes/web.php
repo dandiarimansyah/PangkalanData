@@ -55,13 +55,13 @@ Route::group(['middleware' => ['auth']], function () {
         //INPUT KATEGORI A
         Route::get('/operator/input/sekretariat/anggaran', [InputController::class, 'a1']);
         Route::post('/operator/input/sekretariat/anggaran', [InputController::class, 'store_a1']);
-        
-        Route::get('/operator/input/sekretaria t/realisasi_anggaran', [InputController::class, 'a2']);
+
+        Route::get('/operator/input/sekretariat/realisasi_anggaran', [InputController::class, 'a2']);
         Route::post('/operator/input/sekretariat/realisasi_anggaran', [InputController::class, 'store_a2']);
-        
+
         Route::get('/operator/input/sekretariat/kepegawaian', [InputController::class, 'a3']);
         Route::post('/operator/input/sekretariat/kepegawaian', [InputController::class, 'store_a3']);
-        
+
         Route::get('/operator/input/sekretariat/kerja_sama', [InputController::class, 'a4']);
         Route::post('/operator/input/sekretariat/kerja_sama', [InputController::class, 'store_a4']);
 
