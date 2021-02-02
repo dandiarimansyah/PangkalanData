@@ -17,11 +17,11 @@ class CreateTerbitanUmumTable extends Migration
             $table->id();
             $table->string('kategori');
             $table->string('judul');
-            $table->string('penulis');
-            $table->string('no_isbn');
-            $table->string('tahun_terbit');
-            $table->longText('deskripsi');
-            $table->string('info_produk');
+            $table->string('penulis')->nullable();
+            $table->string('no_isbn')->nullable();
+            $table->string('tahun_terbit')->nullable();
+            $table->longText('deskripsi')->nullable();
+            $table->string('info_produk')->nullable();
             $table->timestamps();
         });
     }

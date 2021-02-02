@@ -18,12 +18,12 @@ class CreateJurnalTable extends Migration
             $table->string('kategori');
             $table->string('judul');
             $table->string('tim_redaksi');
-            $table->string('volume');
-            $table->string('no_issn');
-            $table->string('lingkup');
-            $table->string('penerbit');
-            $table->longText('keterangan');
-            $table->string('info_produk');
+            $table->string('volume')->nullable();
+            $table->string('no_issn')->nullable();
+            $table->string('lingkup')->nullable();
+            $table->string('penerbit')->nullable();
+            $table->longText('keterangan')->nullable();
+            $table->string('info_produk')->nullable();
             $table->timestamps();
         });
     }

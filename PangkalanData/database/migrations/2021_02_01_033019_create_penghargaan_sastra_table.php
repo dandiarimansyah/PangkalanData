@@ -16,8 +16,8 @@ class CreatePenghargaanSastraTable extends Migration
         Schema::create('penghargaan_sastra', function (Blueprint $table) {
             $table->id();
             $table->string("kategori");
-            $table->string("tahun");
-            $table->string("deskripsi");
+            $table->string("tahun")->nullable();
+            $table->string("deskripsi")->nullable();
             $table->timestamps();
         });
     }

@@ -18,13 +18,13 @@ class CreateKamusTable extends Migration
             $table->string('kategori');
             $table->string('judul');
             $table->string('tim_redaksi');
-            $table->string('edisi');
-            $table->string('no_isbn');
-            $table->string('lingkup');
-            $table->string('penerbit');
-            $table->string('tahun_terbit');
-            $table->longText('keterangan');
-            $table->string('info_produk');
+            $table->string('edisi')->nullable();
+            $table->string('no_isbn')->nullable();
+            $table->string('lingkup')->nullable();
+            $table->string('penerbit')->nullable();
+            $table->string('tahun_terbit')->nullable();
+            $table->longText('keterangan')->nullable();
+            $table->string('info_produk')->nullable();
             $table->timestamps();
         });
     }

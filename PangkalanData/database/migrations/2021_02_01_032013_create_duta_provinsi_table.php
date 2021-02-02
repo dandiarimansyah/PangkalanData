@@ -16,16 +16,16 @@ class CreateDutaProvinsiTable extends Migration
         Schema::create('duta_provinsi', function (Blueprint $table) {
             $table->id();
             $table->string('provinsi');
-            $table->string('tahun');
-            $table->string('pemenang_1_1');
-            $table->string('pemenang_1_2');
-            $table->string('pemenang_2_1');
-            $table->string('pemenang_2_2');
-            $table->string('pemenang_3_1');
-            $table->string('pemenang_3_2');
-            $table->string('favorit_1');
-            $table->string('favorit_2');
-            $table->longText('keterangan');
+            $table->string('tahun')->nullable();
+            $table->string('pemenang_1_1')->nullable();
+            $table->string('pemenang_1_2')->nullable();
+            $table->string('pemenang_2_1')->nullable();
+            $table->string('pemenang_2_2')->nullable();
+            $table->string('pemenang_3_1')->nullable();
+            $table->string('pemenang_3_2')->nullable();
+            $table->string('favorit_1')->nullable();
+            $table->string('favorit_2')->nullable();
+            $table->longText('keterangan')->nullable();
             $table->timestamps();
         });
     }

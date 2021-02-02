@@ -18,7 +18,7 @@ class CreateRealisasiAnggaranTable extends Migration
             $table->string('unit');
             $table->string('nilai_realisasi');
             $table->bigInteger('besar_dana');
-            $table->longText('keterangan');
+            $table->longText('keterangan')->nullable();
             $table->timestamps();
         });
     }

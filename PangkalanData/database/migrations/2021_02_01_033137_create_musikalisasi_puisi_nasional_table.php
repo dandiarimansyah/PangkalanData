@@ -15,12 +15,12 @@ class CreateMusikalisasiPuisiNasionalTable extends Migration
     {
         Schema::create('musikalisasi_puisi_nasional', function (Blueprint $table) {
             $table->id();
-            $table->string("tahun");
-            $table->string("pemenang_1");
-            $table->string("pemenang_2");
-            $table->string("pemenang_3");
-            $table->string("favorit");
-            $table->string("keterangan");
+            $table->string("tahun")->nullable();
+            $table->string("pemenang_1")->nullable();
+            $table->string("pemenang_2")->nullable();
+            $table->string("pemenang_3")->nullable();
+            $table->string("favorit")->nullable();
+            $table->string("keterangan")->nullable();
             $table->timestamps();
         });
     }

@@ -16,8 +16,8 @@ class CreatePenghargaanBahasaTable extends Migration
         Schema::create('penghargaan_bahasa', function (Blueprint $table) {
             $table->id();
             $table->string('kategori');
-            $table->string('tahun');
-            $table->longText('deskripsi');
+            $table->string('tahun')->nullable();
+            $table->longText('deskripsi')->nullable();
             $table->timestamps();
         });
     }

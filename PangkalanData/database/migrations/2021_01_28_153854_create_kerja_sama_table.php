@@ -18,14 +18,14 @@ class CreateKerjaSamaTable extends Migration
             $table->string('kategori');
             $table->string('instansi');
             $table->date('tanggal_awal');
-            $table->date('tanggal_akhir');
-            $table->string('nomor');
-            $table->longText('perihal');
-            $table->longText('keterangan');
-            $table->string('ttd_1');
-            $table->string('instansi_1');
-            $table->string('ttd_2');
-            $table->string('instansi_2');
+            $table->date('tanggal_akhir')->nullable();
+            $table->string('nomor')->nullable();
+            $table->longText('perihal')->nullable();
+            $table->longText('keterangan')->nullable();
+            $table->string('ttd_1')->nullable();
+            $table->string('instansi_1')->nullable();
+            $table->string('ttd_2')->nullable();
+            $table->string('instansi_2')->nullable();
             $table->timestamps();
         });
     }

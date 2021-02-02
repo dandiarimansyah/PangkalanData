@@ -17,13 +17,13 @@ class CreatePenyuluhanTable extends Migration
             $table->id();
             $table->string('provinsi');
             $table->string('kabupaten/kota');
-            $table->string('nama_kegiatan');
-            $table->date('tanggal_awal');
-            $table->date('tanggal_akhir');
-            $table->string('narasumber');
-            $table->string('sasaran');
-            $table->integer('jumlah_peserta');
-            $table->longText('materi');
+            $table->string('nama_kegiatan')->nullable();
+            $table->date('tanggal_awal')->nullable();
+            $table->date('tanggal_akhir')->nullable();
+            $table->string('narasumber')->nullable();
+            $table->string('sasaran')->nullable();
+            $table->integer('jumlah_peserta')->nullable();
+            $table->longText('materi')->nullable();
             $table->timestamps();
         });
     }

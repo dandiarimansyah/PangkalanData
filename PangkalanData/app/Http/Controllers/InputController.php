@@ -122,4 +122,22 @@ class InputController extends Controller
 
         return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Ditambahkan!');
     }
+
+    public function store_a2(Request $request)
+    {
+        $request->validate([
+            'unit' => ['required'],
+            'nilai_realisasi' => ['required'],
+            'besar_dana' => ['required', 'numeric'],
+            'keterangan' => ['required']
+        ]);
+
+        $data = new Anggaran();
+        $data->unit = $request->unit;
+        $data->nilai_realisasi = $request->nilai_realisasi;
+        $data->besar_dana = $request->besar_dana;
+        $data->save();
+
+        return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Ditambahkan!');
+    }
 }

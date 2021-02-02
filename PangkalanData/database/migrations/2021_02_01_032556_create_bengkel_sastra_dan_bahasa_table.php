@@ -17,15 +17,15 @@ class CreateBengkelSastraDanBahasaTable extends Migration
             $table->id();
             $table->string("provinsi");
             $table->string("kabupaten/kota");
-            $table->string("nama_kegiatan");
-            $table->date("tanggal_awal_pelaksanaan");
-            $table->date("tanggal_akhir_pelaksanaan");
-            $table->string("pemateri");
-            $table->integer("jumlah_peserta");
-            $table->integer("jumlah_sekolah");
-            $table->integer("jumlah_sekolah_yang_dibina");
-            $table->longText("nama_sekolah_yang_dibina");
-            $table->longText("aktivitas");
+            $table->string("nama_kegiatan")->nullable();
+            $table->date("tanggal_awal_pelaksanaan")->nullable();
+            $table->date("tanggal_akhir_pelaksanaan")->nullable();
+            $table->string("pemateri")->nullable();
+            $table->integer("jumlah_peserta")->nullable();
+            $table->integer("jumlah_sekolah")->nullable();
+            $table->integer("jumlah_sekolah_yang_dibina")->nullable();
+            $table->longText("nama_sekolah_yang_dibina")->nullable();
+            $table->longText("aktivitas")->nullable();
             $table->timestamps();
         });
     }

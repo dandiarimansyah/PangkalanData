@@ -19,12 +19,12 @@ class CreateDataPenelitianTable extends Migration
             $table->string("unit/satuan_kerja");
             $table->string("peneliti");
             $table->longText("judul");
-            $table->string("kerja_sama");
-            $table->date("tanggal_mulai_penelitian");
-            $table->date("tanggal_selesai_penelitian");
-            $table->string("lama_penelitian");
-            $table->string("publikasi");
-            $table->string("tahun_terbit");
+            $table->string("kerja_sama")->nullable();
+            $table->date("tanggal_mulai_penelitian")->nullable();
+            $table->date("tanggal_selesai_penelitian")->nullable();
+            $table->string("lama_penelitian")->nullable();
+            $table->string("publikasi")->nullable();
+            $table->string("tahun_terbit")->nullable();
             $table->longText("abstrak");
             $table->timestamps();
         });

@@ -17,11 +17,11 @@ class CreatePerpustakaanTable extends Migration
             $table->id();
             $table->string('provinsi');
             $table->string('unit');
-            $table->integer('jumlah_buku');
-            $table->integer('jumlah_judul');
-            $table->longText('jenis_buku');
-            $table->integer('jumlah_pengunjung');
-            $table->string('sumber_data');
+            $table->integer('jumlah_buku')->nullable();
+            $table->integer('jumlah_judul')->nullable();
+            $table->longText('jenis_buku')->nullable();
+            $table->integer('jumlah_pengunjung')->nullable();
+            $table->string('sumber_data')->nullable();
             $table->timestamps();
         });
     }
