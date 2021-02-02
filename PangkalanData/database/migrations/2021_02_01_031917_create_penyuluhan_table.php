@@ -16,7 +16,7 @@ class CreatePenyuluhanTable extends Migration
         Schema::create('penyuluhan', function (Blueprint $table) {
             $table->id();
             $table->string('provinsi');
-            $table->string('kabupaten/kota');
+            $table->string('kota');
             $table->string('nama_kegiatan')->nullable();
             $table->date('tanggal_awal')->nullable();
             $table->date('tanggal_akhir')->nullable();

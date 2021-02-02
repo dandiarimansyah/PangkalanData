@@ -9,6 +9,9 @@
   <div class="judul">
     <th>INPUT DATA PERPUSTAKAAN</th>
   </div>
+  <div class="judul">
+    <th>MASIH BELUM SELESAI Input jenis buku</th>
+  </div>
 
   <div class="wrapper">
       <div class="form">
@@ -26,11 +29,11 @@
             </div>
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('unit_kerja') }}</div>
+        <div class="alert-danger">{{ $errors->first('unit') }}</div>
         <div class="inputfield-select">
             <label>Unit Kerja*</label>
             <div class="custom_select">
-              <select name="unit_kerja">
+              <select name="unit">
                 <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
@@ -53,7 +56,7 @@
             <label>Jenis Buku**</label>
             <div class="custom_select">
               <select name="jenis_buku">
-                <option value="">-- Pilih --</option>
+                <option disabled="disabled" selected="selected" value="">-- Pilih --</option>
                 <option value="Umum">Umum</option>
                 <option value="Karya Sastra">Karya Sastra</option>
                 <option value="Kritik Sastra">Kritik Sastra</option>
@@ -68,7 +71,7 @@
 
         <div class="inputfield">
             <label></label>
-            <textarea class="textarea"></textarea>
+            <textarea name="" class="textarea"></textarea>
         </div>   
 
         <div class="alert-danger">{{ $errors->first('jumlah_pengunjung') }}</div>

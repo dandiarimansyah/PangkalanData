@@ -24,7 +24,7 @@ class CreateInventarisasiTable extends Migration
             $table->integer('faximili')->nullable();
             $table->integer('LCD')->nullable();
             $table->integer('TV')->nullable();
-            $table->integer('lain-lain')->nullable();
+            $table->integer('lain')->nullable();
             $table->integer('furniture')->nullable();
             $table->integer('roda_dua')->nullable();
             $table->integer('roda_empat')->nullable();

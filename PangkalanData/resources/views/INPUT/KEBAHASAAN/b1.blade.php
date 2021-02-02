@@ -48,10 +48,10 @@
             <input name="edisi" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('isbn') }}</div>
+        <div class="alert-danger">{{ $errors->first('no_isbn') }}</div>
         <div class="inputfield">
             <label>No.ISBN</label>
-            <input name="isbn" type="text" class="input">
+            <input name="no_isbn" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('lingkup') }}</div>
@@ -80,7 +80,7 @@
 
         <div class="inputfield">
             <label>Keterangan</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="keterangan" class="textarea"></textarea>
         </div>  
 
         <div class="alert-danger">{{ $errors->first('info_produk') }}</div>
@@ -88,7 +88,7 @@
             <label>Info Produk</label>
             <div class="custom_select">
               <select name="info_produk">
-                <option value="">--Pilih Info--</option>
+                <option disabled="disabled" selected="selected" value="">--Pilih Info--</option>
                 <option value="Produk Pusat">Produk Pusat</option>
                 <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
                 <option value="Produk Luar">Produk Luar</option>

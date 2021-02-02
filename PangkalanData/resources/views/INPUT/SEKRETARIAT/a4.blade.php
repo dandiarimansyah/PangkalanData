@@ -27,13 +27,13 @@
             </div>
         </div>
 
-        <div class="alert-danger">{{ $errors->first('nama_instansi') }}</div>
+        <div class="alert-danger">{{ $errors->first('instansi') }}</div>
         <div class="inputfield">
             <label>Nama Instansi*</label>
             <input name="instansi" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('tanggal_kerja') }}</div>
+        <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
         <div class="inputfield">
             <label>Tanggal Kerja sama*</label>
             <input name="tanggal_awal" type="text" class="input">
@@ -45,7 +45,7 @@
             <input name="tanggal_akhir" type="text" class="input">
         </div> 
         
-        <div class="alert-danger">{{ $errors->first('no_kerja') }}</div>
+        <div class="alert-danger">{{ $errors->first('nomor') }}</div>
         <div class="inputfield">
             <label>No.Kerja sama</label>
             <input name="nomor" type="text" class="input">

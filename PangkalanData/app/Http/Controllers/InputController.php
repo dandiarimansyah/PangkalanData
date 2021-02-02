@@ -4,10 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Anggaran;
+use App\Models\Duta_Nasional;
+use App\Models\Duta_Provinsi;
+use App\Models\Inventarisasi;
+use App\Models\Jurnal;
+use App\Models\Kamus;
 use App\Models\Realisasi_Anggaran;
 use App\Models\Kepegawaian;
 use App\Models\Kerja_Sama;
+use App\Models\Penghargaan_Bahasa;
+use App\Models\Penyuluhan;
+use App\Models\Perpustakaan;
+use App\Models\Pesuluh;
 use App\Models\Tanah_Bangunan;
+use App\Models\Terbitan_Umum;
 
 class InputController extends Controller
 {
@@ -218,19 +228,237 @@ class InputController extends Controller
         ]);
 
         $data = new Tanah_Bangunan();
-        $data->kategori = $request->kategori;
-        $data->instansi = $request->instansi;
-        $data->tanggal_awal = $request->tanggal_awal;
-        $data->tanggal_akhir = $request->tanggal_akhir;
-        $data->nomor = $request->nomor;
-        $data->perihal = $request->perihal;
+        $data->kantor = $request->kantor;
+        $data->alamat = $request->alamat;
+        $data->status_tanah = $request->status_tanah;
+        $data->sertif_tanah = $request->sertif_tanah;
+        $data->status_bangunan = $request->status_bangunan;
+        $data->imb = $request->imb;
+        $data->kondisi = $request->kondisi;
+        $data->status_peroleh = $request->status_peroleh;
         $data->keterangan = $request->keterangan;
-        $data->ttd_1 = $request->ttd_1;
-        $data->instansi_1 = $request->instansi_1;
-        $data->ttd_2 = $request->ttd_2;
-        $data->instansi_2 = $request->instansi_2;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/kerja_sama')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/edit/sekretariat/tanah_dan_bangunan')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_a6(Request $request)
+    {
+        $request->validate([
+            'provinsi' => ['required'],
+            'unit' => ['required']
+        ]);
+
+        $data = new Perpustakaan();
+        $data->provinsi = $request->provinsi;
+        $data->unit = $request->unit;
+        $data->jumlah_buku = $request->jumlah_buku;
+        $data->jumlah_judul = $request->jumlah_judul;
+        $data->jenis_buku = $request->jenis_buku;
+        $data->jumlah_pengunjung = $request->jumlah_pengunjung;
+        $data->sumber_data = $request->sumber_data;
+        $data->save();
+
+        return redirect('/operator/edit/sekretariat/perpustakaan')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_a7(Request $request)
+    {
+        $request->validate([
+            'unit' => ['required'],
+            'tahun_anggaran' => ['required']
+        ]);
+
+        $data = new Inventarisasi();
+        $data->unit = $request->unit;
+        $data->tahun_anggaran = $request->tahun_anggaran;
+        $data->laptop = $request->laptop;
+        $data->komputer = $request->komputer;
+        $data->printer = $request->printer;
+        $data->fotocopy = $request->fotocopy;
+        $data->faximili = $request->faximili;
+        $data->LCD = $request->LCD;
+        $data->TV = $request->TV;
+        $data->lain = $request->lain;
+        $data->furniture = $request->furniture;
+        $data->roda_dua = $request->roda_dua;
+        $data->roda_empat = $request->roda_empat;
+        $data->roda_enam = $request->roda_enam;
+        $data->save();
+
+        return redirect('/operator/edit/sekretariat/inventarisasi')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_b1(Request $request)
+    {
+        $request->validate([
+            'kategori' => ['required'],
+            'judul' => ['required'],
+            'tim_redaksi' => ['required'],
+            'lingkup' => ['required']
+        ]);
+
+        $data = new Kamus();
+        $data->kategori = $request->kategori;
+        $data->judul = $request->judul;
+        $data->tim_redaksi = $request->tim_redaksi;
+        $data->edisi = $request->edisi;
+        $data->no_isbn = $request->no_isbn;
+        $data->lingkup = $request->lingkup;
+        $data->penerbit = $request->penerbit;
+        $data->tahun_terbit = $request->tahun_terbit;
+        $data->keterangan = $request->keterangan;
+        $data->info_produk = $request->info_produk;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/kamus_ensiklopedia')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_b2(Request $request)
+    {
+        $request->validate([
+            'kategori' => ['required'],
+            'judul' => ['required'],
+            'tim_redaksi' => ['required'],
+            'lingkup' => ['required']
+        ]);
+
+        $data = new Jurnal();
+        $data->kategori = $request->kategori;
+        $data->judul = $request->judul;
+        $data->tim_redaksi = $request->tim_redaksi;
+        $data->volume = $request->volume;
+        $data->no_issn = $request->no_issn;
+        $data->lingkup = $request->lingkup;
+        $data->penerbit = $request->penerbit;
+        $data->tahun_terbit = $request->tahun_terbit;
+        $data->keterangan = $request->keterangan;
+        $data->info_produk = $request->info_produk;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_b3(Request $request)
+    {
+        $request->validate([
+            'kategori' => ['required'],
+            'judul' => ['required']
+        ]);
+
+        $data = new Terbitan_Umum();
+        $data->kategori = $request->kategori;
+        $data->judul = $request->judul;
+        $data->penulis = $request->penulis;
+        $data->no_isbn = $request->no_isbn;
+        $data->tahun_terbit = $request->tahun_terbit;
+        $data->deskripsi = $request->deskripsi;
+        $data->info_produk = $request->info_produk;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/terbitan_umum')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_b4(Request $request)
+    {
+        $request->validate([
+            'provinsi' => ['required'],
+            'kota' => ['required']
+        ]);
+
+        $data = new Penyuluhan();
+        $data->provinsi = $request->provinsi;
+        $data->kota = $request->kota;
+        $data->nama_kegiatan = $request->nama_kegiatan;
+        $data->tanggal_awal = $request->tanggal_awal;
+        $data->tanggal_akhir = $request->tanggal_akhir;
+        $data->narasumber = $request->narasumber;
+        $data->sasaran = $request->sasaran;
+        $data->jumlah_peserta = $request->jumlah_peserta;
+        $data->materi = $request->materi;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/penyuluhan')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_b5(Request $request, $id)
+    {
+
+        $pesuluh = Pesuluh::find($id);
+
+        $request->validate([
+            'nama' => ['required'],
+        ]);
+
+        $data = new Pesuluh();
+        $data->nama = $request->nama;
+        $data->tempat_lahir = $request->tempat_lahir;
+        $data->tanggal_lahir = $request->tanggal_lahir;
+        $data->instansi = $request->instansi;
+        $data->tingkat = $request->tingkat;
+
+        $data->id_penyuluhan = $pesuluh->id;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/pesuluh')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_b6(Request $request)
+    {
+        $request->validate([
+            'kategori' => ['required']
+        ]);
+
+        $data = new Penghargaan_Bahasa();
+        $data->kategori = $request->kategori;
+        $data->tahun = $request->tahun;
+        $data->deskripsi = $request->deskripsi;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/penghargaan_bahasa')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_b7(Request $request)
+    {
+        $request->validate([
+            'provinsi' => ['required']
+        ]);
+
+        $data = new Duta_Nasional();
+        $data->provinsi = $request->provinsi;
+        $data->tahun = $request->tahun;
+        $data->pemenang_1_1 = $request->pemenang_1_1;
+        $data->pemenang_1_2 = $request->pemenang_1_2;
+        $data->pemenang_2_1 = $request->pemenang_2_1;
+        $data->pemenang_2_2 = $request->pemenang_2_2;
+        $data->pemenang_3_1 = $request->pemenang_3_1;
+        $data->pemenang_3_2 = $request->pemenang_3_2;
+        $data->keterangan = $request->keterangan;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_nasional')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_b8(Request $request)
+    {
+        $request->validate([
+            'provinsi' => ['required']
+        ]);
+
+        $data = new Duta_Provinsi();
+        $data->provinsi = $request->provinsi;
+        $data->tahun = $request->tahun;
+        $data->pemenang_1_1 = $request->pemenang_1_1;
+        $data->pemenang_1_2 = $request->pemenang_1_2;
+        $data->pemenang_2_1 = $request->pemenang_2_1;
+        $data->pemenang_2_2 = $request->pemenang_2_2;
+        $data->pemenang_3_1 = $request->pemenang_3_1;
+        $data->pemenang_3_2 = $request->pemenang_3_2;
+        $data->favorit_1 = $request->favorit_1;
+        $data->favorit_2 = $request->favorit_2;
+        $data->keterangan = $request->keterangan;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('success', 'Data Berhasil Ditambahkan!');
     }
 }

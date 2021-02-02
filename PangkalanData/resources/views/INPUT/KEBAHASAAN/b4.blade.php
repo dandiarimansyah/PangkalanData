@@ -26,10 +26,10 @@
             </div>
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('kabupaten') }}</div>
+        <div class="alert-danger">{{ $errors->first('kota') }}</div>
         <div class="inputfield">
             <label>Kabupaten/Kota*</label>
-            <input name="kabupaten" type="text" class="input">
+            <input name="kota" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>

@@ -19,11 +19,11 @@
       <form role="form" action="/operator/input/sekretariat/tanah_dan_bangunan" method="POST">
           @csrf
 
-        <div class="alert-danger">{{ $errors->first('balai') }}</div>
+        <div class="alert-danger">{{ $errors->first('kantor') }}</div>
         <div class="inputfield-select">
             <label>	Balai/Kantor*</label>
             <div class="custom_select">
-              <select name="balai">
+              <select name="kantor">
                 <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
@@ -35,11 +35,11 @@
             <textarea name="alamat" class="textarea"></textarea>
         </div>  
 
-        <div class="alert-danger">{{ $errors->first('kondisi_bangunan') }}</div>
+        <div class="alert-danger">{{ $errors->first('kondisi') }}</div>
         <div class="inputfield-select">
             <label>Kondisi Bangunan</label>
             <div class="custom_select">
-              <select name="kondisi_bangunan">
+              <select name="kondisi">
                 <option value="Baik">Baik</option>
                 <option value="Rusak Sedang">Rusak Sedang</option>
                 <option value="Rusak Berat">Rusak Berat</option>
@@ -60,7 +60,7 @@
 
         <div class="inputfield">
             <label>Keterangan</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="keterangan" class="textarea"></textarea>
         </div>  
 
         <div class="tombol">

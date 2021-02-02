@@ -16,11 +16,11 @@
       <form role="form" action="/operator/input/sekretariat/terbitan_umum" method="POST">
           @csrf
           
-        <div class="alert-danger">{{ $errors->first('kategori_terbitan') }}</div>
+        <div class="alert-danger">{{ $errors->first('kategori') }}</div>
         <div class="inputfield-select">
             <label>Kategori Terbitan*</label>
             <div class="custom_select">
-              <select name="kategori_terbitan">
+              <select name="kategori">
                 <option value="Bahasa">Bahasa</option>
                 <option value="Sastra">Sastra</option>
               </select>
@@ -39,10 +39,10 @@
             <input name="penulis" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('isbn') }}</div>
+        <div class="alert-danger">{{ $errors->first('no_isbn') }}</div>
         <div class="inputfield">
             <label>No.ISBN</label>
-            <input name="isbn" type="text" class="input">
+            <input name="no_isbn" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
@@ -51,10 +51,10 @@
             <input name="tahun_terbit" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('deskripsi_fisik') }}</div>
+        <div class="alert-danger">{{ $errors->first('deskripsi') }}</div>
         <div class="inputfield">
             <label>Deskripsi Fisik</label>
-            <textarea name="deskripsi_fisik" class="textarea"></textarea>
+            <textarea name="deskripsi" class="textarea"></textarea>
         </div>  
 
         <div class="alert-danger">{{ $errors->first('info_produk') }}</div>
@@ -62,7 +62,7 @@
             <label>Info Produk</label>
             <div class="custom_select">
               <select name="info_produk">
-                <option value="">--Pilih Info--</option>
+                <option disabled="disabled" selected="selected" value="">--Pilih Info--</option>
                 <option value="Produk Pusat">Produk Pusat</option>
                 <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
                 <option value="Produk Luar">Produk Luar</option>

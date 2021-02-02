@@ -29,22 +29,22 @@
             </div>
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pegawai_laki') }}</div>
+        <div class="alert-danger">{{ $errors->first('laki') }}</div>
         <div class="inputfield">
             <label>Jumlah Pegawai Laki-Laki</label>
-            <input name="pegawai_laki" type="text" class="input">
+            <input name="laki" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pegawai_perempuan') }}</div>
+        <div class="alert-danger">{{ $errors->first('perempuan') }}</div>
         <div class="inputfield">
             <label>Jumlah Pegawai Perempuan</label>
-            <input name="pegawai_perempuan" type="text" class="input">
+            <input name="perempuan" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pegawai_seluruh') }}</div>
+        <div class="alert-danger">{{ $errors->first('semua_kelamin') }}</div>
         <div class="inputfield">
             <label>Jumlah Pegawai Keseluruhan</label>
-            <input name="pegawai_seluruh" type="text" class="input">
+            <input name="semua_kelamin" type="text" class="input">
         </div> 
 
         <div class="tombol">

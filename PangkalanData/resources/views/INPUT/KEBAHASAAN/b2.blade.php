@@ -48,7 +48,7 @@
         <div class="alert-danger">{{ $errors->first('issn') }}</div>
         <div class="inputfield">
             <label>No.ISSN</label>
-            <input name="issn" type="text" class="input">
+            <input name="no_issn" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('lingkup') }}</div>
@@ -77,7 +77,7 @@
 
         <div class="inputfield">
             <label>Keterangan</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="keterangan" class="textarea"></textarea>
         </div>  
 
         <div class="alert-danger">{{ $errors->first('info_produk') }}</div>

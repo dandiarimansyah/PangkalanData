@@ -15,14 +15,14 @@ class CreateTanahBangunanTable extends Migration
     {
         Schema::create('tanah_bangunan', function (Blueprint $table) {
             $table->id();
-            $table->string('kantor')->nullable();
+            $table->string('kantor');
             $table->longText('alamat')->nullable();
             $table->string('status_tanah')->nullable();
             $table->string('sertif_tanah')->nullable();
             $table->string('status_bangunan')->nullable();
             $table->string('imb')->nullable();
             $table->string('kondisi')->nullable();
-            $table->string('status')->nullable();
+            $table->string('status_peroleh')->nullable();
             $table->longText('keterangan')->nullable();
             $table->timestamps();
         });

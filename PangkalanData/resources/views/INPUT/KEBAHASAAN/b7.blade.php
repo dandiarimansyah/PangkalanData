@@ -21,7 +21,7 @@
             <label>Asal Provinsi*</label>
             <div class="custom_select">
               <select name="provinsi">
-                <option value="">-- Pilih Kategori --</option>
+                <option disabled="disabled" selected="selected" value="">-- Pilih Kategori --</option>
                 <option value="Aceh">Aceh</option>
                 <option value="Sumatera Utara">Sumatera Utara</option>
                 <option value="Sumatera Barat">Sumatera Barat</option>
@@ -65,45 +65,45 @@
             <input name="tahun" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pemenang_1') }}</div>
+        <div class="alert-danger">{{ $errors->first('pemenang_1_1') }}</div>
         <div class="inputfield">
             <label>Pemenang I (1)</label>
-            <input name="pemenang_1" type="text" class="input">
+            <input name="pemenang_1_1" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pemenang_12') }}</div>
+        <div class="alert-danger">{{ $errors->first('pemenang_1_2') }}</div>
         <div class="inputfield">
             <label>Pemenang I (2)</label>
-            <input name="pemenang_12" type="text" class="input">
+            <input name="pemenang_1_2" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pemenang_2') }}</div>
+        <div class="alert-danger">{{ $errors->first('pemenang_2_1') }}</div>
         <div class="inputfield">
             <label>Pemenang II (1)</label>
-            <input name="pemenang_2" type="text" class="input">
+            <input name="pemenang_2_1" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pemenang_22') }}</div>
+        <div class="alert-danger">{{ $errors->first('pemenang_2_2') }}</div>
         <div class="inputfield">
             <label>Pemenang II (2)</label>
-            <input name="pemenang_21" type="text" class="input">
+            <input name="pemenang_2_2" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pemenang_3') }}</div>
+        <div class="alert-danger">{{ $errors->first('pemenang_3_1') }}</div>
         <div class="inputfield">
             <label>Pemenang III (1)</label>
-            <input name="pemenang_3" type="text" class="input">
+            <input name="pemenang_3_1" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('pemenang_32') }}</div>
+        <div class="alert-danger">{{ $errors->first('pemenang_3_2') }}</div>
         <div class="inputfield">
             <label>Pemenang III (2)</label>
-            <input name="pemenang_32" type="text" class="input">
+            <input name="pemenang_3_2" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Keterangan</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="keterangan" class="textarea"></textarea>
         </div>  
         
         <div class="tombol">

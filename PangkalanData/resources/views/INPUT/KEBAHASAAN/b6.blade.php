@@ -21,7 +21,7 @@
             <label>Kategori*</label>
             <div class="custom_select">
               <select name="kategori">
-                <option value="">-- Pilih Kategori --</option>
+                <option disabled="disabled" selected="selected" value="">-- Pilih Kategori --</option>
                 <option value="Anugerah Toko Kebahasaan">Anugerah Toko Kebahasaan</option>
                 <option value="Adibahasa">Adibahasa</option>
                 <option value="Taruna Bahasa">Taruna Bahasa</option>

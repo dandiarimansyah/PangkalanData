@@ -68,22 +68,22 @@
                     <input name="faximili" type="text" class="input">
                 </div> 
 
-                <div class="alert-danger">{{ $errors->first('lcd') }}</div>
+                <div class="alert-danger">{{ $errors->first('LCD') }}</div>
                 <div class="inputfield-list">
                     <li> <label>LCD Projector</label> </li>
-                    <input name="lcd" type="text" class="input">
+                    <input name="LCD" type="text" class="input">
                 </div> 
 
-                <div class="alert-danger">{{ $errors->first('tv') }}</div>
+                <div class="alert-danger">{{ $errors->first('TV') }}</div>
                 <div class="inputfield-list">
                     <li> <label>TV</label> </li>
-                    <input name="tv" type="text" class="input">
+                    <input name="TV" type="text" class="input">
                 </div> 
 
-                <div class="alert-danger">{{ $errors->first('lain-lain') }}</div>
+                <div class="alert-danger">{{ $errors->first('lain') }}</div>
                 <div class="inputfield-list">
                     <li> <label>Lain-Lain</label> </li>
-                    <input name="lain-lain" type="text" class="input">
+                    <input name="lain" type="text" class="input">
                 </div> 
             </div>
 
