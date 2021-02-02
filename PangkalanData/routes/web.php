@@ -55,32 +55,74 @@ Route::group(['middleware' => ['auth']], function () {
         //INPUT KATEGORI A
         Route::get('/operator/input/sekretariat/anggaran', [InputController::class, 'a1']);
         Route::post('/operator/input/sekretariat/anggaran', [InputController::class, 'store_a1']);
+        
         Route::get('/operator/input/sekretariat/realisasi_anggaran', [InputController::class, 'a2']);
         Route::post('/operator/input/sekretariat/realisasi_anggaran', [InputController::class, 'store_a2']);
+        
         Route::get('/operator/input/sekretariat/kepegawaian', [InputController::class, 'a3']);
+        Route::post('/operator/input/sekretariat/kepegawaian', [InputController::class, 'store_a3']);
+        
         Route::get('/operator/input/sekretariat/kerja_sama', [InputController::class, 'a4']);
+        Route::post('/operator/input/sekretariat/kerja_sama', [InputController::class, 'store_a4']);
+
         Route::get('/operator/input/sekretariat/tanah_dan_bangunan', [InputController::class, 'a5']);
+        Route::post('/operator/input/sekretariat/tanah_dan_bangunan', [InputController::class, 'store_a5']);
+
         Route::get('/operator/input/sekretariat/perpustakaan', [InputController::class, 'a6']);
+        Route::post('/operator/input/sekretariat/perpustakaan', [InputController::class, 'store_a6']);
+
         Route::get('/operator/input/sekretariat/inventarisasi_bmn', [InputController::class, 'a7']);
+        Route::post('/operator/input/sekretariat/inventarisasi_bmn', [InputController::class, 'store_a7']);
+
         //INPUT KATEGORI B
         Route::get('/operator/input/kebahasaan/kamus_ensiklopedia', [InputController::class, 'b1']);
+        Route::post('/operator/input/kebahasaan/kamus_ensiklopedia', [InputController::class, 'store_b1']);
+
         Route::get('/operator/input/kebahasaan/jurnal_majalah', [InputController::class, 'b2']);
+        Route::post('/operator/input/kebahasaan/jurnal_majalah', [InputController::class, 'store_b2']);
+
         Route::get('/operator/input/kebahasaan/terbitan_umum', [InputController::class, 'b3']);
+        Route::post('/operator/input/kebahasaan/terbitan_umum', [InputController::class, 'store_b3']);
+
         Route::get('/operator/input/kebahasaan/penyuluhan', [InputController::class, 'b4']);
+        Route::post('/operator/input/kebahasaan/penyuluhan', [InputController::class, 'store_b4']);
+
         Route::get('/operator/input/kebahasaan/pesuluh', [InputController::class, 'b5']);
+        Route::post('/operator/input/kebahasaan/pesuluh', [InputController::class, 'store_b5']);
+
         Route::get('/operator/input/kebahasaan/penghargaan_bahasa', [InputController::class, 'b6']);
+        Route::post('/operator/input/kebahasaan/penghargaan_bahasa', [InputController::class, 'store_b6']);
+
         Route::get('/operator/input/kebahasaan/duta_bahasa_nasional', [InputController::class, 'b7']);
+        Route::post('/operator/input/kebahasaan/duta_bahasa_nasional', [InputController::class, 'store_b7']);
+
         Route::get('/operator/input/kebahasaan/duta_bahasa_provinsi', [InputController::class, 'b8']);
+        Route::post('/operator/input/kebahasaan/duta_bahasa_provinsi', [InputController::class, 'store_b8']);
+
         //INPUT KATEGORI C
         Route::get('/operator/input/kesastraan/bengkel_sastra_dan_bahasa', [InputController::class, 'c1']);
+        Route::post('/operator/input/kesastraan/bengkel_sastra_dan_bahasa', [InputController::class, 'store_c1']);
+
         Route::get('/operator/input/kesastraan/penghargaan_sastra', [InputController::class, 'c2']);
+        Route::post('/operator/input/kesastraan/penghargaan_sastra', [InputController::class, 'store_c2']);
+
         Route::get('/operator/input/kesastraan/musikalisasi_puisi_nasional', [InputController::class, 'c3']);
+        Route::post('/operator/input/kesastraan/musikalisasi_puisi_nasional', [InputController::class, 'store_c3']);
+
         Route::get('/operator/input/kesastraan/musikalisasi_puisi_provinsi', [InputController::class, 'c4']);
+        Route::post('/operator/input/kesastraan/musikalisasi_puisi_provinsi', [InputController::class, 'store_c4']);
+
         //INPUT KATEGORI D
         Route::get('/operator/input/komunitas/komunitas_bahasa', [InputController::class, 'd1']);
+        Route::post('/operator/input/komunitas/komunitas_bahasa', [InputController::class, 'store_d1']);
+
         Route::get('/operator/input/komunitas/komunitas_sastra', [InputController::class, 'd2']);
+        Route::post('/operator/input/komunitas/komunitas_sastra', [InputController::class, 'store_d2']);
+
         //INPUT KATEGORI E
         Route::get('/operator/input/penelitian/penelitian', [InputController::class, 'e1']);
+        Route::post('/operator/input/penelitian/penelitian', [InputController::class, 'store_e1']);
+
 
         //EDIT KATEGORI A
         Route::get('/operator/edit/sekretariat/anggaran', [EditController::class, 'a1']);
