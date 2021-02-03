@@ -37,94 +37,136 @@ class EditController extends Controller
     }
     public function a2()
     {
-        return view('EDIT.SEKRETARIAT.a2');
+        $realisasi_anggaran = Realisasi_Anggaran::all();
+
+        return view('EDIT.SEKRETARIAT.a2', compact('realisasi_anggaran'));
     }
     public function a3()
     {
-        return view('EDIT.SEKRETARIAT.a3');
+        $kepegawaian = Kepegawaian::all();
+
+        return view('EDIT.SEKRETARIAT.a3', compact('realisasi_anggaran'));
     }
     public function a4()
     {
-        return view('EDIT.SEKRETARIAT.a4');
+        $kerja_sama = Kerja_Sama::all();
+
+        return view('EDIT.SEKRETARIAT.a4', compact('kerja_sama'));
     }
     public function a5()
     {
-        return view('EDIT.SEKRETARIAT.a5');
+        $tanah_bangunan = Tanah_Bangunan::all();
+
+        return view('EDIT.SEKRETARIAT.a5', compact('tanah_bangunan'));
     }
     public function a6()
     {
-        return view('EDIT.SEKRETARIAT.a6');
+        $perpustakaan = Perpustakaan::all();
+
+        return view('EDIT.SEKRETARIAT.a6', compact('perpustakaan'));
     }
     public function a7()
     {
-        return view('EDIT.SEKRETARIAT.a7');
+        $inventarisasi = Inventarisasi::all();
+        
+        return view('EDIT.SEKRETARIAT.a7', compact('inventarisasi'));
     }
 
     //EDIT KATEGORI B
     public function b1()
     {
-        return view('EDIT.KEBAHASAAN.b1');
+        $kamus = Kamus::all();
+
+        return view('EDIT.KEBAHASAAN.b1', compact('kamus'));
     }
     public function b2()
     {
-        return view('EDIT.KEBAHASAAN.b2');
+        $jurnal = Jurnal::all();
+
+        return view('EDIT.KEBAHASAAN.b2', compact('jurnal'));
     }
     public function b3()
     {
-        return view('EDIT.KEBAHASAAN.b3');
+        $terbitan_umum = Terbitan_Umum::all();
+
+        return view('EDIT.KEBAHASAAN.b3', compact('terbitan_umum'));
     }
     public function b4()
     {
-        return view('EDIT.KEBAHASAAN.b4');
+        $penyuluhan = Penyuluhan::all();
+
+        return view('EDIT.KEBAHASAAN.b4', compact('penyuluhan'));
     }
     public function b5()
     {
-        return view('EDIT.KEBAHASAAN.b5');
+        $pesuluh = Pesuluh::all();
+
+        return view('EDIT.KEBAHASAAN.b5', compact('pesuluh'));
     }
     public function b6()
     {
-        return view('EDIT.KEBAHASAAN.b6');
+        $penghargaan_bahasa = Penghargaan_Bahasa::all();
+
+        return view('EDIT.KEBAHASAAN.b6', compact('penghargaan_bahasa'));
     }
     public function b7()
     {
-        return view('EDIT.KEBAHASAAN.b7');
+        $duta_nasional = Duta_Nasional::all();
+
+        return view('EDIT.KEBAHASAAN.b7', compact('duta_nasional'));
     }
     public function b8()
     {
-        return view('EDIT.KEBAHASAAN.b8');
+        $duta_sastra = Duta_Sastra::all();
+
+        return view('EDIT.KEBAHASAAN.b8', compact('duta_sastra'));
     }
 
     //EDIT KATEGORI C
     public function c1()
     {
-        return view('EDIT.KESASTRAAN.c1');
+        $bengkel_sastra_dan_bahasa = Bengkel_Sastra_Dan_Bahasa::all();
+
+        return view('EDIT.KESASTRAAN.c1', compact('bengkel_sastra_dan_bahasa'));
     }
     public function c2()
     {
-        return view('EDIT.KESASTRAAN.c2');
+        $penghargaan_sastra = Penghargaan_Sastra::all();
+
+        return view('EDIT.KESASTRAAN.c2', compact('penghargaan_sastra'));
     }
     public function c3()
     {
-        return view('EDIT.KESASTRAAN.c3');
+        $musikalisasi_puisi_nasional = Musikalisasi_Puisi_Nasional::all();
+
+        return view('EDIT.KESASTRAAN.c3', compact('musikalisasi_puisi_nasional'));
     }
     public function c4()
     {
-        return view('EDIT.KESASTRAAN.c4');
+        $musikalisasi_puisi_provinsi = Musikalisasi_Puisi_Provinsi::all();
+
+        return view('EDIT.KESASTRAAN.c4', compact('musikalisasi_puisi_provinsi'));
     }
 
     //EDIT KATEGORI D
     public function d1()
     {
-        return view('EDIT.KOMUNITAS.d1');
+        $komunitas_bahasa = Komunitas_Bahasa::all();
+
+        return view('EDIT.KOMUNITAS.d1', compact('komunitas_bahasa'));
     }
     public function d2()
     {
-        return view('EDIT.KOMUNITAS.d2');
+        $komunitas_sastra = Komunitas_Sastra::all();
+
+        return view('EDIT.KOMUNITAS.d2', compact('komunitas_sastra'));
     }
 
     //EDIT KATEGORI E
     public function e1()
     {
-        return view('EDIT.PENELITIAN.e1');
+        $penelitian = Penelitian::all();
+
+        return view('EDIT.PENELITIAN.e1, compact('penelitian')');
     }
 }
