@@ -35,6 +35,72 @@
             <textarea name="alamat" class="textarea"></textarea>
         </div>  
 
+        <div class="inputfield-select">
+          <label>Status Tanah</label>
+
+          <input type="radio" id="Milik_Sendiri/Kemendikbud" name="status_tanah" value="Milik Sendiri/Kemendikbud">
+          <label for="Milik Sendiri/Kemendikbud">Miik Sendiri/Kemendikbud</label><br>
+
+          <input type="radio" id="Milik_Pemda" name="status_tanah" value="Milik Pemda">
+          <label for="Milik Pemda">Milik Pemda</label><br>
+
+          <input type="radio" id="Pinjam_Pakai" name="status_tanah" value="Pinjam Pakai">
+          <label for="Pinjam Pakai">Pinjam Pakai</label>
+        </div> 
+
+        <div class="inputfield-select">
+          <label>Sertifikat Tanah</label>
+
+          <input type="radio" id="Ada" name="sertifikat_tanah" value="Ada">
+          <label for="Ada">Ada</label><br>
+
+          <input type="radio" id="Tidak_Ada" name="sertifikat_tanah" value="Tidak Ada">
+          <label for="Tidak Ada">Tidak Ada</label><br>
+        </div> 
+
+        <div class="inputfield-select">
+          <label>Jika Ada</label>
+
+          <input type="radio" id="Asli" name="sertifikat_tanah" value="Asli">
+          <label for="Asli">Asli</label><br>
+
+          <input type="radio" id="Fotokopi" name="sertifikat_tanah" value="Fotokopi">
+          <label for="Fotokopi">Fotokopi</label><br>
+        </div> 
+
+        <div class="inputfield-select">
+          <label>Status Bangunan</label>
+
+          <input type="radio" id="Milik_Sendiri/Kemendikbud_2" name="status_tanah" value="Milik Sendiri/Kemendikbud">
+          <label for="Milik Sendiri/Kemendikbud">Miik Sendiri/Kemendikbud</label><br>
+
+          <input type="radio" id="Milik_Pemda_2" name="status_tanah" value="Milik Pemda">
+          <label for="Milik Pemda">Milik Pemda</label><br>
+
+          <input type="radio" id="Sewa_Kontrak" name="status_tanah" value="Sewa Kontrak">
+          <label for="Sewa Kontrak">Sewa Kontrak</label>
+        </div> 
+        
+        <div class="inputfield-select">
+          <label>IMB</label>
+
+          <input type="radio" id="Ada_2" name="IMB" value="Ada">
+          <label for="Ada">Ada</label><br>
+
+          <input type="radio" id="Tidak_Ada_2" name="IMB" value="Tidak Ada">
+          <label for="Tidak Ada">Tidak Ada</label><br>
+        </div> 
+
+        <div class="inputfield-select">
+          <label>Jika Ada</label>
+
+          <input type="radio" id="Asli_2" name="sertifikat_tanah" value="Asli">
+          <label for="Asli">Asli</label><br>
+
+          <input type="radio" id="Fotokopi_2" name="sertifikat_tanah" value="Fotokopi">
+          <label for="Fotokopi">Fotokopi</label><br>
+        </div> 
+
         <div class="alert-danger">{{ $errors->first('kondisi') }}</div>
         <div class="inputfield-select">
             <label>Kondisi Bangunan</label>
