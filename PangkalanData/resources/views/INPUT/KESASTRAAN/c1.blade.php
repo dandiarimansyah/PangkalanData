@@ -26,10 +26,10 @@
               </div>
           </div> 
   
-          <div class="alert-danger">{{ $errors->first('kabupaten') }}</div>
+          <div class="alert-danger">{{ $errors->first('kota') }}</div>
           <div class="inputfield">
               <label>Kabupaten/Kota*</label>
-              <input name="kabupaten" type="text" class="input">
+              <input name="kota" type="text" class="input">
           </div> 
   
           <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>
@@ -38,16 +38,16 @@
               <input name="nama_kegiatan" type="text" class="input">
           </div> 
 
-          <div class="alert-danger">{{ $errors->first('tgl_awal') }}</div>
+          <div class="alert-danger">{{ $errors->first('tanggal_awal_pelaksanaan') }}</div>
           <div class="inputfield-date">
             <label>Tanggal Awal Pelaksanaan</label>
-            <input name="tgl_awal" type="date" class="input">
+            <input name="tanggal_awal_pelaksanaan" type="date" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('tgl_akhir') }}</div>
+        <div class="alert-danger">{{ $errors->first('tanggal_akhir_pelaksanaan') }}</div>
         <div class="inputfield-date">
             <label>Tanggal Akhir Pelaksanaan</label>
-            <input name="tgl_akhir" type="date" class="input">
+            <input name="tanggal_akhir_pelaksanaan" type="date" class="input">
         </div> 
   
         <div class="alert-danger">{{ $errors->first('pemateri') }}</div>
@@ -70,17 +70,17 @@
             <p>Sekolah</p>
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('jumlah_sekolah_dibina') }}</div>
+        <div class="alert-danger">{{ $errors->first('jumlah_sekolah_yang_dibina') }}</div>
         <div class="inputfield-kecil">
             <label>Jumlah Sekolah yang Dibina</label>
-            <input name="jumlah_sekolah_dibina" type="text" class="input">
+            <input name="jumlah_sekolah_yang_dibina" type="text" class="input">
             <p>Sekolah</p>
         </div> 
         
-        <div class="alert-danger">{{ $errors->first('nama_sekolah_dibina') }}</div>
+        <div class="alert-danger">{{ $errors->first('nama_sekolah_yang_dibina') }}</div>
         <div class="inputfield">
             <label>Nama Sekolah yang Dibina</label>
-            <textarea name="nama_sekolah_dibina" class="textarea"></textarea>
+            <textarea name="nama_senama_sekolah_yang_dibinakolah_dibina" class="textarea"></textarea>
         </div> 
 
         <div class="alert-danger">{{ $errors->first('aktivitas') }}</div>

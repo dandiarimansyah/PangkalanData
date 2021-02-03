@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Anggaran;
+use App\Models\Bengkel_Sastra_Dan_Bahasa;
 use App\Models\Duta_Nasional;
 use App\Models\Duta_Provinsi;
 use App\Models\Inventarisasi;
@@ -12,7 +13,13 @@ use App\Models\Kamus;
 use App\Models\Realisasi_Anggaran;
 use App\Models\Kepegawaian;
 use App\Models\Kerja_Sama;
+use App\Models\Komunitas_Bahasa;
+use App\Models\Komunitas_Sastra;
+use App\Models\Musikalisasi_Puisi_Nasional;
+use App\Models\Musikalisasi_Puisi_Provinsi;
+use App\Models\Penelitian;
 use App\Models\Penghargaan_Bahasa;
+use App\Models\Penghargaan_Sastra;
 use App\Models\Penyuluhan;
 use App\Models\Perpustakaan;
 use App\Models\Pesuluh;
@@ -465,23 +472,146 @@ class InputController extends Controller
     public function store_c1(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required']
+            'provinsi' => ['required'],
+            'kota' => ['required']
         ]);
 
-        $data = new Duta_Provinsi();
+        $data = new Bengkel_Sastra_Dan_Bahasa();
         $data->provinsi = $request->provinsi;
+        $data->kota = $request->kota;
+        $data->nama_kegiatan = $request->nama_kegiatan;
+        $data->tanggal_awal_pelaksanaan = $request->tanggal_awal_pelaksanaan;
+        $data->tanggal_akhir_pelaksanaan = $request->tanggal_akhir_pelaksanaan;
+        $data->pemateri = $request->pemateri;
+        $data->jumlah_peserta = $request->jumlah_peserta;
+        $data->jumlah_sekolah = $request->jumlah_sekolah;
+        $data->jumlah_sekolah_yang_dibina = $request->jumlah_sekolah_yang_dibina;
+        $data->nama_sekolah_yang_dibina = $request->nama_sekolah_yang_dibina;
+        $data->aktivitas = $request->aktivitas;
+        $data->save();
+
+        return redirect('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_c2(Request $request)
+    {
+        $request->validate([
+            'kategori' => ['required']
+        ]);
+
+        $data = new Penghargaan_Sastra();
+        $data->kategori = $request->kategori;
         $data->tahun = $request->tahun;
-        $data->pemenang_1_1 = $request->pemenang_1_1;
-        $data->pemenang_1_2 = $request->pemenang_1_2;
-        $data->pemenang_2_1 = $request->pemenang_2_1;
-        $data->pemenang_2_2 = $request->pemenang_2_2;
-        $data->pemenang_3_1 = $request->pemenang_3_1;
-        $data->pemenang_3_2 = $request->pemenang_3_2;
-        $data->favorit_1 = $request->favorit_1;
-        $data->favorit_2 = $request->favorit_2;
+        $data->deskripsi = $request->deskripsi;
+        $data->save();
+
+        return redirect('/operator/edit/kesastraan/penghargaan_sastra')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_c3(Request $request)
+    {
+        // $request->validate([
+        //     'tahun' => ['required']
+        // ]);
+
+        $data = new Musikalisasi_Puisi_Nasional();
+        $data->tahun = $request->tahun;
+        $data->pemenang_1 = $request->pemenang_1;
+        $data->pemenang_2 = $request->pemenang_2;
+        $data->pemenang_3 = $request->pemenang_3;
+        $data->favorit = $request->favorit;
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_nasional')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_c4(Request $request)
+    {
+        $request->validate([
+            'provinsi' => ['required']
+        ]);
+
+        $data = new Musikalisasi_Puisi_Provinsi();
+        $data->provinsi = $request->provinsi;
+        $data->tahun = $request->tahun;
+        $data->pemenang_1 = $request->pemenang_1;
+        $data->pemenang_2 = $request->pemenang_2;
+        $data->pemenang_3 = $request->pemenang_3;
+        $data->favorit = $request->favorit;
+        $data->keterangan = $request->keterangan;
+        $data->save();
+
+        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_provinsi')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_d1(Request $request)
+    {
+        $request->validate([
+            'nama_komunitas' => ['required'],
+            'provinsi' => ['required'],
+            'kota' => ['required'],
+        ]);
+
+        $data = new Komunitas_Bahasa();
+        $data->nama_komunitas = $request->nama_komunitas;
+        $data->provinsi = $request->provinsi;
+        $data->kota = $request->kota;
+        $data->kecamatan = $request->kecamatan;
+        $data->alamat = $request->alamat;
+        $data->koordinat = $request->koordinat;
+        $data->keterangan = $request->keterangan;
+        $data->save();
+
+        return redirect('/operator/edit/komunitas/komunitas_bahasa')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_d2(Request $request)
+    {
+        $request->validate([
+            'nama_komunitas' => ['required'],
+            'provinsi' => ['required'],
+            'kota' => ['required'],
+        ]);
+
+        $data = new Komunitas_Sastra();
+        $data->nama_komunitas = $request->nama_komunitas;
+        $data->provinsi = $request->provinsi;
+        $data->kota = $request->kota;
+        $data->kecamatan = $request->kecamatan;
+        $data->alamat = $request->alamat;
+        $data->koordinat = $request->koordinat;
+        $data->keterangan = $request->keterangan;
+        $data->save();
+
+        return redirect('/operator/edit/komunitas/komunitas_sastra')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+    public function store_e1(Request $request)
+    {
+        $request->validate([
+            'kategori' => ['required'],
+            'unit' => ['required'],
+            'peneliti' => ['required'],
+            'judul' => ['required'],
+            'abstrak' => ['required'],
+        ]);
+
+        $data = new Penelitian();
+        $data->kategori = $request->kategori;
+        $data->unit = $request->unit;
+        $data->peneliti = $request->peneliti;
+        $data->judul = $request->judul;
+        $data->kerja_sama = $request->kerja_sama;
+        $data->tanggal_awal = $request->tanggal_awal;
+        $data->tanggal_akhir = $request->tanggal_akhir;
+        $data->lama_penelitian = $request->lama_penelitian;
+        $data->publikasi = $request->publikasi;
+        $data->tahun_terbit = $request->tahun_terbit;
+        $data->abstrak = $request->abstrak;
+        $data->file = $request->file;
+        $data->save();
+
+        return redirect('/operator/edit/penelitian/penelitian')->with('success', 'Data Berhasil Ditambahkan!');
     }
 }

@@ -8,6 +8,9 @@
     <div class="judul">
         <th>INPUT DATA PENELITIAN</th>
     </div>
+    <div class="judul">
+      <th>MASIH KURANG INPUT FILE</th>
+  </div>
 
   <div class="wrapper">
       <div class="form">
@@ -15,11 +18,11 @@
       <form role="form" action="/operator/input/sekretariat/penelitian" method="POST">
           @csrf
 
-        <div class="alert-danger">{{ $errors->first('kategori_penelitian') }}</div>
+        <div class="alert-danger">{{ $errors->first('kategori') }}</div>
         <div class="inputfield-select">
             <label>Kategori Penelitian*</label>
             <div class="custom_select">
-              <select name="kategori_penelitian">
+              <select name="kategori">
                 <option value="Bahasa">Bahasa</option>
                 <option value="Sastra">Sastra</option>
               </select>
@@ -54,16 +57,16 @@
             <input name="kerja_sama" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('tgl_mulai') }}</div>
+        <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
         <div class="inputfield-date">
             <label>Tanggal Mulai Penelitian</label>
-            <input name="tgl_mulai" type="date" class="input">
+            <input name="tanggal_awal" type="date" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('tgl_selesai') }}</div>
+        <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
         <div class="inputfield-date">
             <label>Tanggal Selesai Penelitian</label>
-            <input name="tgl_selesai" type="date" class="input">
+            <input name="tanggal_akhir" type="date" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('lama_penelitian') }}</div>
@@ -102,6 +105,8 @@
             <label>Abstrak*</label>
             <textarea name="abstrak" class="textarea"></textarea>
         </div> 
+
+        {{-- FORM INPUT FILE --}}
 
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">

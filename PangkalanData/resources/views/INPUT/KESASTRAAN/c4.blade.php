@@ -20,7 +20,7 @@
             <label>Provinsi*</label>
             <div class="custom_select">
               <select name="provinsi">
-                <option value="">-- Pilih Provinsi--</option>
+                <option disabled="disabled" selected="selected" value="">-- Pilih Provinsi--</option>
                 <option value="Jawa Tengah">Jawa Tengah</option>
               </select>
             </div>
@@ -58,7 +58,7 @@
 
         <div class="inputfield">
             <label>Keterangan</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="keterangan" class="textarea"></textarea>
         </div> 
 
         <div class="">

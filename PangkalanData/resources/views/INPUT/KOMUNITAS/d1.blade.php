@@ -26,18 +26,18 @@
             <label>Provinsi*</label>
             <div class="custom_select">
               <select name="provinsi">
-                <option value="">-- Pilih Provinsi--</option>
+                <option disabled="disabled" selected="selected" value="">-- Pilih Provinsi--</option>
                 <option value="Jawa Tengah">Jawa Tengah</option>
               </select>
             </div>
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('kabupaten') }}</div>
+        <div class="alert-danger">{{ $errors->first('kota') }}</div>
         <div class="inputfield-select">
             <label>Kabupaten/Kota*</label>
             <div class="custom_select">
-              <select name="kabupaten">
-                <option value="">-- Pilih Kabupaten/Kota--</option>
+              <select name="kota">
+                <option disabled="disabled" selected="selected" value="">-- Pilih Kabupaten/Kota--</option>
                 <option value="Kabupaten Cilacap">Kabupaten Cilacap</option>
                 <option value="Kabupaten Banyumas">Kabupaten Banyumas</option>
                 <option value="Kabupaten Purbalingga">Kabupaten Purbalingga</option>
@@ -98,7 +98,7 @@
 
         <div class="inputfield">
             <label>Keterangan</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="keterangan" class="textarea"></textarea>
         </div> 
 
         <div class="tombol">

@@ -20,7 +20,7 @@
             <label>Kategori</label>
             <div class="custom_select">
               <select name="kategori">
-                <option value="">-- Pilih Kategori--</option>
+                <option disabled="disabled" selected="selected" value="">-- Pilih Kategori--</option>
                 <option value="Acarya Sastra">Acarya Sastra</option>
                 <option value="Taruna Sastra">Taruna Sastra</option>
                 <option value="Anugrah Tokoh Kesastraan">Anugrah Tokoh Kesastraan</option>
