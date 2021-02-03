@@ -17,7 +17,7 @@ class CreateKomunitasSastraTable extends Migration
             $table->id();
             $table->string("nama_komunitas");
             $table->string("provinsi");
-            $table->string("kabupaten/kota");
+            $table->string("kota");
             $table->string("kecamatan")->nullable();
             $table->string("alamat")->nullable();
             $table->string("koordinat")->nullable();

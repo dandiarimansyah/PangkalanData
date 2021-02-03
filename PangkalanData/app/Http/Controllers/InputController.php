@@ -461,4 +461,27 @@ class InputController extends Controller
 
         return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('success', 'Data Berhasil Ditambahkan!');
     }
+
+    public function store_c1(Request $request)
+    {
+        $request->validate([
+            'provinsi' => ['required']
+        ]);
+
+        $data = new Duta_Provinsi();
+        $data->provinsi = $request->provinsi;
+        $data->tahun = $request->tahun;
+        $data->pemenang_1_1 = $request->pemenang_1_1;
+        $data->pemenang_1_2 = $request->pemenang_1_2;
+        $data->pemenang_2_1 = $request->pemenang_2_1;
+        $data->pemenang_2_2 = $request->pemenang_2_2;
+        $data->pemenang_3_1 = $request->pemenang_3_1;
+        $data->pemenang_3_2 = $request->pemenang_3_2;
+        $data->favorit_1 = $request->favorit_1;
+        $data->favorit_2 = $request->favorit_2;
+        $data->keterangan = $request->keterangan;
+        $data->save();
+
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('success', 'Data Berhasil Ditambahkan!');
+    }
 }

@@ -16,7 +16,7 @@ class CreateBengkelSastraDanBahasaTable extends Migration
         Schema::create('bengkel_sastra_dan_bahasa', function (Blueprint $table) {
             $table->id();
             $table->string("provinsi");
-            $table->string("kabupaten/kota");
+            $table->string("kota");
             $table->string("nama_kegiatan")->nullable();
             $table->date("tanggal_awal_pelaksanaan")->nullable();
             $table->date("tanggal_akhir_pelaksanaan")->nullable();
