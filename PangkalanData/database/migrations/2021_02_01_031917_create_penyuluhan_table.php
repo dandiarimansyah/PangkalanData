@@ -24,6 +24,7 @@ class CreatePenyuluhanTable extends Migration
             $table->string('sasaran')->nullable();
             $table->integer('jumlah_peserta')->nullable();
             $table->longText('materi')->nullable();
+            $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });
     }

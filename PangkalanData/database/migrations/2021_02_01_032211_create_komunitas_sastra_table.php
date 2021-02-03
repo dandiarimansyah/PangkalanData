@@ -22,6 +22,7 @@ class CreateKomunitasSastraTable extends Migration
             $table->string("alamat")->nullable();
             $table->string("koordinat")->nullable();
             $table->longText("keterangan")->nullable();
+            $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });
     }

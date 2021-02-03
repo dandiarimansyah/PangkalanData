@@ -20,6 +20,7 @@ class CreatePesuluhTable extends Migration
             $table->date('tanggal_lahir')->nullable();
             $table->string('instansi')->nullable();
             $table->string('tingkat')->nullable();
+            $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });
     }

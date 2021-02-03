@@ -8,12 +8,10 @@
                 <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/oindex.css') }}">
             @elseif (Auth::user()->level == 'validator')
                 <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/vindex.css') }}">
+            @elseif (Auth::user()->level == 'tamu')
+                <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/guest.css') }}">
             @endif
         @endauth
-    
-        @guest
-            <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/guest.css') }}">
-        @endguest
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -27,44 +25,31 @@
     <body>
         <nav>
             @auth
-            @if (Auth::user()->level == 'operator')
-                <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Operator</span> </div>
-            @elseif (Auth::user()->level == 'validator')
-                <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Validator</span> </div>
-            @endif
-        @endauth
-    
-        @guest
-            <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Tamu</span> </div>
-        @endguest
+                @if (Auth::user()->level == 'operator')
+                    <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Operator</span> </div>
+                @elseif (Auth::user()->level == 'validator')
+                    <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Validator</span> </div>
+                @elseif (Auth::user()->level == 'tamu')
+                    <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Tamu</span> </div>
+                @endif
+            @endauth
 
             <ul>
                 @auth
                     @if (auth()->user()->level == 'operator')
                         <li class="{{ (request()->is('operator/input*')) ? 'aktif' : '' }}"><a href="/operator/input">INPUT</a></li>    
                         <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li>
-                        <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
-                    @else
+                    @elseif (auth()->user()->level == 'validator')
                         <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}"><a href="/validator/validasi">VALIDASI</a></li>
-                        <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
+                    @else
+                        <li class="{{ (request()->is('/*')) ? 'aktif' : '' }}"><a href="/">DATA</a></li>
                     @endif
+                    <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
                     <li class="{{ (request()->is('laporan*')) ? 'aktif' : '' }}"><a href="/laporan">LAPORAN</a></li>
                     <li class="{{ (request()->is('grafik*')) ? 'aktif' : '' }}"><a href="/grafik">GRAFIK</a></li>
-                @endauth
-
-                @guest
-                    <li class="{{ (request()->is('/*')) ? 'aktif' : '' }}"><a href="/">DATA</a></li>
-                @endguest
-                 
-                <li class="{{ (request()->is('forum*')) ? 'aktif' : '' }}"><a href="/forum">FORUM</a></li>
-                
-                @auth
+                    <li class="{{ (request()->is('forum*')) ? 'aktif' : '' }}"><a href="/forum">FORUM</a></li>
                     <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
                 @endauth
-
-                @guest
-                    <li><a href="{{ url("/login")}}" class="login">MASUK</a></li>
-                @endguest
             </ul>
         </nav>
 

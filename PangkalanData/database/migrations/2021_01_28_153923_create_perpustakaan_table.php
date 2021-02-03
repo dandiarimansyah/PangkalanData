@@ -22,6 +22,7 @@ class CreatePerpustakaanTable extends Migration
             $table->longText('jenis_buku')->nullable();
             $table->integer('jumlah_pengunjung')->nullable();
             $table->string('sumber_data')->nullable();
+            $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });
     }

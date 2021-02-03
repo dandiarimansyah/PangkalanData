@@ -31,20 +31,17 @@ Route::post('proses_login', [AuthController::class, 'proses_login'])->name('pros
 
 Route::get('/logout', function () {
     auth()->logout();
-    return redirect('/');
+    return redirect('/login');
 });
 
-Route::get('/', [GuestController::class, 'index']);
-
-
-//MenuController
-Route::get('/laporan', [MenuController::class, 'laporan']);
-Route::get('/grafik', [MenuController::class, 'grafik']);
-Route::get('/forum', [MenuController::class, 'forum']);
-
 Route::group(['middleware' => ['auth']], function () {
+
     //GUEST
+    Route::get('/', [GuestController::class, 'index']);
     Route::get('/media', [MenuController::class, 'media']);
+    Route::get('/laporan', [MenuController::class, 'laporan']);
+    Route::get('/grafik', [MenuController::class, 'grafik']);
+    Route::get('/forum', [MenuController::class, 'forum']);
 
     //OPERATOR
     Route::group(['middleware' => ['AkunLoginMiddleware:operator']], function () {
