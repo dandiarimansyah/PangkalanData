@@ -38,8 +38,10 @@ class AuthController extends Controller
                 return redirect()->intended('operator/input');
             } else if ($user->level == 'validator') {
                 return redirect()->intended('validator/validasi');
+            } else if ($user->level == 'tamu') {
+                return redirect()->intended('/');
             }
-            return redirect()->intended('/');
+            return redirect()->intended('/login');
         }
         return redirect('login')->with(['error' => 'Nama Pengguna/Password salah!']);
     }

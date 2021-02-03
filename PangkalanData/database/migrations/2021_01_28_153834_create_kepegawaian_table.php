@@ -44,6 +44,7 @@ class CreateKepegawaianTable extends Migration
             $table->integer('T_1C')->nullable();
             $table->integer('T_1B')->nullable();
             $table->integer('T_1A')->nullable();
+            $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });
     }

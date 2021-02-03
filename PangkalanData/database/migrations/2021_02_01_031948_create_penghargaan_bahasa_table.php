@@ -18,6 +18,7 @@ class CreatePenghargaanBahasaTable extends Migration
             $table->string('kategori');
             $table->string('tahun')->nullable();
             $table->longText('deskripsi')->nullable();
+            $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });
     }

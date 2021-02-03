@@ -29,6 +29,7 @@ class CreateInventarisasiTable extends Migration
             $table->integer('roda_dua')->nullable();
             $table->integer('roda_empat')->nullable();
             $table->integer('roda_enam')->nullable();
+            $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });
     }

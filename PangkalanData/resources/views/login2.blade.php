@@ -17,7 +17,7 @@
           <form action="{{url('proses_login')}}" method="POST" id="logForm">
             @csrf
             
-            <h2 class="title">Masuk Validator / Operator</h2>
+            <h2 class="title">Masuk Validator / Operator / Tamu</h2>
 
             @if (session('error'))
               <div class="salah-login">{{ session('error') }}</div>

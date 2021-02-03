@@ -24,6 +24,7 @@ class CreateDutaNasionalTable extends Migration
             $table->string('pemenang_3_1')->nullable();
             $table->string('pemenang_3_2')->nullable();
             $table->longText('keterangan')->nullable();
+            $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });
     }
