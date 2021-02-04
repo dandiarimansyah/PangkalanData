@@ -84,7 +84,7 @@
             <h5>Pos-el: balaibahasa.jateng@kemdikbud.go.id</h5>
         </footer>
         
-        <script>
+        <script type="text/javascript">
             $('.icon').click(function(){
             $('span').toggleClass("cancel");
             });
@@ -112,6 +112,19 @@
                 }
         
                 document.getElementById("pesan");
+            }
+
+            function jenis_lain(val){
+                var element=document.getElementById('jenis_buku_2');
+                var element2=document.getElementById('a');
+                if(val=='Lain'){
+                    element.style.display='block';
+                    element2.style.display='none';
+                }
+                else {
+                    element.style.display='none';
+                    element2.style.display='block';
+                }
             }
 
             @stack('scripts')

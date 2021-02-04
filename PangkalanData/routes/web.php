@@ -36,14 +36,14 @@ Route::get('/logout', function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
+    Route::get('/media', [MenuController::class, 'media']);
+    Route::get('/laporan', [MenuController::class, 'laporan']);
+    Route::get('/grafik', [MenuController::class, 'grafik']);
+    Route::get('/forum', [MenuController::class, 'forum']);
 
     //GUEST
     Route::group(['middleware' => ['AkunLoginMiddleware:tamu']], function () {
         Route::get('/', [GuestController::class, 'index']);
-        Route::get('/media', [MenuController::class, 'media']);
-        Route::get('/laporan', [MenuController::class, 'laporan']);
-        Route::get('/grafik', [MenuController::class, 'grafik']);
-        Route::get('/forum', [MenuController::class, 'forum']);
     });
 
 

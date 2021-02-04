@@ -9,7 +9,7 @@ class Perpustakaan extends Model
 {
     use HasFactory;
 
-    protected $table = "realisasi_anggaran";
+    protected $table = "perpustakaan";
 
     protected $fillable = ['provinsi', 'unit', 'jumlah_buku', 'jumlah_judul', 'jenis_buku', 'jumlah_pengunjung', 'sumber_data', 'validasi'];
 }

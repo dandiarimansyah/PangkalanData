@@ -9,9 +9,6 @@
   <div class="judul">
     <th>INPUT DATA PERPUSTAKAAN</th>
   </div>
-  <div class="judul">
-    <th>MASIH BELUM SELESAI Input jenis buku</th>
-  </div>
 
   <div class="wrapper">
       <div class="form">
@@ -55,7 +52,7 @@
         <div class="inputfield-select">
             <label>Jenis Buku**</label>
             <div class="custom_select">
-              <select name="jenis_buku">
+              <select name="jenis_buku" onchange='jenis_lain(this.value);'>
                 <option disabled="disabled" selected="selected" value="">-- Pilih --</option>
                 <option value="Umum">Umum</option>
                 <option value="Karya Sastra">Karya Sastra</option>
@@ -64,14 +61,19 @@
                 <option value="Teori Sastra/Bahasa">Teori Sastra/Bahasa</option>
                 <option value="Kamus">Kamus</option>
                 <option value="Ensiklopedia">Ensiklopedia</option>
-                <option value="Lain-lain">Lain-lain</option>
+                <option value="Lain">Lain-lain</option>
               </select>
             </div>
+        </div>
+
+        <div class="inputfield" style="margin-bottom: 0">
+          <label></label>
+          <input disabled placeholder="Pilih Lain-Lain" id="a" style='display:block;' type="text" class="input">
         </div> 
 
-        <div class="inputfield">
-            <label></label>
-            <textarea name="" class="textarea"></textarea>
+        <div class="inputfield" style="margin-top: -8px">
+          <label></label>
+          <input placeholder="Tuliskan jenis buku..." id="jenis_buku_2" style='display:none;' name="jenis_buku_2" type="text" class="input">
         </div>   
 
         <div class="alert-danger">{{ $errors->first('jumlah_pengunjung') }}</div>

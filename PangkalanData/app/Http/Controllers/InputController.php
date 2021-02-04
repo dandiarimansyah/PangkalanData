@@ -231,7 +231,7 @@ class InputController extends Controller
     public function store_a5(Request $request)
     {
         $request->validate([
-            'balai' => ['required']
+            'kantor' => ['required']
         ]);
 
         $data = new Tanah_Bangunan();
@@ -261,7 +261,12 @@ class InputController extends Controller
         $data->unit = $request->unit;
         $data->jumlah_buku = $request->jumlah_buku;
         $data->jumlah_judul = $request->jumlah_judul;
-        $data->jenis_buku = $request->jenis_buku;
+
+        if ($request->jenis_buku == "Lain") {
+            $data->jenis_buku = $request->jenis_buku_2;
+        } else {
+            $data->jenis_buku = $request->jenis_buku;
+        }
         $data->jumlah_pengunjung = $request->jumlah_pengunjung;
         $data->sumber_data = $request->sumber_data;
         $data->save();
