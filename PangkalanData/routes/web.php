@@ -38,11 +38,14 @@ Route::get('/logout', function () {
 Route::group(['middleware' => ['auth']], function () {
 
     //GUEST
-    Route::get('/', [GuestController::class, 'index']);
-    Route::get('/media', [MenuController::class, 'media']);
-    Route::get('/laporan', [MenuController::class, 'laporan']);
-    Route::get('/grafik', [MenuController::class, 'grafik']);
-    Route::get('/forum', [MenuController::class, 'forum']);
+    Route::group(['middleware' => ['AkunLoginMiddleware:tamu']], function () {
+        Route::get('/', [GuestController::class, 'index']);
+        Route::get('/media', [MenuController::class, 'media']);
+        Route::get('/laporan', [MenuController::class, 'laporan']);
+        Route::get('/grafik', [MenuController::class, 'grafik']);
+        Route::get('/forum', [MenuController::class, 'forum']);
+    });
+
 
     //OPERATOR
     Route::group(['middleware' => ['AkunLoginMiddleware:operator']], function () {

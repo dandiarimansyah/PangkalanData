@@ -4,6 +4,8 @@
 
 @include('PARTIAL.MenuEdit')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>EDIT DATA JURNAL / MAJALAH</th>
     </div>

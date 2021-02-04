@@ -3,6 +3,8 @@
 @section('content')
 
 @include('PARTIAL.MenuEdit')
+    
+<div class="isi-konten">
 
     <div class="judul">
         <th>EDIT DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
