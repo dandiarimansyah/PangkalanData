@@ -34,15 +34,15 @@
         </div> 
 
         <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
-        <div class="inputfield">
+        <div class="inputfield-date">
             <label>Tanggal Kerja sama*</label>
-            <input name="tanggal_awal" type="text" class="input">
+            <input name="tanggal_awal" type="date" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
-        <div class="inputfield">
+        <div class="inputfield-date">
             <label>Tanggal Berakhir</label>
-            <input name="tanggal_akhir" type="text" class="input">
+            <input name="tanggal_akhir" type="date" class="input">
         </div> 
         
         <div class="alert-danger">{{ $errors->first('nomor') }}</div>
@@ -62,13 +62,13 @@
             <textarea name="keterangan" class="textarea"></textarea>
         </div>   
 
-        <div class="alert-danger">{{ $errors->first('ttd_satu') }}</div>
+        <div class="alert-danger">{{ $errors->first('ttd_1') }}</div>
         <div class="inputfield">
             <label>Ditandatangani Oleh (1)</label>
             <input name="ttd_1" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('in_satu') }}</div>
+        <div class="alert-danger">{{ $errors->first('instansi_1') }}</div>
         <div class="inputfield">
             <label>Instansi (1)</label>
             <div class="custom_select" style="width: 100%">
@@ -79,13 +79,13 @@
             </div>
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('ttd_dua') }}</div>
+        <div class="alert-danger">{{ $errors->first('ttd_2') }}</div>
         <div class="inputfield">
             <label>Ditandatangani Oleh (2)</label>
             <input name="ttd_2" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('in_dua') }}</div>
+        <div class="alert-danger">{{ $errors->first('instansi_2') }}</div>
         <div class="inputfield">
             <label>Instansi (2)</label>
             <div class="custom_select" style="width: 100%">

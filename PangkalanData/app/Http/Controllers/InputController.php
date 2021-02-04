@@ -207,8 +207,8 @@ class InputController extends Controller
     {
         $request->validate([
             'kategori' => ['required'],
-            'nama_instansi' => ['required'],
-            'tanggal_kerja' => ['required']
+            'instansi' => ['required'],
+            'tanggal_awal' => ['required']
         ]);
 
         $data = new Kerja_Sama();

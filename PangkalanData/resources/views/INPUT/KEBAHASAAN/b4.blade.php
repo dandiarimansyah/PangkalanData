@@ -33,21 +33,21 @@
         </div> 
 
         <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>
-        <div class="inputfield">
+        <div class="inputfield">b4
             <label>Nama Kegiatan</label>
             <input name="nama_kegiatan" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('tgl_awal') }}</div>
-        <div class="inputfield">
+        <div class="inputfield-date">
             <label>Tanggal Awal Pelaksanaan</label>
-            <input name="tgl_awal" type="text" class="input">
+            <input name="tgl_awal" type="date" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('tgl_akhir') }}</div>
-        <div class="inputfield">
+        <div class="inputfield-date">
             <label>Tanggal Akhir Pelaksanaan</label>
-            <input name="tgl_akhir" type="text" class="input">
+            <input name="tgl_akhir" type="date" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('narasumber') }}</div>

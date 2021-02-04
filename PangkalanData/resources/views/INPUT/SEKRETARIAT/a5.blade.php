@@ -35,70 +35,56 @@
             <textarea name="alamat" class="textarea"></textarea>
         </div>  
 
-        <div class="inputfield-select">
-          <label>Status Tanah</label>
+        <div class="inputfield-radio">
+          <label class="label-atas">Status Tanah</label>
 
           <input type="radio" id="Milik_Sendiri/Kemendikbud" name="status_tanah" value="Milik Sendiri/Kemendikbud">
-          <label for="Milik Sendiri/Kemendikbud">Miik Sendiri/ Kemendikbud</label><br>
+          <label for="Milik_Sendiri/Kemendikbud">Miik Sendiri/ Kemendikbud</label><br>
 
           <input type="radio" id="Milik_Pemda" name="status_tanah" value="Milik Pemda">
-          <label for="Milik Pemda">Milik Pemda</label><br>
+          <label for="Milik_Pemda">Milik Pemda</label><br>
 
           <input type="radio" id="Pinjam_Pakai" name="status_tanah" value="Pinjam Pakai">
-          <label for="Pinjam Pakai">Pinjam Pakai</label>
+          <label for="Pinjam_Pakai">Pinjam Pakai</label>
         </div> 
 
-        <div class="inputfield-select">
-          <label>Sertifikat Tanah</label>
+        <div class="inputfield-radio">
+          <label  class="label-atas">Sertifikat Tanah</label>
 
-          <input type="radio" id="Ada" name="sertifikat_tanah" value="Ada">
-          <label for="Ada">Ada</label><br>
-
-          <input type="radio" id="Tidak_Ada" name="sertifikat_tanah" value="Tidak Ada">
-          <label for="Tidak Ada">Tidak Ada</label><br>
-        </div> 
-
-        <div class="inputfield-select">
-          <label>Jika Ada</label>
-
-          <input type="radio" id="Asli" name="sertifikat_tanah" value="Asli">
+          <input type="radio" id="Asli" name="sertif_tanah" value="Asli">
           <label for="Asli">Asli</label><br>
 
-          <input type="radio" id="Fotokopi" name="sertifikat_tanah" value="Fotokopi">
+          <input type="radio" id="Fotokopi" name="sertif_tanah" value="Fotokopi">
           <label for="Fotokopi">Fotokopi</label><br>
+
+          <input type="radio" id="Tidak_Ada" name="sertif_tanah" value="Tidak Ada">
+          <label for="Tidak_Ada">Tidak Ada</label><br>
         </div> 
 
-        <div class="inputfield-select">
-          <label>Status Bangunan</label>
+        <div class="inputfield-radio">
+          <label class="label-atas">Status Bangunan</label>
 
-          <input type="radio" id="Milik_Sendiri/Kemendikbud_2" name="status_tanah" value="Milik Sendiri/Kemendikbud">
-          <label for="Milik Sendiri/Kemendikbud">Miik Sendiri/ Kemendikbud</label><br>
+          <input type="radio" id="Milik_Sendiri/Kemendikbud_2" name="status_bangunan" value="Milik Sendiri/Kemendikbud">
+          <label for="Milik_Sendiri/Kemendikbud_2">Miik Sendiri/ Kemendikbud</label><br>
 
-          <input type="radio" id="Milik_Pemda_2" name="status_tanah" value="Milik Pemda">
-          <label for="Milik Pemda">Milik Pemda</label><br>
+          <input type="radio" id="Milik_Pemda_2" name="status_bangunan" value="Milik Pemda">
+          <label for="Milik_Pemda_2">Milik Pemda</label><br>
 
-          <input type="radio" id="Sewa_Kontrak" name="status_tanah" value="Sewa Kontrak">
-          <label for="Sewa Kontrak">Sewa Kontrak</label>
+          <input type="radio" id="Sewa_Kontrak" name="status_bangunan" value="Sewa Kontrak">
+          <label for="Sewa_Kontrak">Sewa Kontrak</label>
         </div> 
         
-        <div class="inputfield-select">
-          <label>IMB</label>
+        <div class="inputfield-radio">
+          <label class="label-atas">IMB</label>
 
-          <input type="radio" id="Ada_2" name="IMB" value="Ada">
-          <label for="Ada">Ada</label><br>
+          <input type="radio" id="Asli_2" name="imb" value="Asli">
+          <label for="Asli_2">Asli</label><br>
 
-          <input type="radio" id="Tidak_Ada_2" name="IMB" value="Tidak Ada">
-          <label for="Tidak Ada">Tidak Ada</label><br>
-        </div> 
+          <input type="radio" id="Fotokopi_2" name="imb" value="Fotokopi">
+          <label for="Fotokopi_2">Fotokopi</label><br>
 
-        <div class="inputfield-select">
-          <label>Jika Ada</label>
-
-          <input type="radio" id="Asli_2" name="sertifikat_tanah" value="Asli">
-          <label for="Asli">Asli</label><br>
-
-          <input type="radio" id="Fotokopi_2" name="sertifikat_tanah" value="Fotokopi">
-          <label for="Fotokopi">Fotokopi</label><br>
+          <input type="radio" id="Tidak_Ada_2" name="imb" value="Tidak Ada">
+          <label for="Tidak_Ada_2">Tidak Ada</label><br>
         </div> 
 
         <div class="alert-danger">{{ $errors->first('kondisi') }}</div>
