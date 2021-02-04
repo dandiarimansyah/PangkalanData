@@ -169,4 +169,150 @@ class EditController extends Controller
 
         return view('EDIT.PENELITIAN.e1', compact('penelitian'));
     }
+
+    //UPDATE KATEGORI A
+    public function update_a1($id, Request $request)
+    {
+        $anggaran = Anggaran::where('id', $id)->update([
+            "unit" => $request['unit'],
+            "tahun_anggaran" => $request['tahun_anggaran'],
+            "nilai_anggaran" => $request['nilai_anggaran'],
+        ]);
+
+        return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Diubah!');
+    }
+    public function update_a2($id, Request $request)
+    {
+        $realisasi_anggaran = Realisasi_Anggaran::all();
+
+        return view('EDIT.SEKRETARIAT.a2', compact('realisasi_anggaran'));
+    }
+    public function update_a3($id, Request $request)
+    {
+        $kepegawaian = Kepegawaian::all();
+
+        return view('EDIT.SEKRETARIAT.a3', compact('kepegawaian'));
+    }
+    public function update_a4($id, Request $request)
+    {
+        $kerja_sama = Kerja_Sama::all();
+
+        return view('EDIT.SEKRETARIAT.a4', compact('kerja_sama'));
+    }
+    public function update_a5($id, Request $request)
+    {
+        $tanah_bangunan = Tanah_Bangunan::all();
+
+        return view('EDIT.SEKRETARIAT.a5', compact('tanah_bangunan'));
+    }
+    public function update_a6($id, Request $request)
+    {
+        $perpustakaan = Perpustakaan::all();
+
+        return view('EDIT.SEKRETARIAT.a6', compact('perpustakaan'));
+    }
+    public function update_a7($id, Request $request)
+    {
+        $inventarisasi = Inventarisasi::all();
+
+        return view('EDIT.SEKRETARIAT.a7', compact('inventarisasi'));
+    }
+
+    //UPDATE KATEGORI B
+    public function update_b1($id, Request $request)
+    {
+        $kamus = Kamus::all();
+
+        return view('EDIT.KEBAHASAAN.b1', compact('kamus'));
+    }
+    public function update_b2($id, Request $request)
+    {
+        $jurnal = Jurnal::all();
+
+        return view('EDIT.KEBAHASAAN.b2', compact('jurnal'));
+    }
+    public function update_b3($id, Request $request)
+    {
+        $terbitan_umum = Terbitan_Umum::all();
+
+        return view('EDIT.KEBAHASAAN.b3', compact('terbitan_umum'));
+    }
+    public function update_b4($id, Request $request)
+    {
+        $penyuluhan = Penyuluhan::all();
+
+        return view('EDIT.KEBAHASAAN.b4', compact('penyuluhan'));
+    }
+    public function update_b5($id, Request $request)
+    {
+        $pesuluh = Pesuluh::all();
+
+        return view('EDIT.KEBAHASAAN.b5', compact('pesuluh'));
+    }
+    public function update_b6($id, Request $request)
+    {
+        $penghargaan_bahasa = Penghargaan_Bahasa::all();
+
+        return view('EDIT.KEBAHASAAN.b6', compact('penghargaan_bahasa'));
+    }
+    public function update_b7($id, Request $request)
+    {
+        $duta_nasional = Duta_Nasional::all();
+
+        return view('EDIT.KEBAHASAAN.b7', compact('duta_nasional'));
+    }
+    public function update_b8($id, Request $request)
+    {
+        $duta_provinsi = Duta_Provinsi::all();
+
+        return view('EDIT.KEBAHASAAN.b8', compact('duta_provinsi'));
+    }
+
+    //UPDATE KATEGORI C
+    public function update_c1($id, Request $request)
+    {
+        $bengkel_sastra_dan_bahasa = Bengkel_Sastra_Dan_Bahasa::all();
+
+        return view('EDIT.KESASTRAAN.c1', compact('bengkel_sastra_dan_bahasa'));
+    }
+    public function update_c2($id, Request $request)
+    {
+        $penghargaan_sastra = Penghargaan_Sastra::all();
+
+        return view('EDIT.KESASTRAAN.c2', compact('penghargaan_sastra'));
+    }
+    public function update_c3($id, Request $request)
+    {
+        $musikalisasi_puisi_nasional = Musikalisasi_Puisi_Nasional::all();
+
+        return view('EDIT.KESASTRAAN.c3', compact('musikalisasi_puisi_nasional'));
+    }
+    public function update_c4($id, Request $request)
+    {
+        $musikalisasi_puisi_provinsi = Musikalisasi_Puisi_Provinsi::all();
+
+        return view('EDIT.KESASTRAAN.c4', compact('musikalisasi_puisi_provinsi'));
+    }
+
+    //UPDATE KATEGORI D
+    public function update_d1($id, Request $request)
+    {
+        $komunitas_bahasa = Komunitas_Bahasa::all();
+
+        return view('EDIT.KOMUNITAS.d1', compact('komunitas_bahasa'));
+    }
+    public function update_d2($id, Request $request)
+    {
+        $komunitas_sastra = Komunitas_Sastra::all();
+
+        return view('EDIT.KOMUNITAS.d2', compact('komunitas_sastra'));
+    }
+
+    //UPDATE KATEGORI E
+    public function update_e1($id, Request $request)
+    {
+        $penelitian = Penelitian::all();
+
+        return view('EDIT.PENELITIAN.e1', compact('penelitian'));
+    }
 }

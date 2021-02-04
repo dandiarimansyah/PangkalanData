@@ -63,35 +63,41 @@
             </div>
             <div class="modal-body">
                 <div class="wrapper" style="margin: 0">
-                    <div class="form">
-                <form>
-                    
-                    <div class="inputfield-select">
-                        <label>Unit/Satuan Kerja*</label>
-                        <div class="custom_select">
-                        <select>
-                            <option value="">Balai Bahasa Jawa Tengah</option>
-                        </select>
-                        </div>
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Tahun Anggaran*</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Nilai Anggaran (Rp.)</label>
-                        <input type="text" class="input">
-                    </div>  
-
-                </form>
-            </div>
-            </div>
-        </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    {{-- <div class="form">
+                        <form role="form" action="" method="POST">
+                            @csrf
+                            @method('PUT')
+                  
+                          <div class="alert-danger">{{ $errors->first('unit') }}</div>
+                          <div class="inputfield-select">
+                              <label>Unit/Satuan Kerja*</label>
+                              <div class="custom_select">
+                                <select name="unit">
+                                  <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
+                                </select>
+                              </div>
+                          </div>
+                          
+                          <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
+                          <div class="inputfield">
+                              <label>Tahun Anggaran*</label>
+                              <input name="tahun_anggaran" value="{{ old('tahun_anggaran', $anggaran->tahun_anggaran) }}" type="text" class="input">
+                          </div> 
+                  
+                          <div class="alert-danger">{{ $errors->first('nilai_anggaran') }}</div>
+                          <div class="inputfield">
+                              <label>Nilai Anggaran (Rp.)</label>
+                              <input name="nilai_anggaran" value="{{ old('tahun_anggaran', $anggaran->nilai_anggaran) }}" type="text" class="input">
+                          </div>  
+                          
+                          <div class="tombol">
+                            <input type="reset" value="Ulangi" class="reset">
+                            <input type="submit" value="Simpan" class="inputan">
+                          </div>
+                  
+                        </form> --}}
+                    </div>
+                </div>
             </div>
           </div>
         </div>
