@@ -38,7 +38,31 @@
             </thead>
 
             <tbody>
-                <tr>
+
+                @forelse ($penelitian as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        </td>
+                        <td>{{ $a -> tanggal_awal}}</td>
+                        <td>{{ $a -> tanggal_akhir}}</td>
+                        <td>{{ $a -> unit}}</td>
+                        <td>{{ $a -> judul}}</td>
+                        <td>{{ $a -> peneliti}}</td>
+                        <td>{{ $a -> abstrak}}</td>
+                        <td>{{ $a -> lama_penelitian}}</td>
+                        <td>{{ $a -> publikasi}}</td>
+                        <td>{{ $a -> tahun_terbit}}</td>
+                        <td>{{ $a -> file}}</td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="13" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
+                {{-- <tr>
                     <td>1</td>
                     <td>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
@@ -69,7 +93,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                </tr>
+                </tr> --}}
             </tbody>
         </table>
 

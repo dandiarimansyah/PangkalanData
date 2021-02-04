@@ -30,22 +30,23 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($anggaran as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        </td>
+                        <td>{{ $a -> tahun_anggaran}}</td>
+                        <td>{{ $a -> unit}}</td>
+                        <td>{{ $a -> nilai_anggaran}}</td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="5" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
         </table>
 

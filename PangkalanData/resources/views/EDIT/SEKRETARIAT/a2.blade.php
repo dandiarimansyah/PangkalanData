@@ -4,16 +4,17 @@
 
 @include('PARTIAL.MenuEdit')
 
+    <div class="isi-konten">
+
     <div class="judul">
         <th>EDIT DATA REALISASI ANGGARAN UNIT/SATUAN KERJA</th>
     </div>
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
-                KEMBALI KE MENU EDIT
-            </a>
-        </div>
+    <div class="tombol-kembali">
+        <a  type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+            Kembali ke Menu Edit
+        </a>
     </div>
     
     <!-- TABLE -->
@@ -22,33 +23,38 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
                     <th>TANGGAL REALISASI</th>
                     <th>UNIT/SATUAN KERJA</th>
                     <th>NILAI REALISASI(Rp.)</th>
                     <th>KETERANGAN</th>
+                    <th>EDIT / HAPUS</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($realisasi_anggaran as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> nilai_realisasi}}</td>
+                        <td>{{ $a -> unit}}</td>
+                        <td>{{ $a -> besar_dana}}</td>
+                        <td>{{ $a -> keterangan}}</td>
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <form action="/operator/edit/sekretariat/realisasi_anggaran/{{$a->id}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Hapus" class="hapus">
+                            </form>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="5" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
         </table>
 
@@ -103,6 +109,9 @@
         </div>
       </div>
 
+
+
+</div>
     
 
 @endsection

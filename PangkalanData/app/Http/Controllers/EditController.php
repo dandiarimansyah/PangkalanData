@@ -68,7 +68,7 @@ class EditController extends Controller
     public function a7()
     {
         $inventarisasi = Inventarisasi::all();
-        
+
         return view('EDIT.SEKRETARIAT.a7', compact('inventarisasi'));
     }
 
@@ -167,6 +167,6 @@ class EditController extends Controller
     {
         $penelitian = Penelitian::all();
 
-        return view('EDIT.PENELITIAN.e1, compact('penelitian')');
+        return view('EDIT.PENELITIAN.e1', compact('penelitian'));
     }
 }
