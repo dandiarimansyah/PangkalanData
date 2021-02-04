@@ -11,7 +11,7 @@
             <a class="dropdown-item" href="/validator/sekretariat/kerja_sama">Kerja Sama</a>
             <a class="dropdown-item" href="/validator/sekretariat/tanah_dan_bangunan">Tanah dan Bangunan</a>
             <a class="dropdown-item" href="/validator/sekretariat/perpustakaan">Perpustakaan</a>
-            <a class="dropdown-item" href="/validator/sekretariat/invetarisasi_bmn">Invetarisasi BMN</a>
+            <a class="dropdown-item" href="/validator/sekretariat/inventarisasi_bmn">Invetarisasi BMN</a>
         </div>
     </div>
 
