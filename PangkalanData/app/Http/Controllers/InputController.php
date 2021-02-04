@@ -293,7 +293,7 @@ class InputController extends Controller
         $data->roda_enam = $request->roda_enam;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/inventarisasi')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/edit/sekretariat/inventarisasi_bmn')->with('success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_b1(Request $request)

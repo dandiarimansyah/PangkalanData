@@ -15,7 +15,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/sekretariat/penelitian" method="POST">
+      <form role="form" action="/operator/input/penelitian/penelitian" method="POST">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>
