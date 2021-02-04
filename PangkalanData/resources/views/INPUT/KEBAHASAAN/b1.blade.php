@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
   
-      <form role="form" action="/operator/input/sekretariat/kamus_ensiklopedia" method="POST">
+      <form role="form" action="/operator/input/kebahasaan/kamus_ensiklopedia" method="POST">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>

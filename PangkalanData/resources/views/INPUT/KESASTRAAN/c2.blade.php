@@ -12,7 +12,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/sekretariat/penghargaan_sastra" method="POST">
+      <form role="form" action="/operator/input/kesastraan/penghargaan_sastra" method="POST">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>

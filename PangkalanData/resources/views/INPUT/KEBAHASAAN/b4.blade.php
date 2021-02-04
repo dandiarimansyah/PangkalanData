@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/sekretariat/penyuluhan" method="POST">
+      <form role="form" action="/operator/input/kebahasaan/penyuluhan" method="POST">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
