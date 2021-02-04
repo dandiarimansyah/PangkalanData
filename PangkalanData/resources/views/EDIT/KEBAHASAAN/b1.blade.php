@@ -8,13 +8,13 @@
         <th>EDIT DATA KAMUS / ENSIKLOPEDIA</th>
     </div>
 
-    <div class="menu" style="display:flex; justify-content:center">
+    <!-- <div class="menu" style="display:flex; justify-content:center">
         <div class="btn-group kategori">
             <a  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
                 KEMBALI KE MENU EDIT
             </a>
         </div>
-    </div>
+    </div> -->
 
     <!-- TABLE -->
     <div class="validasi">

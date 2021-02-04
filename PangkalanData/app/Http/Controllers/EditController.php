@@ -45,7 +45,7 @@ class EditController extends Controller
     {
         $kepegawaian = Kepegawaian::all();
 
-        return view('EDIT.SEKRETARIAT.a3', compact('realisasi_anggaran'));
+        return view('EDIT.SEKRETARIAT.a3', compact('kepegawaian'));
     }
     public function a4()
     {
@@ -117,9 +117,9 @@ class EditController extends Controller
     }
     public function b8()
     {
-        $duta_sastra = Duta_Sastra::all();
+        $duta_provinsi = Duta_Provinsi::all();
 
-        return view('EDIT.KEBAHASAAN.b8', compact('duta_sastra'));
+        return view('EDIT.KEBAHASAAN.b8', compact('duta_provinsi'));
     }
 
     //EDIT KATEGORI C
