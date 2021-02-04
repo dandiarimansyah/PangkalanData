@@ -102,6 +102,18 @@
                 }
             }
 
+            function konfirmasi(){
+                var tanya = confirm("Apakah Anda Yakin Menghapus Data ini?");
+        
+                if(tanya === true) {
+                    return true;
+                }else{
+                    return false;
+                }
+        
+                document.getElementById("pesan");
+            }
+
             @stack('scripts')
 
         </script>

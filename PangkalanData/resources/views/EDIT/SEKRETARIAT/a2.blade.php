@@ -42,11 +42,7 @@
                         <td>{{ $a -> keterangan}}</td>
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                            <form action="/operator/edit/sekretariat/realisasi_anggaran/{{$a->id}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <input type="submit" value="Hapus" class="hapus">
-                            </form>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/realisasi_anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty

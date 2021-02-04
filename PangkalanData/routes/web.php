@@ -12,6 +12,7 @@ use App\Http\Controllers\GrafikController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\EditController;
+use App\Http\Controllers\HapusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -120,7 +121,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/operator/input/penelitian/penelitian', [InputController::class, 'e1']);
         Route::post('/operator/input/penelitian/penelitian', [InputController::class, 'store_e1']);
 
-
         //EDIT KATEGORI A
         Route::get('/operator/edit/sekretariat/anggaran', [EditController::class, 'a1']);
         Route::get('/operator/edit/sekretariat/realisasi_anggaran', [EditController::class, 'a2']);
@@ -147,6 +147,34 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/operator/edit/komunitas/komunitas_bahasa', [EditController::class, 'd1']);
         Route::get('/operator/edit/komunitas/komunitas_sastra', [EditController::class, 'd2']);
         //EDIT KATEGORI E
+        Route::get('/operator/edit/penelitian/penelitian', [EditController::class, 'e1']);
+
+        //HAPUS KATEGORI A
+        Route::get('/operator/edit/sekretariat/anggaran', [EditController::class, 'a1']);
+        Route::get('/operator/edit/sekretariat/realisasi_anggaran/hapus/{id}', [HapusController::class, 'hapus_a2']);
+        Route::get('/operator/edit/sekretariat/kepegawaian', [EditController::class, 'a3']);
+        Route::get('/operator/edit/sekretariat/kerja_sama', [EditController::class, 'a4']);
+        Route::get('/operator/edit/sekretariat/tanah_dan_bangunan', [EditController::class, 'a5']);
+        Route::get('/operator/edit/sekretariat/perpustakaan', [EditController::class, 'a6']);
+        Route::get('/operator/edit/sekretariat/inventarisasi_bmn', [EditController::class, 'a7']);
+        //HAPUS KATEGORI B
+        Route::get('/operator/edit/kebahasaan/kamus_ensiklopedia', [EditController::class, 'b1']);
+        Route::get('/operator/edit/kebahasaan/jurnal_majalah', [EditController::class, 'b2']);
+        Route::get('/operator/edit/kebahasaan/terbitan_umum', [EditController::class, 'b3']);
+        Route::get('/operator/edit/kebahasaan/penyuluhan', [EditController::class, 'b4']);
+        Route::get('/operator/edit/kebahasaan/pesuluh', [EditController::class, 'b5']);
+        Route::get('/operator/edit/kebahasaan/penghargaan_bahasa', [EditController::class, 'b6']);
+        Route::get('/operator/edit/kebahasaan/duta_bahasa_nasional', [EditController::class, 'b7']);
+        Route::get('/operator/edit/kebahasaan/duta_bahasa_provinsi', [EditController::class, 'b8']);
+        //HAPUS KATEGORI C
+        Route::get('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa', [EditController::class, 'c1']);
+        Route::get('/operator/edit/kesastraan/penghargaan_sastra', [EditController::class, 'c2']);
+        Route::get('/operator/edit/kesastraan/musikalisasi_puisi_nasional', [EditController::class, 'c3']);
+        Route::get('/operator/edit/kesastraan/musikalisasi_puisi_provinsi', [EditController::class, 'c4']);
+        //HAPUS KATEGORI D
+        Route::get('/operator/edit/komunitas/komunitas_bahasa', [EditController::class, 'd1']);
+        Route::get('/operator/edit/komunitas/komunitas_sastra', [EditController::class, 'd2']);
+        //HAPUS KATEGORI E
         Route::get('/operator/edit/penelitian/penelitian', [EditController::class, 'e1']);
     });
 
