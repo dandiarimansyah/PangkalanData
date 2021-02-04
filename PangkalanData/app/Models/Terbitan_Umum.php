@@ -11,5 +11,5 @@ class Terbitan_Umum extends Model
 
     protected $table = "terbitan_umum";
 
-    protected $fillable = ['kategori', 'judul', 'penulis', 'no_isbn', 'tahun_terbit', 'deskripsi', 'info_produk'];
+    protected $fillable = ['kategori', 'judul', 'penulis', 'no_isbn', 'tahun_terbit', 'deskripsi', 'info_produk', 'validasi'];
 }

@@ -11,5 +11,5 @@ class Inventarisasi extends Model
 
     protected $table = "inventarisasi";
 
-    protected $fillable = ['unit', 'tahun_anggaran', 'laptop', 'komputer', 'printer', 'fotocopy', 'faximili', 'LCD', 'TV', 'lain-lain', 'furniture', 'roda_dua', 'roda_empat', 'roda_enam'];
+    protected $fillable = ['unit', 'tahun_anggaran', 'laptop', 'komputer', 'printer', 'fotocopy', 'faximili', 'LCD', 'TV', 'lain-lain', 'furniture', 'roda_dua', 'roda_empat', 'roda_enam', 'validasi'];
 }

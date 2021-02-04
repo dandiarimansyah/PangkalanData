@@ -11,5 +11,5 @@ class Anggaran extends Model
 
     protected $table = "anggaran";
 
-    protected $fillable = ['unit', 'tahun_anggaran', 'nilai_anggaran'];
+    protected $fillable = ['unit', 'tahun_anggaran', 'nilai_anggaran', 'validasi'];
 }

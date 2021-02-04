@@ -11,5 +11,5 @@ class Penelitian extends Model
 
     protected $table = "penelitian";
 
-    protected $fillable = ['kategori', 'unit', 'peneliti', 'judul', 'kerja_sama', 'tanggal_awal', 'tanggal_akhir', 'lama_penelitian', 'publikasi', 'tahun_terbit', 'abstrak', 'file'];
+    protected $fillable = ['kategori', 'unit', 'peneliti', 'judul', 'kerja_sama', 'tanggal_awal', 'tanggal_akhir', 'lama_penelitian', 'publikasi', 'tahun_terbit', 'abstrak', 'file', 'validasi'];
 }

@@ -11,5 +11,5 @@ class Bengkel_Sastra_Dan_Bahasa extends Model
 
     protected $table = "bengkel_sastra_dan_bahasa";
 
-    protected $fillable = ['provinsi', 'kabupaten/kota', 'nama_kegiatan', 'tanggal_awal_pelaksaaan', 'tanggal_akhir_pelaksaaan', 'pemateri', 'jumlah_peserta', 'jumlah_sekolah', 'jumlah_sekolah_yang_dibina', 'nama_sekolah_yang_dibina', 'aktivitas'];
+    protected $fillable = ['provinsi', 'kabupaten/kota', 'nama_kegiatan', 'tanggal_awal_pelaksaaan', 'tanggal_akhir_pelaksaaan', 'pemateri', 'jumlah_peserta', 'jumlah_sekolah', 'jumlah_sekolah_yang_dibina', 'nama_sekolah_yang_dibina', 'aktivitas', 'validasi'];
 }

@@ -11,5 +11,5 @@ class Musikalisasi_Puisi_Nasional extends Model
 
     protected $table = "musikalisasi_puisi_nasional";
 
-    protected $fillable = ['tahun', 'pemenang_1', 'pemenang_2', 'pemenang_3', 'favorit', 'keterangan'];
+    protected $fillable = ['tahun', 'pemenang_1', 'pemenang_2', 'pemenang_3', 'favorit', 'keterangan', 'validasi'];
 }

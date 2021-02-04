@@ -10,5 +10,5 @@ class Pesuluh extends Model
     use HasFactory;
     protected $table = "pesuluh";
 
-    protected $fillable = ['nama', 'tempat_lahir', 'tanggal_lahir', 'instansi', 'tingkat'];
+    protected $fillable = ['nama', 'tempat_lahir', 'tanggal_lahir', 'instansi', 'tingkat', 'validasi'];
 }

@@ -11,5 +11,5 @@ class Musikalisasi_Puisi_Provinsi extends Model
 
     protected $table = "musikalisasi_puisi_provinsi";
 
-    protected $fillable = ['provinsi', 'tahun', 'pemenang_1', 'pemenang_2', 'pemenang_3', 'favorit', 'keterangan'];
+    protected $fillable = ['provinsi', 'tahun', 'pemenang_1', 'pemenang_2', 'pemenang_3', 'favorit', 'keterangan', 'validasi'];
 }
