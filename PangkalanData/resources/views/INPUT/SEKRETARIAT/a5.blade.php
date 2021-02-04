@@ -39,7 +39,7 @@
           <label>Status Tanah</label>
 
           <input type="radio" id="Milik_Sendiri/Kemendikbud" name="status_tanah" value="Milik Sendiri/Kemendikbud">
-          <label for="Milik Sendiri/Kemendikbud">Miik Sendiri/Kemendikbud</label><br>
+          <label for="Milik Sendiri/Kemendikbud">Miik Sendiri/ Kemendikbud</label><br>
 
           <input type="radio" id="Milik_Pemda" name="status_tanah" value="Milik Pemda">
           <label for="Milik Pemda">Milik Pemda</label><br>
@@ -72,7 +72,7 @@
           <label>Status Bangunan</label>
 
           <input type="radio" id="Milik_Sendiri/Kemendikbud_2" name="status_tanah" value="Milik Sendiri/Kemendikbud">
-          <label for="Milik Sendiri/Kemendikbud">Miik Sendiri/Kemendikbud</label><br>
+          <label for="Milik Sendiri/Kemendikbud">Miik Sendiri/ Kemendikbud</label><br>
 
           <input type="radio" id="Milik_Pemda_2" name="status_tanah" value="Milik Pemda">
           <label for="Milik Pemda">Milik Pemda</label><br>
