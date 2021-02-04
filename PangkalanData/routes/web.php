@@ -178,32 +178,32 @@ Route::group(['middleware' => ['auth']], function () {
         Route::put('/operator/edit/penelitian/penelitian/{id}', [EditController::class, 'update_e1']);
 
         //HAPUS KATEGORI A
-        Route::get('/operator/edit/sekretariat/anggaran', [EditController::class, 'a1']);
+        Route::get('/operator/edit/sekretariat/anggaran/hapus/{id}', [HapusController::class, 'hapus_a1']);
         Route::get('/operator/edit/sekretariat/realisasi_anggaran/hapus/{id}', [HapusController::class, 'hapus_a2']);
-        Route::get('/operator/edit/sekretariat/kepegawaian', [EditController::class, 'a3']);
-        Route::get('/operator/edit/sekretariat/kerja_sama', [EditController::class, 'a4']);
-        Route::get('/operator/edit/sekretariat/tanah_dan_bangunan', [EditController::class, 'a5']);
-        Route::get('/operator/edit/sekretariat/perpustakaan', [EditController::class, 'a6']);
-        Route::get('/operator/edit/sekretariat/inventarisasi_bmn', [EditController::class, 'a7']);
+        Route::get('/operator/edit/sekretariat/kepegawaian/hapus/{id}', [HapusController::class, 'hapus_a3']);
+        Route::get('/operator/edit/sekretariat/kerja_sama/hapus/{id}', [HapusController::class, 'hapus_a4']);
+        Route::get('/operator/edit/sekretariat/tanah_dan_bangunan/hapus/{id}', [HapusController::class, 'hapus_a5']);
+        Route::get('/operator/edit/sekretariat/perpustakaan/hapus/{id}', [HapusController::class, 'hapus_a6']);
+        Route::get('/operator/edit/sekretariat/inventarisasi_bmn/hapus/{id}', [HapusController::class, 'hapus_a7']);
         //HAPUS KATEGORI B
-        Route::get('/operator/edit/kebahasaan/kamus_ensiklopedia', [EditController::class, 'b1']);
-        Route::get('/operator/edit/kebahasaan/jurnal_majalah', [EditController::class, 'b2']);
-        Route::get('/operator/edit/kebahasaan/terbitan_umum', [EditController::class, 'b3']);
-        Route::get('/operator/edit/kebahasaan/penyuluhan', [EditController::class, 'b4']);
-        Route::get('/operator/edit/kebahasaan/pesuluh', [EditController::class, 'b5']);
-        Route::get('/operator/edit/kebahasaan/penghargaan_bahasa', [EditController::class, 'b6']);
-        Route::get('/operator/edit/kebahasaan/duta_bahasa_nasional', [EditController::class, 'b7']);
-        Route::get('/operator/edit/kebahasaan/duta_bahasa_provinsi', [EditController::class, 'b8']);
+        Route::get('/operator/edit/kebahasaan/kamus_ensiklopedia/hapus/{id}', [HapusController::class, 'hapus_b1']);
+        Route::get('/operator/edit/kebahasaan/jurnal_majalah/hapus/{id}', [HapusController::class, 'hapus_b2']);
+        Route::get('/operator/edit/kebahasaan/terbitan_umum/hapus/{id}', [HapusController::class, 'hapus_b3']);
+        Route::get('/operator/edit/kebahasaan/penyuluhan/hapus/{id}', [HapusController::class, 'hapus_b4']);
+        Route::get('/operator/edit/kebahasaan/pesuluh/hapus/{id}', [HapusController::class, 'hapus_b5']);
+        Route::get('/operator/edit/kebahasaan/penghargaan_bahasa/hapus/{id}', [HapusController::class, 'hapus_b6']);
+        Route::get('/operator/edit/kebahasaan/duta_bahasa_nasional/hapus/{id}', [HapusController::class, 'hapus_b7']);
+        Route::get('/operator/edit/kebahasaan/duta_bahasa_provinsi/hapus/{id}', [HapusController::class, 'hapus_b8']);
         //HAPUS KATEGORI C
-        Route::get('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa', [EditController::class, 'c1']);
-        Route::get('/operator/edit/kesastraan/penghargaan_sastra', [EditController::class, 'c2']);
-        Route::get('/operator/edit/kesastraan/musikalisasi_puisi_nasional', [EditController::class, 'c3']);
-        Route::get('/operator/edit/kesastraan/musikalisasi_puisi_provinsi', [EditController::class, 'c4']);
+        Route::get('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa/hapus/{id}', [HapusController::class, 'hapus_c1']);
+        Route::get('/operator/edit/kesastraan/penghargaan_sastra/hapus/{id}', [HapusController::class, 'hapus_c2']);
+        Route::get('/operator/edit/kesastraan/musikalisasi_puisi_nasional/hapus/{id}', [HapusController::class, 'hapus_c3']);
+        Route::get('/operator/edit/kesastraan/musikalisasi_puisi_provinsi/hapus/{id}', [HapusController::class, 'hapus_c4']);
         //HAPUS KATEGORI D
-        Route::get('/operator/edit/komunitas/komunitas_bahasa', [EditController::class, 'd1']);
-        Route::get('/operator/edit/komunitas/komunitas_sastra', [EditController::class, 'd2']);
+        Route::get('/operator/edit/komunitas/komunitas_bahasa/hapus/{id}', [HapusController::class, 'hapus_d1']);
+        Route::get('/operator/edit/komunitas/komunitas_sastra/hapus/{id}', [HapusController::class, 'hapus_d2']);
         //HAPUS KATEGORI E
-        Route::get('/operator/edit/penelitian/penelitian', [EditController::class, 'e1']);
+        Route::get('/operator/edit/penelitian/penelitian/hapus/{id}', [HapusController::class, 'hapus_e1']);
     });
 
     //VALIDATOR

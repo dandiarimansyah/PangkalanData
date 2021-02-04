@@ -28,6 +28,16 @@ use App\Models\Terbitan_Umum;
 
 class HapusController extends Controller
 {
+    public function hapus_a1($id)
+    {
+        $data = Anggaran::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Dihapus!');
+    }
+
     public function hapus_a2($id)
     {
         $data = Realisasi_Anggaran::find($id);
@@ -36,5 +46,205 @@ class HapusController extends Controller
         }
 
         return redirect('/operator/edit/sekretariat/realisasi_anggaran')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_a3($id)
+    {
+        $data = Kepegawaian::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/sekretariat/kepegawaian')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_a4($id)
+    {
+        $data = Kerja_Sama::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/sekretariat/kerja_sama')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_a5($id)
+    {
+        $data = Tanah_Dan_Bangunan::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/sekretariat/tanah_dan_bangunan')->with('success', 'Data Berhasil Dihapus!');
+    }
+    
+    public function hapus_a6($id)
+    {
+        $data = Perpustakaan::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/sekretariat/perpustakaan')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_a7($id)
+    {
+        $data = Inventarisasi_Bmn::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/sekretariat/inventarisasi_bmn')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_b1($id)
+    {
+        $data = Kamus_Ensiklopedia::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kebahasaan/kamus_ensiklopedia')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_b2($id)
+    {
+        $data = Jurnal_Majalah::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_b3($id)
+    {
+        $data = Terbitan_Umum::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kebahasaan/terbitan_umum')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_b4($id)
+    {
+        $data = Penyuluhan::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kebahasaan/penyuluhan')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_b5($id)
+    {
+        $data = Pesuluh::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kebahasaan/pesuluh')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_b6($id)
+    {
+        $data = Penghargaan_Bahasa::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kebahasaan/penghargaan_bahasa')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_b7($id)
+    {
+        $data = Duta_Bahasa_Nasional::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_nasional')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_b8($id)
+    {
+        $data = Duta_Bahasa_Provinsi::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_c1($id)
+    {
+        $data = Bengkel_Sastra_Dan_Bahasa::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_c2($id)
+    {
+        $data = Penghargaan_Sastra::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kesastraan/penghargaan_sastra')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_c3($id)
+    {
+        $data = Musikalisasi_Puisi_Nasional::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_nasional')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_c4($id)
+    {
+        $data = Musikalisasi_Puisi_Provinsi::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_provinsi')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_d1($id)
+    {
+        $data = Komunitas_Bahasa::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/komunitas/komunitas_bahasa')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_d2($id)
+    {
+        $data = Komunitas_Sastra::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/komunitas/komunitas_sastra')->with('success', 'Data Berhasil Dihapus!');
+    }
+
+    public function hapus_e1($id)
+    {
+        $data = Penelitian::find($id);
+        if ($data) {
+            $data->delete();
+        }
+
+        return redirect('/operator/edit/penelitian/penelitian')->with('success', 'Data Berhasil Dihapus!');
     }
 }
