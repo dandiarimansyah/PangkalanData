@@ -11,4 +11,9 @@ class Pesuluh extends Model
     protected $table = "pesuluh";
 
     protected $fillable = ['nama', 'tempat_lahir', 'tanggal_lahir', 'instansi', 'tingkat', 'validasi'];
+
+    public function penyuluhan()
+    {
+        return $this->belongsTo(Penyuluhan::class, 'id_penyuluhan', 'id');
+    }
 }
