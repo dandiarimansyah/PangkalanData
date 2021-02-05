@@ -4,6 +4,8 @@
 
 @include('PARTIAL.MenuValidasi')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>VALIDASI DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
     </div>
@@ -95,6 +97,7 @@
 
     </div>
 
-    
+</div>
+
 
 @endsection

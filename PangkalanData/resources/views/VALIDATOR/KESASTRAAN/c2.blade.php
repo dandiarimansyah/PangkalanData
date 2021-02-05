@@ -4,6 +4,8 @@
 
 @include('PARTIAL.MenuValidasi')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>VALIDASI DATA PENGHARGAAN SATRA</th>
     </div>
@@ -100,6 +102,6 @@ Nomine: Thomas Haryanto Sukiran dan Eko Tunas</td>
 
     </div>
 
-    
+</div>
 
 @endsection

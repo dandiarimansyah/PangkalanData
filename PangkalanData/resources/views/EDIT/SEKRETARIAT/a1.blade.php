@@ -33,7 +33,7 @@
                         <td>{{ $a -> nilai_anggaran}}</td>
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty

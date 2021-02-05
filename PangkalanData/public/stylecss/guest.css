@@ -12,8 +12,14 @@ body {
 }
 
 .aktif a {
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid rgb(255, 255, 81);
     border-radius: 13px;
+    font-weight: 600;
+    color: rgb(255, 255, 81);
+}
+
+.nonaktif a {
+    font-weight: 600;
 }
 
 nav {

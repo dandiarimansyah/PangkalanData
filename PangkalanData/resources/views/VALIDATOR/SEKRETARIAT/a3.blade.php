@@ -4,6 +4,8 @@
 
 @include('PARTIAL.MenuValidasi')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>VALIDASI DATA KEPEGAWAIAN UNIT/SATUAN KERJA</th>
     </div>
@@ -152,5 +154,8 @@
         </table>
 
     </div>
+
+</div>
+
 
 @endsection

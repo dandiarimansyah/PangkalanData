@@ -20,6 +20,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('sweetalert2/sweetalert2.min.css') }}">
+
     </head>
 
     <body>
@@ -37,17 +40,17 @@
             <ul>
                 @auth
                     @if (auth()->user()->level == 'operator')
-                        <li class="{{ (request()->is('operator/input*')) ? 'aktif' : '' }}"><a href="/operator/input">INPUT</a></li>    
-                        <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : '' }}"><a href="/operator/edit">EDIT</a></li>
+                        <li class="{{ (request()->is('operator/input*')) ? 'aktif' : 'nonaktif' }}"><a href="/operator/input">INPUT</a></li>    
+                        <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : 'nonaktif' }}"><a href="/operator/edit">EDIT</a></li>
                     @elseif (auth()->user()->level == 'validator')
-                        <li class="{{ (request()->is('validator*')) ? 'aktif' : '' }}"><a href="/validator/validasi">VALIDASI</a></li>
+                        <li class="{{ (request()->is('validator*')) ? 'aktif' : 'nonaktif' }}"><a href="/validator/validasi">VALIDASI</a></li>
                     @else
                         <li class="{{ (request()->is('data*')) ? 'aktif' : '' }}"><a href="/data">DATA</a></li>
                     @endif
-                    <li class="{{ (request()->is('media*')) ? 'aktif' : '' }}"><a href="/media">MEDIA</a></li>
-                    <li class="{{ (request()->is('laporan*')) ? 'aktif' : '' }}"><a href="/laporan">LAPORAN</a></li>
-                    <li class="{{ (request()->is('grafik*')) ? 'aktif' : '' }}"><a href="/grafik">GRAFIK</a></li>
-                    <li class="{{ (request()->is('forum*')) ? 'aktif' : '' }}"><a href="/forum">FORUM</a></li>
+                    <li class="{{ (request()->is('media*')) ? 'aktif' : 'nonaktif' }}"><a href="/media">MEDIA</a></li>
+                    <li class="{{ (request()->is('laporan*')) ? 'aktif' : 'nonaktif' }}"><a href="/laporan">LAPORAN</a></li>
+                    <li class="{{ (request()->is('grafik*')) ? 'aktif' : 'nonaktif' }}"><a href="/grafik">GRAFIK</a></li>
+                    <li class="{{ (request()->is('forum*')) ? 'aktif' : 'nonaktif' }}"><a href="/forum">FORUM</a></li>
                     <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
                 @endauth
             </ul>
@@ -84,6 +87,10 @@
             <h5>Pos-el: balaibahasa.jateng@kemdikbud.go.id</h5>
         </footer>
         
+        @include('sweetalert::alert')
+
+        <script src="{{ asset('sweetalert2/sweetalert2.min.js')}}"></script>
+
         <script type="text/javascript">
             $('.icon').click(function(){
             $('span').toggleClass("cancel");
@@ -102,17 +109,38 @@
                 }
             }
 
-            function konfirmasi(){
-                var tanya = confirm("Apakah Anda Yakin Menghapus Data ini?");
+            // function konfirmasi(){
+            //     var tanya = confirm("Apakah Anda Yakin Menghapus Data ini?");
         
-                if(tanya === true) {
-                    return true;
-                }else{
-                    return false;
-                }
+            //     if(tanya === true) {
+            //         return true;
+            //     }else{
+            //         return false;
+            //     }
         
-                document.getElementById("pesan");
-            }
+            //     document.getElementById("pesan");
+            // }
+
+            $(document).on('click', '#pesan', function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+                
+                Swal.fire({
+                    title: 'Yakin Dihapus?',
+                    text: "Data akan dihapus!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    cancelButtonText: 'Batal',
+                    confirmButtonText: 'Hapus',
+                    reverseButtons: true
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = link;
+                    }
+                })
+            })
 
             function jenis_lain(val){
                 var element=document.getElementById('jenis_buku_2');

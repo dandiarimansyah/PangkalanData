@@ -4,6 +4,8 @@
 
 @include('PARTIAL.MenuValidasi')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>VALIDASI DATA DUTA BAHASA NASIONAL</th>
     </div>
@@ -82,6 +84,6 @@
 
     </div>
 
-    
+</div>
 
 @endsection

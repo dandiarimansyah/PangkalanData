@@ -35,7 +35,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/sekretariat/anggaran')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_a2($id)
@@ -45,7 +45,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/sekretariat/realisasi_anggaran')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/sekretariat/realisasi_anggaran')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_a3($id)
@@ -55,7 +55,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/sekretariat/kepegawaian')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/sekretariat/kepegawaian')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_a4($id)
@@ -65,7 +65,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/sekretariat/kerja_sama')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/sekretariat/kerja_sama')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_a5($id)
@@ -75,9 +75,9 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/sekretariat/tanah_dan_bangunan')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/sekretariat/tanah_dan_bangunan')->with('toast_success', 'Data Berhasil Dihapus!');
     }
-    
+
     public function hapus_a6($id)
     {
         $data = Perpustakaan::find($id);
@@ -85,7 +85,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/sekretariat/perpustakaan')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/sekretariat/perpustakaan')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_a7($id)
@@ -95,7 +95,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/sekretariat/inventarisasi_bmn')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/sekretariat/inventarisasi_bmn')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_b1($id)
@@ -105,7 +105,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kebahasaan/kamus_ensiklopedia')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kebahasaan/kamus_ensiklopedia')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_b2($id)
@@ -115,7 +115,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_b3($id)
@@ -125,7 +125,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kebahasaan/terbitan_umum')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kebahasaan/terbitan_umum')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_b4($id)
@@ -135,7 +135,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kebahasaan/penyuluhan')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kebahasaan/penyuluhan')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_b5($id)
@@ -145,7 +145,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kebahasaan/pesuluh')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kebahasaan/pesuluh')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_b6($id)
@@ -155,7 +155,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kebahasaan/penghargaan_bahasa')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kebahasaan/penghargaan_bahasa')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_b7($id)
@@ -165,7 +165,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kebahasaan/duta_bahasa_nasional')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_nasional')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_b8($id)
@@ -175,7 +175,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_c1($id)
@@ -185,7 +185,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_c2($id)
@@ -195,7 +195,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kesastraan/penghargaan_sastra')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kesastraan/penghargaan_sastra')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_c3($id)
@@ -205,7 +205,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_nasional')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_nasional')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_c4($id)
@@ -215,7 +215,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_provinsi')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_provinsi')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_d1($id)
@@ -225,7 +225,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/komunitas/komunitas_bahasa')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/komunitas/komunitas_bahasa')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_d2($id)
@@ -235,7 +235,7 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/komunitas/komunitas_sastra')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/komunitas/komunitas_sastra')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 
     public function hapus_e1($id)
@@ -245,6 +245,6 @@ class HapusController extends Controller
             $data->delete();
         }
 
-        return redirect('/operator/edit/penelitian/penelitian')->with('success', 'Data Berhasil Dihapus!');
+        return redirect('/operator/edit/penelitian/penelitian')->with('toast_success', 'Data Berhasil Dihapus!');
     }
 }

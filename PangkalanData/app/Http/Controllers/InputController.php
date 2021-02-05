@@ -150,7 +150,7 @@ class InputController extends Controller
         $data->nilai_anggaran = $request->nilai_anggaran;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/sekretariat/anggaran')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_a2(Request $request)
@@ -167,7 +167,7 @@ class InputController extends Controller
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/realisasi_anggaran')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/sekretariat/realisasi_anggaran')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_a3(Request $request)
@@ -209,7 +209,7 @@ class InputController extends Controller
         $data->T_1A = $request->T_1A;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/kepegawaian')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/sekretariat/kepegawaian')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_a4(Request $request)
@@ -234,7 +234,7 @@ class InputController extends Controller
         $data->instansi_2 = $request->instansi_2;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/kerja_sama')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/sekretariat/kerja_sama')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_a5(Request $request)
@@ -255,7 +255,7 @@ class InputController extends Controller
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/tanah_dan_bangunan')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/sekretariat/tanah_dan_bangunan')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_a6(Request $request)
@@ -280,7 +280,7 @@ class InputController extends Controller
         $data->sumber_data = $request->sumber_data;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/perpustakaan')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/sekretariat/perpustakaan')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_a7(Request $request)
@@ -307,7 +307,7 @@ class InputController extends Controller
         $data->roda_enam = $request->roda_enam;
         $data->save();
 
-        return redirect('/operator/edit/sekretariat/inventarisasi_bmn')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/sekretariat/inventarisasi_bmn')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     // BACKEND B
@@ -333,7 +333,7 @@ class InputController extends Controller
         $data->info_produk = $request->info_produk;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/kamus_ensiklopedia')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kebahasaan/kamus_ensiklopedia')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_b2(Request $request)
@@ -358,7 +358,7 @@ class InputController extends Controller
         $data->info_produk = $request->info_produk;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kebahasaan/jurnal_majalah')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_b3(Request $request)
@@ -378,7 +378,7 @@ class InputController extends Controller
         $data->info_produk = $request->info_produk;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/terbitan_umum')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kebahasaan/terbitan_umum')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_b4(Request $request)
@@ -400,7 +400,7 @@ class InputController extends Controller
         $data->materi = $request->materi;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/penyuluhan')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kebahasaan/penyuluhan')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_b5(Request $request, $id)
@@ -422,7 +422,7 @@ class InputController extends Controller
         $data->id_penyuluhan = $penyuluhan->id;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/pesuluh')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kebahasaan/pesuluh')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_b6(Request $request)
@@ -437,7 +437,7 @@ class InputController extends Controller
         $data->deskripsi = $request->deskripsi;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/penghargaan_bahasa')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kebahasaan/penghargaan_bahasa')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_b7(Request $request)
@@ -458,7 +458,7 @@ class InputController extends Controller
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/duta_bahasa_nasional')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kebahasaan/duta_bahasa_nasional')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_b8(Request $request)
@@ -481,7 +481,7 @@ class InputController extends Controller
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kebahasaan/duta_bahasa_provinsi')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_c1(Request $request)
@@ -505,7 +505,7 @@ class InputController extends Controller
         $data->aktivitas = $request->aktivitas;
         $data->save();
 
-        return redirect('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kesastraan/bengkel_sastra_dan_bahasa')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_c2(Request $request)
@@ -520,7 +520,7 @@ class InputController extends Controller
         $data->deskripsi = $request->deskripsi;
         $data->save();
 
-        return redirect('/operator/edit/kesastraan/penghargaan_sastra')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kesastraan/penghargaan_sastra')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_c3(Request $request)
@@ -538,7 +538,7 @@ class InputController extends Controller
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_nasional')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kesastraan/musikalisasi_puisi_nasional')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_c4(Request $request)
@@ -557,7 +557,7 @@ class InputController extends Controller
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_provinsi')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/kesastraan/musikalisasi_puisi_provinsi')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_d1(Request $request)
@@ -578,7 +578,7 @@ class InputController extends Controller
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/komunitas/komunitas_bahasa')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/komunitas/komunitas_bahasa')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_d2(Request $request)
@@ -599,7 +599,7 @@ class InputController extends Controller
         $data->keterangan = $request->keterangan;
         $data->save();
 
-        return redirect('/operator/edit/komunitas/komunitas_sastra')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/komunitas/komunitas_sastra')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     public function store_e1(Request $request)
@@ -627,6 +627,6 @@ class InputController extends Controller
         $data->media = $request->media;
         $data->save();
 
-        return redirect('/operator/edit/penelitian/penelitian')->with('success', 'Data Berhasil Ditambahkan!');
+        return redirect('/operator/input/penelitian/penelitian')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 }
