@@ -60,8 +60,7 @@ nav ul li a:hover {
 }
 
 .show,
-.icon,
-input {
+.icon {
     display: none;
 }
 .fa-plus {
@@ -163,7 +162,7 @@ p {
 }
 
 .footer {
-    margin-top: 30px;
+    margin-top: 15px;
     width: 100%;
     padding: 10px 0 10px 0;
     text-align: center;
@@ -184,6 +183,12 @@ p {
     margin-top: 10px;
 }
 
+.tombol-kembali {
+    margin-left: 10px;
+    position: absolute;
+    top: 140px;
+}
+
 .menu {
     display: flex;
 }
@@ -200,14 +205,16 @@ p {
 }
 
 .dalam-konten {
-    min-height: 74vh;
+    min-height: 78vh;
     margin: 0;
 }
 
 .isi-konten {
-    border: 1px solid rgb(78, 78, 78);
-    margin: 10px;
+    border: 2px solid rgb(0, 62, 112);
+    margin: 15px;
     margin-top: 15px;
+    border-radius: 5px;
+    min-height: 70vh;
 }
 
 /* CSS TABLE */

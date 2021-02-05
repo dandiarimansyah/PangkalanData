@@ -100,8 +100,9 @@ class EditController extends Controller
     public function b5()
     {
         $pesuluh = Pesuluh::all();
+        $penyuluhan = Penyuluhan::all();
 
-        return view('EDIT.KEBAHASAAN.b5', compact('pesuluh'));
+        return view('EDIT.KEBAHASAAN.b5', compact('pesuluh', 'penyuluhan'));
     }
     public function b6()
     {

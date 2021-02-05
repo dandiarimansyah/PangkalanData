@@ -7,7 +7,7 @@
 <div class="isi-konten">
 
     <div class="judul">
-        <th>EDIT DATA PESULUH</th>
+        <th>EDIT DATA PENGHARGAAN BAHASA</th>
     </div>
 
     <!-- TABLE -->
@@ -16,46 +16,35 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>PROVINSI</th>
-                    <th>KABUPATEN/KOTA</th>
-                    <th>KEGIATAN</th>
+                    <th>KATEGORI</th>
                     <th>TAHUN</th>
-                    <th>NAMA</th>
-                    <th>TEMPAT LAHIR</th>
-                    <th>TGL LAHIR</th>
-                    <th>INSTANSI</th>
-                    <th>TINGKAT</th>
+                    <th>DESKRIPSI</th>
                     <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
 
             <tbody>
 
-                @forelse ($pesuluh as $key => $a)
+                @forelse ($penghargaan_bahasa as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        {{-- <td>{{ $a -> $penyluhan -> provinsi}}</td> --}}
-                        {{-- <td>{{ $a -> $penyluhan -> kota}}</td> --}}
-                        {{-- <td>{{ $a -> $penyluhan -> nama_kegiatan}}</td> --}}
-                        <td>Tahun</td>
-                        <td>{{ $a -> nama}}</td>
-                        <td>{{ $a -> tempat_lahir}}</td>
-                        <td>{{ $a -> tanggal_lahir}}</td>
-                        <td>{{ $a -> instansi}}</td>
-                        <td>{{ $a -> tingkat}}</td>
-                        
+                        <td>{{ $a -> kategori}}</td>
+                        <td>{{ $a -> tahun}}</td>
+                        <td>{{ $a -> deskripsi}}</td>
+
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/pesuluh/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/penghargaan_bahasa/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="11" align="center">Tidak ada Data</td>
+                        <td colspan="16" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 
             </tbody>
+
 
         </table>
 
@@ -75,7 +64,28 @@
                     <div class="form">
                 <form>
                     
-                   <!-- INPUT HERE   -->
+                    <div class="inputfield-select">
+                        <label>Kategori*</label>
+                        <div class="custom_select">
+                        <select>
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="">Anugerah Toko Kebahasaan</option>
+                            <option value="">Adibahasa</option>
+                            <option value="">Taruna Bahasa</option>
+                            <option value="">Wajah Bahasa</option>
+                        </select>
+                        </div>
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Tahun</label>
+                        <input type="text" class="input">
+                    </div> 
+
+                    <div class="inputfield">
+                        <label>Deskripsi</label>
+                        <textarea class="textarea"></textarea>
+                    </div>  
 
                 </form>
             </div>
@@ -88,6 +98,8 @@
           </div>
         </div>
       </div>
+    
+
     
 
 @endsection

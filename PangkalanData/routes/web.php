@@ -44,6 +44,34 @@ Route::group(['middleware' => ['auth']], function () {
     //GUEST
     Route::group(['middleware' => ['AkunLoginMiddleware:tamu']], function () {
         Route::get('/', [GuestController::class, 'index']);
+
+        //DATA KATEGORI A
+        Route::get('/tamu/sekretariat/anggaran', [GuestController::class, 'a1']);
+        Route::get('/tamu/sekretariat/realisasi_anggaran', [GuestController::class, 'a2']);
+        Route::get('/tamu/sekretariat/kepegawaian', [GuestController::class, 'a3']);
+        Route::get('/tamu/sekretariat/kerja_sama', [GuestController::class, 'a4']);
+        Route::get('/tamu/sekretariat/tanah_dan_bangunan', [GuestController::class, 'a5']);
+        Route::get('/tamu/sekretariat/perpustakaan', [GuestController::class, 'a6']);
+        Route::get('/tamu/sekretariat/inventarisasi_bmn', [GuestController::class, 'a7']);
+        //DATA KATEGORI B
+        Route::get('/tamu/kebahasaan/kamus_ensiklopedia', [GuestController::class, 'b1']);
+        Route::get('/tamu/kebahasaan/jurnal_majalah', [GuestController::class, 'b2']);
+        Route::get('/tamu/kebahasaan/terbitan_umum', [GuestController::class, 'b3']);
+        Route::get('/tamu/kebahasaan/penyuluhan', [GuestController::class, 'b4']);
+        Route::get('/tamu/kebahasaan/pesuluh', [GuestController::class, 'b5']);
+        Route::get('/tamu/kebahasaan/penghargaan_bahasa', [GuestController::class, 'b6']);
+        Route::get('/tamu/kebahasaan/duta_bahasa_nasional', [GuestController::class, 'b7']);
+        Route::get('/tamu/kebahasaan/duta_bahasa_provinsi', [GuestController::class, 'b8']);
+        //DATA KATEGORI C
+        Route::get('/tamu/kesastraan/bengkel_sastra_dan_bahasa', [GuestController::class, 'c1']);
+        Route::get('/tamu/kesastraan/penghargaan_sastra', [GuestController::class, 'c2']);
+        Route::get('/tamu/kesastraan/musikalisasi_puisi_nasional', [GuestController::class, 'c3']);
+        Route::get('/tamu/kesastraan/musikalisasi_puisi_provinsi', [GuestController::class, 'c4']);
+        //DATA KATEGORI D
+        Route::get('/tamu/komunitas/komunitas_bahasa', [GuestController::class, 'd1']);
+        Route::get('/tamu/komunitas/komunitas_sastra', [GuestController::class, 'd2']);
+        //DATA KATEGORI E
+        Route::get('/tamu/penelitian/penelitian', [GuestController::class, 'e1']);
     });
 
 
@@ -89,7 +117,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/operator/input/kebahasaan/penyuluhan', [InputController::class, 'store_b4']);
 
         Route::get('/operator/input/kebahasaan/pesuluh', [InputController::class, 'b5']);
-        Route::post('/operator/input/kebahasaan/pesuluh', [InputController::class, 'store_b5']);
+        Route::get('/operator/input/kebahasaan/pesuluh/{id}', [InputController::class, 'pilih_b5']);
+        Route::post('/operator/input/kebahasaan/pesuluh/{id}', [InputController::class, 'store_b5']);
 
         Route::get('/operator/input/kebahasaan/penghargaan_bahasa', [InputController::class, 'b6']);
         Route::post('/operator/input/kebahasaan/penghargaan_bahasa', [InputController::class, 'store_b6']);

@@ -78,7 +78,15 @@ class InputController extends Controller
     }
     public function b5()
     {
-        return view('INPUT.KEBAHASAAN.b5');
+        $penyuluhan = Penyuluhan::all();
+
+        return view('INPUT.KEBAHASAAN.b5', compact('penyuluhan'));
+    }
+    public function pilih_b5($id)
+    {
+        $penyuluhan = Penyuluhan::find($id);
+
+        return view('INPUT.KEBAHASAAN.b5_pilih', compact('penyuluhan'));
     }
     public function b6()
     {
@@ -398,7 +406,7 @@ class InputController extends Controller
     public function store_b5(Request $request, $id)
     {
 
-        $pesuluh = Pesuluh::find($id);
+        $penyuluhan = Penyuluhan::find($id);
 
         $request->validate([
             'nama' => ['required'],
@@ -411,7 +419,7 @@ class InputController extends Controller
         $data->instansi = $request->instansi;
         $data->tingkat = $request->tingkat;
 
-        $data->id_penyuluhan = $pesuluh->id;
+        $data->id_penyuluhan = $penyuluhan->id;
         $data->save();
 
         return redirect('/operator/edit/kebahasaan/pesuluh')->with('success', 'Data Berhasil Ditambahkan!');
