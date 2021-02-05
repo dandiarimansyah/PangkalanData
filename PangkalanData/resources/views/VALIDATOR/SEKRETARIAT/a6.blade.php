@@ -42,8 +42,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>KOREKSI</th>
-                    <th>VALIDASI</th>
                     <th>TANGGAL DIPERBAHARUI</th>
                     <th>PROVINSI</th>
                     <th>UNIT KERJA</th>
@@ -52,37 +50,41 @@
                     <th>JENIS</th>
                     <th>JUMLAH PENGUNJUNG</th>
                     <th>SUMBER DATA</th>
+                    <th>EDIT</th>
+                    <th>VALIDASI</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($perpustakaan as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td></td>
+                        <td>{{ $a -> provinsi}}</td>
+                        <td>{{ $a -> unit}}</td>
+                        <td>{{ $a -> jumlah_buku}}</td>
+                        <td>{{ $a -> jumlah_judul}}</td>
+                        <td>{{ $a -> jenis_buku}}</td>
+                        <td>{{ $a -> jumlah_pengunjung}}</td>
+                        <td>{{ $a -> sumber_data}}</td>
+
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        </td>
+                        <td>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Validasi</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+           
+
         </table>
 
     </div>

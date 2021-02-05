@@ -42,8 +42,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
                     <th>KATEGORI</th>
                     <th>JUDUL</th>
                     <th>PENULIS</th>
@@ -53,39 +51,42 @@
                     <th>UNIT/SATKER</th>
                     <th>INFO PRODUK</th>
                     <th>MEDIA</th>
+                    <th>EDIT</th>
+                    <th>VALIDASI</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($terbitan_umum as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> kategori}}</td>
+                        <td>{{ $a -> judul}}</td>
+                        <td>{{ $a -> penulis}}</td>
+                        <td>{{ $a -> no_isbn}}</td>
+                        <td>{{ $a -> tahun_terbit}}</td>
+                        <td>{{ $a -> deskripsi}}</td>
+                        <td>{{ $a -> info_produk}}</td>
+                        <td></td>
+                        <td></td>
+                        
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        </td>
+                        <td>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Validasi</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+          
+
         </table>
 
     </div>

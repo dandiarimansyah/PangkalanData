@@ -42,8 +42,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
                     <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
@@ -53,43 +51,41 @@
                     <th>JUMLAH</th>
                     <th>MATERI</th>
                     <th>MEDIA</th>
+                    <th>EDIT</th>
+                    <th>VALIDASI</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>Jawa Tengah</td>
-                    <td>Kabupaten Klaten</td>
-                    <td>16-10-2019 - 03-11-2020</td>
-                    <td>Penyuluhan Penggunaan Bahasa Media Massa Kabupaten Klaten</td>
-                    <td>1. Drs. Jaka Suwandi, M.M. ; 2. Dr. Tirto Suwondo, M.Hum. ;3. Shintya, M.S.</td>
-                    <td>Pejabat struktural di lingkungan Pemerintah Daerah Kabupaten Klaten</td>
-                    <td>40 Orang</td>
-                    <td>
-                        1. Kebijakan Pemerintah Kabupaten Klaten dalam Penggunaan Bahasa Indonesia di Kabupaten Klaten
-                        2. Pemaparan Rekomendasi Penggunaan Bahasa Media Massa di Kabupaten Klaten
-                        3. Sosialisasi Hasil Pemantauan Penggunaan Bahasa Media Massa di Kabupaten Klaten
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($penyuluhan as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> provinsi}}</td>
+                        <td>{{ $a -> kota}}</td>
+                        <td>{{ $a -> tanggal_awal}} - {{ $a -> tanggal_akhir}}</td>
+                        <td>{{ $a -> nama_kegiatan}}</td>
+                        <td>{{ $a -> narasumber}}</td>
+                        <td>{{ $a -> sasaran}}</td>
+                        <td>{{ $a -> jumlah_peserta}}</td>
+                        <td>{{ $a -> materi}}</td>
+                        <td></td>
+                        
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        </td>
+                        <td>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Validasi</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+
         </table>
 
     </div>

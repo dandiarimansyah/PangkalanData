@@ -43,15 +43,15 @@
         <table class="content-table">
             <thead>
                 <tr>
-                    <th rowspan="2">NO</th>
-                    <th rowspan="2">EDIT</th>
-                    <th rowspan="2">VALIDASI</th>
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
                     <th rowspan="2">BALAI/KANTOR</th>
                     <th rowspan="2">TAHUN ANGGARAN</th>
                     <th colspan="8">ELEKTRONIK</th>
                     <th rowspan="2">FURNITURE</th>
                     <th colspan="3">KENDARAAN</th>
+                    <th rowspan="2">NO</th>
+                    <th rowspan="2">EDIT</th>
+                    <th rowspan="2">VALIDASI</th>
                 </tr>
                 <tr>
                     <th>LAPTOP</th>
@@ -69,47 +69,41 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>11-12-2018</td>
-                    <td>Balai Bahasa Provinsi Jawa Tengah</td>
-                    <td>2018</td>
-                    <td>13</td>
-                    <td>46</td>
-                    <td>29</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>7</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>437</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($inventarisasi as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td></td>
+                        <td>{{ $a -> unit}}</td>
+                        <td></td>
+                        <td>{{ $a -> laptop}}</td>
+                        <td>{{ $a -> komputer}}</td>
+                        <td>{{ $a -> printer}}</td>
+                        <td>{{ $a -> fotocopy}}</td>
+                        <td>{{ $a -> faximili}}</td>
+                        <td>{{ $a -> LCD}}</td>
+                        <td>{{ $a -> TV}}</td>
+                        <td>{{ $a -> lain}}</td>
+                        <td>{{ $a -> furniture}}</td>
+                        <td>{{ $a -> roda_dua}}</td>
+                        <td>{{ $a -> roda_empat}}</td>
+                        <td>{{ $a -> roda_enam}}</td>
+
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        </td>
+                        <td>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Validasi</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="18" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+
         </table>
 
     </div>

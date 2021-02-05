@@ -42,8 +42,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>KOREKSI</th>
-                    <th>VALIDASI</th>
                     <th>TANGGAL KERJA SAMA</th>
                     <th>UNIT/SATUAN KERJA</th>
                     <th>INSTANSI</th>
@@ -53,39 +51,41 @@
                     <th>KETERANGAN</th>
                     <th>DITANDATANGANI</th>
                     <th>MEDIA</th>
+                    <th>EDIT</th>
+                    <th>VALIDASI</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($kerja_sama as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>Mulai:{{ $a -> tanggal_awal}} <br> Berakhir:{{ $a -> tanggal_akhir}}  </td>
+                        <td>Balai Bahasa Jawa Tengah</td>
+                        <td>{{ $a -> instansi}}</td>
+                        <td>{{ $a -> kategori}}</td>
+                        <td>{{ $a -> nomor}}</td>
+                        <td>{{ $a -> perihal}}</td>
+                        <td>{{ $a -> keterangan}}</td>
+                        <td>1. {{ $a -> ttd_1}} <br>2. {{ $a -> ttd_2}}</td>
+                        <!-- <td>{{ $a -> instansi_1}}{{ $a -> instansi_2}}</td> -->
+
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        </td>
+                        <td>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Validasi</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+
         </table>
 
     </div>

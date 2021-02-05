@@ -42,62 +42,38 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
-                    <th>VALIDASI</th>
                     <th>KATEGORI</th>
                     <th>TAHUN</th>
                     <th>DESKRIPSI</th>
+                    <th>EDIT</th>
+                    <th>VALIDASI</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>Anugerah Tokoh Kesastraan</td>
-                    <td>2017</td>
-                    <td>Penerima Prasidatama 2017
 
- 
+                @forelse ($penghargaan_sastra as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> kategori}}</td>
+                        <td>{{ $a -> tahun}}</td>
+                        <td>{{ $a -> deskripsi}}</td>
 
-Tokoh bahasa dan sastra Indonesia
-Penerima: Sosiawan Leak untuk
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        </td>
+                        <td>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Validasi</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
 
-Nomine: Handry Tm dan Mukti Sutarman Espe
-
-Tokoh bahasa dan sastra Jawa
-Penerima: Triman Laksana
-
-Nomine: Sucipto Hadi Purnomo dan Hadi Utomo
-
-Tokoh penggiat bahasa dan sastra Indonesia
-Penerima: Bandung Mawardi
-
-Nomine: Bandung Mawardi dan Adin Hysteria
-
-Penggiat bahasa dan sastra
-Penerima: Jawa Sayuti Anggoro
-
-Nomine: RMA Sudijatmana dan Wanto Tirto
-Pendidik peduli bahasa dan sastra
-Penerima: S. Prasetyo Uyomo
-
-Nomine: Sawali Tuhu Setya dan Sus S.Hardjono
-Penggiat sastra panggung 
-Penerima: Gigok Anurogo
-
-Nomine: Thomas Haryanto Sukiran dan Eko Tunas</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tbody>
+
         </table>
 
     </div>

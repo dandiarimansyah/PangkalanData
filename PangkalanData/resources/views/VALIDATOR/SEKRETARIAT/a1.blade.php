@@ -67,11 +67,12 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="5" align="center">Tidak ada Data</td>
+                        <td colspan="6" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 
             </tbody>
+            
         </table>
 
     </div>
