@@ -2,21 +2,14 @@
 
 @section('content')
 
-@include('PARTIAL.MenuEdit')
+@include('PARTIAL.MenuData')
 
     <div class="isi-konten">
 
     <div class="judul">
-        <th>EDIT DATA REALISASI ANGGARAN UNIT/SATUAN KERJA</th>
+        <th>DATA REALISASI ANGGARAN UNIT/SATUAN KERJA</th>
     </div>
 
-    {{-- <div class="tombol-kembali">
-        <a  type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
-            Kembali ke Menu Edit
-        </a>
-    </div> --}}
-    
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
@@ -27,7 +20,6 @@
                     <th>UNIT/SATUAN KERJA</th>
                     <th>NILAI REALISASI(Rp.)</th>
                     <th>KETERANGAN</th>
-                    <th>EDIT / HAPUS</th>
                 </tr>
             </thead>
 
@@ -40,10 +32,6 @@
                         <td>{{ $a -> unit}}</td>
                         <td>{{ $a -> besar_dana}}</td>
                         <td>{{ $a -> keterangan}}</td>
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/realisasi_anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
-                        </td>
                     </tr>
                 @empty
                     <tr>

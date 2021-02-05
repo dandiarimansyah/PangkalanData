@@ -2,12 +2,12 @@
 
 @section('content')
 
-@include('PARTIAL.MenuEdit')
+@include('PARTIAL.MenuData')
 
 <div class="isi-konten">
 
     <div class="judul">
-        <th>EDIT DATA INVENTARISASI BARANG MILIK NEGARA</th>
+        <th>DATA INVENTARISASI BARANG MILIK NEGARA</th>
     </div>
 
     <!-- TABLE -->
@@ -22,7 +22,6 @@
                     <th colspan="8">ELEKTRONIK</th>
                     <th rowspan="2">FURNITURE</th>
                     <th colspan="3">KENDARAAN</th>
-                    <th rowspan="2">EDIT/HAPUS</th>
                 </tr>
                 <tr>
                     <th>LAPTOP</th>
@@ -59,11 +58,6 @@
                         <td>{{ $a -> roda_dua}}</td>
                         <td>{{ $a -> roda_empat}}</td>
                         <td>{{ $a -> roda_enam}}</td>
-
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/inventarisasi/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
-                        </td>
                     </tr>
                 @empty
                     <tr>
