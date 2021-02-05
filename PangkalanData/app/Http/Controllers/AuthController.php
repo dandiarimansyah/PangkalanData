@@ -39,7 +39,7 @@ class AuthController extends Controller
             } else if ($user->level == 'validator') {
                 return redirect()->intended('validator/validasi');
             } else if ($user->level == 'tamu') {
-                return redirect()->intended('/');
+                return redirect()->intended('/data');
             }
             return redirect()->intended('/login');
         }
