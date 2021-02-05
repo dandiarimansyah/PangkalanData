@@ -10,21 +10,12 @@
         <th>EDIT DATA MUSIKALISASI PUISI PROVINSI</th>
     </div>
 
-    <!-- <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
-                KEMBALI KE MENU EDIT
-            </a>
-        </div>
-    </div> -->
-
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
                     <th>TAHUN</th>
                     <th>PROVINSI</th>
                     <th>PEMENANG I</th>
@@ -33,37 +24,37 @@
                     <th>FAVORIT</th>
                     <th>KETERANGAN</th>
                     <th>MEDIA</th>
+                    <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($musikalisasi_puisi_provinsi as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> tahun}}</td>
+                        <td>{{ $a -> provinsi}}</td>
+                        <td>{{ $a -> pemenang_1}}</td>
+                        <td>{{ $a -> pemenang_2}}</td>
+                        <td>{{ $a -> pemenang_3}}</td>
+                        <td>{{ $a -> favorit}}</td>
+                        <td>{{ $a -> keterangan}}</td>
+                        <td></td>
+
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <a class="hapus" href="{{ url('/operator/edit/kesastraan/provinsi/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+
         </table>
 
     </div>

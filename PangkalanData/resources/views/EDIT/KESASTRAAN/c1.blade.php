@@ -10,21 +10,12 @@
         <th>EDIT DATA BENGKEL SASTRA DAN BAHASA</th>
     </div>
 
-    <!-- <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
-                KEMBALI KE MENU EDIT
-            </a>
-        </div>
-    </div> -->
-
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
                     <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
@@ -36,43 +27,40 @@
                     <th>JUMLAH DIBINA</th>
                     <th>SEKOLAH YANG DIBINA</th>
                     <th>AKTIVITAS</th>
+                    <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($bengkel_sastra_dan_bahasa as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> provinsi}}</td>
+                        <td>{{ $a -> kota}}</td>
+                        <td>{{ $a -> tanggal_awal_pelaksanaan}} <br> {{ $a -> tanggal_akhir_pelaksanaan}}</td>
+                        <td></td>
+                        <td>{{ $a -> nama_kegiatan}}</td>
+                        <td>{{ $a -> pemateri}}</td>
+                        <td>{{ $a -> jumlah_peserta}}</td>
+                        <td>{{ $a -> jumlah_sekolah}}</td>
+                        <td>{{ $a -> jumlah_sekolah_yang_dibina}}</td>
+                        <td>{{ $a -> nama_sekolah_yang_dibina}}</td>
+                        <td>{{ $a -> aktivitas}}</td>
+
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <a class="hapus" href="{{ url('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+
         </table>
 
     </div>

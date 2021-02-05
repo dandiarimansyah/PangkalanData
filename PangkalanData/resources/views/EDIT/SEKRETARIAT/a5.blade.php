@@ -10,21 +10,12 @@
         <th>EDIT DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
     </div>
 
-    <!-- <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
-                KEMBALI KE MENU EDIT
-            </a>
-        </div>
-    </div> -->
-
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
             <thead>
                 <tr>
                     <th rowspan="2">NO</th>
-                    <th rowspan="2">KOREKSI</th>
                     <th rowspan="2">TANGGAL DATA</th>
                     <th rowspan="2">BALAI/KANTOR</th>
                     <th colspan="2">TANAH</th>
@@ -33,6 +24,7 @@
                     <th rowspan="2">STATUS PEMEROLEHAN</th>
                     <th rowspan="2">KETERANGAN</th>
                     <th rowspan="2">MEDIA</th>
+                    <th rowspan="2">EDIT/HAPUS</th>
                 </tr>
                 <tr>
                     <th>STATUS</th>
@@ -43,37 +35,36 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                    </td>
-                    <td>11-12-2018</td>
-                    <td>Balai Bahasa Jawa Tengah Jalan Elang raya nomor 1, Mangunharjo, Tembalang, Semarang, Jawa Tengah</td>
-                    <td>PINJAM PAKAI</td>
-                    <td>TIDAK ADA/-</td>
-                    <td>MILIK SENDIRI</td>
-                    <td>ADA/ASLI</td>
-                    <td>Baik</td>
-                    <td>Baik</td>
-                    <td>Status tanah pinjam pakai sampai dengan tahun 2021</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+              @forelse ($tanah_bangunan as $key => $a)
+                  <tr>
+                      <td>{{ $key + 1}}</td>
+                      <td></td>
+                      <td>{{ $a -> kantor}}</td>
+                      <!-- <td>{{ $a -> alamat}}</td> -->
+                      <td>{{ $a -> status_tanah}}</td>
+                      <td>{{ $a -> sertif_tanah}}</td>
+                      <td>{{ $a -> status_bangunan}}</td>
+                      <td>{{ $a -> imb}}</td>
+                      <td>{{ $a -> kondisi}}</td>
+                      <td>{{ $a -> status_peroleh}}</td>
+                      <td>{{ $a -> keterangan}}</td>
+                      <td></td>
+
+                      <td style="display: flex; justify-content:center">
+                          <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                          <a class="hapus" href="{{ url('/operator/edit/sekretariat/tanah_bangunan/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                      </td>
+                  </tr>
+              @empty
+                  <tr>
+                      <td colspan="16" align="center">Tidak ada Data</td>
+                  </tr>
+              @endforelse
+
             </tbody>
+
+
         </table>
 
     </div>

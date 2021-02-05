@@ -24,12 +24,12 @@
             <thead>
                 <tr>
                     <th rowspan="2">NO</th>
-                    <th rowspan="2">EDIT</th>
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
                     <th rowspan="2">UNIT/SATUAN KERJA</th>
                     <th colspan="3">JUMLAH PEGAWAI</th>
                     <th colspan="7">TINGKAT PENDIDIKAN</th>
                     <th colspan="17">PANGKAT/GOLONGAN</th>
+                    <th rowspan="2">EDIT/HAPUS</th>
                 </tr>
                 <tr>
                     <th>K</th>
@@ -63,74 +63,50 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                    </td>
-                    <td>11-12-2018</td>
-                    <td>Balai Bahasa Jawa Tengah</td>
-                    <td>47</td>
-                    <td>25</td>
-                    <td>22</td>
-                    <td>1</td>
-                    <td>18</td>
-                    <td>15</td>
-                    <td>2</td>
-                    <td>11</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>15</td>
-                    <td>14</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>6</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($kepegawaian as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> tanggal_diperbarui}}</td>
+                        <td>{{ $a -> semua_kelamin}}</td>
+                        <td>{{ $a -> laki}}</td>
+                        <td>{{ $a -> perempuan}}</td>
+                        <td>{{ $a -> S3}}</td>
+                        <td>{{ $a -> S2}}</td>
+                        <td>{{ $a -> S1}}</td>
+                        <td>{{ $a -> D3}}</td>
+                        <td>{{ $a -> SMA}}</td>
+                        <td>{{ $a -> SMP}}</td>
+                        <td>{{ $a -> SD}}</td>
+                        <td>{{ $a -> T_4E}}</td>
+                        <td>{{ $a -> T_4D}}</td>
+                        <td>{{ $a -> T_4C}}</td>
+                        <td>{{ $a -> T_4B}}</td>
+                        <td>{{ $a -> T_4A}}</td>
+                        <td>{{ $a -> T_3D}}</td>
+                        <td>{{ $a -> T_3C}}</td>
+                        <td>{{ $a -> T_3B}}</td>
+                        <td>{{ $a -> T_3A}}</td>
+                        <td>{{ $a -> T_2D}}</td>
+                        <td>{{ $a -> T_2C}}</td>
+                        <td>{{ $a -> T_2B}}</td>
+                        <td>{{ $a -> T_2A}}</td>
+                        <td>{{ $a -> T_1D}}</td>
+                        <td>{{ $a -> T_1C}}</td>
+                        <td>{{ $a -> T_1B}}</td>
+                        <td>{{ $a -> T_1A}}</td>
+                        
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/kepegawaian/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="32" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
         </table>
 

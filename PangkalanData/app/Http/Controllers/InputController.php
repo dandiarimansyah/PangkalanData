@@ -127,6 +127,7 @@ class InputController extends Controller
         return view('INPUT.PENELITIAN.e1');
     }
 
+    // BACKEND A
     public function store_a1(Request $request)
     {
         $request->validate([
@@ -301,6 +302,7 @@ class InputController extends Controller
         return redirect('/operator/edit/sekretariat/inventarisasi_bmn')->with('success', 'Data Berhasil Ditambahkan!');
     }
 
+    // BACKEND B
     public function store_b1(Request $request)
     {
         $request->validate([

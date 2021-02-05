@@ -10,24 +10,16 @@
         <th>EDIT DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
     </div>
 
-    <!-- <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
-                KEMBALI KE MENU EDIT
-            </a>
-        </div>
-    </div> -->
-
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
                     <th>TAHUN ANGGARAN</th>
                     <th>UNIT/SATUAN KERJA</th>
                     <th>NILAI ANGGARAN(Rp.)</th>
+                    <th>EDIT / HAPUS</th>
                 </tr>
             </thead>
 
@@ -36,12 +28,13 @@
                 @forelse ($anggaran as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                        </td>
                         <td>{{ $a -> tahun_anggaran}}</td>
                         <td>{{ $a -> unit}}</td>
                         <td>{{ $a -> nilai_anggaran}}</td>
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                        </td>
                     </tr>
                 @empty
                     <tr>
