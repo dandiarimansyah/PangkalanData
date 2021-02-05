@@ -2,12 +2,12 @@
 
 @section('content')
 
-@include('PARTIAL.MenuEdit')
+@include('PARTIAL.MenuData')
 
 <div class="isi-konten">
 
     <div class="judul">
-        <th>EDIT DATA PENELITIAN</th>
+        <th>DATA PENELITIAN</th>
     </div>
 
     <!-- TABLE -->
@@ -16,7 +16,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
                     <th>TGL.MULAI</th>
                     <th>TGL.SELESAI</th>
                     <th>UNIT/SATUAN KERJA</th>
@@ -36,9 +35,6 @@
                 @forelse ($penelitian as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                        </td>
                         <td>{{ $a -> tanggal_awal}}</td>
                         <td>{{ $a -> tanggal_akhir}}</td>
                         <td>{{ $a -> unit}}</td>
@@ -55,39 +51,6 @@
                         <td colspan="13" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
-
-                {{-- <tr>
-                    <td>1</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                    </td>
-                    <td>01-02-2017</td>
-                    <td>30-11-2017</td>
-                    <td>Balai Bahasa Jawa Tengah</td>
-                    <td>Kajian Penggunaan Bahasa Media Massa di Jawa Tengah</td>
-                    <td>Endro Nugroho Wasono Aji, Sri Wahyuni, Kahar Dwi Prihantono, Inni Inayati Istiana</td>
-                    <td></td>
-                    <td>...Selengkapnya</td>
-                    <td>10 BULAN</td>
-                    <td>BELUM TERBIT</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr> --}}
             </tbody>
         </table>
 

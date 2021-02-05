@@ -2,12 +2,12 @@
 
 @section('content')
 
-@include('PARTIAL.MenuEdit')
+@include('PARTIAL.MenuData')
 
 <div class="isi-konten">
 
     <div class="judul">
-        <th>EDIT DATA PENGHARGAAN SATRA</th>
+        <th>DATA PENGHARGAAN SATRA</th>
     </div>
 
     <!-- TABLE -->
@@ -19,7 +19,6 @@
                     <th>KATEGORI</th>
                     <th>TAHUN</th>
                     <th>DESKRIPSI</th>
-                    <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
 
@@ -31,11 +30,6 @@
                         <td>{{ $a -> kategori}}</td>
                         <td>{{ $a -> tahun}}</td>
                         <td>{{ $a -> deskripsi}}</td>
-
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                            <a class="hapus" href="{{ url('/operator/edit/kesastraan/penghargaan_sastra/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
-                        </td>
                     </tr>
                 @empty
                     <tr>
