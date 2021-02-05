@@ -26,6 +26,7 @@ class CreateDutaProvinsiTable extends Migration
             $table->string('favorit_1')->nullable();
             $table->string('favorit_2')->nullable();
             $table->longText('keterangan')->nullable();
+            $table->string('media')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });

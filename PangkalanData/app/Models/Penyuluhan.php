@@ -11,5 +11,5 @@ class Penyuluhan extends Model
 
     protected $table = "penyuluhan";
 
-    protected $fillable = ['provinsi', 'kabupaten/kota', 'nama_kegiatan', 'tanggal_awal', 'tanggal_akhir', 'narasumber', 'sasaran', 'jumlah_peserta', 'materi', 'validasi'];
+    protected $fillable = ['provinsi', 'kabupaten/kota', 'nama_kegiatan', 'tanggal_awal', 'tanggal_akhir', 'narasumber', 'sasaran', 'jumlah_peserta', 'materi', 'media', 'validasi'];
 }

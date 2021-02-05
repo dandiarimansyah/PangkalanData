@@ -11,5 +11,5 @@ class Penghargaan_Bahasa extends Model
 
     protected $table = "penghargaan_bahasa";
 
-    protected $fillable = ['kategori', 'tahun', 'deskripsi', 'validasi'];
+    protected $fillable = ['kategori', 'tahun', 'deskripsi', 'media', 'validasi'];
 }

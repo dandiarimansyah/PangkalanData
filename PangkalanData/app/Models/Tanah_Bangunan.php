@@ -11,5 +11,5 @@ class Tanah_Bangunan extends Model
 
     protected $table = "tanah_bangunan";
 
-    protected $fillable = ['kantor', 'alamat', 'status_tanah', 'sertif_tanah', 'status_bangunan', 'imb', 'kondisi', 'status', 'keterangan', 'validasi'];
+    protected $fillable = ['kantor', 'alamat', 'status_tanah', 'sertif_tanah', 'status_bangunan', 'imb', 'kondisi', 'status', 'keterangan', 'media', 'validasi'];
 }

@@ -11,5 +11,5 @@ class Jurnal extends Model
 
     protected $table = "jurnal";
 
-    protected $fillable = ['kategori', 'judul', 'tim_redaksi', 'volume', 'no_issn', 'lingkup', 'penerbit', 'keterangan', 'info_produk', 'validasi'];
+    protected $fillable = ['kategori', 'judul', 'tim_redaksi', 'volume', 'no_issn', 'lingkup', 'penerbit', 'keterangan', 'info_produk', 'media', 'validasi'];
 }

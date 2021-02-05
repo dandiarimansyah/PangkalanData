@@ -11,5 +11,5 @@ class Kamus extends Model
 
     protected $table = "kamus";
 
-    protected $fillable = ['kategori', 'judul', 'tim_redaksi', 'edisi', 'no_isbn', 'lingkup', 'penerbit', 'tahun_terbit', 'keterangan', 'info_produk', 'validasi'];
+    protected $fillable = ['kategori', 'judul', 'tim_redaksi', 'edisi', 'no_isbn', 'lingkup', 'penerbit', 'tahun_terbit', 'keterangan', 'info_produk', 'media', 'validasi'];
 }

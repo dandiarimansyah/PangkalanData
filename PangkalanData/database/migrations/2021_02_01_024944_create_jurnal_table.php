@@ -24,6 +24,7 @@ class CreateJurnalTable extends Migration
             $table->string('penerbit')->nullable();
             $table->longText('keterangan')->nullable();
             $table->string('info_produk')->nullable();
+            $table->string('media')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });

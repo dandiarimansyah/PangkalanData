@@ -36,7 +36,7 @@
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> provinsi}}</td>
                         <td>{{ $a -> kota}}</td>
-                        <td>{{ $a -> tanggal_awal}} {{ $a -> tanggal_akhir}}</td>
+                        <td>{{ $a -> tanggal_awal}} - {{ $a -> tanggal_akhir}}</td>
                         <td>{{ $a -> nama_kegiatan}}</td>
                         <td>{{ $a -> narasumber}}</td>
                         <td>{{ $a -> sasaran}}</td>

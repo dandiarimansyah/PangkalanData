@@ -22,6 +22,7 @@ class CreateMusikalisasiPuisiProvinsiTable extends Migration
             $table->string("pemenang_3")->nullable();
             $table->string("favorit")->nullable();
             $table->string("keterangan")->nullable();
+            $table->string('media')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });

@@ -616,7 +616,7 @@ class InputController extends Controller
         $data->publikasi = $request->publikasi;
         $data->tahun_terbit = $request->tahun_terbit;
         $data->abstrak = $request->abstrak;
-        $data->file = $request->file;
+        $data->media = $request->media;
         $data->save();
 
         return redirect('/operator/edit/penelitian/penelitian')->with('success', 'Data Berhasil Ditambahkan!');

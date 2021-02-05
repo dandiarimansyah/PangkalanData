@@ -24,6 +24,7 @@ class CreateTanahBangunanTable extends Migration
             $table->string('kondisi')->nullable();
             $table->string('status_peroleh')->nullable();
             $table->longText('keterangan')->nullable();
+            $table->string('media')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });

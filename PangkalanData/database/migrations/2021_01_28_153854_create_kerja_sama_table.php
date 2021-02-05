@@ -26,6 +26,7 @@ class CreateKerjaSamaTable extends Migration
             $table->string('instansi_1')->nullable();
             $table->string('ttd_2')->nullable();
             $table->string('instansi_2')->nullable();
+            $table->string('media')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });

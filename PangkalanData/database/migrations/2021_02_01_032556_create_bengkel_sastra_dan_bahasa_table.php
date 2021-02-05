@@ -26,6 +26,7 @@ class CreateBengkelSastraDanBahasaTable extends Migration
             $table->integer("jumlah_sekolah_yang_dibina")->nullable();
             $table->longText("nama_sekolah_yang_dibina")->nullable();
             $table->longText("aktivitas")->nullable();
+            $table->string('media')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
         });

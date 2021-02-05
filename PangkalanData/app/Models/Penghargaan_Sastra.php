@@ -11,5 +11,5 @@ class Penghargaan_Sastra extends Model
 
     protected $table = "penghargaan_sastra";
 
-    protected $fillable = ['kategori', 'tahun', 'deskripsi', 'validasi'];
+    protected $fillable = ['kategori', 'tahun', 'deskripsi', 'media', 'validasi'];
 }
