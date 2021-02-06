@@ -16,7 +16,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>EDIT</th>
                     <th>TGL.MULAI</th>
                     <th>TGL.SELESAI</th>
                     <th>UNIT/SATUAN KERJA</th>
@@ -28,6 +27,7 @@
                     <th>PUBLIKASI</th>
                     <th>TAHUN TERBIT</th>
                     <th>MEDIA</th>
+                    <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
 
@@ -36,23 +36,26 @@
                 @forelse ($penelitian as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                        </td>
                         <td>{{ $a -> tanggal_awal}}</td>
                         <td>{{ $a -> tanggal_akhir}}</td>
                         <td>{{ $a -> unit}}</td>
                         <td>{{ $a -> judul}}</td>
                         <td>{{ $a -> peneliti}}</td>
+                        <td></td>
                         <td>{{ $a -> abstrak}}</td>
                         <td>{{ $a -> lama_penelitian}}</td>
                         <td>{{ $a -> publikasi}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> file}}</td>
+
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <a class="hapus" href="{{ url('/operator/edit/komunitas/komunitas_bahasa/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                        </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="13" align="center">Tidak ada Data</td>
+                        <td colspan="14" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 
