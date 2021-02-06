@@ -4,6 +4,8 @@
 
 @include('PARTIAL.MenuMedia')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>MEDIA DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
     </div>
@@ -29,61 +31,66 @@
 
   <!-- TABLE -->
   <div class="validasi">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th rowspan="2">NO</th>
-                    <th rowspan="2">UNGGAH</th>
-                    <th rowspan="2">MEDIA</th>
-                    <th rowspan="2">TANGGAL DATA</th>
-                    <th rowspan="2">BALAI/KANTOR</th>
-                    <th colspan="2">TANAH</th>
-                    <th colspan="2">BANGUNAN</th>
-                    <th rowspan="2">KONDISI</th>
-                    <th rowspan="2">STATUS PEMEROLEHAN</th>
-                    <th rowspan="2">KETERANGAN</th>
-                </tr>
-                <tr>
-                    <th>STATUS</th>
-                    <th>SERTIFIKAT</th>
-                    <th>STATUS</th>
-                    <th>IMB</th>
-                </tr>
-            </thead>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th rowspan="2">NO</th>
+                <th rowspan="2">TANGGAL DATA</th>
+                <th rowspan="2">BALAI/KANTOR</th>
+                <th colspan="2">TANAH</th>
+                <th colspan="2">BANGUNAN</th>
+                <th rowspan="2">KONDISI</th>
+                <th rowspan="2">STATUS PEMEROLEHAN</th>
+                <th rowspan="2">KETERANGAN</th>
+                <th rowspan="2">MEDIA</th>
+            </tr>
+            <tr>
+                <th>STATUS</th>
+                <th>SERTIFIKAT</th>
+                <th>STATUS</th>
+                <th>IMB</th>
+            </tr>
+        </thead>
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>11-12-2018</td>
-                    <td>Balai Bahasa Jawa Tengah Jalan Elang raya nomor 1, Mangunharjo, Tembalang, Semarang, Jawa Tengah</td>
-                    <td>PINJAM PAKAI</td>
-                    <td>TIDAK ADA/-</td>
-                    <td>MILIK SENDIRI</td>
-                    <td>ADA/ASLI</td>
-                    <td>Baik</td>
-                    <td>Baik</td>
-                    <td>Status tanah pinjam pakai sampai dengan tahun 2021</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+        <tbody>
+
+          @forelse ($tanah_bangunan as $key => $a)
+              <tr>
+                  <td>{{ $key + 1}}</td>
+                  <td></td>
+                  <td>{{ $a -> kantor}}</td>
+                  <!-- <td>{{ $a -> alamat}}</td> -->
+                  <td>{{ $a -> status_tanah}}</td>
+                  <td>{{ $a -> sertif_tanah}}</td>
+                  <td>{{ $a -> status_bangunan}}</td>
+                  <td>{{ $a -> imb}}</td>
+                  <td>{{ $a -> kondisi}}</td>
+                  <td>{{ $a -> status_peroleh}}</td>
+                  <td>{{ $a -> keterangan}}</td>
+
+                  <td>
+                    @if ($a->media == "")
+                        <form role="form" action="" enctype="multipart/form-data">
+                            <input type="file" name="media">
+                        </form>
+                    @else
+                        {{ $a -> media}}
+                    @endif
+                    </td>
+              </tr>
+          @empty
+              <tr>
+                  <td colspan="16" align="center">Tidak ada Data</td>
+              </tr>
+          @endforelse
+
+        </tbody>
+
+
+    </table>
 
     </div>
+</div>
 
     
 

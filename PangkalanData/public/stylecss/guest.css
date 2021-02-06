@@ -229,7 +229,7 @@ p {
 .content-table {
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 0.9em;
+    font-size: 0.8em;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -296,7 +296,7 @@ p {
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .ketjudul {

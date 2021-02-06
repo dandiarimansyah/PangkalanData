@@ -12,7 +12,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/kesastraan/musikalisasi_puisi_nasional" method="POST">
+      <form role="form" action="/operator/input/kesastraan/musikalisasi_puisi_nasional" method="POST" enctype="multipart/form-data">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('tahun') }}</div>
@@ -49,6 +49,11 @@
             <label>Keterangan</label>
             <textarea name="keterangan" class="textarea"></textarea>
         </div> 
+
+        <div class="inputfield-kecil">
+            <label for="">Unggah Media</label>
+            <input type="file" name="media">
+          </div>
 
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">

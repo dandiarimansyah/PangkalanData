@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/sekretariat/kerja_sama" method="POST">
+      <form role="form" action="/operator/input/sekretariat/kerja_sama" method="POST" enctype="multipart/form-data">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>
@@ -95,6 +95,11 @@
               </select>
             </div>
         </div> 
+
+        <div class="inputfield-kecil">
+          <label for="">Unggah File</label>
+          <input type="file" name="media">
+        </div>
 
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">

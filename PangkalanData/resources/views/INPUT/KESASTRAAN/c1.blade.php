@@ -13,7 +13,7 @@
     <div class="wrapper">
         <div class="form">
 
-        <form role="form" action="/operator/input/kesastraan/bengkel_sastra_dan_bahasa" method="POST">
+        <form role="form" action="/operator/input/kesastraan/bengkel_sastra_dan_bahasa" method="POST" enctype="multipart/form-data">
           @csrf
   
           <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
@@ -80,7 +80,7 @@
         <div class="alert-danger">{{ $errors->first('nama_sekolah_yang_dibina') }}</div>
         <div class="inputfield">
             <label>Nama Sekolah yang Dibina</label>
-            <textarea name="nama_senama_sekolah_yang_dibinakolah_dibina" class="textarea"></textarea>
+            <textarea name="nama_sekolah_yang_dibina" class="textarea"></textarea>
         </div> 
 
         <div class="alert-danger">{{ $errors->first('aktivitas') }}</div>
@@ -88,6 +88,11 @@
             <label>Aktivitas</label>
             <textarea name="aktivitas" class="textarea"></textarea>
         </div> 
+
+        <div class="inputfield-kecil">
+          <label for="">Unggah Media</label>
+          <input type="file" name="media">
+        </div>
   
           <div class="tombol">
             <input type="reset" value="Ulangi" class="reset">
@@ -99,11 +104,7 @@
           <div class="">
             <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
           </div>
-          
-          <div class="">
-              <label style="font-weight:bold;">** Gunakan tanda koma jika lebih dari satu</label>
-          </div>
-          
+
         </div>
     </div>	
   

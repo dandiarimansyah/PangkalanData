@@ -4,16 +4,10 @@
 
 @include('PARTIAL.MenuMedia')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>MEDIA DATA KAMUS / ENSIKLOPEDIA</th>
-    </div>
-
-    <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/media">
-                KEMBALI KE MENU MEDIA
-            </a>
-        </div>
     </div>
     
     <div class="" style=" display:flex; justify-content:center">
@@ -33,8 +27,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>UNGGAH</th>
-                    <th>MEDIA</th>
                     <th>KATEGORI</th>
                     <th>JUDUL</th>
                     <th>EDISI</th>
@@ -45,44 +37,48 @@
                     <th>KETERANGAN</th>
                     <th>UNIT/SATKER</th>
                     <th>INFO PRODUK</th>
+                    <th>MEDIA</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+              @forelse ($kamus as $key => $a)
+                  <tr>
+                      <td>{{ $key + 1}}</td>
+                      <td>{{ $a -> kategori}}</td>
+                      <td>{{ $a -> judul}}</td>
+                      <td>{{ $a -> tim_redaksi}}</td>
+                      <td>{{ $a -> edisi}}</td>
+                      <td>{{ $a -> no_isbn}}</td>
+                      <td>{{ $a -> lingkup}}</td>
+                      <td>{{ $a -> penerbit}}</td>
+                      <td>{{ $a -> tahun_terbit}}</td>
+                      <td>{{ $a -> keterangan}}</td>
+                      <td>{{ $a -> info_produk}}</td>
+
+                      <td>
+                        @if ($a->media == "")
+                            <form role="form" action="" enctype="multipart/form-data">
+                                <input type="file" name="media">
+                            </form>
+                        @else
+                            {{ $a -> media}}
+                        @endif
+                        </td>
+                  </tr>
+              @empty
+                  <tr>
+                      <td colspan="16" align="center">Tidak ada Data</td>
+                  </tr>
+              @endforelse
+
             </tbody>
+
         </table>
 
     </div>
+</div>
 
     
 

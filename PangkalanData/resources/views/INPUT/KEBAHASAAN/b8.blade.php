@@ -13,14 +13,14 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/kebahasaan/duta_bahasa_provinsi" method="POST">
+      <form role="form" action="/operator/input/kebahasaan/duta_bahasa_provinsi" method="POST" enctype="multipart/form-data">
           @csrf
 
-        <div class="alert-danger">{{ $errors->first('asal_provinsi') }}</div>
+        <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
         <div class="inputfield-select">
             <label>Asal Provinsi*</label>
             <div class="custom_select">
-              <select name="asal_provinsi">
+              <select name="provinsi">
                 <option disabled="disabled" selected="selected" value="">-- Pilih Kategori --</option>
                 <option value="Jawa Tengah">Jawa Tengah</option>
               </select>

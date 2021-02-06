@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/kebahasaan/jurnal_majalah" method="POST">
+      <form role="form" action="/operator/input/kebahasaan/jurnal_majalah" method="POST" enctype="multipart/form-data">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>
@@ -45,7 +45,7 @@
             <input name="volume" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('issn') }}</div>
+        <div class="alert-danger">{{ $errors->first('no_issn') }}</div>
         <div class="inputfield">
             <label>No.ISSN</label>
             <input name="no_issn" type="text" class="input">
@@ -85,13 +85,18 @@
             <label>Info Produk</label>
             <div class="custom_select">
               <select name="info_produk">
-                <option value="">--Pilih Info--</option>
+                <option selected disabled value="">--Pilih Info--</option>
                 <option value="Produk Pusat">Produk Pusat</option>
                 <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
                 <option value="Produk Luar">Produk Luar</option>
               </select>
             </div>
         </div> 
+
+        <div class="inputfield-kecil">
+          <label for="">Unggah Media</label>
+          <input type="file" name="media">
+        </div>
         
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">

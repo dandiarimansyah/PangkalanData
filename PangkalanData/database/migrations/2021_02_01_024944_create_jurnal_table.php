@@ -22,6 +22,7 @@ class CreateJurnalTable extends Migration
             $table->string('no_issn')->nullable();
             $table->string('lingkup')->nullable();
             $table->string('penerbit')->nullable();
+            $table->string('tahun_terbit')->nullable();
             $table->longText('keterangan')->nullable();
             $table->string('info_produk')->nullable();
             $table->string('media')->nullable();

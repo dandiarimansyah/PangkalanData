@@ -212,7 +212,7 @@ p {
 .content-table {
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 0.9em;
+    font-size: 0.8em;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -238,7 +238,7 @@ p {
 .content-table td {
     border-right: 1px solid #222a31cc;
     border-left: 1px solid #222a31cc;
-    padding: 5px 15px 5px 15px;
+    padding: 5px 8px 5px 8px;
     text-align: center;
 }
 
@@ -280,7 +280,7 @@ p {
     text-align: center;
     margin-top: 10px;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .ketjudul {

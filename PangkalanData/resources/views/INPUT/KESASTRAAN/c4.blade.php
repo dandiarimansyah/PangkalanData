@@ -12,7 +12,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/kesastraan/musikalisasi_puisi_provinsi" method="POST">
+      <form role="form" action="/operator/input/kesastraan/musikalisasi_puisi_provinsi" method="POST" enctype="multipart/form-data">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
@@ -61,16 +61,21 @@
             <textarea name="keterangan" class="textarea"></textarea>
         </div> 
 
-        <div class="">
-            <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
-          </div>
+        <div class="inputfield-kecil">
+          <label for="">Unggah Media</label>
+          <input type="file" name="media">
+        </div>
 
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">
           <input type="submit" value="Simpan" class="inputan">
         </div>         
         
-        </form>
+      </form>
+
+      <div class="">
+          <label style="font-weight:bold; font-style:italic;">Data dengan tanda * WAJIB diisi</label>
+        </div>
 
       </div>
   </div>

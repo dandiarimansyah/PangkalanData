@@ -8,14 +8,11 @@
     <div class="judul">
         <th>INPUT DATA PENELITIAN</th>
     </div>
-    <div class="judul">
-      <th>MASIH KURANG INPUT FILE</th>
-  </div>
 
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/penelitian/penelitian" method="POST">
+      <form role="form" action="/operator/input/penelitian/penelitian" method="POST" enctype="multipart/form-data">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>
@@ -72,9 +69,9 @@
         <div class="alert-danger">{{ $errors->first('lama_penelitian') }}</div>
         <div class="inputfield-kecil">
             <label>Lama Penelitian</label>
-            <input type="text" class="input">
+            <input name="lama_penelitian" type="text" class="input">
             <div class="custom_select" style="margin-left: 30px; width: 120px">
-                <select name="lama_penelitian">
+                <select name="tipe_waktu">
                   <option value="Tahun">Tahun</option>
                   <option value="Bulan">Bulan</option>
                   <option value="Minggu">Minggu</option>
@@ -106,7 +103,10 @@
             <textarea name="abstrak" class="textarea"></textarea>
         </div> 
 
-        {{-- FORM INPUT FILE --}}
+        <div class="inputfield-kecil">
+          <label for="">Unggah Media</label>
+          <input type="file" name="media">
+        </div>
 
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">

@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/kebahasaan/penghargaan_bahasa" method="POST">
+      <form role="form" action="/operator/input/kebahasaan/penghargaan_bahasa" method="POST" enctype="multipart/form-data">
           @csrf
 
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>
@@ -41,6 +41,11 @@
             <label>Deskripsi</label>
             <textarea name="deskripsi" class="textarea"></textarea>
         </div>  
+
+        <div class="inputfield-kecil">
+          <label for="">Unggah Media</label>
+          <input type="file" name="media">
+        </div>
         
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">

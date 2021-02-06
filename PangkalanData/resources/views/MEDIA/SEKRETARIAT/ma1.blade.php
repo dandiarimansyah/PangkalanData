@@ -4,16 +4,10 @@
 
 @include('PARTIAL.MenuMedia')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>MEDIA DATA KERJA SAMA</th>
-    </div>
-
-    <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/media">
-                KEMBALI KE MENU MEDIA
-            </a>
-        </div>
     </div>
 
     <div class="" style=" display:flex; justify-content:center">
@@ -32,8 +26,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>UNGGAH</th>
-                    <th>MEDIA</th>
                     <th>TANGGAL KERJA SAMA</th>
                     <th>UNIT/SATUAN KERJA</th>
                     <th>INSTANSI</th>
@@ -42,40 +34,49 @@
                     <th>PERIHAL</th>
                     <th>KETERANGAN</th>
                     <th>DITANDATANGANI</th>
+                    <th>MEDIA</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($kerja_sama as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>Mulai:{{ $a -> tanggal_awal}} <br> Berakhir:{{ $a -> tanggal_akhir}}  </td>
+                        <td>Balai Bahasa Jawa Tengah</td>
+                        <td>{{ $a -> instansi}}</td>
+                        <td>{{ $a -> kategori}}</td>
+                        <td>{{ $a -> nomor}}</td>
+                        <td>{{ $a -> perihal}}</td>
+                        <td>{{ $a -> keterangan}}</td>
+                        <td>1. {{ $a -> ttd_1}} <br>2. {{ $a -> ttd_2}}</td>
+                        <!-- <td>{{ $a -> instansi_1}}{{ $a -> instansi_2}}</td> -->
+
+                        <td>
+                            @if ($a->media == "")
+                                <form role="form" action="" enctype="multipart/form-data">
+                                    <input type="file" name="media">
+                                </form>
+                            @else
+                                {{ $a -> media}}
+                            @endif
+                        </td>
+
+                        
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+
         </table>
 
     </div>
+</div>
 
     
 

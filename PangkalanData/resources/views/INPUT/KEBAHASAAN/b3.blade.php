@@ -13,7 +13,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <form role="form" action="/operator/input/kebahasaan/terbitan_umum" method="POST">
+      <form role="form" action="/operator/input/kebahasaan/terbitan_umum" method="POST" enctype="multipart/form-data">
           @csrf
           
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>
@@ -69,6 +69,11 @@
               </select>
             </div>
         </div> 
+
+        <div class="inputfield-kecil">
+          <label for="">Unggah Media</label>
+          <input type="file" name="media">
+        </div>
         
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">
