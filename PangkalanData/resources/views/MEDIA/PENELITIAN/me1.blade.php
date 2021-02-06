@@ -4,16 +4,10 @@
 
 @include('PARTIAL.MenuMedia')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>MEDIA DATA PENELITIAN</th>
-    </div>
-
-    <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/media">
-                KEMBALI KE MENU MEDIA
-            </a>
-        </div>
     </div>
 
     <div class="" style=" display:flex; justify-content:center">
@@ -33,8 +27,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>UNGGAH</th>
-                    <th>MEDIA</th>
                     <th>TGL.MULAI</th>
                     <th>TGL.SELESAI</th>
                     <th>UNIT/SATUAN KERJA</th>
@@ -45,45 +37,48 @@
                     <th>LAMA PENELITIAN</th>
                     <th>PUBLIKASI</th>
                     <th>TAHUN TERBIT</th>
+                    <th>MEDIA</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>01-02-2017</td>
-                    <td>30-11-2017</td>
-                    <td>Balai Bahasa Jawa Tengah</td>
-                    <td>Kajian Penggunaan Bahasa Media Massa di Jawa Tengah</td>
-                    <td>Endro Nugroho Wasono Aji, Sri Wahyuni, Kahar Dwi Prihantono, Inni Inayati Istiana</td>
-                    <td></td>
-                    <td>...Selengkapnya</td>
-                    <td>10 BULAN</td>
-                    <td>BELUM TERBIT</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($penelitian as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> tanggal_awal}}</td>
+                        <td>{{ $a -> tanggal_akhir}}</td>
+                        <td>{{ $a -> unit}}</td>
+                        <td>{{ $a -> judul}}</td>
+                        <td>{{ $a -> peneliti}}</td>
+                        <td>{{ $a -> kerja_sama}}</td>
+                        <td>{{ $a -> abstrak}}</td>
+                        <td>{{ $a -> lama_penelitian}}</td>
+                        <td>{{ $a -> publikasi}}</td>
+                        <td>{{ $a -> tahun_terbit}}</td>
+                        {{-- <td>{{ $a -> media}}</td> --}}
+                        <td>
+                            @if ($a->media == "")
+                                <form role="form" action="" enctype="multipart/form-data">
+                                    <input type="file" name="media">
+                                </form>
+                            @else
+                                {{ $a -> media}}
+                            @endif
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="14" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
         </table>
 
     </div>
 
+</div>
     
 
 @endsection

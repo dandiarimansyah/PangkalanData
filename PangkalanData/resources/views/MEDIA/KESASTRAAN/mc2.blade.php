@@ -4,16 +4,10 @@
 
 @include('PARTIAL.MenuMedia')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>MEDIA DATA PENGHARGAAN SATRA</th>
-    </div>
-
-    <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/media">
-                KEMBALI KE MENU MEDIA
-            </a>
-        </div>
     </div>
 
     <div class="" style=" display:flex; justify-content:center">
@@ -33,66 +27,44 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>UNGGAH</th>
-                    <th>MEDIA</th>
                     <th>KATEGORI</th>
                     <th>TAHUN</th>
                     <th>DESKRIPSI</th>
+                    <th>MEDIA</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>Anugerah Tokoh Kesastraan</td>
-                    <td>2017</td>
-                    <td>Penerima Prasidatama 2017
 
- 
+                @forelse ($penghargaan_sastra as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> kategori}}</td>
+                        <td>{{ $a -> tahun}}</td>
+                        <td>{{ $a -> deskripsi}}</td>
 
-Tokoh bahasa dan sastra Indonesia
-Penerima: Sosiawan Leak untuk
+                        <td>
+                            @if ($a->media == "")
+                                <form role="form" action="" enctype="multipart/form-data">
+                                    <input type="file" name="media">
+                                </form>
+                            @else
+                                {{ $a -> media}}
+                            @endif
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
 
-Nomine: Handry Tm dan Mukti Sutarman Espe
-
-Tokoh bahasa dan sastra Jawa
-Penerima: Triman Laksana
-
-Nomine: Sucipto Hadi Purnomo dan Hadi Utomo
-
-Tokoh penggiat bahasa dan sastra Indonesia
-Penerima: Bandung Mawardi
-
-Nomine: Bandung Mawardi dan Adin Hysteria
-
-Penggiat bahasa dan sastra
-Penerima: Jawa Sayuti Anggoro
-
-Nomine: RMA Sudijatmana dan Wanto Tirto
-Pendidik peduli bahasa dan sastra
-Penerima: S. Prasetyo Uyomo
-
-Nomine: Sawali Tuhu Setya dan Sus S.Hardjono
-Penggiat sastra panggung 
-Penerima: Gigok Anurogo
-
-Nomine: Thomas Haryanto Sukiran dan Eko Tunas</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tbody>
+
         </table>
 
     </div>
 
-    
+</div>
 
 @endsection

@@ -45,26 +45,26 @@
 
               @forelse ($kamus as $key => $a)
                   <tr>
-                      <td>{{ $key + 1}}</td>
-                      <td>{{ $a -> kategori}}</td>
-                      <td>{{ $a -> judul}}</td>
-                      <td>{{ $a -> tim_redaksi}}</td>
-                      <td>{{ $a -> edisi}}</td>
-                      <td>{{ $a -> no_isbn}}</td>
-                      <td>{{ $a -> lingkup}}</td>
-                      <td>{{ $a -> penerbit}}</td>
-                      <td>{{ $a -> tahun_terbit}}</td>
-                      <td>{{ $a -> keterangan}}</td>
-                      <td>{{ $a -> info_produk}}</td>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> kategori}}</td>
+                        <td>{{ $a -> judul}}</td>
+                        <td>{{ $a -> tim_redaksi}}</td>
+                        <td>{{ $a -> edisi}}</td>
+                        <td>{{ $a -> no_isbn}}</td>
+                        <td>{{ $a -> lingkup}}</td>
+                        <td>{{ $a -> penerbit}}</td>
+                        <td>{{ $a -> tahun_terbit}}</td>
+                        <td>{{ $a -> keterangan}}</td>
+                        <td>{{ $a -> info_produk}}</td>
 
-                      <td>
-                        @if ($a->media == "")
-                            <form role="form" action="" enctype="multipart/form-data">
-                                <input type="file" name="media">
-                            </form>
-                        @else
-                            {{ $a -> media}}
-                        @endif
+                        <td>
+                            @if ($a->media == "")
+                                <form role="form" action="" enctype="multipart/form-data">
+                                    <input type="file" name="media">
+                                </form>
+                            @else
+                                {{ $a -> media}}
+                            @endif
                         </td>
                   </tr>
               @empty

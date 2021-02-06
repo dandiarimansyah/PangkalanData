@@ -4,16 +4,10 @@
 
 @include('PARTIAL.MenuMedia')
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>MEDIA DATA DUTA BAHASA PROVINSI</th>
-    </div>
-
-    <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/media">
-                KEMBALI KE MENU MEDIA
-            </a>
-        </div>
     </div>
 
     <div class="" style=" display:flex; justify-content:center">
@@ -33,8 +27,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>UNGGAH</th>
-                    <th>MEDIA</th>
                     <th>TAHUN</th>
                     <th>PROVINSI</th>
                     <th>PEMENANG I</th>
@@ -42,38 +34,47 @@
                     <th>PEMENANG III</th>
                     <th>FAVORIT</th>
                     <th>KETERANGAN</th>
+                    <th>MEDIA</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($duta_provinsi as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> tahun}}</td>
+                        <td>{{ $a -> provinsi}}</td>
+                        <td>{{ $a -> pemenang_1_1}} <br> {{ $a -> pemenang_1_2}}</td>
+                        <td>{{ $a -> pemenang_2_1}} <br> {{ $a -> pemenang_2_2}}</td>
+                        <td>{{ $a -> pemenang_3_1}} <br> {{ $a -> pemenang_3_2}}</td>
+                        <td>{{ $a -> favorit_1}} <br> {{ $a -> favorit_2}}</td>
+                        <td>{{ $a -> keterangan}}</td>
+                        <td></td>
+
+                        <td>
+                            @if ($a->media == "")
+                                <form role="form" action="" enctype="multipart/form-data">
+                                    <input type="file" name="media">
+                                </form>
+                            @else
+                                {{ $a -> media}}
+                            @endif
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+
         </table>
 
     </div>
+
+</div>
 
     
 
