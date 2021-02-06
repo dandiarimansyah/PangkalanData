@@ -142,6 +142,26 @@
                 })
             })
 
+            $(document).on('click', '#tombol_validasi', function(e){
+                e.preventDefault();
+                
+                Swal.fire({
+                    title: 'Validasi Data Terpilih?',
+                    text: "Data yang telah dicentang akan tervalidasi",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#008A67',
+                    cancelButtonColor: '#3085d6',
+                    cancelButtonText: 'Batal',
+                    confirmButtonText: 'Validasi',
+                    reverseButtons: true
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = link;
+                    }
+                })
+            })
+
             function jenis_lain(val){
                 var element=document.getElementById('jenis_buku_2');
                 var element2=document.getElementById('a');

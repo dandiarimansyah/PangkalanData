@@ -197,6 +197,7 @@ p {
 
 .menu {
     display: flex;
+    margin-left: 5px;
 }
 
 .tombol-menu {

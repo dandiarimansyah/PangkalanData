@@ -71,7 +71,7 @@
           </div>
           <div class="mini">
             <input name="SMA" type="text" class="input">
-            <p for="">SMA</p>
+            <p for="">SMA/K</p>
           </div>
           <div class="mini">
             <input name="SMP" type="text" class="input">
@@ -83,77 +83,77 @@
           </div>
           <div class="mini">
             <input name="T_4E" type="text" class="input">
-            <p for="">4E</p>
+            <p for="">IV/e</p>
           </div>
         </div>
 
         <div style="justify-content: center; margin-bottom:0" class="inputfield">
           <div class="mini">
             <input name="T_4D" type="text" class="input">
-            <p for="">4D</p>
+            <p for="">IV/d</p>
           </div>
           <div class="mini">
             <input name="T_4C" type="text" class="input">
-            <p for="">4C</p>
+            <p for="">IV/c</p>
           </div>
           <div class="mini">
             <input name="T_4B" type="text" class="input">
-            <p for="">4B</p>
+            <p for="">IV/b</p>
           </div>
           <div class="mini">
             <input name="T_4A" type="text" class="input">
-            <p for="">4A</p>
+            <p for="">IV/a</p>
           </div>
           <div class="mini">
             <input name="T_3D" type="text" class="input">
-            <p for="">3D</p>
+            <p for="">III/d</p>
           </div>
           <div class="mini">
             <input name="T_3C" type="text" class="input">
-            <p for="">3C</p>
+            <p for="">III/c</p>
           </div>
           <div class="mini">
             <input name="T_3B" type="text" class="input">
-            <p for="">3B</p>
+            <p for="">III/b</p>
           </div>
           <div class="mini">
             <input name="T_3A" type="text" class="input">
-            <p for="">3A</p>
+            <p for="">III/a</p>
           </div>
         </div>
 
         <div style="justify-content: center; margin-bottom:0" class="inputfield">
           <div class="mini">
             <input name="T_2D" type="text" class="input">
-            <p for="">2D</p>
+            <p for="">II/d</p>
           </div>
           <div class="mini">
             <input name="T_2C" type="text" class="input">
-            <p for="">2C</p>
+            <p for="">II/c</p>
           </div>
           <div class="mini">
             <input name="T_2B" type="text" class="input">
-            <p for="">2B</p>
+            <p for="">II/b</p>
           </div>
           <div class="mini">
             <input name="T_2A" type="text" class="input">
-            <p for="">2A</p>
+            <p for="">II/a</p>
           </div>
           <div class="mini">
             <input name="T_1D" type="text" class="input">
-            <p for="">1D</p>
+            <p for="">I/d</p>
           </div>
           <div class="mini">
             <input name="T_1C" type="text" class="input">
-            <p for="">1C</p>
+            <p for="">I/c</p>
           </div>
           <div class="mini">
             <input name="T_1B" type="text" class="input">
-            <p for="">1B</p>
+            <p for="">I/b</p>
           </div>
           <div class="mini">
             <input name="T_1A" type="text" class="input">
-            <p for="">1A</p>
+            <p for="">I/a</p>
           </div>
         </div>
 

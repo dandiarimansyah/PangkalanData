@@ -10,6 +10,8 @@
     <th>INPUT DATA PESULUH</th>
   </div>
 
+  <p style="text-align: center; font-size:15px">Silahkan Pilih Data Penyuluhan Terlebih Dahulu</p>
+  
   <!-- TABLE -->
   <div class="validasi">
     <table class="content-table">
