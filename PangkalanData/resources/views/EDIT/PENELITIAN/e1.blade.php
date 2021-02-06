@@ -27,7 +27,7 @@
                     <th>PUBLIKASI</th>
                     <th>TAHUN TERBIT</th>
                     <th>MEDIA</th>
-                    <th>EDIT / HAPUS</th>
+                    <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
 
@@ -55,7 +55,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="13" align="center">Tidak ada Data</td>
+                        <td colspan="14" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 

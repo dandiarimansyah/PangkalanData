@@ -11,26 +11,26 @@
     </div>
 
     <div class="ketjudul" style="margin-top:0px ;">
-        <th>Klik ✅ untuk Memilih Data yang akan divalidasi</th>
+        <th>Klik tombol <b>"Pilih Semua"</b> untuk mencentang semua data</th>
         <br>
-        <th>Kemudian Klik Tombol "Validasi Data" untuk Melakukan Validasi</th>
+        <th>Klik tombol <b>"Validasi Data"</b>  untuk memvalidasi data yang telah dicentang</th>
     </div>
 
     <div class="menu" style="display:flex; justify-content:center; margin-top:3px;">
         <div class="btn-group kategori">
             <button type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                EXPORT TO PDF 
+                EKSPOR KE PDF 
             </button>
         </div>
         
         <div class="btn-group kategori">
-            <button onclick="VALIDATOR()" id="valid" type="button" class="btn btn-warning" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+            <button onclick="VALIDATOR()" id="valid" type="button" class="btn" style="border-radius: 5px; color:white; background:#df7700">
                 PILIH SEMUA <span id="uncheck" style="display:inline">⬜</span> <span id="check" style="display:none">✅</span> 
             </button>
         </div>
 
         <div class="btn-group kategori">
-            <button type="button" class="btn btn-success" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+            <button id="tombol_validasi" type="button" class="btn btn-success" style="border-radius: 5px">
                 VALIDASI DATA
             </button>
         </div>
@@ -65,7 +65,13 @@
                             <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
                         </td>
                         <td>
-                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/anggaran/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Validasi</a>
+                            <div class="validate"> 
+                            @if ($a -> validasi == "belum")
+                                <input class="check" type="checkbox">
+                            @else
+                                <p>Tervalidasi</p>
+                            @endif
+                            </div>
                         </td>
                     </tr>
                 @empty
