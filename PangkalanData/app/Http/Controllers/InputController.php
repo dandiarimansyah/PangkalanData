@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+
 use Illuminate\Http\Request;
 use App\Models\Anggaran;
 use App\Models\Bengkel_Sastra_Dan_Bahasa;
@@ -173,12 +175,13 @@ class InputController extends Controller
     public function store_a3(Request $request)
     {
         $request->validate([
-            'tanggal_diperbarui' => ['required'],
-            'unit' => ['required'],
+            'unit' => ['required']
         ]);
 
+        $tanggal = new Carbon();
+
         $data = new Kepegawaian();
-        $data->tanggal_diperbarui = $request->tanggal_diperbarui;
+        $data->tanggal_diperbarui = $tanggal;
         $data->unit = $request->unit;
         $data->semua_kelamin = $request->semua_kelamin;
         $data->laki = $request->laki;
