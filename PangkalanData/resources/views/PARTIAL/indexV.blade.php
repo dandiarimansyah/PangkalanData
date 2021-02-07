@@ -22,6 +22,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" type="text/css" href="{{ asset('sweetalert2/sweetalert2.min.css') }}">
+        {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css"> --}}
 
     </head>
 
@@ -90,6 +91,10 @@
         @include('sweetalert::alert')
 
         <script src="{{ asset('sweetalert2/sweetalert2.min.js')}}"></script>
+        {{-- <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script> --}}
+        {{-- <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script> --}}
+
+        @stack('scripts')
 
         <script type="text/javascript">
             $('.icon').click(function(){
@@ -175,9 +180,9 @@
                 }
             }
 
-            @stack('scripts')
-
+            
         </script>
+        
 
     </body>
 </html>

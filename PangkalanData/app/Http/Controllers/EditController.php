@@ -171,17 +171,21 @@ class EditController extends Controller
         return view('EDIT.PENELITIAN.e1', compact('penelitian'));
     }
 
+
     //UPDATE KATEGORI A
+
     public function update_a1($id, Request $request)
     {
-        $anggaran = Anggaran::where('id', $id)->update([
-            "unit" => $request['unit'],
-            "tahun_anggaran" => $request['tahun_anggaran'],
-            "nilai_anggaran" => $request['nilai_anggaran'],
-        ]);
+        $data = Anggaran::where('id', $id)
+            ->update([
+                'unit' => $request->get('unit'),
+                'tahun_anggaran' => $request->get('tahun_anggaran'),
+                'nilai_anggaran' => $request->get('nilai_anggaran'),
+            ]);
 
-        return redirect('/operator/edit/sekretariat/anggaran')->with('success', 'Data Berhasil Diubah!');
+        return redirect('/operator/edit/sekretariat/anggaran')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
     public function update_a2($id, Request $request)
     {
         $realisasi_anggaran = Realisasi_Anggaran::all();
