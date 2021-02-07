@@ -405,7 +405,7 @@ class InputController extends Controller
         $data->sasaran = $request->sasaran;
         $data->jumlah_peserta = $request->jumlah_peserta;
         $data->materi = $request->materi;
-        $data->media = $request->media->media->store('public/penyuluhan');
+        $data->media = $request->media->store('public/penyuluhan');
         $data->save();
 
         return redirect('/operator/input/kebahasaan/penyuluhan')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -443,7 +443,7 @@ class InputController extends Controller
         $data->kategori = $request->kategori;
         $data->tahun = $request->tahun;
         $data->deskripsi = $request->deskripsi;
-        $data->media = $request->media->media->store('public/penghargaan_bahasa');
+        $data->media = $request->media->store('public/penghargaan_bahasa');
         $data->save();
 
         return redirect('/operator/input/kebahasaan/penghargaan_bahasa')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -465,7 +465,7 @@ class InputController extends Controller
         $data->pemenang_3_1 = $request->pemenang_3_1;
         $data->pemenang_3_2 = $request->pemenang_3_2;
         $data->keterangan = $request->keterangan;
-        $data->media = $request->media->media->store('public/duta_bahasa_nasional');
+        $data->media = $request->media->store('public/duta_bahasa_nasional');
         $data->save();
 
         return redirect('/operator/input/kebahasaan/duta_bahasa_nasional')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -489,7 +489,7 @@ class InputController extends Controller
         $data->favorit_1 = $request->favorit_1;
         $data->favorit_2 = $request->favorit_2;
         $data->keterangan = $request->keterangan;
-        $data->media = $request->media->media->store('public/duta_bahasa_provinsi');
+        $data->media = $request->media->store('public/duta_bahasa_provinsi');
         $data->save();
 
         return redirect('/operator/input/kebahasaan/duta_bahasa_provinsi')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -514,7 +514,7 @@ class InputController extends Controller
         $data->jumlah_sekolah_yang_dibina = $request->jumlah_sekolah_yang_dibina;
         $data->nama_sekolah_yang_dibina = $request->nama_sekolah_yang_dibina;
         $data->aktivitas = $request->aktivitas;
-        $data->media = $request->media->media->store('public/bengkel_sastra_dan_bahasa');
+        $data->media = $request->media->store('public/bengkel_sastra_dan_bahasa');
         $data->save();
 
         return redirect('/operator/input/kesastraan/bengkel_sastra_dan_bahasa')->with('toast_success', 'Data Berhasil Ditambahkan!');

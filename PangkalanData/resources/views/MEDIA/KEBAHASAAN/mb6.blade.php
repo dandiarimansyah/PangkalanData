@@ -48,7 +48,6 @@
                         <td>{{ $a -> pemenang_2_1}} <br> {{ $a -> pemenang_2_2}}</td>
                         <td>{{ $a -> pemenang_3_1}} <br> {{ $a -> pemenang_3_2}}</td>
                         <td>{{ $a -> keterangan}}</td>
-                        <td></td>
 
                         <td>
                             @if ($a->media == "")

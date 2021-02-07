@@ -52,7 +52,6 @@
                         <td>{{ $a -> sasaran}}</td>
                         <td>{{ $a -> jumlah_peserta}}</td>
                         <td>{{ $a -> materi}}</td>
-                        <td></td>
                         
                         <td>
                             @if ($a->media == "")
