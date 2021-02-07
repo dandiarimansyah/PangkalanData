@@ -44,7 +44,7 @@
                 @forelse ($inventarisasi as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td></td>
+                        <td>{{ $a -> created_at->format('m-d-Y')}}</td>
                         <td>{{ $a -> unit}}</td>
                         <td></td>
                         <td>{{ $a -> laptop}}</td>
