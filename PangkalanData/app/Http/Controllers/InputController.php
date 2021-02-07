@@ -235,7 +235,12 @@ class InputController extends Controller
         $data->instansi_1 = $request->instansi_1;
         $data->ttd_2 = $request->ttd_2;
         $data->instansi_2 = $request->instansi_2;
-        $data->media = $request->media->store('public/kerja_sama');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/kerja_sama');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/sekretariat/kerja_sama')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -257,7 +262,12 @@ class InputController extends Controller
         $data->kondisi = $request->kondisi;
         $data->status_peroleh = $request->status_peroleh;
         $data->keterangan = $request->keterangan;
-        $data->media = $request->media->store('public/tanah_dan_bangunan');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/tanah_dan_bangunan');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/sekretariat/tanah_dan_bangunan')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -336,7 +346,12 @@ class InputController extends Controller
         $data->tahun_terbit = $request->tahun_terbit;
         $data->keterangan = $request->keterangan;
         $data->info_produk = $request->info_produk;
-        $data->media = $request->media->store('public/kamus_ensiklopedia');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/kamus_ensiklopedia');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kebahasaan/kamus_ensiklopedia')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -361,7 +376,12 @@ class InputController extends Controller
         $data->penerbit = $request->penerbit;
         $data->keterangan = $request->keterangan;
         $data->info_produk = $request->info_produk;
-        $data->media = $request->media->store('public/jurnal_majalah');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/jurnal_majalah');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kebahasaan/jurnal_majalah')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -382,7 +402,12 @@ class InputController extends Controller
         $data->tahun_terbit = $request->tahun_terbit;
         $data->deskripsi = $request->deskripsi;
         $data->info_produk = $request->info_produk;
-        $data->media = $request->media->store('public/terbitan_umum');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/terbitan_umum');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kebahasaan/terbitan_umum')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -405,7 +430,12 @@ class InputController extends Controller
         $data->sasaran = $request->sasaran;
         $data->jumlah_peserta = $request->jumlah_peserta;
         $data->materi = $request->materi;
-        $data->media = $request->media->store('public/penyuluhan');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/penyuluhan');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kebahasaan/penyuluhan')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -443,7 +473,12 @@ class InputController extends Controller
         $data->kategori = $request->kategori;
         $data->tahun = $request->tahun;
         $data->deskripsi = $request->deskripsi;
-        $data->media = $request->media->store('public/penghargaan_bahasa');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/penghargaan_bahasa');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kebahasaan/penghargaan_bahasa')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -465,7 +500,13 @@ class InputController extends Controller
         $data->pemenang_3_1 = $request->pemenang_3_1;
         $data->pemenang_3_2 = $request->pemenang_3_2;
         $data->keterangan = $request->keterangan;
-        $data->media = $request->media->store('public/duta_bahasa_nasional');
+
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/duta_bahasa_nasional');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kebahasaan/duta_bahasa_nasional')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -489,7 +530,14 @@ class InputController extends Controller
         $data->favorit_1 = $request->favorit_1;
         $data->favorit_2 = $request->favorit_2;
         $data->keterangan = $request->keterangan;
-        $data->media = $request->media->store('public/duta_bahasa_provinsi');
+
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/duta_bahasa_provinsi');
+        }
+
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kebahasaan/duta_bahasa_provinsi')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -514,7 +562,12 @@ class InputController extends Controller
         $data->jumlah_sekolah_yang_dibina = $request->jumlah_sekolah_yang_dibina;
         $data->nama_sekolah_yang_dibina = $request->nama_sekolah_yang_dibina;
         $data->aktivitas = $request->aktivitas;
-        $data->media = $request->media->store('public/bengkel_sastra_dan_bahasa');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/bengkel_sastra_dan_bahasa');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kesastraan/bengkel_sastra_dan_bahasa')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -530,7 +583,12 @@ class InputController extends Controller
         $data->kategori = $request->kategori;
         $data->tahun = $request->tahun;
         $data->deskripsi = $request->deskripsi;
-        $data->media = $request->media->store('public/penghargaan_sastra');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/penghargaan_sastra');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kesastraan/penghargaan_sastra')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -549,7 +607,12 @@ class InputController extends Controller
         $data->pemenang_3 = $request->pemenang_3;
         $data->favorit = $request->favorit;
         $data->keterangan = $request->keterangan;
-        $data->media = $request->media->store('public/musikalisasi_puisi_nasional');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/musikalisasi_puisi_nasional');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kesastraan/musikalisasi_puisi_nasional')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -569,7 +632,12 @@ class InputController extends Controller
         $data->pemenang_3 = $request->pemenang_3;
         $data->favorit = $request->favorit;
         $data->keterangan = $request->keterangan;
-        $data->media = $request->media->store('public/musikalisasi_puisi_provinsi');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/musikalisasi_puisi_provinsi');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/kesastraan/musikalisasi_puisi_provinsi')->with('toast_success', 'Data Berhasil Ditambahkan!');
@@ -643,7 +711,12 @@ class InputController extends Controller
         $data->publikasi = $request->publikasi;
         $data->tahun_terbit = $request->tahun_terbit;
         $data->abstrak = $request->abstrak;
-        $data->media = $request->media->store('public/penelitian');
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/penelitian');
+        }
+        $data->media = $media;
         $data->save();
 
         return redirect('/operator/input/penelitian/penelitian')->with('toast_success', 'Data Berhasil Ditambahkan!');

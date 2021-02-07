@@ -85,6 +85,11 @@
             <label>Keterangan</label>
             <textarea name="keterangan" class="textarea"></textarea>
         </div>  
+
+        <div class="inputfield-kecil">
+          <label for="">Unggah Media</label>
+          <input type="file" name="media">
+        </div>
         
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">
