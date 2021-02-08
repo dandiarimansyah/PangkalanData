@@ -185,7 +185,6 @@ Route::group(['middleware' => ['auth']], function () {
 
         //UPDATE KATEGORI A
         Route::put('/operator/edit/sekretariat/anggaran/{id}', [EditController::class, 'update_a1']);
-
         Route::put('/operator/edit/sekretariat/realisasi_anggaran/{id}', [EditController::class, 'update_a2']);
         Route::put('/operator/edit/sekretariat/kepegawaian/{id}', [EditController::class, 'update_a3']);
         Route::put('/operator/edit/sekretariat/kerja_sama/{id}', [EditController::class, 'update_a4']);

@@ -188,9 +188,15 @@ class EditController extends Controller
 
     public function update_a2($id, Request $request)
     {
-        $realisasi_anggaran = Realisasi_Anggaran::all();
+        $data = Realisasi_Anggaran::where('id', $id)
+            ->update([
+                'unit' => $request->get('unit'),
+                'nilai_realisasi' => $request->get('nilai_realisasi'),
+                'besar_dana' => $request->get('besar_dana'),
+                'keterangan' => $request->get('keterangan'),
+            ]);
 
-        return view('EDIT.SEKRETARIAT.a2', compact('realisasi_anggaran'));
+        return redirect('/operator/edit/sekretariat/realisasi_anggaran')->with('toast_success', 'Data Berhasil Diedit!');
     }
     public function update_a3($id, Request $request)
     {

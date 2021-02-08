@@ -35,7 +35,7 @@
                             <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 
-                                data-target="#edit_modal"
+                                data-target="#edit-modal"
                                 data-id="{{ $a->id }}"
                                 data-unit="{{ $a->unit }}"
                                 data-tahun_anggaran="{{ $a->tahun_anggaran }}"
@@ -56,7 +56,7 @@
 
     </div>
 
-    <div class="modal fade" id="edit_modal">
+    <div class="modal fade" id="edit-modal">
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
             <div class="modal-header">
@@ -68,7 +68,7 @@
             <div class="modal-body">
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
-                        <form id="edit_form" action="/operator/edit/sekretariat/anggaran/{{$a->id}}" method="POST">
+                        <form id="edit_form" action="" method="POST">
                             @csrf
                             @method('PUT')
 
@@ -113,14 +113,16 @@
                 let unit = $(this).data('unit');
                 let tahun_anggaran = $(this).data('tahun_anggaran');
                 let nilai_anggaran = $(this).data('nilai_anggaran');
+                let id = $(this).data('id');
 
                 $('#unit option').filter(function(){
                     return ($(this).val() == unit)
-                }).prop('selected',true);
+                }).prop('selected', true);
 
                 $('#tahun_anggaran').val(tahun_anggaran);
                 $('#nilai_anggaran').val(nilai_anggaran);
-
+                
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
           })
       </script>
 @endpush
