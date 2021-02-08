@@ -93,7 +93,7 @@
                         <div class="inputfield-select">
                             <label>Provinsi*</label>
                             <div class="custom_select">
-                            <select name="provinsi">
+                            <select id="provinsi" name="provinsi">
                                 <option disabled="disabled" selected="selected" value="">-- Pilih Provinsi--</option>
                                 <option value="Jawa Tengah">Jawa Tengah</option>
                             </select>
@@ -103,56 +103,52 @@
                         <div class="alert-danger">{{ $errors->first('tahun') }}</div>
                         <div class="inputfield-kecil">
                             <label>Tahun</label>
-                            <input name="tahun" type="text" class="input">
+                            <input id="tahun" name="tahun" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_1') }}</div>
                         <div class="inputfield">
                             <label>Pemenang I</label>
-                            <input name="pemenang_1" type="text" class="input">
+                            <input id="pemenang_1" name="pemenang_1" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_2') }}</div>
                         <div class="inputfield">
                             <label>Pemenang II</label>
-                            <input name="pemenang_2" type="text" class="input">
+                            <input id="pemenang_2" name="pemenang_2" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_3') }}</div>
                         <div class="inputfield">
                             <label>Pemenang III</label>
-                            <input name="pemenang_3" type="text" class="input">
+                            <input id="pemenang_3" name="pemenang_3" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('favorit') }}</div>
                         <div class="inputfield">
                             <label>Favorit</label>
-                            <input name="favorit" type="text" class="input">
+                            <input id="favorit" name="favorit" type="text" class="input">
                         </div>     
 
                         <div class="inputfield">
                             <label>Keterangan</label>
-                            <textarea name="keterangan" class="textarea"></textarea>
+                            <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
                         </div> 
 
                         <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
-                        <input type="file" name="media">
+                        <input id="media" type="file" name="media">
                         </div>
 
-                        <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                        </div> 
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>   
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -164,19 +160,30 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let provinsi = $(this).data('provinsi');
+                let tahun = $(this).data('tahun');
+                let pemenang_1 = $(this).data('pemenang_1');
+                let pemenang_2 = $(this).data('pemenang_2');
+                let pemenang_3 = $(this).data('pemenang_3');
+                let favorit = $(this).data('favorit');
+                let keterangan = $(this).data('keterangan');
+                let media = $(this).data('media');
+
                 let id = $(this).data('id');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
+                $('#provinsi option').filter(function(){
+                    return ($(this).val() == provinsi)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
+                $('#tahun').val(tahun);
+                $('#pemenang_1').val(pemenang_1);
+                $('#pemenang_2').val(pemenang_2);
+                $('#pemenang_3').val(pemenang_3);
+                $('#favorit').val(favorit);
+                $('#keterangan').val(keterangan);
+                $('#media').val(media);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/kesastraan/musikalisasi_puisi_provinsi/' + id);
           })
       </script>
 @endpush

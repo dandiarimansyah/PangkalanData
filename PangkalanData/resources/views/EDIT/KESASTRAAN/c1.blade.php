@@ -112,8 +112,8 @@
                         <div class="inputfield-select">
                             <label>Provinsi*</label>
                             <div class="custom_select">
-                                <select name="provinsi">
-                                <option value="Jawa Tengah">Jawa Tengah</option>
+                                <select id="" name="provinsi">
+                                    <option value="Jawa Tengah">Jawa Tengah</option>
                                 </select>
                             </div>
                         </div> 
@@ -121,37 +121,37 @@
                         <div class="alert-danger">{{ $errors->first('kota') }}</div>
                         <div class="inputfield">
                             <label>Kabupaten/Kota*</label>
-                            <input name="kota" type="text" class="input">
+                            <input id="" name="kota" type="text" class="input">
                         </div> 
                 
                         <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>
                         <div class="inputfield">
                             <label>Nama Kegiatan</label>
-                            <input name="nama_kegiatan" type="text" class="input">
+                            <input id="" name="nama_kegiatan" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tanggal_awal_pelaksanaan') }}</div>
                         <div class="inputfield-date">
                             <label>Tanggal Awal Pelaksanaan</label>
-                            <input name="tanggal_awal_pelaksanaan" type="date" class="input">
+                            <input id="" name="tanggal_awal_pelaksanaan" type="date" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tanggal_akhir_pelaksanaan') }}</div>
                         <div class="inputfield-date">
                             <label>Tanggal Akhir Pelaksanaan</label>
-                            <input name="tanggal_akhir_pelaksanaan" type="date" class="input">
+                            <input id="" name="tanggal_akhir_pelaksanaan" type="date" class="input">
                         </div> 
                 
                         <div class="alert-danger">{{ $errors->first('pemateri') }}</div>
                         <div class="inputfield">
                             <label>Pemateri</label>
-                            <input name="pemateri" type="text" class="input">
+                            <input id="" name="pemateri" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('jumlah_peserta') }}</div>
                         <div class="inputfield-kecil">
                             <label>Jumlah Peserta</label>
-                            <input name="jumlah_peserta" type="text" class="input">
+                            <input id="" name="jumlah_peserta" type="text" class="input">
                             <p>Orang</p>
                         </div> 
 

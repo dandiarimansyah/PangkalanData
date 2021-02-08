@@ -347,7 +347,7 @@ class EditController extends Controller
             'media' => $request->get('media'),
         ]);
 
-        return redirect('/operator/edit/kebahasaan/kamus')->with('toast_success', 'Data Berhasil Diedit!');
+        return redirect('/operator/edit/kebahasaan/kamus_ensiklopedia')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
       ////////////////////////////////////////////
@@ -367,7 +367,7 @@ class EditController extends Controller
             'media' => $request->get('media'),
         ]);
 
-        return redirect('/operator/edit/kebahasaan/jurnal')->with('toast_success', 'Data Berhasil Diedit!');
+        return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
       ////////////////////////////////////////////
