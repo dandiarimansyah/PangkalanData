@@ -90,90 +90,153 @@
             <div class="modal-body">
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
-                <form>
-                    
+                    <form id="edit_form" action="" method="POST">
+                            @csrf
+                            @method('PUT')
+                                
+                    <div class="alert-danger">{{ $errors->first('kategori') }}</div>
                     <div class="inputfield-select">
                         <label>Kategori</label>
                         <div class="custom_select">
-                        <select>
-                            <option value="">Internal</option>
-                            <option value="">Eksternal</option>
+                        <select id="kategori" name="kategori">
+                            <option value="Internal">Internal</option>
+                            <option value="Eksternal">Eksternal</option>
                         </select>
                         </div>
                     </div>
 
+                    <div class="alert-danger">{{ $errors->first('instansi') }}</div>
                     <div class="inputfield">
                         <label>Nama Instansi*</label>
-                        <input type="text" class="input">
+                        <input id="instansi" name="instansi" type="text" class="input">
                     </div> 
 
-                    <div class="inputfield">
+                    <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
+                    <div class="inputfield-date">
                         <label>Tanggal Kerja sama*</label>
-                        <input type="text" class="input">
+                        <input id="tanggal_awal" name="tanggal_awal" type="date" class="input">
                     </div> 
 
-                    <div class="inputfield">
+                    <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
+                    <div class="inputfield-date">
                         <label>Tanggal Berakhir</label>
-                        <input type="text" class="input">
+                        <input id="tanggal_akhir" name="tanggal_akhir" type="date" class="input">
                     </div> 
                     
+                    <div class="alert-danger">{{ $errors->first('nomor') }}</div>
                     <div class="inputfield">
                         <label>No.Kerja sama</label>
-                        <input type="text" class="input">
+                        <input id="nomor" name="nomor" type="text" class="input">
                     </div> 
 
+                    <div class="alert-danger">{{ $errors->first('perihal') }}</div>
                     <div class="inputfield">
                         <label>Perihal</label>
-                        <textarea class="textarea"></textarea>
+                        <textarea id="perihal" name="perihal" class="textarea"></textarea>
                     </div>   
 
                     <div class="inputfield">
                         <label>Keterangan</label>
-                        <textarea class="textarea"></textarea>
+                        <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
                     </div>   
 
+                    <div class="alert-danger">{{ $errors->first('ttd_1') }}</div>
                     <div class="inputfield">
                         <label>Ditandatangani Oleh (1)</label>
-                        <input type="text" class="input">
+                        <input id="ttd_1" name="ttd_1" type="text" class="input">
                     </div> 
 
+                    <div class="alert-danger">{{ $errors->first('instansi_1') }}</div>
                     <div class="inputfield">
                         <label>Instansi (1)</label>
                         <div class="custom_select" style="width: 100%">
-                        <select>
-                            <option value="">Badan Pengembangan Bahasa dan Perbukuan</option>
-                            <option value="">Balai Bahasa Jawa Tengah</option>
+                        <select id="instansi_1" name="instansi_1">
+                            <option value="Badan Pengembangan Bahasa dan Perbukuan">Badan Pengembangan Bahasa dan Perbukuan</option>
+                            <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
                         </select>
                         </div>
                     </div> 
 
+                    <div class="alert-danger">{{ $errors->first('ttd_2') }}</div>
                     <div class="inputfield">
                         <label>Ditandatangani Oleh (2)</label>
-                        <input type="text" class="input">
+                        <input id="ttd_2" name="ttd_2" type="text" class="input">
                     </div> 
 
+                    <div class="alert-danger">{{ $errors->first('instansi_2') }}</div>
                     <div class="inputfield">
                         <label>Instansi (2)</label>
                         <div class="custom_select" style="width: 100%">
-                        <select>
-                            <option value="">Badan Pengembangan Bahasa dan Perbukuan</option>
-                            <option value="">Balai Bahasa Jawa Tengah</option>
+                        <select id="instansi_2" name="instansi_2">
+                            <option value="Badan Pengembangan Bahasa dan Perbukuan">Badan Pengembangan Bahasa dan Perbukuan</option>
+                            <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
                         </select>
                         </div>
                     </div> 
+
+                    <div class="inputfield-kecil">
+                    <label for="">Unggah File</label>
+                    <input type="file" name="media">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </div>
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
 
-    
-
 @endsection
+
+@push('scripts')
+      <script>
+
+          $(document).on('click','#edit_item',function(){
+                let kategori = $(this).data('kategori');
+                let instansi_1 = $(this).data('instansi_1');
+                let instansi_2 = $(this).data('instansi_2');
+
+                let instansi = $(this).data('instansi');
+                let tanggal_awal = $(this).data('tanggal_awal');
+                let tanggal_akhir = $(this).data('tanggal_akhir');
+                let nomor = $(this).data('nomor');
+                let perihal = $(this).data('perihal');
+                let keterangan = $(this).data('keterangan');
+                let ttd_1 = $(this).data('ttd_1');
+                let ttd_2 = $(this).data('ttd_2');
+                let media = $(this).data('media');
+
+                let id = $(this).data('id');
+
+                $('#kategori option').filter(function(){
+                    return ($(this).val() == kategori)
+                }).prop('selected', true);
+
+                $('#instansi_1 option').filter(function(){
+                    return ($(this).val() == instansi_1)
+                }).prop('selected', true);
+
+                $('#instansi_2 option').filter(function(){
+                    return ($(this).val() == instansi_2)
+                }).prop('selected', true);
+
+                $('#instansi').val(instansi);
+                $('#tanggal_awal').val(tanggal_awal);
+                $('#tanggal_akhir').val(tanggal_akhir);
+                $('#nomor').val(nomor);
+                $('#perihal').val(perihal);
+                $('#keterangan').val(keterangan);
+                $('#ttd_1').val(ttd_1);
+                $('#ttd_2').val(ttd_2);
+                $('#media').val(media);
+                
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/kerja_sama/' + id);
+          })
+      </script>
+@endpush

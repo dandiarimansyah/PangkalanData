@@ -214,6 +214,7 @@ class EditController extends Controller
             'S2' => $request->get('S2'),
             'S1' => $request->get('S1'),
             'D3' => $request->get('D3'),
+            'SMK' => $request->get('SMK'),
             'SMA' => $request->get('SMA'),
             'SMP' => $request->get('SMP'),
             'SD' => $request->get('SD'),
