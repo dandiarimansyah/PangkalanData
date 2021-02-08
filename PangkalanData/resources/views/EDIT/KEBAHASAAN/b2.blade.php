@@ -49,7 +49,23 @@
                       <td></td>
 
                       <td style="display: flex; justify-content:center">
-                          <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-kategori="{{ $a->kategori }}"
+                                data-judul="{{ $a->judul }}"
+                                data-tim_redaksi="{{ $a->tim_redaksi }}"
+                                data-volume="{{ $a->volume }}"
+                                data-no_issn="{{ $a->no_issn }}"
+                                data-lingkup="{{ $a->lingkup }}"
+                                data-penerbit="{{ $a->penerbit }}"
+                                data-keterangan="{{ $a->keterangan }}"
+                                data-info_produk="{{ $a->info_produk }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
+
                           <a class="hapus" href="{{ url('/operator/edit/kebahasaan/jurnal/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                       </td>
                   </tr>
@@ -77,75 +93,96 @@
             <div class="modal-body">
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
-              <form>
+                    <form id="edit_form" action="" method="POST">
+                            @csrf
+                            @method('PUT')
 
-                <div class="inputfield-select">
-                    <label>Kategori*</label>
-                    <div class="custom_select">
-                      <select>
-                        <option value="">JURNAL</option>
-                        <option value="">MAJALAH</option>
-                      </select>
-                    </div>
-                </div> 
-        
-                <div class="inputfield">
-                    <label>Judul*</label>
-                    <input type="text" class="input">
-                </div> 
-        
-                <div class="inputfield">
-                    <label>Tim Redaksi*</label>
-                    <input type="text" class="input">
-                </div> 
-        
-                <div class="inputfield">
-                    <label>Volume</label>
-                    <input type="text" class="input">
-                </div> 
-        
-                <div class="inputfield">
-                    <label>No.ISSN</label>
-                    <input type="text" class="input">
-                </div> 
-        
-                <div class="inputfield-select">
-                    <label>Lingkup*</label>
-                    <div class="custom_select">
-                      <select>
-                        <option value="">DAERAH</option>
-                        <option value="">NASIONAL</option>
-                        <option value="">INTERNASIONAL</option>
-                      </select>
-                    </div>
-                </div> 
-        
-                <div class="inputfield">
-                    <label>Penerbit</label>
-                    <input type="text" class="input">
-                </div> 
-        
-                <div class="inputfield">
-                    <label>Tahun Terbit</label>
-                    <input type="text" class="input">
-                </div> 
-        
-                <div class="inputfield">
-                    <label>Keterangan</label>
-                    <textarea class="textarea"></textarea>
-                </div>  
-        
-                <div class="inputfield-select">
-                    <label>Info Produk</label>
-                    <div class="custom_select">
-                      <select>
-                        <option value="">--Pilih Info--</option>
-                        <option value="">Produk Pusat</option>
-                        <option value="">Produk Balai/Kantor</option>
-                        <option value="">Produk Luar</option>
-                      </select>
-                    </div>
-                </div> 
+                      <div class="alert-danger">{{ $errors->first('kategori') }}</div>
+                      <div class="inputfield-select">
+                          <label>Kategori*</label>
+                          <div class="custom_select">
+                            <select name="kategori">
+                              <option value="JURNAL">JURNAL</option>
+                              <option value="MAJALAH">MAJALAH</option>
+                            </select>
+                          </div>
+                      </div> 
+
+                      <div class="alert-danger">{{ $errors->first('judul') }}</div>
+                      <div class="inputfield">
+                          <label>Judul*</label>
+                          <input name="judul" type="text" class="input">
+                      </div> 
+
+                      <div class="alert-danger">{{ $errors->first('tim_redaksi') }}</div>
+                      <div class="inputfield">
+                          <label>Tim Redaksi*</label>
+                          <input name="tim_redaksi" type="text" class="input">
+                      </div> 
+
+                      <div class="alert-danger">{{ $errors->first('volume') }}</div>
+                      <div class="inputfield">
+                          <label>Volume</label>
+                          <input name="volume" type="text" class="input">
+                      </div> 
+
+                      <div class="alert-danger">{{ $errors->first('no_issn') }}</div>
+                      <div class="inputfield">
+                          <label>No.ISSN</label>
+                          <input name="no_issn" type="text" class="input">
+                      </div> 
+
+                      <div class="alert-danger">{{ $errors->first('lingkup') }}</div>
+                      <div class="inputfield-select">
+                          <label>Lingkup*</label>
+                          <div class="custom_select">
+                            <select name="lingkup">
+                              <option value="DAERAH">DAERAH</option>
+                              <option value="NASIONAL">NASIONAL</option>
+                              <option value="INTERNASIONAL">INTERNASIONAL</option>
+                            </select>
+                          </div>
+                      </div> 
+
+                      <div class="alert-danger">{{ $errors->first('penerbit') }}</div>
+                      <div class="inputfield">
+                          <label>Penerbit</label>
+                          <input name="penerbit" type="text" class="input">
+                      </div> 
+
+                      <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
+                      <div class="inputfield">
+                          <label>Tahun Terbit</label>
+                          <input name="tahun_terbit" type="text" class="input">
+                      </div> 
+
+                      <div class="inputfield">
+                          <label>Keterangan</label>
+                          <textarea name="keterangan" class="textarea"></textarea>
+                      </div>  
+
+                      <div class="alert-danger">{{ $errors->first('info_produk') }}</div>
+                      <div class="inputfield-select">
+                          <label>Info Produk</label>
+                          <div class="custom_select">
+                            <select name="info_produk">
+                              <option selected disabled value="">--Pilih Info--</option>
+                              <option value="Produk Pusat">Produk Pusat</option>
+                              <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
+                              <option value="Produk Luar">Produk Luar</option>
+                            </select>
+                          </div>
+                      </div> 
+
+                      <div class="inputfield-kecil">
+                        <label for="">Unggah Media</label>
+                        <input type="file" name="media">
+                      </div>
+                      
+                      <div class="tombol">
+                        <input type="reset" value="Ulangi" class="reset">
+                        <input type="submit" value="Simpan" class="inputan">
+                      </div> 
                 
               </form>
             </div>
@@ -160,3 +197,24 @@
       </div>
 
 @endsection
+
+@push('scripts')
+      <script>
+
+          $(document).on('click','#edit_item',function(){
+                let unit = $(this).data('unit');
+                let tahun_anggaran = $(this).data('tahun_anggaran');
+                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let id = $(this).data('id');
+
+                $('#unit option').filter(function(){
+                    return ($(this).val() == unit)
+                }).prop('selected', true);
+
+                $('#tahun_anggaran').val(tahun_anggaran);
+                $('#nilai_anggaran').val(nilai_anggaran);
+                
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+          })
+      </script>
+@endpush

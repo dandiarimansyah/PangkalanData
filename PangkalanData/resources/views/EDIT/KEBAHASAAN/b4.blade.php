@@ -57,7 +57,23 @@
                         <td></td>
                         
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-provinsi="{{ $a->unit }}"
+                                data-kota="{{ $a->kota }}"
+                                data-nama_kegiatan="{{ $a->nama_kegiatan }}"
+                                data-tanggal_awal="{{ $a->tanggal_awal }}"
+                                data-tanggal_akhir="{{ $a->tanggal_akhir }}"
+                                data-narasumber="{{ $a->narasumber }}"
+                                data-sasaran="{{ $a->sasaran }}"
+                                data-jumlah_peserta="{{ $a->jumlah_peserta }}"
+                                data-materi="{{ $a->materi }}"
+                                data-media="{{ $a->media }}"
+                                
+                            >Edit</button>
                             <a class="hapus" href="{{ url('/operator/edit/kebahasaan/penyuluhan/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>
@@ -84,56 +100,77 @@
             <div class="modal-body">
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
-                <form>
+                    <form id="edit_form" action="" method="POST">
+                            @csrf
+                            @method('PUT')
                     
-                    <div class="inputfield-select">
-                        <label>Provinsi*</label>
-                        <div class="custom_select">
-                        <select>
-                            <option value="">Jawa Tengah</option>
-                        </select>
+                        <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
+                        <div class="inputfield-select">
+                            <label>Provinsi*</label>
+                            <div class="custom_select">
+                            <select name="provinsi">
+                                <option value="Jawa Tengah">Jawa Tengah</option>
+                            </select>
+                            </div>
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('kota') }}</div>
+                        <div class="inputfield">
+                            <label>Kabupaten/Kota*</label>
+                            <input name="kota" type="text" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>
+                        <div class="inputfield">
+                            <label>Nama Kegiatan</label>
+                            <input name="nama_kegiatan" type="text" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
+                        <div class="inputfield-date">
+                            <label>Tanggal Awal Pelaksanaan</label>
+                            <input name="tanggal_awal" type="date" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
+                        <div class="inputfield-date">
+                            <label>Tanggal Akhir Pelaksanaan</label>
+                            <input name="tanggal_akhir" type="date" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('narasumber') }}</div>
+                        <div class="inputfield">
+                            <label>Narasumber</label>
+                            <input name="narasumber" type="text" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('sasaran') }}</div>
+                        <div class="inputfield">
+                            <label>Sasaran</label>
+                            <input name="sasaran" type="text" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('jumlah_peserta') }}</div>
+                        <div class="inputfield">
+                            <label>Jumlah Peserta</label>
+                            <input name="jumlah_peserta" type="text" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('materi') }}</div>
+                        <div class="inputfield">
+                            <label>Materi</label>
+                            <textarea name="materi" class="textarea"></textarea>
+                        </div>  
+
+                        <div class="inputfield-kecil">
+                        <label for="">Unggah Media</label>
+                        <input type="file" name="media">
                         </div>
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Kabupaten/Kota*</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Nama Kegiatan</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Tanggal Awal Pelaksanaan</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Tanggal Akhir Pelaksanaan</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>narasumber</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Sasaran</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Jumlah Peserta</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Materi</label>
-                        <textarea class="textarea"></textarea>
-                    </div> 
+                        
+                        <div class="tombol">
+                        <input type="reset" value="Ulangi" class="reset">
+                        <input type="submit" value="Simpan" class="inputan">
+                        </div> 
 
                 </form>
             </div>
@@ -149,3 +186,24 @@
 
 
 @endsection
+
+@push('scripts')
+      <script>
+
+          $(document).on('click','#edit_item',function(){
+                let unit = $(this).data('unit');
+                let tahun_anggaran = $(this).data('tahun_anggaran');
+                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let id = $(this).data('id');
+
+                $('#unit option').filter(function(){
+                    return ($(this).val() == unit)
+                }).prop('selected', true);
+
+                $('#tahun_anggaran').val(tahun_anggaran);
+                $('#nilai_anggaran').val(nilai_anggaran);
+                
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+          })
+      </script>
+@endpush

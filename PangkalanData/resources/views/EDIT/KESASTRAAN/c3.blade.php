@@ -41,7 +41,20 @@
                         <td></td>
 
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-tahun="{{ $a->tahun }}"
+                                data-pemenang_1="{{ $a->pemenang_1 }}"
+                                data-pemenang_2="{{ $a->pemenang_2 }}"
+                                data-pemenang_3="{{ $a->pemenang_3 }}"
+                                data-favorit="{{ $a->favorit }}"
+                                data-keterangan="{{ $a->keterangan }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
+
                             <a class="hapus" href="{{ url('/operator/edit/kesastraan/musikalisasi_puisi_nasional/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>
@@ -69,37 +82,54 @@
             <div class="modal-body">
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
-                <form>
+                    <form id="edit_form" action="" method="POST">
+                            @csrf
+                            @method('PUT')
                     
-                    <div class="inputfield-kecil">
-                        <label>Tahun</label>
-                        <input type="text" class="input">
-                    </div> 
+                        <div class="alert-danger">{{ $errors->first('tahun') }}</div>
+                        <div class="inputfield-kecil">
+                            <label>Tahun</label>
+                            <input name="tahun" type="text" class="input">
+                        </div> 
 
-                    <div class="inputfield">
-                        <label>Pemenang I</label>
-                        <input type="text" class="input">
-                    </div> 
+                        <div class="alert-danger">{{ $errors->first('pemenang_1') }}</div>
+                        <div class="inputfield">
+                            <label>Pemenang I</label>
+                            <input name="pemenang_1" type="text" class="input">
+                        </div> 
 
-                    <div class="inputfield">
-                        <label>Pemenang II</label>
-                        <input type="text" class="input">
-                    </div> 
+                        <div class="alert-danger">{{ $errors->first('pemenang_2') }}</div>
+                        <div class="inputfield">
+                            <label>Pemenang II</label>
+                            <input name="pemenang_2" type="text" class="input">
+                        </div> 
 
-                    <div class="inputfield">
-                        <label>Pemenang III</label>
-                        <input type="text" class="input">
-                    </div> 
+                        <div class="alert-danger">{{ $errors->first('pemenang_3') }}</div>
+                        <div class="inputfield">
+                            <label>Pemenang III</label>
+                            <input name="pemenang_3" type="text" class="input">
+                        </div> 
 
-                    <div class="inputfield">
-                        <label>Favorit</label>
-                        <input type="text" class="input">
-                    </div>     
+                        <div class="alert-danger">{{ $errors->first('favorit') }}</div>
+                        <div class="inputfield">
+                            <label>Favorit</label>
+                            <input name="favorit" type="text" class="input">
+                        </div>     
 
-                    <div class="inputfield">
-                        <label>Keterangan</label>
-                        <textarea class="textarea"></textarea>
-                    </div> 
+                        <div class="inputfield">
+                            <label>Keterangan</label>
+                            <textarea name="keterangan" class="textarea"></textarea>
+                        </div> 
+
+                        <div class="inputfield-kecil">
+                            <label for="">Unggah Media</label>
+                            <input type="file" name="media">
+                        </div>
+
+                        <div class="tombol">
+                        <input type="reset" value="Ulangi" class="reset">
+                        <input type="submit" value="Simpan" class="inputan">
+                        </div> 
 
                 </form>
             </div>
@@ -114,3 +144,24 @@
       </div>
 
 @endsection
+
+@push('scripts')
+      <script>
+
+          $(document).on('click','#edit_item',function(){
+                let unit = $(this).data('unit');
+                let tahun_anggaran = $(this).data('tahun_anggaran');
+                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let id = $(this).data('id');
+
+                $('#unit option').filter(function(){
+                    return ($(this).val() == unit)
+                }).prop('selected', true);
+
+                $('#tahun_anggaran').val(tahun_anggaran);
+                $('#nilai_anggaran').val(nilai_anggaran);
+                
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+          })
+      </script>
+@endpush

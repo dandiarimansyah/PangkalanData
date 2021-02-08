@@ -192,6 +192,7 @@ class EditController extends Controller
         return redirect('/operator/edit/sekretariat/anggaran')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
+      ////////////////////////////////////////////
     public function update_a2($id, Request $request)
     {
         $data = Realisasi_Anggaran::where('id', $id)
@@ -204,132 +205,409 @@ class EditController extends Controller
 
         return redirect('/operator/edit/sekretariat/realisasi_anggaran')->with('toast_success', 'Data Berhasil Diedit!');
     }
+    
+      ////////////////////////////////////////////
     public function update_a3($id, Request $request)
     {
-        $kepegawaian = Kepegawaian::all();
+        $data = Kepegawaian::where('id', $id)
+        ->update([
+            'tanggal_diperbarui' => $request->get('tanggal_diperbarui'),
+            'unit' => $request->get('unit'),
+            'semua_kelamin' => $request->get('semua_kelamin'),
+            'laki' => $request->get('laki'),
+            'perempuan' => $request->get('perempuan'),
+            'S3' => $request->get('S3'),
+            'S2' => $request->get('S2'),
+            'S1' => $request->get('S1'),
+            'D3' => $request->get('D3'),
+            'SMK' => $request->get('SMK'),
+            'SMA' => $request->get('SMA'),
+            'SMP' => $request->get('SMP'),
+            'SD' => $request->get('SD'),
+            'T_4E' => $request->get('T_4E'),
+            'T_4D' => $request->get('T_4D'),
+            'T_4C' => $request->get('T_4C'),
+            'T_4B' => $request->get('T_4B'),
+            'T_4A' => $request->get('T_4A'),
+            'T_3D' => $request->get('T_3D'),
+            'T_3C' => $request->get('T_3C'),
+            'T_3B' => $request->get('T_3B'),
+            'T_3A' => $request->get('T_3A'),
+            'T_2D' => $request->get('T_2D'),
+            'T_2C' => $request->get('T_2C'),
+            'T_2B' => $request->get('T_2B'),
+            'T_2A' => $request->get('T_2A'),
+            'T_1D' => $request->get('T_1D'),
+            'T_1C' => $request->get('T_1C'),
+            'T_1B' => $request->get('T_1B'),
+            'T_1A' => $request->get('T_1A'),
+        ]);
 
-        return view('EDIT.SEKRETARIAT.a3', compact('kepegawaian'));
+        return redirect('/operator/edit/sekretariat/kepegawaian')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_a4($id, Request $request)
     {
-        $kerja_sama = Kerja_Sama::all();
+        $data = Kerja_Sama::where('id', $id)
+        ->update([
+            'kategori' => $request->get('kategori'),
+            'instansi' => $request->get('instansi'),
+            'tanggal_awal' => $request->get('tanggal_awal'),
+            'tanggal_akhir' => $request->get('tanggal_akhir'),
+            'nomor' => $request->get('nomor'),
+            'perihal' => $request->get('perihal'),
+            'keterangan' => $request->get('keterangan'),
+            'ttd_1' => $request->get('ttd_1'),
+            'instansi_1' => $request->get('instansi_1'),
+            'ttd_2' => $request->get('ttd_2'),
+            'instansi_2' => $request->get('instansi_2'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.SEKRETARIAT.a4', compact('kerja_sama'));
+        return redirect('/operator/edit/sekretariat/kerja_sama')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_a5($id, Request $request)
     {
-        $tanah_bangunan = Tanah_Bangunan::all();
+        $data = Tanah_Bangunan::where('id', $id)
+        ->update([
+            'kantor' => $request->get('kantor'),
+            'alamat' => $request->get('alamat'),
+            'status_tanah' => $request->get('status_tanah'),
+            'sertif_tanah' => $request->get('sertif_tanah'),
+            'status_bangunan' => $request->get('status_bangunan'),
+            'imb' => $request->get('imb'),
+            'kondisi' => $request->get('kondisi'),
+            'status_peroleh' => $request->get('status_peroleh'),
+            'keterangan' => $request->get('keterangan'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.SEKRETARIAT.a5', compact('tanah_bangunan'));
+        return redirect('/operator/edit/sekretariat/tanah_bangunan')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_a6($id, Request $request)
     {
-        $perpustakaan = Perpustakaan::all();
+        $data = Perpustakaan::where('id', $id)
+        ->update([
+            'provinsi' => $request->get('provinsi'),
+            'unit' => $request->get('unit'),
+            'jumlah_buku' => $request->get('jumlah_buku'),
+            'jumlah_judul' => $request->get('jumlah_judul'),
+            'jenis_buku' => $request->get('jenis_buku'),
+            'jumlah_pengunjung' => $request->get('jumlah_pengunjung'),
+            'sumber_data' => $request->get('sumber_data'),
+        ]);
 
-        return view('EDIT.SEKRETARIAT.a6', compact('perpustakaan'));
+        return redirect('/operator/edit/sekretariat/perpustakaan')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_a7($id, Request $request)
     {
-        $inventarisasi = Inventarisasi::all();
+        $data = Inventarisasi::where('id', $id)
+        ->update([
+            'unit' => $request->get('unit'),
+            'tahun_anggaran' => $request->get('tahun_anggaran'),
+            'laptop' => $request->get('laptop'),
+            'komputer' => $request->get('komputer'),
+            'printer' => $request->get('printer'),
+            'fotocopy' => $request->get('fotocopy'),
+            'faximili' => $request->get('faximili'),
+            'LCD' => $request->get('LCD'),
+            'TV' => $request->get('TV'),
+            'lain' => $request->get('lain'),
+            'furniture' => $request->get('furniture'),
+            'roda_dua' => $request->get('roda_dua'),
+            'roda_empat' => $request->get('roda_empat'),
+            'roda_enam' => $request->get('roda_enam'),
+        ]);
 
-        return view('EDIT.SEKRETARIAT.a7', compact('inventarisasi'));
+        return redirect('/operator/edit/sekretariat/inventarisasi')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI B
     public function update_b1($id, Request $request)
     {
-        $kamus = Kamus::all();
+        $data = Kamus::where('id', $id)
+        ->update([
+            'kategori' => $request->get('kategori'),
+            'judul' => $request->get('judul'),
+            'tim_redaksi' => $request->get('tim_redaksi'),
+            'edisi' => $request->get('edisi'),
+            'no_isbn' => $request->get('no_isbn'),
+            'lingkup' => $request->get('lingkup'),
+            'penerbit' => $request->get('penerbit'),
+            'tahun_terbit' => $request->get('tahun_terbit'),
+            'keterangan' => $request->get('keterangan'),
+            'info_produk' => $request->get('info_produk'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KEBAHASAAN.b1', compact('kamus'));
+        return redirect('/operator/edit/kebahasaan/kamus')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_b2($id, Request $request)
     {
-        $jurnal = Jurnal::all();
+        $data = Jurnal::where('id', $id)
+        ->update([
+            'kategori' => $request->get('kategori'),
+            'judul' => $request->get('judul'),
+            'tim_redaksi' => $request->get('tim_redaksi'),
+            'volume' => $request->get('volume'),
+            'no_issn' => $request->get('no_issn'),
+            'lingkup' => $request->get('lingkup'),
+            'penerbit' => $request->get('penerbit'),
+            'keterangan' => $request->get('keterangan'),
+            'info_produk' => $request->get('info_produk'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KEBAHASAAN.b2', compact('jurnal'));
+        return redirect('/operator/edit/kebahasaan/jurnal')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_b3($id, Request $request)
     {
-        $terbitan_umum = Terbitan_Umum::all();
+        $data = Terbitan_Umum::where('id', $id)
+        ->update([
+            'kategori' => $request->get('kategori'),
+            'judul' => $request->get('judul'),
+            'penulis' => $request->get('penulis'),
+            'no_isbn' => $request->get('no_isbn'),
+            'tahun_terbit' => $request->get('tahun_terbit'),
+            'deskripsi' => $request->get('deskripsi'),
+            'info_produk' => $request->get('info_produk'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KEBAHASAAN.b3', compact('terbitan_umum'));
+        return redirect('/operator/edit/kebahasaan/terbitan_umum')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_b4($id, Request $request)
     {
-        $penyuluhan = Penyuluhan::all();
+        $data = Penyuluhan::where('id', $id)
+        ->update([
+            'provinsi' => $request->get('provinsi'),
+            'kota' => $request->get('kota'),
+            'nama_kegiatan' => $request->get('nama_kegiatan'),
+            'tanggal_awal' => $request->get('tanggal_awal'),
+            'tanggal_akhir' => $request->get('tanggal_akhir'),
+            'narasumber' => $request->get('narasumber'),
+            'sasaran' => $request->get('sasaran'),
+            'jumlah_peserta' => $request->get('jumlah_peserta'),
+            'materi' => $request->get('materi'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KEBAHASAAN.b4', compact('penyuluhan'));
+        return redirect('/operator/edit/kebahasaan/penyuluhan')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_b5($id, Request $request)
     {
-        $pesuluh = Pesuluh::all();
+        $data = Pesuluh::where('id', $id)
+        ->update([
+            'nama' => $request->get('nama'),
+            'tempat_lahir' => $request->get('tempat_lahir'),
+            'tanggal_lahir' => $request->get('tanggal_lahir'),
+            'instansi' => $request->get('instansi'),
+            'tingkat' => $request->get('tingkat'),
+            'id_penyuluhan' => $request->get('id_penyuluhan'),
+        ]);
 
-        return view('EDIT.KEBAHASAAN.b5', compact('pesuluh'));
+        return redirect('/operator/edit/kebahasaan/pesuluh')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_b6($id, Request $request)
     {
-        $penghargaan_bahasa = Penghargaan_Bahasa::all();
+        $data = Penghargaan_Bahasa::where('id', $id)
+        ->update([
+            'kategori' => $request->get('kategori'),
+            'tahun' => $request->get('tahun'),
+            'deskripsi' => $request->get('deskripsi'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KEBAHASAAN.b6', compact('penghargaan_bahasa'));
+        return redirect('/operator/edit/kebahasaan/penghargaan_bahasa')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_b7($id, Request $request)
     {
-        $duta_nasional = Duta_Nasional::all();
+        $data = Duta_Nasional::where('id', $id)
+        ->update([
+            'provinsi' => $request->get('provinsi'),
+            'tahun' => $request->get('tahun'),
+            'pemenang_1_1' => $request->get('pemenang_1_1'),
+            'pemenang_1_2' => $request->get('pemenang_1_2'),
+            'pemenang_2_1' => $request->get('pemenang_2_1'),
+            'pemenang_2_2' => $request->get('pemenang_2_2'),
+            'pemenang_3_1' => $request->get('pemenang_3_1'),
+            'pemenang_3_2' => $request->get('pemenang_3_2'),
+            'keterangan' => $request->get('keterangan'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KEBAHASAAN.b7', compact('duta_nasional'));
+        return redirect('/operator/edit/kebahasaan/duta_nasional')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+      ////////////////////////////////////////////
     public function update_b8($id, Request $request)
     {
-        $duta_provinsi = Duta_Provinsi::all();
+        $data = Duta_Provinsi::where('id', $id)
+        ->update([
+            'provinsi' => $request->get('provinsi'),
+            'tahun' => $request->get('tahun'),
+            'pemenang_1_1' => $request->get('pemenang_1_1'),
+            'pemenang_1_2' => $request->get('pemenang_1_2'),
+            'pemenang_2_1' => $request->get('pemenang_2_1'),
+            'pemenang_2_2' => $request->get('pemenang_2_2'),
+            'pemenang_3_1' => $request->get('pemenang_3_1'),
+            'pemenang_3_2' => $request->get('pemenang_3_2'),
+            'favorit_1' => $request->get('favorit_1'),
+            'favorit_2' => $request->get('favorit_2'),
+            'keterangan' => $request->get('keterangan'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KEBAHASAAN.b8', compact('duta_provinsi'));
+        return redirect('/operator/edit/kebahasaan/duta_provinsi')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI C
     public function update_c1($id, Request $request)
     {
-        $bengkel_sastra_dan_bahasa = Bengkel_Sastra_Dan_Bahasa::all();
+        $data = Bengkel_Sastra_Dan_Bahasa::where('id', $id)
+        ->update([
+            'provinsi' => $request->get('provinsi'),
+            'kota' => $request->get('kota'),
+            'nama_kegiatan' => $request->get('nama_kegiatan'),
+            'tanggal_awal_pelaksanaan' => $request->get('tanggal_awal_pelaksanaan'),
+            'tanggal_akhir_pelaksanaan' => $request->get('tanggal_akhir_pelaksanaan'),
+            'pemateri' => $request->get('pemateri'),
+            'jumlah_peserta' => $request->get('jumlah_peserta'),
+            'jumlah_sekolah' => $request->get('jumlah_sekolah'),
+            'jumlah_sekolah_yang_dibina' => $request->get('jumlah_sekolah_yang_dibina'),
+            'jumlah_sekolah_yang_dibina' => $request->get('jumlah_sekolah_yang_dibina'),
+            'nama_sekolah_yang_dibina' => $request->get('nama_sekolah_yang_dibina'),
+            'aktivitas' => $request->get('aktivitas'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KESASTRAAN.c1', compact('bengkel_sastra_dan_bahasa'));
+        return redirect('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+    ////////////////////////////////////////////
     public function update_c2($id, Request $request)
-    {
-        $penghargaan_sastra = Penghargaan_Sastra::all();
+    {   
+        $data = Penghargaan_Sastra::where('id', $id)
+        ->update([
+            'kategori' => $request->get('kategori'),
+            'tahun' => $request->get('tahun'),
+            'deskripsi' => $request->get('deskripsi'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KESASTRAAN.c2', compact('penghargaan_sastra'));
+        return redirect('/operator/edit/kesastraan/penghargaan_sastra')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+    ////////////////////////////////////////////
     public function update_c3($id, Request $request)
     {
-        $musikalisasi_puisi_nasional = Musikalisasi_Puisi_Nasional::all();
+        $data = Musikalisasi_Puisi_Nasional::where('id', $id)
+        ->update([
+            'tahun' => $request->get('tahun'),
+            'pemenang_1' => $request->get('pemenang_1'),
+            'pemenang_2' => $request->get('pemenang_2'),
+            'pemenang_3' => $request->get('pemenang_3'),
+            'favorit' => $request->get('favorit'),
+            'keterangan' => $request->get('keterangan'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KESASTRAAN.c3', compact('musikalisasi_puisi_nasional'));
+        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_nasional')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+    ////////////////////////////////////////////
     public function update_c4($id, Request $request)
     {
-        $musikalisasi_puisi_provinsi = Musikalisasi_Puisi_Provinsi::all();
+        $data = Musikalisasi_Puisi_Provinsi::where('id', $id)
+        ->update([
+            'provinsi' => $request->get('provinsi'),
+            'tahun' => $request->get('tahun'),
+            'pemenang_1' => $request->get('pemenang_1'),
+            'pemenang_2' => $request->get('pemenang_2'),
+            'pemenang_3' => $request->get('pemenang_3'),
+            'favorit' => $request->get('favorit'),
+            'keterangan' => $request->get('keterangan'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.KESASTRAAN.c4', compact('musikalisasi_puisi_provinsi'));
+        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_provinsi')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI D
     public function update_d1($id, Request $request)
     {
-        $komunitas_bahasa = Komunitas_Bahasa::all();
+        $data = Komunitas_Bahasa::where('id', $id)
+        ->update([
+            'nama_komunitas' => $request->get('nama_komunitas'),
+            'provinsi' => $request->get('provinsi'),
+            'kota' => $request->get('kota'),
+            'kecamatan' => $request->get('kecamatan'),
+            'alamat' => $request->get('alamat'),
+            'koordinat' => $request->get('koordinat'),
+            'keterangan' => $request->get('keterangan'),
+        ]);
 
-        return view('EDIT.KOMUNITAS.d1', compact('komunitas_bahasa'));
+        return redirect('/operator/edit/komunitas/komunitas_bahasa')->with('toast_success', 'Data Berhasil Diedit!');
     }
+
+    //////////////////////////////////////////////////
     public function update_d2($id, Request $request)
     {
-        $komunitas_sastra = Komunitas_Sastra::all();
+        $data = Komunitas_Sastra::where('id', $id)
+        ->update([
+            'nama_komunitas' => $request->get('nama_komunitas'),
+            'provinsi' => $request->get('provinsi'),
+            'kota' => $request->get('kota'),
+            'kecamatan' => $request->get('kecamatan'),
+            'alamat' => $request->get('alamat'),
+            'koordinat' => $request->get('koordinat'),
+            'keterangan' => $request->get('keterangan'),
+        ]);
 
-        return view('EDIT.KOMUNITAS.d2', compact('komunitas_sastra'));
+    return redirect('/operator/edit/komunitas/komunitas_sastra')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI E
     public function update_e1($id, Request $request)
     {
-        $penelitian = Penelitian::all();
+        $data = Penelitian::where('id', $id)
+        ->update([
+            'lama_penelitian' => $request->get('lama_penelitian'),
+            'tipe_waktu' => $request->get('tipe_waktu'),
+            'waktu' => $request->get('waktu'),
+            'kategori' => $request->get('kategori'),
+            'unit' => $request->get('unit'),
+            'peneliti' => $request->get('peneliti'),
+            'judul' => $request->get('judul'),
+            'kerja_sama' => $request->get('kerja_sama'),
+            'tanggal_awal' => $request->get('tanggal_awal'),
+            'tanggal_akhir' => $request->get('tanggal_akhir'),
+            'lama_penelitian' => $request->get('lama_penelitian'),
+            'publikasi' => $request->get('publikasi'),
+            'tahun_terbit' => $request->get('tahun_terbit'),
+            'abstrak' => $request->get('abstrak'),
+            'media' => $request->get('media'),
+        ]);
 
-        return view('EDIT.PENELITIAN.e1', compact('penelitian'));
+    return redirect('/operator/edit/penelitian/penelitian')->with('toast_success', 'Data Berhasil Diedit!');
     }
 }

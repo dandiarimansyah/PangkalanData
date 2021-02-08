@@ -61,7 +61,27 @@
                         <td>{{ $a -> roda_enam}}</td>
 
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-unit="{{ $a->unit }}"
+                                data-tahun_anggaran="{{ $a->tahun_anggaran }}"
+                                data-laptop="{{ $a->laptop }}"
+                                data-komputer="{{ $a->komputer }}"
+                                data-printer="{{ $a->printer }}"
+                                data-fotocopy="{{ $a->fotocopy }}"
+                                data-faximili="{{ $a->faximili }}"
+                                data-LCD="{{ $a->LCD }}"
+                                data-TV="{{ $a->TV }}"
+                                data-lain="{{ $a->lain }}"
+                                data-furniture="{{ $a->furniture }}"
+                                data-roda_dua="{{ $a->roda_dua }}"
+                                data-roda_empat="{{ $a->roda_empat }}"
+                                data-roda_enam="{{ $a->roda_enam }}"
+                            >Edit</button>
+
                             <a class="hapus" href="{{ url('/operator/edit/sekretariat/inventarisasi/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>
@@ -89,107 +109,127 @@
             <div class="modal-body">
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
-                <form>
+                    <form id="edit_form" action="" method="POST">
+                            @csrf
+                            @method('PUT')
                     
-                    <div class="inputfield-select">
-                        <label>Unit/Satuan Kerja*</label>
-                        <div class="custom_select">
-                        <select>
-                            <option value="">Balai Bahasa Jawa Tengah</option>
-                        </select>
-                        </div>
-                    </div> 
+                        <div class="alert-danger">{{ $errors->first('unit') }}</div>
+                        <div class="inputfield-select">
+                            <label>Unit/Satuan Kerja*</label>
+                            <div class="custom_select">
+                            <select id="unit" name="unit">
+                                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
+                            </select>
+                            </div>
+                        </div> 
 
-                    <div class="inputfield">
-                        <label>Tahun Anggaran*</label>
-                        <input type="text" class="input">
-                    </div> 
+                        <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
+                        <div class="inputfield">
+                            <label>Tahun Anggaran*</label>
+                            <input id="tahun_anggaran" name="tahun_anggaran" type="text" class="input">
+                        </div> 
 
-                    <div class="row">
-                        <div class="col">
-                            <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
-                                <label >Barang Elektronik</label>
-                            </div> 
+                        <div class="row">
+                            <div class="col">
+                                <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
+                                    <label>Barang Elektronik</label>
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('laptop') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Laptop</label> </li>
+                                    <input id="laptop" name="laptop" type="text" class="input">
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('komputer') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Komputer</label> </li>
+                                    <input id="komputer" name="komputer" type="text" class="input">
+                                </div> 
                             
-                            <div class="inputfield-list">
-                                <li> <label>Laptop</label> </li>
-                                <input type="text" class="input">
-                            </div> 
+                                <div class="alert-danger">{{ $errors->first('printer') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Printer</label> </li>
+                                    <input id="printer" name="printer" type="text" class="input">
+                                </div> 
 
-                            <div class="inputfield-list">
-                                <li> <label>Komputer</label> </li>
-                                <input type="text" class="input">
-                            </div> 
+                                <div class="alert-danger">{{ $errors->first('fotocopy') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Fotocopy</label> </li>
+                                    <input id="fotocopy" name="fotocopy" type="text" class="input">
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('faximili') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Faximili</label> </li>
+                                    <input id="faximili" name="faximili" type="text" class="input">
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('LCD') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>LCD Projector</label> </li>
+                                    <input id="LCD" name="LCD" type="text" class="input">
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('TV') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>TV</label> </li>
+                                    <input id="TV" name="TV" type="text" class="input">
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('lain') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Lain-Lain</label> </li>
+                                    <input id="lain" name="lain" type="text" class="input">
+                                </div> 
+                            </div>
+
+                            <div class="col">
+                                <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
+                                    <label>Furniture/Meubelair</label>
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('furniture') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Jumlah Furniture</label> </li>
+                                    <input id="furniture" name="furniture" type="text" class="input">
+                                </div> 
+
+                                <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
+                                    <label>Kendaraan</label>
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('roda_dua') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Roda Dua</label> </li>
+                                    <input id="roda_dua" name="roda_dua" type="text" class="input">
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('roda_empat') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Roda Empat</label> </li>
+                                    <input id="roda_empat" name="roda_empat" type="text" class="input">
+                                </div> 
+
+                                <div class="alert-danger">{{ $errors->first('roda_enam') }}</div>
+                                <div class="inputfield-list">
+                                    <li> <label>Roda Enam</label> </li>
+                                    <input id="roda_enam" name="roda_enam" type="text" class="input">
+                                </div> 
+                            </div>
+                        </div>
                         
-                            <div class="inputfield-list">
-                                <li> <label>Printer</label> </li>
-                                <input type="text" class="input">
-                            </div> 
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+            </div>
 
-                            <div class="inputfield-list">
-                                <li> <label>Fotocopy</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-
-                            <div class="inputfield-list">
-                                <li> <label>Faximili</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-
-                            <div class="inputfield-list">
-                                <li> <label>LCD Projector</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-
-                            <div class="inputfield-list">
-                                <li> <label>TV</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-
-                            <div class="inputfield-list">
-                                <li> <label>Lain-Lain</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-                        </div>
-
-                        <div class="col">
-                            <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
-                                <label >Furniture/Meubelair</label>
-                            </div> 
-                            <div class="inputfield-list">
-                                <li> <label>Jumlah Furniture</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-
-                            <div class="inputfield" style="margin: 25px 0 0 0; font-weight:bold" >
-                                <label >Kendaraan</label>
-                            </div> 
-
-                            <div class="inputfield-list">
-                                <li> <label>Roda Dua</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-
-                            <div class="inputfield-list">
-                                <li> <label>Roda Empat</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-
-                            <div class="inputfield-list">
-                                <li> <label>Roda Enam</label> </li>
-                                <input type="text" class="input">
-                            </div> 
-                        </div>
-                    </div>
+                      
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -197,3 +237,47 @@
     
 
 @endsection
+
+@push('scripts')
+      <script>
+
+          $(document).on('click','#edit_item',function(){
+                let unit = $(this).data('unit');
+                let tahun_anggaran = $(this).data('tahun_anggaran');
+                let laptop = $(this).data('laptop');
+                let komputer = $(this).data('komputer');
+                let printer = $(this).data('printer');
+                let fotocopy = $(this).data('fotocopy');
+                let faximili = $(this).data('faximili');
+                let LCD = $(this).data('LCD');
+                let TV = $(this).data('TV');
+                let lain = $(this).data('lain');
+                let furniture = $(this).data('furniture');
+                let roda_dua = $(this).data('roda_dua');
+                let roda_empat = $(this).data('roda_empat');
+                let roda_enam = $(this).data('roda_enam');
+
+                let id = $(this).data('id');
+
+                $('#unit option').filter(function(){
+                    return ($(this).val() == unit)
+                }).prop('selected', true);
+
+                $('#tahun_anggaran').val(tahun_anggaran);
+                $('#laptop').val(laptop);
+                $('#komputer').val(komputer);
+                $('#printer').val(printer);
+                $('#fotocopy').val(fotocopy);
+                $('#faximili').val(faximili);
+                $('#LCD').val(LCD);
+                $('#TV').val(TV);
+                $('#lain').val(lain);
+                $('#furniture').val(furniture);
+                $('#roda_dua').val(roda_dua);
+                $('#roda_empat').val(roda_empat);
+                $('#roda_enam').val(roda_enam);
+                
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/inventasisasi/' + id);
+          })
+      </script>
+@endpush

@@ -60,7 +60,25 @@
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> media}}</td>
                         <td style="display: flex; justify-content:center;">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                           <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-kategori="{{ $a->kategori }}"
+                                data-unit="{{ $a->unit }}"
+                                data-peneliti="{{ $a->peneliti }}"
+                                data-judul="{{ $a->judul }}"
+                                data-kerja_sama="{{ $a->kerja_sama }}"
+                                data-tanggal_awal="{{ $a->tanggal_awal }}"
+                                data-tanggal_akhir="{{ $a->tanggal_akhir }}"
+                                data-lama_penelitian="{{ $a->lama_penelitian }}"
+                                data-publikasi="{{ $a->publikasi }}"
+                                data-tahun_terbit="{{ $a->tahun_terbit }}"
+                                data-abstrak="{{ $a->abstrak }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
+
                             <a class="hapus" href="{{ url('/operator/edit/penelitian/penelitian/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
                         </td>
                     </tr>
@@ -87,84 +105,108 @@
             <div class="modal-body">
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
-                <form>
+                    <form id="edit_form" action="" method="POST">
+                            @csrf
+                            @method('PUT')
                     
-                    <div class="inputfield-select">
-                        <label>Kategori Penelitian*</label>
-                        <div class="custom_select">
-                        <select>
-                            <option value="">Bahasa</option>
-                            <option value="">Sastra</option>
-                        </select>
-                        </div>
-                    </div> 
-
-                    <div class="inputfield-select">
-                        <label>Unit/Satuan Kerja*</label>
-                        <div class="custom_select">
-                        <select>
-                            <option value="">Balai Bahasa Jawa Tengah</option>
-                        </select>
-                        </div>
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Peneliti*</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Judul*</label>
-                        <textarea class="textarea"></textarea>
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Kerja Sama</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield-date">
-                        <label>Tanggal Mulai Penelitian</label>
-                        <input type="date" class="input">
-                    </div> 
-
-                    <div class="inputfield-date">
-                        <label>Tanggal Selesai Penelitian</label>
-                        <input type="date" class="input">
-                    </div> 
-
-                    <div class="inputfield-kecil">
-                        <label>Lama Penelitian</label>
-                        <input type="text" class="input">
-                        <div class="custom_select" style="margin-left: 30px; width: 120px">
-                            <select>
-                            <option value="">Tahun</option>
-                            <option value="">Bulan</option>
-                            <option value="">Minggu</option>
-                            <option value="">Hari</option>
+                        <div class="alert-danger">{{ $errors->first('kategori') }}</div>
+                        <div class="inputfield-select">
+                            <label>Kategori Penelitian*</label>
+                            <div class="custom_select">
+                            <select name="kategori">
+                                <option value="Bahasa">Bahasa</option>
+                                <option value="Sastra">Sastra</option>
                             </select>
+                            </div>
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('unit') }}</div>
+                        <div class="inputfield-select">
+                            <label>Unit/Satuan Kerja*</label>
+                            <div class="custom_select">
+                            <select name="unit">
+                                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
+                            </select>
+                            </div>
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('peneliti') }}</div>
+                        <div class="inputfield">
+                            <label>Peneliti*</label>
+                            <input name="peneliti" type="text" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('judul') }}</div>
+                        <div class="inputfield">
+                            <label>Judul*</label>
+                            <textarea name="judul" class="textarea"></textarea>
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('kerja_sama') }}</div>
+                        <div class="inputfield">
+                            <label>Kerja Sama</label>
+                            <input name="kerja_sama" type="text" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
+                        <div class="inputfield-date">
+                            <label>Tanggal Mulai Penelitian</label>
+                            <input name="tanggal_awal" type="date" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
+                        <div class="inputfield-date">
+                            <label>Tanggal Selesai Penelitian</label>
+                            <input name="tanggal_akhir" type="date" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('lama_penelitian') }}</div>
+                        <div class="inputfield-kecil">
+                            <label>Lama Penelitian</label>
+                            <input name="lama_penelitian" type="text" class="input">
+                            <div class="custom_select" style="margin-left: 30px; width: 120px">
+                                <select name="tipe_waktu">
+                                <option value="Tahun">Tahun</option>
+                                <option value="Bulan">Bulan</option>
+                                <option value="Minggu">Minggu</option>
+                                <option value="Hari">Hari</option>
+                                </select>
+                            </div>
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('publikasi') }}</div>
+                        <div class="inputfield-select">
+                            <label>Publikasi</label>
+                            <div class="custom_select">
+                            <select name="publikasi">
+                                <option value="Terbit">Terbit</option>
+                                <option value="Belum Terbit">Belum Terbit</option>
+                            </select>
+                            </div>
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
+                        <div class="inputfield-kecil">
+                            <label>Tahun Terbit</label>
+                            <input name="tahun_terbit" type="text" class="input">
+                        </div> 
+
+                        <div class="alert-danger">{{ $errors->first('abstrak') }}</div>
+                        <div class="inputfield">
+                            <label>Abstrak*</label>
+                            <textarea name="abstrak" class="textarea"></textarea>
+                        </div> 
+
+                        <div class="inputfield-kecil">
+                        <label for="">Unggah Media</label>
+                        <input type="file" name="media">
                         </div>
-                    </div> 
 
-                    <div class="inputfield-select">
-                        <label>Publikasi</label>
-                        <div class="custom_select">
-                        <select>
-                            <option value="">Terbit</option>
-                            <option value="">Belum Terbit</option>
-                        </select>
-                        </div>
-                    </div> 
+                        <div class="tombol">
+                        <input type="reset" value="Ulangi" class="reset">
+                        <input type="submit" value="Simpan" class="inputan">
+                        </div> 
 
-                    <div class="inputfield-kecil">
-                        <label>Tahun Terbit</label>
-                        <input type="text" class="input">
-                    </div> 
-
-                    <div class="inputfield">
-                        <label>Abstrak*</label>
-                        <textarea class="textarea"></textarea>
-                    </div> 
 
                 </form>
             </div>
@@ -180,3 +222,24 @@
     
 
 @endsection
+
+@push('scripts')
+      <script>
+
+          $(document).on('click','#edit_item',function(){
+                let unit = $(this).data('unit');
+                let tahun_anggaran = $(this).data('tahun_anggaran');
+                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let id = $(this).data('id');
+
+                $('#unit option').filter(function(){
+                    return ($(this).val() == unit)
+                }).prop('selected', true);
+
+                $('#tahun_anggaran').val(tahun_anggaran);
+                $('#nilai_anggaran').val(nilai_anggaran);
+                
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+          })
+      </script>
+@endpush
