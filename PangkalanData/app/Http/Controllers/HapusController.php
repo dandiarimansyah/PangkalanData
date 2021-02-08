@@ -160,7 +160,7 @@ class HapusController extends Controller
 
     public function hapus_b7($id)
     {
-        $data = Duta_Bahasa_Nasional::find($id);
+        $data = Duta_Nasional::find($id);
         if ($data) {
             $data->delete();
         }
@@ -170,7 +170,7 @@ class HapusController extends Controller
 
     public function hapus_b8($id)
     {
-        $data = Duta_Bahasa_Provinsi::find($id);
+        $data = Duta_Provinsi::find($id);
         if ($data) {
             $data->delete();
         }
