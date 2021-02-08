@@ -43,7 +43,7 @@
                 @forelse ($kerja_sama as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>Mulai:{{ $a -> tanggal_awal}} <br> Berakhir:{{ $a -> tanggal_akhir}}  </td>
+                        <td>{{ $a -> tanggal_awal}} <br>sampai<br> {{ $a -> tanggal_akhir}}  </td>
                         <td>Balai Bahasa Jawa Tengah</td>
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> kategori}}</td>

@@ -36,8 +36,20 @@
                 @forelse ($penelitian as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> tanggal_awal}}</td>
-                        <td>{{ $a -> tanggal_akhir}}</td>
+                        <td>
+                            @if ($a -> tanggal_awal != null)
+                                {{ \Carbon\Carbon::parse($a->tanggal_awal)->format('d-m-Y')}}
+                            @else
+                                -
+                            @endif 
+                        </td>
+                        <td>
+                            @if ($a -> tanggal_akhir != null)
+                                {{ \Carbon\Carbon::parse($a->tanggal_akhir)->format('d-m-Y')}}
+                            @else
+                                -
+                            @endif 
+                        </td>
                         <td>{{ $a -> unit}}</td>
                         <td>{{ $a -> judul}}</td>
                         <td>{{ $a -> peneliti}}</td>
@@ -46,8 +58,7 @@
                         <td>{{ $a -> lama_penelitian}}</td>
                         <td>{{ $a -> publikasi}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
-                        {{-- <td>{{ $a -> media}}</td> --}}
-                        <td></td>
+                        <td>{{ $a -> media}}</td>
                         <td style="display: flex; justify-content:center;">
                             <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
                             <a class="hapus" href="{{ url('/operator/edit/penelitian/penelitian/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>

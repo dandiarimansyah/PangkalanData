@@ -39,7 +39,7 @@
               @forelse ($tanah_bangunan as $key => $a)
                   <tr>
                       <td>{{ $key + 1}}</td>
-                      <td></td>
+                      <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
                       <td>{{ $a -> kantor}}</td>
                       <!-- <td>{{ $a -> alamat}}</td> -->
                       <td>{{ $a -> status_tanah}}</td>
@@ -49,7 +49,15 @@
                       <td>{{ $a -> kondisi}}</td>
                       <td>{{ $a -> status_peroleh}}</td>
                       <td>{{ $a -> keterangan}}</td>
-                      <td></td>
+
+                      <td>
+                        @if ($a->media != null)
+                          <a class="btn btn-info btn-sm" href={{ Storage::url($a->media) }} target="_blank">Media</a>
+                        @else
+                          Tidak ada media
+                        @endif
+                        {{-- {{ $a -> media}} --}}
+                      </td>
 
                       <td style="display: flex; justify-content:center">
                           <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>

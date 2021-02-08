@@ -235,12 +235,20 @@ class InputController extends Controller
         $data->instansi_1 = $request->instansi_1;
         $data->ttd_2 = $request->ttd_2;
         $data->instansi_2 = $request->instansi_2;
+
         if ($request->media == null) {
             $media = null;
         } else {
             $media = $request->media->store('public/kerja_sama');
         }
-        $data->media = $media;
+
+        // if ($request->file('media')) {
+        //     $media = $request->file('media');
+        //     $filename = time() . '.' . $media->getClientOriginalExtension();
+        //     $request->file->move('kerja_sama/', $filename);
+        //     $data->media = $filename;
+        // }
+
         $data->save();
 
         return redirect('/operator/input/sekretariat/kerja_sama')->with('toast_success', 'Data Berhasil Ditambahkan!');

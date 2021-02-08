@@ -38,7 +38,18 @@
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> provinsi}}</td>
                         <td>{{ $a -> kota}}</td>
-                        <td>{{ $a -> tanggal_awal_pelaksanaan}} <br> {{ $a -> tanggal_akhir_pelaksanaan}}</td>
+                        <td>
+                            @if ($a -> tanggal_awal_pelaksanaan != null)
+                                {{ \Carbon\Carbon::parse($a->tanggal_awal_pelaksanaan)->format('d-m-Y')}}
+                            @else
+                                -
+                            @endif
+                            <br>
+                            @if ($a -> tanggal_akhir_pelaksanaan != null)
+                                {{ \Carbon\Carbon::parse($a->tanggal_akhir_pelaksanaan)->format('d-m-Y')}}
+                            @else
+                                -
+                            @endif 
                         <td></td>
                         <td>{{ $a -> nama_kegiatan}}</td>
                         <td>{{ $a -> pemateri}}</td>

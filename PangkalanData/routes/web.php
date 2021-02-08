@@ -159,6 +159,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/operator/edit/sekretariat/kepegawaian', [EditController::class, 'a3']);
         Route::get('/operator/edit/sekretariat/kerja_sama', [EditController::class, 'a4']);
         Route::get('/operator/edit/sekretariat/tanah_dan_bangunan', [EditController::class, 'a5']);
+        Route::get('/operator/edit/sekretariat/tanah_dan_bangunan/{id}', [EditController::class, 'show_a5']);
         Route::get('/operator/edit/sekretariat/perpustakaan', [EditController::class, 'a6']);
         Route::get('/operator/edit/sekretariat/inventarisasi_bmn', [EditController::class, 'a7']);
         //EDIT KATEGORI B

@@ -67,7 +67,8 @@
                 @forelse ($kepegawaian as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> tanggal_diperbarui}}</td>
+                        <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
+                        <td>{{ $a -> unit }}</td>
                         <td>{{ $a -> semua_kelamin}}</td>
                         <td>{{ $a -> laki}}</td>
                         <td>{{ $a -> perempuan}}</td>
