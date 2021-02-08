@@ -449,7 +449,7 @@ class EditController extends Controller
             'media' => $request->get('media'),
         ]);
 
-        return redirect('/operator/edit/kebahasaan/duta_nasional')->with('toast_success', 'Data Berhasil Diedit!');
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_nasional')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
       ////////////////////////////////////////////
@@ -471,7 +471,7 @@ class EditController extends Controller
             'media' => $request->get('media'),
         ]);
 
-        return redirect('/operator/edit/kebahasaan/duta_provinsi')->with('toast_success', 'Data Berhasil Diedit!');
+        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI C

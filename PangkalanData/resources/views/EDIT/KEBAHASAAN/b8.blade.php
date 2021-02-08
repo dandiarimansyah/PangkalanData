@@ -98,7 +98,7 @@
                         <div class="inputfield-select">
                             <label>Asal Provinsi*</label>
                             <div class="custom_select">
-                            <select name="provinsi">
+                            <select id="provinsi" name="provinsi">
                                 <option disabled="disabled" selected="selected" value="">-- Pilih Kategori --</option>
                                 <option value="Jawa Tengah">Jawa Tengah</option>
                             </select>
@@ -108,86 +108,79 @@
                         <div class="alert-danger">{{ $errors->first('tahun') }}</div>
                         <div class="inputfield">
                             <label>Tahun</label>
-                            <input name="tahun" type="text" class="input">
+                            <input id="tahun" name="tahun" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_1_1') }}</div>
                         <div class="inputfield">
                             <label>Pemenang I (1)</label>
-                            <input name="pemenang_1_1" type="text" class="input">
+                            <input id="pemenang_1_1" name="pemenang_1_1" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_1_2') }}</div>
                         <div class="inputfield">
                             <label>Pemenang I (2)</label>
-                            <input name="pemenang_1_2" type="text" class="input">
+                            <input id="pemenang_1_2" name="pemenang_1_2" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_2_1') }}</div>
                         <div class="inputfield">
                             <label>Pemenang II (1)</label>
-                            <input name="pemenang_2_1" type="text" class="input">
+                            <input id="pemenang_2_1" name="pemenang_2_1" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_2_2') }}</div>
                         <div class="inputfield">
                             <label>Pemenang II (2)</label>
-                            <input name="pemenang_2_2" type="text" class="input">
+                            <input id="pemenang_2_2" name="pemenang_2_2" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_3_1') }}</div>
                         <div class="inputfield">
                             <label>Pemenang III (1)</label>
-                            <input name="pemenang_3_1" type="text" class="input">
+                            <input id="pemenang_3_1" name="pemenang_3_1" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('pemenang_3_2') }}</div>
                         <div class="inputfield">
                             <label>Pemenang III (2)</label>
-                            <input name="pemenang_3_2" type="text" class="input">
+                            <input id="pemenang_3_2" name="pemenang_3_2" type="text" class="input">
                         </div>
 
                         <div class="alert-danger">{{ $errors->first('favorit_1') }}</div>
                         <div class="inputfield">
                             <label>Favorit 1</label>
-                            <input name="favorit_1" type="text" class="input">
+                            <input id="favorit_1" name="favorit_1" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('favorit_2') }}</div>
                         <div class="inputfield">
                             <label>Favorit 2</label>
-                            <input name="favorit_2" type="text" class="input">
+                            <input id="favorit_2" name="favorit_2" type="text" class="input">
                         </div> 
 
                         <div class="inputfield">
                             <label>Keterangan</label>
-                            <textarea name="keterangan" class="textarea"></textarea>
+                            <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
                         </div>  
 
                         <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
-                        <input type="file" name="media">
+                        <input id="media" type="file" name="media">
                         </div>
                         
-                        <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                        </div>  
-
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
+                       
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
-    
-
-    
 
 @endsection
 
@@ -195,19 +188,39 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+               let provinsi = $(this).data('provinsi');
+
+                let tahun = $(this).data('tahun');
+                let pemenang_1_1 = $(this).data('pemenang_1_1');
+                let pemenang_1_2 = $(this).data('pemenang_1_2');
+                let pemenang_2_1 = $(this).data('pemenang_2_1');
+                let pemenang_2_2 = $(this).data('pemenang_2_2');
+                let pemenang_3_1 = $(this).data('pemenang_3_1');
+                let pemenang_3_2 = $(this).data('pemenang_3_2');
+                let pemenang_3_2 = $(this).data('favorit_1');
+                let pemenang_3_2 = $(this).data('favorit_2');
+                let keterangan = $(this).data('keterangan');
+                let media = $(this).data('media');
+
                 let id = $(this).data('id');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
+                $('#provinsi option').filter(function(){
+                    return ($(this).val() == provinsi)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
+                $('#tahun').val(tahun);
+                $('#pemenang_1_1').val(pemenang_1_1);
+                $('#pemenang_1_2').val(pemenang_1_2);
+                $('#pemenang_2_1').val(pemenang_2_1);
+                $('#pemenang_2_2').val(pemenang_2_2);
+                $('#pemenang_3_1').val(pemenang_3_1);
+                $('#pemenang_3_2').val(pemenang_3_2);
+                $('#pemenang_3_2').val(favorit_1);
+                $('#pemenang_3_2').val(favorit_2);
+                $('#keterangan').val(keterangan);
+                $('#media').val(media);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/kebahasaan/duta_bahasa_provinsi/' + id);
           })
       </script>
 @endpush
