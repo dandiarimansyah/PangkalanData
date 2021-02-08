@@ -38,13 +38,14 @@
                       <td>{{ $key + 1}}</td>
                       <td>{{ $a -> kategori}}</td>
                       <td>{{ $a -> judul}}</td>
-                      <td>{{ $a -> tim_redaksi}}</td>
                       <td>{{ $a -> volume}}</td>
+                      <td>{{ $a -> tim_redaksi}}</td>
                       <td>{{ $a -> no_issn}}</td>
-                      <td>{{ $a -> lingkup}}</td>
                       <td>{{ $a -> penerbit}}</td>
-                      <td>{{ $a -> tahun_terbit}}</td>
+                      <td>{{ $a -> lingkup}}</td>
                       <td>{{ $a -> keterangan}}</td>
+                      <td>Balai Bahasa Jawa Tengah</td>
+                      <!-- <td>{{ $a -> tahun_terbit}}</td> -->
                       <td>{{ $a -> info_produk}}</td>
                       <td></td>
 
@@ -61,6 +62,7 @@
                                 data-no_issn="{{ $a->no_issn }}"
                                 data-lingkup="{{ $a->lingkup }}"
                                 data-penerbit="{{ $a->penerbit }}"
+                                data-tahun_terbit="{{ $a->tahun_terbit }}"
                                 data-keterangan="{{ $a->keterangan }}"
                                 data-info_produk="{{ $a->info_produk }}"
                                 data-media="{{ $a->media }}"
@@ -101,7 +103,7 @@
                       <div class="inputfield-select">
                           <label>Kategori*</label>
                           <div class="custom_select">
-                            <select name="kategori">
+                            <select id="kategori" name="kategori">
                               <option value="JURNAL">JURNAL</option>
                               <option value="MAJALAH">MAJALAH</option>
                             </select>
@@ -111,32 +113,32 @@
                       <div class="alert-danger">{{ $errors->first('judul') }}</div>
                       <div class="inputfield">
                           <label>Judul*</label>
-                          <input name="judul" type="text" class="input">
+                          <input id="judul" name="judul" type="text" class="input">
                       </div> 
 
                       <div class="alert-danger">{{ $errors->first('tim_redaksi') }}</div>
                       <div class="inputfield">
                           <label>Tim Redaksi*</label>
-                          <input name="tim_redaksi" type="text" class="input">
+                          <input id="tim_redaksi" name="tim_redaksi" type="text" class="input">
                       </div> 
 
                       <div class="alert-danger">{{ $errors->first('volume') }}</div>
                       <div class="inputfield">
                           <label>Volume</label>
-                          <input name="volume" type="text" class="input">
+                          <input id="volume" name="volume" type="text" class="input">
                       </div> 
 
                       <div class="alert-danger">{{ $errors->first('no_issn') }}</div>
                       <div class="inputfield">
                           <label>No.ISSN</label>
-                          <input name="no_issn" type="text" class="input">
+                          <input id="no_issn" name="no_issn" type="text" class="input">
                       </div> 
 
                       <div class="alert-danger">{{ $errors->first('lingkup') }}</div>
                       <div class="inputfield-select">
                           <label>Lingkup*</label>
                           <div class="custom_select">
-                            <select name="lingkup">
+                            <select id="lingkup" name="lingkup">
                               <option value="DAERAH">DAERAH</option>
                               <option value="NASIONAL">NASIONAL</option>
                               <option value="INTERNASIONAL">INTERNASIONAL</option>
@@ -147,25 +149,25 @@
                       <div class="alert-danger">{{ $errors->first('penerbit') }}</div>
                       <div class="inputfield">
                           <label>Penerbit</label>
-                          <input name="penerbit" type="text" class="input">
+                          <input id="penerbit" name="penerbit" type="text" class="input">
                       </div> 
 
-                      <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
+                      <!-- <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
                       <div class="inputfield">
                           <label>Tahun Terbit</label>
-                          <input name="tahun_terbit" type="text" class="input">
-                      </div> 
+                          <input id="tahun_terbit" name="tahun_terbit" type="text" class="input">
+                      </div>  -->
 
                       <div class="inputfield">
                           <label>Keterangan</label>
-                          <textarea name="keterangan" class="textarea"></textarea>
+                          <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
                       </div>  
 
                       <div class="alert-danger">{{ $errors->first('info_produk') }}</div>
                       <div class="inputfield-select">
                           <label>Info Produk</label>
                           <div class="custom_select">
-                            <select name="info_produk">
+                            <select id="info_produk" name="info_produk">
                               <option selected disabled value="">--Pilih Info--</option>
                               <option value="Produk Pusat">Produk Pusat</option>
                               <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
@@ -179,19 +181,16 @@
                         <input type="file" name="media">
                       </div>
                       
-                      <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                      </div> 
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                      </div>
+                      
                 
               </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -202,19 +201,41 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let kategori = $(this).data('kategori');
+                let lingkup = $(this).data('lingkup');
+                let info_produk = $(this).data('info_produk');
+
+                let judul = $(this).data('judul');
+                let tim_redaksi = $(this).data('tim_redaksi');
+                let volume = $(this).data('volume');
+                let no_issn = $(this).data('no_issn');
+                let penerbit = $(this).data('penerbit');
+                // let tahun_terbit = $(this).data('tahun_terbit');
+                let keterangan = $(this).data('keterangan');
+
                 let id = $(this).data('id');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
+                $('#kategori option').filter(function(){
+                    return ($(this).val() == kategori)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
+                $('#lingkup option').filter(function(){
+                    return ($(this).val() == lingkup)
+                }).prop('selected', true);
+
+                $('#info_produk option').filter(function(){
+                    return ($(this).val() == info_produk)
+                }).prop('selected', true);
+
+                $('#judul').val(judul);
+                $('#tim_redaksi').val(tim_redaksi);
+                $('#volume').val(volume);
+                $('#no_issn').val(no_issn);
+                $('#penerbit').val(penerbit);
+                // $('#tahun_terbit').val(tahun_terbit);
+                $('#keterangan').val(keterangan);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/kebahasaan/jurnal_majalah/' + id);
           })
       </script>
 @endpush

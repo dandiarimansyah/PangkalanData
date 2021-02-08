@@ -96,7 +96,7 @@
                         <div class="inputfield-select">
                             <label>Kategori Terbitan*</label>
                             <div class="custom_select">
-                            <select name="kategori">
+                            <select id="kategori" name="kategori">
                                 <option value="Bahasa">Bahasa</option>
                                 <option value="Sastra">Sastra</option>
                             </select>
@@ -106,38 +106,38 @@
                         <div class="alert-danger">{{ $errors->first('judul') }}</div>
                         <div class="inputfield">
                             <label>Judul*</label>
-                            <input name="judul" type="text" class="input">
+                            <input id="judul" name="judul" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('penulis') }}</div>
                         <div class="inputfield">
                             <label>Penulis</label>
-                            <input name="penulis" type="text" class="input">
+                            <input id="penulis" name="penulis" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('no_isbn') }}</div>
                         <div class="inputfield">
                             <label>No.ISBN</label>
-                            <input name="no_isbn" type="text" class="input">
+                            <input id="no_isbn" name="no_isbn" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
                         <div class="inputfield">
                             <label>Tahun Terbit</label>
-                            <input name="tahun_terbit" type="text" class="input">
+                            <input id="tahun_terbit" name="tahun_terbit" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('deskripsi') }}</div>
                         <div class="inputfield">
                             <label>Deskripsi Fisik</label>
-                            <textarea name="deskripsi" class="textarea"></textarea>
+                            <textarea id="deskripsi" name="deskripsi" class="textarea"></textarea>
                         </div>  
 
                         <div class="alert-danger">{{ $errors->first('info_produk') }}</div>
                         <div class="inputfield-select">
                             <label>Info Produk</label>
                             <div class="custom_select">
-                            <select name="info_produk">
+                            <select id="info_produk" name="info_produk">
                                 <option disabled="disabled" selected="selected" value="">--Pilih Info--</option>
                                 <option value="Produk Pusat">Produk Pusat</option>
                                 <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
@@ -151,20 +151,15 @@
                         <input type="file" name="media">
                         </div>
                         
-                        <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                        </div> 
-
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -175,17 +170,30 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
-                let id = $(this).data('id');
+                let kategori = $(this).data('kategori');
+                let info_produk = $(this).data('info_produk');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
+                let judul = $(this).data('judul');
+                let penulis = $(this).data('penulis');
+                let no_isbn = $(this).data('no_isbn');
+                let tahun_terbit = $(this).data('tahun_terbit');
+                let deskripsi = $(this).data('deskripsi');
+                let media = $(this).data('media');
+
+                $('#kategori option').filter(function(){
+                    return ($(this).val() == kategori)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
+                $('#info_produk option').filter(function(){
+                    return ($(this).val() == info_produk)
+                }).prop('selected', true);
+
+                $('#judul').val(judul);
+                $('#penulis').val(penulis);
+                $('#no_isbn').val(no_isbn);
+                $('#tahun_terbit').val(tahun_terbit);
+                $('#deskripsi').val(deskripsi);
+                $('#media').val(media);
                 
                 $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
           })

@@ -79,7 +79,7 @@
                         <div class="inputfield-select">
                             <label>Kategori*</label>
                             <div class="custom_select">
-                            <select name="kategori">
+                            <select id="kategori" name="kategori">
                                 <option disabled="disabled" selected="selected" value="">-- Pilih Kategori --</option>
                                 <option value="Anugerah Toko Kebahasaan">Anugerah Toko Kebahasaan</option>
                                 <option value="Adibahasa">Adibahasa</option>
@@ -92,33 +92,30 @@
                         <div class="alert-danger">{{ $errors->first('tahun') }}</div>
                         <div class="inputfield">
                             <label>Tahun</label>
-                            <input name="tahun" type="text" class="input">
+                            <input id="tahun" name="tahun" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('deskripsi') }}</div>
                         <div class="inputfield">
                             <label>Deskripsi</label>
-                            <textarea name="deskripsi" class="textarea"></textarea>
+                            <textarea id="deskripsi" name="deskripsi" class="textarea"></textarea>
                         </div>  
 
                         <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
-                        <input type="file" name="media">
+                        <input id="media" type="file" name="media">
                         </div>
                         
-                        <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                        </div> 
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
+                      
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -132,19 +129,23 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let kategori = $(this).data('kategori');
+
+                let tahun = $(this).data('tahun');
+                let deskripsi = $(this).data('deskripsi');
+                let media = $(this).data('media');
+
                 let id = $(this).data('id');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
+                $('#kategori option').filter(function(){
+                    return ($(this).val() == kategori)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
+                $('#tahun').val(tahun);
+                $('#deskripsi').val(deskripsi);
+                $('#media').val(media);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/kebahasaan/penghargaan_bahasa/' + id);
           })
       </script>
 @endpush
