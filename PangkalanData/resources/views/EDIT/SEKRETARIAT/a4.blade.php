@@ -44,7 +44,25 @@
                         <!-- <td>{{ $a -> instansi_1}}{{ $a -> instansi_2}}</td> -->
 
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-kategori="{{ $a->kategori }}"
+                                data-instansi="{{ $a->instansi }}"
+                                data-tanggal_awal="{{ $a->tanggal_awal }}"
+                                data-tanggal_akhir="{{ $a->tanggal_akhir }}"
+                                data-nomor="{{ $a->nomor }}"
+                                data-perihal="{{ $a->perihal }}"
+                                data-keterangan="{{ $a->keterangan }}"
+                                data-ttd_1="{{ $a->ttd_1 }}"
+                                data-instansi_1="{{ $a->instansi_1 }}"
+                                data-ttd_2="{{ $a->ttd_2 }}"
+                                data-instansi_2="{{ $a->instansi_2 }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
+
                             <a class="hapus" href="{{ url('/operator/edit/sekretariat/kerja_sama/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>

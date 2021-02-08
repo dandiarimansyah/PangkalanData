@@ -49,7 +49,23 @@
                         <td>{{ $a -> aktivitas}}</td>
 
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-provinsi="{{ $a->provinsi }}"
+                                data-nama_kegiatan="{{ $a->nama_kegiatan }}"
+                                data-tanggal_awal_pelaksanaan="{{ $a->tanggal_awal_pelaksanaan }}"
+                                data-tanggal_akhir_pelaksanaan="{{ $a->tanggal_akhir_pelaksanaan }}"
+                                data-pemateri="{{ $a->pemateri }}"
+                                data-jumlah_peserta="{{ $a->jumlah_peserta }}"
+                                data-jumlah_sekolah="{{ $a->jumlah_sekolah }}"
+                                data-jumlah_sekolah_yang_dibina="{{ $a->jumlah_sekolah_yang_dibina }}"
+                                data-nama_sekolah_yang_dibina="{{ $a->nama_sekolah_yang_dibina }}"
+                                data-aktivitas="{{ $a->aktivitas }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
                             <a class="hapus" href="{{ url('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>

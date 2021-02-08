@@ -41,7 +41,24 @@
                         <td></td>
 
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-provinsi="{{ $a->provinsi }}"
+                                data-tahun="{{ $a->tahun }}"
+                                data-pemenang_1_1="{{ $a->pemenang_1_1 }}"
+                                data-pemenang_1_2="{{ $a->pemenang_1_2 }}"
+                                data-pemenang_2_1="{{ $a->pemenang_2_1 }}"
+                                data-pemenang_2_2="{{ $a->pemenang_2_2 }}"
+                                data-pemenang_3_1="{{ $a->pemenang_3_1 }}"
+                                data-pemenang_3_2="{{ $a->pemenang_3_2 }}"
+                                data-keterangan="{{ $a->keterangan }}"
+                                data-media="{{ $a->media }}"
+
+                            >Edit</button>
+                            
                             <a class="hapus" href="{{ url('/operator/edit/kebahasaan/duta_nasional/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>

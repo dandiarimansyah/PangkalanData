@@ -52,7 +52,23 @@
                       <td></td>
 
                       <td style="display: flex; justify-content:center">
-                          <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                          <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-kantor="{{ $a->kantor }}"
+                                data-alamat="{{ $a->alamat }}"
+                                data-status_tanah="{{ $a->status_tanah }}"
+                                data-sertif_tanah="{{ $a->sertif_tanah }}"
+                                data-status_bangunan="{{ $a->status_bangunan }}"
+                                data-imb="{{ $a->imb }}"
+                                data-kondisi="{{ $a->kondisi }}"
+                                data-status_peroleh="{{ $a->status_peroleh }}"
+                                data-keterangan="{{ $a->keterangan }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
+
                           <a class="hapus" href="{{ url('/operator/edit/sekretariat/tanah_bangunan/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                       </td>
                   </tr>

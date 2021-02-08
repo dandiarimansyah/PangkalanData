@@ -33,7 +33,16 @@
                         <td>{{ $a -> deskripsi}}</td>
 
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-kategori="{{ $a->kategori }}"
+                                data-tahun="{{ $a->tahun }}"
+                                data-deskripsi="{{ $a->deskripsi }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
                             <a class="hapus" href="{{ url('/operator/edit/kebahasaan/penghargaan_bahasa/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>

@@ -45,7 +45,17 @@
                         <td>{{ $a -> tingkat}}</td>
                         
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-nama="{{ $a->nama }}"
+                                data-tempat_lahir="{{ $a->tempat_lahir }}"
+                                data-tanggal_lahir="{{ $a->tanggal_lahir }}"
+                                data-instansi="{{ $a->instansi }}"
+                                data-tingkat="{{ $a->tingkat }}"
+                            >Edit</button>
                             <a class="hapus" href="{{ url('/operator/edit/kebahasaan/pesuluh/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>

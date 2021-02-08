@@ -45,7 +45,23 @@
                         <td></td>
                         
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-provinsi="{{ $a->unit }}"
+                                data-kota="{{ $a->kota }}"
+                                data-nama_kegiatan="{{ $a->nama_kegiatan }}"
+                                data-tanggal_awal="{{ $a->tanggal_awal }}"
+                                data-tanggal_akhir="{{ $a->tanggal_akhir }}"
+                                data-narasumber="{{ $a->narasumber }}"
+                                data-sasaran="{{ $a->sasaran }}"
+                                data-jumlah_peserta="{{ $a->jumlah_peserta }}"
+                                data-materi="{{ $a->materi }}"
+                                data-media="{{ $a->media }}"
+                                
+                            >Edit</button>
                             <a class="hapus" href="{{ url('/operator/edit/kebahasaan/penyuluhan/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>

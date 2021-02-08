@@ -43,7 +43,21 @@
                         <td>{{ $a -> sumber_data}}</td>
 
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-provinsi="{{ $a->provinsi }}"
+                                data-unit="{{ $a->unit }}"
+                                data-jumlah_buku="{{ $a->jumlah_buku }}"
+                                data-jumlah_judul="{{ $a->jumlah_judul }}"
+                                data-jenis_buku_2="{{ $a->jenis_buku_2 }}"
+                                data-jenis_buku="{{ $a->jenis_buku }}"
+                                data-jumlah_pengunjung="{{ $a->jumlah_pengunjung }}"
+                                data-sumber_data="{{ $a->sumber_data }}"
+                            >Edit</button>
+
                             <a class="hapus" href="{{ url('/operator/edit/sekretariat/perpustakaan/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>

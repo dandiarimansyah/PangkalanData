@@ -49,7 +49,23 @@
                       <td></td>
 
                       <td style="display: flex; justify-content:center">
-                          <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                        <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-kategori="{{ $a->kategori }}"
+                                data-judul="{{ $a->judul }}"
+                                data-tim_redaksi="{{ $a->tim_redaksi }}"
+                                data-volume="{{ $a->volume }}"
+                                data-no_issn="{{ $a->no_issn }}"
+                                data-lingkup="{{ $a->lingkup }}"
+                                data-penerbit="{{ $a->penerbit }}"
+                                data-keterangan="{{ $a->keterangan }}"
+                                data-info_produk="{{ $a->info_produk }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
+
                           <a class="hapus" href="{{ url('/operator/edit/kebahasaan/jurnal/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                       </td>
                   </tr>

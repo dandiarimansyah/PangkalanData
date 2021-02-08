@@ -41,7 +41,19 @@
                         <td>{{ $a -> keterangan}}</td>
 
                         <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-nama_komunitas="{{ $a->nama_komunitas }}"
+                                data-provinsi="{{ $a->provinsi }}"
+                                data-kota="{{ $a->kota }}"
+                                data-kecamatan="{{ $a->kecamatan }}"
+                                data-alamat="{{ $a->alamat }}"
+                                data-koordinat="{{ $a->koordinat }}"
+                                data-keterangan="{{ $a->keterangan }}"
+                            >Edit</button>
                             <a class="hapus" href="{{ url('/operator/edit/komunitas/komunitas_sastra/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>

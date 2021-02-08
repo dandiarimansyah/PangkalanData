@@ -49,7 +49,25 @@
                         {{-- <td>{{ $a -> media}}</td> --}}
                         <td></td>
                         <td style="display: flex; justify-content:center;">
-                            <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                           <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-kategori="{{ $a->kategori }}"
+                                data-unit="{{ $a->unit }}"
+                                data-peneliti="{{ $a->peneliti }}"
+                                data-judul="{{ $a->judul }}"
+                                data-kerja_sama="{{ $a->kerja_sama }}"
+                                data-tanggal_awal="{{ $a->tanggal_awal }}"
+                                data-tanggal_akhir="{{ $a->tanggal_akhir }}"
+                                data-lama_penelitian="{{ $a->lama_penelitian }}"
+                                data-publikasi="{{ $a->publikasi }}"
+                                data-tahun_terbit="{{ $a->tahun_terbit }}"
+                                data-abstrak="{{ $a->abstrak }}"
+                                data-media="{{ $a->media }}"
+                            >Edit</button>
+
                             <a class="hapus" href="{{ url('/operator/edit/penelitian/penelitian/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
                         </td>
                     </tr>
