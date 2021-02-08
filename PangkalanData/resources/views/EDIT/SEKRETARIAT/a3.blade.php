@@ -100,7 +100,7 @@
                                 data-semua_kelamin="{{ $a->semua_kelamin }}"
                                 data-laki="{{ $a->laki }}"
                                 data-perempuan="{{ $a->perempuan }}"
-                                data-S3="{{ $a->S3 }}"
+                                data-s3="{{ $a->S3 }}"
                                 data-S2="{{ $a->S2 }}"
                                 data-S1="{{ $a->S1 }}"
                                 data-D3="{{ $a->D3 }}"
@@ -154,10 +154,10 @@
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
                     <form id="edit_form" action="" method="POST">
-                            @csrf
-                            @method('PUT')
+                    @csrf
+                    @method('PUT')
                     
-                            <div class="alert-danger">{{ $errors->first('unit') }}</div>
+                    <div class="alert-danger">{{ $errors->first('unit') }}</div>
                     <div class="inputfield-select">
                         <label>Unit/Satuan Kerja*</label>
                         <div class="custom_select">
@@ -179,7 +179,7 @@
                         <input id="perempuan" name="perempuan" type="text" class="input">
                     </div> 
 
-                <div class="alert-danger">{{ $errors->first('semua_kelamin') }}</div>
+                    <div class="alert-danger">{{ $errors->first('semua_kelamin') }}</div>
                     <div class="inputfield">
                         <label>Jumlah Pegawai Keseluruhan</label>
                         <input id="semua_kelamin" name="semua_kelamin" type="text" class="input">
@@ -189,105 +189,105 @@
 
                     <div style="justify-content: center; margin-bottom:0" class="inputfield">
                     <div class="mini">
-                        <input id="S3" name="S3" type="text" class="input">
+                        <input id="s3" name="S3" type="text" class="input">
                         <p for="">S3</p>
                     </div>
                     <div class="mini">
-                        <input id="S2" name="S2" type="text" class="input">
+                        <input id="s2" name="S2" type="text" class="input">
                         <p for="">S2</p>
                     </div>
                     <div class="mini">
-                        <input id="S1" name="S1" type="text" class="input">
+                        <input id="s1" name="S1" type="text" class="input">
                         <p for="">S1</p>
                     </div>
                     <div class="mini">
-                        <input id="D3" name="D3" type="text" class="input">
+                        <input id="d3" name="D3" type="text" class="input">
                         <p for="">D3</p>
                     </div>
                     <div class="mini">
-                        <input id="SMA" name="SMA" type="text" class="input">
+                        <input id="sma" name="SMA" type="text" class="input">
                         <p for="">SMA/K</p>
                     </div>
                     <div class="mini">
-                        <input id="SMP" name="SMP" type="text" class="input">
+                        <input id="smp" name="SMP" type="text" class="input">
                         <p for="">SMP</p>
                     </div>
                     <div class="mini">
-                        <input id="SD" name="SD" type="text" class="input">
+                        <input id="sd" name="SD" type="text" class="input">
                         <p for="">SD</p>
                     </div>
                     <div class="mini">
-                        <input id="T_4E" name="T_4E" type="text" class="input">
+                        <input id="t_4e" name="T_4E" type="text" class="input">
                         <p for="">IV/e</p>
                     </div>
                     </div>
 
                     <div style="justify-content: center; margin-bottom:0" class="inputfield">
                     <div class="mini">
-                        <input id="T_4D" name="T_4D" type="text" class="input">
+                        <input id="t_4d" name="T_4D" type="text" class="input">
                         <p for="">IV/d</p>
                     </div>
                     <div class="mini">
-                        <input id="T_4C" name="T_4C" type="text" class="input">
+                        <input id="t_4c" name="T_4C" type="text" class="input">
                         <p for="">IV/c</p>
                     </div>
                     <div class="mini">
-                        <input id="T_4B" name="T_4B" type="text" class="input">
+                        <input id="t_4b" name="T_4B" type="text" class="input">
                         <p for="">IV/b</p>
                     </div>
                     <div class="mini">
-                        <input id="T_4A" name="T_4A" type="text" class="input">
+                        <input id="t_4a" name="T_4A" type="text" class="input">
                         <p for="">IV/a</p>
                     </div>
                     <div class="mini">
-                        <input id="T_3D" name="T_3D" type="text" class="input">
+                        <input id="t_3d" name="T_3D" type="text" class="input">
                         <p for="">III/d</p>
                     </div>
                     <div class="mini">
-                        <input id="T_3C" name="T_3C" type="text" class="input">
+                        <input id="t_3c" name="T_3C" type="text" class="input">
                         <p for="">III/c</p>
                     </div>
                     <div class="mini">
-                        <input id="T_3B" name="T_3B" type="text" class="input">
+                        <input id="t_3b" name="T_3B" type="text" class="input">
                         <p for="">III/b</p>
                     </div>
                     <div class="mini">
-                        <input id="T_3A" name="T_3A" type="text" class="input">
+                        <input id="t_3a" name="T_3A" type="text" class="input">
                         <p for="">III/a</p>
                     </div>
                     </div>
 
                     <div style="justify-content: center; margin-bottom:0" class="inputfield">
                     <div class="mini">
-                        <input id="T_2D" name="T_2D" type="text" class="input">
+                        <input id="t_2d" name="T_2D" type="text" class="input">
                         <p for="">II/d</p>
                     </div>
                     <div class="mini">
-                        <input id="T_2C" name="T_2C" type="text" class="input">
+                        <input id="t_2c" name="T_2C" type="text" class="input">
                         <p for="">II/c</p>
                     </div>
                     <div class="mini">
-                        <input id="T_2B" name="T_2B" type="text" class="input">
+                        <input id="t_2b" name="T_2B" type="text" class="input">
                         <p for="">II/b</p>
                     </div>
                     <div class="mini">
-                        <input id="T_2A" name="T_2A" type="text" class="input">
+                        <input id="t_2a" name="T_2A" type="text" class="input">
                         <p for="">II/a</p>
                     </div>
                     <div class="mini">
-                        <input id="T_1D" name="T_1D" type="text" class="input">
+                        <input id="t_1d" name="T_1D" type="text" class="input">
                         <p for="">I/d</p>
                     </div>
                     <div class="mini">
-                        <input id="T_1C" name="T_1C" type="text" class="input">
+                        <input id="t_1c" name="T_1C" type="text" class="input">
                         <p for="">I/c</p>
                     </div>
                     <div class="mini">
-                        <input id="T_1B" name="T_1B" type="text" class="input">
+                        <input id="t_1b" name="T_1B" type="text" class="input">
                         <p for="">I/b</p>
                     </div>
                     <div class="mini">
-                        <input id="T_1A" name="T_1A" type="text" class="input">
+                        <input id="t_1a" name="T_1A" type="text" class="input">
                         <p for="">I/a</p>
                     </div>
                     </div>
@@ -317,31 +317,30 @@
                 let semua_kelamin = $(this).data('semua_kelamin');
                 let laki = $(this).data('laki');
                 let perempuan = $(this).data('perempuan');
-                let S3 = $(this).data('S3');
-                let S2 = $(this).data('S2');
-                let S1 = $(this).data('S1');
-                let D3 = $(this).data('D3');
-                let SMK = $(this).data('SMK');
-                let SMA = $(this).data('SMA');
-                let SMP = $(this).data('SMP');
-                let SD = $(this).data('SD');
-                let T_4E = $(this).data('T_4E');
-                let T_4D = $(this).data('T_4D');
-                let T_4C = $(this).data('T_4C');
-                let T_4B = $(this).data('T_4B');
-                let T_4A = $(this).data('T_4A');
-                let T_3D = $(this).data('T_3D');
-                let T_3C = $(this).data('T_3C');
-                let T_3B = $(this).data('T_3B');
-                let T_3A = $(this).data('T_3A');
-                let T_2D = $(this).data('T_2D');
-                let T_2C = $(this).data('T_2C');
-                let T_2B = $(this).data('T_2B');
-                let T_2A = $(this).data('T_2A');
-                let T_1D = $(this).data('T_1D');
-                let T_1C = $(this).data('T_1C');
-                let T_1B = $(this).data('T_1B');
-                let T_1A = $(this).data('T_1A');
+                let s3 = $(this).data('s3');
+                let s2 = $(this).data('s2');
+                let s1 = $(this).data('s1');
+                let d3 = $(this).data('d3');
+                let sma = $(this).data('sma');
+                let smp = $(this).data('smp');
+                let sd = $(this).data('sd');
+                let t_4d = $(this).data('t_4d');
+                let t_4e = $(this).data('t_4e');
+                let t_4c = $(this).data('t_4c');
+                let t_4b = $(this).data('t_4b');
+                let t_4a = $(this).data('t_4a');
+                let t_3d = $(this).data('t_3d');
+                let t_3c = $(this).data('t_3c');
+                let t_3b = $(this).data('t_3b');
+                let t_3a = $(this).data('t_3a');
+                let t_2d = $(this).data('t_2d');
+                let t_2c = $(this).data('t_2c');
+                let t_2b = $(this).data('t_2b');
+                let t_2a = $(this).data('t_2a');
+                let t_1d = $(this).data('t_1d');
+                let t_1c = $(this).data('t_1c');
+                let t_1b = $(this).data('t_1b');
+                let t_1a = $(this).data('t_1a');
 
                 let id = $(this).data('id');
 
@@ -353,31 +352,30 @@
                 $('#semua_kelamin').val(semua_kelamin);
                 $('#laki').val(laki);
                 $('#perempuan').val(perempuan);
-                $('#S3').val(S3);
-                $('#S2').val(S2);
-                $('#S1').val(S1);
-                $('#D3').val(D3);
-                $('#SMK').val(SMK);
-                $('#SMA').val(SMA);
-                $('#SMP').val(SMP);
-                $('#SD').val(SD);
-                $('#T_4E').val(T_4E);
-                $('#T_4D').val(T_4D);
-                $('#T_4C').val(T_4C);
-                $('#T_4B').val(T_4B);
-                $('#T_4A').val(T_4A);
-                $('#T_3D').val(T_3D);
-                $('#T_3C').val(T_3C);
-                $('#T_3B').val(T_3B);
-                $('#T_3A').val(T_3A);
-                $('#T_2D').val(T_2D);
-                $('#T_2C').val(T_2C);
-                $('#T_2B').val(T_2B);
-                $('#T_2A').val(T_2A);
-                $('#T_1D').val(T_1D);
-                $('#T_1C').val(T_1C);
-                $('#T_1B').val(T_1B);
-                $('#T_1A').val(T_1A);
+                $('#s3').val(s3);
+                $('#s2').val(s2);
+                $('#s1').val(s1);
+                $('#d3').val(d3);
+                $('#sma').val(sma);
+                $('#smp').val(smp);
+                $('#sd').val(sd);
+                $('#t_4e').val(t_4e);
+                $('#t_4d').val(t_4d);
+                $('#t_4c').val(t_4c);
+                $('#t_4b').val(t_4b);
+                $('#t_4a').val(t_4a);
+                $('#t_3d').val(t_3d);
+                $('#t_3c').val(t_3c);
+                $('#t_3b').val(t_3b);
+                $('#t_3a').val(t_3a);
+                $('#t_2d').val(t_2d);
+                $('#t_2c').val(t_2c);
+                $('#t_2b').val(t_2b);
+                $('#t_2a').val(t_2a);
+                $('#t_1d').val(t_1d);
+                $('#t_1c').val(t_1c);
+                $('#t_1b').val(t_1b);
+                $('#t_1a').val(t_1a);
                 
                 $('#edit_form').attr('action', '/operator/edit/sekretariat/kepegawaian/' + id);
           })
