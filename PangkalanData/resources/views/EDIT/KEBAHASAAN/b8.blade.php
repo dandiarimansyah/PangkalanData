@@ -56,7 +56,6 @@
                                 data-pemenang_2_2="{{ $a->pemenang_2_2 }}"
                                 data-pemenang_3_1="{{ $a->pemenang_3_1 }}"
                                 data-pemenang_3_2="{{ $a->pemenang_3_2 }}"
-                                data-pemenang_3_2="{{ $a->pemenang_3_2 }}"
                                 data-favorit_1="{{ $a->favorit_1 }}"
                                 data-favorit_2="{{ $a->favorit_2 }}"
                                 data-keterangan="{{ $a->keterangan }}"
@@ -91,8 +90,8 @@
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
                     <form id="edit_form" action="" method="POST">
-                            @csrf
-                            @method('PUT')
+                    @csrf
+                    @method('PUT')
                     
                         <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
                         <div class="inputfield-select">
@@ -216,8 +215,8 @@
                 $('#pemenang_3_1').val(pemenang_3_1);
                 $('#pemenang_3_2').val(pemenang_3_2);
                 $('#favorit_1').val(favorit_1);
-                $('#pemenang_3_2').val(favorit_2);
-                $('#favorit_2').val(keterangan);
+                $('#favorit_2').val(favorit_2);
+                $('#keterangan').val(keterangan);
                 $('#media').val(media);
                 
                 $('#edit_form').attr('action', '/operator/edit/kebahasaan/duta_bahasa_provinsi/' + id);
