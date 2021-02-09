@@ -216,7 +216,7 @@
                 $('#koordinat').val(koordinat);
                 $('#keterangan').val(keterangan);
                 
-                $('#edit_form').attr('action', '/operator/edit/komunitas/komunitas_bahasa/' + id);
+                $('#edit_form').attr('action', '/operator/edit/komunitas/komunitas_sastra/' + id);
           })
       </script>
 @endpush

@@ -108,7 +108,7 @@
                         <div class="inputfield-select">
                             <label>Provinsi*</label>
                             <div class="custom_select">
-                            <select name="provinsi">
+                            <select id="provinsi" name="provinsi">
                                 <option value="Jawa Tengah">Jawa Tengah</option>
                             </select>
                             </div>
@@ -117,69 +117,65 @@
                         <div class="alert-danger">{{ $errors->first('kota') }}</div>
                         <div class="inputfield">
                             <label>Kabupaten/Kota*</label>
-                            <input name="kota" type="text" class="input">
+                            <input id="kota" name="kota" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>
                         <div class="inputfield">
                             <label>Nama Kegiatan</label>
-                            <input name="nama_kegiatan" type="text" class="input">
+                            <input id="nama_kegiatan" name="nama_kegiatan" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
                         <div class="inputfield-date">
                             <label>Tanggal Awal Pelaksanaan</label>
-                            <input name="tanggal_awal" type="date" class="input">
+                            <input id="tanggal_awal" name="tanggal_awal" type="date" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
                         <div class="inputfield-date">
                             <label>Tanggal Akhir Pelaksanaan</label>
-                            <input name="tanggal_akhir" type="date" class="input">
+                            <input id="tanggal_akhir" name="tanggal_akhir" type="date" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('narasumber') }}</div>
                         <div class="inputfield">
                             <label>Narasumber</label>
-                            <input name="narasumber" type="text" class="input">
+                            <input id="narasumber" name="narasumber" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('sasaran') }}</div>
                         <div class="inputfield">
                             <label>Sasaran</label>
-                            <input name="sasaran" type="text" class="input">
+                            <input id="sasaran" name="sasaran" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('jumlah_peserta') }}</div>
                         <div class="inputfield">
                             <label>Jumlah Peserta</label>
-                            <input name="jumlah_peserta" type="text" class="input">
+                            <input id="jumlah_peserta" name="jumlah_peserta" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('materi') }}</div>
                         <div class="inputfield">
                             <label>Materi</label>
-                            <textarea name="materi" class="textarea"></textarea>
+                            <textarea id="materi" name="materi" class="textarea"></textarea>
                         </div>  
 
                         <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
-                        <input type="file" name="media">
+                        <input id="media" type="file" name="media">
                         </div>
                         
-                        <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                        </div> 
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -191,19 +187,33 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let provinsi = $(this).data('provinsi');
+
+                let kota = $(this).data('kota');
+                let tanggal_awal = $(this).data('tanggal_awal');
+                let tanggal_akhir = $(this).data('tanggal_akhir');
+                let nama_kegiatan = $(this).data('nama_kegiatan');
+                let narasumber = $(this).data('narasumber');
+                let sasaran = $(this).data('sasaran');
+                let jumlah_peserta = $(this).data('jumlah_peserta');
+                let materi = $(this).data('materi');
+
                 let id = $(this).data('id');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
+                $('#provinsi option').filter(function(){
+                    return ($(this).val() == provinsi)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
+                $('#kota').val(kota);
+                $('#tanggal_awal').val(tanggal_awal);
+                $('#tanggal_akhir').val(tanggal_akhir);
+                $('#nama_kegiatan').val(nama_kegiatan);
+                $('#narasumber').val(narasumber);
+                $('#sasaran').val(sasaran);
+                $('#jumlah_peserta').val(jumlah_peserta);
+                $('#materi').val(materi);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/kebahasaan/penyuluhan/' + id);
           })
       </script>
 @endpush

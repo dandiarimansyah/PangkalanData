@@ -63,7 +63,7 @@
                                 data-media="{{ $a->media }}"
                             >Edit</button>
 
-                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/duta_provinsi/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/duta_bahasa_provinsi/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty
@@ -197,8 +197,8 @@
                 let pemenang_2_2 = $(this).data('pemenang_2_2');
                 let pemenang_3_1 = $(this).data('pemenang_3_1');
                 let pemenang_3_2 = $(this).data('pemenang_3_2');
-                let pemenang_3_2 = $(this).data('favorit_1');
-                let pemenang_3_2 = $(this).data('favorit_2');
+                let favorit_1 = $(this).data('favorit_1');
+                let favorit_2 = $(this).data('favorit_2');
                 let keterangan = $(this).data('keterangan');
                 let media = $(this).data('media');
 
@@ -215,9 +215,9 @@
                 $('#pemenang_2_2').val(pemenang_2_2);
                 $('#pemenang_3_1').val(pemenang_3_1);
                 $('#pemenang_3_2').val(pemenang_3_2);
-                $('#pemenang_3_2').val(favorit_1);
+                $('#favorit_1').val(favorit_1);
                 $('#pemenang_3_2').val(favorit_2);
-                $('#keterangan').val(keterangan);
+                $('#favorit_2').val(keterangan);
                 $('#media').val(media);
                 
                 $('#edit_form').attr('action', '/operator/edit/kebahasaan/duta_bahasa_provinsi/' + id);

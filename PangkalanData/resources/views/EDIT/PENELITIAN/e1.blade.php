@@ -113,7 +113,7 @@
                         <div class="inputfield-select">
                             <label>Kategori Penelitian*</label>
                             <div class="custom_select">
-                            <select name="kategori">
+                            <select id="kategori" name="kategori">
                                 <option value="Bahasa">Bahasa</option>
                                 <option value="Sastra">Sastra</option>
                             </select>
@@ -124,7 +124,7 @@
                         <div class="inputfield-select">
                             <label>Unit/Satuan Kerja*</label>
                             <div class="custom_select">
-                            <select name="unit">
+                            <select id="unit" name="unit">
                                 <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
                             </select>
                             </div>
@@ -133,43 +133,43 @@
                         <div class="alert-danger">{{ $errors->first('peneliti') }}</div>
                         <div class="inputfield">
                             <label>Peneliti*</label>
-                            <input name="peneliti" type="text" class="input">
+                            <input id="peneliti" name="peneliti" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('judul') }}</div>
                         <div class="inputfield">
                             <label>Judul*</label>
-                            <textarea name="judul" class="textarea"></textarea>
+                            <textarea id="judul" name="judul" class="textarea"></textarea>
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('kerja_sama') }}</div>
                         <div class="inputfield">
                             <label>Kerja Sama</label>
-                            <input name="kerja_sama" type="text" class="input">
+                            <input id="kerja_sama" name="kerja_sama" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
                         <div class="inputfield-date">
                             <label>Tanggal Mulai Penelitian</label>
-                            <input name="tanggal_awal" type="date" class="input">
+                            <input id="tanggal_awal" name="tanggal_awal" type="date" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
                         <div class="inputfield-date">
                             <label>Tanggal Selesai Penelitian</label>
-                            <input name="tanggal_akhir" type="date" class="input">
+                            <input id="tanggal_akhir" name="tanggal_akhir" type="date" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('lama_penelitian') }}</div>
                         <div class="inputfield-kecil">
                             <label>Lama Penelitian</label>
-                            <input name="lama_penelitian" type="text" class="input">
+                            <input id="lama_penelitian" name="lama_penelitian" type="text" class="input">
                             <div class="custom_select" style="margin-left: 30px; width: 120px">
-                                <select name="tipe_waktu">
-                                <option value="Tahun">Tahun</option>
-                                <option value="Bulan">Bulan</option>
-                                <option value="Minggu">Minggu</option>
-                                <option value="Hari">Hari</option>
+                                <select id="tipe_waktu" name="tipe_waktu">
+                                    <option value="Tahun">Tahun</option>
+                                    <option value="Bulan">Bulan</option>
+                                    <option value="Minggu">Minggu</option>
+                                    <option value="Hari">Hari</option>
                                 </select>
                             </div>
                         </div> 
@@ -178,7 +178,7 @@
                         <div class="inputfield-select">
                             <label>Publikasi</label>
                             <div class="custom_select">
-                            <select name="publikasi">
+                            <select id="publikasi" name="publikasi">
                                 <option value="Terbit">Terbit</option>
                                 <option value="Belum Terbit">Belum Terbit</option>
                             </select>
@@ -188,34 +188,29 @@
                         <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
                         <div class="inputfield-kecil">
                             <label>Tahun Terbit</label>
-                            <input name="tahun_terbit" type="text" class="input">
+                            <input id="text" name="tahun_terbit" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('abstrak') }}</div>
                         <div class="inputfield">
                             <label>Abstrak*</label>
-                            <textarea name="abstrak" class="textarea"></textarea>
+                            <textarea id="textarea" name="abstrak" class="textarea"></textarea>
                         </div> 
 
                         <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
-                        <input type="file" name="media">
+                        <input id="media" type="file" name="media">
                         </div>
 
-                        <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                        </div> 
-
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -227,19 +222,48 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
+                let kategori = $(this).data('kategori');
                 let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let lama_penelitian = $(this).data('lama_penelitian');
+                let publikasi = $(this).data('publikasi');
+
+                let peneliti = $(this).data('peneliti');
+                let judul = $(this).data('judul');
+                let kerja_sama = $(this).data('kerja_sama');
+                let tanggal_awal = $(this).data('tanggal_awal');
+                let tanggal_akhir = $(this).data('tanggal_akhir');
+                let tahun_terbit = $(this).data('tahun_terbit');
+                let abstrak = $(this).data('abstrak');
+                let media = $(this).data('media');
+
                 let id = $(this).data('id');
+
+                $('#kategori option').filter(function(){
+                    return ($(this).val() == kategori)
+                }).prop('selected', true);
 
                 $('#unit option').filter(function(){
                     return ($(this).val() == unit)
                 }).prop('selected', true);
-
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#lama_penelitian option').filter(function(){
+                    return ($(this).val() == lama_penelitian)
+                }).prop('selected', true);
+
+                $('#publikasi option').filter(function(){
+                    return ($(this).val() == publikasi)
+                }).prop('selected', true);
+
+                $('#peneliti').val(peneliti);
+                $('#judul').val(judul);
+                $('#kerja_sama').val(kerja_sama);
+                $('#tanggal_awal').val(tanggal_awal);
+                $('#tanggal_akhir').val(tanggal_akhir);
+                $('#tahun_terbit').val(tahun_terbit);
+                $('#abstrak').val(abstrak);
+                $('#media').val(media);
+                
+                $('#edit_form').attr('action', '/operator/edit/penelitian/penelitian/' + id);
           })
       </script>
 @endpush

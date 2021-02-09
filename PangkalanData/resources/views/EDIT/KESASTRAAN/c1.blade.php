@@ -66,6 +66,7 @@
                                 data-target="#edit-modal"
                                 data-id="{{ $a->id }}"
                                 data-provinsi="{{ $a->provinsi }}"
+                                data-kota="{{ $a->kota }}"
                                 data-nama_kegiatan="{{ $a->nama_kegiatan }}"
                                 data-tanggal_awal_pelaksanaan="{{ $a->tanggal_awal_pelaksanaan }}"
                                 data-tanggal_akhir_pelaksanaan="{{ $a->tanggal_akhir_pelaksanaan }}"
@@ -112,7 +113,7 @@
                         <div class="inputfield-select">
                             <label>Provinsi*</label>
                             <div class="custom_select">
-                                <select id="" name="provinsi">
+                                <select id="provinsi" name="provinsi">
                                     <option value="Jawa Tengah">Jawa Tengah</option>
                                 </select>
                             </div>
@@ -121,84 +122,80 @@
                         <div class="alert-danger">{{ $errors->first('kota') }}</div>
                         <div class="inputfield">
                             <label>Kabupaten/Kota*</label>
-                            <input id="" name="kota" type="text" class="input">
+                            <input id="kota" name="kota" type="text" class="input">
                         </div> 
                 
                         <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div>
                         <div class="inputfield">
                             <label>Nama Kegiatan</label>
-                            <input id="" name="nama_kegiatan" type="text" class="input">
+                            <input id="nama_kegiatan" name="nama_kegiatan" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tanggal_awal_pelaksanaan') }}</div>
                         <div class="inputfield-date">
                             <label>Tanggal Awal Pelaksanaan</label>
-                            <input id="" name="tanggal_awal_pelaksanaan" type="date" class="input">
+                            <input id="tanggal_awal_pelaksanaan" name="tanggal_awal_pelaksanaan" type="date" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('tanggal_akhir_pelaksanaan') }}</div>
                         <div class="inputfield-date">
                             <label>Tanggal Akhir Pelaksanaan</label>
-                            <input id="" name="tanggal_akhir_pelaksanaan" type="date" class="input">
+                            <input id="tanggal_akhir_pelaksanaan" name="tanggal_akhir_pelaksanaan" type="date" class="input">
                         </div> 
                 
                         <div class="alert-danger">{{ $errors->first('pemateri') }}</div>
                         <div class="inputfield">
                             <label>Pemateri</label>
-                            <input id="" name="pemateri" type="text" class="input">
+                            <input id="pemateri" name="pemateri" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('jumlah_peserta') }}</div>
                         <div class="inputfield-kecil">
                             <label>Jumlah Peserta</label>
-                            <input id="" name="jumlah_peserta" type="text" class="input">
+                            <input id="jumlah_peserta" name="jumlah_peserta" type="text" class="input">
                             <p>Orang</p>
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('jumlah_sekolah') }}</div>
                         <div class="inputfield-kecil">
                             <label>Jumlah Sekolah</label>
-                            <input name="jumlah_sekolah" type="text" class="input">
+                            <input id="jumlah_sekolah" name="jumlah_sekolah" type="text" class="input">
                             <p>Sekolah</p>
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('jumlah_sekolah_yang_dibina') }}</div>
                         <div class="inputfield-kecil">
                             <label>Jumlah Sekolah yang Dibina</label>
-                            <input name="jumlah_sekolah_yang_dibina" type="text" class="input">
+                            <input id="jumlah_sekolah_yang_dibina" name="jumlah_sekolah_yang_dibina" type="text" class="input">
                             <p>Sekolah</p>
                         </div> 
                         
                         <div class="alert-danger">{{ $errors->first('nama_sekolah_yang_dibina') }}</div>
                         <div class="inputfield">
                             <label>Nama Sekolah yang Dibina</label>
-                            <textarea name="nama_sekolah_yang_dibina" class="textarea"></textarea>
+                            <textarea id="nama_sekolah_yang_dibina" name="nama_sekolah_yang_dibina" class="textarea"></textarea>
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('aktivitas') }}</div>
                         <div class="inputfield">
                             <label>Aktivitas</label>
-                            <textarea name="aktivitas" class="textarea"></textarea>
+                            <textarea id="aktivitas" name="aktivitas" class="textarea"></textarea>
                         </div> 
 
                         <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
-                        <input type="file" name="media">
+                        <input id="media" type="file" name="media">
                         </div>
                 
-                        <div class="tombol">
-                            <input type="reset" value="Ulangi" class="reset">
-                            <input type="submit" value="Simpan" class="inputan">
-                        </div> 
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -210,19 +207,39 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let provinsi = $(this).data('provinsi');
+
+                let kota = $(this).data('kota');
+                let nama_kegiatan = $(this).data('nama_kegiatan');
+                let tanggal_awal_pelaksanaan = $(this).data('tanggal_awal_pelaksanaan');
+                let tanggal_akhir_pelaksanaan = $(this).data('tanggal_akhir_pelaksanaan');
+                let pemateri = $(this).data('pemateri');
+                let jumlah_peserta = $(this).data('jumlah_peserta');
+                let jumlah_sekolah = $(this).data('jumlah_sekolah');
+                let jumlah_sekolah_yang_dibina = $(this).data('jumlah_sekolah_yang_dibina');
+                let nama_sekolah_yang_dibina = $(this).data('nama_sekolah_yang_dibina');
+                let aktivitas = $(this).data('aktivitas');
+                let media = $(this).data('media');
+
                 let id = $(this).data('id');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
+                $('#provinsi option').filter(function(){
+                    return ($(this).val() == provinsi)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
+                $('#kota').val(kota);
+                $('#nama_kegiatan').val(nama_kegiatan);
+                $('#tanggal_awal_pelaksanaan').val(tanggal_awal_pelaksanaan);
+                $('#tanggal_akhir_pelaksanaan').val(tanggal_akhir_pelaksanaan);
+                $('#pemateri').val(pemateri);
+                $('#jumlah_peserta').val(jumlah_peserta);
+                $('#jumlah_sekolah').val(jumlah_sekolah);
+                $('#jumlah_sekolah_yang_dibina').val(jumlah_sekolah_yang_dibina);
+                $('#nama_sekolah_yang_dibina').val(nama_sekolah_yang_dibina);
+                $('#aktivitas').val(aktivitas);
+                $('#media').val(media);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/kesastraan/bengkel_sastra_dan_bahasa/' + id);
           })
       </script>
 @endpush

@@ -82,7 +82,7 @@
                                 data-roda_enam="{{ $a->roda_enam }}"
                             >Edit</button>
 
-                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/inventarisasi/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/inventarisasi_bmn/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty
@@ -277,7 +277,7 @@
                 $('#roda_empat').val(roda_empat);
                 $('#roda_enam').val(roda_enam);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/inventasisasi/' + id);
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/inventarisasi_bmn/' + id);
           })
       </script>
 @endpush

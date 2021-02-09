@@ -59,7 +59,7 @@
 
                             >Edit</button>
                             
-                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/duta_nasional/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/duta_bahasa_nasional/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty

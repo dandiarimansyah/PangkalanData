@@ -41,7 +41,7 @@
                       <td>{{ $key + 1}}</td>
                       <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
                       <td>{{ $a -> kantor}}</td>
-                      <!-- <td>{{ $a -> alamat}}</td> -->
+                      <td>{{ $a -> alamat}}</td>
                       <td>{{ $a -> status_tanah}}</td>
                       <td>{{ $a -> sertif_tanah}}</td>
                       <td>{{ $a -> status_bangunan}}</td>
@@ -207,14 +207,9 @@
 
                       <div class="inputfield-kecil">
                         <label for="">Unggah File</label>
-                        <input type="file" name="media">
+                        <input id="media" type="file" name="media">
                       </div>
 
-                      <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                      </div> 
-                      
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                         <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
@@ -232,7 +227,6 @@
 
 @endsection
 
-
 @push('scripts')
       <script>
 
@@ -241,6 +235,7 @@
                 let kondisi = $(this).data('kondisi');
                 let status_peroleh = $(this).data('status_peroleh');
 
+                let alamat = $(this).data('alamat');
                 let status_tanah = $(this).data('status_tanah');
                 let sertif_tanah = $(this).data('sertif_tanah');
                 let status_bangunan = $(this).data('status_bangunan');
@@ -261,13 +256,14 @@
                     return ($(this).val() == status_peroleh)
                 }).prop('selected', true);
 
+                $('#alamat').val(alamat);
                 $('#status_tanah').val(status_tanah);
                 $('#sertif_tanah').val(sertif_tanah);
                 $('#status_bangunan').val(status_bangunan);
                 $('#imb').val(imb);
                 $('#keterangan').val(keterangan);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/kerja_sama/' + id);
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/tanah_bangunan/' + id);
           })
       </script>
 @endpush

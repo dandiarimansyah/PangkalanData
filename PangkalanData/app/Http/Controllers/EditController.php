@@ -220,7 +220,7 @@ class EditController extends Controller
             'S2' => $request->get('S2'),
             'S1' => $request->get('S1'),
             'D3' => $request->get('D3'),
-            'SMK' => $request->get('SMK'),
+            // 'SMK' => $request->get('SMK'),
             'SMA' => $request->get('SMA'),
             'SMP' => $request->get('SMP'),
             'SD' => $request->get('SD'),
@@ -332,7 +332,7 @@ class EditController extends Controller
     //UPDATE KATEGORI B
     public function update_b1($id, Request $request)
     {
-        $data = Kamus::where('id', $id)
+        $data = Kamus_Ensiklopedia::where('id', $id)
         ->update([
             'kategori' => $request->get('kategori'),
             'judul' => $request->get('judul'),
@@ -353,7 +353,7 @@ class EditController extends Controller
       ////////////////////////////////////////////
     public function update_b2($id, Request $request)
     {
-        $data = Jurnal::where('id', $id)
+        $data = Jurnal_Majalah::where('id', $id)
         ->update([
             'kategori' => $request->get('kategori'),
             'judul' => $request->get('judul'),

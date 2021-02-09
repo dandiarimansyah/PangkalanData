@@ -93,7 +93,7 @@
                         <div class="inputfield-select">
                             <label>Provinsi*</label>
                             <div class="custom_select">
-                            <select name="provinsi">
+                            <select id="provinsi" name="provinsi">
                                 <option value="Jawa Tengah">Jawa Tengah</option>
                             </select>
                             </div>
@@ -103,7 +103,7 @@
                         <div class="inputfield-select">
                             <label>Unit Kerja*</label>
                             <div class="custom_select">
-                            <select name="unit">
+                            <select id="unit" name="unit">
                                 <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
                             </select>
                             </div>
@@ -112,20 +112,20 @@
                         <div class="alert-danger">{{ $errors->first('jumlah_buku') }}</div>
                         <div class="inputfield">
                             <label>Jumlah Buku</label>
-                            <input name="jumlah_buku" type="text" class="input">
+                            <input id="jumlah_buku" name="jumlah_buku" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('jumlah_judul') }}</div>
                         <div class="inputfield">
                             <label>Jumlah Judul</label>
-                            <input name="jumlah_judul" type="text" class="input">
+                            <input id="jumlah_judul" name="jumlah_judul" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('jenis_buku') }}</div>
                         <div class="inputfield-select">
                             <label>Jenis Buku**</label>
                             <div class="custom_select">
-                            <select name="jenis_buku" onchange='jenis_lain(this.value);'>
+                            <select id="jenis_buku" name="jenis_buku" onchange='jenis_lain(this.value);'>
                                 <option disabled="disabled" selected="selected" value="">-- Pilih --</option>
                                 <option value="Umum">Umum</option>
                                 <option value="Karya Sastra">Karya Sastra</option>
@@ -152,28 +152,24 @@
                         <div class="alert-danger">{{ $errors->first('jumlah_pengunjung') }}</div>
                         <div class="inputfield">
                             <label>Jumlah Pengunjung</label>
-                            <input name="jumlah_pengunjung" type="text" class="input">
+                            <input id="jumlah_pengunjung" name="jumlah_pengunjung" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('sumber_data') }}</div>
                         <div class="inputfield">
                             <label>Sumber Data</label>
-                            <input name="sumber_data" type="text" class="input">
+                            <input id="sumber_data" name="sumber_data" type="text" class="input">
                         </div> 
                     
-                        <div class="tombol">
-                        <input type="reset" value="Ulangi" class="reset">
-                        <input type="submit" value="Simpan" class="inputan">
-                        </div>  
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                        </div>
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
           </div>
         </div>
       </div>
@@ -186,19 +182,35 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
+                let provinsi = $(this).data('provinsi');
                 let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let jenis_buku = $(this).data('jenis_buku');
+
+                let jumlah_buku = $(this).data('jumlah_buku');
+                let jumlah_judul = $(this).data('jumlah_judul');
+                let jumlah_pengunjung = $(this).data('jumlah_pengunjung');
+                let sumber_data = $(this).data('sumber_data');
+
                 let id = $(this).data('id');
+
+                $('#provinsi option').filter(function(){
+                    return ($(this).val() == provinsi)
+                }).prop('selected', true);
 
                 $('#unit option').filter(function(){
                     return ($(this).val() == unit)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
+                $('#jenis_buku option').filter(function(){
+                    return ($(this).val() == jenis_buku)
+                }).prop('selected', true);
+
+                $('#jumlah_buku').val(jumlah_buku);
+                $('#jumlah_judul').val(jumlah_judul);
+                $('#jumlah_pengunjung').val(jumlah_pengunjung);
+                $('#sumber_data').val(sumber_data);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/sekretariat/perpustakaan/' + id);
           })
       </script>
 @endpush
