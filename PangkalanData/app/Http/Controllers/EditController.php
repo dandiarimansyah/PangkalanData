@@ -215,40 +215,6 @@ class EditController extends Controller
         $tanggal = new Carbon();
 
         $data = Kepegawaian::where('id', $id)
-<<<<<<< HEAD
-        ->update([
-            'tanggal_diperbarui' => $request->get('tanggal_diperbarui'),
-            'unit' => $request->get('unit'),
-            'semua_kelamin' => $request->get('semua_kelamin'),
-            'laki' => $request->get('laki'),
-            'perempuan' => $request->get('perempuan'),
-            'S3' => $request->get('S3'),
-            'S2' => $request->get('S2'),
-            'S1' => $request->get('S1'),
-            'D3' => $request->get('D3'),
-            // 'SMK' => $request->get('SMK'),
-            'SMA' => $request->get('SMA'),
-            'SMP' => $request->get('SMP'),
-            'SD' => $request->get('SD'),
-            'T_4E' => $request->get('T_4E'),
-            'T_4D' => $request->get('T_4D'),
-            'T_4C' => $request->get('T_4C'),
-            'T_4B' => $request->get('T_4B'),
-            'T_4A' => $request->get('T_4A'),
-            'T_3D' => $request->get('T_3D'),
-            'T_3C' => $request->get('T_3C'),
-            'T_3B' => $request->get('T_3B'),
-            'T_3A' => $request->get('T_3A'),
-            'T_2D' => $request->get('T_2D'),
-            'T_2C' => $request->get('T_2C'),
-            'T_2B' => $request->get('T_2B'),
-            'T_2A' => $request->get('T_2A'),
-            'T_1D' => $request->get('T_1D'),
-            'T_1C' => $request->get('T_1C'),
-            'T_1B' => $request->get('T_1B'),
-            'T_1A' => $request->get('T_1A'),
-        ]);
-=======
             ->update([
                 'tanggal_diperbarui' => $tanggal,
                 'unit' => $request->get('unit'),
@@ -280,7 +246,6 @@ class EditController extends Controller
                 'T_1B' => $request->get('T_1B'),
                 'T_1A' => $request->get('T_1A'),
             ]);
->>>>>>> ff6c3b8d856ebcd7dd30a31f76db5ec9ade68008
 
         return redirect('/operator/edit/sekretariat/kepegawaian')->with('toast_success', 'Data Berhasil Diedit!');
     }
@@ -371,22 +336,6 @@ class EditController extends Controller
     //UPDATE KATEGORI B
     public function update_b1($id, Request $request)
     {
-<<<<<<< HEAD
-        $data = Kamus_Ensiklopedia::where('id', $id)
-        ->update([
-            'kategori' => $request->get('kategori'),
-            'judul' => $request->get('judul'),
-            'tim_redaksi' => $request->get('tim_redaksi'),
-            'edisi' => $request->get('edisi'),
-            'no_isbn' => $request->get('no_isbn'),
-            'lingkup' => $request->get('lingkup'),
-            'penerbit' => $request->get('penerbit'),
-            'tahun_terbit' => $request->get('tahun_terbit'),
-            'keterangan' => $request->get('keterangan'),
-            'info_produk' => $request->get('info_produk'),
-            'media' => $request->get('media'),
-        ]);
-=======
         $data = Kamus::where('id', $id)
             ->update([
                 'kategori' => $request->get('kategori'),
@@ -401,7 +350,6 @@ class EditController extends Controller
                 'info_produk' => $request->get('info_produk'),
                 'media' => $request->get('media'),
             ]);
->>>>>>> ff6c3b8d856ebcd7dd30a31f76db5ec9ade68008
 
         return redirect('/operator/edit/kebahasaan/kamus_ensiklopedia')->with('toast_success', 'Data Berhasil Diedit!');
     }
@@ -409,21 +357,6 @@ class EditController extends Controller
     ////////////////////////////////////////////
     public function update_b2($id, Request $request)
     {
-<<<<<<< HEAD
-        $data = Jurnal_Majalah::where('id', $id)
-        ->update([
-            'kategori' => $request->get('kategori'),
-            'judul' => $request->get('judul'),
-            'tim_redaksi' => $request->get('tim_redaksi'),
-            'volume' => $request->get('volume'),
-            'no_issn' => $request->get('no_issn'),
-            'lingkup' => $request->get('lingkup'),
-            'penerbit' => $request->get('penerbit'),
-            'keterangan' => $request->get('keterangan'),
-            'info_produk' => $request->get('info_produk'),
-            'media' => $request->get('media'),
-        ]);
-=======
         $data = Jurnal::where('id', $id)
             ->update([
                 'kategori' => $request->get('kategori'),
@@ -437,7 +370,6 @@ class EditController extends Controller
                 'info_produk' => $request->get('info_produk'),
                 'media' => $request->get('media'),
             ]);
->>>>>>> ff6c3b8d856ebcd7dd30a31f76db5ec9ade68008
 
         return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('toast_success', 'Data Berhasil Diedit!');
     }
