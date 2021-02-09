@@ -24,8 +24,7 @@
                     <th>DESKRIPSI FISIK</th>
                     <th>UNIT/SATKER</th>
                     <th>INFO PRODUK</th>
-                    <th>MEDIA</th>
-                    <th>EDIT/MEDIA</th>
+                    <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
 
@@ -40,9 +39,8 @@
                         <td>{{ $a -> no_isbn}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> deskripsi}}</td>
+                        <td>Balai Bahasa Jawa Tengah</td>
                         <td>{{ $a -> info_produk}}</td>
-                        <td></td>
-                        <td></td>
                         
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit"
@@ -57,7 +55,6 @@
                                 data-tahun_terbit="{{ $a->tahun_terbit }}"
                                 data-deskripsi="{{ $a->deskripsi }}"
                                 data-info_produk="{{ $a->info_produk }}"
-                                data-media="{{ $a->media }}"
                             >Edit</button>
 
                             <a class="hapus" href="{{ url('/operator/edit/kebahasaan/terbitan_umum/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
@@ -145,11 +142,6 @@
                             </select>
                             </div>
                         </div> 
-
-                        <div class="inputfield-kecil">
-                        <label for="">Unggah Media</label>
-                        <input type="file" name="media">
-                        </div>
                         
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -178,7 +170,7 @@
                 let no_isbn = $(this).data('no_isbn');
                 let tahun_terbit = $(this).data('tahun_terbit');
                 let deskripsi = $(this).data('deskripsi');
-                let media = $(this).data('media');
+                let id = $(this).data('id');
 
                 $('#kategori option').filter(function(){
                     return ($(this).val() == kategori)
@@ -193,9 +185,8 @@
                 $('#no_isbn').val(no_isbn);
                 $('#tahun_terbit').val(tahun_terbit);
                 $('#deskripsi').val(deskripsi);
-                $('#media').val(media);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/kebahasaan/terbitan_umum/' + id);
           })
       </script>
 @endpush

@@ -18,34 +18,22 @@
 
       <div class="inputfield">
           <label>Provinsi</label>
-          {{-- <div class="custom_select"> --}}
-            {{-- <select name="provinsi">
-              <option value="Jawa Tengah">Jawa Tengah</option>
-            </select> --}}
           <input readonly name="kota" type="text" value="{{$penyuluhan->provinsi}}" class="input">
-            {{-- <p>{{$penyuluhan->provinsi}}</p> --}}
-          {{-- </div> --}}
       </div> 
 
-      {{-- <div class="alert-danger">{{ $errors->first('kota') }}</div> --}}
       <div class="inputfield">
           <label>Kabupaten/Kota</label>
           <input readonly name="kota" type="text" value="{{$penyuluhan->kota}}" class="input">
-          {{-- <p>{{$penyuluhan->kota}}</p> --}}
       </div> 
 
-      {{-- <div class="alert-danger">{{ $errors->first('nama_kegiatan') }}</div> --}}
       <div class="inputfield">
           <label>Tgl Kegiatan</label>
           <input readonly name="kota" type="text" value="{{$penyuluhan->tanggal_awal}} s.d. {{$penyuluhan->tanggal_akhir}}" class="input">
-          {{-- <p>{{$penyuluhan->tanggal_awal}} s.d. {{$penyuluhan->tanggal_akhir}}</p> --}}
       </div> 
 
-      {{-- <div class="alert-danger">{{ $errors->first('narasumber') }}</div> --}}
       <div class="inputfield">
           <label>Kegiatan</label>
           <input readonly name="kota" type="text" value="{{$penyuluhan->nama_kegiatan}}" class="input">
-          {{-- <p>{{$penyuluhan->nama_kegiatan}}</p> --}}
       </div> 
 
       <div class="alert-danger">{{ $errors->first('nama') }}</div>

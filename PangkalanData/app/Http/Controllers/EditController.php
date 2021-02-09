@@ -289,7 +289,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/tanah_bangunan')->with('toast_success', 'Data Berhasil Diedit!');
+        return redirect('/operator/edit/sekretariat/tanah_dan_bangunan')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -330,7 +330,7 @@ class EditController extends Controller
                 'roda_enam' => $request->get('roda_enam'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/inventarisasi')->with('toast_success', 'Data Berhasil Diedit!');
+        return redirect('/operator/edit/sekretariat/inventarisasi_bmn')->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI B
@@ -422,7 +422,6 @@ class EditController extends Controller
                 'tanggal_lahir' => $request->get('tanggal_lahir'),
                 'instansi' => $request->get('instansi'),
                 'tingkat' => $request->get('tingkat'),
-                'id_penyuluhan' => $request->get('id_penyuluhan'),
             ]);
 
         return redirect('/operator/edit/kebahasaan/pesuluh')->with('toast_success', 'Data Berhasil Diedit!');
@@ -593,11 +592,13 @@ class EditController extends Controller
     //UPDATE KATEGORI E
     public function update_e1($id, Request $request)
     {
+
+        $lama = $request->lama_penelitian;
+        $waktu = $request->tipe_waktu;
+        $lama_waktu = $lama . " " . $waktu;
+
         $data = Penelitian::where('id', $id)
             ->update([
-                'lama_penelitian' => $request->get('lama_penelitian'),
-                'tipe_waktu' => $request->get('tipe_waktu'),
-                'waktu' => $request->get('waktu'),
                 'kategori' => $request->get('kategori'),
                 'unit' => $request->get('unit'),
                 'peneliti' => $request->get('peneliti'),
@@ -605,11 +606,10 @@ class EditController extends Controller
                 'kerja_sama' => $request->get('kerja_sama'),
                 'tanggal_awal' => $request->get('tanggal_awal'),
                 'tanggal_akhir' => $request->get('tanggal_akhir'),
-                'lama_penelitian' => $request->get('lama_penelitian'),
+                'lama_penelitian' => $lama_waktu,
                 'publikasi' => $request->get('publikasi'),
                 'tahun_terbit' => $request->get('tahun_terbit'),
                 'abstrak' => $request->get('abstrak'),
-                'media' => $request->get('media'),
             ]);
 
         return redirect('/operator/edit/penelitian/penelitian')->with('toast_success', 'Data Berhasil Diedit!');

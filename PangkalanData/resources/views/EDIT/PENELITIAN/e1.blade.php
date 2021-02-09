@@ -64,9 +64,7 @@
                                 id="edit_item" 
                                 data-toggle="modal" 
                                 data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-kategori="{{ $a->kategori }}"
-                                data-unit="{{ $a->unit }}"
+                                data-id="{{ $a->id }}"                                data-unit="{{ $a->unit }}"
                                 data-peneliti="{{ $a->peneliti }}"
                                 data-judul="{{ $a->judul }}"
                                 data-kerja_sama="{{ $a->kerja_sama }}"
@@ -108,17 +106,6 @@
                     <form id="edit_form" action="" method="POST">
                             @csrf
                             @method('PUT')
-                    
-                        <div class="alert-danger">{{ $errors->first('kategori') }}</div>
-                        <div class="inputfield-select">
-                            <label>Kategori Penelitian*</label>
-                            <div class="custom_select">
-                            <select id="kategori" name="kategori">
-                                <option value="Bahasa">Bahasa</option>
-                                <option value="Sastra">Sastra</option>
-                            </select>
-                            </div>
-                        </div> 
 
                         <div class="alert-danger">{{ $errors->first('unit') }}</div>
                         <div class="inputfield-select">
@@ -188,13 +175,13 @@
                         <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
                         <div class="inputfield-kecil">
                             <label>Tahun Terbit</label>
-                            <input id="text" name="tahun_terbit" type="text" class="input">
+                            <input id="tahun_terbit" name="tahun_terbit" type="text" class="input">
                         </div> 
 
                         <div class="alert-danger">{{ $errors->first('abstrak') }}</div>
                         <div class="inputfield">
                             <label>Abstrak*</label>
-                            <textarea id="textarea" name="abstrak" class="textarea"></textarea>
+                            <textarea id="abstrak" name="abstrak" class="textarea"></textarea>
                         </div> 
 
                         <div class="inputfield-kecil">
@@ -222,11 +209,10 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let kategori = $(this).data('kategori');
                 let unit = $(this).data('unit');
                 let lama_penelitian = $(this).data('lama_penelitian');
+                let tipe_waktu = $(this).data('lama_penelitian');
                 let publikasi = $(this).data('publikasi');
-
                 let peneliti = $(this).data('peneliti');
                 let judul = $(this).data('judul');
                 let kerja_sama = $(this).data('kerja_sama');
@@ -234,24 +220,19 @@
                 let tanggal_akhir = $(this).data('tanggal_akhir');
                 let tahun_terbit = $(this).data('tahun_terbit');
                 let abstrak = $(this).data('abstrak');
-                let media = $(this).data('media');
 
                 let id = $(this).data('id');
-
-                $('#kategori option').filter(function(){
-                    return ($(this).val() == kategori)
-                }).prop('selected', true);
 
                 $('#unit option').filter(function(){
                     return ($(this).val() == unit)
                 }).prop('selected', true);
-                
-                $('#lama_penelitian option').filter(function(){
-                    return ($(this).val() == lama_penelitian)
-                }).prop('selected', true);
 
                 $('#publikasi option').filter(function(){
                     return ($(this).val() == publikasi)
+                }).prop('selected', true);
+
+                $('#tipe_waktu option').filter(function(){
+                    return ($(this).val() == tipe_waktu)
                 }).prop('selected', true);
 
                 $('#peneliti').val(peneliti);
@@ -260,8 +241,8 @@
                 $('#tanggal_awal').val(tanggal_awal);
                 $('#tanggal_akhir').val(tanggal_akhir);
                 $('#tahun_terbit').val(tahun_terbit);
+                $('#lama_penelitian').val(lama_penelitian);
                 $('#abstrak').val(abstrak);
-                $('#media').val(media);
                 
                 $('#edit_form').attr('action', '/operator/edit/penelitian/penelitian/' + id);
           })

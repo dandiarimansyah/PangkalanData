@@ -84,19 +84,58 @@
                 <div class="wrapper" style="margin: 0">
                     <div class="form">
                     <form id="edit_form" action="" method="POST">
-                            @csrf
-                            @method('PUT')
-                    
-                   <!-- INPUT HERE   -->
+                    @csrf
+                    @method('PUT')
+                
+                    <div class="alert-danger">{{ $errors->first('nama') }}</div>
+                    <div class="inputfield">
+                        <label>Nama Pesuluh*</label>
+                        <input id="nama" name="nama" type="text" class="input">
+                    </div> 
+                
+                    <div class="alert-danger">{{ $errors->first('tempat_lahir') }}</div>
+                    <div class="inputfield">
+                        <label>Tempat Lahir</label>
+                        <input id="tempat_lahir" name="tempat_lahir" type="text" class="input">
+                    </div>
+                
+                    <div class="alert-danger">{{ $errors->first('tanggal_lahir') }}</div>
+                    <div class="inputfield-date">
+                        <label>Tanggal Lahir</label>
+                        <input id="tanggal_lahir" name="tanggal_lahir" type="date" class="input">
+                    </div> 
+                
+                    <div class="alert-danger">{{ $errors->first('instansi') }}</div>
+                    <div class="inputfield">
+                        <label>Instansi</label>
+                        <textarea id="instansi" name="instansi" class="textarea"></textarea>
+                    </div>  
+                
+                    <div class="inputfield-select">
+                        <label>Tingkat</label>
+                        <div class="custom_select">
+                        <select id="tingkat" name="tingkat">
+                            <option disabled selected value="--PILIH--">--PILIH--</option>
+                            <option value="SD">SD</option>
+                            <option value="SMP">SMP</option>
+                            <option value="SMA">SMA</option>
+                            <option value="SMK">SMK</option>
+                            <option value="Perguruan Tinggi">Perguruan Tinggi</option>
+                            <option value="Lain-Lain">Lain-Lain</option>
+                        </select>
+                        </div>
+                    </div> 
+
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                  </div>
 
                 </form>
             </div>
             </div>
         </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -108,19 +147,23 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let tahun_anggaran = $(this).data('tahun_anggaran');
-                let nilai_anggaran = $(this).data('nilai_anggaran');
+                let nama = $(this).data('nama');
+                let tempat_lahir = $(this).data('tempat_lahir');
+                let tanggal_lahir = $(this).data('tanggal_lahir');
+                let instansi = $(this).data('instansi');
+                let tingkat = $(this).data('tingkat');
                 let id = $(this).data('id');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
+                $('#nama').val(nama);
+                $('#tempat_lahir').val(tempat_lahir);
+                $('#tanggal_lahir').val(tanggal_lahir);
+                $('#instansi').val(instansi);
+                $('#tingkat option').filter(function(){
+                    return ($(this).val() == tingkat)
                 }).prop('selected', true);
 
-                $('#tahun_anggaran').val(tahun_anggaran);
-                $('#nilai_anggaran').val(nilai_anggaran);
                 
-                $('#edit_form').attr('action', '/operator/edit/sekretariat/anggaran/' + id);
+                $('#edit_form').attr('action', '/operator/edit/kebahasaan/pesuluh/' + id);
           })
       </script>
 @endpush

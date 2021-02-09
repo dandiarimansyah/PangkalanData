@@ -70,7 +70,7 @@ class HapusController extends Controller
 
     public function hapus_a5($id)
     {
-        $data = Tanah_Dan_Bangunan::find($id);
+        $data = Tanah_Bangunan::find($id);
         if ($data) {
             $data->delete();
         }
@@ -90,7 +90,7 @@ class HapusController extends Controller
 
     public function hapus_a7($id)
     {
-        $data = Inventarisasi_Bmn::find($id);
+        $data = Inventarisasi::find($id);
         if ($data) {
             $data->delete();
         }
@@ -100,7 +100,7 @@ class HapusController extends Controller
 
     public function hapus_b1($id)
     {
-        $data = Kamus_Ensiklopedia::find($id);
+        $data = Kamus::find($id);
         if ($data) {
             $data->delete();
         }
@@ -110,7 +110,7 @@ class HapusController extends Controller
 
     public function hapus_b2($id)
     {
-        $data = Jurnal_Majalah::find($id);
+        $data = Jurnal::find($id);
         if ($data) {
             $data->delete();
         }
