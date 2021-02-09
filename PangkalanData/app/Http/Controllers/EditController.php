@@ -184,6 +184,12 @@ class EditController extends Controller
 
     public function update_a1($id, Request $request)
     {
+        $request->validate([
+            'unit' => ['required'],
+            'tahun_anggaran' => ['required'],
+            'nilai_anggaran' => ['numeric']
+        ]);
+
         $data = Anggaran::where('id', $id)
             ->update([
                 'unit' => $request->get('unit'),

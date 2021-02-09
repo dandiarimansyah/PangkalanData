@@ -6,13 +6,25 @@
     
 <div class="isi-konten">
 
+    @if ($errors->any())
+        <div class="error">
+            <p>----- Pesan Error -----</p>
+        @foreach ($errors->all() as $error)
+            <div class="errors">
+            {{ $error }}
+            </div>
+        @endforeach
+        </div>
+    @endif
+
     <div class="judul">
         <th>EDIT DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
     </div>
 
+
     <!-- TABLE -->
     <div class="validasi">
-        <table id="datatable" class="content-table">
+        <table class="content-table">
             <thead>
                 <tr>
                     <th>NO</th>
@@ -72,6 +84,7 @@
                             @csrf
                             @method('PUT')
 
+                            <div class="alert-danger">{{ $errors->first('unit') }}</div>
                           <div class="inputfield-select">
                               <label>Unit/Satuan Kerja*</label>
                               <div class="custom_select">
@@ -81,11 +94,13 @@
                               </div>
                           </div>
                           
+                            <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
                           <div class="inputfield">
                               <label>Tahun Anggaran*</label>
-                              <input name="tahun_anggaran" id="tahun_anggaran" type="text" class="input" placeholder="lalal">
+                              <input name="tahun_anggaran" id="tahun_anggaran" type="text" class="input">
                           </div> 
                   
+                            <div class="alert-danger">{{ $errors->first('nilai_anggaran') }}</div>
                           <div class="inputfield">
                               <label>Nilai Anggaran (Rp.)</label>
                               <input name="nilai_anggaran" id="nilai_anggaran" type="text" class="input">
