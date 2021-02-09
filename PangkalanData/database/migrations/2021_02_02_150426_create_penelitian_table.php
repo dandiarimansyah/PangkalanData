@@ -23,6 +23,7 @@ class CreatePenelitianTable extends Migration
             $table->string("tanggal_awal")->nullable();
             $table->string("tanggal_akhir")->nullable();
             $table->string("lama_penelitian")->nullable();
+            $table->string("tipe_waktu")->nullable();
             $table->string("publikasi")->nullable();
             $table->string("tahun_terbit")->nullable();
             $table->string("abstrak");
