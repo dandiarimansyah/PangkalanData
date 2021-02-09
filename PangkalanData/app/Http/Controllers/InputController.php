@@ -241,6 +241,7 @@ class InputController extends Controller
         } else {
             $media = $request->media->store('public/kerja_sama');
         }
+        $data->media = $media;
 
         // if ($request->file('media')) {
         //     $media = $request->file('media');

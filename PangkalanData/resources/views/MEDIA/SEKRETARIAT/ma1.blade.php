@@ -51,17 +51,35 @@
                         <td>{{ $a -> perihal}}</td>
                         <td>{{ $a -> keterangan}}</td>
                         <td>1. {{ $a -> ttd_1}} <br>2. {{ $a -> ttd_2}}</td>
-                        <!-- <td>{{ $a -> instansi_1}}{{ $a -> instansi_2}}</td> -->
+                        {{-- <td>{{ $a -> instansi_1}}{{ $a -> instansi_2}}</td> --}}
 
                         <td>
                             @if ($a->media == "")
-                                <form role="form" action="" enctype="multipart/form-data">
+                                <form method="POST" id="media_form" role="form" action="/media/sekretariat/kerja_sama/{{ $a->id }}" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
                                     <input type="file" name="media">
+                                    <input type="submit" value="Simpan" class="btn btn-info btn-sm">
                                 </form>
                             @else
-                                {{ $a -> media}}
+                                <a target="_blank" type="button" class="edit" href="{{ Storage::url($a->media) }}">Media</a>
                             @endif
                         </td>
+
+                        {{-- <td>
+                            <video width="360" controls>
+                                <source id="frame" src="{{ Storage::url($a->media) }}" style="width: 600px">
+                            </video>
+                        </td> --}}
+
+                        {{-- <td>
+                            <button type="button" class="edit"
+                                id="media_item" 
+                                data-toggle="modal" 
+                                data-target="#media-modal"
+                                data-media="{{ $a->media }}"
+                            >Media</button>
+                        </td> --}}
 
                         
                     </tr>
@@ -78,6 +96,43 @@
     </div>
 </div>
 
-    
+
+<div class="modal fade" id="media-modal">
+    <div id="modal-media" class="modal-dialog" role="document">
+    <div id="modal-content" class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">MEDIA</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            {{-- <div class="container">
+                <form role="form" action="" enctype="multipart/form-data">
+                    <input type="file" name="media">
+                </form>
+            </div>
+
+            <p>Halo</p> --}}
+
+            {{-- <video width="360" controls>
+                <source id="frame" src="" style="width: 600px">
+            </video> --}}
+
+            <img id="frame" src="" style="width: 600px">
+        </div>
+    </div>
+    </div>
+</div>
 
 @endsection
+
+@push('scripts')
+      <script>
+          $(document).on('click','#media_item',function(){
+            let media = $(this).data('media');
+            
+            $('#frame').attr('src', '{{ Storage::url('+media+') }}');
+          })
+      </script>
+@endpush

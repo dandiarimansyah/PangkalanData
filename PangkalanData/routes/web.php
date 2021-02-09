@@ -182,8 +182,6 @@ Route::group(['middleware' => ['auth']], function () {
         //EDIT KATEGORI E
         Route::get('/operator/edit/penelitian/penelitian', [EditController::class, 'e1']);
 
-
-
         //UPDATE KATEGORI A
         Route::put('/operator/edit/sekretariat/anggaran/{id}', [EditController::class, 'update_a1']);
         Route::put('/operator/edit/sekretariat/realisasi_anggaran/{id}', [EditController::class, 'update_a2']);
@@ -279,6 +277,8 @@ Route::group(['middleware' => ['auth']], function () {
 ////========================================== MEDIA ===================
 //MEDIA S 1
 Route::get('/media/sekretariat/kerja_sama', [MediaController::class, 'ma1']);
+Route::put('/media/sekretariat/kerja_sama/{id}', [MediaController::class, 'store_ma1']);
+
 Route::get('/media/sekretariat/tanah_dan_bangunan', [MediaController::class, 'ma2']);
 //MEDIA S 2
 Route::get('/media/kebahasaan/kamus_ensiklopedia', [MediaController::class, 'mb1']);

@@ -27,6 +27,24 @@ class MediaController extends Controller
 
         return view('MEDIA.SEKRETARIAT.ma1', compact('kerja_sama'));
     }
+
+    public function store_ma1($id, Request $request)
+    {
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/kerja_sama');
+        }
+
+        $data = Kerja_Sama::where('id', $id)
+            ->update([
+                'media' => $media,
+            ]);
+
+        return redirect('/media/sekretariat/kerja_sama')->with('toast_success', 'Media Berhasil Diunggah!');
+    }
+
+
     public function ma2()
     {
         $tanah_bangunan = Tanah_Bangunan::all();

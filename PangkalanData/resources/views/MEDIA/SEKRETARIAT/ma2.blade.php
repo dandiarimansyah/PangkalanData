@@ -60,14 +60,14 @@
                   <td>{{ $a -> status_peroleh}}</td>
                   <td>{{ $a -> keterangan}}</td>
 
-                <td>
-                    @if ($a->media == "")
-                        <form role="form" action="" enctype="multipart/form-data">
-                            <input type="file" name="media">
-                        </form>
-                    @else
-                        {{ $a -> media}}
-                    @endif
+                    <td>
+                        @if ($a->media == "")
+                            <form role="form" action="" enctype="multipart/form-data">
+                                <input type="file" name="media">
+                            </form>
+                        @else
+                            {{ $a -> media}}
+                        @endif
                     </td>
               </tr>
           @empty
