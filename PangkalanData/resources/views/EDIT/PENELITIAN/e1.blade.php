@@ -55,7 +55,7 @@
                         <td>{{ $a -> peneliti}}</td>
                         <td>{{ $a -> kerja_sama}}</td>
                         <td>{{ $a -> abstrak}}</td>
-                        <td>{{ $a -> lama_penelitian}}</td>
+                        <td>{{ $a -> lama_penelitian}} {{ $a -> tipe_waktu}}</td>
                         <td>{{ $a -> publikasi}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> media}}</td>
@@ -71,6 +71,7 @@
                                 data-tanggal_awal="{{ $a->tanggal_awal }}"
                                 data-tanggal_akhir="{{ $a->tanggal_akhir }}"
                                 data-lama_penelitian="{{ $a->lama_penelitian }}"
+                                data-tipe_waktu="{{ $a->tipe_waktu }}"
                                 data-publikasi="{{ $a->publikasi }}"
                                 data-tahun_terbit="{{ $a->tahun_terbit }}"
                                 data-abstrak="{{ $a->abstrak }}"
@@ -211,7 +212,7 @@
           $(document).on('click','#edit_item',function(){
                 let unit = $(this).data('unit');
                 let lama_penelitian = $(this).data('lama_penelitian');
-                let tipe_waktu = $(this).data('lama_penelitian');
+                let tipe_waktu = $(this).data('tipe_waktu');
                 let publikasi = $(this).data('publikasi');
                 let peneliti = $(this).data('peneliti');
                 let judul = $(this).data('judul');

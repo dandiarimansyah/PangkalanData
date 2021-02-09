@@ -593,20 +593,16 @@ class EditController extends Controller
     public function update_e1($id, Request $request)
     {
 
-        $lama = $request->lama_penelitian;
-        $waktu = $request->tipe_waktu;
-        $lama_waktu = $lama . " " . $waktu;
-
         $data = Penelitian::where('id', $id)
             ->update([
-                'kategori' => $request->get('kategori'),
                 'unit' => $request->get('unit'),
                 'peneliti' => $request->get('peneliti'),
                 'judul' => $request->get('judul'),
                 'kerja_sama' => $request->get('kerja_sama'),
                 'tanggal_awal' => $request->get('tanggal_awal'),
                 'tanggal_akhir' => $request->get('tanggal_akhir'),
-                'lama_penelitian' => $lama_waktu,
+                'lama_penelitian' => $request->get('lama_penelitian'),
+                'tipe_waktu' => $request->get('tipe_waktu'),
                 'publikasi' => $request->get('publikasi'),
                 'tahun_terbit' => $request->get('tahun_terbit'),
                 'abstrak' => $request->get('abstrak'),

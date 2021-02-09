@@ -703,10 +703,6 @@ class InputController extends Controller
             'abstrak' => ['required'],
         ]);
 
-        $lama = $request->lama_penelitian;
-        $waktu = $request->tipe_waktu;
-        $lama_waktu = $lama . " " . $waktu;
-
         $data = new Penelitian();
         $data->kategori = $request->kategori;
         $data->unit = $request->unit;
@@ -715,7 +711,8 @@ class InputController extends Controller
         $data->kerja_sama = $request->kerja_sama;
         $data->tanggal_awal = $request->tanggal_awal;
         $data->tanggal_akhir = $request->tanggal_akhir;
-        $data->lama_penelitian = $lama_waktu;
+        $data->lama_penelitian = $request->lama_penelitian;
+        $data->tipe_waktu = $request->tipe_waktu;
         $data->publikasi = $request->publikasi;
         $data->tahun_terbit = $request->tahun_terbit;
         $data->abstrak = $request->abstrak;
