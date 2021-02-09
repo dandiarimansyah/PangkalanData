@@ -22,7 +22,7 @@
                     <th>PEMENANG III</th>
                     <th>FAVORIT</th>
                     <th>KETERANGAN</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                     <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
@@ -38,7 +38,7 @@
                         <td>{{ $a -> pemenang_3}}</td>
                         <td>{{ $a -> favorit}}</td>
                         <td>{{ $a -> keterangan}}</td>
-                        <td></td>
+                        <!-- <td></td> -->
 
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit"
@@ -52,7 +52,6 @@
                                 data-pemenang_3="{{ $a->pemenang_3 }}"
                                 data-favorit="{{ $a->favorit }}"
                                 data-keterangan="{{ $a->keterangan }}"
-                                data-media="{{ $a->media }}"
                             >Edit</button>
 
                             <a class="hapus" href="{{ url('/operator/edit/kesastraan/musikalisasi_puisi_nasional/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
@@ -74,7 +73,7 @@
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <h5 class="modal-title" id="exampleModalLabel">EDIT DATA MUSIKALISASI PUISI NASIONAL</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -121,10 +120,10 @@
                             <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
                         </div> 
 
-                        <div class="inputfield-kecil">
+                        <!-- <div class="inputfield-kecil">
                             <label for="">Unggah Media</label>
                             <input id="media" type="file" name="media">
-                        </div>
+                        </div> -->
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -151,7 +150,7 @@
                 let pemenang_3 = $(this).data('pemenang_3');
                 let favorit = $(this).data('favorit');
                 let keterangan = $(this).data('keterangan');
-                let media = $(this).data('media');
+                // let media = $(this).data('media');
 
                 let id = $(this).data('id');
 
@@ -161,7 +160,7 @@
                 $('#pemenang_3').val(pemenang_3);
                 $('#favorit').val(favorit);
                 $('#keterangan').val(keterangan);
-                $('#media').val(media);
+                // $('#media').val(media);
                 
                 $('#edit_form').attr('action', '/operator/edit/kesastraan/musikalisasi_puisi_nasional/' + id);
           })

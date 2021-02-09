@@ -22,7 +22,7 @@
                     <th>PEMENANG II</th>
                     <th>PEMENANG III</th>
                     <th>KETERANGAN</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                     <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
@@ -38,7 +38,6 @@
                         <td>1. {{ $a -> pemenang_2_1}} <br> 2. {{ $a -> pemenang_2_2}}</td>
                         <td>1. {{ $a -> pemenang_3_1}} <br> 2. {{ $a -> pemenang_3_2}}</td>
                         <td>{{ $a -> keterangan}}</td>
-                        <td></td>
 
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit"
@@ -55,7 +54,6 @@
                                 data-pemenang_3_1="{{ $a->pemenang_3_1 }}"
                                 data-pemenang_3_2="{{ $a->pemenang_3_2 }}"
                                 data-keterangan="{{ $a->keterangan }}"
-                                data-media="{{ $a->media }}"
 
                             >Edit</button>
                             
@@ -78,7 +76,7 @@
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <h5 class="modal-title" id="exampleModalLabel">EDIT DATA DUTA BAHASA NASIONAL</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -180,10 +178,10 @@
                             <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
                         </div>  
 
-                        <div class="inputfield-kecil">
+                        <!-- <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
                         <input id="media" type="file" name="media">
-                        </div>
+                        </div> -->
                         
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -216,7 +214,7 @@
                 let pemenang_3_1 = $(this).data('pemenang_3_1');
                 let pemenang_3_2 = $(this).data('pemenang_3_2');
                 let keterangan = $(this).data('keterangan');
-                let media = $(this).data('media');
+                // let media = $(this).data('media');
 
                 let id = $(this).data('id');
 
@@ -232,7 +230,7 @@
                 $('#pemenang_3_1').val(pemenang_3_1);
                 $('#pemenang_3_2').val(pemenang_3_2);
                 $('#keterangan').val(keterangan);
-                $('#media').val(media);
+                // $('#media').val(media);
                 
                 $('#edit_form').attr('action', '/operator/edit/kebahasaan/duta_bahasa_nasional/' + id);
           })

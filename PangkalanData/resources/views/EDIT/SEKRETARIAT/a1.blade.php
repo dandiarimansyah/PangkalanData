@@ -60,7 +60,7 @@
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
+              <h5 class="modal-title" id="exampleModalLabel">EDIT DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

@@ -97,7 +97,7 @@
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <h5 class="modal-title" id="exampleModalLabel">EDIT DATA BENGKEL SASTRA DAN BAHASA</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -182,10 +182,10 @@
                             <textarea id="aktivitas" name="aktivitas" class="textarea"></textarea>
                         </div> 
 
-                        <div class="inputfield-kecil">
+                        <!-- <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
                         <input id="media" type="file" name="media">
-                        </div>
+                        </div> -->
                 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>

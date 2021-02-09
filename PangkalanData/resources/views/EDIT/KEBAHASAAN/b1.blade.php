@@ -26,7 +26,7 @@
                     <th>KETERANGAN</th>
                     <th>UNIT/SATKER</th>
                     <th>INFO PRODUK</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                     <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
@@ -46,7 +46,6 @@
                       <td>{{ $a -> tahun_terbit}}</td>
                       <td>{{ $a -> keterangan}}</td>
                       <td>{{ $a -> info_produk}}</td>
-                      <td></td>
 
                       <td style="display: flex; justify-content:center">
                           <button type="button" class="edit"
@@ -64,7 +63,6 @@
                                 data-tahun_terbit="{{ $a->tahun_terbit }}"
                                 data-keterangan="{{ $a->keterangan }}"
                                 data-info_produk="{{ $a->info_produk }}"
-                                data-media="{{ $a->media }}"
                             >Edit</button>
 
                           <a class="hapus" href="{{ url('/operator/edit/kebahasaan/kamus_ensiklopedia/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
@@ -87,7 +85,7 @@
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <h5 class="modal-title" id="exampleModalLabel">EDIT DATA KAMUS / ENSIKLOPEDIA</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -179,10 +177,10 @@
                           </div>
                       </div> 
 
-                      <div class="inputfield-kecil">
+                      <!-- <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
                         <input type="file" name="media">
-                      </div>
+                      </div> -->
                       
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>

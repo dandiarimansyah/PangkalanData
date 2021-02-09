@@ -26,7 +26,7 @@
                     <th>LAMA PENELITIAN</th>
                     <th>PUBLIKASI</th>
                     <th>TAHUN TERBIT</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                     <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
@@ -58,7 +58,7 @@
                         <td>{{ $a -> lama_penelitian}} {{ $a -> tipe_waktu}}</td>
                         <td>{{ $a -> publikasi}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
-                        <td>{{ $a -> media}}</td>
+                        <!-- <td>{{ $a -> media}}</td> -->
                         <td style="display: flex; justify-content:center;">
                            <button type="button" class="edit"
                                 id="edit_item" 
@@ -75,7 +75,6 @@
                                 data-publikasi="{{ $a->publikasi }}"
                                 data-tahun_terbit="{{ $a->tahun_terbit }}"
                                 data-abstrak="{{ $a->abstrak }}"
-                                data-media="{{ $a->media }}"
                             >Edit</button>
 
                             <a class="hapus" href="{{ url('/operator/edit/penelitian/penelitian/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
@@ -96,7 +95,7 @@
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <h5 class="modal-title" id="exampleModalLabel">EDIT DATA PENELITIAN</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -185,10 +184,10 @@
                             <textarea id="abstrak" name="abstrak" class="textarea"></textarea>
                         </div> 
 
-                        <div class="inputfield-kecil">
+                        <!-- <div class="inputfield-kecil">
                         <label for="">Unggah Media</label>
                         <input id="media" type="file" name="media">
-                        </div>
+                        </div> -->
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>

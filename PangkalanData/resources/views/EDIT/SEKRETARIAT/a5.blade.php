@@ -23,7 +23,7 @@
                     <th rowspan="2">KONDISI</th>
                     <th rowspan="2">STATUS PEMEROLEHAN</th>
                     <th rowspan="2">KETERANGAN</th>
-                    <th rowspan="2">MEDIA</th>
+                    <!-- <th rowspan="2">MEDIA</th> -->
                     <th rowspan="2">EDIT/HAPUS</th>
                 </tr>
                 <tr>
@@ -49,14 +49,14 @@
                       <td>{{ $a -> status_peroleh}}</td>
                       <td>{{ $a -> keterangan}}</td>
 
-                      <td>
+                      <!-- <td>
                         @if ($a->media != null)
                           <a class="btn btn-info btn-sm" href={{ Storage::url($a->media) }} target="_blank">Media</a>
                         @else
                           Tidak ada media
                         @endif
                         {{-- {{ $a -> media}} --}}
-                      </td>
+                      </td> -->
 
                       <td style="display: flex; justify-content:center">
                           <button type="button" class="edit"
@@ -72,7 +72,7 @@
                                 data-kondisi="{{ $a->kondisi }}"
                                 data-status_peroleh="{{ $a->status_peroleh }}"
                                 data-keterangan="{{ $a->keterangan }}"
-                                data-media="{{ $a->media }}"
+                                
                             >Edit</button>
 
                           <a class="hapus" href="{{ url('/operator/edit/sekretariat/tanah_dan_bangunan/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
@@ -95,7 +95,7 @@
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <h5 class="modal-title" id="exampleModalLabel">EDIT DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -203,10 +203,10 @@
                           <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
                       </div>
 
-                      <div class="inputfield-kecil">
+                      <!-- <div class="inputfield-kecil">
                         <label for="">Unggah File</label>
                         <input id="media" type="file" name="media">
-                      </div>
+                      </div> -->
 
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
