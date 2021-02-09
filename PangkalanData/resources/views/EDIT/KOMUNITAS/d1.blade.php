@@ -165,6 +165,7 @@
                             <a href="https://www.google.co.id/maps">Buka Maps</a>
                         </div> 
 
+                        <div class="alert-danger">{{ $errors->first('keterangan') }}</div>
                         <div class="inputfield">
                             <label>Keterangan</label>
                             <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
