@@ -30,6 +30,10 @@ class MediaController extends Controller
 
     public function store_ma1($id, Request $request)
     {
+        $request->validate([
+            'media' => ['required'],
+        ]);
+
         if ($request->media == null) {
             $media = null;
         } else {

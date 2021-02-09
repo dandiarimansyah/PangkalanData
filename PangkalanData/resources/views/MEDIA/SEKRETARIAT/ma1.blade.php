@@ -6,6 +6,17 @@
 
 <div class="isi-konten">
 
+    @if ($errors->any())
+        <div class="error">
+            <p>----- Pesan Error -----</p>
+        @foreach ($errors->all() as $error)
+            <div class="errors">
+            {{ $error }}
+            </div>
+        @endforeach
+        </div>
+    @endif
+
     <div class="judul">
         <th>MEDIA DATA KERJA SAMA</th>
     </div>
@@ -55,14 +66,18 @@
 
                         <td>
                             @if ($a->media == "")
+                            <div style="margin:5px auto">
                                 <form method="POST" id="media_form" role="form" action="/media/sekretariat/kerja_sama/{{ $a->id }}" enctype="multipart/form-data">
-                                @csrf
-                                @method('PUT')
-                                    <input type="file" name="media">
-                                    <input type="submit" value="Simpan" class="btn btn-info btn-sm">
+                                    @csrf
+                                    @method('PUT')
+                                    <input style="width: 200px" type="file" name="media">
+                                    <div style="margin:10px auto">
+                                        <input type="submit" value="Unggah" class="btn btn-info btn-sm">
+                                    </div>
                                 </form>
+                            </div>
                             @else
-                                <a target="_blank" type="button" class="edit" href="{{ Storage::url($a->media) }}">Media</a>
+                                <a target="_blank" type="button" class="btn btn-success" href="{{ Storage::url($a->media) }}">Media</a>
                             @endif
                         </td>
 
