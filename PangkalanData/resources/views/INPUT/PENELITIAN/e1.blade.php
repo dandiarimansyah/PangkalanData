@@ -5,6 +5,18 @@
 @include('PARTIAL.MenuInput')
 
 <div class="isi-konten">
+
+@if ($errors->any())
+        <div class="error">
+            <p>----- Pesan Error -----</p>
+        @foreach ($errors->all() as $error)
+            <div class="errors">
+            {{ $error }}
+            </div>
+        @endforeach
+        </div>
+    @endif
+    
     <div class="judul">
         <th>INPUT DATA PENELITIAN</th>
     </div>
