@@ -68,6 +68,7 @@
 
     </div>
 
+<<<<<<< HEAD
     <div class="modal fade" id="edit-modal">
         <div id="modal-edit" class="modal-dialog" role="document">
           <div id="modal-content" class="modal-content">
@@ -112,12 +113,58 @@
                           </div>
                   
                         </form>
+=======
+        <div class="modal fade" id="edit-modal">
+            <div id="modal-edit" class="modal-dialog" role="document">
+            <div id="modal-content" class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">EDIT DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="wrapper" style="margin: 0">
+                        <div class="form">
+                            <form id="edit_form" action="" method="POST">
+                                @csrf
+                                @method('PUT')
+
+                            <div class="alert-danger">{{ $errors->first('unit') }}</div>
+                            <div class="inputfield-select">
+                                <label>Unit/Satuan Kerja*</label>
+                                <div class="custom_select">
+                                    <select name="unit" id="unit">
+                                    <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
+                            <div class="inputfield">
+                                <label>Tahun Anggaran*</label>
+                                <input name="tahun_anggaran" id="tahun_anggaran" type="text" class="input" placeholder="lalal">
+                            </div> 
+                    
+                            <div class="alert-danger">{{ $errors->first('nilai_anggaran') }}</div>
+                            <div class="inputfield">
+                                <label>Nilai Anggaran (Rp.)</label>
+                                <input name="nilai_anggaran" id="nilai_anggaran" type="text" class="input">
+                            </div> 
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                            </div>
+                    
+                            </form>
+                        </div>
+>>>>>>> 619d0cd161b0abe8304582f72304b5f866616971
                     </div>
                 </div>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
 
 @endsection
 

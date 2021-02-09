@@ -188,34 +188,50 @@
                     <label style="text-align: center; width:100%;font-weight:bold">Jumlah Pegawai per Tingkatan</label>
 
                     <div style="justify-content: center; margin-bottom:0" class="inputfield">
+
+                    <div class="alert-danger">{{ $errors->first('S3') }}</div>
                     <div class="mini">
                         <input id="s3" name="S3" type="text" class="input">
                         <p for="">S3</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('S2') }}</div>
                     <div class="mini">
                         <input id="s2" name="S2" type="text" class="input">
                         <p for="">S2</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('S1') }}</div>
                     <div class="mini">
                         <input id="s1" name="S1" type="text" class="input">
                         <p for="">S1</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('D3') }}</div>
                     <div class="mini">
                         <input id="d3" name="D3" type="text" class="input">
                         <p for="">D3</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('SMA') }}</div>
                     <div class="mini">
                         <input id="sma" name="SMA" type="text" class="input">
                         <p for="">SMA/K</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('SMP') }}</div>
                     <div class="mini">
                         <input id="smp" name="SMP" type="text" class="input">
                         <p for="">SMP</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('SD') }}</div>
                     <div class="mini">
                         <input id="sd" name="SD" type="text" class="input">
                         <p for="">SD</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_4E') }}</div>
                     <div class="mini">
                         <input id="t_4e" name="T_4E" type="text" class="input">
                         <p for="">IV/e</p>
@@ -223,34 +239,50 @@
                     </div>
 
                     <div style="justify-content: center; margin-bottom:0" class="inputfield">
+
+                    <div class="alert-danger">{{ $errors->first('T_4D') }}</div>
                     <div class="mini">
                         <input id="t_4d" name="T_4D" type="text" class="input">
                         <p for="">IV/d</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_4C') }}</div>
                     <div class="mini">
                         <input id="t_4c" name="T_4C" type="text" class="input">
                         <p for="">IV/c</p>
                     </div>
+                    
+                    <div class="alert-danger">{{ $errors->first('T_4B') }}</div>
                     <div class="mini">
                         <input id="t_4b" name="T_4B" type="text" class="input">
                         <p for="">IV/b</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_4A') }}</div>
                     <div class="mini">
                         <input id="t_4a" name="T_4A" type="text" class="input">
                         <p for="">IV/a</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_3D') }}</div>
                     <div class="mini">
                         <input id="t_3d" name="T_3D" type="text" class="input">
                         <p for="">III/d</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_3C') }}</div>
                     <div class="mini">
                         <input id="t_3c" name="T_3C" type="text" class="input">
                         <p for="">III/c</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_3B') }}</div>
                     <div class="mini">
                         <input id="t_3b" name="T_3B" type="text" class="input">
                         <p for="">III/b</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_3A') }}</div>
                     <div class="mini">
                         <input id="t_3a" name="T_3A" type="text" class="input">
                         <p for="">III/a</p>
@@ -258,34 +290,50 @@
                     </div>
 
                     <div style="justify-content: center; margin-bottom:0" class="inputfield">
+                    
+                    <div class="alert-danger">{{ $errors->first('T_2D') }}</div>
                     <div class="mini">
                         <input id="t_2d" name="T_2D" type="text" class="input">
                         <p for="">II/d</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_2C') }}</div>
                     <div class="mini">
                         <input id="t_2c" name="T_2C" type="text" class="input">
                         <p for="">II/c</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_2B') }}</div>
                     <div class="mini">
                         <input id="t_2b" name="T_2B" type="text" class="input">
                         <p for="">II/b</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_2A') }}</div>
                     <div class="mini">
                         <input id="t_2a" name="T_2A" type="text" class="input">
                         <p for="">II/a</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_1D') }}</div>
                     <div class="mini">
                         <input id="t_1d" name="T_1D" type="text" class="input">
                         <p for="">I/d</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_1C') }}</div>
                     <div class="mini">
                         <input id="t_1c" name="T_1C" type="text" class="input">
                         <p for="">I/c</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_1B') }}</div>
                     <div class="mini">
                         <input id="t_1b" name="T_1B" type="text" class="input">
                         <p for="">I/b</p>
                     </div>
+
+                    <div class="alert-danger">{{ $errors->first('T_1A') }}</div>
                     <div class="mini">
                         <input id="t_1a" name="T_1A" type="text" class="input">
                         <p for="">I/a</p>

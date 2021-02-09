@@ -162,10 +162,11 @@
                         <div class="alert-danger">{{ $errors->first('koordinat') }}</div>
                         <div class="inputfield-kecil">
                             <label>Koordinat</label>
-                            <input id="name" name="koordinat" type="text" class="input" style="width: 200px">
+                            <input id="koordinat" name="koordinat" type="text" class="input" style="width: 200px">
                             <a href="https://www.google.co.id/maps">Buka Maps</a>
                         </div> 
 
+                        <div class="alert-danger">{{ $errors->first('keterangan') }}</div>
                         <div class="inputfield">
                             <label>Keterangan</label>
                             <textarea id="keterangan" name="keterangan" class="textarea"></textarea>
