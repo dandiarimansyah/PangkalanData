@@ -23,10 +23,9 @@
             </button>
         </div>
         
-        <div class="btn-group kategori">
-            <button onclick="VALIDATOR()" id="valid" type="button" class="btn" style="border-radius: 5px; color:white; background:#df7700">
-                PILIH SEMUA <span id="uncheck" style="display:inline">⬜</span> <span id="check" style="display:none">✅</span> 
-            </button>
+        <div class="pilih_semua">
+            <label for="valid">PILIH SEMUA</label>
+            <input type='checkbox' id='valid'>
         </div>
 
         <div class="btn-group kategori">
@@ -93,7 +92,9 @@
                         <td>
                             <div class="validate"> 
                             @if ($a -> validasi == "belum")
-                                <input class="check" type="checkbox">
+                            <form id="valid_form" action="" method="POST">
+                                <input id='check_valid' class="check" type="checkbox" value="sudah" name="validasi">
+                            </form>
                             @else
                                 <p>Tervalidasi</p>
                             @endif
