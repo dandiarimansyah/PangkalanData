@@ -176,7 +176,34 @@ class InputController extends Controller
     public function store_a3(Request $request)
     {
         $request->validate([
-            'unit' => ['required']
+            'unit' => ['required'],
+            'laki' => ['nullable', 'numeric'],
+            'perempuan' => ['nullable', 'numeric'],
+            'semua_kelamin' => ['nullable', 'numeric'],
+            'S3' => ['nullable', 'numeric'],
+            'S2' => ['nullable', 'numeric'],
+            'S1' => ['nullable', 'numeric'],
+            'D3' => ['nullable', 'numeric'],
+            'SMA' => ['nullable', 'numeric'],
+            'SMP' => ['nullable', 'numeric'],
+            'SD' => ['nullable', 'numeric'],
+            'T_4E' => ['nullable', 'numeric'],
+            'T_4D' => ['nullable', 'numeric'],
+            'T_4C' => ['nullable', 'numeric'],
+            'T_4B' => ['nullable', 'numeric'],
+            'T_4A' => ['nullable', 'numeric'],
+            'T_3D' => ['nullable', 'numeric'],
+            'T_3C' => ['nullable', 'numeric'],
+            'T_3B' => ['nullable', 'numeric'],
+            'T_3A' => ['nullable', 'numeric'],
+            'T_2D' => ['nullable', 'numeric'],
+            'T_2C' => ['nullable', 'numeric'],
+            'T_2B' => ['nullable', 'numeric'],
+            'T_2A' => ['nullable', 'numeric'],
+            'T_1D' => ['nullable', 'numeric'],
+            'T_1C' => ['nullable', 'numeric'],
+            'T_1B' => ['nullable', 'numeric'],
+            'T_1A' => ['nullable', 'numeric'],
         ]);
 
         $tanggal = new Carbon();
@@ -221,7 +248,7 @@ class InputController extends Controller
         $request->validate([
             'kategori' => ['required'],
             'instansi' => ['required'],
-            'tanggal_awal' => ['required']
+            'tanggal_awal' => ['required'],
         ]);
 
         $data = new Kerja_Sama();
@@ -287,7 +314,11 @@ class InputController extends Controller
     {
         $request->validate([
             'provinsi' => ['required'],
-            'unit' => ['required']
+            'unit' => ['required'],
+            'jenis_buku' => ['required'],
+            'jumlah_buku' => ['nullable', 'numeric'],
+            'jumlah_judul' => ['nullable', 'numeric'],
+            'jumlah_pengunjung' => ['nullable', 'numeric'],
         ]);
 
         $data = new Perpustakaan();
@@ -312,7 +343,19 @@ class InputController extends Controller
     {
         $request->validate([
             'unit' => ['required'],
-            'tahun_anggaran' => ['required']
+            'tahun_anggaran' => ['required'],
+            'laptop' => ['nullable', 'numeric'],
+            'komputer' => ['nullable', 'numeric'],
+            'printer' => ['nullable', 'numeric'],
+            'fotocopy' => ['nullable', 'numeric'],
+            'faximili' => ['nullable', 'numeric'],
+            'LCD' => ['nullable', 'numeric'],
+            'TV' => ['nullable', 'numeric'],
+            'lain' => ['nullable', 'numeric'],
+            'furniture' => ['nullable', 'numeric'],
+            'roda_dua' => ['nullable', 'numeric'],
+            'roda_empat' => ['nullable', 'numeric'],
+            'roda_enam' => ['nullable', 'numeric'],
         ]);
 
         $data = new Inventarisasi();
@@ -342,7 +385,8 @@ class InputController extends Controller
             'kategori' => ['required'],
             'judul' => ['required'],
             'tim_redaksi' => ['required'],
-            'lingkup' => ['required']
+            'lingkup' => ['required'],
+            'tahun_terbit' => ['nullable', 'numeric'],
         ]);
 
         $data = new Kamus();
@@ -373,7 +417,8 @@ class InputController extends Controller
             'kategori' => ['required'],
             'judul' => ['required'],
             'tim_redaksi' => ['required'],
-            'lingkup' => ['required']
+            'lingkup' => ['required'],
+            'tahun_terbit' => ['nullable', 'numeric'],
         ]);
 
         $data = new Jurnal();
@@ -401,7 +446,8 @@ class InputController extends Controller
     {
         $request->validate([
             'kategori' => ['required'],
-            'judul' => ['required']
+            'judul' => ['required'],
+            'tahun_terbit' => ['nullable', 'numeric'],
         ]);
 
         $data = new Terbitan_Umum();
@@ -427,7 +473,8 @@ class InputController extends Controller
     {
         $request->validate([
             'provinsi' => ['required'],
-            'kota' => ['required']
+            'kota' => ['required'],
+            'jumlah_peserta' => ['nullable', 'numeric'],
         ]);
 
         $data = new Penyuluhan();
@@ -476,7 +523,8 @@ class InputController extends Controller
     public function store_b6(Request $request)
     {
         $request->validate([
-            'kategori' => ['required']
+            'kategori' => ['required'],
+            'tahun' => ['nullable', 'numeric'],
         ]);
 
         $data = new Penghargaan_Bahasa();
@@ -497,7 +545,8 @@ class InputController extends Controller
     public function store_b7(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required']
+            'provinsi' => ['required'],
+            'tahun' => ['nullable', 'numeric'],
         ]);
 
         $data = new Duta_Nasional();
@@ -525,7 +574,8 @@ class InputController extends Controller
     public function store_b8(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required']
+            'provinsi' => ['required'],
+            'tahun' => ['nullable', 'numeric'],
         ]);
 
         $data = new Duta_Provinsi();
@@ -557,7 +607,10 @@ class InputController extends Controller
     {
         $request->validate([
             'provinsi' => ['required'],
-            'kota' => ['required']
+            'kota' => ['required'],
+            'jumlah_peserta' => ['nullable', 'numeric'],
+            'jumlah_sekolah' => ['nullable', 'numeric'],
+            'jumlah_sekolah_yang_dibina' => ['nullable', 'numeric'],
         ]);
 
         $data = new Bengkel_Sastra_Dan_Bahasa();
@@ -586,7 +639,8 @@ class InputController extends Controller
     public function store_c2(Request $request)
     {
         $request->validate([
-            'kategori' => ['required']
+            'kategori' => ['required'],
+            'tahun' => ['nullable', 'numeric'],
         ]);
 
         $data = new Penghargaan_Sastra();
@@ -606,9 +660,9 @@ class InputController extends Controller
 
     public function store_c3(Request $request)
     {
-        // $request->validate([
-        //     'tahun' => ['required']
-        // ]);
+        $request->validate([
+            'tahun' => ['nullable', 'numeric'],
+        ]);
 
         $data = new Musikalisasi_Puisi_Nasional();
         $data->tahun = $request->tahun;
@@ -631,7 +685,8 @@ class InputController extends Controller
     public function store_c4(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required']
+            'provinsi' => ['required'],
+            'tahun' => ['nullable', 'numeric'],
         ]);
 
         $data = new Musikalisasi_Puisi_Provinsi();
@@ -703,6 +758,8 @@ class InputController extends Controller
             'peneliti' => ['required'],
             'judul' => ['required'],
             'abstrak' => ['required'],
+            'lama_penelitian' => ['nullable', 'numeric'],
+            'tahun_terbit' => ['nullable', 'numeric'],
         ]);
 
         $data = new Penelitian();
