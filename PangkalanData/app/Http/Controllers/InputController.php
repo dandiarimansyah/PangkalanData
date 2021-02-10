@@ -143,7 +143,7 @@ class InputController extends Controller
         $request->validate([
             'unit' => ['required'],
             'tahun_anggaran' => ['required'],
-            'nilai_anggaran' => ['numeric']
+            'nilai_anggaran' => ['nullable', 'numeric']
         ]);
 
         $data = new Anggaran();
@@ -159,6 +159,7 @@ class InputController extends Controller
     {
         $request->validate([
             'unit' => ['required'],
+            'nilai_realisasi' => ['numeric'],
             'besar_dana' => ['numeric'],
         ]);
 

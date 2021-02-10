@@ -38,7 +38,7 @@
 
         <div class="alert-danger">{{ $errors->first('nilai_realisasi') }}</div>
         <div class="inputfield">
-            <label>Nilai Realisasi Hingga</label>
+            <label>Nilai Realisasi Hingga Tahun</label>
             <input name="nilai_realisasi" type="text" class="input">
         </div> 
 
