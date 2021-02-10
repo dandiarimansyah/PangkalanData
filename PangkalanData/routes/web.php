@@ -245,6 +245,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/validator/validasi', [ValidatorController::class, 'validasi']);
         //VALIDATOR KATEGORI A
         Route::get('/validator/sekretariat/anggaran', [ValidatorController::class, 'a1']);
+        Route::put('/validator/sekretariat/anggaran/{id}', [ValidatorController::class, 'valid_a1']);
+
         Route::get('/validator/sekretariat/realisasi_anggaran', [ValidatorController::class, 'a2']);
         Route::get('/validator/sekretariat/kepegawaian', [ValidatorController::class, 'a3']);
         Route::get('/validator/sekretariat/kerja_sama', [ValidatorController::class, 'a4']);

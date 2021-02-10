@@ -23,10 +23,9 @@
             </button>
         </div>
         
-        <div class="btn-group kategori">
-            <button onclick="VALIDATOR()" id="valid" type="button" class="btn" style="border-radius: 5px; color:white; background:#df7700">
-                PILIH SEMUA <span id="uncheck" style="display:inline">⬜</span> <span id="check" style="display:none">✅</span> 
-            </button>
+        <div class="pilih_semua">
+            <label for="valid">PILIH SEMUA</label>
+            <input type='checkbox' id='valid'>
         </div>
 
         <div class="btn-group kategori">
@@ -42,7 +41,7 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>TANGGAL REALISASI</th>
+                    <th>TAHUN REALISASI</th>
                     <th>UNIT/SATUAN KERJA</th>
                     <th>NILAI REALISASI(Rp.)</th>
                     <th>KETERANGAN</th>
@@ -56,10 +55,9 @@
                 @forelse ($realisasi_anggaran as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <!-- <td></td> -->
-                        <td>{{ $a -> unit}}</td>
                         <td>{{ $a -> nilai_realisasi}}</td>
-                        <!-- <td>{{ $a -> besar_dana}}</td> -->
+                        <td>{{ $a -> unit}}</td>
+                        <td>{{ $a -> besar_dana}}</td>
                         <td>{{ $a -> keterangan}}</td>
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
@@ -67,7 +65,9 @@
                         <td>
                             <div class="validate"> 
                             @if ($a -> validasi == "belum")
-                                <input class="check" type="checkbox">
+                            <form id="valid_form" action="" method="POST">
+                                <input id='check_valid' class="check" type="checkbox" value="sudah" name="validasi">
+                            </form>
                             @else
                                 <p>Tervalidasi</p>
                             @endif

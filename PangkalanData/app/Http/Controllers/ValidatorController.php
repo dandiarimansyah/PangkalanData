@@ -321,4 +321,24 @@ class ValidatorController extends Controller
 
         return view('VALIDATOR.PENELITIAN.e1', compact('penelitian'));
     }
+
+    public function valid_a1($id, Request $request)
+    {
+        $request->validate([
+            'validasi' => ['required'],
+        ]);
+
+        if ($request->validasi == "sudah") {
+            $valid = $request->validasi;
+        } else {
+            $valid = "belum";
+        }
+
+        $data = Anggaran::where('id', $id)
+            ->update([
+                'validasi' => $valid
+            ]);
+
+        return redirect('/operator/edit/sekretariat/anggaran')->with('toast_success', 'Data Berhasil Diedit!');
+    }
 }
