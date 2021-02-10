@@ -77,7 +77,8 @@
                                 </form>
                             </div>
                             @else
-                                <a target="_blank" type="button" class="btn btn-success" href="{{ Storage::url($a->media) }}">Media</a>
+                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
+                                <a id="hapus_media" href="{{ url('/media/sekretariat/kerja_sama/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Media</a>
                             @endif
                         </td>
 
@@ -96,7 +97,6 @@
                             >Media</button>
                         </td> --}}
 
-                        
                     </tr>
                 @empty
                     <tr>

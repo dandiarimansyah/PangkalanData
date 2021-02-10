@@ -17,6 +17,7 @@ use App\Models\Penghargaan_Sastra;
 use App\Models\Penyuluhan;
 use App\Models\Tanah_Bangunan;
 use App\Models\Terbitan_Umum;
+use Storage;
 
 class MediaController extends Controller
 {
@@ -45,15 +46,60 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return redirect('/media/sekretariat/kerja_sama')->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Media Berhasil Diunggah!');
     }
 
+    public function hapus_ma1($id)
+    {
+        $data = Kerja_Sama::find($id);
+        Storage::delete($data->media);
+
+        $data = Kerja_Sama::where('id', $id)
+            ->update([
+                'media' => null,
+            ]);
+
+        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+    }
 
     public function ma2()
     {
         $tanah_bangunan = Tanah_Bangunan::all();
 
         return view('MEDIA.SEKRETARIAT.ma2', compact('tanah_bangunan'));
+    }
+
+    public function store_ma2($id, Request $request)
+    {
+        $request->validate([
+            'media' => ['required'],
+        ]);
+
+        if ($request->media == null) {
+            $media = null;
+        } else {
+            $media = $request->media->store('public/tanah_dan_bangunan');
+        }
+
+        $data = Tanah_Bangunan::where('id', $id)
+            ->update([
+                'media' => $media,
+            ]);
+
+        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+    }
+
+    public function hapus_ma2($id)
+    {
+        $data = Tanah_Bangunan::find($id);
+        Storage::delete($data->media);
+
+        $data = Tanah_Bangunan::where('id', $id)
+            ->update([
+                'media' => null,
+            ]);
+
+        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
 
     //MEDIA S 2

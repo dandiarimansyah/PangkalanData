@@ -280,8 +280,11 @@ Route::group(['middleware' => ['auth']], function () {
 //MEDIA S 1
 Route::get('/media/sekretariat/kerja_sama', [MediaController::class, 'ma1']);
 Route::put('/media/sekretariat/kerja_sama/{id}', [MediaController::class, 'store_ma1']);
+Route::get('/media/sekretariat/kerja_sama/hapus/{id}', [MediaController::class, 'hapus_ma1']);
 
 Route::get('/media/sekretariat/tanah_dan_bangunan', [MediaController::class, 'ma2']);
+Route::put('/media/sekretariat/tanah_dan_bangunan/{id}', [MediaController::class, 'store_ma2']);
+Route::get('/media/sekretariat/tanah_dan_bangunan/hapus/{id}', [MediaController::class, 'hapus_ma2']);
 //MEDIA S 2
 Route::get('/media/kebahasaan/kamus_ensiklopedia', [MediaController::class, 'mb1']);
 Route::get('/media/kebahasaan/jurnal_majalah', [MediaController::class, 'mb2']);

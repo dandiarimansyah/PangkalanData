@@ -160,6 +160,27 @@
                 })
             })
 
+            $(document).on('click', '#hapus_media', function(e){
+                e.preventDefault();
+                var link = $(this).attr('href');
+                
+                Swal.fire({
+                    title: 'Yakin Dihapus?',
+                    text: "Media akan dihapus!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    cancelButtonText: 'Batal',
+                    confirmButtonText: 'Hapus',
+                    reverseButtons: true
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = link;
+                    }
+                })
+            })
+
             $(document).on('click', '#tombol_validasi', function(e){
                 e.preventDefault();
                 
