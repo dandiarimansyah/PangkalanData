@@ -45,13 +45,21 @@
 
                         <td>
                             @if ($a->media == "")
-                                <form role="form" action="" enctype="multipart/form-data">
-                                    <input type="file" name="media">
+                            <div style="margin:5px auto">
+                                <form method="POST" id="media_form" role="form" action="/media/sekretariat/kerja_sama/{{ $a->id }}" enctype="multipart/form-data">
+                                    @csrf
+                                    @method('PUT')
+                                    <input style="width: 200px" type="file" name="media">
+                                    <div style="margin:10px auto">
+                                        <input type="submit" value="Unggah" class="btn btn-info btn-sm">
+                                    </div>
                                 </form>
+                            </div>
                             @else
-                                {{ $a -> media}}
+                                <a target="_blank" type="button" class="btn btn-success" href="{{ Storage::url($a->media) }}">Media</a>
                             @endif
                         </td>
+                        
                     </tr>
                 @empty
                     <tr>
