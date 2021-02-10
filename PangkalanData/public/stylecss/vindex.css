@@ -46,6 +46,29 @@ body {
     font-size: 15px;
 }
 
+.pilih_semua {
+    background-color: rgb(212, 122, 5);
+    text-align: center;
+    margin: 10px 0px 0px 10px;
+    width: 150px;
+    height: 40px;
+    padding: 8px 5px 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pilih_semua label {
+    color: white;
+    margin: 0;
+    cursor: pointer;
+}
+
+#valid {
+    margin-left: 10px;
+    transform: scale(2);
+    cursor: pointer;
+}
+
 .aktif a {
     border-bottom: 4px solid rgb(255, 255, 81);
     border-radius: 13px;

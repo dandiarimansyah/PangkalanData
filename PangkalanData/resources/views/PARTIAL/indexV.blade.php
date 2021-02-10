@@ -101,6 +101,15 @@
             $('span').toggleClass("cancel");
             });
 
+
+            $('#valid').click(function() {
+                if ($(this).prop('checked')) {
+                    $('.check').prop('checked', true);
+                } else {
+                    $('.check').prop('checked', false);
+                }
+            });
+
             $(document).ready(function () {
                 var table = $('#datatable').DataTable();
             })
