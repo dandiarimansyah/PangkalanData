@@ -66,7 +66,7 @@
                             <div class="validate"> 
                             @if ($a -> validasi == "belum")
                             <form id="valid_form" action="" method="POST">
-                                <input id='check_valid' class="check" type="checkbox" value="sudah" name="validasi">
+                                <input data-id="{{ $a->id }}" id='check_valid' class="check" type="checkbox" value="sudah" name="validasi">
                             </form>
                             @else
                                 <p>Tervalidasi</p>
@@ -89,3 +89,26 @@
 </div>
 
 @endsection
+
+@push('scripts')
+      <script>
+
+          $(document).on('click','#tombol_validasi',function(){
+
+                let data = []
+                $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
+
+                let url = "{{ URL('validator/sekretariat/realisasi_anggaran')}}";
+
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: {_token:'{{ csrf_token() }}', id: data},
+                    dataType:"json",
+                    success: function(){
+                        location.reload(); // then reload the page.(3)
+                    }
+                });
+          })
+      </script>
+@endpush

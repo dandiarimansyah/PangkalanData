@@ -40,12 +40,36 @@ class ValidatorController extends Controller
 
         return view('VALIDATOR.SEKRETARIAT.a1', compact('anggaran'));
     }
+
+    public function validasi_a1(Request $request)
+    {
+        Anggaran::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+        // return redirect("validator/sekretariat/anggaran")->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
     public function a2()
     {
         $realisasi_anggaran = Realisasi_Anggaran::all();
 
         return view('VALIDATOR.SEKRETARIAT.a2', compact('realisasi_anggaran'));
     }
+
+    public function validasi_a2(Request $request)
+    {
+        Realisasi_Anggaran::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+        // return redirect("validator/sekretariat/anggaran")->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
     public function a3()
     {
         $kepegawaian = Kepegawaian::all();
