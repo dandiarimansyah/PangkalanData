@@ -313,7 +313,6 @@ Route::group(['middleware' => ['auth']], function () {
         //VALIDATOR KATEGORI E
         Route::get('/validator/penelitian/penelitian', [ValidatorController::class, 'e1']);
         Route::post('/validator/penelitian/penelitian', [ValidatorController::class, 'validasi_e1']);
-
     });
 });
 
@@ -407,6 +406,34 @@ Route::get('/laporan/komunitas/komunitas_bahasa', [LaporanController::class, 'ld
 Route::get('/laporan/komunitas/komunitas_sastra', [LaporanController::class, 'ld2']);
 //LAPORAN S 5
 Route::get('/laporan/penelitian/penelitian', [LaporanController::class, 'le1']);
+
+//TAMPIL LAPORAN S 1
+Route::get('/laporan/sekretariat/anggaran/tampil', [LaporanController::class, 'tampil_la1']);
+Route::get('/laporan/sekretariat/realisasi_anggaran/tampil', [LaporanController::class, 'tampil_la2']);
+Route::get('/laporan/sekretariat/kepegawaian/tampil', [LaporanController::class, 'tampil_la3']);
+Route::get('/laporan/sekretariat/kerja_sama/tampil', [LaporanController::class, 'tampil_la4']);
+Route::get('/laporan/sekretariat/tanah_dan_bangunan/tampil', [LaporanController::class, 'tampil_la5']);
+Route::get('/laporan/sekretariat/perpustakaan/tampil', [LaporanController::class, 'tampil_la6']);
+Route::get('/laporan/sekretariat/inventarisasi_bmn/tampil', [LaporanController::class, 'tampil_la7']);
+//TAMPIL LAPORAN S 2
+Route::get('/laporan/kebahasaan/kamus_ensiklopedia/tampil', [LaporanController::class, 'tampil_lb1']);
+Route::get('/laporan/kebahasaan/jurnal_umum/tampil', [LaporanController::class, 'tampil_lb2']);
+Route::get('/laporan/kebahasaan/terbitan_umum/tampil', [LaporanController::class, 'tampil_lb3']);
+Route::get('/laporan/kebahasaan/penyuluhan/tampil', [LaporanController::class, 'tampil_lb4']);
+Route::get('/laporan/kebahasaan/pesuluh/tampil', [LaporanController::class, 'tampil_lb5']);
+Route::get('/laporan/kebahasaan/penghargaan_nasional/tampil', [LaporanController::class, 'tampil_lb6']);
+Route::get('/laporan/kebahasaan/duta_bahasa_nasional/tampil', [LaporanController::class, 'tampil_lb7']);
+Route::get('/laporan/kebahasaan/duta_bahasa_provinsi/tampil', [LaporanController::class, 'tampil_lb8']);
+//TAMPIL LAPORAN S 3
+Route::get('/laporan/kesastraan/bengkel_sastra_dan_bahasa/tampil', [LaporanController::class, 'tampil_lc1']);
+Route::get('/laporan/kesastraan/penghargaan_sastra/tampil', [LaporanController::class, 'tampil_lc2']);
+Route::get('/laporan/kesastraan/musikalisasi_puisi_nasional/tampil', [LaporanController::class, 'tampil_lc3']);
+Route::get('/laporan/kesastraan/musikalisasi_puisi_provinsi/tampil', [LaporanController::class, 'tampil_lc4']);
+//TAMPIL LAPORAN S 4
+Route::get('/laporan/komunitas/komunitas_bahasa/tampil', [LaporanController::class, 'tampil_ld1']);
+Route::get('/laporan/komunitas/komunitas_sastra/tampil', [LaporanController::class, 'tampil_ld2']);
+//TAMPIL LAPORAN S 5
+Route::get('/laporan/penelitian/penelitian/tampil', [LaporanController::class, 'tampil_le1']);
 
 ////========================================== GRAFIK ===================
 //GRAFIK S 1
