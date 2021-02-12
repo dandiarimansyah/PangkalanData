@@ -29,7 +29,7 @@
         </div>
 
         <div class="btn-group kategori">
-            <button id="tombol_validasi" type="button" class="btn btn-success" style="border-radius: 5px">
+            <button href="{{ URL('validator/sekretariat/anggaran')}}" id="tombol_validasi" type="button" class="btn btn-success" style="border-radius: 5px">
                 VALIDASI DATA
             </button>
         </div>
@@ -63,8 +63,8 @@
                         <td>
                             <div class="validate"> 
                             @if ($a -> validasi == "belum")
-                            <form id="valid_form" action="" method="POST">
-                                <input data-id="{{ $a->id }}" id='check_valid' class="check" type="checkbox" value="sudah" name="validasi">
+                            <form action="" method="POST">
+                                <input data-id="{{ $a->id }}" class="check" type="checkbox" value="sudah" name="validasi">
                             </form>
                             @else
                                 <p>Tervalidasi</p>
@@ -88,26 +88,3 @@
 
 
 @endsection
-
-@push('scripts')
-      <script>
-
-          $(document).on('click','#tombol_validasi',function(){
-
-                let data = []
-                $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
-
-                let url = "{{ URL('validator/sekretariat/anggaran')}}";
-
-                $.ajax({
-                    type: "post",
-                    url: url,
-                    data: {_token:'{{ csrf_token() }}', id: data},
-                    dataType:"json",
-                    success: function(){
-                        location.reload(); // then reload the page.(3)
-                    }
-                });
-          })
-      </script>
-@endpush

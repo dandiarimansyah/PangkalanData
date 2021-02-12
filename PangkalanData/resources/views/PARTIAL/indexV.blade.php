@@ -138,6 +138,18 @@
             //     document.getElementById("pesan");
             // }
 
+            function konfirmasi(){
+                var tanya = confirm("Validasi Data yang telah dicentang?");
+        
+                if(tanya === true) {
+                    return true;
+                }else{
+                    return false;
+                }
+        
+                document.getElementById("tombol_validasi");
+            }
+
             $(document).on('click', '#pesan', function(e){
                 e.preventDefault();
                 var link = $(this).attr('href');
@@ -159,24 +171,59 @@
                 })
             })
 
-            // var flash = $('#flash').data('flash');
-            // if(flash){
-            //     Swal.fire({
-            //         icon: 'success',
-            //         html: '<a href="//sweetalert2.github.io" class="btn btn-success" style="display:block">links</a> ',
-            //         title: 'Sukses',
-            //         toast: true,
-            //         position: 'top',
-            //         showConfirmButton: false,
-            //         timer: 3000,
-            //         timerProgressBar: true,
-            //         text: flash,
-            //         didOpen: (toast) => {
-            //             toast.addEventListener('mouseenter', Swal.stopTimer)
-            //             toast.addEventListener('mouseleave', Swal.resumeTimer)
-            //         }
-            //     })
-            // }
+
+            //Validasi Confirmation
+            $(document).on('click','#tombol_validasi',function(e){
+                e.preventDefault();
+                var url = $(this).attr('href');
+                
+                Swal.fire({
+                    title: 'Validasi Data?',
+                    text: "Data yang telah dicentang akan divalidasi!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#028B40',
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Batal',
+                    confirmButtonText: 'Validasi',
+                    reverseButtons: true
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        let data = []
+                        $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
+                
+                        $.ajax({
+                            type: "post",
+                            url: url,
+                            data: {_token:'{{ csrf_token() }}', id: data},
+                            dataType:"json",
+                            complete: function(){
+                                location.reload();
+                            }
+                        });
+                    }
+                })
+          })
+
+            var flash = $('#flash').data('flash');
+            var url = $('#flash').data('url');
+            if(flash){
+                Swal.fire({
+                    icon: 'success',
+                    html: '<a href="' + url + '" class="btn btn-success" style="display:inline-block">Klik untuk Lihat Data</a> ',
+                    title: 'Sukses',
+                    toast: true,
+                    position: 'top',
+                    showConfirmButton: false,
+                    timer: 3500,
+                    timerProgressBar: true,
+                    text: flash,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+            }
 
             $(document).on('click', '#hapus_media', function(e){
                 e.preventDefault();
@@ -198,26 +245,6 @@
                     }
                 })
             })
-
-            // $(document).on('click', '#tombol_validasi', function(e){
-            //     e.preventDefault();
-                
-            //     Swal.fire({
-            //         title: 'Validasi Data Terpilih?',
-            //         text: "Data yang telah dicentang akan tervalidasi",
-            //         icon: 'warning',
-            //         showCancelButton: true,
-            //         confirmButtonColor: '#008A67',
-            //         cancelButtonColor: '#3085d6',
-            //         cancelButtonText: 'Batal',
-            //         confirmButtonText: 'Validasi',
-            //         reverseButtons: true
-            //         }).then((result) => {
-            //         if (result.isConfirmed) {
-            //             window.location = link;
-            //         }
-            //     })
-            // })
 
             function jenis_lain(val){
                 var element=document.getElementById('jenis_buku_2');

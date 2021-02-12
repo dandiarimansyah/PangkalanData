@@ -4,6 +4,10 @@
 
 @include('PARTIAL.MenuInput')
 
+@if (session('status'))
+    <div id="flash" data-url="{{ URL('operator/edit/sekretariat/realisasi_anggaran')}}" data-flash="{{ session('status') }}"></div>
+@endif
+
 <div class="isi-konten">
 
 @if ($errors->any())

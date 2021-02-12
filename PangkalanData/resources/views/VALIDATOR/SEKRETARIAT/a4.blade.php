@@ -29,7 +29,7 @@
         </div>
 
         <div class="btn-group kategori">
-            <button id="tombol_validasi" type="button" class="btn btn-success" style="border-radius: 5px">
+            <button href="{{ URL('validator/sekretariat/kerja_sama')}}" id="tombol_validasi" type="button" class="btn btn-success" style="border-radius: 5px">
                 VALIDASI DATA
             </button>
         </div>
@@ -76,8 +76,8 @@
                         <td>
                             <div class="validate"> 
                             @if ($a -> validasi == "belum")
-                            <form id="valid_form" action="" method="POST">
-                                <input id='check_valid' class="check" type="checkbox" value="sudah" name="validasi">
+                            <form action="" method="POST">
+                                <input data-id="{{ $a->id }}" class="check" type="checkbox" value="sudah" name="validasi">
                             </form>
                             @else
                                 <p>Tervalidasi</p>
