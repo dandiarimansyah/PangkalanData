@@ -48,12 +48,7 @@ class ValidatorController extends Controller
                 'validasi' => "sudah",
             ]);
 
-<<<<<<< HEAD
-        return back()->with('status', 'Data Berhasil Divalidasi!');
-        // return redirect("validator/sekretariat/anggaran")->with('toast_success', 'Data Berhasil Divalidasi!');
-=======
         return back()->with('toast_success', 'Data Berhasil Divalidasi!');
->>>>>>> 30290e092ef482da1a411ad8d1ecb42b185b669f
     }
 
     //======================================================================
@@ -92,7 +87,7 @@ class ValidatorController extends Controller
         return back()->with('toast_success', 'Data Berhasil Divalidasi!');
     }
 
-    
+
     //======================================================================
     public function a4()
     {
