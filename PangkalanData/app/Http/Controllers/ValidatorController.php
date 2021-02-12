@@ -49,9 +49,9 @@ class ValidatorController extends Controller
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Divalidasi!');
-        // return redirect("validator/sekretariat/anggaran")->with('toast_success', 'Data Berhasil Divalidasi!');
     }
 
+    //======================================================================
     public function a2()
     {
         $realisasi_anggaran = Realisasi_Anggaran::all();
@@ -67,39 +67,98 @@ class ValidatorController extends Controller
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Divalidasi!');
-        // return redirect("validator/sekretariat/anggaran")->with('toast_success', 'Data Berhasil Divalidasi!');
     }
 
+    //======================================================================
     public function a3()
     {
         $kepegawaian = Kepegawaian::all();
 
         return view('VALIDATOR.SEKRETARIAT.a3', compact('kepegawaian'));
     }
+
+    public function validasi_a3(Request $request)
+    {
+        Kepegawaian::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    
+    //======================================================================
     public function a4()
     {
         $kerja_sama = Kerja_Sama::all();
 
         return view('VALIDATOR.SEKRETARIAT.a4', compact('kerja_sama'));
     }
+
+    public function validasi_a4(Request $request)
+    {
+        Kerja_Sama::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function a5()
     {
         $tanah_bangunan = Tanah_Bangunan::all();
 
         return view('VALIDATOR.SEKRETARIAT.a5', compact('tanah_bangunan'));
     }
+    public function validasi_a5(Request $request)
+    {
+        Tanah_Bangunan::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function a6()
     {
         $perpustakaan = Perpustakaan::all();
 
         return view('VALIDATOR.SEKRETARIAT.a6', compact('perpustakaan'));
     }
+
+    public function validasi_a6(Request $request)
+    {
+        Perpustakaan::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function a7()
     {
         $inventarisasi = Inventarisasi::all();
 
         return view('VALIDATOR.SEKRETARIAT.a7', compact('inventarisasi'));
     }
+
+    public function validasi_a7(Request $request)
+    {
+        Inventarisasi::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
 
     //VALIDASI KATEGORI B
     public function b1()
@@ -108,24 +167,72 @@ class ValidatorController extends Controller
 
         return view('VALIDATOR.KEBAHASAAN.b1', compact('kamus'));
     }
+
+    public function validasi_b1(Request $request)
+    {
+        Kamus::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function b2()
     {
         $jurnal = Jurnal::all();
 
         return view('VALIDATOR.KEBAHASAAN.b2', compact('jurnal'));
     }
+
+    public function validasi_b2(Request $request)
+    {
+        Jurnal::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function b3()
     {
         $terbitan_umum = Terbitan_Umum::all();
 
         return view('VALIDATOR.KEBAHASAAN.b3', compact('terbitan_umum'));
     }
+
+    public function validasi_b3(Request $request)
+    {
+        Terbitan_Umum::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function b4()
     {
         $penyuluhan = Penyuluhan::all();
 
         return view('VALIDATOR.KEBAHASAAN.b4', compact('penyuluhan'));
     }
+
+    public function validasi_b4(Request $request)
+    {
+        Penyuluhan::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function b5()
     {
         $pesuluh = Pesuluh::all();
@@ -133,24 +240,71 @@ class ValidatorController extends Controller
 
         return view('VALIDATOR.KEBAHASAAN.b5', compact('pesuluh', 'penyuluhan'));
     }
+
+    public function validasi_b5(Request $request)
+    {
+        Pesuluh::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function b6()
     {
         $penghargaan_bahasa = Penghargaan_Bahasa::all();
 
         return view('VALIDATOR.KEBAHASAAN.b6', compact('penghargaan_bahasa'));
     }
+
+    public function validasi_b6(Request $request)
+    {
+        Penghargaan_Bahasa::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function b7()
     {
         $duta_nasional = Duta_Nasional::all();
 
         return view('VALIDATOR.KEBAHASAAN.b7', compact('duta_nasional'));
     }
+
+    public function validasi_b7(Request $request)
+    {
+        Duta_Nasional::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function b8()
     {
         $duta_provinsi = Duta_Provinsi::all();
 
         return view('VALIDATOR.KEBAHASAAN.b8', compact('duta_provinsi'));
     }
+
+    public function validasi_b8(Request $request)
+    {
+        Duta_Provinsi::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
 
     //VALIDASI KATEGORI C
     public function c1()
@@ -159,23 +313,69 @@ class ValidatorController extends Controller
 
         return view('VALIDATOR.KESASTRAAN.c1', compact('bengkel_sastra_dan_bahasa'));
     }
+
+    public function validasi_c1(Request $request)
+    {
+        Bengkel_Sastra_Dan_Bahasa::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function c2()
     {
         $penghargaan_sastra = Penghargaan_Sastra::all();
 
         return view('VALIDATOR.KESASTRAAN.c2', compact('penghargaan_sastra'));
     }
+
+    public function validasi_c2(Request $request)
+    {
+        Penghargaan_Sastra::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function c3()
     {
         $musikalisasi_puisi_nasional = Musikalisasi_Puisi_Nasional::all();
 
         return view('VALIDATOR.KESASTRAAN.c3', compact('musikalisasi_puisi_nasional'));
     }
+
+    public function validasi_c3(Request $request)
+    {
+        Musikalisasi_Puisi_Nasional::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function c4()
     {
         $musikalisasi_puisi_provinsi = Musikalisasi_Puisi_Provinsi::all();
 
         return view('VALIDATOR.KESASTRAAN.c4', compact('musikalisasi_puisi_provinsi'));
+    }
+
+    public function validasi_c4(Request $request)
+    {
+        Musikalisasi_Puisi_Provinsi::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
     }
 
     //VALIDASI KATEGORI D
@@ -185,11 +385,33 @@ class ValidatorController extends Controller
 
         return view('VALIDATOR.KOMUNITAS.d1', compact('komunitas_bahasa'));
     }
+
+    public function validasi_d1(Request $request)
+    {
+        Komunitas_Bahasa::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+    //======================================================================
     public function d2()
     {
         $komunitas_sastra = Komunitas_Sastra::all();
 
         return view('VALIDATOR.KOMUNITAS.d2', compact('komunitas_sastra'));
+    }
+
+    public function validasi_d2(Request $request)
+    {
+        Komunitas_Sastra::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
     }
 
     //VALIDASI KATEGORI E
@@ -200,6 +422,20 @@ class ValidatorController extends Controller
         return view('VALIDATOR.PENELITIAN.e1', compact('penelitian'));
     }
 
+    public function validasi_e1(Request $request)
+    {
+        Penelitian::whereIn('id', $request->id)
+            ->update([
+                'validasi' => "sudah",
+            ]);
+
+        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
+    }
+
+
+    //======================================================================
+    //======================================================================
+    //======================================================================
     //UPDATE KATEGORI A
     public function update_a1($id, Request $request)
     {
