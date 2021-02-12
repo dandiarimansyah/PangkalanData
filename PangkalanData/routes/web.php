@@ -251,29 +251,69 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/validator/sekretariat/realisasi_anggaran', [ValidatorController::class, 'validasi_a2']);
 
         Route::get('/validator/sekretariat/kepegawaian', [ValidatorController::class, 'a3']);
+        Route::post('/validator/sekretariat/kepegawaian', [ValidatorController::class, 'validasi_a3']);
+
         Route::get('/validator/sekretariat/kerja_sama', [ValidatorController::class, 'a4']);
+        Route::post('/validator/sekretariat/kerja_sama', [ValidatorController::class, 'validasi_a4']);
+
         Route::get('/validator/sekretariat/tanah_dan_bangunan', [ValidatorController::class, 'a5']);
+        Route::post('/validator/sekretariat/tanah_dan_bangunan', [ValidatorController::class, 'validasi_a5']);
+
         Route::get('/validator/sekretariat/perpustakaan', [ValidatorController::class, 'a6']);
+        Route::post('/validator/sekretariat/perpustakaan', [ValidatorController::class, 'validasi_a6']);
+
         Route::get('/validator/sekretariat/inventarisasi_bmn', [ValidatorController::class, 'a7']);
+        Route::post('/validator/sekretariat/inventarisasi_bmn', [ValidatorController::class, 'validasi_a7']);
+
         //VALIDATOR KATEGORI B
         Route::get('/validator/kebahasaan/kamus_ensiklopedia', [ValidatorController::class, 'b1']);
+        Route::post('/validator/kebahasaan/kamus_ensiklopedia', [ValidatorController::class, 'validasi_b1']);
+
         Route::get('/validator/kebahasaan/jurnal_majalah', [ValidatorController::class, 'b2']);
+        Route::post('/validator/kebahasaan/jurnal_majalah', [ValidatorController::class, 'validasi_b2']);
+
         Route::get('/validator/kebahasaan/terbitan_umum', [ValidatorController::class, 'b3']);
+        Route::post('/validator/kebahasaan/terbitan_umum', [ValidatorController::class, 'validasi_b3']);
+
         Route::get('/validator/kebahasaan/penyuluhan', [ValidatorController::class, 'b4']);
+        Route::post('/validator/kebahasaan/penyuluhan', [ValidatorController::class, 'validasi_b4']);
+
         Route::get('/validator/kebahasaan/pesuluh', [ValidatorController::class, 'b5']);
+        Route::post('/validator/kebahasaan/pesuluh', [ValidatorController::class, 'validasi_b5']);
+
         Route::get('/validator/kebahasaan/penghargaan_bahasa', [ValidatorController::class, 'b6']);
+        Route::post('/validator/kebahasaan/penghargaan_bahasa', [ValidatorController::class, 'validasi_b6']);
+
         Route::get('/validator/kebahasaan/duta_bahasa_nasional', [ValidatorController::class, 'b7']);
+        Route::post('/validator/kebahasaan/duta_bahasa_nasional', [ValidatorController::class, 'validasi_b7']);
+
         Route::get('/validator/kebahasaan/duta_bahasa_provinsi', [ValidatorController::class, 'b8']);
+        Route::post('/validator/kebahasaan/duta_bahasa_provinsi', [ValidatorController::class, 'validasi_b8']);
+
         //VALIDATOR KATEGORI C
         Route::get('/validator/kesastraan/bengkel_sastra_dan_bahasa', [ValidatorController::class, 'c1']);
+        Route::post('/validator/kesastraan/bengkel_sastra_dan_bahasa', [ValidatorController::class, 'validasi_c1']);
+
         Route::get('/validator/kesastraan/penghargaan_sastra', [ValidatorController::class, 'c2']);
+        Route::post('/validator/kesastraan/penghargaan_sastra', [ValidatorController::class, 'validasi_c2']);
+
         Route::get('/validator/kesastraan/musikalisasi_puisi_nasional', [ValidatorController::class, 'c3']);
+        Route::post('/validator/kesastraan/musikalisasi_puisi_nasional', [ValidatorController::class, 'validasi_c3']);
+
         Route::get('/validator/kesastraan/musikalisasi_puisi_provinsi', [ValidatorController::class, 'c4']);
+        Route::post('/validator/kesastraan/musikalisasi_puisi_provinsi', [ValidatorController::class, 'validasi_c4']);
+
         //VALIDATOR KATEGORI D
         Route::get('/validator/komunitas/komunitas_bahasa', [ValidatorController::class, 'd1']);
+        Route::post('/validator/komunitas/komunitas_bahasa', [ValidatorController::class, 'validasi_d1']);
+
         Route::get('/validator/komunitas/komunitas_sastra', [ValidatorController::class, 'd2']);
+        Route::post('/validator/komunitas/komunitas_sastra', [ValidatorController::class, 'validasi_d2']);
+
         //VALIDATOR KATEGORI E
         Route::get('/validator/penelitian/penelitian', [ValidatorController::class, 'e1']);
+        Route::post('/validator/penelitian/penelitian', [ValidatorController::class, 'validasi_e1']);
+
     });
 });
 
