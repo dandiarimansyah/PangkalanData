@@ -33,14 +33,15 @@ class LaporanController extends Controller
     {
         return view('LAPORAN.SEKRETARIAT.la1');
     }
-
     public function la2()
     {
         return view('LAPORAN.SEKRETARIAT.la2');
     }
     public function la3()
     {
-        return view('LAPORAN.SEKRETARIAT.la3');
+        $kepegawaian = Kepegawaian::all();
+
+        return view('LAPORAN.SEKRETARIAT.la3', compact('kepegawaian'));
     }
     public function la4()
     {
@@ -50,31 +51,17 @@ class LaporanController extends Controller
     {
         return view('LAPORAN.SEKRETARIAT.la5');
     }
-
-    public function tampil_la5(Request $request)
-    {
-        if ($request->status_tanah == 'semua' and $request->status_bangunan == 'semua') {
-            $data = Tanah_Bangunan::all();
-        } elseif ($request->status_tanah == 'semua') {
-            $data = Tanah_Bangunan::where('status_bangunan', $request->status_bangunan)
-                ->get();
-        } elseif ($request->status_bangunan == 'semua') {
-            $data = Tanah_Bangunan::where('status_tanah', $request->status_tanah)
-                ->get();
-        } else {
-            $data = Tanah_Bangunan::where('status_tanah', $request->status_tanah)
-                ->where('status_bangunan', $request->status_bangunan)
-                ->get();
-        }
-        return view('LAPORAN.SEKRETARIAT.tampil_la5', compact('data'));
-    }
     public function la6()
     {
-        return view('LAPORAN.SEKRETARIAT.la6');
+        $perpustakaan = Perpustakaan::all();
+
+        return view('LAPORAN.SEKRETARIAT.la6', compact('perpustakaan'));
     }
     public function la7()
     {
-        return view('LAPORAN.SEKRETARIAT.la7');
+        $inventarisasi = Inventarisasi::all();
+
+        return view('LAPORAN.SEKRETARIAT.la7', compact('inventarisasi'));
     }
 
     //LAPORAN S 2
@@ -143,5 +130,131 @@ class LaporanController extends Controller
     public function le1()
     {
         return view('LAPORAN.PENELITIAN.le1');
+    }
+
+    //LAPORAN S 1
+    public function tampil_la1(Request $request)
+    {
+        return view('LAPORAN.SEKRETARIAT.tampil_la1');
+    }
+    public function tampil_la2(Request $request)
+    {
+        return view('LAPORAN.SEKRETARIAT.tampil_la2');
+    }
+    public function tampil_la3(Request $request)
+    {
+        return view('LAPORAN.SEKRETARIAT.tampil_la3');
+    }
+    public function tampil_la4(Request $request)
+    {
+        return view('LAPORAN.SEKRETARIAT.tampil_la4');
+    }
+    public function tampil_la5(Request $request)
+    {
+        if ($request->status_tanah == 'semua' and $request->status_bangunan == 'semua') {
+            $data = Tanah_Bangunan::all();
+        } elseif ($request->status_tanah == 'semua') {
+            $data = Tanah_Bangunan::where('status_bangunan', $request->status_bangunan)
+                ->get();
+        } elseif ($request->status_bangunan == 'semua') {
+            $data = Tanah_Bangunan::where('status_tanah', $request->status_tanah)
+                ->get();
+        } else {
+            $data = Tanah_Bangunan::where('status_tanah', $request->status_tanah)
+                ->where('status_bangunan', $request->status_bangunan)
+                ->get();
+        }
+        return view('LAPORAN.SEKRETARIAT.tampil_la5', compact('data'));
+    }
+    public function tampil_la6(Request $request)
+    {
+        return view('LAPORAN.SEKRETARIAT.tampil_la6');
+    }
+    public function tampil_la7(Request $request)
+    {
+        return view('LAPORAN.SEKRETARIAT.tampil_la7');
+    }
+
+    //LAPORAN S 2
+    public function tampil_lb1(Request $request)
+    {
+        if ($request->kategori == 'semua' and $request->info_produk == 'semua') {
+            $data = Kamus::where('unit', $request->unit)
+                ->get();
+        } elseif ($request->status_tanah == 'semua') {
+            $data = Kamus::where('info_produk', $request->info_produk)
+                ->get();
+        } elseif ($request->info_produk == 'semua') {
+            $data = Kamus::where('status_tanah', $request->status_tanah)
+                ->get();
+        } else {
+            $data = Kamus::where('status_tanah', $request->status_tanah)
+                ->where('info_produk', $request->info_produk)
+                ->get();
+        }
+
+        return view('LAPORAN.KEBAHASAAN.tampil_lb1');
+    }
+    public function tampil_lb2(Request $request)
+    {
+        return view('LAPORAN.KEBAHASAAN.tampil_lb2');
+    }
+    public function tampil_lb3(Request $request)
+    {
+        return view('LAPORAN.KEBAHASAAN.tampil_lb3');
+    }
+    public function tampil_lb4(Request $request)
+    {
+        return view('LAPORAN.KEBAHASAAN.tampil_lb4');
+    }
+    public function tampil_lb5(Request $request)
+    {
+        return view('LAPORAN.KEBAHASAAN.tampil_lb5');
+    }
+    public function tampil_lb6(Request $request)
+    {
+        return view('LAPORAN.KEBAHASAAN.tampil_lb6');
+    }
+    public function tampil_lb7(Request $request)
+    {
+        return view('LAPORAN.KEBAHASAAN.tampil_lb7');
+    }
+    public function tampil_lb8(Request $request)
+    {
+        return view('LAPORAN.KEBAHASAAN.tampil_lb8');
+    }
+
+    //LAPORAN S 3
+    public function tampil_lc1(Request $request)
+    {
+        return view('LAPORAN.KESASTRAAN.tampil_lc1');
+    }
+    public function tampil_lc2(Request $request)
+    {
+        return view('LAPORAN.KESASTRAAN.tampil_lc2');
+    }
+    public function tampil_lc3(Request $request)
+    {
+        return view('LAPORAN.KESASTRAAN.tampil_lc3');
+    }
+    public function tampil_lc4(Request $request)
+    {
+        return view('LAPORAN.KESASTRAAN.tampil_lc4');
+    }
+
+    //LAPORAN S 4
+    public function tampil_ld1(Request $request)
+    {
+        return view('LAPORAN.KOMUNITAS.tampil_ld1');
+    }
+    public function tampil_ld2(Request $request)
+    {
+        return view('LAPORAN.KOMUNITAS.tampil_ld2');
+    }
+
+    //LAPORAN S 5
+    public function tampil_le1(Request $request)
+    {
+        return view('LAPORAN.PENELITIAN.tampil_le1');
     }
 }
