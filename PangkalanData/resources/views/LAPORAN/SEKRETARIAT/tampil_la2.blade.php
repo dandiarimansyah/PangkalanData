@@ -50,17 +50,6 @@
                         <td>{{ $a -> unit}}</td>
                         <td>{{ $a -> besar_dana}}</td>
                         <td>{{ $a -> keterangan}}</td>
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-unit="{{ $a->unit }}"
-                                data-nilai_realisasi="{{ $a->nilai_realisasi }}"
-                                data-besar_dana="{{ $a->besar_dana }}"
-                                data-keterangan="{{ $a->keterangan }}"
-                        </td>
                     </tr>
                 @empty
                     <tr>

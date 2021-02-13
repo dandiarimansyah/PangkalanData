@@ -135,19 +135,33 @@ class LaporanController extends Controller
     //LAPORAN S 1
     public function tampil_la1(Request $request)
     {
-        return view('LAPORAN.SEKRETARIAT.tampil_la1');
+        if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
+            $data = Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
+                ->get();
+        } else {
+            $data = Anggaran::all();
+        }
+
+        return view('LAPORAN.SEKRETARIAT.tampil_la1', compact('data'));
     }
     public function tampil_la2(Request $request)
     {
-        return view('LAPORAN.SEKRETARIAT.tampil_la2');
+        if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
+            $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
+                ->get();
+        } else {
+            $data = Realisasi_Anggaran::all();
+        }
+
+        return view('LAPORAN.SEKRETARIAT.tampil_la2', compact('data'));
     }
     public function tampil_la3(Request $request)
     {
-        return view('LAPORAN.SEKRETARIAT.tampil_la3');
+        return view('LAPORAN.SEKRETARIAT.tampil_la3', compact('data'));
     }
     public function tampil_la4(Request $request)
     {
-        return view('LAPORAN.SEKRETARIAT.tampil_la4');
+        return view('LAPORAN.SEKRETARIAT.tampil_la4', compact('data'));
     }
     public function tampil_la5(Request $request)
     {
@@ -168,11 +182,11 @@ class LaporanController extends Controller
     }
     public function tampil_la6(Request $request)
     {
-        return view('LAPORAN.SEKRETARIAT.tampil_la6');
+        return view('LAPORAN.SEKRETARIAT.tampil_la6', compact('data'));
     }
     public function tampil_la7(Request $request)
     {
-        return view('LAPORAN.SEKRETARIAT.tampil_la7');
+        return view('LAPORAN.SEKRETARIAT.tampil_la7', compact('data'));
     }
 
     //LAPORAN S 2
@@ -193,68 +207,68 @@ class LaporanController extends Controller
                 ->get();
         }
 
-        return view('LAPORAN.KEBAHASAAN.tampil_lb1');
+        return view('LAPORAN.KEBAHASAAN.tampil_lb1', compact('data'));
     }
     public function tampil_lb2(Request $request)
     {
-        return view('LAPORAN.KEBAHASAAN.tampil_lb2');
+        return view('LAPORAN.KEBAHASAAN.tampil_lb2', compact('data'));
     }
     public function tampil_lb3(Request $request)
     {
-        return view('LAPORAN.KEBAHASAAN.tampil_lb3');
+        return view('LAPORAN.KEBAHASAAN.tampil_lb3', compact('data'));
     }
     public function tampil_lb4(Request $request)
     {
-        return view('LAPORAN.KEBAHASAAN.tampil_lb4');
+        return view('LAPORAN.KEBAHASAAN.tampil_lb4', compact('data'));
     }
     public function tampil_lb5(Request $request)
     {
-        return view('LAPORAN.KEBAHASAAN.tampil_lb5');
+        return view('LAPORAN.KEBAHASAAN.tampil_lb5', compact('data'));
     }
     public function tampil_lb6(Request $request)
     {
-        return view('LAPORAN.KEBAHASAAN.tampil_lb6');
+        return view('LAPORAN.KEBAHASAAN.tampil_lb6', compact('data'));
     }
     public function tampil_lb7(Request $request)
     {
-        return view('LAPORAN.KEBAHASAAN.tampil_lb7');
+        return view('LAPORAN.KEBAHASAAN.tampil_lb7', compact('data'));
     }
     public function tampil_lb8(Request $request)
     {
-        return view('LAPORAN.KEBAHASAAN.tampil_lb8');
+        return view('LAPORAN.KEBAHASAAN.tampil_lb8', compact('data'));
     }
 
     //LAPORAN S 3
     public function tampil_lc1(Request $request)
     {
-        return view('LAPORAN.KESASTRAAN.tampil_lc1');
+        return view('LAPORAN.KESASTRAAN.tampil_lc1', compact('data'));
     }
     public function tampil_lc2(Request $request)
     {
-        return view('LAPORAN.KESASTRAAN.tampil_lc2');
+        return view('LAPORAN.KESASTRAAN.tampil_lc2', compact('data'));
     }
     public function tampil_lc3(Request $request)
     {
-        return view('LAPORAN.KESASTRAAN.tampil_lc3');
+        return view('LAPORAN.KESASTRAAN.tampil_lc3', compact('data'));
     }
     public function tampil_lc4(Request $request)
     {
-        return view('LAPORAN.KESASTRAAN.tampil_lc4');
+        return view('LAPORAN.KESASTRAAN.tampil_lc4', compact('data'));
     }
 
     //LAPORAN S 4
     public function tampil_ld1(Request $request)
     {
-        return view('LAPORAN.KOMUNITAS.tampil_ld1');
+        return view('LAPORAN.KOMUNITAS.tampil_ld1', compact('data'));
     }
     public function tampil_ld2(Request $request)
     {
-        return view('LAPORAN.KOMUNITAS.tampil_ld2');
+        return view('LAPORAN.KOMUNITAS.tampil_ld2', compact('data'));
     }
 
     //LAPORAN S 5
     public function tampil_le1(Request $request)
     {
-        return view('LAPORAN.PENELITIAN.tampil_le1');
+        return view('LAPORAN.PENELITIAN.tampil_le1', compact('data'));
     }
 }

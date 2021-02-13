@@ -397,7 +397,8 @@ p {
 .inputfield,
 .inputfield-date,
 .inputfield-select,
-.inputfield-kecil {
+.inputfield-kecil,
+.inputfield-radio {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -408,6 +409,35 @@ p {
     color: #000000;
     margin-right: 30px;
     font-size: 14px;
+    font-weight: 600;
+}
+
+.inputfield-radio label {
+    width: 100px;
+    color: #000000;
+    margin-right: 40px;
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.inputfield-radio .label-atas {
+    width: 150px;
+    color: #000000;
+    margin-right: 30px;
+    font-size: 14px;
+    margin-left: 0;
+    font-weight: 600;
+}
+
+.inputfield-select label,
+.inputfield-kecil label,
+.inputfield-date label {
+    width: 148px;
+    color: #000000;
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .inputfield .input,
@@ -421,13 +451,12 @@ p {
     transition: all 0.3s ease;
 }
 
-.inputfield-select label,
-.inputfield-kecil label,
-.inputfield-date label {
-    width: 148px;
-    color: #000000;
-    margin-right: 30px;
-    font-size: 14px;
+.inputfield-radio .input {
+    /* width: 100px; */
+    outline: none;
+    /* border: 1px solid #000000; */
+    font-size: 15px;
+    padding: 8px 10px;
 }
 
 /* KECIL */
@@ -488,6 +517,22 @@ p {
     margin-right: 15px;
     margin-bottom: 0;
     font-size: 14px;
+}
+
+.mini {
+    width: 55px;
+    margin: 10px 12px 0 12px;
+}
+
+.mini input {
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.mini p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .wrapper .form .inputfield .textarea {
