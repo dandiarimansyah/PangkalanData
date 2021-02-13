@@ -37,7 +37,7 @@
 
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table">
+        <table class="content-table" id="datatable">
             <thead>
                 <tr>
                     <th rowspan="2">NO</th>
@@ -86,6 +86,7 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> tanggal_diperbarui}}</td>
+                        <td> Balai Bahasa Jawa Tengah</td>
                         <td>{{ $a -> semua_kelamin}}</td>
                         <td>{{ $a -> laki}}</td>
                         <td>{{ $a -> perempuan}}</td>

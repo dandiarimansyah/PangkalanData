@@ -37,7 +37,7 @@
 
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table">
+        <table class="content-table" id="datatable">
             <thead>
                 <tr>
                     <th>NO</th>
@@ -69,6 +69,7 @@
                         <td>{{ $a -> keterangan}}</td>
                         <td>1. {{ $a -> ttd_1}} <br>2. {{ $a -> ttd_2}}</td>
                         <!-- <td>{{ $a -> instansi_1}}{{ $a -> instansi_2}}</td> -->
+                        <td></td>
 
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit" data-toggle="modal" data-target="#edit-modal">Edit</button>
