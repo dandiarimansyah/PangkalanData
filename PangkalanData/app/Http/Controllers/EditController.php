@@ -62,11 +62,6 @@ class EditController extends Controller
         return view('EDIT.SEKRETARIAT.a5', compact('tanah_bangunan'));
     }
 
-    public function show_a5($file)
-    {
-        return response()->file('tanah_dan_bangunan/' . $file);
-    }
-
     public function a6()
     {
         $perpustakaan = Perpustakaan::all();
@@ -735,7 +730,7 @@ class EditController extends Controller
             'provinsi' => ['required'],
             'kota' => ['required'],
         ]);
-        
+
         $data = Komunitas_Sastra::where('id', $id)
             ->update([
                 'nama_komunitas' => $request->get('nama_komunitas'),

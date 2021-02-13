@@ -102,8 +102,6 @@ class ValidatorController extends Controller
             ->update([
                 'validasi' => "sudah",
             ]);
-
-        return back()->with('toast_success', 'Data Berhasil Divalidasi!');
     }
 
     //======================================================================

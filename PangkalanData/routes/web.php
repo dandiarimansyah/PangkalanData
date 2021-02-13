@@ -314,141 +314,140 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/validator/penelitian/penelitian', [ValidatorController::class, 'e1']);
         Route::post('/validator/penelitian/penelitian', [ValidatorController::class, 'validasi_e1']);
     });
+
+    ////========================================== MEDIA ===================
+    //MEDIA S 1
+    Route::get('/media/sekretariat/kerja_sama', [MediaController::class, 'ma1']);
+    Route::put('/media/sekretariat/kerja_sama/{id}', [MediaController::class, 'store_ma1']);
+    Route::get('/media/sekretariat/kerja_sama/hapus/{id}', [MediaController::class, 'hapus_ma1']);
+
+    Route::get('/media/sekretariat/tanah_dan_bangunan', [MediaController::class, 'ma2']);
+    Route::put('/media/sekretariat/tanah_dan_bangunan/{id}', [MediaController::class, 'store_ma2']);
+    Route::get('/media/sekretariat/tanah_dan_bangunan/hapus/{id}', [MediaController::class, 'hapus_ma2']);
+
+    //MEDIA S 2
+    Route::get('/media/kebahasaan/kamus_ensiklopedia', [MediaController::class, 'mb1']);
+    Route::put('/media/kebahasaan/kamus_ensiklopedia/{id}', [MediaController::class, 'store_mb1']);
+    Route::get('/media/kebahasaan/kamus_ensiklopedia/hapus/{id}', [MediaController::class, 'hapus_mb1']);
+
+    Route::get('/media/kebahasaan/jurnal_majalah', [MediaController::class, 'mb2']);
+    Route::put('/media/kebahasaan/jurnal_majalah/{id}', [MediaController::class, 'store_mb2']);
+    Route::get('/media/kebahasaan/jurnal_majalah/hapus/{id}', [MediaController::class, 'hapus_mb2']);
+
+    Route::get('/media/kebahasaan/terbitan_umum', [MediaController::class, 'mb3']);
+    Route::put('/media/kebahasaan/terbitan_umum/{id}', [MediaController::class, 'store_mb3']);
+    Route::get('/media/kebahasaan/terbitan_umum/hapus/{id}', [MediaController::class, 'hapus_mb3']);
+
+    Route::get('/media/kebahasaan/penyuluhan', [MediaController::class, 'mb4']);
+    Route::put('/media/kebahasaan/penyuluhan/{id}', [MediaController::class, 'store_mb4']);
+    Route::get('/media/kebahasaan/penyuluhan/hapus/{id}', [MediaController::class, 'hapus_mb4']);
+
+    Route::get('/media/kebahasaan/penghargaan_bahasa', [MediaController::class, 'mb5']);
+    Route::put('/media/kebahasaan/penghargaan_bahasa/{id}', [MediaController::class, 'store_mb5']);
+    Route::get('/media/kebahasaan/penghargaan_bahasa/hapus/{id}', [MediaController::class, 'hapus_mb5']);
+
+    Route::get('/media/kebahasaan/duta_bahasa_nasional', [MediaController::class, 'mb6']);
+    Route::put('/media/kebahasaan/duta_bahasa_nasional/{id}', [MediaController::class, 'store_mb6']);
+    Route::get('/media/kebahasaan/duta_bahasa_nasional/hapus/{id}', [MediaController::class, 'hapus_mb6']);
+
+    Route::get('/media/kebahasaan/duta_bahasa_provinsi', [MediaController::class, 'mb7']);
+    Route::put('/media/kebahasaan/duta_bahasa_provinsi/{id}', [MediaController::class, 'store_mb7']);
+    Route::get('/media/kebahasaan/duta_bahasa_provinsi/hapus/{id}', [MediaController::class, 'hapus_mb7']);
+
+    //MEDIA S 3
+    Route::get('/media/kesastraan/bengkel_sastra_dan_bahasa', [MediaController::class, 'mc1']);
+    Route::put('/media/kesastraan/bengkel_sastra_dan_bahasa/{id}', [MediaController::class, 'store_mc1']);
+    Route::get('/media/kesastraan/bengkel_sastra_dan_bahasa/hapus/{id}', [MediaController::class, 'hapus_mc1']);
+
+    Route::get('/media/kesastraan/penghargaan_sastra', [MediaController::class, 'mc2']);
+    Route::put('/media/kesastraan/penghargaan_sastra/{id}', [MediaController::class, 'store_mc2']);
+    Route::get('/media/kesastraan/penghargaan_sastra/hapus/{id}', [MediaController::class, 'hapus_mc2']);
+
+    Route::get('/media/kesastraan/musikalisasi_puisi_nasional', [MediaController::class, 'mc3']);
+    Route::put('/media/kesastraan/musikalisasi_puisi_nasional/{id}', [MediaController::class, 'store_mc3']);
+    Route::get('/media/kesastraan/musikalisasi_puisi_nasional/hapus/{id}', [MediaController::class, 'hapus_mc3']);
+
+    Route::get('/media/kesastraan/musikalisasi_puisi_provinsi', [MediaController::class, 'mc4']);
+    Route::put('/media/kesastraan/musikalisasi_puisi_provinsi/{id}', [MediaController::class, 'store_mc4']);
+    Route::get('/media/kesastraan/musikalisasi_puisi_provinsi/hapus/{id}', [MediaController::class, 'hapus_mc4']);
+
+    //MEDIA S 5
+    Route::get('/media/penelitian/penelitian', [MediaController::class, 'me1']);
+    Route::put('/media/penelitian/penelitian/{id}', [MediaController::class, 'store_me1']);
+    Route::get('/media/penelitian/penelitian/hapus/{id}', [MediaController::class, 'hapus_me1']);
+
+    ////========================================== LAPORAN ===================
+    //LAPORAN S 1
+    Route::get('/laporan/sekretariat/anggaran', [LaporanController::class, 'la1']);
+    Route::get('/laporan/sekretariat/realisasi_anggaran', [LaporanController::class, 'la2']);
+    Route::get('/laporan/sekretariat/kepegawaian', [LaporanController::class, 'la3']);
+    Route::get('/laporan/sekretariat/kerja_sama', [LaporanController::class, 'la4']);
+    Route::get('/laporan/sekretariat/tanah_dan_bangunan', [LaporanController::class, 'la5']);
+    Route::get('/laporan/sekretariat/perpustakaan', [LaporanController::class, 'la6']);
+    Route::get('/laporan/sekretariat/inventarisasi_bmn', [LaporanController::class, 'la7']);
+    //LAPORAN S 2
+    Route::get('/laporan/kebahasaan/kamus_ensiklopedia', [LaporanController::class, 'lb1']);
+    Route::get('/laporan/kebahasaan/jurnal_umum', [LaporanController::class, 'lb2']);
+    Route::get('/laporan/kebahasaan/terbitan_umum', [LaporanController::class, 'lb3']);
+    Route::get('/laporan/kebahasaan/penyuluhan', [LaporanController::class, 'lb4']);
+    Route::get('/laporan/kebahasaan/pesuluh', [LaporanController::class, 'lb5']);
+    Route::get('/laporan/kebahasaan/penghargaan_nasional', [LaporanController::class, 'lb6']);
+    Route::get('/laporan/kebahasaan/duta_bahasa_nasional', [LaporanController::class, 'lb7']);
+    Route::get('/laporan/kebahasaan/duta_bahasa_provinsi', [LaporanController::class, 'lb8']);
+    //LAPORAN S 3
+    Route::get('/laporan/kesastraan/bengkel_sastra_dan_bahasa', [LaporanController::class, 'lc1']);
+    Route::get('/laporan/kesastraan/penghargaan_sastra', [LaporanController::class, 'lc2']);
+    Route::get('/laporan/kesastraan/musikalisasi_puisi_nasional', [LaporanController::class, 'lc3']);
+    Route::get('/laporan/kesastraan/musikalisasi_puisi_provinsi', [LaporanController::class, 'lc4']);
+    //LAPORAN S 4
+    Route::get('/laporan/komunitas/komunitas_bahasa', [LaporanController::class, 'ld1']);
+    Route::get('/laporan/komunitas/komunitas_sastra', [LaporanController::class, 'ld2']);
+    //LAPORAN S 5
+    Route::get('/laporan/penelitian/penelitian', [LaporanController::class, 'le1']);
+
+    //TAMPIL LAPORAN S 1
+    Route::get('/laporan/sekretariat/anggaran/tampil', [LaporanController::class, 'tampil_la1']);
+    Route::get('/laporan/sekretariat/realisasi_anggaran/tampil', [LaporanController::class, 'tampil_la2']);
+    Route::get('/laporan/sekretariat/kepegawaian/tampil', [LaporanController::class, 'tampil_la3']);
+    Route::get('/laporan/sekretariat/kerja_sama/tampil', [LaporanController::class, 'tampil_la4']);
+    Route::get('/laporan/sekretariat/tanah_dan_bangunan/tampil', [LaporanController::class, 'tampil_la5']);
+    Route::get('/laporan/sekretariat/perpustakaan/tampil', [LaporanController::class, 'tampil_la6']);
+    Route::get('/laporan/sekretariat/inventarisasi_bmn/tampil', [LaporanController::class, 'tampil_la7']);
+    //TAMPIL LAPORAN S 2
+    Route::get('/laporan/kebahasaan/kamus_ensiklopedia/tampil', [LaporanController::class, 'tampil_lb1']);
+    Route::get('/laporan/kebahasaan/jurnal_umum/tampil', [LaporanController::class, 'tampil_lb2']);
+    Route::get('/laporan/kebahasaan/terbitan_umum/tampil', [LaporanController::class, 'tampil_lb3']);
+    Route::get('/laporan/kebahasaan/penyuluhan/tampil', [LaporanController::class, 'tampil_lb4']);
+    Route::get('/laporan/kebahasaan/pesuluh/tampil', [LaporanController::class, 'tampil_lb5']);
+    Route::get('/laporan/kebahasaan/penghargaan_nasional/tampil', [LaporanController::class, 'tampil_lb6']);
+    Route::get('/laporan/kebahasaan/duta_bahasa_nasional/tampil', [LaporanController::class, 'tampil_lb7']);
+    Route::get('/laporan/kebahasaan/duta_bahasa_provinsi/tampil', [LaporanController::class, 'tampil_lb8']);
+    //TAMPIL LAPORAN S 3
+    Route::get('/laporan/kesastraan/bengkel_sastra_dan_bahasa/tampil', [LaporanController::class, 'tampil_lc1']);
+    Route::get('/laporan/kesastraan/penghargaan_sastra/tampil', [LaporanController::class, 'tampil_lc2']);
+    Route::get('/laporan/kesastraan/musikalisasi_puisi_nasional/tampil', [LaporanController::class, 'tampil_lc3']);
+    Route::get('/laporan/kesastraan/musikalisasi_puisi_provinsi/tampil', [LaporanController::class, 'tampil_lc4']);
+    //TAMPIL LAPORAN S 4
+    Route::get('/laporan/komunitas/komunitas_bahasa/tampil', [LaporanController::class, 'tampil_ld1']);
+    Route::get('/laporan/komunitas/komunitas_sastra/tampil', [LaporanController::class, 'tampil_ld2']);
+    //TAMPIL LAPORAN S 5
+    Route::get('/laporan/penelitian/penelitian/tampil', [LaporanController::class, 'tampil_le1']);
+
+    ////========================================== GRAFIK ===================
+    //GRAFIK S 1
+    Route::get('/grafik/sekretariat/anggaran', [GrafikController::class, 'ga1']);
+    Route::get('/grafik/sekretariat/kerja_sama', [GrafikController::class, 'ga2']);
+    Route::get('/grafik/sekretariat/tanah_dan_bangunan', [GrafikController::class, 'ga3']);
+    Route::get('/grafik/sekretariat/perpustakaan', [GrafikController::class, 'ga4']);
+    //GRAFIK S 2
+    Route::get('/grafik/kebahasaan/kamus_ensiklopedia', [GrafikController::class, 'gb1']);
+    Route::get('/grafik/kebahasaan/jurnal_majalah', [GrafikController::class, 'gb2']);
+    Route::get('/grafik/kebahasaan/terbitan_umum', [GrafikController::class, 'gb3']);
+    Route::get('/grafik/kebahasaan/penyuluhan', [GrafikController::class, 'gb4']);
+    //GRAFIK S 3
+    Route::get('/grafik/kesastraan/bengkel_sastra_dan_bahasa', [GrafikController::class, 'gc1']);
+    //GRAFIK S 4
+    Route::get('/grafik/komunitas/komunitas_bahasa_dan_sastra', [GrafikController::class, 'gd1']);
+    //GRAFIK S 5
+    Route::get('/grafik/penelitian/penelitian', [GrafikController::class, 'ge1']);
 });
-
-
-////========================================== MEDIA ===================
-//MEDIA S 1
-Route::get('/media/sekretariat/kerja_sama', [MediaController::class, 'ma1']);
-Route::put('/media/sekretariat/kerja_sama/{id}', [MediaController::class, 'store_ma1']);
-Route::get('/media/sekretariat/kerja_sama/hapus/{id}', [MediaController::class, 'hapus_ma1']);
-
-Route::get('/media/sekretariat/tanah_dan_bangunan', [MediaController::class, 'ma2']);
-Route::put('/media/sekretariat/tanah_dan_bangunan/{id}', [MediaController::class, 'store_ma2']);
-Route::get('/media/sekretariat/tanah_dan_bangunan/hapus/{id}', [MediaController::class, 'hapus_ma2']);
-
-//MEDIA S 2
-Route::get('/media/kebahasaan/kamus_ensiklopedia', [MediaController::class, 'mb1']);
-Route::put('/media/kebahasaan/kamus_ensiklopedia/{id}', [MediaController::class, 'store_mb1']);
-Route::get('/media/kebahasaan/kamus_ensiklopedia/hapus/{id}', [MediaController::class, 'hapus_mb1']);
-
-Route::get('/media/kebahasaan/jurnal_majalah', [MediaController::class, 'mb2']);
-Route::put('/media/kebahasaan/jurnal_majalah/{id}', [MediaController::class, 'store_mb2']);
-Route::get('/media/kebahasaan/jurnal_majalah/hapus/{id}', [MediaController::class, 'hapus_mb2']);
-
-Route::get('/media/kebahasaan/terbitan_umum', [MediaController::class, 'mb3']);
-Route::put('/media/kebahasaan/terbitan_umum/{id}', [MediaController::class, 'store_mb3']);
-Route::get('/media/kebahasaan/terbitan_umum/hapus/{id}', [MediaController::class, 'hapus_mb3']);
-
-Route::get('/media/kebahasaan/penyuluhan', [MediaController::class, 'mb4']);
-Route::put('/media/kebahasaan/penyuluhan/{id}', [MediaController::class, 'store_mb4']);
-Route::get('/media/kebahasaan/penyuluhan/hapus/{id}', [MediaController::class, 'hapus_mb4']);
-
-Route::get('/media/kebahasaan/penghargaan_bahasa', [MediaController::class, 'mb5']);
-Route::put('/media/kebahasaan/penghargaan_bahasa/{id}', [MediaController::class, 'store_mb5']);
-Route::get('/media/kebahasaan/penghargaan_bahasa/hapus/{id}', [MediaController::class, 'hapus_mb5']);
-
-Route::get('/media/kebahasaan/duta_bahasa_nasional', [MediaController::class, 'mb6']);
-Route::put('/media/kebahasaan/duta_bahasa_nasional/{id}', [MediaController::class, 'store_mb6']);
-Route::get('/media/kebahasaan/duta_bahasa_nasional/hapus/{id}', [MediaController::class, 'hapus_mb6']);
-
-Route::get('/media/kebahasaan/duta_bahasa_provinsi', [MediaController::class, 'mb7']);
-Route::put('/media/kebahasaan/duta_bahasa_provinsi/{id}', [MediaController::class, 'store_mb7']);
-Route::get('/media/kebahasaan/duta_bahasa_provinsi/hapus/{id}', [MediaController::class, 'hapus_mb7']);
-
-//MEDIA S 3
-Route::get('/media/kesastraan/bengkel_sastra_dan_bahasa', [MediaController::class, 'mc1']);
-Route::put('/media/kesastraan/bengkel_sastra_dan_bahasa/{id}', [MediaController::class, 'store_mc1']);
-Route::get('/media/kesastraan/bengkel_sastra_dan_bahasa/hapus/{id}', [MediaController::class, 'hapus_mc1']);
-
-Route::get('/media/kesastraan/penghargaan_sastra', [MediaController::class, 'mc2']);
-Route::put('/media/kesastraan/penghargaan_sastra/{id}', [MediaController::class, 'store_mc2']);
-Route::get('/media/kesastraan/penghargaan_sastra/hapus/{id}', [MediaController::class, 'hapus_mc2']);
-
-Route::get('/media/kesastraan/musikalisasi_puisi_nasional', [MediaController::class, 'mc3']);
-Route::put('/media/kesastraan/musikalisasi_puisi_nasional/{id}', [MediaController::class, 'store_mc3']);
-Route::get('/media/kesastraan/musikalisasi_puisi_nasional/hapus/{id}', [MediaController::class, 'hapus_mc3']);
-
-Route::get('/media/kesastraan/musikalisasi_puisi_provinsi', [MediaController::class, 'mc4']);
-Route::put('/media/kesastraan/musikalisasi_puisi_provinsi/{id}', [MediaController::class, 'store_mc4']);
-Route::get('/media/kesastraan/musikalisasi_puisi_provinsi/hapus/{id}', [MediaController::class, 'hapus_mc4']);
-
-//MEDIA S 5
-Route::get('/media/penelitian/penelitian', [MediaController::class, 'me1']);
-Route::put('/media/penelitian/penelitian/{id}', [MediaController::class, 'store_me1']);
-Route::get('/media/penelitian/penelitian/hapus/{id}', [MediaController::class, 'hapus_me1']);
-
-////========================================== LAPORAN ===================
-//LAPORAN S 1
-Route::get('/laporan/sekretariat/anggaran', [LaporanController::class, 'la1']);
-Route::get('/laporan/sekretariat/realisasi_anggaran', [LaporanController::class, 'la2']);
-Route::get('/laporan/sekretariat/kepegawaian', [LaporanController::class, 'la3']);
-Route::get('/laporan/sekretariat/kerja_sama', [LaporanController::class, 'la4']);
-Route::get('/laporan/sekretariat/tanah_dan_bangunan', [LaporanController::class, 'la5']);
-Route::get('/laporan/sekretariat/perpustakaan', [LaporanController::class, 'la6']);
-Route::get('/laporan/sekretariat/inventarisasi_bmn', [LaporanController::class, 'la7']);
-//LAPORAN S 2
-Route::get('/laporan/kebahasaan/kamus_ensiklopedia', [LaporanController::class, 'lb1']);
-Route::get('/laporan/kebahasaan/jurnal_umum', [LaporanController::class, 'lb2']);
-Route::get('/laporan/kebahasaan/terbitan_umum', [LaporanController::class, 'lb3']);
-Route::get('/laporan/kebahasaan/penyuluhan', [LaporanController::class, 'lb4']);
-Route::get('/laporan/kebahasaan/pesuluh', [LaporanController::class, 'lb5']);
-Route::get('/laporan/kebahasaan/penghargaan_nasional', [LaporanController::class, 'lb6']);
-Route::get('/laporan/kebahasaan/duta_bahasa_nasional', [LaporanController::class, 'lb7']);
-Route::get('/laporan/kebahasaan/duta_bahasa_provinsi', [LaporanController::class, 'lb8']);
-//LAPORAN S 3
-Route::get('/laporan/kesastraan/bengkel_sastra_dan_bahasa', [LaporanController::class, 'lc1']);
-Route::get('/laporan/kesastraan/penghargaan_sastra', [LaporanController::class, 'lc2']);
-Route::get('/laporan/kesastraan/musikalisasi_puisi_nasional', [LaporanController::class, 'lc3']);
-Route::get('/laporan/kesastraan/musikalisasi_puisi_provinsi', [LaporanController::class, 'lc4']);
-//LAPORAN S 4
-Route::get('/laporan/komunitas/komunitas_bahasa', [LaporanController::class, 'ld1']);
-Route::get('/laporan/komunitas/komunitas_sastra', [LaporanController::class, 'ld2']);
-//LAPORAN S 5
-Route::get('/laporan/penelitian/penelitian', [LaporanController::class, 'le1']);
-
-//TAMPIL LAPORAN S 1
-Route::get('/laporan/sekretariat/anggaran/tampil', [LaporanController::class, 'tampil_la1']);
-Route::get('/laporan/sekretariat/realisasi_anggaran/tampil', [LaporanController::class, 'tampil_la2']);
-Route::get('/laporan/sekretariat/kepegawaian/tampil', [LaporanController::class, 'tampil_la3']);
-Route::get('/laporan/sekretariat/kerja_sama/tampil', [LaporanController::class, 'tampil_la4']);
-Route::get('/laporan/sekretariat/tanah_dan_bangunan/tampil', [LaporanController::class, 'tampil_la5']);
-Route::get('/laporan/sekretariat/perpustakaan/tampil', [LaporanController::class, 'tampil_la6']);
-Route::get('/laporan/sekretariat/inventarisasi_bmn/tampil', [LaporanController::class, 'tampil_la7']);
-//TAMPIL LAPORAN S 2
-Route::get('/laporan/kebahasaan/kamus_ensiklopedia/tampil', [LaporanController::class, 'tampil_lb1']);
-Route::get('/laporan/kebahasaan/jurnal_umum/tampil', [LaporanController::class, 'tampil_lb2']);
-Route::get('/laporan/kebahasaan/terbitan_umum/tampil', [LaporanController::class, 'tampil_lb3']);
-Route::get('/laporan/kebahasaan/penyuluhan/tampil', [LaporanController::class, 'tampil_lb4']);
-Route::get('/laporan/kebahasaan/pesuluh/tampil', [LaporanController::class, 'tampil_lb5']);
-Route::get('/laporan/kebahasaan/penghargaan_nasional/tampil', [LaporanController::class, 'tampil_lb6']);
-Route::get('/laporan/kebahasaan/duta_bahasa_nasional/tampil', [LaporanController::class, 'tampil_lb7']);
-Route::get('/laporan/kebahasaan/duta_bahasa_provinsi/tampil', [LaporanController::class, 'tampil_lb8']);
-//TAMPIL LAPORAN S 3
-Route::get('/laporan/kesastraan/bengkel_sastra_dan_bahasa/tampil', [LaporanController::class, 'tampil_lc1']);
-Route::get('/laporan/kesastraan/penghargaan_sastra/tampil', [LaporanController::class, 'tampil_lc2']);
-Route::get('/laporan/kesastraan/musikalisasi_puisi_nasional/tampil', [LaporanController::class, 'tampil_lc3']);
-Route::get('/laporan/kesastraan/musikalisasi_puisi_provinsi/tampil', [LaporanController::class, 'tampil_lc4']);
-//TAMPIL LAPORAN S 4
-Route::get('/laporan/komunitas/komunitas_bahasa/tampil', [LaporanController::class, 'tampil_ld1']);
-Route::get('/laporan/komunitas/komunitas_sastra/tampil', [LaporanController::class, 'tampil_ld2']);
-//TAMPIL LAPORAN S 5
-Route::get('/laporan/penelitian/penelitian/tampil', [LaporanController::class, 'tampil_le1']);
-
-////========================================== GRAFIK ===================
-//GRAFIK S 1
-Route::get('/grafik/sekretariat/anggaran', [GrafikController::class, 'ga1']);
-Route::get('/grafik/sekretariat/kerja_sama', [GrafikController::class, 'ga2']);
-Route::get('/grafik/sekretariat/tanah_dan_bangunan', [GrafikController::class, 'ga3']);
-Route::get('/grafik/sekretariat/perpustakaan', [GrafikController::class, 'ga4']);
-//GRAFIK S 2
-Route::get('/grafik/kebahasaan/kamus_ensiklopedia', [GrafikController::class, 'gb1']);
-Route::get('/grafik/kebahasaan/jurnal_majalah', [GrafikController::class, 'gb2']);
-Route::get('/grafik/kebahasaan/terbitan_umum', [GrafikController::class, 'gb3']);
-Route::get('/grafik/kebahasaan/penyuluhan', [GrafikController::class, 'gb4']);
-//GRAFIK S 3
-Route::get('/grafik/kesastraan/bengkel_sastra_dan_bahasa', [GrafikController::class, 'gc1']);
-//GRAFIK S 4
-Route::get('/grafik/komunitas/komunitas_bahasa_dan_sastra', [GrafikController::class, 'gd1']);
-//GRAFIK S 5
-Route::get('/grafik/penelitian/penelitian', [GrafikController::class, 'ge1']);
