@@ -14,6 +14,8 @@
 
     <div class="wrapper">
         <div class="form">
+          <form action="{{ URL('/laporan/kesastraan/musikalisasi_puisi_nasional/tampil')}}" method="GET">
+            @csrf
 
         <div class="inputfield-select">
             <label>Berdasarkan Tahun</label>
@@ -54,6 +56,8 @@
         <div class="tombol">
           <input type="submit" value="Tampilkan" class="inputan">
         </div> 
+
+        </form>
     
       </div>
   </div>	

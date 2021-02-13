@@ -14,6 +14,8 @@
 
     <div class="wrapper">
         <div class="form">
+          <form action="{{ URL('/laporan/komunitas/komunitas_sastra/tampil')}}" method="GET">
+            @csrf
 
         <div class="inputfield-select">
             <label>Berdasarkan Provinsi</label>
@@ -116,6 +118,8 @@
         <div class="tombol">
           <input type="submit" value="Tampilkan" class="inputan">
         </div> 
+
+        </form>
     
       </div>
   </div>	

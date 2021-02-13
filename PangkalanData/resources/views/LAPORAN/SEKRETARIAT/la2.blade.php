@@ -13,7 +13,8 @@
   </div>
 
   <div class="wrapper">
-    <form action="{{ URL('/laporan/sekretariat/realisasi_anggaran/tampil')}}" method="GET">
+    <div class="form">
+      <form action="{{ URL('/laporan/sekretariat/realisasi_anggaran/tampil')}}" method="GET">
       @csrf
 
         <!-- <div class="inputfield-select">

@@ -54,7 +54,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/data/sekretariat/perpustakaan', [GuestController::class, 'a6']);
         Route::get('/data/sekretariat/inventarisasi_bmn', [GuestController::class, 'a7']);
         //DATA KATEGORI B
-        Route::get('/data/kebahasaan/kamus_ensiklopedia', [GuestController::class, 'b1']);
+        Route::get('/data/kebahasaan/web ', [GuestController::class, 'b1']);
         Route::get('/data/kebahasaan/jurnal_majalah', [GuestController::class, 'b2']);
         Route::get('/data/kebahasaan/terbitan_umum', [GuestController::class, 'b3']);
         Route::get('/data/kebahasaan/penyuluhan', [GuestController::class, 'b4']);

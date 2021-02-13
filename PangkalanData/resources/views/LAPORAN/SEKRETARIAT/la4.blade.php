@@ -14,7 +14,9 @@
   </div>
 
   <div class="wrapper">
-      <div class="form">
+    <div class="form">
+      <form action="{{ URL('/laporan/sekretariat/kerja_sama/tampil')}}" method="GET">
+          @csrf
 
         <div class="inputfield-select">
             <label>Berdasarkan Kategori</label>
@@ -80,6 +82,7 @@
         <div class="tombol">
           <input type="submit" value="Tampilkan" class="inputan">
         </div> 
+        </form>
     
       </div>
   </div>	
