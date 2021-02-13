@@ -18,16 +18,14 @@
         <div class="inputfield-select">
             <label>Berdasarkan Kategori</label>
             <div class="custom_select">
-                <select>
-                <option value="">[SEMUA]</option>
-                <option value="">Acarya Sastra</option>
-                <option value="">Taruna Sastra</option>
-                <option value="">Anugerah Tokoh Kesastraan</option>
-                <option value="">Sastra Badan Bahasa</option>
-                <option value="">Sea Write Awards</option>
-                <option value="">Sayembara Menulis</option>
-                <option value="">Musikalisasi Puisi Nasional</option>
-                <option value="">Musikalisasi Puisi Provinsi</option>
+                <select id="kategori" name="kategori">
+                  <option disabled="disabled" selected="selected" value="">-- Pilih Kategori--</option>
+                  <option value="Acarya Sastra">Acarya Sastra</option>
+                  <option value="Taruna Sastra">Taruna Sastra</option>
+                  <option value="Anugrah Tokoh Kesastraan">Anugrah Tokoh Kesastraan</option>
+                  <option value="Sastra Badan Bahasa">Sastra Badan Bahasa</option>
+                  <option value="Sea Write Awards">Sea Write Awards</option>
+                  <option value="Sayembara Menulis">Sayembara Menulis</option>
                 </select>
             </div>
         </div> 
@@ -35,37 +33,37 @@
         <div class="inputfield-select">
             <label>Berdasarkan Tahun</label>
             <div class="custom_select">
-              <select>
-                <option value="">[SEMUA]</option>
-                <option value="">2000</option>
-                <option value="">2001</option>
-                <option value="">2002</option>
-                <option value="">2003</option>
-                <option value="">2004</option>
-                <option value="">2005</option>
-                <option value="">2006</option>
-                <option value="">2007</option>
-                <option value="">2008</option>
-                <option value="">2009</option>
-                <option value="">2010</option>
-                <option value="">2011</option>
-                <option value="">2012</option>
-                <option value="">2013</option>
-                <option value="">2014</option>
-                <option value="">2015</option>
-                <option value="">2016</option>
-                <option value="">2017</option>
-                <option value="">2018</option>
-                <option value="">2019</option>
-                <option value="">2020</option>
-                <option value="">2021</option>
+              <select name="tahun">
+                <option value="semua">[SEMUA]</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
               </select>
             </div>
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Deskripsi</label>
-            <input type="text" class="input">
+            <input name="deskripsi" type="text" class="input">
         </div> 
 
         <div class="tombol">

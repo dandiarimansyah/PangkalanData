@@ -15,7 +15,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <div class="inputfield-select">
+      <!-- <div class="inputfield-select">
             <label>Berdasarkan Unit/Satuan Kerja</label>
             <div class="custom_select" style="width: 520px">
               <select>
@@ -57,13 +57,14 @@
                 <option value="">Kantor Bahasa Bengkulu</option>
               </select>
             </div>
-        </div> 
+        </div>  -->
 
         <div class="inputfield-select">
             <label>Berdasarkan Provinsi*</label>
             <div class="custom_select">
-              <select>
-                <option value="">[SEMUA]</option>
+              <select name="provinsi">
+                <option value="Jawa Tengah">Jawa Tengah</option>
+                <!-- <option value="">[SEMUA]</option>
                 <option value="">Aceh</option>
                 <option value="">Sumatera Utara</option>
                 <option value="">Sumatera Barat</option>
@@ -96,24 +97,24 @@
                 <option value="">Maluku Utara</option>
                 <option value="">Papua Barat</option>
                 <option value="">Papua</option>
-                <option value="">Kalimantan Utara</option>
+                <option value="">Kalimantan Utara</option> -->
               </select>
             </div>
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Kabupaten/Kota</label>
-            <input type="text" class="input">
+            <input name="kota" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Nama Kegiatan</label>
-            <input type="text" class="input">
+            <input name="nama_kegiatan" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Sasaran</label>
-            <input type="text" class="input">
+            <input name="sasaran" type="text" class="input">
         </div> 
 
         <div class="tombol">

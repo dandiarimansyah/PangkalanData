@@ -14,23 +14,23 @@
   <div class="wrapper">
       <div class="form">
 
-        <div class="inputfield-select">
+        <!-- <div class="inputfield-select">
             <label>Unit/Satuan Kerja*</label>
             <div class="custom_select">
               <select>
                 <option value="">Balai Bahasa Jawa Tengah</option>
               </select>
             </div>
-        </div> 
+        </div>  -->
 
         <div class="inputfield">
             <label>Semua Data</label>
-            <input type="text" class="input">
+            <input name="" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Tahun Anggaran</label>
-            <input type="text" class="input">
+            <input name="tahun_anggaran" type="text" class="input">
         </div>  
         
         <div class="tombol">

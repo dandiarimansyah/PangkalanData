@@ -18,9 +18,10 @@
         <div class="inputfield-select">
             <label>Berdasarkan Provinsi</label>
             <div class="custom_select">
-              <select>
-                <option value="">[Semua Provinsi]</option>
-                <option value="">Aceh</option>
+              <select name="provinsi">
+                <option disabled="disabled" selected="selected" value="">-- Pilih Provinsi--</option>
+                <!-- <option value="">[Semua Provinsi]</option> -->
+                <!-- <option value="">Aceh</option>
                 <option value="">Sumatera Utara</option>
                 <option value="">Sumatera Barat</option>
                 <option value="">Bengkulu</option>
@@ -32,9 +33,9 @@
                 <option value="">Kepulauan Bangka Belitung</option>
                 <option value="">DKI Jakarta</option>
                 <option value="">Jawa Barat</option>
-                <option value="">Banten</option>
-                <option value="">Jawa Tengah</option>
-                <option value="">Daerah Istimewa Yogyakarta</option>
+                <option value="">Banten</option> -->
+                <option value="Jawa Tengah">Jawa Tengah</option>
+                <!-- <option value="">Daerah Istimewa Yogyakarta</option>
                 <option value="">Jawa Timur</option>
                 <option value="">Kalimantan Barat</option>
                 <option value="">Kalimantan Tengah</option>
@@ -52,7 +53,7 @@
                 <option value="">Maluku Utara</option>
                 <option value="">Papua Barat</option>
                 <option value="">Papua</option>
-                <option value="">Kalimantan Utara</option>
+                <option value="">Kalimantan Utara</option> -->
               </select>
             </div>
         </div> 
@@ -60,20 +61,55 @@
         <div class="inputfield-select">
             <label>Berdasarkan Nama</label>
             <div class="custom_select">
-              <select>
-                <option value="">[Semua Kabupaten/Kota]</option>
+              <select name="kota">
+                <option disabled="disabled" selected="selected" value="">-- Pilih Kabupaten/Kota--</option>
+                <option value="Kabupaten Cilacap">Kabupaten Cilacap</option>
+                <option value="Kabupaten Banyumas">Kabupaten Banyumas</option>
+                <option value="Kabupaten Purbalingga">Kabupaten Purbalingga</option>
+                <option value="Kabupaten Banjarnegara">Kabupaten Banjarnegara</option>
+                <option value="Kabupaten Kebumen">Kabupaten Kebumen</option>
+                <option value="Kabupaten Purworejo">Kabupaten Purworejo</option>
+                <option value="Kabupaten Wonosobo">Kabupaten Wonosobo</option>
+                <option value="Kabupaten Magelang">Kabupaten Magelang</option>
+                <option value="Kabupaten Boyolali">Kabupaten Boyolali</option>
+                <option value="Kabupaten Klaten">Kabupaten Klaten</option>
+                <option value="Kabupaten Sukoharjo">Kabupaten Sukoharjo</option>
+                <option value="Kabupaten Wonogiri">Kabupaten Wonogiri</option>
+                <option value="Kabupaten Karanganyar">Kabupaten Karanganyar</option>
+                <option value="Kabupaten Sragen">Kabupaten Sragen</option>
+                <option value="Kabupaten Grobogan">Kabupaten Grobogan</option>
+                <option value="Kabupaten Blora">Kabupaten Blora</option>
+                <option value="Kabupaten Rembang">Kabupaten Rembang</option>
+                <option value="Kabupaten Pati">Kabupaten Pati</option>
+                <option value="Kabupaten Kudus">Kabupaten Kudus</option>
+                <option value="Kabupaten Jepara">Kabupaten Jepara</option>
+                <option value="Kabupaten Demak">Kabupaten Demak</option>
+                <option value="Kabupaten Semarang">Kabupaten Semarang</option>
+                <option value="Kabupaten Temanggung">Kabupaten Temanggung</option>
+                <option value="Kabupaten Kendal">Kabupaten Kendal</option>
+                <option value="Kabupaten Batang">Kabupaten Batang</option>
+                <option value="Kabupaten Pekalongan">Kabupaten Pekalongan</option>
+                <option value="Kabupaten Pemalang">Kabupaten Pemalang</option>
+                <option value="Kabupaten Tegal">Kabupaten Tegal</option>
+                <option value="Kabupaten Brebes">Kabupaten Brebes</option>
+                <option value="Kota Magelang">Kota Magelang</option>
+                <option value="Kota Surakarta">Kota Surakarta</option>
+                <option value="Kota Salatiga">Kota Salatiga</option>
+                <option value="Kota Semarang">Kota Semarang</option>
+                <option value="Kota Pekalongan">Kota Pekalongan</option>
+                <option value="Kota Tegal">Kota Tegal</option>
               </select>
             </div>
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Nama</label>
-            <input type="text" class="input">
+            <input name="nama_komunitas" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Alamat</label>
-            <input type="text" class="input">
+            <input name="alamat" type="text" class="input">
         </div> 
 
         <div class="tombol">

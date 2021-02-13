@@ -31,7 +31,8 @@
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
-            <thead>
+           
+        <thead>
                 <tr>
                     <th rowspan="2">NO</th>
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
@@ -57,43 +58,56 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>11-12-2018</td>
-                    <td>Balai Bahasa Provinsi Jawa Tengah</td>
-                    <td>2018</td>
-                    <td>13</td>
-                    <td>46</td>
-                    <td>29</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>7</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>437</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
+                @forelse ($inventarisasi as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
+                        <td>{{ $a -> unit}}</td>
+                        <td></td>
+                        <td>{{ $a -> laptop}}</td>
+                        <td>{{ $a -> komputer}}</td>
+                        <td>{{ $a -> printer}}</td>
+                        <td>{{ $a -> fotocopy}}</td>
+                        <td>{{ $a -> faximili}}</td>
+                        <td>{{ $a -> LCD}}</td>
+                        <td>{{ $a -> TV}}</td>
+                        <td>{{ $a -> lain}}</td>
+                        <td>{{ $a -> furniture}}</td>
+                        <td>{{ $a -> roda_dua}}</td>
+                        <td>{{ $a -> roda_empat}}</td>
+                        <td>{{ $a -> roda_enam}}</td>
+
+                        <td style="display: flex; justify-content:center">
+                            <button type="button" class="edit"
+                                id="edit_item" 
+                                data-toggle="modal" 
+                                data-target="#edit-modal"
+                                data-id="{{ $a->id }}"
+                                data-unit="{{ $a->unit }}"
+                                data-tahun_anggaran="{{ $a->tahun_anggaran }}"
+                                data-laptop="{{ $a->laptop }}"
+                                data-komputer="{{ $a->komputer }}"
+                                data-printer="{{ $a->printer }}"
+                                data-fotocopy="{{ $a->fotocopy }}"
+                                data-faximili="{{ $a->faximili }}"
+                                data-LCD="{{ $a->LCD }}"
+                                data-TV="{{ $a->TV }}"
+                                data-lain="{{ $a->lain }}"
+                                data-furniture="{{ $a->furniture }}"
+                                data-roda_dua="{{ $a->roda_dua }}"
+                                data-roda_empat="{{ $a->roda_empat }}"
+                                data-roda_enam="{{ $a->roda_enam }}"
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="17" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
+
             </tbody>
+
         </table>
 
     </div>

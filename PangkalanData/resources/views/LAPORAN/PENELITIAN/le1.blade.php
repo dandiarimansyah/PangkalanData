@@ -14,7 +14,7 @@
 
   <div class="wrapper">
       <div class="form">
-
+<!-- 
       <div class="inputfield-select">
             <label>Berdasarkan Unit/Satuan Kerja</label>
             <div class="custom_select" style="width: 520px">
@@ -57,52 +57,52 @@
                 <option value="">Kantor Bahasa Bengkulu</option>
               </select>
             </div>
-        </div> 
+        </div>  -->
 
         <div class="inputfield-select">
             <label>Berdasarkan Tahun</label>
             <div class="custom_select">
-              <select>
-                <option value="">[SEMUA]</option>
-                <option value="">2000</option>
-                <option value="">2001</option>
-                <option value="">2002</option>
-                <option value="">2003</option>
-                <option value="">2004</option>
-                <option value="">2005</option>
-                <option value="">2006</option>
-                <option value="">2007</option>
-                <option value="">2008</option>
-                <option value="">2009</option>
-                <option value="">2010</option>
-                <option value="">2011</option>
-                <option value="">2012</option>
-                <option value="">2013</option>
-                <option value="">2014</option>
-                <option value="">2015</option>
-                <option value="">2016</option>
-                <option value="">2017</option>
-                <option value="">2018</option>
-                <option value="">2019</option>
-                <option value="">2020</option>
-                <option value="">2021</option>
+              <select name="tahun_terbit">
+                <option value="semua">[SEMUA]</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
               </select>
             </div>
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Judul</label>
-            <input type="text" class="input">
+            <input name="judul" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Peneliti</label>
-            <input type="text" class="input">
+            <input name="peneliti" type="text" class="input">
         </div> 
         
         <div class="inputfield">
             <label>Berdasarkan Abstrak</label>
-            <input type="text" class="input">
+            <input name="abstrak" type="text" class="input">
         </div> 
         
 

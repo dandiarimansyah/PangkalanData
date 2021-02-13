@@ -15,7 +15,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <div class="inputfield-select">
+      <!-- <div class="inputfield-select">
             <label>Berdasarkan Unit/Satuan Kerja</label>
             <div class="custom_select" style="width: 520px">
               <select>
@@ -57,38 +57,37 @@
                 <option value="">Kantor Bahasa Bengkulu</option>
               </select>
             </div>
-        </div> 
+        </div>  -->
 
         <div class="inputfield-select">
             <label>Berdasarkan Kategori</label>
             <div class="custom_select">
-              <select>
-                <option value="">[SEMUA]</option>
-                <option value="">Bahasa</option>
-                <option value="">Sastra</option>
+              <select name="info_produk">
+                <option disabled="disabled" selected="selected" value="">--Pilih Info--</option>
+                <option value="Produk Pusat">Produk Pusat</option>
+                <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
+                <option value="Produk Luar">Produk Luar</option>
               </select>
-            </div>
         </div>  
 
         <div class="inputfield">
             <label>Berdasarkan Judul</label>
-            <input type="text" class="input">
+            <input name="judul" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Penulis</label>
-            <input type="text" class="input">
+            <input name="penulis" type="text" class="input">
         </div> 
 
         <div class="inputfield-select">
             <label>Berdasarkan Info Produk</label>
             <div class="custom_select">
-              <select>
-                <option value="">[SEMUA]</option>
-                <option value="">Produk Pusat dan Balai/Kantor</option>
-                <option value="">Produk Pusat</option>
-                <option value="">Produk Balai/Kantor</option>
-                <option value="">Produk Luar</option>  
+              <select name="info_produk">
+                <option disabled="disabled" selected="selected" value="">--Pilih Info--</option>
+                <option value="Produk Pusat">Produk Pusat</option>
+                <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
+                <option value="Produk Luar">Produk Luar</option>
               </select>
             </div>
         </div>  

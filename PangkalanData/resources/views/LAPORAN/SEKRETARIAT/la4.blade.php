@@ -27,7 +27,7 @@
             </div>
         </div> 
 
-        <div class="inputfield-select">
+        <!-- <div class="inputfield-select">
             <label>Berdasarkan Unit/Satuan Kerja</label>
             <div class="custom_select">
               <select>
@@ -70,11 +70,11 @@
                 <option value="">Kantor Bahasa Bengkulu</option>
               </select>
             </div>
-        </div> 
+        </div>  -->
 
         <div class="inputfield">
             <label>Berdasarkan Perihal</label>
-            <input type="text" class="input">
+            <input name="perihal" type="text" class="input">
         </div> 
         
         <div class="tombol">

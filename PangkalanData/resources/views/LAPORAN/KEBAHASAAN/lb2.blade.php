@@ -15,7 +15,7 @@
   <div class="wrapper">
       <div class="form">
 
-      <div class="inputfield-select">
+      <!-- <div class="inputfield-select">
             <label>Berdasarkan Unit/Satuan Kerja</label>
             <div class="custom_select" style="width: 520px">
               <select>
@@ -57,18 +57,17 @@
                 <option value="">Kantor Bahasa Bengkulu</option>
               </select>
             </div>
-        </div> 
+        </div>  -->
 
         <div class="inputfield-select">
             <label>Berdasarkan Kategori</label>
             <div class="custom_select">
-              <select>
-                <option value="">[SEMUA]</option>
-                <option value="">KAMUS</option>
-                <option value="">ENSIKLOPEDIA</option>
-                <option value="">TESAURUS</option>
-                <option value="">GLOSARIUM</option>
-                <option value="">LEMA</option>  
+              <select name="kategori">
+                <option value="KAMUS">KAMUS</option>
+                <option value="ENSIKLOPEDIA">ENSIKLOPEDIA</option>
+                <option value="TESAURUS">TESAURUS</option>
+                <option value="GLOSARIUM">GLOSARIUM</option>
+                <option value="LEMA">LEMA</option>
               </select>
             </div>
         </div>  
@@ -76,24 +75,23 @@
         <div class="inputfield-select">
             <label>Berdasarkan Info Produk</label>
             <div class="custom_select">
-              <select>
-                <option value="">[SEMUA]</option>
-                <option value="">Produk Pusat dan Balai/Kantor</option>
-                <option value="">Produk Pusat</option>
-                <option value="">Produk Balai/Kantor</option>
-                <option value="">Produk Luar</option>  
+              <select name="info_produk">
+                <option disabled="disabled" selected="selected" value="">--Pilih Info--</option>
+                <option value="Produk Pusat">Produk Pusat</option>
+                <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
+                <option value="Produk Luar">Produk Luar</option>
               </select>
             </div>
         </div>  
 
         <div class="inputfield">
             <label>Berdasarkan Judul</label>
-            <input type="text" class="input">
+            <input name="judul" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Tim Redaksi</label>
-            <input type="text" class="input">
+            <input name="tim_redaksi" type="text" class="input">
         </div> 
         
         <div class="tombol">
