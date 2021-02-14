@@ -150,6 +150,10 @@ class LaporanController extends Controller
     }
     public function tampil_la2(Request $request)
     {
+        $request->validate([
+            'tahun_anggaran' => ['nullable', 'numeric'],
+        ]);
+
         if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
             $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
                 ->get();
@@ -423,6 +427,10 @@ class LaporanController extends Controller
     }
     public function tampil_lb6(Request $request)
     {
+        $request->validate([
+            'tahun' => ['nullable', 'numeric'],
+        ]);
+
         if ($request->kategori == '' and $request->tahun == '' and $request->deskripsi == '') {
             $data = Penghargaan_Bahasa::all();
         } elseif ($request->kategori != '' and $request->tahun == '' and $request->deskripsi == '') {
@@ -456,6 +464,10 @@ class LaporanController extends Controller
     }
     public function tampil_lb7(Request $request)
     {
+        $request->validate([
+            'tahun' => ['nullable', 'numeric'],
+        ]);
+
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Duta_Nasional::where('provinsi', $request->provinsi)
                 ->get();
@@ -487,6 +499,10 @@ class LaporanController extends Controller
     }
     public function tampil_lb8(Request $request)
     {
+        $request->validate([
+            'tahun' => ['nullable', 'numeric'],
+        ]);
+
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Duta_Provinsi::where('provinsi', $request->provinsi)
                 ->get();
@@ -541,6 +557,10 @@ class LaporanController extends Controller
     }
     public function tampil_lc2(Request $request)
     {
+        $request->validate([
+            'tahun' => ['nullable', 'numeric'],
+        ]);
+
         if ($request->kategori == '' and $request->tahun == '' and $request->deskripsi == '') {
             $data = Penghargaan_Sastra::all();
         } elseif ($request->kategori != '' and $request->tahun == '' and $request->deskripsi == '') {
@@ -574,6 +594,10 @@ class LaporanController extends Controller
     }
     public function tampil_lc3(Request $request)
     {
+        $request->validate([
+            'tahun' => ['nullable', 'numeric'],
+        ]);
+        
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Musikalisasi_Puisi_Nasional::all();
         } else if ($request->tahun != '' and $request->pemenang == '') {
@@ -595,6 +619,10 @@ class LaporanController extends Controller
     }
     public function tampil_lc4(Request $request)
     {
+        $request->validate([
+            'tahun' => ['nullable', 'numeric'],
+        ]);
+
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
                 ->get();
@@ -706,6 +734,10 @@ class LaporanController extends Controller
     //LAPORAN S 5
     public function tampil_le1(Request $request)
     {
+        $request->validate([
+            'tahun_terbit' => ['nullable', 'numeric'],
+        ]);
+
         if ($request->tahun_terbit == '' and $request->judul == '' and $request->peneliti == '' and $request->abstrak == '') {
             $data = Penelitian::all();
         } elseif ($request->tahun_terbit != '' and $request->judul != '' and $request->peneliti != '' and $request->abstrak != '') {

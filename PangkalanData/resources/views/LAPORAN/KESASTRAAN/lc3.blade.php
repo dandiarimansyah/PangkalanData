@@ -17,6 +17,7 @@
           <form action="{{ URL('/laporan/kesastraan/musikalisasi_puisi_nasional/tampil')}}" method="GET">
             @csrf
 
+            <div class="alert-danger">{{ $errors->first('tahun') }}</div>
             <div class="inputfield-kecil">
               <label>Berdasarkan Tahun</label>
               <input name="tahun" type="text" class="input">
