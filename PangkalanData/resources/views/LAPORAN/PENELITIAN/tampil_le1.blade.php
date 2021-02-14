@@ -69,23 +69,7 @@
                         <td>{{ $a -> publikasi}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
                         <!-- <td>{{ $a -> media}}</td> -->
-                        <td style="display: flex; justify-content:center;">
-                           <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"                                data-unit="{{ $a->unit }}"
-                                data-peneliti="{{ $a->peneliti }}"
-                                data-judul="{{ $a->judul }}"
-                                data-kerja_sama="{{ $a->kerja_sama }}"
-                                data-tanggal_awal="{{ $a->tanggal_awal }}"
-                                data-tanggal_akhir="{{ $a->tanggal_akhir }}"
-                                data-lama_penelitian="{{ $a->lama_penelitian }}"
-                                data-tipe_waktu="{{ $a->tipe_waktu }}"
-                                data-publikasi="{{ $a->publikasi }}"
-                                data-tahun_terbit="{{ $a->tahun_terbit }}"
-                                data-abstrak="{{ $a->abstrak }}"
-                        </td>
+
                     </tr>
                 @empty
                     <tr>

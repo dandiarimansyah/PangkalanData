@@ -36,7 +36,9 @@
             <label>Asal Provinsi*</label>
             <div class="custom_select">
               <select name="provinsi">
-                <option disabled="disabled" selected="selected" value="">-- Pilih Kategori --</option>
+                <option value="Jawa Tengah">Jawa Tengah</option>
+
+                {{-- <option value="">[SEMUA]</option>
                 <option value="Aceh">Aceh</option>
                 <option value="Sumatera Utara">Sumatera Utara</option>
                 <option value="Sumatera Barat">Sumatera Barat</option>
@@ -49,8 +51,8 @@
                 <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
                 <option value="DKI Jakarta">DKI Jakarta</option>
                 <option value="Jawa Barat">Jawa Barat</option>
-                <option value="Banten">Banten</option>
                 <option value="Jawa Tengah">Jawa Tengah</option>
+                <option value="Banten">Banten</option>
                 <option value="Daerah Istimewa Yogyakarta">Daerah Istimewa Yogyakarta</option>
                 <option value="Jawa Timur">Jawa Timur</option>
                 <option value="Kalimantan Barat">Kalimantan Barat</option>
@@ -69,7 +71,7 @@
                 <option value="Maluku Utara">Maluku Utara</option>
                 <option value="Papua Barat">Papua Barat</option>
                 <option value="Papua">Papua</option>
-                <option value="Kalimantan Utara">Kalimantan Utara</option>
+                <option value="Kalimantan Utara">Kalimantan Utara</option> --}}
               </select>
             </div>
         </div> 

@@ -42,7 +42,6 @@
             <label>Provinsi*</label>
             <div class="custom_select">
               <select name="provinsi">
-                <option disabled="disabled" selected="selected" value="">-- Pilih Provinsi--</option>
                 <option value="Jawa Tengah">Jawa Tengah</option>
               </select>
             </div>

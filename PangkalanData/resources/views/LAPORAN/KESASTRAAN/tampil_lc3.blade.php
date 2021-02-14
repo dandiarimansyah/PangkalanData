@@ -50,19 +50,6 @@
                         <td>{{ $a -> keterangan}}</td>
                         <!-- <td></td> -->
 
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-tahun="{{ $a->tahun }}"
-                                data-pemenang_1="{{ $a->pemenang_1 }}"
-                                data-pemenang_2="{{ $a->pemenang_2 }}"
-                                data-pemenang_3="{{ $a->pemenang_3 }}"
-                                data-favorit="{{ $a->favorit }}"
-                                data-keterangan="{{ $a->keterangan }}"
-                        </td>
                     </tr>
                 @empty
                     <tr>

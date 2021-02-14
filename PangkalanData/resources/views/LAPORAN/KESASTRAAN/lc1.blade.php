@@ -17,18 +17,6 @@
             <form action="{{ URL('/laporan/kesastraan/bengkel_sastra_dan_bahasa/tampil')}}" method="GET">
             @csrf
 
-        <div class="inputfield-select">
-            <label>Berdasarkan Kategori</label>
-            <div class="custom_select">
-                <select>
-                <option value="">[SEMUA]</option>
-                <option value="">BENGKEL BAHASA</option>
-                <option value="">BENGKEL SASTRA</option>
-                </select>
-            </div>
-        </div> 
-
-
         <!-- <div class="inputfield-select">
             <label>Berdasarkan Unit/Satuan Kerja</label>
             <div class="custom_select" style="width: 520px">

@@ -21,7 +21,7 @@
             <label>Berdasarkan Provinsi</label>
             <div class="custom_select">
               <select name="provinsi">
-                <option disabled="disabled" selected="selected" value="">-- Pilih Provinsi--</option>
+                <option value="Jawa Tengah">Jawa Tengah</option>
                 <!-- <option value="">[Semua Provinsi]</option> -->
                 <!-- <option value="">Aceh</option>
                 <option value="">Sumatera Utara</option>
@@ -36,7 +36,6 @@
                 <option value="">DKI Jakarta</option>
                 <option value="">Jawa Barat</option>
                 <option value="">Banten</option> -->
-                <option value="Jawa Tengah">Jawa Tengah</option>
                 <!-- <option value="">Daerah Istimewa Yogyakarta</option>
                 <option value="">Jawa Timur</option>
                 <option value="">Kalimantan Barat</option>
@@ -61,8 +60,8 @@
         </div> 
 
         <div class="inputfield-select">
-            <label>Berdasarkan Nama</label>
-            <div class="custom_select">
+          <label>Berdasarkan Kabupaten/Kota</label>
+          <div class="custom_select">
               <select name="kota">
                 <option disabled="disabled" selected="selected" value="">-- Pilih Kabupaten/Kota--</option>
                 <option value="Kabupaten Cilacap">Kabupaten Cilacap</option>
@@ -105,8 +104,8 @@
         </div> 
 
         <div class="inputfield">
-            <label>Berdasarkan Nama</label>
-            <input name="nama_komunitas" type="text" class="input">
+          <label>Berdasarkan Nama Komunitas</label>
+          <input name="nama_komunitas" type="text" class="input">
         </div> 
 
         <div class="inputfield">

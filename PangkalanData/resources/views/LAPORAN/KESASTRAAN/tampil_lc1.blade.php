@@ -68,26 +68,6 @@
                         <td>{{ $a -> jumlah_sekolah_yang_dibina}}</td>
                         <td>{{ $a -> nama_sekolah_yang_dibina}}</td>
                         <td>{{ $a -> aktivitas}}</td>
-
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-provinsi="{{ $a->provinsi }}"
-                                data-kota="{{ $a->kota }}"
-                                data-nama_kegiatan="{{ $a->nama_kegiatan }}"
-                                data-tanggal_awal_pelaksanaan="{{ $a->tanggal_awal_pelaksanaan }}"
-                                data-tanggal_akhir_pelaksanaan="{{ $a->tanggal_akhir_pelaksanaan }}"
-                                data-pemateri="{{ $a->pemateri }}"
-                                data-jumlah_peserta="{{ $a->jumlah_peserta }}"
-                                data-jumlah_sekolah="{{ $a->jumlah_sekolah }}"
-                                data-jumlah_sekolah_yang_dibina="{{ $a->jumlah_sekolah_yang_dibina }}"
-                                data-nama_sekolah_yang_dibina="{{ $a->nama_sekolah_yang_dibina }}"
-                                data-aktivitas="{{ $a->aktivitas }}"
-                                data-media="{{ $a->media }}"
-                        </td>
                     </tr>
                 @empty
                     <tr>

@@ -21,7 +21,6 @@
             <label>Berdasarkan Provinsi</label>
             <div class="custom_select">
               <select name="provinsi">
-                <option disabled="disabled" selected="selected" value="">-- Pilih Provinsi--</option>
                 <option value="Jawa Tengah">Jawa Tengah</option>
                 <!-- <option value="">[Semua Provinsi]</option>
                 <option value="">Aceh</option>
@@ -106,7 +105,7 @@
         </div> 
 
         <div class="inputfield">
-            <label>Berdasarkan Nama</label>
+            <label>Berdasarkan Nama Komunitas</label>
             <input name="nama_komunitas" type="text" class="input">
         </div> 
 
