@@ -23,7 +23,7 @@
                     <th rowspan="2">KONDISI</th>
                     <th rowspan="2">STATUS PEMEROLEHAN</th>
                     <th rowspan="2">KETERANGAN</th>
-                    <th rowspan="2">MEDIA</th>
+                    <!-- <th rowspan="2">MEDIA</th> -->
                 </tr>
                 <tr>
                     <th>STATUS</th>
@@ -48,7 +48,7 @@
                       <td>{{ $a -> kondisi}}</td>
                       <td>{{ $a -> status_peroleh}}</td>
                       <td>{{ $a -> keterangan}}</td>
-                      <td></td>
+                      <!-- <td></td> -->
                   </tr>
               @empty
                   <tr>

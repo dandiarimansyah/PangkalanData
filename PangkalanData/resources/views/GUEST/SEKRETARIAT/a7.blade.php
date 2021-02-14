@@ -45,7 +45,7 @@
                         <td>{{ $key + 1}}</td>
                         <td></td>
                         <td>{{ $a -> unit}}</td>
-                        <td></td>
+                        <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> laptop}}</td>
                         <td>{{ $a -> komputer}}</td>
                         <td>{{ $a -> printer}}</td>

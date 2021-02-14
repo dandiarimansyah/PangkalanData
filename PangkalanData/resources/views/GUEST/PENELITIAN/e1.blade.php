@@ -26,7 +26,7 @@
                     <th>LAMA PENELITIAN</th>
                     <th>PUBLIKASI</th>
                     <th>TAHUN TERBIT</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                 </tr>
             </thead>
 
@@ -40,11 +40,12 @@
                         <td>{{ $a -> unit}}</td>
                         <td>{{ $a -> judul}}</td>
                         <td>{{ $a -> peneliti}}</td>
+                        <td></td>
                         <td>{{ $a -> abstrak}}</td>
                         <td>{{ $a -> lama_penelitian}}</td>
                         <td>{{ $a -> publikasi}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
-                        <td>{{ $a -> file}}</td>
+                        <!-- <td>{{ $a -> file}}</td> -->
                     </tr>
                 @empty
                     <tr>

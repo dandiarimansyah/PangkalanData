@@ -24,7 +24,7 @@
                     <th>DESKRIPSI FISIK</th>
                     <th>UNIT/SATKER</th>
                     <th>INFO PRODUK</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                 </tr>
             </thead>
 
@@ -40,7 +40,7 @@
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> deskripsi}}</td>
                         <td>{{ $a -> info_produk}}</td>
-                        <td></td>
+                        <!-- <td></td> -->
                         <td></td>
                     </tr>
                 @empty

@@ -21,21 +21,7 @@
     </div>
 
     <div class="judul">
-        <th>FORUM INTERNAL</th>
-    </div>
-
-    <div class="menu" style="display:flex; justify-content:center; margin-top:3px;">
-        <div class="btn-group kategori">
-            <a href="/forum/internal" type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                Komentar/Saran Anda
-            </a>
-        </div>
-
-        <div class="btn-group kategori">
-            <button type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                Grafik Aktivitas Pengguna
-            </button>
-        </div>
+        <th>KONTAK ADMIN</th>
     </div>
 
     <div class="wrapper">

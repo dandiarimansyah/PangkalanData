@@ -24,7 +24,7 @@
                     <th>SASARAN</th>
                     <th>JUMLAH</th>
                     <th>MATERI</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                 </tr>
             </thead>
 
@@ -41,7 +41,7 @@
                         <td>{{ $a -> sasaran}}</td>
                         <td>{{ $a -> jumlah_peserta}}</td>
                         <td>{{ $a -> materi}}</td>
-                        <td></td>
+                        <!-- <td></td> -->
                     </tr>
                 @empty
                     <tr>

@@ -22,7 +22,7 @@
                     <th>PEMENANG II</th>
                     <th>PEMENANG III</th>
                     <th>KETERANGAN</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                 </tr>
             </thead>
 
@@ -37,7 +37,7 @@
                         <td>{{ $a -> pemenang_2_1}} <br> {{ $a -> pemenang_2_2}}</td>
                         <td>{{ $a -> pemenang_3_1}} <br> {{ $a -> pemenang_3_2}}</td>
                         <td>{{ $a -> keterangan}}</td>
-                        <td></td>
+                        <!-- <td></td> -->
                     </tr>
                 @empty
                     <tr>
