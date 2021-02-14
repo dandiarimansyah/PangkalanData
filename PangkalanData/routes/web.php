@@ -450,4 +450,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/grafik/komunitas/komunitas_bahasa_dan_sastra', [GrafikController::class, 'gd1']);
     //GRAFIK S 5
     Route::get('/grafik/penelitian/penelitian', [GrafikController::class, 'ge1']);
+
+    ////========================================== FORUM ===================
+     //FORUM INTERNAL
+     Route::get('/forum/internal', [ForumController::class, 'f1']);
+     //FORUM KONTAK ADMIN
+     Route::get('/forum/kontak_admin', [ForumController::class, 'f2']);
 });
