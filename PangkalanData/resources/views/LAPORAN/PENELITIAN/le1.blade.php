@@ -61,6 +61,7 @@
             </div>
         </div>  -->
 
+        <div class="alert-danger">{{ $errors->first('tahun_terbit') }}</div>
         <div class="inputfield-kecil">
           <label>Berdasarkan Tahun</label>
           <input name="tahun_terbit" type="text" class="input">

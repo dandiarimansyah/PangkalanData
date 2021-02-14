@@ -30,10 +30,11 @@
             </div>
         </div> 
 
+        <div class="alert-danger">{{ $errors->first('tahun') }}</div>
         <div class="inputfield-kecil">
           <label>Berdasarkan Tahun</label>
           <input name="tahun" type="text" class="input">
-      </div> 
+        </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Deskripsi</label>
