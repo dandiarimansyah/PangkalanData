@@ -51,22 +51,7 @@
                         <td>{{ $a -> deskripsi}}</td>
                         <td>Balai Bahasa Jawa Tengah</td>
                         <td>{{ $a -> info_produk}}</td>
-                        
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-kategori="{{ $a->kategori }}"
-                                data-judul="{{ $a->judul }}"
-                                data-penulis="{{ $a->penulis }}"
-                                data-no_isbn="{{ $a->no_isbn }}"
-                                data-tahun_terbit="{{ $a->tahun_terbit }}"
-                                data-deskripsi="{{ $a->deskripsi }}"
-                                data-info_produk="{{ $a->info_produk }}"
-                         
-                        </td>
+
                     </tr>
                 @empty
                     <tr>

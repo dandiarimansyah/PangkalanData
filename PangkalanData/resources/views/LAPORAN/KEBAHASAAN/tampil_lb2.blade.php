@@ -57,24 +57,6 @@
                       <td>Balai Bahasa Jawa Tengah</td>
                       <!-- <td>{{ $a -> tahun_terbit}}</td> -->
                       <td>{{ $a -> info_produk}}</td>
-
-                      <td style="display: flex; justify-content:center">
-                        <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-kategori="{{ $a->kategori }}"
-                                data-judul="{{ $a->judul }}"
-                                data-tim_redaksi="{{ $a->tim_redaksi }}"
-                                data-volume="{{ $a->volume }}"
-                                data-no_issn="{{ $a->no_issn }}"
-                                data-lingkup="{{ $a->lingkup }}"
-                                data-penerbit="{{ $a->penerbit }}"
-                                data-tahun_terbit="{{ $a->tahun_terbit }}"
-                                data-keterangan="{{ $a->keterangan }}"
-                                data-info_produk="{{ $a->info_produk }}"
-                      </td>
                   </tr>
               @empty
                   <tr>

@@ -33,22 +33,22 @@
 
       <div class="inputfield">
           <label>Provinsi</label>
-          <input readonly name="kota" type="text" value="{{$penyuluhan->provinsi}}" class="input">
+          <input readonly type="text" value="{{$penyuluhan->provinsi}}" class="input">
       </div> 
 
       <div class="inputfield">
           <label>Kabupaten/Kota</label>
-          <input readonly name="kota" type="text" value="{{$penyuluhan->kota}}" class="input">
+          <input readonly type="text" value="{{$penyuluhan->kota}}" class="input">
       </div> 
 
       <div class="inputfield">
           <label>Tgl Kegiatan</label>
-          <input readonly name="kota" type="text" value="{{$penyuluhan->tanggal_awal}} s.d. {{$penyuluhan->tanggal_akhir}}" class="input">
+          <input readonly type="text" value="{{$penyuluhan->tanggal_awal}} s.d. {{$penyuluhan->tanggal_akhir}}" class="input">
       </div> 
 
       <div class="inputfield">
           <label>Kegiatan</label>
-          <input readonly name="kota" type="text" value="{{$penyuluhan->nama_kegiatan}}" class="input">
+          <input readonly type="text" value="{{$penyuluhan->nama_kegiatan}}" class="input">
       </div> 
 
       <div class="alert-danger">{{ $errors->first('nama') }}</div>

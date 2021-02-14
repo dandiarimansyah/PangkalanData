@@ -100,6 +100,10 @@
             $('span').toggleClass("cancel");
             });
 
+            function back() {
+                window.history.back();
+            }
+
 
             $('#valid').click(function() {
                 if ($(this).prop('checked')) {

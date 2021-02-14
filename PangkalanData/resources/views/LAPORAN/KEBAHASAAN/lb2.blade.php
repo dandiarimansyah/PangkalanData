@@ -62,17 +62,14 @@
         </div>  -->
 
         <div class="inputfield-select">
-            <label>Berdasarkan Kategori</label>
-            <div class="custom_select">
-              <select name="kategori">
-                <option value="KAMUS">KAMUS</option>
-                <option value="ENSIKLOPEDIA">ENSIKLOPEDIA</option>
-                <option value="TESAURUS">TESAURUS</option>
-                <option value="GLOSARIUM">GLOSARIUM</option>
-                <option value="LEMA">LEMA</option>
-              </select>
-            </div>
-        </div>  
+          <label>Kategori*</label>
+          <div class="custom_select">
+            <select name="kategori">
+              <option value="JURNAL">JURNAL</option>
+              <option value="MAJALAH">MAJALAH</option>
+            </select>
+          </div>
+      </div>  
         
         <div class="inputfield-select">
             <label>Berdasarkan Info Produk</label>

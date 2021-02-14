@@ -21,10 +21,10 @@
         <div class="inputfield-select">
             <label>Berdasarkan Kategori</label>
             <div class="custom_select">
-              <select>
-                <option value="">[SEMUA]</option>
-                <option value="">Internal</option>
-                <option value="">Eksternal</option>
+              <select name="kategori">
+                <option value="semua">[SEMUA]</option>
+                <option value="internal">Internal</option>
+                <option value="eksternal">Eksternal</option>
               </select>
             </div>
         </div> 

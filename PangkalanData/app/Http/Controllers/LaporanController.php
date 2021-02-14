@@ -161,17 +161,23 @@ class LaporanController extends Controller
     }
     public function tampil_la4(Request $request)
     {
+        if ($request->kategori == 'semua' and $request->perihal == '') {
+            $data = Kerja_Sama::all();
+        } else {
+            $data = Kerja_Sama::where('perihal', $request->perihal)
+                ->orWhere('kategori', $request->kategori)
+                ->get();
+        }
+
         return view('LAPORAN.SEKRETARIAT.tampil_la4', compact('data'));
     }
     public function tampil_la5(Request $request)
     {
         if ($request->status_tanah == 'semua' and $request->status_bangunan == 'semua') {
             $data = Tanah_Bangunan::all();
-        } elseif ($request->status_tanah == 'semua') {
-            $data = Tanah_Bangunan::where('status_bangunan', $request->status_bangunan)
-                ->get();
-        } elseif ($request->status_bangunan == 'semua') {
+        } else if ($request->status_tanah == 'semua' or $request->status_bangunan == 'semua') {
             $data = Tanah_Bangunan::where('status_tanah', $request->status_tanah)
+                ->orWhere('status_bangunan', $request->status_bangunan)
                 ->get();
         } else {
             $data = Tanah_Bangunan::where('status_tanah', $request->status_tanah)
@@ -192,18 +198,64 @@ class LaporanController extends Controller
     //LAPORAN S 2
     public function tampil_lb1(Request $request)
     {
-        if ($request->kategori == 'semua' and $request->info_produk == 'semua') {
-            $data = Kamus::where('unit', $request->unit)
+        // $j = $request->judul;
+        // $t = $request->tim_redaksi;
+        // $i = $request->info_produk;
+
+        // if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '') {
+        //     $data = Kamus::where('kategori', $request->kategori)
+        //         ->get();
+        // } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '') {
+        //     $data = Kamus::where('kategori', $request->kategori)
+        //         ->where('info_produk', $request->info_produk)
+        //         ->where('judul', $request->judul)
+        //         ->where('tim_redaksi', $request->tim_redaksi)
+        //         ->get();
+        // } else {
+        //     $data = Kamus::where('kategori', $request->kategori)
+        //         ->where(function ($query) use ($j, $t, $i) {
+        //             $query->where('judul', $j)
+        //                 ->orWhere('tim_redaksi', $t)
+        //                 ->orWhere('info_produk', $i);
+        //         })
+        //         ->get();
+        // }
+
+        if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '') {
+            $data = Kamus::where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->status_tanah == 'semua') {
-            $data = Kamus::where('info_produk', $request->info_produk)
-                ->get();
-        } elseif ($request->info_produk == 'semua') {
-            $data = Kamus::where('status_tanah', $request->status_tanah)
-                ->get();
-        } else {
-            $data = Kamus::where('status_tanah', $request->status_tanah)
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi == '') {
+            $data = Kamus::where('kategori', $request->kategori)
                 ->where('info_produk', $request->info_produk)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul != '' and $request->tim_redaksi == '') {
+            $data = Kamus::where('kategori', $request->kategori)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi != '') {
+            $data = Kamus::where('kategori', $request->kategori)
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi == '') {
+            $data = Kamus::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi != '') {
+            $data = Kamus::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul != '' and $request->tim_redaksi != '') {
+            $data = Kamus::where('kategori', $request->kategori)
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '') {
+            $data = Kamus::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('judul', $request->judul)
+                ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
         }
 
@@ -211,10 +263,84 @@ class LaporanController extends Controller
     }
     public function tampil_lb2(Request $request)
     {
+        if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '') {
+            $data = Jurnal::where('kategori', $request->kategori)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi == '') {
+            $data = Jurnal::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul != '' and $request->tim_redaksi == '') {
+            $data = Jurnal::where('kategori', $request->kategori)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi != '') {
+            $data = Jurnal::where('kategori', $request->kategori)
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi == '') {
+            $data = Jurnal::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi != '') {
+            $data = Jurnal::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul != '' and $request->tim_redaksi != '') {
+            $data = Jurnal::where('kategori', $request->kategori)
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '') {
+            $data = Jurnal::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('judul', $request->judul)
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->get();
+        }
         return view('LAPORAN.KEBAHASAAN.tampil_lb2', compact('data'));
     }
     public function tampil_lb3(Request $request)
     {
+        if ($request->info_produk == '' and $request->judul == '' and $request->penulis == '') {
+            $data = Terbitan_Umum::where('kategori', $request->kategori)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis == '') {
+            $data = Terbitan_Umum::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul != '' and $request->penulis == '') {
+            $data = Terbitan_Umum::where('kategori', $request->kategori)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul == '' and $request->penulis != '') {
+            $data = Terbitan_Umum::where('kategori', $request->kategori)
+                ->where('penulis', $request->penulis)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis == '') {
+            $data = Terbitan_Umum::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis != '') {
+            $data = Terbitan_Umum::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('penulis', $request->penulis)
+                ->get();
+        } elseif ($request->info_produk == '' and $request->judul != '' and $request->penulis != '') {
+            $data = Terbitan_Umum::where('kategori', $request->kategori)
+                ->where('penulis', $request->penulis)
+                ->where('judul', $request->judul)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis != '') {
+            $data = Terbitan_Umum::where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->where('judul', $request->judul)
+                ->where('penulis', $request->penulis)
+                ->get();
+        }
         return view('LAPORAN.KEBAHASAAN.tampil_lb3', compact('data'));
     }
     public function tampil_lb4(Request $request)

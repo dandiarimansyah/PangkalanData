@@ -42,17 +42,6 @@
                         <td>{{ $a -> tahun}}</td>
                         <td>{{ $a -> deskripsi}}</td>
 
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-kategori="{{ $a->kategori }}"
-                                data-tahun="{{ $a->tahun }}"
-                                data-deskripsi="{{ $a->deskripsi }}"
-                                data-media="{{ $a->media }}"
-                        </td>
                     </tr>
                 @empty
                     <tr>

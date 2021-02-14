@@ -62,15 +62,14 @@
         </div>  -->
 
         <div class="inputfield-select">
-            <label>Berdasarkan Kategori</label>
-            <div class="custom_select">
-              <select name="info_produk">
-                <option disabled="disabled" selected="selected" value="">--Pilih Info--</option>
-                <option value="Produk Pusat">Produk Pusat</option>
-                <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
-                <option value="Produk Luar">Produk Luar</option>
-              </select>
-        </div>  
+          <label>Berdasarkan Kategori</label>
+          <div class="custom_select">
+            <select name="kategori">
+              <option value="Bahasa">Bahasa</option>
+              <option value="Sastra">Sastra</option>
+            </select>
+          </div>
+      </div> 
 
         <div class="inputfield">
             <label>Berdasarkan Judul</label>
