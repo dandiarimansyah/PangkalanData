@@ -45,7 +45,7 @@
                     @elseif (auth()->user()->level == 'validator')
                         <li class="{{ (request()->is('validator*')) ? 'aktif' : 'nonaktif' }}"><a href="/validator/validasi">VALIDASI</a></li>
                     @else
-                        <li class="{{ (request()->is('data*')) ? 'aktif' : '' }}"><a href="/data">DATA</a></li>
+                        <li class="{{ (request()->is('data*')) ? 'aktif' : 'nonaktif' }}"><a href="/data">DATA</a></li>
                     @endif
                     <li class="{{ (request()->is('media*')) ? 'aktif' : 'nonaktif' }}"><a href="/media">MEDIA</a></li>
                     <li class="{{ (request()->is('laporan*')) ? 'aktif' : 'nonaktif' }}"><a href="/laporan">LAPORAN</a></li>
