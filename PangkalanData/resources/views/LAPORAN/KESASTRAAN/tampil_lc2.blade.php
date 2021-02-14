@@ -17,6 +17,13 @@
         </div>
     @endif
 
+    <div class="tombol-kembali">
+        <button onclick="back()" type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+            Kembali
+        </button>
+    </div>
+
     <div class="judul">
         <th>LAPORAN DATA PENGHARGAAN SATRA</th>
     </div>
