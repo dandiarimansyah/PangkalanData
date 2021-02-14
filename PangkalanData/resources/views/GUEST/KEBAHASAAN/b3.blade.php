@@ -39,9 +39,9 @@
                         <td>{{ $a -> no_isbn}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> deskripsi}}</td>
+                        <td>Balai Bahasa Jawa Tengah</td>
                         <td>{{ $a -> info_produk}}</td>
                         <!-- <td></td> -->
-                        <td></td>
                     </tr>
                 @empty
                     <tr>
