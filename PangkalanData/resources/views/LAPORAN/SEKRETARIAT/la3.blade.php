@@ -104,42 +104,6 @@
                         <td>{{ $a -> T_1B}}</td>
                         <td>{{ $a -> T_1A}}</td>
                         
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-tanggal_diperbarui="{{ $a->tanggal_diperbarui }}"
-                                data-unit="{{ $a->unit }}"
-                                data-semua_kelamin="{{ $a->semua_kelamin }}"
-                                data-laki="{{ $a->laki }}"
-                                data-perempuan="{{ $a->perempuan }}"
-                                data-s3="{{ $a->S3 }}"
-                                data-S2="{{ $a->S2 }}"
-                                data-S1="{{ $a->S1 }}"
-                                data-D3="{{ $a->D3 }}"
-                                data-SMA="{{ $a->SMA }}"
-                                data-SMP="{{ $a->SMP }}"
-                                data-SD="{{ $a->SD }}"
-                                data-T_4E="{{ $a->T_4E }}"
-                                data-T_4D="{{ $a->T_4D }}"
-                                data-T_4C="{{ $a->T_4C }}"
-                                data-T_4B="{{ $a->T_4D }}"
-                                data-T_4A="{{ $a->T_4A }}"
-                                data-T_3D="{{ $a->T_3D }}"
-                                data-T_3C="{{ $a->T_3C }}"
-                                data-T_3B="{{ $a->T_3B }}"
-                                data-T_3A="{{ $a->T_3A }}"
-                                data-T_2D="{{ $a->T_2D }}"
-                                data-T_2C="{{ $a->T_2C }}"
-                                data-T_2B="{{ $a->T_2B }}"
-                                data-T_2A="{{ $a->T_2A }}"
-                                data-T_1D="{{ $a->T_1D }}"
-                                data-T_1C="{{ $a->T_1C }}"
-                                data-T_1B="{{ $a->T_1B }}"
-                                data-T_1A="{{ $a->T_1A }}"
-                        </td>
                     </tr>
                 @empty
                     <tr>

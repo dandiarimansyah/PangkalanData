@@ -78,27 +78,6 @@
                         <td>{{ $a -> roda_empat}}</td>
                         <td>{{ $a -> roda_enam}}</td>
 
-                        <td style="display: flex; justify-content:center">
-                            <button type="button" class="edit"
-                                id="edit_item" 
-                                data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"
-                                data-unit="{{ $a->unit }}"
-                                data-tahun_anggaran="{{ $a->tahun_anggaran }}"
-                                data-laptop="{{ $a->laptop }}"
-                                data-komputer="{{ $a->komputer }}"
-                                data-printer="{{ $a->printer }}"
-                                data-fotocopy="{{ $a->fotocopy }}"
-                                data-faximili="{{ $a->faximili }}"
-                                data-LCD="{{ $a->LCD }}"
-                                data-TV="{{ $a->TV }}"
-                                data-lain="{{ $a->lain }}"
-                                data-furniture="{{ $a->furniture }}"
-                                data-roda_dua="{{ $a->roda_dua }}"
-                                data-roda_empat="{{ $a->roda_empat }}"
-                                data-roda_enam="{{ $a->roda_enam }}"
-                        </td>
                     </tr>
                 @empty
                     <tr>
