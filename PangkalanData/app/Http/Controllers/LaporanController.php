@@ -135,6 +135,10 @@ class LaporanController extends Controller
     //LAPORAN S 1
     public function tampil_la1(Request $request)
     {
+        $request->validate([
+            'tahun_anggaran' => ['nullable', 'numeric'],
+        ]);
+
         if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
             $data = Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
                 ->get();
