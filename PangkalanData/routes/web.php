@@ -13,6 +13,7 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\EditController;
 use App\Http\Controllers\HapusController;
+use App\Http\Controllers\ExportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -432,6 +433,64 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/laporan/komunitas/komunitas_sastra/tampil', [LaporanController::class, 'tampil_ld2']);
     //TAMPIL LAPORAN S 5
     Route::get('/laporan/penelitian/penelitian/tampil', [LaporanController::class, 'tampil_le1']);
+
+    //PDF S 1
+    Route::get('/pdf/sekretariat/anggaran', [ExportController::class, 'pdf_a1']);
+    Route::get('/pdf/sekretariat/realisasi_anggaran', [ExportController::class, 'pdf_a2']);
+    Route::get('/pdf/sekretariat/kepegawaian', [ExportController::class, 'pdf_a3']);
+    Route::get('/pdf/sekretariat/kerja_sama', [ExportController::class, 'pdf_a4']);
+    Route::get('/pdf/sekretariat/tanah_dan_bangunan', [ExportController::class, 'pdf_a5']);
+    Route::get('/pdf/sekretariat/perpustakaan', [ExportController::class, 'pdf_a6']);
+    Route::get('/pdf/sekretariat/inventarisasi_bmn', [ExportController::class, 'pdf_a7']);
+    //PDF S 2
+    Route::get('/pdf/kebahasaan/kamus_ensiklopedia', [ExportController::class, 'pdf_b1']);
+    Route::get('/pdf/kebahasaan/jurnal_umum', [ExportController::class, 'pdf_b2']);
+    Route::get('/pdf/kebahasaan/terbitan_umum', [ExportController::class, 'pdf_b3']);
+    Route::get('/pdf/kebahasaan/penyuluhan', [ExportController::class, 'pdf_b4']);
+    Route::get('/pdf/kebahasaan/pesuluh', [ExportController::class, 'pdf_b5']);
+    Route::get('/pdf/kebahasaan/penghargaan_nasional', [ExportController::class, 'pdf_b6']);
+    Route::get('/pdf/kebahasaan/duta_bahasa_nasional', [ExportController::class, 'pdf_b7']);
+    Route::get('/pdf/kebahasaan/duta_bahasa_provinsi', [ExportController::class, 'pdf_b8']);
+    //PDF S 3
+    Route::get('/pdf/kesastraan/bengkel_sastra_dan_bahasa', [ExportController::class, 'pdf_c1']);
+    Route::get('/pdf/kesastraan/penghargaan_sastra', [ExportController::class, 'pdf_c2']);
+    Route::get('/pdf/kesastraan/musikalisasi_puisi_nasional', [ExportController::class, 'pdf_c3']);
+    Route::get('/pdf/kesastraan/musikalisasi_puisi_provinsi', [ExportController::class, 'pdf_c4']);
+    //PDF S 4
+    Route::get('/pdf/komunitas/komunitas_bahasa', [ExportController::class, 'pdf_d1']);
+    Route::get('/pdf/komunitas/komunitas_sastra', [ExportController::class, 'pdf_d2']);
+    //PDF S 5
+    Route::get('/pdf/penelitian/penelitian', [ExportController::class, 'pdf_e1']);
+
+    //EXCEL S 1
+    Route::get('/excel/sekretariat/anggaran', [ExportController::class, 'excel_a1']);
+    Route::post('/import/sekretariat/anggaran', [ExportController::class, 'import_a1']);
+
+    Route::get('/excel/sekretariat/realisasi_anggaran', [ExportController::class, 'excel_a2']);
+    Route::get('/excel/sekretariat/kepegawaian', [ExportController::class, 'excel_a3']);
+    Route::get('/excel/sekretariat/kerja_sama', [ExportController::class, 'excel_a4']);
+    Route::get('/excel/sekretariat/tanah_dan_bangunan', [ExportController::class, 'excel_a5']);
+    Route::get('/excel/sekretariat/perpustakaan', [ExportController::class, 'excel_a6']);
+    Route::get('/excel/sekretariat/inventarisasi_bmn', [ExportController::class, 'excel_a7']);
+    //EXCEL S 2
+    Route::get('/excel/kebahasaan/kamus_ensiklopedia', [ExportController::class, 'excel_b1']);
+    Route::get('/excel/kebahasaan/jurnal_umum', [ExportController::class, 'excel_b2']);
+    Route::get('/excel/kebahasaan/terbitan_umum', [ExportController::class, 'excel_b3']);
+    Route::get('/excel/kebahasaan/penyuluhan', [ExportController::class, 'excel_b4']);
+    Route::get('/excel/kebahasaan/pesuluh', [ExportController::class, 'excel_b5']);
+    Route::get('/excel/kebahasaan/penghargaan_nasional', [ExportController::class, 'excel_b6']);
+    Route::get('/excel/kebahasaan/duta_bahasa_nasional', [ExportController::class, 'excel_b7']);
+    Route::get('/excel/kebahasaan/duta_bahasa_provinsi', [ExportController::class, 'excel_b8']);
+    //EXCEL S 3
+    Route::get('/excel/kesastraan/bengkel_sastra_dan_bahasa', [ExportController::class, 'excel_c1']);
+    Route::get('/excel/kesastraan/penghargaan_sastra', [ExportController::class, 'excel_c2']);
+    Route::get('/excel/kesastraan/musikalisasi_puisi_nasional', [ExportController::class, 'excel_c3']);
+    Route::get('/excel/kesastraan/musikalisasi_puisi_provinsi', [ExportController::class, 'excel_c4']);
+    //EXCEL S 4
+    Route::get('/excel/komunitas/komunitas_bahasa', [ExportController::class, 'excel_d1']);
+    Route::get('/excel/komunitas/komunitas_sastra', [ExportController::class, 'excel_d2']);
+    //EXCEL S 5
+    Route::get('/excel/penelitian/penelitian', [ExportController::class, 'excel_e1']);
 
     ////========================================== GRAFIK ===================
     //GRAFIK S 1

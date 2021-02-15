@@ -16,16 +16,25 @@
         @endforeach
         </div>
     @endif
-    
-    <div class="tombol-kembali">
-        <button onclick="back()" type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
-            Kembali
-        </button>
-    </div>
 
     <div class="judul">
         <th>LAPORAN DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
+    </div>
+
+    <div class="judul" style="display:flex; justify-content:center">
+        <button onclick="back()" type="button" class="btn btn-secondary" style="border-radius: 5px; margin-right:15px; width: 130px">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+            KEMBALI
+        </button>
+        <a href="{{ url('/pdf/sekretariat/anggaran')}}" target="_blank" type="button" class="btn btn-info" style="border-radius: 5px;margin-right:15px;">
+            EXPORT KE PDF
+        </a>
+        <a href="{{ url('/excel/sekretariat/anggaran')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+            EXPORT KE EXCEL
+        </a>
+        <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+            IMPORT EXCEL
+        </button>
     </div>
 
     <!-- TABLE -->
@@ -61,5 +70,28 @@
 
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Import Data</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <form action="{{ url('/import/sekretariat/anggaran')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+                <div class="modal-body">
+                    <input name="file" type="file" required='required'>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-primary">Import</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
 
 @endsection
