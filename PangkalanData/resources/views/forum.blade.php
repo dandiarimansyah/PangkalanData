@@ -46,13 +46,28 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Pengguna/[Nama Lengkap]</th>
+                    <th>Pengguna</th>
+                    <th>Nama Lengkap</th>
                     <th>Unit/Satuan Kerja</th>
                     <th>Komentar/Saran</th>
                 </tr>
             </thead>
 
             <tbody>
+
+            @forelse ($forum as $key => $a)
+                    <tr>
+                        <td>{{ $key + 1}}</td>
+                        <td>{{ $a -> pengguna}}</td>
+                        <td>{{ $a -> lengkap}}</td>
+                        <td>{{ $a -> balai}}</td>
+                        <td>{{ $a -> saran}}</td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="16" align="center">Tidak ada Data</td>
+                    </tr>
+                @endforelse
 
             </tbody>
             

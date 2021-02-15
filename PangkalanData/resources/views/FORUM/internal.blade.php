@@ -26,12 +26,14 @@
         <th>KOMENTAR/SARAN</th>
     </div>
 
+    <form method="POST" id="media_form" role="form" action="/forum/internal" enctype="multipart/form-data">
+    @csrf
     <div class="wrapper">
       <div class="form">
 
         <div class="inputfield">
             <label>Nama Pengguna</label>
-            <input name="nama_pengguna" type="text" class="input">
+            <input name="pengguna" type="text" class="input">
         </div> 
 
         <div class="inputfield">
@@ -41,12 +43,12 @@
 
         <div class="inputfield">
             <label>Nama Lengkap</label>
-            <input name="nama_lengkap" type="text" class="input">
+            <input name="lengkap" type="text" class="input">
         </div> 
 
         <div class="inputfield">
             <label>Saran/Komentar</label>
-            <textarea name="saran_komentar" class="textarea"></textarea>
+            <textarea name="saran" class="textarea"></textarea>
         </div>  
 
         <div class="tombol">
@@ -54,7 +56,7 @@
           <input type="submit" value="Kirim" class="inputan">
         </div> 
 
-      </form>
+    </form>
         
       </div>
   </div>	
