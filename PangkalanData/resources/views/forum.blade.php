@@ -20,6 +20,8 @@
         </div>
     </div>
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>FORUM INTERNAL</th>
     </div>
@@ -58,6 +60,7 @@
 
     </div>
 
+</div>
     
 
 @endsection
