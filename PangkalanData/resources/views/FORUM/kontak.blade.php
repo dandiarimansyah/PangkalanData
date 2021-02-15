@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="menu">
+    <div class="menu">
         <!-- KATEGORI FORUM INTERNAL -->
         <div class="btn-group kategori">
             <a href="/forum" type="button" class="btn btn-warning"  aria-haspopup="true" aria-expanded="false">
@@ -19,6 +19,8 @@
             </a>
         </div>
     </div>
+
+<div class="isi-konten">
 
     <div class="judul">
         <th>KONTAK ADMIN</th>
@@ -56,5 +58,7 @@
         
       </div>
   </div>	
+
+</div>
 
 @endsection

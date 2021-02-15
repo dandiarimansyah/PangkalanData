@@ -5,10 +5,18 @@
 
 @section('content')
 
-    <div class="content">
-        <header>HALAMAN GRAFIK</header>
+@include('PARTIAL.MenuGrafik')
+
+<div class="isi-konten">
+
+    <div class="judul">
+        <th>DATA PENELITIAN</th>
     </div>
 
-@include('PARTIAL.MenuGrafik')
+    <div class="ketjudul" style="margin-top:0px ;">
+        <th>Jumlah: (ISIAN) Data</th>
+    </div>
+    
+</div>
 
 @endsection

@@ -7,4 +7,16 @@
 
 @include('PARTIAL.MenuGrafik')
 
+<div class="isi-konten">
+
+    <div class="judul">
+        <th>DATA JURNAL/MAJALAH</th>
+    </div>
+
+    <div class="ketjudul" style="margin-top:0px ;">
+        <th>Jumlah: (ISIAN) Data</th>
+    </div>
+
+</div>
+
 @endsection

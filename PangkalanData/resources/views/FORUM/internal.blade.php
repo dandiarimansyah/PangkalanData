@@ -20,6 +20,8 @@
         </div>
     </div>
 
+<div class="isi-konten">
+
     <div class="judul">
         <th>KOMENTAR/SARAN</th>
     </div>
@@ -56,5 +58,7 @@
         
       </div>
   </div>	
+
+</div>
 
 @endsection
