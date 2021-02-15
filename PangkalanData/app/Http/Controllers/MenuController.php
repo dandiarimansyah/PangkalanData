@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\ForumController;
+use App\Models\Forum;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,7 +32,8 @@ class MenuController extends Controller
     public function forum()
     {
         $user = Auth::user();
+        $forum = Forum::all();
 
-        return view('forum', compact('user'));
+        return view('forum', compact('user', 'forum'));
     }
 }
