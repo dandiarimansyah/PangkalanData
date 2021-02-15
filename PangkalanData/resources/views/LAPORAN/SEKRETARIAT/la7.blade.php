@@ -10,18 +10,20 @@
         <th>DATA INVENTARISASI BARANG MILIK NEGARA</th>
     </div>
 
-    <div class="menu" style="display:flex; justify-content:center">
-        <div class="btn-group kategori">
-            <a type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/laporan">
-                KEMBALI KE MENU LAPORAN
-            </a>
-        </div>
-
-        <div class="btn-group kategori">
-            <button  type="button" class="btn btn-info" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-                EXPORT KE MS.EXCEL
-            </button>
-        </div>
+    <div class="judul" style="display:flex; justify-content:center">
+        <button onclick="back()" type="button" class="btn btn-secondary" style="border-radius: 5px; margin-right:15px; width: 130px">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+            KEMBALI
+        </button>
+        <a href="{{ url('/pdf/sekretariat/inventarisasi_bmn')}}" target="_blank" type="button" class="btn btn-info" style="border-radius: 5px;margin-right:15px;">
+            EXPORT KE PDF
+        </a>
+        <a href="{{ url('/excel/sekretariat/inventarisasi_bmn')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+            EXPORT KE EXCEL
+        </a>
+        <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+            IMPORT EXCEL
+        </button>
     </div>
 
     <div class="ketjudul">
@@ -30,8 +32,7 @@
 
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table">
-           
+        <table class="content-table" id="datatable">
         <thead>
                 <tr>
                     <th rowspan="2">NO</th>
