@@ -137,11 +137,32 @@ class ExportController extends Controller
         return $pdf->stream();
     }
 
+    private function queryData(Request $request)
+    {
+        $data = Anggaran::with('cs')
+            ->with([
+                'laporan' => $this->reportDateQuery(),
+            ]);
 
+        //Query Where
+        if ($this->status == 'belum') {
+            $data = $data->whereDoesntHave('laporan', $this->reportDateQuery());
+        } elseif ($this->status == 'sudah') {
+            $data = $data->whereHas('laporan', $this->reportDateQuery());
+        }
+
+        $data = $data->get();
+        // $this->filename = 'Laporan ' . $this->reportDate->isoFormat('DD MMMM YYYY');
+
+        return $data;
+    }
 
     //EXCEL S 1
-    public function excel_a1()
+    public function excel_a1(Request $request)
     {
+        // $data = $this->queryData($request);
+        // $export = new AnggaranExport($request);
+        // return Excel::download($export, 'Anggaran.xlsx');
         return Excel::download(new AnggaranExport, 'Anggaran.xlsx');
     }
     //Import
