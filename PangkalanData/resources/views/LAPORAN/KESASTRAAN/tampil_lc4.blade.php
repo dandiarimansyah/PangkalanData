@@ -35,7 +35,7 @@
         <a href="{{ url('/excel/kesastraan/musikalisasi_puisi_provinsi')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <button href="/import/kesastraan/musikalisasi_puisi_provinsi" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
         </button>
     </div>
