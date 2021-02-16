@@ -93,7 +93,7 @@
                                 data-roda_enam="{{ $a->roda_enam }}"
                             >Edit</button>
 
-                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/inventarisasi_bmn/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/sekretariat/inventarisasi_bmn/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty

@@ -77,7 +77,7 @@
                                 data-info_produk="{{ $a->info_produk }}"
                             >Edit</button>
 
-                          <a class="hapus" href="{{ url('/operator/edit/kebahasaan/jurnal_majalah/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                          <a class="hapus" href="{{ url('/operator/edit/kebahasaan/jurnal_majalah/hapus/' . $a->id) }}" data-toggle="tooltip"  id="pesan">Hapus</a>
                       </td>
                   </tr>
               @empty

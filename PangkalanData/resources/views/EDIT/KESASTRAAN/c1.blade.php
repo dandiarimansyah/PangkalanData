@@ -89,7 +89,7 @@
                                 data-aktivitas="{{ $a->aktivitas }}"
                                 data-media="{{ $a->media }}"
                             >Edit</button>
-                            <a class="hapus" href="{{ url('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa/hapus/' . $a->id) }}" data-toggle="tooltip"  id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty
