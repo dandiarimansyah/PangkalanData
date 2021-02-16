@@ -42,94 +42,79 @@ class ImportController extends Controller
     }
     public function import_a2()
     {
-        return $pdf->stream();
+        $file = $request->file('file');
+        $namaFile = $file->getClientOriginalName();
+        $file->move('Realisasi Anggaran', $namaFile);
+
+        Excel::import(new Realisasi_AnggaranImport, public_path('/Realisasi Anggaran/' . $namaFile));
+        return redirect('/laporan/sekretariat/realisasi_anggaran/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
     public function import_a3()
     {
-        return $pdf->stream();
     }
     public function import_a4()
     {
-        return $pdf->stream();
     }
     public function import_a5()
     {
-        return $pdf->stream();
     }
     public function import_a6()
     {
-        return $pdf->stream();
     }
     public function import_a7()
     {
-        return $pdf->stream();
     }
 
     //IMPORT S 1
     public function import_b1()
     {
-        return $pdf->stream();
     }
     public function import_b2()
     {
-        return $pdf->stream();
     }
     public function import_b3()
     {
-        return $pdf->stream();
     }
     public function import_b4()
     {
-        return $pdf->stream();
     }
     public function import_b5()
     {
-        return $pdf->stream();
     }
     public function import_b6()
     {
-        return $pdf->stream();
     }
     public function import_b7()
     {
-        return $pdf->stream();
     }
     public function import_b8()
     {
-        return $pdf->stream();
     }
 
     //IMPORT S 1
     public function import_c1()
     {
-        return $pdf->stream();
     }
     public function import_c2()
     {
-        return $pdf->stream();
     }
     public function import_c3()
     {
-        return $pdf->stream();
     }
     public function import_c4()
     {
-        return $pdf->stream();
     }
 
     //IMPORT S 1
     public function import_d1()
     {
-        return $pdf->stream();
     }
     public function import_d2()
     {
-        return $pdf->stream();
     }
 
     //IMPORT S 1
     public function import_e1()
     {
-        return $pdf->stream();
     }
 }

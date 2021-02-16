@@ -30,6 +30,27 @@ use PDF;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Exports\AnggaranExport;
+use App\Imports\Bengkel_Sastra_Dan_BahasaExport;
+use App\Imports\Duta_NasionalExport;
+use App\Imports\Duta_ProvinsiExport;
+use App\Imports\InventarisasiExport;
+use App\Imports\JurnalExport;
+use App\Imports\KamusExport;
+use App\Imports\Realisasi_AnggaranExport;
+use App\Imports\KepegawaianExport;
+use App\Imports\Kerja_SamaExport;
+use App\Imports\Komunitas_BahasaExport;
+use App\Imports\Komunitas_SastraExport;
+use App\Imports\Musikalisasi_Puisi_NasionalExport;
+use App\Imports\Musikalisasi_Puisi_ProvinsiExport;
+use App\Imports\PenelitianExport;
+use App\Imports\Penghargaan_BahasaExport;
+use App\Imports\Penghargaan_SastraExport;
+use App\Imports\PenyuluhanExport;
+use App\Imports\PerpustakaanExport;
+use App\Imports\PesuluhExport;
+use App\Imports\Tanah_BangunanExport;
+use App\Imports\Terbitan_UmumExport;
 
 
 class ExportController extends Controller
@@ -47,11 +68,21 @@ class ExportController extends Controller
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a1', compact('data'));
 
         // return $pdf->stream();
-        return $pdf->download('Laporan.pdf');
+        return $pdf->download('Laporan Anggaran.pdf');
     }
     public function pdf_a2(Request $request)
     {
-        return $pdf->stream();
+        if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
+            $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
+                ->get();
+        } else {
+            $data = Realisasi_Anggaran::all();
+        }
+
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a2', compact('data'));
+
+        // return $pdf->stream();
+        return $pdf->download('Laporan Realisasi Anggaran.pdf');
     }
     public function pdf_a3(Request $request)
     {

@@ -157,6 +157,9 @@ class LaporanController extends Controller
             'tahun_anggaran' => ['nullable', 'numeric'],
         ]);
 
+        $pilih = $request->pilih;
+        $tahun_anggaran = $request->tahun_anggaran;
+
         if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
             $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
                 ->get();
@@ -164,7 +167,7 @@ class LaporanController extends Controller
             $data = Realisasi_Anggaran::all();
         }
 
-        return view('LAPORAN.SEKRETARIAT.tampil_la2', compact('data'));
+        return view('LAPORAN.SEKRETARIAT.tampil_la2', compact('data', 'pilih', 'tahun_anggaran'));
     }
     public function tampil_la3(Request $request)
     {
@@ -172,6 +175,9 @@ class LaporanController extends Controller
     }
     public function tampil_la4(Request $request)
     {
+        $kategori = $request->kategori;
+        $perihal = $request->perihal;
+
         if ($request->kategori == 'semua' and $request->perihal == '') {
             $data = Kerja_Sama::all();
         } else {
@@ -180,7 +186,7 @@ class LaporanController extends Controller
                 ->get();
         }
 
-        return view('LAPORAN.SEKRETARIAT.tampil_la4', compact('data'));
+        return view('LAPORAN.SEKRETARIAT.tampil_la4', compact('data', 'kategori', 'perihal'));
     }
     public function tampil_la5(Request $request)
     {

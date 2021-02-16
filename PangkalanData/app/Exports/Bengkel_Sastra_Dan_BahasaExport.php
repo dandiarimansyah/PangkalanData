@@ -2,8 +2,7 @@
 
 namespace App\Exports;
 
-use App\Models\Anggaran;
-
+use App\Models\Bengkel_Sastra_Dan_Bahasa;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithHeadings;
@@ -12,15 +11,15 @@ use Maatwebsite\Excel\Concerns\WithEvents;
 use Maatwebsite\Excel\Events\AfterSheet;
 use Maatwebsite\Excel\Concerns\WithStyles;
 
-class AnggaranExport implements FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithEvents
+class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithEvents
 {
-    private $pilih;
-    private $tahun_anggaran;
+    private $nama_kegiatan;
+    private $kota;
 
-    public function __construct($pilih, $tahun_anggaran)
+    public function __construct($nama_kegiatan, $kota)
     {
-        $this->pilih = $pilih;
-        $this->tahun_anggaran = $tahun_anggaran;
+        $this->nama_kegiatan = $nama_kegiatan;
+        $this->kota = $kota;
     }
 
     /**
@@ -28,11 +27,22 @@ class AnggaranExport implements FromCollection, WithMapping, WithHeadings, Shoul
      */
     public function collection()
     {
-        if ($this->pilih == 'tahun' and $this->tahun_anggaran != '') {
-            $data = Anggaran::where('tahun_anggaran', $this->tahun_anggaran)
+        if ($request->nama_kegiatan == '' and $request->kota == '') {
+            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
                 ->get();
-        } else {
-            $data = Anggaran::all();
+        } elseif ($request->nama_kegiatan != '' and $request->kota == '') {
+            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
+                ->where('nama_kegiatan', $request->nama_kegiatan)
+                ->get();
+        } elseif ($request->nama_kegiatan == '' and $request->kota != '') {
+            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
+                ->where('kota', $request->kota)
+                ->get();
+        } elseif ($request->nama_kegiatan != '' and $request->kota != '') {
+            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
+                ->where('kota', $request->kota)
+                ->where('nama_kegiatan', $request->nama_kegiatan)
+                ->get();
         }
 
         return $data;
@@ -49,9 +59,16 @@ class AnggaranExport implements FromCollection, WithMapping, WithHeadings, Shoul
     public function map($data): array
     {
         return [
-            $data->unit,
-            $data->tahun_anggaran,
-            $data->nilai_anggaran
+            $data->provinsi,
+            $data->kota,
+            $data->tanggal_awal_pelaksanaan,
+            $data->tanggal_akhir_pelaksanaan,
+            $data->nama_kegiatan,
+            $data->pemateri,
+            $data->jumlah_peserta,
+            $data->jumlah_sekolah_yang_dibina,
+            $data->nama_sekolah_yang_dibina,
+            $data->aktivitas,
         ];
     }
 
