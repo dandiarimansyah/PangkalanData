@@ -85,6 +85,9 @@
         <script src="{{ asset('sweetalert2/sweetalert2.min.js')}}"></script>
         <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+        {{-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js">
+        </script> --}}
 
         @stack('scripts')
 
@@ -93,6 +96,16 @@
             $('span').toggleClass("cancel");
             });
 
+            //DATE Format
+            // $("#date").on("change", function() {
+            //     this.setAttribute(
+            //         "data-date",
+            //         moment(this.value, "YYYY-MM-DD")
+            //         .format( this.getAttribute("data-date-format") )
+            //     )
+            //     }).trigger("change")
+
+            //Tombol Kembali
             function back() {
                 window.history.back();
             }

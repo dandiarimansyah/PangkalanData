@@ -47,7 +47,7 @@
                 <td>NILAI ANGGARAN(Rp.)</td>
             </tr>
 
-            @forelse ($anggaran as $key => $a)
+            @forelse ($data as $key => $a)
                 <tr>
                     <td>{{ $key + 1}}</td>
                     <td>{{ $a -> tahun_anggaran}}</td>

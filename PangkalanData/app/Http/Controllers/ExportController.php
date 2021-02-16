@@ -36,10 +36,18 @@ use App\Imports\AnggaranImport;
 class ExportController extends Controller
 {
     //PDF S 1
-    public function pdf_a1()
+    public function pdf_a1(Request $request)
     {
-        $anggaran = Anggaran::all();
-        $pdf = PDF::loadView('PDF.SEKRETARIAT.a1', compact('anggaran'));
+        // dd($request->all());
+
+        if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
+            $data = Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
+                ->get();
+        } else {
+            $data = Anggaran::all();
+        }
+
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a1', compact('data'));
 
         // return $pdf->stream();
         return $pdf->download('Laporan.pdf');
@@ -160,10 +168,9 @@ class ExportController extends Controller
     //EXCEL S 1
     public function excel_a1(Request $request)
     {
-        // $data = $this->queryData($request);
-        // $export = new AnggaranExport($request);
-        // return Excel::download($export, 'Anggaran.xlsx');
-        return Excel::download(new AnggaranExport, 'Anggaran.xlsx');
+        $export = new AnggaranExport($request->pilih, $request->tahun_anggaran);
+
+        return Excel::download($export, 'Anggaran.xlsx');
     }
     //Import
     public function import_a1(Request $request)

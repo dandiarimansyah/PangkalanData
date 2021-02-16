@@ -139,6 +139,9 @@ class LaporanController extends Controller
             'tahun_anggaran' => ['nullable', 'numeric'],
         ]);
 
+        $pilih = $request->pilih;
+        $tahun = $request->tahun_anggaran;
+
         if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
             $data = Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
                 ->get();
@@ -146,7 +149,7 @@ class LaporanController extends Controller
             $data = Anggaran::all();
         }
 
-        return view('LAPORAN.SEKRETARIAT.tampil_la1', compact('data'));
+        return view('LAPORAN.SEKRETARIAT.tampil_la1', compact('data', 'pilih', 'tahun'));
     }
     public function tampil_la2(Request $request)
     {
@@ -266,6 +269,19 @@ class LaporanController extends Controller
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
         }
+
+        /////////////
+        // $a = Model::query();
+
+        // if (kondisi) {
+        //     $a->where();
+        // }
+        // if (kondisi) {
+        //     $a->where();
+        // }
+        // $a->get()
+        /////////////
+
 
         return view('LAPORAN.KEBAHASAAN.tampil_lb1', compact('data'));
     }
@@ -597,7 +613,7 @@ class LaporanController extends Controller
         $request->validate([
             'tahun' => ['nullable', 'numeric'],
         ]);
-        
+
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Musikalisasi_Puisi_Nasional::all();
         } else if ($request->tahun != '' and $request->pemenang == '') {

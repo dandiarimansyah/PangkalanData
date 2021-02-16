@@ -26,10 +26,10 @@
             <i class="fa fa-arrow-left" aria-hidden="true"></i> 
             KEMBALI
         </button>
-        <a href="{{ url('/pdf/sekretariat/anggaran')}}" target="_blank" type="button" class="btn btn-info" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/pdf/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun}")}}" target="_blank" type="button" class="btn btn-info" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
         </a>
-        <a href="{{ url('/excel/sekretariat/anggaran?data={$data}')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/excel/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
         <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">

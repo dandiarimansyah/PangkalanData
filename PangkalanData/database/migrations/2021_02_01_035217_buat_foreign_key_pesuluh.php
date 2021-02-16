@@ -15,7 +15,7 @@ class BuatForeignKeyPesuluh extends Migration
     {
         Schema::table('pesuluh', function (Blueprint $table) {
             $table->unsignedBigInteger('id_penyuluhan');
-            $table->foreign('id_penyuluhan')->references('id')->on('penyuluhan');
+            $table->foreign('id_penyuluhan')->references('id')->on('penyuluhan')->onDelete('CASCADE');
         });
     }
 
