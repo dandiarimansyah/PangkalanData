@@ -16,20 +16,23 @@
         @endforeach
         </div>
     @endif
+    
+    <div class="tombol-kembali">
+        <button onclick="back()" type="button" class="btn">
+            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            <span>KEMBALI</span>
+        </button>
+    </div>
 
     <div class="judul">
         <th>LAPORAN DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
     </div>
 
-    <div class="judul" style="display:flex; justify-content:center">
-        <button onclick="back()" type="button" class="btn btn-secondary" style="border-radius: 5px; margin-right:15px; width: 130px">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
-            KEMBALI
-        </button>
-        <a href="{{ url("/pdf/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun}")}}" target="_blank" type="button" class="btn btn-info" style="border-radius: 5px;margin-right:15px;">
+    <div class="judul" style="display:flex; justify-content:center; margin-bottom:15px">
+        <a href="{{ url("/pdf/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
         </a>
-        <a href="{{ url("/excel/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/excel/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
         <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">

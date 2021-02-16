@@ -140,7 +140,7 @@ class LaporanController extends Controller
         ]);
 
         $pilih = $request->pilih;
-        $tahun = $request->tahun_anggaran;
+        $tahun_anggaran = $request->tahun_anggaran;
 
         if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
             $data = Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
@@ -149,7 +149,7 @@ class LaporanController extends Controller
             $data = Anggaran::all();
         }
 
-        return view('LAPORAN.SEKRETARIAT.tampil_la1', compact('data', 'pilih', 'tahun'));
+        return view('LAPORAN.SEKRETARIAT.tampil_la1', compact('data', 'pilih', 'tahun_anggaran'));
     }
     public function tampil_la2(Request $request)
     {

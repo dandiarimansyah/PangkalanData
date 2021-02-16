@@ -3,13 +3,16 @@
 namespace App\Exports;
 
 use App\Models\Anggaran;
+
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use Maatwebsite\Excel\Concerns\WithEvents;
 use Maatwebsite\Excel\Concerns\WithStyles;
+use Maatwebsite\Excel\Events\AfterSheet;
 
-class AnggaranExport implements FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithStyles
+class AnggaranExport implements FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithEvents
 {
     private $pilih;
     private $tahun_anggaran;
@@ -63,22 +66,37 @@ class AnggaranExport implements FromCollection, WithMapping, WithHeadings, Shoul
         ];
     }
 
-    public function styles($sheet)
+    public function registerEvents(): array
     {
-        $centerAlignment = [
-            'alignment' => [
-                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
-            ]
-        ];
 
-        $titleStyles = [
+        $bold = [
             'font' => [
                 'bold' => true
             ],
-        ] + $centerAlignment;
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+            ],
+        ];
+
+        $center = [
+            'alignment' => [
+                'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+            ],
+        ];
 
         return [
-            1 => $titleStyles,
+            AfterSheet::class => function (AfterSheet $event) use ($bold, $center) {
+                $event->sheet->getStyle('A1:C1')->applyFromArray($bold);
+            }
         ];
     }
+
+    // public function styles($sheet)
+    // {
+    //     $sheet->setStyle(array(
+    //         'aligment' => array(
+    //             'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+    //         )
+    //     ));
+    // }
 }

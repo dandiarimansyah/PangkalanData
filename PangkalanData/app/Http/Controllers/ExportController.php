@@ -26,11 +26,10 @@ use App\Models\Pesuluh;
 use App\Models\Tanah_Bangunan;
 use App\Models\Terbitan_Umum;
 
-use Barryvdh\DomPDF\PDF as DomPDFPDF;
 use PDF;
 use Maatwebsite\Excel\Facades\Excel;
+
 use App\Exports\AnggaranExport;
-use App\Imports\AnggaranImport;
 
 
 class ExportController extends Controller
@@ -38,8 +37,6 @@ class ExportController extends Controller
     //PDF S 1
     public function pdf_a1(Request $request)
     {
-        // dd($request->all());
-
         if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
             $data = Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
                 ->get();
@@ -52,117 +49,97 @@ class ExportController extends Controller
         // return $pdf->stream();
         return $pdf->download('Laporan.pdf');
     }
-    public function pdf_a2()
+    public function pdf_a2(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_a3()
+    public function pdf_a3(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_a4()
+    public function pdf_a4(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_a5()
+    public function pdf_a5(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_a6()
+    public function pdf_a6(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_a7()
+    public function pdf_a7(Request $request)
     {
         return $pdf->stream();
     }
 
     //PDF S 2
-    public function pdf_b1()
+    public function pdf_b1(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_b2()
+    public function pdf_b2(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_b3()
+    public function pdf_b3(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_b4()
+    public function pdf_b4(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_b5()
+    public function pdf_b5(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_b6()
+    public function pdf_b6(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_b7()
+    public function pdf_b7(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_b8()
+    public function pdf_b8(Request $request)
     {
         return $pdf->stream();
     }
 
     //PDF S 3
-    public function pdf_c1()
+    public function pdf_c1(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_c2()
+    public function pdf_c2(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_c3()
+    public function pdf_c3(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_c4()
+    public function pdf_c4(Request $request)
     {
         return $pdf->stream();
     }
 
     //PDF S 4
-    public function pdf_d1()
+    public function pdf_d1(Request $request)
     {
         return $pdf->stream();
     }
-    public function pdf_d2()
+    public function pdf_d2(Request $request)
     {
         return $pdf->stream();
     }
 
     //PDF S 5
-    public function pdf_e1()
+    public function pdf_e1(Request $request)
     {
         return $pdf->stream();
-    }
-
-    private function queryData(Request $request)
-    {
-        $data = Anggaran::with('cs')
-            ->with([
-                'laporan' => $this->reportDateQuery(),
-            ]);
-
-        //Query Where
-        if ($this->status == 'belum') {
-            $data = $data->whereDoesntHave('laporan', $this->reportDateQuery());
-        } elseif ($this->status == 'sudah') {
-            $data = $data->whereHas('laporan', $this->reportDateQuery());
-        }
-
-        $data = $data->get();
-        // $this->filename = 'Laporan ' . $this->reportDate->isoFormat('DD MMMM YYYY');
-
-        return $data;
     }
 
     //EXCEL S 1
@@ -172,17 +149,7 @@ class ExportController extends Controller
 
         return Excel::download($export, 'Anggaran.xlsx');
     }
-    //Import
-    public function import_a1(Request $request)
-    {
-        $file = $request->file('file');
-        $namaFile = $file->getClientOriginalName();
-        $file->move('Anggaran', $namaFile);
 
-        Excel::import(new AnggaranImport, public_path('/Anggaran/' . $namaFile));
-        return redirect('/laporan/sekretariat/anggaran/tampil')->with('toast_success', 'Import Data Berhasil!');
-    }
-    //Import
     public function excel_a2()
     {
         return $pdf->stream();

@@ -464,8 +464,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     //EXCEL S 1
     Route::get('/excel/sekretariat/anggaran', [ExportController::class, 'excel_a1']);
-    Route::post('/import/sekretariat/anggaran', [ExportController::class, 'import_a1']);
-
     Route::get('/excel/sekretariat/realisasi_anggaran', [ExportController::class, 'excel_a2']);
     Route::get('/excel/sekretariat/kepegawaian', [ExportController::class, 'excel_a3']);
     Route::get('/excel/sekretariat/kerja_sama', [ExportController::class, 'excel_a4']);
@@ -492,6 +490,34 @@ Route::group(['middleware' => ['auth']], function () {
     //EXCEL S 5
     Route::get('/excel/penelitian/penelitian', [ExportController::class, 'excel_e1']);
 
+    //IMPORT S 1
+    Route::post('/import/sekretariat/anggaran', [ImportController::class, 'import_a1']);
+    Route::post('/import/sekretariat/realisasi_anggaran', [ImportController::class, 'import_a2']);
+    Route::post('/import/sekretariat/kepegawaian', [ImportController::class, 'import_a3']);
+    Route::post('/import/sekretariat/kerja_sama', [ImportController::class, 'import_a4']);
+    Route::post('/import/sekretariat/tanah_dan_bangunan', [ImportController::class, 'import_a5']);
+    Route::post('/import/sekretariat/perpustakaan', [ImportController::class, 'import_a6']);
+    Route::post('/import/sekretariat/inventarisasi_bmn', [ImportController::class, 'import_a7']);
+    //IMPORT S 2
+    Route::post('/import/kebahasaan/kamus_ensiklopedia', [ImportController::class, 'import_b1']);
+    Route::post('/import/kebahasaan/jurnal_umum', [ImportController::class, 'import_b2']);
+    Route::post('/import/kebahasaan/terbitan_umum', [ImportController::class, 'import_b3']);
+    Route::post('/import/kebahasaan/penyuluhan', [ImportController::class, 'import_b4']);
+    Route::post('/import/kebahasaan/pesuluh', [ImportController::class, 'import_b5']);
+    Route::post('/import/kebahasaan/penghargaan_nasional', [ImportController::class, 'import_b6']);
+    Route::post('/import/kebahasaan/duta_bahasa_nasional', [ImportController::class, 'import_b7']);
+    Route::post('/import/kebahasaan/duta_bahasa_provinsi', [ImportController::class, 'import_b8']);
+    //IMPORT S 3
+    Route::post('/import/kesastraan/bengkel_sastra_dan_bahasa', [ImportController::class, 'import_c1']);
+    Route::post('/import/kesastraan/penghargaan_sastra', [ImportController::class, 'import_c2']);
+    Route::post('/import/kesastraan/musikalisasi_puisi_nasional', [ImportController::class, 'import_c3']);
+    Route::post('/import/kesastraan/musikalisasi_puisi_provinsi', [ImportController::class, 'import_c4']);
+    //IMPORT S 4
+    Route::post('/import/komunitas/komunitas_bahasa', [ImportController::class, 'import_d1']);
+    Route::post('/import/komunitas/komunitas_sastra', [ImportController::class, 'import_d2']);
+    //IMPORT S 5
+    Route::post('/import/penelitian/penelitian', [ImportController::class, 'import_e1']);
+
     ////========================================== GRAFIK ===================
     //GRAFIK S 1
     Route::get('/grafik/sekretariat/anggaran', [GrafikController::class, 'ga1']);
@@ -511,11 +537,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/grafik/penelitian/penelitian', [GrafikController::class, 'ge1']);
 
     ////========================================== FORUM ===================
-     //FORUM INTERNAL
-     Route::get('/forum/internal', [ForumController::class, 'f1']);
-     Route::post('/forum/internal', [ForumController::class, 'Store_f1']);
+    //FORUM INTERNAL
+    Route::get('/forum/internal', [ForumController::class, 'f1']);
+    Route::post('/forum/internal', [ForumController::class, 'Store_f1']);
 
-     //FORUM KONTAK ADMIN
-     Route::get('/forum/kontak_admin', [ForumController::class, 'f2']);
-     Route::post('/forum/kontak_admin', [ForumController::class, 'Store_f2']);
+    //FORUM KONTAK ADMIN
+    Route::get('/forum/kontak_admin', [ForumController::class, 'f2']);
+    Route::post('/forum/kontak_admin', [ForumController::class, 'Store_f2']);
 });

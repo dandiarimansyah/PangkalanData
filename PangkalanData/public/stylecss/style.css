@@ -244,9 +244,22 @@ p {
 }
 
 .tombol-kembali {
-    margin-left: 10px;
+    margin-left: -2px;
     position: absolute;
-    top: 140px;
+    top: 145px;
+}
+
+.tombol-kembali button {
+    background: #ceefff;
+    color: rgb(0, 0, 0);
+    padding-left: 0;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 125px;
+}
+
+.tombol-kembali span {
+    margin-left: 5px;
 }
 
 .menu {
