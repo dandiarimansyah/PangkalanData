@@ -83,7 +83,7 @@
                                 data-materi="{{ $a->materi }}"
                                 
                             >Edit</button>
-                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/penyuluhan/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/penyuluhan/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty

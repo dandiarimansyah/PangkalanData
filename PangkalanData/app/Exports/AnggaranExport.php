@@ -11,20 +11,28 @@ use Maatwebsite\Excel\Concerns\WithStyles;
 
 class AnggaranExport implements FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithStyles
 {
-    private $data;
+    private $pilih;
+    private $tahun_anggaran;
+
+    public function __construct($pilih, $tahun_anggaran)
+    {
+        $this->pilih = $pilih;
+        $this->tahun_anggaran = $tahun_anggaran;
+    }
 
     /**
      * @return \Illuminate\Support\Collection
      */
     public function collection()
     {
-        return Anggaran::all();
-    }
+        if ($this->pilih == 'tahun' and $this->tahun_anggaran != '') {
+            $data = Anggaran::where('tahun_anggaran', $this->tahun_anggaran)
+                ->get();
+        } else {
+            $data = Anggaran::all();
+        }
 
-    public function __construct()
-    {
-        // $this->data = $data;
-        $this->data = Anggaran::all();;
+        return $data;
     }
 
     /**

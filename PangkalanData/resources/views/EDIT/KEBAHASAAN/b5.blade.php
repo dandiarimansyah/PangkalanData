@@ -67,7 +67,7 @@
                                 data-instansi="{{ $a->instansi }}"
                                 data-tingkat="{{ $a->tingkat }}"
                             >Edit</button>
-                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/pesuluh/hapus/' . $a->id) }}" data-toggle="tooltip" onclick="return konfirmasi()" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/operator/edit/kebahasaan/pesuluh/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty

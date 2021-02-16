@@ -51,7 +51,7 @@
         <div class="alert-danger">{{ $errors->first('tanggal_awal') }}</div>
         <div class="inputfield-date">
             <label>Tanggal Kerja sama*</label>
-            <input name="tanggal_awal" type="date" class="input">
+            <input id="date" name="tanggal_awal" type="date" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('tanggal_akhir') }}</div>
