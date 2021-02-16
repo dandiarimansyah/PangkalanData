@@ -17,15 +17,24 @@
     </div>
 @endif
 
-<div class="tombol-kembali">
-        <button onclick="back()" type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
-            Kembali
-        </button>
-    </div>
-
     <div class="judul">
         <th>LAPORAN DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
+    </div>
+
+    <div class="judul" style="display:flex; justify-content:center">
+        <button onclick="back()" type="button" class="btn btn-secondary" style="border-radius: 5px; margin-right:15px; width: 130px">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+            KEMBALI
+        </button>
+        <a href="{{ url('/pdf/sekretariat/tanah_dan_bangunan')}}" target="_blank" type="button" class="btn btn-info" style="border-radius: 5px;margin-right:15px;">
+            EXPORT KE PDF
+        </a>
+        <a href="{{ url('/excel/sekretariat/tanah_dan_bangunan')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+            EXPORT KE EXCEL
+        </a>
+        <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+            IMPORT EXCEL
+        </button>
     </div>
 
     <!-- TABLE -->
