@@ -17,16 +17,19 @@
         </div>
     @endif
 
+    <div class="tombol-kembali">
+        <button onclick="back()" type="button" class="btn">
+            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            <span>KEMBALI</span>
+        </button>
+    </div>
+
     <div class="judul">
         <th>LAPORAN DATA KOMUNITAS SASTRA</th>
     </div>
 
     <div class="judul" style="display:flex; justify-content:center">
-        <button onclick="back()" type="button" class="btn btn-secondary" style="border-radius: 5px; margin-right:15px; width: 130px">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
-            KEMBALI
-        </button>
-        <a href="{{ url('/pdf/komunitas/komunitas_sastra')}}" target="_blank" type="button" class="btn btn-info" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url('/pdf/komunitas/komunitas_sastra')}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
         </a>
         <a href="{{ url('/excel/komunitas/komunitas_sastra')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
