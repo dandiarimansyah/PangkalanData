@@ -14,6 +14,7 @@ use App\Http\Controllers\InputController;
 use App\Http\Controllers\EditController;
 use App\Http\Controllers\HapusController;
 use App\Http\Controllers\ExportController;
+use App\Http\Controllers\ImportController;
 
 /*
 |--------------------------------------------------------------------------

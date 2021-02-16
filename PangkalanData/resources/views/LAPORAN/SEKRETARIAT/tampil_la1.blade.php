@@ -35,7 +35,7 @@
         <a href="{{ url("/excel/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <button href="/import/sekretariat/anggaran" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
         </button>
     </div>
@@ -71,30 +71,6 @@
             </tbody>
         </table>
 
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Import Data</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <form action="{{ url('/import/sekretariat/anggaran')}}" method="POST" enctype="multipart/form-data">
-            @csrf
-                <div class="modal-body">
-                    <input name="file" type="file" required='required'>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary">Import</button>
-                </div>
-            </div>
-        </form>
-        </div>
     </div>
 
 @endsection

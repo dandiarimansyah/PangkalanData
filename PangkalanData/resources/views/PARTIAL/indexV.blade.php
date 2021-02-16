@@ -78,6 +78,30 @@
             <h5>Jalan Elang Raya No.1, Mangunharjo, Tembalang, Sendangmulyo, Tembalang, Kota Semarang, Jawa Tengah 50272</h5>
             <h5>Pos-el: balaibahasa.jateng@kemdikbud.go.id</h5>
         </footer>
+
+        <!-- Modal Import Data -->
+        <div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Import Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <form id="import_form" action="" method="POST" enctype="multipart/form-data">
+                @csrf
+                    <div class="modal-body">
+                        <input name="file" type="file" required='required'>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Import</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
         
         @include('sweetalert::alert')
 
@@ -103,6 +127,13 @@
             //         .format( this.getAttribute("data-date-format") )
             //     )
             //     }).trigger("change")
+
+            //Import Data
+            $(document).on('click','#import_data',function(){
+                var link = $(this).attr('href');
+                
+                $('#import_form').attr('action', '' + link);
+            })
 
             //Tombol Kembali
             function back() {
