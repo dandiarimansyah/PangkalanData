@@ -133,6 +133,7 @@ class LaporanController extends Controller
     }
 
     //LAPORAN S 1
+    //===================================================================================================
     public function tampil_la1(Request $request)
     {
         $request->validate([
@@ -151,11 +152,17 @@ class LaporanController extends Controller
 
         return view('LAPORAN.SEKRETARIAT.tampil_la1', compact('data', 'pilih', 'tahun_anggaran'));
     }
+
+    //===================================================================================================
     public function tampil_la2(Request $request)
     {
         $request->validate([
             'tahun_anggaran' => ['nullable', 'numeric'],
         ]);
+
+        $pilih = $request->pilih;
+        $tahun_anggaran = $request->tahun_anggaran;
+
 
         if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
             $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
@@ -164,14 +171,21 @@ class LaporanController extends Controller
             $data = Realisasi_Anggaran::all();
         }
 
-        return view('LAPORAN.SEKRETARIAT.tampil_la2', compact('data'));
+        return view('LAPORAN.SEKRETARIAT.tampil_la2', compact('data', 'pilih', 'tahun_anggaran'));
     }
+
+    //===================================================================================================
     public function tampil_la3(Request $request)
     {
         return view('LAPORAN.SEKRETARIAT.tampil_la3', compact('data'));
     }
+
+    //===================================================================================================
     public function tampil_la4(Request $request)
     {
+        $kategori = $request->kategori;
+        $perihal = $request->perihal;
+
         if ($request->kategori == 'semua' and $request->perihal == '') {
             $data = Kerja_Sama::all();
         } else {
@@ -180,10 +194,15 @@ class LaporanController extends Controller
                 ->get();
         }
 
-        return view('LAPORAN.SEKRETARIAT.tampil_la4', compact('data'));
+        return view('LAPORAN.SEKRETARIAT.tampil_la4', compact('data', 'kategori', 'perihal'));
     }
+
+    //===================================================================================================
     public function tampil_la5(Request $request)
     {
+        $status_tanah = $request->status_tanah;
+        $status_bangunan = $request->status_bangunan;
+        
         if ($request->status_tanah == 'semua' and $request->status_bangunan == 'semua') {
             $data = Tanah_Bangunan::all();
         } else if ($request->status_tanah == 'semua' or $request->status_bangunan == 'semua') {
@@ -195,18 +214,23 @@ class LaporanController extends Controller
                 ->where('status_bangunan', $request->status_bangunan)
                 ->get();
         }
-        return view('LAPORAN.SEKRETARIAT.tampil_la5', compact('data'));
+        return view('LAPORAN.SEKRETARIAT.tampil_la5', compact('data', 'status_tanah', 'status_bangunan'));
     }
+
+    //===================================================================================================
     public function tampil_la6(Request $request)
     {
         return view('LAPORAN.SEKRETARIAT.tampil_la6', compact('data'));
     }
+
+    //===================================================================================================
     public function tampil_la7(Request $request)
     {
         return view('LAPORAN.SEKRETARIAT.tampil_la7', compact('data'));
     }
 
     //LAPORAN S 2
+    //===================================================================================================
     public function tampil_lb1(Request $request)
     {
         // $j = $request->judul;
@@ -231,6 +255,11 @@ class LaporanController extends Controller
         //         })
         //         ->get();
         // }
+
+        $info_produk = $request->info_produk;
+        $judul = $request->judul;
+        $tim_redaksi = $request->tim_redaksi;
+        $kategori = $request->kategori;
 
         if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '') {
             $data = Kamus::where('kategori', $request->kategori)
@@ -283,10 +312,17 @@ class LaporanController extends Controller
         /////////////
 
 
-        return view('LAPORAN.KEBAHASAAN.tampil_lb1', compact('data'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb1', compact('data', 'kategori', 'judul', 'info_produk', 'tim_redaksi'));
     }
+
+    //===================================================================================================
     public function tampil_lb2(Request $request)
     {
+        $info_produk = $request->info_produk;
+        $judul = $request->judul;
+        $tim_redaksi = $request->tim_redaksi;
+        $kategori = $request->kategori;
+
         if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '') {
             $data = Jurnal::where('kategori', $request->kategori)
                 ->get();
@@ -324,10 +360,17 @@ class LaporanController extends Controller
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
         }
-        return view('LAPORAN.KEBAHASAAN.tampil_lb2', compact('data'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb2', compact('data', 'kategori', 'judul', 'info_produk', 'tim_redaksi'));
     }
+
+    //===================================================================================================
     public function tampil_lb3(Request $request)
     {
+        $info_produk = $request->info_produk;
+        $judul = $request->judul;
+        $penulis = $request->penulis;
+        $kategori = $request->kategori;
+
         if ($request->info_produk == '' and $request->judul == '' and $request->penulis == '') {
             $data = Terbitan_Umum::where('kategori', $request->kategori)
                 ->get();
@@ -365,10 +408,17 @@ class LaporanController extends Controller
                 ->where('penulis', $request->penulis)
                 ->get();
         }
-        return view('LAPORAN.KEBAHASAAN.tampil_lb3', compact('data'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb3', compact('data', 'kategori', 'judul', 'info_produk', 'penulis'));
     }
+
+    //===================================================================================================
     public function tampil_lb4(Request $request)
     {
+        $kota = $request->kota;
+        $nama_kegiatan = $request->nama_kegiatan;
+        $sasaran = $request->sasaran;
+        $provinsi = $request->provinsi;
+
         if ($request->kota == '' and $request->nama_kegiatan == '' and $request->sasaran == '') {
             $data = Penyuluhan::where('provinsi', $request->provinsi)
                 ->get();
@@ -406,10 +456,16 @@ class LaporanController extends Controller
                 ->where('sasaran', $request->sasaran)
                 ->get();
         }
-        return view('LAPORAN.KEBAHASAAN.tampil_lb4', compact('data'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb4', compact('data', 'nama_kegiatan', 'provinsi', 'kota', 'sasaran'));
     }
+
+    //===================================================================================================
     public function tampil_lb5(Request $request)
     {
+        $tingkat = $request->tingkat;
+        $nama = $request->nama;
+        $instansi = $request->instansi;
+
         if ($request->tingkat == '' and $request->nama == '' and $request->instansi == '') {
             $data = Pesuluh::all();
         } elseif ($request->tingkat != '' and $request->nama == '' and $request->instansi == '') {
@@ -439,13 +495,19 @@ class LaporanController extends Controller
                 ->where('instansi', 'like', '%' . $request->instansi . '%')
                 ->get();
         }
-        return view('LAPORAN.KEBAHASAAN.tampil_lb5', compact('data'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb5', compact('data', 'nama', 'tingkat', 'instansi'));
     }
+
+    //===================================================================================================
     public function tampil_lb6(Request $request)
     {
         $request->validate([
             'tahun' => ['nullable', 'numeric'],
         ]);
+
+        $kategori = $request->kategori;
+        $tahun = $request->tahun;
+        $deskripsi = $request->deskripsi;
 
         if ($request->kategori == '' and $request->tahun == '' and $request->deskripsi == '') {
             $data = Penghargaan_Bahasa::all();
@@ -476,13 +538,19 @@ class LaporanController extends Controller
                 ->where('deskripsi', $request->deskripsi)
                 ->get();
         }
-        return view('LAPORAN.KEBAHASAAN.tampil_lb6', compact('data'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb6', compact('data', 'kategori', 'tahun', 'deskripsi'));
     }
+
+    //===================================================================================================
     public function tampil_lb7(Request $request)
     {
         $request->validate([
             'tahun' => ['nullable', 'numeric'],
         ]);
+
+        $tahun = $request->tahun;
+        $pemenang = $request->pemenang;
+        $provinsi = $request->provinsi;
 
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Duta_Nasional::where('provinsi', $request->provinsi)
@@ -511,13 +579,19 @@ class LaporanController extends Controller
                 ->orWhere('pemenang_3_2', $request->pemenang)
                 ->get();
         }
-        return view('LAPORAN.KEBAHASAAN.tampil_lb7', compact('data'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb7', compact('data', 'provinsi', 'pemenang', 'tahun'));
     }
+
+    //===================================================================================================
     public function tampil_lb8(Request $request)
     {
         $request->validate([
             'tahun' => ['nullable', 'numeric'],
         ]);
+
+        $tahun = $request->tahun;
+        $pemenang = $request->pemenang;
+        $provinsi = $request->provinsi;
 
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Duta_Provinsi::where('provinsi', $request->provinsi)
@@ -546,12 +620,17 @@ class LaporanController extends Controller
                 ->orWhere('pemenang_3_2', $request->pemenang)
                 ->get();
         }
-        return view('LAPORAN.KEBAHASAAN.tampil_lb8', compact('data'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb8', compact('data', 'provinsi', 'pemenang', 'tahun'));
     }
 
     //LAPORAN S 3
+    //===================================================================================================
     public function tampil_lc1(Request $request)
     {
+        $nama_kegiatan = $request->nama_kegiatan;
+        $kota = $request->kota;
+        $provinsi = $request->provinsi;
+
         if ($request->nama_kegiatan == '' and $request->kota == '') {
             $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
                 ->get();
@@ -569,13 +648,19 @@ class LaporanController extends Controller
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         }
-        return view('LAPORAN.KESASTRAAN.tampil_lc1', compact('data'));
+        return view('LAPORAN.KESASTRAAN.tampil_lc1', compact('data', 'nama_kegiatan', 'kota', 'provinsi'));
     }
+
+    //===================================================================================================
     public function tampil_lc2(Request $request)
     {
         $request->validate([
             'tahun' => ['nullable', 'numeric'],
         ]);
+
+        $kategori = $request->kategori;
+        $tahun = $request->tahun;
+        $deskripsi = $request->deskripsi;
 
         if ($request->kategori == '' and $request->tahun == '' and $request->deskripsi == '') {
             $data = Penghargaan_Sastra::all();
@@ -606,13 +691,18 @@ class LaporanController extends Controller
                 ->where('deskripsi', $request->deskripsi)
                 ->get();
         }
-        return view('LAPORAN.KESASTRAAN.tampil_lc2', compact('data'));
+        return view('LAPORAN.KESASTRAAN.tampil_lc2', compact('data', 'kategori', 'tahun', 'deskripsi'));
     }
+
+    //===================================================================================================
     public function tampil_lc3(Request $request)
     {
         $request->validate([
             'tahun' => ['nullable', 'numeric'],
         ]);
+
+        $pemenang = $request->pemenang;
+        $tahun = $request->tahun;
 
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Musikalisasi_Puisi_Nasional::all();
@@ -631,13 +721,19 @@ class LaporanController extends Controller
                 ->orWhere('pemenang_3', $request->pemenang)
                 ->get();
         }
-        return view('LAPORAN.KESASTRAAN.tampil_lc3', compact('data'));
+        return view('LAPORAN.KESASTRAAN.tampil_lc3', compact('data', 'pemenang', 'tahun'));
     }
+
+    //===================================================================================================
     public function tampil_lc4(Request $request)
     {
         $request->validate([
             'tahun' => ['nullable', 'numeric'],
         ]);
+
+        $pemenang = $request->pemenang;
+        $tahun = $request->tahun;
+        $provinsi = $request->provinsi;
 
         if ($request->tahun == '' and $request->pemenang == '') {
             $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
@@ -660,12 +756,18 @@ class LaporanController extends Controller
                 ->orWhere('pemenang_3', $request->pemenang)
                 ->get();
         }
-        return view('LAPORAN.KESASTRAAN.tampil_lc4', compact('data'));
+        return view('LAPORAN.KESASTRAAN.tampil_lc4', compact('data', 'pemenang', 'tahun', 'provinsi'));
     }
 
     //LAPORAN S 4
+    //===================================================================================================
     public function tampil_ld1(Request $request)
     {
+        $kota = $request->kota;
+        $nama_komunitas = $request->nama_komunitas;
+        $alamat = $request->alamat;
+        $provinsi = $request->provinsi;
+
         if ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat == '') {
             $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
                 ->get();
@@ -703,10 +805,17 @@ class LaporanController extends Controller
                 ->where('alamat', $request->alamat)
                 ->get();
         }
-        return view('LAPORAN.KOMUNITAS.tampil_ld1', compact('data'));
+        return view('LAPORAN.KOMUNITAS.tampil_ld1', compact('data', 'provinsi', 'kota', 'nama_komunitas', 'alamat'));
     }
+
+    //===================================================================================================
     public function tampil_ld2(Request $request)
     {
+        $kota = $request->kota;
+        $nama_komunitas = $request->nama_komunitas;
+        $alamat = $request->alamat;
+        $provinsi = $request->provinsi;
+
         if ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat == '') {
             $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
                 ->get();
@@ -744,15 +853,21 @@ class LaporanController extends Controller
                 ->where('alamat', $request->alamat)
                 ->get();
         }
-        return view('LAPORAN.KOMUNITAS.tampil_ld2', compact('data'));
+        return view('LAPORAN.KOMUNITAS.tampil_ld2', compact('data', 'provinsi', 'kota', 'nama_komunitas', 'alamat'));
     }
 
     //LAPORAN S 5
+    //===================================================================================================
     public function tampil_le1(Request $request)
     {
         $request->validate([
             'tahun_terbit' => ['nullable', 'numeric'],
         ]);
+
+        $tahun_terbit = $request->tahun_terbit;
+        $judul = $request->judul;
+        $peneliti = $request->peneliti;
+        $abstrak = $request->abstrak;
 
         if ($request->tahun_terbit == '' and $request->judul == '' and $request->peneliti == '' and $request->abstrak == '') {
             $data = Penelitian::all();
@@ -811,6 +926,6 @@ class LaporanController extends Controller
                 ->orWhere('judul', 'like', '%' . $request->judul . '%')
                 ->get();
         }
-        return view('LAPORAN.PENELITIAN.tampil_le1', compact('data'));
+        return view('LAPORAN.PENELITIAN.tampil_le1', compact('data', 'peneliti', 'abstrak', 'tahun_terbit', 'judul'));
     }
 }
