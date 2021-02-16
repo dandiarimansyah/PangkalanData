@@ -35,7 +35,7 @@
         <a href="{{ url('/excel/penelitian/penelitian')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <button href="/import/penelitian/penelitian" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
         </button>
     </div>
