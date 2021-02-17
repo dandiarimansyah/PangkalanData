@@ -4,8 +4,9 @@ namespace App\Imports;
 
 use App\Komunitas_Sastra;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class Komunitas_SastraImport implements ToModel
+class Komunitas_SastraImport implements ToModel, WithHeadingRow
 {
     /**
     * @param array $row
@@ -15,7 +16,13 @@ class Komunitas_SastraImport implements ToModel
     public function model(array $row)
     {
         return new Komunitas_Sastra([
-            //
+            'nama_komunitas'  => $row['nama_komunitas'],
+            'provinsi' => $row['provinsi'],
+            'kota' => $row['kota'],
+            'kecamatan' => $row['kecamatan'],
+            'alamat' => $row['alamat'],
+            'koordinat' => $row['kecamatan'],
+            'keterangan' => $row['keterangan'],
         ]);
     }
 }

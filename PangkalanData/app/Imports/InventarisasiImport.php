@@ -4,8 +4,9 @@ namespace App\Imports;
 
 use App\Inventarisasi;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class InventarisasiImport implements ToModel
+class InventarisasiImport implements ToModel, WithHeadingRow
 {
     /**
     * @param array $row
@@ -15,7 +16,20 @@ class InventarisasiImport implements ToModel
     public function model(array $row)
     {
         return new Inventarisasi([
-            //
+            'unit'  => $row['unit'],
+            'tahun_anggaran' => $row['tahun_anggaran'],
+            'laptop' => $row['laptop'],
+            'komputer' => $row['komputer'],
+            'printer' => $row['printer'],
+            'fotocopy' => $row['fotocopy'],
+            'faximili' => $row['faximili'],
+            'LCD' => $row['LCD'],
+            'TV' => $row['TV'],
+            'lain' => $row['lain'],
+            'furniture' => $row['furniture'],
+            'roda_dua' => $row['roda_dua'],
+            'roda_empat' => $row['roda_empat'],
+            'roda_enam' => $row['roda_enam'],
         ]);
     }
 }
