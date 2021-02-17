@@ -29,10 +29,10 @@
     </div>
 
     <div class="judul" style="display:flex; justify-content:center">
-        <a href="{{ url('/pdf/kebahasaan/kamus_ensiklopedia')}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/pdf/kebahasaan/kamus_ensiklopedia?info_produk={$info_produk}&judul={$judul}&tim_redaksi={$tim_redaksi}&kategori={$kategori}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
         </a>
-        <a href="{{ url('/excel/kebahasaan/kamus_ensiklopedia')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/excel/kebahasaan/kamus_ensiklopedia?info_produk={$info_produk}&judul={$judul}&tim_redaksi={$tim_redaksi}&kategori={$kategori}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
         <button href="/import/kebahasaan/kamus_ensiklopedia" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">

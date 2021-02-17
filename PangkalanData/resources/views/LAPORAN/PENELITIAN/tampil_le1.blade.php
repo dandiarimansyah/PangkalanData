@@ -29,10 +29,10 @@
     </div>
 
     <div class="judul" style="display:flex; justify-content:center">
-        <a href="{{ url('/pdf/penelitian/penelitian')}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/pdf/penelitian/penelitian?tahun_terbit={$tahun_terbit}&judul={$judul}&peneliti={$peneliti}&abstrak={$abstrak}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
         </a>
-        <a href="{{ url('/excel/penelitian/penelitian')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/excel/penelitian/penelitian?tahun_terbit={$tahun_terbit}&judul={$judul}&peneliti={$peneliti}&abstrak={$abstrak}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
         <button href="/import/penelitian/penelitian" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
