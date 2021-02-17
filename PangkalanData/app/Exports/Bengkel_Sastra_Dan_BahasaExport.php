@@ -27,34 +27,26 @@ class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, Wi
      */
     public function collection()
     {
-        if ($request->nama_kegiatan == '' and $request->kota == '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
+        if ($this->nama_kegiatan == '' and $this->kota == '') {
+            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $this->provinsi)
                 ->get();
-        } elseif ($request->nama_kegiatan != '' and $request->kota == '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('nama_kegiatan', $request->nama_kegiatan)
+        } elseif ($this->nama_kegiatan != '' and $this->kota == '') {
+            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $this->provinsi)
+                ->where('nama_kegiatan', $this->nama_kegiatan)
                 ->get();
-        } elseif ($request->nama_kegiatan == '' and $request->kota != '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+        } elseif ($this->nama_kegiatan == '' and $this->kota != '') {
+            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $this->provinsi)
+                ->where('kota', $this->kota)
                 ->get();
-        } elseif ($request->nama_kegiatan != '' and $request->kota != '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
-                ->where('nama_kegiatan', $request->nama_kegiatan)
+        } elseif ($this->nama_kegiatan != '' and $this->kota != '') {
+            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $this->provinsi)
+                ->where('kota', $this->kota)
+                ->where('nama_kegiatan', $this->nama_kegiatan)
                 ->get();
         }
 
         return $data;
     }
-
-    /**
-     * @return \Illuminate\Support\Collection
-     */
-    // public function collection()
-    // {
-    //     return $this->data;
-    // }
 
     public function map($data): array
     {
@@ -76,9 +68,16 @@ class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, Wi
     {
         return [
             [
-                'Unit',
-                'Tahun Anggaran',
-                'Nilai Anggaran',
+                'Provinsi',
+                'Kota',
+                'Tanggal Awal',
+                'Tanggal Akhir',
+                'Nama Kegiatan',
+                'Pemateri',
+                'Jumlah Peserta',
+                'Jumlah Sekolah Binaan',
+                'Nama Sekolah Binaan',
+                'Aktivitas',
             ]
         ];
     }
@@ -103,7 +102,7 @@ class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, Wi
 
         return [
             AfterSheet::class => function (AfterSheet $event) use ($bold, $center) {
-                $event->sheet->getStyle('A1:C1')->applyFromArray($bold);
+                $event->sheet->getStyle('A1:S1')->applyFromArray($bold);
             }
         ];
     }

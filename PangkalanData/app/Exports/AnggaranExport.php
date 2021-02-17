@@ -38,14 +38,6 @@ class AnggaranExport implements FromCollection, WithMapping, WithHeadings, Shoul
         return $data;
     }
 
-    /**
-     * @return \Illuminate\Support\Collection
-     */
-    // public function collection()
-    // {
-    //     return $this->data;
-    // }
-
     public function map($data): array
     {
         return [
