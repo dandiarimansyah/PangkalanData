@@ -75,16 +75,15 @@ class JurnalExport implements FromCollection, WithMapping, WithHeadings, ShouldA
     public function map($data): array
     {
         return [
-            $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->kategori,
+            $data->judul,
+            $data->tim_redaksi,
+            $data->volume,
+            $data->no_issn,
+            $data->lingkup,
+            $data->penerbit,
+            $data->keterangan,
+            $data->info_produk,
         ];
     }
 
@@ -92,16 +91,15 @@ class JurnalExport implements FromCollection, WithMapping, WithHeadings, ShouldA
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Kategori',
+                'Judul',
+                'Tim Redaksi',
+                'Volume',
+                'No ISSN',
+                'Lingkup',
+                'Penerbit',
+                'Keterangan',
+                'Info Produk',
             ]
         ];
     }

@@ -75,16 +75,13 @@ class Komunitas_SastraExport implements FromCollection, WithMapping, WithHeading
     public function map($data): array
     {
         return [
+            $data->nama_komunitas,
             $data->provinsi,
             $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->kecamatan,
+            $data->alamat,
+            $data->koordinat,
+            $data->keterangan,
         ];
     }
 
@@ -92,16 +89,13 @@ class Komunitas_SastraExport implements FromCollection, WithMapping, WithHeading
     {
         return [
             [
+                'Nama Komunitas',
                 'Provinsi',
                 'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Kecamatan',
+                'Alamat',
+                'Koordinat',
+                'Keterangan',
             ]
         ];
     }

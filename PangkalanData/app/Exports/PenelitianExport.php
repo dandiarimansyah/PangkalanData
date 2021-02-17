@@ -95,16 +95,17 @@ class PenelitianExport implements FromCollection, WithMapping, WithHeadings, Sho
     public function map($data): array
     {
         return [
-            $data->abstrak,
+            $data->kategori,
+            $data->unit,
+            $data->peneliti,
+            $data->judul,
+            $data->kerja_sama,
+            $data->tanggal_awal,
+            $data->tanggal_akhir,
+            $data->lama_penelitian + '' + $data->tipe_waktu,
+            $data->publikasi,
             $data->tahun_terbit,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->abstrak,
         ];
     }
 
@@ -112,16 +113,16 @@ class PenelitianExport implements FromCollection, WithMapping, WithHeadings, Sho
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Kategori',
+                'Unit',
+                'Peneliti',
+                'Judul',
+                'Kerja Sama',
+                'Tgl Awal Penelitian',
+                'Tgl Selesai Penelitian',
+                'Publikasi',
+                'Tahun Terbit',
+                'Abstrak',
             ]
         ];
     }

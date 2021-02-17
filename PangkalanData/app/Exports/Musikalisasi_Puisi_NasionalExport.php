@@ -51,16 +51,12 @@ class Musikalisasi_Puisi_NasionalExport implements FromCollection, WithMapping, 
     public function map($data): array
     {
         return [
-            $data->provinsi,
-            $data->pemenang,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->tahun,
+            $data->pemenang_1,
+            $data->pemenang_2,
+            $data->pemenang_3,
+            $data->favorit,
+            $data->keterangan,
         ];
     }
 
@@ -68,16 +64,12 @@ class Musikalisasi_Puisi_NasionalExport implements FromCollection, WithMapping, 
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Tahun',
+                'Pemenang 1',
+                'Pemenang 2',
+                'Pemenang 2',
+                'Favorit',
+                'Keterangan',
             ]
         ];
     }

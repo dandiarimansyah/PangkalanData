@@ -65,16 +65,11 @@ class PesuluhExport implements FromCollection, WithMapping, WithHeadings, Should
     public function map($data): array
     {
         return [
-            $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->nama,
+            $data->tempat_lahir,
+            $data->tanggal_lahir,
+            $data->instansi,
+            $data->tingkat,
         ];
     }
 
@@ -82,16 +77,11 @@ class PesuluhExport implements FromCollection, WithMapping, WithHeadings, Should
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Nama',
+                'Tempat Lahir',
+                'Tanggal Lahir',
+                'Instansi',
+                'Tingkat',
             ]
         ];
     }

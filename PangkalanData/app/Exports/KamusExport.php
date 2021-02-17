@@ -75,16 +75,16 @@ class KamusExport implements FromCollection, WithMapping, WithHeadings, ShouldAu
     public function map($data): array
     {
         return [
-            $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->kategori,
+            $data->judul,
+            $data->tim_redaksi,
+            $data->edisi,
+            $data->no_isbn,
+            $data->lingkup,
+            $data->penerbit,
+            $data->tahun_terbit,
+            $data->keterangan,
+            $data->info_produk,
         ];
     }
 
@@ -92,16 +92,16 @@ class KamusExport implements FromCollection, WithMapping, WithHeadings, ShouldAu
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Kategori',
+                'Judul',
+                'Tim Redaksi',
+                'Edisi',
+                'No ISBN',
+                'Lingkup',
+                'Penerbit',
+                'Tahun Terbit',
+                'Keterangan',
+                'Info Produk',
             ]
         ];
     }

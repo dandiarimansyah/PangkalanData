@@ -75,16 +75,13 @@ class Terbitan_UmumExport implements FromCollection, WithMapping, WithHeadings, 
     public function map($data): array
     {
         return [
-            $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->kategori,
+            $data->judul,
+            $data->penulis,
+            $data->no_isbn,
+            $data->tahun_terbit,
+            $data->deskripsi,
+            $data->info_produk,
         ];
     }
 
@@ -92,16 +89,13 @@ class Terbitan_UmumExport implements FromCollection, WithMapping, WithHeadings, 
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Kategori',
+                'Judul',
+                'Penulis',
+                'No ISBN',
+                'Tahun Terbit',
+                'Deskripsi Fisik',
+                'Info Produk',
             ]
         ];
     }

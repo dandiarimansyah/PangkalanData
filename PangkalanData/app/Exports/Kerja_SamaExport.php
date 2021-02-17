@@ -41,16 +41,17 @@ class Kerja_SamaExport implements FromCollection, WithMapping, WithHeadings, Sho
     public function map($data): array
     {
         return [
-            $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->kategori,
+            $data->instansi,
+            $data->tanggal_awal,
+            $data->tanggal_akhir,
+            $data->nomor,
+            $data->perihal,
+            $data->keterangan,
+            $data->ttd_1,
+            $data->instansi_1,
+            $data->ttd_2,
+            $data->instansi_2,
         ];
     }
 
@@ -58,16 +59,17 @@ class Kerja_SamaExport implements FromCollection, WithMapping, WithHeadings, Sho
     {
         return [
             [
-                'Provinsi',
-                'Kota',
+                'Kategori',
+                'Instansi',
                 'Tanggal Awal',
                 'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Nomor',
+                'Perihal',
+                'Keterangan',
+                'TTD 1',
+                'Instansi 1',
+                'TTD 2',
+                'Instansi 2',
             ]
         ];
     }

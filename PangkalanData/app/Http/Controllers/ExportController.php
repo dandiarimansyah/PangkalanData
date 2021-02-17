@@ -91,12 +91,7 @@ class ExportController extends Controller
     //=======================================================================================
     public function pdf_a3(Request $request)
     {
-        // if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
-        //     $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
-        //         ->get();
-        // } else {
-        //     $data = Realisasi_Anggaran::all();
-        // }
+        $data = Kepegawaian::all();
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a3', compact('data'));
 
@@ -145,12 +140,7 @@ class ExportController extends Controller
     //=======================================================================================
     public function pdf_a6(Request $request)
     {
-        // if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
-        //     $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
-        //         ->get();
-        // } else {
-        //     $data = Realisasi_Anggaran::all();
-        // }
+        $data = Perpustakaan::all();
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a6', compact('data'));
 
@@ -161,12 +151,7 @@ class ExportController extends Controller
     //=======================================================================================
     public function pdf_a7(Request $request)
     {
-        // if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
-        //     $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
-        //         ->get();
-        // } else {
-        //     $data = Realisasi_Anggaran::all();
-        // }
+        $data = Inventarisasi::all();
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a7', compact('data'));
 

@@ -24,16 +24,20 @@ class InventarisasiExport implements FromCollection, WithMapping, WithHeadings, 
     public function map($data): array
     {
         return [
-            $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->unit,
+            $data->tahun_anggaran,
+            $data->laptop,
+            $data->komputer,
+            $data->printer,
+            $data->fotocopy,
+            $data->faximili,
+            $data->LCD,
+            $data->TV,
+            $data->lain,
+            $data->furniture,
+            $data->roda_dua,
+            $data->roda_empat,
+            $data->roda_enam,
         ];
     }
 
@@ -41,16 +45,19 @@ class InventarisasiExport implements FromCollection, WithMapping, WithHeadings, 
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Unit',
+                'Tahun Anggaran',
+                'Laptop',
+                'Komputer',
+                'Printer',
+                'Fotocopy',
+                'Faximili',
+                'LCD',
+                'TV',
+                'Furniture',
+                'Roda Dua',
+                'Roda Empat',
+                'Roda Enam',
             ]
         ];
     }

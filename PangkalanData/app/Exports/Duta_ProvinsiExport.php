@@ -62,15 +62,16 @@ class Duta_ProvinsiExport implements FromCollection, WithMapping, WithHeadings, 
     {
         return [
             $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->tahun,
+            $data->pemenang_1_1,
+            $data->pemenang_1_2,
+            $data->pemenang_2_1,
+            $data->pemenang_2_2,
+            $data->pemenang_3_1,
+            $data->pemenang_3_2,
+            $data->favorit_1,
+            $data->favorit_2,
+            $data->keterangan,
         ];
     }
 
@@ -79,15 +80,16 @@ class Duta_ProvinsiExport implements FromCollection, WithMapping, WithHeadings, 
         return [
             [
                 'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Tahun',
+                'Pemenang I (1)',
+                'Pemenang I (2)',
+                'Pemenang II (1)',
+                'Pemenang II (2)',
+                'Pemenang III (1)',
+                'Pemenang III (2)',
+                'Favorit 1',
+                'Favorit 2',
+                'Keterangan',
             ]
         ];
     }

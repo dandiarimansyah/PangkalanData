@@ -65,16 +65,9 @@ class Penghargaan_BahasaExport implements FromCollection, WithMapping, WithHeadi
     public function map($data): array
     {
         return [
-            $data->provinsi,
             $data->kategori,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->tahun,
+            $data->deskripsi,
         ];
     }
 
@@ -82,16 +75,9 @@ class Penghargaan_BahasaExport implements FromCollection, WithMapping, WithHeadi
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Kategori',
+                'Tahun',
+                'Deskripsi',
             ]
         ];
     }

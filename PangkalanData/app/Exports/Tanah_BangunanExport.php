@@ -45,16 +45,15 @@ class Tanah_BangunanExport implements FromCollection, WithMapping, WithHeadings,
     public function map($data): array
     {
         return [
-            $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->kantor,
+            $data->alamat,
+            $data->status_tanah,
+            $data->sertif_tanah,
+            $data->status_bangunan,
+            $data->imb,
+            $data->kondisi,
+            $data->status_peroleh,
+            $data->keterangan,
         ];
     }
 
@@ -62,16 +61,15 @@ class Tanah_BangunanExport implements FromCollection, WithMapping, WithHeadings,
     {
         return [
             [
-                'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Kantor',
+                'Alamat',
+                'Status Tanah',
+                'Sertif Tanah',
+                'Status Bangunan',
+                'IMB',
+                'Kondisi Bangunan',
+                'Status Pemerolehan',
+                'Keterangan',
             ]
         ];
     }

@@ -26,15 +26,12 @@ class PerpustakaanExport implements FromCollection, WithMapping, WithHeadings, S
     {
         return [
             $data->provinsi,
-            $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
-            $data->nama_kegiatan,
-            $data->pemateri,
-            $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->unit,
+            $data->jumlah_buku,
+            $data->jumlah_judul,
+            $data->jenis_buku,
+            $data->jumlah_pengunjung,
+            $data->sumber_data,
         ];
     }
 
@@ -43,15 +40,12 @@ class PerpustakaanExport implements FromCollection, WithMapping, WithHeadings, S
         return [
             [
                 'Provinsi',
-                'Kota',
-                'Tanggal Awal',
-                'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
-                'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Unit Kerja',
+                'Jumlah Buku',
+                'Jumlah Judul',
+                'Jenis Buku',
+                'Jumlah Pengunjung',
+                'Sumber Data',
             ]
         ];
     }

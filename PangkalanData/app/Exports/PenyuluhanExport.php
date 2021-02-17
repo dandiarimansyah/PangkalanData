@@ -77,14 +77,13 @@ class PenyuluhanExport implements FromCollection, WithMapping, WithHeadings, Sho
         return [
             $data->provinsi,
             $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
             $data->nama_kegiatan,
-            $data->pemateri,
+            $data->tanggal_awal,
+            $data->tanggal_akhir,
+            $data->narasumber,
+            $data->sasaran,
             $data->jumlah_peserta,
-            $data->jumlah_sekolah_yang_dibina,
-            $data->nama_sekolah_yang_dibina,
-            $data->aktivitas,
+            $data->materi,
         ];
     }
 
@@ -94,14 +93,13 @@ class PenyuluhanExport implements FromCollection, WithMapping, WithHeadings, Sho
             [
                 'Provinsi',
                 'Kota',
+                'Nama Kegiatan',
                 'Tanggal Awal',
                 'Tanggal Akhir',
-                'Nama Kegiatan',
-                'Pemateri',
+                'Narasumber',
+                'Sasaran',
                 'Jumlah Peserta',
-                'Jumlah Sekolah Binaan',
-                'Nama Sekolah Binaan',
-                'Aktivitas',
+                'Materi',
             ]
         ];
     }
