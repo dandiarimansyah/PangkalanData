@@ -29,10 +29,10 @@
     </div>
 
     <div class="judul" style="display:flex; justify-content:center">
-        <a href="{{ url('/pdf/komunitas/komunitas_sastra')}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/pdf/komunitas/komunitas_sastra?kota={$kota}&nama_komunitas={$nama_komunitas}&alamat={$alamat}&provinsi={$provinsi}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
         </a>
-        <a href="{{ url('/excel/komunitas/komunitas_sastra')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/excel/komunitas/komunitas_sastra?kota={$kota}&nama_komunitas={$nama_komunitas}&alamat={$alamat}&provinsi={$provinsi}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
         <button href="/import/komunitas/komunitas_sastra" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
