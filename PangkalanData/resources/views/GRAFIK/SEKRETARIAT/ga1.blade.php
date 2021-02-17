@@ -8,9 +8,9 @@
 @include('PARTIAL.MenuGrafik')
 
 <?php
-$koneksi    = mysqli_connect("localhost", "root", "", "pangkalan_data");
-$nilai_anggaran  = mysqli_query($koneksi, "SELECT nilai_anggaran FROM anggaran order by ID asc");
-$tahun_anggraran       = mysqli_query($koneksi, "SELECT tahun_anggraran FROM anggaran order by ID asc");
+    $koneksi    = mysqli_connect("localhost", "root", "", "pangkalan_data");
+    $nilai_anggaran  = mysqli_query($koneksi, "SELECT nilai_anggaran FROM anggaran order by ID asc");
+    $tahun_anggraran       = mysqli_query($koneksi, "SELECT tahun_anggraran FROM anggaran order by ID asc");
 ?>
 
 <script src="{{ asset ('js/Chart.js') }}"></script>
@@ -81,7 +81,7 @@ Highcharts.chart('chartTahun', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Nilai Anggaran'
+            text: 'Jumlah Data'
         }
     },
     tooltip: {
@@ -99,7 +99,7 @@ Highcharts.chart('chartTahun', {
         }
     },
     series: [{
-        name: 'Tahun Anggaran',
+        name: 'Data Anggaran',
         data: [1,2]
         // [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
 

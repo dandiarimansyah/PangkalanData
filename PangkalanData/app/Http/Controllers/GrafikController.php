@@ -40,8 +40,8 @@ class GrafikController extends Controller
         // menyiapkan data untuk chart
         $categories = [];
 
-        foreach($anggaran as $ta){
-            $categories[] = $ta->nama;
+        foreach ($anggaran as $a) {
+            $categories[] = $a->nilai_anggaran;
         }
 
         return view('GRAFIK.SEKRETARIAT.ga1', ['categories' => $categories]);
@@ -84,15 +84,15 @@ class GrafikController extends Controller
         return view('GRAFIK.KESASTRAAN.gc1');
     }
 
-     //GRAFIK S 4
-     public function gd1()
-     {
-         return view('GRAFIK.KOMUNITAS.gd1');
-     }
+    //GRAFIK S 4
+    public function gd1()
+    {
+        return view('GRAFIK.KOMUNITAS.gd1');
+    }
 
-      //GRAFIK S 5
-      public function ge1()
-      {
-          return view('GRAFIK.PENELITIAN.ge1');
-      }
+    //GRAFIK S 5
+    public function ge1()
+    {
+        return view('GRAFIK.PENELITIAN.ge1');
+    }
 }
