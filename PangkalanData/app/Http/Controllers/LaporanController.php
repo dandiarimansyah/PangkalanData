@@ -39,9 +39,9 @@ class LaporanController extends Controller
     }
     public function la3()
     {
-        $kepegawaian = Kepegawaian::all();
+        $data = Kepegawaian::all();
 
-        return view('LAPORAN.SEKRETARIAT.la3', compact('kepegawaian'));
+        return view('LAPORAN.SEKRETARIAT.la3', compact('data'));
     }
     public function la4()
     {
@@ -53,15 +53,15 @@ class LaporanController extends Controller
     }
     public function la6()
     {
-        $perpustakaan = Perpustakaan::all();
+        $data = Perpustakaan::all();
 
-        return view('LAPORAN.SEKRETARIAT.la6', compact('perpustakaan'));
+        return view('LAPORAN.SEKRETARIAT.la6', compact('data'));
     }
     public function la7()
     {
-        $inventarisasi = Inventarisasi::all();
+        $data = Inventarisasi::all();
 
-        return view('LAPORAN.SEKRETARIAT.la7', compact('inventarisasi'));
+        return view('LAPORAN.SEKRETARIAT.la7', compact('data'));
     }
 
     //LAPORAN S 2
