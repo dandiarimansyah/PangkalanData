@@ -23,27 +23,32 @@
                 <tr>
                     <td style="font-weight:bold">Sekretariat</td>
                     <td style="text-align:left">Tanah dan Bangunan</td>
-                    <td>5</td>
+                    <td>{{Total}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Kebahasaan</td>
                     <td style="text-align:left">Penyuluhan</td>
-                    <td>10</td>
+                    <td>{{Total1}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Kesastraan</td>
                     <td style="text-align:left">Penghargaan Sastra</td>
-                    <td>10</td>
+                    <td>{{Total2}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Komunitas</td>
-                    <td></td>
-                    <td></td>
+                    <td style="text-align:left">Komunitas Bahasa</td>
+                    <td>{{Total3}}</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold">Data Komunitas</td>
+                    <td style="text-align:left">Komunitas Bahasa</td>
+                    <td>{{Total4}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Penelitian</td>
                     <td style="text-align:left">Penelitian</td>
-                    <td>8</td>
+                    <td>{{Total5}}</td>
 
                 </tr>
             </tbody>
@@ -153,10 +158,10 @@
                     <td>{{$Duta_Provinsi_V}}</td>
                 </tr>
                 <tr>
-                    <td>{{}}</td>
-                    <td>{{}}</td>
-                    <td style="font-weight:bold">143</td>
-                    <td style="font-weight:bold">84</td>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight:bold">{{Total1}}</td>
+                    <td style="font-weight:bold">{{Total1_V}}</td>
                 </tr>
 
                 <tr>
@@ -184,23 +189,30 @@
                     <td>{{$Musikalisasi_Puisi_Provinsi_V}}</td>
                 </tr>
                 <tr>
-                    <td>{{}}</td>
-                    <td>{{}}</td>
-                    <td style="font-weight:bold">30</td>
-                    <td style="font-weight:bold">27</td>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight:bold">{{Total2}}</td>
+                    <td style="font-weight:bold">{{Total2_V}}</td>
                 </tr>
             
                 <tr>
                     <td style="font-weight:bold">Data Komunitas</td>
-                    <td style="text-align:left">Komunitas Bahasa dan Sastra</td>
+                    <td style="text-align:left">Komunitas Bahasa</td>
                     <td>{{$Komunitas_Bahasa}}</td>
                     <td>{{$Komunitas_Bahasa_V}}</td>
                 </tr>
+
                 <tr>
-                    <td>{{}}</td>
-                    <td>{{}}</td>
-                    <td style="font-weight:bold">392</td>
-                    <td style="font-weight:bold">392</td>
+                    <td style="text-align:left">Komunitas Sastra</td>
+                    <td>{{$Komunitas_Sastra}}</td>
+                    <td>{{$Komunitas_Sastra_V}}</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight:bold">{{Total3}}</td>
+                    <td style="font-weight:bold">{{Total3_V}}</td>
                 </tr>
 
                 <tr>
@@ -210,10 +222,10 @@
                     <td>{{$Penelitian_V}}</td>
                 </tr>
                 <tr>
-                    <td>{{}}</td>
-                    <td>{{}}</td>
-                    <td style="font-weight:bold">255</td>
-                    <td style="font-weight:bold">247</td>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight:bold">{{Total4}}</td>
+                    <td style="font-weight:bold">{{Total4_V}}</td>
                 </tr>
 
                 <tr class="total">
