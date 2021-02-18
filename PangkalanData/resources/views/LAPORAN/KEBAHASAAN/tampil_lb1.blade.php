@@ -28,6 +28,8 @@
         <th>LAPORAN DATA KAMUS / ENSIKLOPEDIA</th>
     </div>
 
+    @auth
+        @if (Auth::user()->level != 'tamu')
     <div class="judul" style="display:flex; justify-content:center">
         <a href="{{ url("/pdf/kebahasaan/kamus_ensiklopedia?info_produk={$info_produk}&judul={$judul}&tim_redaksi={$tim_redaksi}&kategori={$kategori}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
@@ -39,6 +41,8 @@
             IMPORT EXCEL
         </button>
     </div>
+    @endif
+    @endauth
 
     <!-- TABLE -->
     <div class="validasi">

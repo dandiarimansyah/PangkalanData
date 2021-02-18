@@ -28,6 +28,8 @@
         <th>LAPORAN DATA REALISASI ANGGARAN UNIT/SATUAN KERJA</th>
     </div>
 
+    @auth
+        @if (Auth::user()->level != 'tamu')
     <div class="judul" style="display:flex; justify-content:center">
         <a href="{{ url("/pdf/sekretariat/realisasi_anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
@@ -39,6 +41,8 @@
             IMPORT EXCEL
         </button>
     </div>
+    @endif
+    @endauth
     
     <!-- TABLE -->
     <div class="validasi">
