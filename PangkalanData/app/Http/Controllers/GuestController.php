@@ -122,6 +122,59 @@ class GuestController extends Controller
             $Komunitas_Sastra_V +
             $Penelitian_V;
 
+        $Total1 = $Anggaran +
+            $Realisasi_Anggaran +
+            $Kepegawaian +
+            $Kerja_Sama +
+            $Tanah_Bangunan +
+            $Perpustakaan +
+            $Inventarisasi;
+
+        $Total1_V = $Anggaran_V +
+            $Realisasi_Anggaran_V +
+            $Kepegawaian_V +
+            $Kerja_Sama_V +
+            $Tanah_Bangunan_V +
+            $Perpustakaan_V +
+            $Inventarisasi_V;
+
+        $Total2 = $Kamus +
+            $Jurnal +
+            $Terbitan_Umum +
+            $Penyuluhan +
+            $Pesuluh +
+            $Penghargaan_Bahasa +
+            $Duta_Nasional +
+            $Duta_Provinsi;
+
+        $Total2_V = $Kamus_V +
+            $Jurnal_V +
+            $Terbitan_Umum_V +
+            $Penyuluhan_V +
+            $Pesuluh_V +
+            $Penghargaan_Bahasa_V +
+            $Duta_Nasional_V +
+            $Duta_Provinsi_V;
+
+        $Total3 = $Bengkel_Sastra_Dan_Bahasa +
+            $Penghargaan_Sastra +
+            $Musikalisasi_Puisi_Nasional +
+            $Musikalisasi_Puisi_Provinsi;
+
+        $Total3_V = $Bengkel_Sastra_Dan_Bahasa_V +
+            $Penghargaan_Sastra_V +
+            $Musikalisasi_Puisi_Nasional_V +
+            $Musikalisasi_Puisi_Provinsi_V;
+
+        $Total4 = $Komunitas_Bahasa +
+            $Komunitas_Sastra;
+
+        $Total4_V = $Komunitas_Bahasa_V +
+            $Komunitas_Sastra_V;
+
+        $Total5 = $Penelitian;
+        $Total5_V = $Penelitian_V;
+
         return view('GUEST.g_index', compact(
             'Anggaran',
             'Realisasi_Anggaran',
@@ -171,6 +224,16 @@ class GuestController extends Controller
 
             'Total',
             'Total_V',
+            'Total1',
+            'Total1_V',
+            'Total2',
+            'Total2_V',
+            'Total3',
+            'Total3_V',
+            'Total4',
+            'Total4_V',
+            'Total5',
+            'Total5_V',
         ));
     }
 
