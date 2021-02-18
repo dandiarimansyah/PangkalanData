@@ -27,6 +27,47 @@ body {
     margin: 0;
 }
 
+.judul_beranda {
+    margin: 20px auto;
+    width: 100%;
+}
+
+.judul_beranda p {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 8px solid black;
+    margin: auto;
+    height: 80px;
+    max-width: 1000px;
+}
+
+.gambar_beranda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    min-height: 620px;
+    width: 1050px;
+}
+
+.gambar_beranda img {
+    border: 10px solid blue;
+    border-radius: 10px;
+}
+
+.gambar_beranda .caption {
+    padding: 10px;
+    background: rgb(71, 71, 71);
+    color: cornsilk;
+}
+
+.gambar_carousel {
+    min-height: 600px;
+    max-width: 1400px;
+}
+
 .validate {
     display: flex;
     flex-direction: column;
