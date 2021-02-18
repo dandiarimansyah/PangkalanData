@@ -58,33 +58,34 @@
                         <td>{{ $a -> info_produk}}</td>
 
                         <td>
-                            @auth
-                                @if (Auth::user()->level != 'tamu')
-                                    @if ($a->media == "")
-                                    <div style="margin:5px auto">
-                                        <form method="POST" id="media_form" role="form" action="/media/sekretariat/kerja_sama/{{ $a->id }}" enctype="multipart/form-data">
-                                            @csrf
-                                            @method('PUT')
-                                            <input style="width: 200px" type="file" name="media">
-                                            <div style="margin:10px auto">
-                                                <input type="submit" value="Unggah" class="btn btn-info btn-sm">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    @else
-                                        <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
-                                        <a id="hapus_media" href="{{ url('/media/sekretariat/kerja_sama/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Media</a>
-                                    @endif
+                        @auth
+                            @if (Auth::user()->level != 'tamu')
+                                @if ($a->media == "")
+                                <div style="margin:5px auto">
+                                    <form method="POST" id="media_form" role="form" action="/media/sekretariat/kerja_sama/{{ $a->id }}" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('PUT')
+                                        <input style="width: 200px" type="file" name="media">
+                                        <div style="margin:10px auto">
+                                            <input type="submit" value="Unggah" class="btn btn-info btn-sm">
+                                        </div>
+                                    </form>
+                                </div>
                                 @else
-                                    @if ($a->media == "")
-                                    <div style="margin:5px auto">
-                                        <p style="font-size: 12px">Tidak ada Media</p>
-                                    </div>
-                                    @else
-                                        <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
-                                    @endif
+                                    <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
+                                    <a id="hapus_media" href="{{ url('/media/sekretariat/kerja_sama/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Media</a>
                                 @endif
-                            @endauth
+                            @else
+                                @if ($a->media == "")
+                                <div style="margin:5px auto">
+                                    <p style="font-size: 12px">Tidak ada Media</p>
+                                </div>
+                                @else
+                                    <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
+                                @endif
+                            @endif
+                        @endauth
+
                         </td>
                         
                   </tr>
