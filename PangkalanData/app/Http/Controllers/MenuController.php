@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Auth;
 
 class MenuController extends Controller
 {
+    public function beranda()
+    {
+        $user = Auth::user();
+
+        return view('beranda', compact('user'));
+    }
     public function media()
     {
         $user = Auth::user();

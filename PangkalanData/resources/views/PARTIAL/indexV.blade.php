@@ -31,6 +31,7 @@
 
             <ul>
                 @auth
+                    <li class="{{ (request()->is('beranda*')) ? 'aktif' : 'nonaktif' }}"><a href="/beranda">BERANDA</a></li>    
                     @if (auth()->user()->level == 'operator')
                         <li class="{{ (request()->is('operator/input*')) ? 'aktif' : 'nonaktif' }}"><a href="/operator/input">INPUT</a></li>    
                         <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : 'nonaktif' }}"><a href="/operator/edit">EDIT</a></li>

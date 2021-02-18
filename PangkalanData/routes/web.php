@@ -38,6 +38,7 @@ Route::get('/logout', function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
+    Route::get('/beranda', [MenuController::class, 'beranda']);
     Route::get('/media', [MenuController::class, 'media']);
     Route::get('/laporan', [MenuController::class, 'laporan']);
     Route::get('/grafik', [MenuController::class, 'grafik']);

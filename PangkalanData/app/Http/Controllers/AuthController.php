@@ -35,11 +35,11 @@ class AuthController extends Controller
         if (Auth::attempt($emailPassword)) {
             $user = Auth::user();
             if ($user->level == 'operator') {
-                return redirect()->intended('operator/input');
+                return redirect()->intended('/beranda');
             } else if ($user->level == 'validator') {
-                return redirect()->intended('validator/validasi');
+                return redirect()->intended('/beranda');
             } else if ($user->level == 'tamu') {
-                return redirect()->intended('/data');
+                return redirect()->intended('/beranda');
             }
             return redirect()->intended('/login');
         }
