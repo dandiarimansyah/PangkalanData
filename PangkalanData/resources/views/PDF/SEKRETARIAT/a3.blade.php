@@ -118,8 +118,9 @@
                     </tr>
                 @endforelse
 
-            </tbody>
         </table>
 
-    </body>
-    </html>
+        </div>
+
+</body>
+</html>
