@@ -10,6 +10,8 @@
         <th>DATA INVENTARISASI BARANG MILIK NEGARA</th>
     </div>
 
+    @auth
+        @if (Auth::user()->level != 'tamu')
     <div class="judul" style="display:flex; justify-content:center">
         <button onclick="back()" type="button" class="btn btn-secondary" style="border-radius: 5px; margin-right:15px; width: 130px">
             <i class="fa fa-arrow-left" aria-hidden="true"></i> 
@@ -25,6 +27,8 @@
             IMPORT EXCEL
         </button>
     </div>
+    @endif
+    @endauth
 
     <div class="ketjudul">
         <th>Jumlah : 41 Data</th>

@@ -28,6 +28,8 @@
         <th>LAPORAN DATA KOMUNITAS BAHASA</th>
     </div>
 
+    @auth
+        @if (Auth::user()->level != 'tamu')
     <div class="judul" style="display:flex; justify-content:center">
         <a href="{{ url("/pdf/komunitas/komunitas_bahasa?kota={$kota}&nama_komunitas={$nama_komunitas}&alamat={$alamat}&provinsi={$provinsi}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
@@ -39,6 +41,8 @@
             IMPORT EXCEL
         </button>
     </div>
+    @endif
+    @endauth
     
     <!-- TABLE -->
     <div class="validasi">
