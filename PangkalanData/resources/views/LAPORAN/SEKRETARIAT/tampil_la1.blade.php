@@ -28,17 +28,22 @@
         <th>LAPORAN DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
     </div>
 
-    <div class="judul" style="display:flex; justify-content:center; margin-bottom:15px">
-        <a href="{{ url("/pdf/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
-            EXPORT KE PDF
-        </a>
-        <a href="{{ url("/excel/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
-            EXPORT KE EXCEL
-        </a>
-        <button href="/import/sekretariat/anggaran" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
-            IMPORT EXCEL
-        </button>
-    </div>
+    @auth
+        @if (Auth::user()->level != 'tamu')
+            <div class="judul" style="display:flex; justify-content:center; margin-bottom:15px">
+                <a href="{{ url("/pdf/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
+                    EXPORT KE PDF
+                </a>
+                <a href="{{ url("/excel/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+                    EXPORT KE EXCEL
+                </a>
+                <button href="/import/sekretariat/anggaran" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+                    IMPORT EXCEL
+                </button>
+            </div>
+        @endif
+    @endauth
+
 
     <!-- TABLE -->
     <div class="validasi">
