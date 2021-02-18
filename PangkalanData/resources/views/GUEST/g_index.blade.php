@@ -82,79 +82,79 @@
                 <tr>
                     <td></td>
                     <td style="text-align:left">Kerja Sama</td>
-                    <td>127</td>
-                    <td>68</td>
+                    <td>{{$Kerja_Sama}}</td>
+                    <td>{{$Kerja_Sama_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Tanah Bangunan</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Tanah_Bangunan}}</td>
+                    <td>{{$Tanah_Bangunan_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Perpustakaan</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Perpustakaan}}</td>
+                    <td>{{$Perpustakaan_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Inventarisasi BMN</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Inventarisasi}}</td>
+                    <td>{{$Inventarisasi_V}}</td>
                 </tr>
 
                 <tr>
                     <td style="font-weight:bold">Data Kebahasaan</td>
                     <td style="text-align:left">Kamus/Ensiklopedia</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Kamus}}</td>
+                    <td>{{$Kamus_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Jurnal/Majalah</td>
-                    <td>11</td>
-                    <td>11</td>
+                    <td>{{$Jurnal}}</td>
+                    <td>{{$Jurnal_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Terbitan Umum</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Terbitan_Umum}}</td>
+                    <td>{{$Terbitan_Umum_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Penyuluhan</td>
-                    <td>127</td>
-                    <td>68</td>
+                    <td>{{$Penyuluhan}}</td>
+                    <td>{{$Penyuluhan_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Pesuluh</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Pesuluh}}</td>
+                    <td>{{$Pesuluh_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Penghargaan Bahasa</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Penghargaan_Bahasa}}</td>
+                    <td>{{$Penghargaan_Bahasa_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Duta Bahasa Nasional</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Duta_Nasional}}</td>
+                    <td>{{$Duta_Nasional_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Duta Bahasa Provinsi</td>
-                    <td>5</td>
-                    <td>5</td>
+                    <td>{{$Duta_Provinsi}}</td>
+                    <td>{{$Duta_Provinsi_V}}</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>{{}}</td>
+                    <td>{{}}</td>
                     <td style="font-weight:bold">143</td>
                     <td style="font-weight:bold">84</td>
                 </tr>
@@ -162,30 +162,30 @@
                 <tr>
                     <td style="font-weight:bold">Data Kesastraan</td>
                     <td style="text-align:left">Bengkel Satra</td>
-                    <td>23</td>
-                    <td>23</td>
+                    <td>{{$Bengkel_Sastra_Dan_Bahasa}}</td>
+                    <td>{{$Bengkel_Sastra_Dan_Bahasa_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Penghargaan Satra</td>
-                    <td>3</td>
-                    <td>0</td>
+                    <td>{{$Penghargaan_Sastra}}</td>
+                    <td>{{$Penghargaan_Sastra_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Musikalisasi Puisi Nasional</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{$Musikalisasi_Puisi_Nasional}}</td>
+                    <td>{{$Musikalisasi_Puisi_Nasional_V}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td style="text-align:left">Musikalisasi Puisi Provinsi</td>
-                    <td>4</td>
-                    <td>4</td>
+                    <td>{{$Musikalisasi_Puisi_Provinsi}}</td>
+                    <td>{{$Musikalisasi_Puisi_Provinsi_V}}</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>{{}}</td>
+                    <td>{{}}</td>
                     <td style="font-weight:bold">30</td>
                     <td style="font-weight:bold">27</td>
                 </tr>
@@ -193,12 +193,12 @@
                 <tr>
                     <td style="font-weight:bold">Data Komunitas</td>
                     <td style="text-align:left">Komunitas Bahasa dan Sastra</td>
-                    <td>392</td>
-                    <td>392</td>
+                    <td>{{$Komunitas_Bahasa}}</td>
+                    <td>{{$Komunitas_Bahasa_V}}</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>{{}}</td>
+                    <td>{{}}</td>
                     <td style="font-weight:bold">392</td>
                     <td style="font-weight:bold">392</td>
                 </tr>
@@ -206,12 +206,12 @@
                 <tr>
                     <td style="font-weight:bold">Data Penelitian</td>
                     <td style="text-align:left">Penelitian</td>
-                    <td>255</td>
-                    <td>247</td>
+                    <td>{{$Penelitian}}</td>
+                    <td>{{$Penelitian_V}}</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>{{}}</td>
+                    <td>{{}}</td>
                     <td style="font-weight:bold">255</td>
                     <td style="font-weight:bold">247</td>
                 </tr>
