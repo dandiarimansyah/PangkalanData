@@ -23,32 +23,32 @@
                 <tr>
                     <td style="font-weight:bold">Sekretariat</td>
                     <td style="text-align:left">Tanah dan Bangunan</td>
-                    <td>{{Total}}</td>
+                    <td>{{$Tanah_Bangunan}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Kebahasaan</td>
                     <td style="text-align:left">Penyuluhan</td>
-                    <td>{{Total1}}</td>
+                    <td>{{$Penyuluhan}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Kesastraan</td>
                     <td style="text-align:left">Penghargaan Sastra</td>
-                    <td>{{Total2}}</td>
+                    <td>{{$Komunitas_Bahasa}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Komunitas</td>
                     <td style="text-align:left">Komunitas Bahasa</td>
-                    <td>{{Total3}}</td>
+                    <td>{{$Komunitas_Sastra}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Komunitas</td>
                     <td style="text-align:left">Komunitas Bahasa</td>
-                    <td>{{Total4}}</td>
+                    <td>{{$Penelitian}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold">Data Penelitian</td>
                     <td style="text-align:left">Penelitian</td>
-                    <td>{{Total5}}</td>
+                    <td>{{$Total5}}</td>
 
                 </tr>
             </tbody>
@@ -160,8 +160,8 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td style="font-weight:bold">{{Total1}}</td>
-                    <td style="font-weight:bold">{{Total1_V}}</td>
+                    <td style="font-weight:bold">{{$Total1}}</td>
+                    <td style="font-weight:bold">{{$Total1_V}}</td>
                 </tr>
 
                 <tr>
@@ -191,8 +191,8 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td style="font-weight:bold">{{Total2}}</td>
-                    <td style="font-weight:bold">{{Total2_V}}</td>
+                    <td style="font-weight:bold">{{$Total2}}</td>
+                    <td style="font-weight:bold">{{$Total2_V}}</td>
                 </tr>
             
                 <tr>
@@ -211,8 +211,8 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td style="font-weight:bold">{{Total3}}</td>
-                    <td style="font-weight:bold">{{Total3_V}}</td>
+                    <td style="font-weight:bold">{{$Total3}}</td>
+                    <td style="font-weight:bold">{{$Total3_V}}</td>
                 </tr>
 
                 <tr>
@@ -224,8 +224,8 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td style="font-weight:bold">{{Total4}}</td>
-                    <td style="font-weight:bold">{{Total4_V}}</td>
+                    <td style="font-weight:bold">{{$Total4}}</td>
+                    <td style="font-weight:bold">{{$Total4_V}}</td>
                 </tr>
 
                 <tr class="total">
