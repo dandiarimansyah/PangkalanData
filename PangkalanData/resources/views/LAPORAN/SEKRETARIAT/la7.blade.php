@@ -64,7 +64,7 @@
 
             <tbody>
 
-                @forelse ($inventarisasi as $key => $a)
+                @forelse ($data as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
