@@ -331,6 +331,10 @@ p {
     margin-right: 70px;
 }
 
+.taruh-kiri {
+    text-align: left;
+}
+
 .content-table thead tr {
     border-right: 1px solid #222a31cc;
     border-left: 1px solid #222a31cc;
