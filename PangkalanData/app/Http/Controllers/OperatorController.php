@@ -76,6 +76,29 @@ class OperatorController extends Controller
         $Komunitas_Sastra_V = Komunitas_Sastra::where('validasi', 'sudah')->get()->count();
         $Penelitian_V = Penelitian::where('validasi', 'sudah')->get()->count();
 
+        $Anggaran_B = Anggaran::where('validasi', 'belum')->get()->count();
+        $Realisasi_Anggaran_B = Realisasi_Anggaran::where('validasi', 'belum')->get()->count();
+        $Kepegawaian_B = Kepegawaian::where('validasi', 'belum')->get()->count();
+        $Kerja_Sama_B = Kerja_Sama::where('validasi', 'belum')->get()->count();
+        $Tanah_Bangunan_B = Tanah_Bangunan::where('validasi', 'belum')->get()->count();
+        $Perpustakaan_B = Perpustakaan::where('validasi', 'belum')->get()->count();
+        $Inventarisasi_B = Inventarisasi::where('validasi', 'belum')->get()->count();
+        $Kamus_B = Kamus::where('validasi', 'belum')->get()->count();
+        $Jurnal_B = Jurnal::where('validasi', 'belum')->get()->count();
+        $Terbitan_Umum_B = Terbitan_Umum::where('validasi', 'belum')->get()->count();
+        $Penyuluhan_B = Penyuluhan::where('validasi', 'belum')->get()->count();
+        $Pesuluh_B = Pesuluh::where('validasi', 'belum')->get()->count();
+        $Penghargaan_Bahasa_B = Penghargaan_Bahasa::where('validasi', 'belum')->get()->count();
+        $Duta_Nasional_B = Duta_Nasional::where('validasi', 'belum')->get()->count();
+        $Duta_Provinsi_B = Duta_Provinsi::where('validasi', 'belum')->get()->count();
+        $Bengkel_Sastra_Dan_Bahasa_B = Bengkel_Sastra_Dan_Bahasa::where('validasi', 'belum')->get()->count();
+        $Penghargaan_Sastra_B = Penghargaan_Sastra::where('validasi', 'belum')->get()->count();
+        $Musikalisasi_Puisi_Nasional_B = Musikalisasi_Puisi_Nasional::where('validasi', 'belum')->get()->count();
+        $Musikalisasi_Puisi_Provinsi_B = Musikalisasi_Puisi_Provinsi::where('validasi', 'belum')->get()->count();
+        $Komunitas_Bahasa_B = Komunitas_Bahasa::where('validasi', 'belum')->get()->count();
+        $Komunitas_Sastra_B = Komunitas_Sastra::where('validasi', 'belum')->get()->count();
+        $Penelitian_B = Penelitian::where('validasi', 'belum')->get()->count();
+
         $Total = $Anggaran +
             $Realisasi_Anggaran +
             $Kepegawaian +
@@ -221,6 +244,29 @@ class OperatorController extends Controller
             'Komunitas_Bahasa_V',
             'Komunitas_Sastra_V',
             'Penelitian_V',
+
+            'Anggaran_B',
+            'Realisasi_Anggaran_B',
+            'Kepegawaian_B',
+            'Kerja_Sama_B',
+            'Tanah_Bangunan_B',
+            'Perpustakaan_B',
+            'Inventarisasi_B',
+            'Kamus_B',
+            'Jurnal_B',
+            'Terbitan_Umum_B',
+            'Penyuluhan_B',
+            'Pesuluh_B',
+            'Penghargaan_Bahasa_B',
+            'Duta_Nasional_B',
+            'Duta_Provinsi_B',
+            'Bengkel_Sastra_Dan_Bahasa_B',
+            'Penghargaan_Sastra_B',
+            'Musikalisasi_Puisi_Nasional_B',
+            'Musikalisasi_Puisi_Provinsi_B',
+            'Komunitas_Bahasa_B',
+            'Komunitas_Sastra_B',
+            'Penelitian_B',
 
             'Total',
             'Total_V',
@@ -285,6 +331,29 @@ class OperatorController extends Controller
         $Komunitas_Sastra_V = Komunitas_Sastra::where('validasi', 'sudah')->get()->count();
         $Penelitian_V = Penelitian::where('validasi', 'sudah')->get()->count();
 
+        $Anggaran_B = Anggaran::where('validasi', 'belum')->get()->count();
+        $Realisasi_Anggaran_B = Realisasi_Anggaran::where('validasi', 'belum')->get()->count();
+        $Kepegawaian_B = Kepegawaian::where('validasi', 'belum')->get()->count();
+        $Kerja_Sama_B = Kerja_Sama::where('validasi', 'belum')->get()->count();
+        $Tanah_Bangunan_B = Tanah_Bangunan::where('validasi', 'belum')->get()->count();
+        $Perpustakaan_B = Perpustakaan::where('validasi', 'belum')->get()->count();
+        $Inventarisasi_B = Inventarisasi::where('validasi', 'belum')->get()->count();
+        $Kamus_B = Kamus::where('validasi', 'belum')->get()->count();
+        $Jurnal_B = Jurnal::where('validasi', 'belum')->get()->count();
+        $Terbitan_Umum_B = Terbitan_Umum::where('validasi', 'belum')->get()->count();
+        $Penyuluhan_B = Penyuluhan::where('validasi', 'belum')->get()->count();
+        $Pesuluh_B = Pesuluh::where('validasi', 'belum')->get()->count();
+        $Penghargaan_Bahasa_B = Penghargaan_Bahasa::where('validasi', 'belum')->get()->count();
+        $Duta_Nasional_B = Duta_Nasional::where('validasi', 'belum')->get()->count();
+        $Duta_Provinsi_B = Duta_Provinsi::where('validasi', 'belum')->get()->count();
+        $Bengkel_Sastra_Dan_Bahasa_B = Bengkel_Sastra_Dan_Bahasa::where('validasi', 'belum')->get()->count();
+        $Penghargaan_Sastra_B = Penghargaan_Sastra::where('validasi', 'belum')->get()->count();
+        $Musikalisasi_Puisi_Nasional_B = Musikalisasi_Puisi_Nasional::where('validasi', 'belum')->get()->count();
+        $Musikalisasi_Puisi_Provinsi_B = Musikalisasi_Puisi_Provinsi::where('validasi', 'belum')->get()->count();
+        $Komunitas_Bahasa_B = Komunitas_Bahasa::where('validasi', 'belum')->get()->count();
+        $Komunitas_Sastra_B = Komunitas_Sastra::where('validasi', 'belum')->get()->count();
+        $Penelitian_B = Penelitian::where('validasi', 'belum')->get()->count();
+
         $Total = $Anggaran +
             $Realisasi_Anggaran +
             $Kepegawaian +
@@ -384,7 +453,7 @@ class OperatorController extends Controller
         $Total5 = $Penelitian;
         $Total5_V = $Penelitian_V;
 
-        return view('OPERATOR.input', compact(
+        return view('OPERATOR.edit', compact(
             'Anggaran',
             'Realisasi_Anggaran',
             'Kepegawaian',
@@ -430,6 +499,29 @@ class OperatorController extends Controller
             'Komunitas_Bahasa_V',
             'Komunitas_Sastra_V',
             'Penelitian_V',
+
+            'Anggaran_B',
+            'Realisasi_Anggaran_B',
+            'Kepegawaian_B',
+            'Kerja_Sama_B',
+            'Tanah_Bangunan_B',
+            'Perpustakaan_B',
+            'Inventarisasi_B',
+            'Kamus_B',
+            'Jurnal_B',
+            'Terbitan_Umum_B',
+            'Penyuluhan_B',
+            'Pesuluh_B',
+            'Penghargaan_Bahasa_B',
+            'Duta_Nasional_B',
+            'Duta_Provinsi_B',
+            'Bengkel_Sastra_Dan_Bahasa_B',
+            'Penghargaan_Sastra_B',
+            'Musikalisasi_Puisi_Nasional_B',
+            'Musikalisasi_Puisi_Provinsi_B',
+            'Komunitas_Bahasa_B',
+            'Komunitas_Sastra_B',
+            'Penelitian_B',
 
             'Total',
             'Total_V',

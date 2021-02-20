@@ -11,6 +11,22 @@ body {
     background: #f2f2f2;
 }
 
+.belum_validasi td {
+    background: #ffe2e2;
+}
+
+.peringatan {
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    color: #a50404;
+}
+
+.peringatan p {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
 .error {
     background-color: rgb(255, 244, 227);
     text-align: center;
@@ -368,7 +384,7 @@ p {
 }
 
 .content-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    /* background-color: #f3f3f3; */
 }
 
 .content-table tbody tr:last-of-type {
