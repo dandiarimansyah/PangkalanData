@@ -1,9 +1,12 @@
-
-@if ($Total != $Total_V)
-    <div class="peringatan">
-        <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>   TERDAPAT DATA YANG BELUM DIVALIDASI!</p>
-    </div>
-@endif
+@auth
+    @if (Auth::user()->level != 'tamu')  
+        @if ($Total != $Total_V)
+            <div class="peringatan">
+                <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>   TERDAPAT DATA YANG BELUM DIVALIDASI!</p>
+            </div>
+        @endif
+    @endif
+@endauth
 
 <div class="validasi">
     <!-- TABLE -->
