@@ -21,7 +21,7 @@ class Komunitas_SastraImport implements ToModel, WithHeadingRow
             'kota' => $row['kota'],
             'kecamatan' => $row['kecamatan'],
             'alamat' => $row['alamat'],
-            'koordinat' => $row['kecamatan'],
+            'koordinat' => $row['koordinat'],
             'keterangan' => $row['keterangan'],
         ]);
     }
