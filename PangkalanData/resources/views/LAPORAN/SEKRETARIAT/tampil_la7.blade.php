@@ -37,7 +37,7 @@
         <a href="{{ url('/excel/sekretariat/inventarisasi_bmn')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button href="/import/sekretariat/inventarisasi_bmn" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <button loc="{{ asset('/Template/Template Inventarisasi BMN.xlsx')}}" href="/import/sekretariat/inventarisasi_bmn" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
         </button>
     </div>

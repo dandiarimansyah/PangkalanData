@@ -37,7 +37,7 @@
         <a href="{{ url("/excel/kesastraan/bengkel_sastra_dan_bahasa?nama_kegiatan={$nama_kegiatan}&kota={$kota}&provinsi={$provinsi}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button href="/import/kesastraan/bengkel_sastra_dan_bahasa" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <button loc="{{ asset('/Template/Template Bengkel Sastra dan Bahasa.xlsx')}}" href="/import/kesastraan/bengkel_sastra_dan_bahasa" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
         </button>
     </div>

@@ -37,7 +37,7 @@
         <a href="{{ url("/excel/kesastraan/penghargaan_sastra?kategori={$kategori}&tahun={$tahun}&deskripsi={$deskripsi}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button href="/import/kesastraan/penghargaan_sastra" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <button loc="{{ asset('/Template/Template Penghargaan Sastra.xlsx')}}" href="/import/kesastraan/penghargaan_sastra" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
         </button>
     </div>

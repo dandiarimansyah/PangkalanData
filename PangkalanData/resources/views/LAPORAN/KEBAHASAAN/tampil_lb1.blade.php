@@ -37,7 +37,7 @@
         <a href="{{ url("/excel/kebahasaan/kamus_ensiklopedia?info_produk={$info_produk}&judul={$judul}&tim_redaksi={$tim_redaksi}&kategori={$kategori}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button href="/import/kebahasaan/kamus_ensiklopedia" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <button loc="{{ asset('/Template/Template Kamus Ensiklopedia.xlsx')}}" href="/import/kebahasaan/kamus_ensiklopedia" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
         </button>
     </div>
