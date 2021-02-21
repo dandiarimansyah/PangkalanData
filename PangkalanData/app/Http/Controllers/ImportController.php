@@ -28,6 +28,8 @@ use App\Imports\PesuluhImport;
 use App\Imports\Tanah_BangunanImport;
 use App\Imports\Terbitan_UmumImport;
 
+use Illuminate\Support\Facades\File;
+
 class ImportController extends Controller
 {
     //IMPORT S 1
@@ -38,18 +40,22 @@ class ImportController extends Controller
         $file->move('Anggaran', $namaFile);
 
         Excel::import(new AnggaranImport, public_path('/Anggaran/' . $namaFile));
+        File::delete(public_path('/Anggaran/' . $namaFile));
+
         return redirect('/laporan/sekretariat/anggaran/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_a2()
+    public function import_a2(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
         $file->move('Realisasi Anggaran', $namaFile);
 
         Excel::import(new Realisasi_AnggaranImport, public_path('/Realisasi Anggaran/' . $namaFile));
+        File::delete(public_path('/Realisasi Anggaran/' . $namaFile));
+
         return redirect('/laporan/sekretariat/realisasi_anggaran/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_a3()
+    public function import_a3(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -58,7 +64,7 @@ class ImportController extends Controller
         Excel::import(new KepegawaianImport, public_path('/Kepegawaian/' . $namaFile));
         return redirect('/laporan/sekretariat/kepegawaian/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_a4()
+    public function import_a4(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -67,7 +73,7 @@ class ImportController extends Controller
         Excel::import(new Kerja_SamaImport, public_path('/Kerja Sama/' . $namaFile));
         return redirect('/laporan/sekretariat/kerja_sama/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_a5()
+    public function import_a5(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -76,7 +82,7 @@ class ImportController extends Controller
         Excel::import(new Tanah_BangunanImport, public_path('/Tanah dan Bangunan/' . $namaFile));
         return redirect('/laporan/sekretariat/tanah_dan_bangunan/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_a6()
+    public function import_a6(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -85,7 +91,7 @@ class ImportController extends Controller
         Excel::import(new PerpustakaanImport, public_path('/Perpustakaan/' . $namaFile));
         return redirect('/laporan/sekretariat/perpustakaan/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_a7()
+    public function import_a7(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -96,7 +102,7 @@ class ImportController extends Controller
     }
 
     //IMPORT S 1
-    public function import_b1()
+    public function import_b1(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -105,7 +111,7 @@ class ImportController extends Controller
         Excel::import(new KamusImport, public_path('/Kamus Ensiklopedia/' . $namaFile));
         return redirect('/laporan/kebahasaan/kamus_ensiklopedia/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_b2()
+    public function import_b2(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -114,7 +120,7 @@ class ImportController extends Controller
         Excel::import(new JurnalImport, public_path('/Jurnal Umum/' . $namaFile));
         return redirect('/laporan/kebahasaan/jurnal_umum/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_b3()
+    public function import_b3(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -123,7 +129,7 @@ class ImportController extends Controller
         Excel::import(new Terbitan_UmumImport, public_path('/Terbitan Umum/' . $namaFile));
         return redirect('/laporan/kebahasaan/terbitan_umum/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_b4()
+    public function import_b4(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -132,7 +138,7 @@ class ImportController extends Controller
         Excel::import(new PenyuluhanImport, public_path('/Penyuluhan/' . $namaFile));
         return redirect('/laporan/kebahasaan/penyuluhan/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_b5()
+    public function import_b5(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -141,7 +147,7 @@ class ImportController extends Controller
         Excel::import(new PesuluhImport, public_path('/Pesuluh/' . $namaFile));
         return redirect('/laporan/kebahasaan/pesuluh/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_b6()
+    public function import_b6(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -150,7 +156,7 @@ class ImportController extends Controller
         Excel::import(new Penghargaan_BahasaImport, public_path('/Penghargaan Nasional/' . $namaFile));
         return redirect('/laporan/kebahasaan/penghargaan_nasional/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_b7()
+    public function import_b7(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -159,7 +165,7 @@ class ImportController extends Controller
         Excel::import(new Duta_NasionalImport, public_path('/Duta Bahasa Nasional/' . $namaFile));
         return redirect('/laporan/kebahasaan/duta_bahasa_nasional/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_b8()
+    public function import_b8(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -170,7 +176,7 @@ class ImportController extends Controller
     }
 
     //IMPORT S 1
-    public function import_c1()
+    public function import_c1(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -179,7 +185,7 @@ class ImportController extends Controller
         Excel::import(new Bengkel_Sastra_Dan_BahasaImport, public_path('/Bengkel Sastra dan Bahasa/' . $namaFile));
         return redirect('/laporan/kesastraan/bengkel_sastra_dan_bahasa/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_c2()
+    public function import_c2(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -188,7 +194,7 @@ class ImportController extends Controller
         Excel::import(new Penghargaan_SastraImport, public_path('/Penghargaan Sastra/' . $namaFile));
         return redirect('/laporan/kesastraan/penghargaan_sastra/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_c3()
+    public function import_c3(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -197,7 +203,7 @@ class ImportController extends Controller
         Excel::import(new Musikalisasi_Puisi_NasionalImport, public_path('/Musikalisasi Puisi Nasional/' . $namaFile));
         return redirect('/laporan/kesastraan/musikalisasi_puisi_nasional/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_c4()
+    public function import_c4(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -208,7 +214,7 @@ class ImportController extends Controller
     }
 
     //IMPORT S 1
-    public function import_d1()
+    public function import_d1(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -217,7 +223,7 @@ class ImportController extends Controller
         Excel::import(new Komunitas_BahasaImport, public_path('/Komunitas Bahasa/' . $namaFile));
         return redirect('/laporan/komunitas/komunitas_bahasa/tampil')->with('toast_success', 'Import Data Berhasil!');
     }
-    public function import_d2()
+    public function import_d2(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
@@ -228,7 +234,7 @@ class ImportController extends Controller
     }
 
     //IMPORT S 1
-    public function import_e1()
+    public function import_e1(Request $request)
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();

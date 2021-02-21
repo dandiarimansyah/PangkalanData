@@ -93,7 +93,18 @@
                 <form id="import_form" action="" method="POST" enctype="multipart/form-data">
                 @csrf
                     <div class="modal-body">
+                        <div class="template">
+                            <p>Import harus menggunakan template!</p>
+                            <p>Jika belum mempunyai template,</p>
+                            <p>Silahkan unduh template dibawah</p>
+                            <p>
+                                <a id="template_excel" href="" class="btn btn-success">Unduh Template</a>
+                            </p>
+                            
+                            
+                        </div>
                         <input name="file" type="file" required='required'>
+                        <p style="font-size: 16px; margin-top:5px">Pilih file yang akan diimport</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -132,8 +143,10 @@
             //Import Data
             $(document).on('click','#import_data',function(){
                 var link = $(this).attr('href');
+                var loc = $(this).attr('loc');
                 
                 $('#import_form').attr('action', '' + link);
+                $('#template_excel').attr('href', '' + loc);
             })
 
             //Tombol Kembali

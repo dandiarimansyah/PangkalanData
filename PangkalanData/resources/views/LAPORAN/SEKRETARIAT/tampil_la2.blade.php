@@ -37,7 +37,7 @@
         <a href="{{ url("/excel/sekretariat/realisasi_anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button href="/import/sekretariat/realisasi_anggaran" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <button loc="{{ asset('/Template/Template Realisasi_Anggaran.xlsx')}}" href="/import/sekretariat/realisasi_anggaran" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
         </button>
     </div>
@@ -50,7 +50,7 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>TANGGAL REALISASI</th>
+                    <th>TAHUN REALISASI</th>
                     <th>UNIT/SATUAN KERJA</th>
                     <th>NILAI REALISASI(Rp.)</th>
                     <th>KETERANGAN</th>

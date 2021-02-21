@@ -2,7 +2,7 @@
 
 namespace App\Imports;
 
-use App\Realisasi_Anggaran;
+use App\Models\Realisasi_Anggaran;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
@@ -17,7 +17,7 @@ class Realisasi_AnggaranImport implements ToModel, WithHeadingRow
     {
         return new Realisasi_Anggaran([
             'unit'  => $row['unit'],
-            'nilai_realisasi' => $row['nilai_realisasi'],
+            'nilai_realisasi' => $row['tahun_realisasi'],
             'besar_dana' => $row['besar_dana'],
             'keterangan' => $row['keterangan'],
         ]);
