@@ -97,7 +97,7 @@
                             <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
                             <div class="inputfield">
                                 <label>Tahun Anggaran*</label>
-                                <input name="tahun_anggaran" id="tahun_anggaran" type="text" class="input" placeholder="lalal">
+                                <input name="tahun_anggaran" id="tahun_anggaran" type="text" class="input">
                             </div> 
                     
                             <div class="alert-danger">{{ $errors->first('nilai_anggaran') }}</div>

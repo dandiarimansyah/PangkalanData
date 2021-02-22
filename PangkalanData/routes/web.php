@@ -316,6 +316,34 @@ Route::group(['middleware' => ['auth']], function () {
         //VALIDATOR KATEGORI E
         Route::get('/validator/penelitian/penelitian', [ValidatorController::class, 'e1']);
         Route::post('/validator/penelitian/penelitian', [ValidatorController::class, 'validasi_e1']);
+
+        //UPDATE KATEGORI A
+        Route::put('/operator/edit/sekretariat/anggaran/{id}', [EditController::class, 'update_a1']);
+        Route::put('/operator/edit/sekretariat/realisasi_anggaran/{id}', [EditController::class, 'update_a2']);
+        Route::put('/operator/edit/sekretariat/kepegawaian/{id}', [EditController::class, 'update_a3']);
+        Route::put('/operator/edit/sekretariat/kerja_sama/{id}', [EditController::class, 'update_a4']);
+        Route::put('/operator/edit/sekretariat/tanah_dan_bangunan/{id}', [EditController::class, 'update_a5']);
+        Route::put('/operator/edit/sekretariat/perpustakaan/{id}', [EditController::class, 'update_a6']);
+        Route::put('/operator/edit/sekretariat/inventarisasi_bmn/{id}', [EditController::class, 'update_a7']);
+        //UPDATE KATEGORI B
+        Route::put('/operator/edit/kebahasaan/kamus_ensiklopedia/{id}', [EditController::class, 'update_b1']);
+        Route::put('/operator/edit/kebahasaan/jurnal_majalah/{id}', [EditController::class, 'update_b2']);
+        Route::put('/operator/edit/kebahasaan/terbitan_umum/{id}', [EditController::class, 'update_b3']);
+        Route::put('/operator/edit/kebahasaan/penyuluhan/{id}', [EditController::class, 'update_b4']);
+        Route::put('/operator/edit/kebahasaan/pesuluh/{id}', [EditController::class, 'update_b5']);
+        Route::put('/operator/edit/kebahasaan/penghargaan_bahasa/{id}', [EditController::class, 'update_b6']);
+        Route::put('/operator/edit/kebahasaan/duta_bahasa_nasional/{id}', [EditController::class, 'update_b7']);
+        Route::put('/operator/edit/kebahasaan/duta_bahasa_provinsi/{id}', [EditController::class, 'update_b8']);
+        //UPDATE KATEGORI C
+        Route::put('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa/{id}', [EditController::class, 'update_c1']);
+        Route::put('/operator/edit/kesastraan/penghargaan_sastra/{id}', [EditController::class, 'update_c2']);
+        Route::put('/operator/edit/kesastraan/musikalisasi_puisi_nasional/{id}', [EditController::class, 'update_c3']);
+        Route::put('/operator/edit/kesastraan/musikalisasi_puisi_provinsi/{id}', [EditController::class, 'update_c4']);
+        //UPDATE KATEGORI D
+        Route::put('/operator/edit/komunitas/komunitas_bahasa/{id}', [EditController::class, 'update_d1']);
+        Route::put('/operator/edit/komunitas/komunitas_sastra/{id}', [EditController::class, 'update_d2']);
+        //UPDATE KATEGORI E
+        Route::put('/operator/edit/penelitian/penelitian/{id}', [EditController::class, 'update_e1']);
     });
 
     ////========================================== MEDIA ===================

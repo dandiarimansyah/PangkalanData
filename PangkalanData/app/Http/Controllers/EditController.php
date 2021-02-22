@@ -192,7 +192,7 @@ class EditController extends Controller
                 'nilai_anggaran' => $request->get('nilai_anggaran'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/anggaran')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -212,7 +212,7 @@ class EditController extends Controller
                 'keterangan' => $request->get('keterangan'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/realisasi_anggaran')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -284,7 +284,7 @@ class EditController extends Controller
                 'T_1A' => $request->get('T_1A'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/kepegawaian')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -312,7 +312,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/kerja_sama')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -336,7 +336,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/tanah_dan_bangunan')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -362,7 +362,7 @@ class EditController extends Controller
                 'sumber_data' => $request->get('sumber_data'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/perpustakaan')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -403,7 +403,7 @@ class EditController extends Controller
                 'roda_enam' => $request->get('roda_enam'),
             ]);
 
-        return redirect('/operator/edit/sekretariat/inventarisasi_bmn')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI B
@@ -432,7 +432,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kebahasaan/kamus_ensiklopedia')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -460,7 +460,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -484,7 +484,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kebahasaan/terbitan_umum')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -510,7 +510,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kebahasaan/penyuluhan')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -531,7 +531,7 @@ class EditController extends Controller
                 'tingkat' => $request->get('tingkat'),
             ]);
 
-        return redirect('/operator/edit/kebahasaan/pesuluh')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -550,7 +550,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kebahasaan/penghargaan_bahasa')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -575,7 +575,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kebahasaan/duta_bahasa_nasional')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -602,7 +602,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kebahasaan/duta_bahasa_provinsi')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI C
@@ -633,7 +633,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kesastraan/bengkel_sastra_dan_bahasa')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -652,7 +652,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kesastraan/penghargaan_sastra')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -673,7 +673,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_nasional')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     ////////////////////////////////////////////
@@ -696,7 +696,7 @@ class EditController extends Controller
                 'media' => $request->get('media'),
             ]);
 
-        return redirect('/operator/edit/kesastraan/musikalisasi_puisi_provinsi')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI D
@@ -719,7 +719,7 @@ class EditController extends Controller
                 'keterangan' => $request->get('keterangan'),
             ]);
 
-        return redirect('/operator/edit/komunitas/komunitas_bahasa')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //////////////////////////////////////////////////
@@ -742,7 +742,7 @@ class EditController extends Controller
                 'keterangan' => $request->get('keterangan'),
             ]);
 
-        return redirect('/operator/edit/komunitas/komunitas_sastra')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 
     //UPDATE KATEGORI E
@@ -773,6 +773,6 @@ class EditController extends Controller
                 'abstrak' => $request->get('abstrak'),
             ]);
 
-        return redirect('/operator/edit/penelitian/penelitian')->with('toast_success', 'Data Berhasil Diedit!');
+        return back()->with('toast_success', 'Data Berhasil Diedit!');
     }
 }

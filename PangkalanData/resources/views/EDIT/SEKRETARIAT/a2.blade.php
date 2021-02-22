@@ -134,8 +134,6 @@
         </div>
       </div>
 
-
-
 </div>
     
 
@@ -150,7 +148,6 @@
                 let besar_dana = $(this).data('besar_dana');
                 let keterangan = $(this).data('keterangan');
                 let id = $(this).data('id');
-
 
                 $('#unit option').filter(function(){
                     return ($(this).val() == unit)

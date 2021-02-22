@@ -31,6 +31,11 @@
       <form role="form" action="/operator/input/penelitian/penelitian" method="POST" enctype="multipart/form-data">
           @csrf
 
+        <div class="inputfield">
+            <label>Unit/Satuan Kerja</label>
+            <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
+        </div> 
+
         <div class="alert-danger">{{ $errors->first('kategori') }}</div>
         <div class="inputfield-select">
             <label>Kategori Penelitian*</label>
@@ -42,15 +47,6 @@
             </div>
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('unit') }}</div>
-        <div class="inputfield-select">
-            <label>Unit/Satuan Kerja*</label>
-            <div class="custom_select">
-              <select name="unit">
-                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
-              </select>
-            </div>
-        </div> 
 
         <div class="alert-danger">{{ $errors->first('peneliti') }}</div>
         <div class="inputfield">

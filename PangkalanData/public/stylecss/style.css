@@ -365,7 +365,7 @@ p {
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    margin-right: 70px;
+    /* margin-right: 70px; */
 }
 
 .taruh-kiri {
@@ -393,6 +393,7 @@ p {
     border-left: 1px solid #222a31cc;
     padding: 5px 8px 5px 8px;
     text-align: center;
+    border-bottom: 1px solid rgb(199, 199, 199);
 }
 
 .kanan td {
@@ -426,7 +427,9 @@ p {
 .validasi {
     display: flex;
     justify-content: center;
-    margin-left: 60px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .judul {
