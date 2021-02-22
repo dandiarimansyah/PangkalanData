@@ -37,7 +37,12 @@
             <input name="nama_komunitas" type="text" class="input">
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
+        <div class="inputfield">
+            <label>Provinsi</label>
+            <input readonly type="text" value="Jawa Tengah" class="input">
+        </div> 
+        
+        <!-- <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
         <div class="inputfield-select">
             <label>Provinsi*</label>
             <div class="custom_select">
@@ -45,7 +50,7 @@
                 <option value="Jawa Tengah">Jawa Tengah</option>
               </select>
             </div>
-        </div> 
+        </div>  -->
 
         <div class="alert-danger">{{ $errors->first('kota') }}</div>
         <div class="inputfield-select">

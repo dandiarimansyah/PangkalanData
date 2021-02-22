@@ -37,14 +37,9 @@
         <form role="form" action="/operator/input/sekretariat/kepegawaian" method="POST">
           @csrf
 
-        <div class="alert-danger">{{ $errors->first('unit') }}</div>
-        <div class="inputfield-select">
-            <label>Unit/Satuan Kerja*</label>
-            <div class="custom_select">
-              <select name="unit">
-                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
-              </select>
-            </div>
+        <div class="inputfield">
+            <label>Unit/Satuan Kerja</label>
+            <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('laki') }}</div>

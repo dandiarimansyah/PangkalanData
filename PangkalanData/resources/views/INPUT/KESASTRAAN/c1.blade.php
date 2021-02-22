@@ -31,15 +31,10 @@
         <form role="form" action="/operator/input/kesastraan/bengkel_sastra_dan_bahasa" method="POST" enctype="multipart/form-data">
           @csrf
   
-          <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
-          <div class="inputfield-select">
-              <label>Provinsi*</label>
-              <div class="custom_select">
-                <select name="provinsi">
-                  <option value="Jawa Tengah">Jawa Tengah</option>
-                </select>
-              </div>
-          </div> 
+        <div class="inputfield">
+            <label>Provinsi</label>
+            <input readonly type="text" value="Jawa Tengah" class="input">
+        </div> 
   
           <div class="alert-danger">{{ $errors->first('kota') }}</div>
           <div class="inputfield">

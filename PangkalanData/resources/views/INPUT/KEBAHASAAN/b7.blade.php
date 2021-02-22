@@ -31,7 +31,11 @@
       <form role="form" action="/operator/input/kebahasaan/duta_bahasa_nasional" method="POST" enctype="multipart/form-data">
           @csrf
 
-        <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
+        <div class="inputfield">
+            <label>Provinsi</label>
+            <input readonly type="text" value="Jawa Tengah" class="input">
+        </div> 
+        <!-- <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
         <div class="inputfield-select">
             <label>Asal Provinsi*</label>
             <div class="custom_select">
@@ -74,7 +78,7 @@
                 <option value="Kalimantan Utara">Kalimantan Utara</option> --}}
               </select>
             </div>
-        </div> 
+        </div>  -->
 
         <div class="alert-danger">{{ $errors->first('tahun') }}</div>
         <div class="inputfield">
