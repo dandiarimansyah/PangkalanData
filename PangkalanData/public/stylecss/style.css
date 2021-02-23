@@ -11,6 +11,23 @@ body {
     background: #f2f2f2;
 }
 
+.import-input {
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px 10px 10px 10px;
+    text-align: center;
+    border: 1px solid rgb(124, 46, 0);
+    width: max-content;
+    background: rgb(221, 255, 229);
+    border-radius: 10px;
+}
+
+.import-input h6 {
+    text-align: center;
+    font-size: 18px;
+    margin: 5px 0 5px 0;
+}
+
 .template {
     background: #f1f1f1;
     padding: 10px;
@@ -462,7 +479,7 @@ p {
 /* FORM INPUT */
 
 .wrapper {
-    margin: 20px auto;
+    margin: 10px auto;
     min-width: fit-content;
     max-width: 750px;
     width: 100%;

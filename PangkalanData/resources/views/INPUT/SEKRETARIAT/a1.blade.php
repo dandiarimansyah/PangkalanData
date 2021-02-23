@@ -23,8 +23,15 @@
 
   <div class="judul">
     <th>INPUT DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
-  </div>
 
+    <div class="import-input">
+      <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
+      <button loc="{{ asset('/Template/Template Anggaran.xlsx')}}" href="/import/sekretariat/anggaran" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        IMPORT EXCEL
+      </button>
+    </div>
+  </div>
+  
   <div class="wrapper">
       <div class="form">
         <form role="form" action="/operator/input/sekretariat/anggaran" method="POST">
