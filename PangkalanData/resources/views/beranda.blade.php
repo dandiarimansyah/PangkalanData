@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="judul_beranda">
-    <p>BALAI BAHASA JAWA TENGAH</p>
+    <p>BALAI BAHASA PROVINSI JAWA TENGAH</p>
 </div>
 
 <div class="gambar_beranda">
@@ -17,22 +17,22 @@
       <div class="carousel-item active">
           <img class="gambar_carousel" src="{{ asset('Gambar/balai.jpg')}}" alt="First slide">
           <div class="carousel-caption d-none d-md-block caption">
-            <h5>Caption</h5>
-            <p>Caption</p>
+            <h5>Dokumentasi 1</h5>
+            <p>Balai Bahasa Provinsi Jawa Tengah</p>
           </div>
         </div>
       <div class="carousel-item">
           <img class="gambar_carousel" src="{{ asset('Gambar/balai2.jpg')}}" alt="Second slide">
           <div class="carousel-caption d-none d-md-block caption">
-            <h5>Caption</h5>
-            <p>Caption</p>
+            <h5>Dokumentasi 2</h5>
+            <p>Balai Bahasa Provinsi Jawa Tengah</p>
           </div>
         </div>
       <div class="carousel-item">
         <img class="gambar_carousel" src="{{ asset('Gambar/balai3.jpg')}}" alt="Third slide">
         <div class="carousel-caption d-none d-md-block caption">
-            <h5>Caption</h5>
-            <p>Caption</p>
+            <h5>Dokumentasi 3</h5>
+            <p>Balai Bahasa Provinsi Jawa Tengah</p>
           </div>
     </div>
     </div>

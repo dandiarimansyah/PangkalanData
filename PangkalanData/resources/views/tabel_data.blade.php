@@ -22,7 +22,7 @@
         </thead>
 
         <tbody>
-            @if ($Anggaran != $Anggaran_V)
+            @if ($Anggaran != $Anggaran_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -33,7 +33,7 @@
                 <td>{{$Anggaran_V}}</td>
                 <td>{{$Anggaran_B}}</td>
             </tr>
-            @if ($Realisasi_Anggaran != $Realisasi_Anggaran_V)
+            @if ($Realisasi_Anggaran != $Realisasi_Anggaran_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -44,7 +44,7 @@
                 <td>{{$Realisasi_Anggaran_V}}</td>
                 <td>{{$Realisasi_Anggaran_B}}</td>
             </tr>
-            @if ($Kepegawaian != $Kepegawaian_V)
+            @if ($Kepegawaian != $Kepegawaian_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -55,7 +55,7 @@
                 <td>{{$Kepegawaian_V}}</td>
                 <td>{{$Kepegawaian_B}}</td>
             </tr>
-            @if ($Kerja_Sama != $Kerja_Sama_V)
+            @if ($Kerja_Sama != $Kerja_Sama_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -66,7 +66,7 @@
                 <td>{{$Kerja_Sama_V}}</td>
                 <td>{{$Kerja_Sama_B}}</td>
             </tr>
-            @if ($Tanah_Bangunan != $Tanah_Bangunan_V)
+            @if ($Tanah_Bangunan != $Tanah_Bangunan_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -77,7 +77,7 @@
                 <td>{{$Tanah_Bangunan_V}}</td>
                 <td>{{$Tanah_Bangunan_B}}</td>
             </tr>
-            @if ($Perpustakaan != $Perpustakaan_V)
+            @if ($Perpustakaan != $Perpustakaan_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -88,7 +88,7 @@
                 <td>{{$Perpustakaan_V}}</td>
                 <td>{{$Perpustakaan_B}}</td>
             </tr>
-            @if ($Inventarisasi != $Inventarisasi_V)
+            @if ($Inventarisasi != $Inventarisasi_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -108,7 +108,7 @@
                 <td style="font-weight:bold">{{$Total1 - $Total1_V}}</td>
             </tr>
 
-            @if ($Kamus != $Kamus_V)
+            @if ($Kamus != $Kamus_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -119,7 +119,7 @@
                 <td>{{$Kamus_V}}</td>
                 <td>{{$Kamus_B}}</td>
             </tr>
-            @if ($Jurnal != $Jurnal_V)
+            @if ($Jurnal != $Jurnal_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -130,7 +130,7 @@
                 <td>{{$Jurnal_V}}</td>
                 <td>{{$Jurnal_B}}</td>
             </tr>
-            @if ($Terbitan_Umum != $Terbitan_Umum_V)
+            @if ($Terbitan_Umum != $Terbitan_Umum_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -141,7 +141,7 @@
                 <td>{{$Terbitan_Umum_V}}</td>
                 <td>{{$Terbitan_Umum_B}}</td>
             </tr>
-            @if ($Penyuluhan != $Penyuluhan_V)
+            @if ($Penyuluhan != $Penyuluhan_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -152,7 +152,7 @@
                 <td>{{$Penyuluhan_V}}</td>
                 <td>{{$Penyuluhan_B}}</td>
             </tr>
-            @if ($Pesuluh != $Pesuluh_V)
+            @if ($Pesuluh != $Pesuluh_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -163,7 +163,7 @@
                 <td>{{$Pesuluh_V}}</td>
                 <td>{{$Pesuluh_B}}</td>
             </tr>
-            @if ($Penghargaan_Bahasa != $Penghargaan_Bahasa_V)
+            @if ($Penghargaan_Bahasa != $Penghargaan_Bahasa_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -174,7 +174,7 @@
                 <td>{{$Penghargaan_Bahasa_V}}</td>
                 <td>{{$Penghargaan_Bahasa_B}}</td>
             </tr>
-            @if ($Duta_Nasional != $Duta_Nasional_V)
+            @if ($Duta_Nasional != $Duta_Nasional_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -185,7 +185,7 @@
                 <td>{{$Duta_Nasional_V}}</td>
                 <td>{{$Duta_Nasional_B}}</td>
             </tr>
-            @if ($Duta_Provinsi != $Duta_Provinsi_V)
+            @if ($Duta_Provinsi != $Duta_Provinsi_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -204,7 +204,7 @@
                 <td style="font-weight:bold">{{$Total2 - $Total2_V}}</td>
             </tr>
 
-            @if ($Bengkel_Sastra_Dan_Bahasa != $Bengkel_Sastra_Dan_Bahasa_V)
+            @if ($Bengkel_Sastra_Dan_Bahasa != $Bengkel_Sastra_Dan_Bahasa_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -215,7 +215,7 @@
                 <td>{{$Bengkel_Sastra_Dan_Bahasa_V}}</td>
                 <td>{{$Bengkel_Sastra_Dan_Bahasa_B}}</td>
             </tr>
-            @if ($Penghargaan_Sastra != $Penghargaan_Sastra_V)
+            @if ($Penghargaan_Sastra != $Penghargaan_Sastra_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -226,7 +226,7 @@
                 <td>{{$Penghargaan_Sastra_V}}</td>
                 <td>{{$Penghargaan_Sastra_B}}</td>
             </tr>
-            @if ($Musikalisasi_Puisi_Nasional != $Musikalisasi_Puisi_Nasional_V)
+            @if ($Musikalisasi_Puisi_Nasional != $Musikalisasi_Puisi_Nasional_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -237,7 +237,7 @@
                 <td>{{$Musikalisasi_Puisi_Nasional_V}}</td>
                 <td>{{$Musikalisasi_Puisi_Nasional_B}}</td>
             </tr>
-            @if ($Musikalisasi_Puisi_Provinsi != $Musikalisasi_Puisi_Provinsi_V)
+            @if ($Musikalisasi_Puisi_Provinsi != $Musikalisasi_Puisi_Provinsi_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -256,7 +256,7 @@
                 <td style="font-weight:bold">{{$Total3 - $Total3_V}}</td>
             </tr>
         
-            @if ($Komunitas_Bahasa != $Komunitas_Bahasa_V)
+            @if ($Komunitas_Bahasa != $Komunitas_Bahasa_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -268,7 +268,7 @@
                 <td>{{$Komunitas_Bahasa_B}}</td>
             </tr>
 
-            @if ($Komunitas_Sastra != $Komunitas_Sastra_V)
+            @if ($Komunitas_Sastra != $Komunitas_Sastra_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>
@@ -288,7 +288,7 @@
                 <td style="font-weight:bold">{{$Total4 - $Total4_V}}</td>
             </tr>
 
-            @if ($Penelitian != $Penelitian_V)
+            @if ($Penelitian != $Penelitian_V and Auth::user()->level != 'tamu')
                 <tr class="belum_validasi">
             @else
                 <tr>

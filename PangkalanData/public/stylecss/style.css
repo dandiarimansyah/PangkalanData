@@ -90,7 +90,7 @@ body {
 }
 
 .gambar_beranda img {
-    border: 10px solid blue;
+    border: 20px solid rgb(213, 238, 255);
     border-radius: 10px;
 }
 
