@@ -141,13 +141,12 @@ class InputController extends Controller
     public function store_a1(Request $request)
     {
         $request->validate([
-            'unit' => ['required'],
             'tahun_anggaran' => ['required'],
             'nilai_anggaran' => ['nullable', 'numeric']
         ]);
 
         $data = new Anggaran();
-        $data->unit = $request->unit;
+        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->tahun_anggaran = $request->tahun_anggaran;
         $data->nilai_anggaran = $request->nilai_anggaran;
         $data->save();
@@ -158,13 +157,12 @@ class InputController extends Controller
     public function store_a2(Request $request)
     {
         $request->validate([
-            'unit' => ['required'],
             'nilai_realisasi' => ['numeric'],
             'besar_dana' => ['numeric'],
         ]);
 
         $data = new Realisasi_Anggaran();
-        $data->unit = $request->unit;
+        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->nilai_realisasi = $request->nilai_realisasi;
         $data->besar_dana = $request->besar_dana;
         $data->keterangan = $request->keterangan;
@@ -176,7 +174,6 @@ class InputController extends Controller
     public function store_a3(Request $request)
     {
         $request->validate([
-            'unit' => ['required'],
             'laki' => ['nullable', 'numeric'],
             'perempuan' => ['nullable', 'numeric'],
             'semua_kelamin' => ['nullable', 'numeric'],
@@ -210,7 +207,7 @@ class InputController extends Controller
 
         $data = new Kepegawaian();
         $data->tanggal_diperbarui = $tanggal;
-        $data->unit = $request->unit;
+        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->semua_kelamin = $request->semua_kelamin;
         $data->laki = $request->laki;
         $data->perempuan = $request->perempuan;
@@ -314,7 +311,6 @@ class InputController extends Controller
     {
         $request->validate([
             'provinsi' => ['required'],
-            'unit' => ['required'],
             'jenis_buku' => ['required'],
             'jumlah_buku' => ['nullable', 'numeric'],
             'jumlah_judul' => ['nullable', 'numeric'],
@@ -323,7 +319,7 @@ class InputController extends Controller
 
         $data = new Perpustakaan();
         $data->provinsi = $request->provinsi;
-        $data->unit = $request->unit;
+        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->jumlah_buku = $request->jumlah_buku;
         $data->jumlah_judul = $request->jumlah_judul;
 
@@ -342,7 +338,6 @@ class InputController extends Controller
     public function store_a7(Request $request)
     {
         $request->validate([
-            'unit' => ['required'],
             'tahun_anggaran' => ['required'],
             'laptop' => ['nullable', 'numeric'],
             'komputer' => ['nullable', 'numeric'],
@@ -359,7 +354,7 @@ class InputController extends Controller
         ]);
 
         $data = new Inventarisasi();
-        $data->unit = $request->unit;
+        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->tahun_anggaran = $request->tahun_anggaran;
         $data->laptop = $request->laptop;
         $data->komputer = $request->komputer;
@@ -754,7 +749,6 @@ class InputController extends Controller
     {
         $request->validate([
             'kategori' => ['required'],
-            'unit' => ['required'],
             'peneliti' => ['required'],
             'judul' => ['required'],
             'abstrak' => ['required'],
@@ -764,7 +758,7 @@ class InputController extends Controller
 
         $data = new Penelitian();
         $data->kategori = $request->kategori;
-        $data->unit = $request->unit;
+        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->peneliti = $request->peneliti;
         $data->judul = $request->judul;
         $data->kerja_sama = $request->kerja_sama;

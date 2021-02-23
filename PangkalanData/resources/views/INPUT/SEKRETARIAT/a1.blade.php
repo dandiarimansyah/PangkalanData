@@ -32,7 +32,7 @@
 
         <div class="inputfield">
             <label>Unit/Satuan Kerja</label>
-            <input name="unit" readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
+            <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
         </div> 
         
         <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>

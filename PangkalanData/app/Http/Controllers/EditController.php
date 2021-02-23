@@ -180,14 +180,12 @@ class EditController extends Controller
     public function update_a1($id, Request $request)
     {
         $request->validate([
-            'unit' => ['required'],
             'tahun_anggaran' => ['required'],
             'nilai_anggaran' => ['nullable', 'numeric']
         ]);
 
         $data = Anggaran::where('id', $id)
             ->update([
-                'unit' => $request->get('unit'),
                 'tahun_anggaran' => $request->get('tahun_anggaran'),
                 'nilai_anggaran' => $request->get('nilai_anggaran'),
             ]);
@@ -199,14 +197,12 @@ class EditController extends Controller
     public function update_a2($id, Request $request)
     {
         $request->validate([
-            'unit' => ['required'],
             'nilai_realisasi' => ['numeric'],
             'besar_dana' => ['numeric'],
         ]);
 
         $data = Realisasi_Anggaran::where('id', $id)
             ->update([
-                'unit' => $request->get('unit'),
                 'nilai_realisasi' => $request->get('nilai_realisasi'),
                 'besar_dana' => $request->get('besar_dana'),
                 'keterangan' => $request->get('keterangan'),
@@ -219,7 +215,6 @@ class EditController extends Controller
     public function update_a3($id, Request $request)
     {
         $request->validate([
-            'unit' => ['required'],
             'laki' => ['nullable', 'numeric'],
             'perempuan' => ['nullable', 'numeric'],
             'semua_kelamin' => ['nullable', 'numeric'],
@@ -254,7 +249,6 @@ class EditController extends Controller
         $data = Kepegawaian::where('id', $id)
             ->update([
                 'tanggal_diperbarui' => $tanggal,
-                'unit' => $request->get('unit'),
                 'semua_kelamin' => $request->get('semua_kelamin'),
                 'laki' => $request->get('laki'),
                 'perempuan' => $request->get('perempuan'),
@@ -344,7 +338,6 @@ class EditController extends Controller
     {
         $request->validate([
             'provinsi' => ['required'],
-            'unit' => ['required'],
             'jenis_buku' => ['required'],
             'jumlah_buku' => ['nullable', 'numeric'],
             'jumlah_judul' => ['nullable', 'numeric'],
@@ -354,7 +347,6 @@ class EditController extends Controller
         $data = Perpustakaan::where('id', $id)
             ->update([
                 'provinsi' => $request->get('provinsi'),
-                'unit' => $request->get('unit'),
                 'jumlah_buku' => $request->get('jumlah_buku'),
                 'jumlah_judul' => $request->get('jumlah_judul'),
                 'jenis_buku' => $request->get('jenis_buku'),
@@ -369,7 +361,6 @@ class EditController extends Controller
     public function update_a7($id, Request $request)
     {
         $request->validate([
-            'unit' => ['required'],
             'tahun_anggaran' => ['required'],
             'laptop' => ['nullable', 'numeric'],
             'komputer' => ['nullable', 'numeric'],
@@ -387,7 +378,6 @@ class EditController extends Controller
 
         $data = Inventarisasi::where('id', $id)
             ->update([
-                'unit' => $request->get('unit'),
                 'tahun_anggaran' => $request->get('tahun_anggaran'),
                 'laptop' => $request->get('laptop'),
                 'komputer' => $request->get('komputer'),
@@ -750,7 +740,6 @@ class EditController extends Controller
     {
         $request->validate([
             'kategori' => ['required'],
-            'unit' => ['required'],
             'peneliti' => ['required'],
             'judul' => ['required'],
             'abstrak' => ['required'],
@@ -760,7 +749,6 @@ class EditController extends Controller
 
         $data = Penelitian::where('id', $id)
             ->update([
-                'unit' => $request->get('unit'),
                 'peneliti' => $request->get('peneliti'),
                 'judul' => $request->get('judul'),
                 'kerja_sama' => $request->get('kerja_sama'),
