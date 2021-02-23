@@ -9,15 +9,14 @@ use Maatwebsite\Excel\Concerns\WithHeadingRow;
 class PenelitianImport implements ToModel, WithHeadingRow
 {
     /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
+     * @param array $row
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
     public function model(array $row)
     {
         return new Penelitian([
             'kategori'  => $row['kategori'],
-            'unit' => $row['unit'],
             'peneliti' => $row['peneliti'],
             'judul' => $row['judul'],
             'kerja_sama' => $row['kerja_sama'],

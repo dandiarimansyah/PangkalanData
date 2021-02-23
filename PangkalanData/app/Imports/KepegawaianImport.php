@@ -21,7 +21,6 @@ class KepegawaianImport implements ToModel, WithHeadingRow
 
         return new Kepegawaian([
             'tanggal_diperbarui'  => $tanggal,
-            'unit' => $row['unit'],
             'semua_kelamin' => $row['semua_kelamin'],
             'laki' => $row['jumlah_laki'],
             'perempuan' => $row['jumlah_perempuan'],

@@ -31,14 +31,9 @@
       <form role="form" action="/operator/input/sekretariat/tanah_dan_bangunan" method="POST" enctype="multipart/form-data">
           @csrf
 
-        <div class="alert-danger">{{ $errors->first('kantor') }}</div>
-        <div class="inputfield-select">
-            <label>	Balai/Kantor*</label>
-            <div class="custom_select">
-              <select name="kantor">
-                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
-              </select>
-            </div>
+          <div class="inputfield">
+            <label>Unit/Satuan Kerja</label>
+            <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('alamat') }}</div>

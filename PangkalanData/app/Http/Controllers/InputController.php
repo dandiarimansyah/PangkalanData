@@ -282,12 +282,10 @@ class InputController extends Controller
 
     public function store_a5(Request $request)
     {
-        $request->validate([
-            'kantor' => ['required']
-        ]);
+        $request->validate([]);
 
         $data = new Tanah_Bangunan();
-        $data->kantor = $request->kantor;
+        $data->kantor = "Balai Bahasa Provinsi Jawa Tengah";
         $data->alamat = $request->alamat;
         $data->status_tanah = $request->status_tanah;
         $data->sertif_tanah = $request->sertif_tanah;

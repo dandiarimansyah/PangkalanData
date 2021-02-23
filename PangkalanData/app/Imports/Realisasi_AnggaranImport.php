@@ -16,7 +16,6 @@ class Realisasi_AnggaranImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new Realisasi_Anggaran([
-            'unit'  => $row['unit'],
             'nilai_realisasi' => $row['tahun_realisasi'],
             'besar_dana' => $row['besar_dana'],
             'keterangan' => $row['keterangan'],

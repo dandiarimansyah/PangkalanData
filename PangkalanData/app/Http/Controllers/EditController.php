@@ -312,13 +312,10 @@ class EditController extends Controller
     ////////////////////////////////////////////
     public function update_a5($id, Request $request)
     {
-        $request->validate([
-            'kantor' => ['required']
-        ]);
+        $request->validate([]);
 
         $data = Tanah_Bangunan::where('id', $id)
             ->update([
-                'kantor' => $request->get('kantor'),
                 'alamat' => $request->get('alamat'),
                 'status_tanah' => $request->get('status_tanah'),
                 'sertif_tanah' => $request->get('sertif_tanah'),
