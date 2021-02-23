@@ -170,7 +170,7 @@ function number_format (number, decimals, dec_point, thousands_sep) {
     return s.join(dec);
 }
 
-function ubah_rupiah($angka){ 
+function ubah_rupiah(item, index, array){ 
     $hasil =  number_format($angka,0, ',' , '.'); 
     return $hasil; 
 }
@@ -179,7 +179,7 @@ $(document).ready(function () {
     let data = []
     $(".rupiah").each((i, e) => data.push(e.getAttribute('data-id')))
 
-    // data.forEach(ubah_rupiah);
+    data.forEach(ubah_rupiah);
     
     var angka = $('#rupiah').html();
     var ubah = ubah_rupiah(angka);

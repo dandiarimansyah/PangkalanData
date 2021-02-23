@@ -42,7 +42,7 @@
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> tahun_anggaran}}</td>
                         <td>{{ $a -> unit}}</td>
-                        <td>{{ $a -> nilai_anggaran}}</td>
+                        <td id="rupiah" data-id="{{ $a->id }}">{{ $a -> nilai_anggaran}}</td>
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit"
                                 id="edit_item" 
