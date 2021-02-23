@@ -190,7 +190,7 @@
                       <div class="inputfield-select">
                           <label>Kondisi Bangunan</label>
                           <div class="custom_select">
-                            <select id="kodisi" name="kondisi">
+                            <select id="kondisi" name="kondisi">
                               <option value="Baik">Baik</option>
                               <option value="Rusak Sedang">Rusak Sedang</option>
                               <option value="Rusak Berat">Rusak Berat</option>
@@ -265,10 +265,14 @@
                     return ($(this).val() == status_peroleh)
                 }).prop('selected', true);
 
+                $('#imb input').filter(function(){
+                    return ($(this).val() == imb)
+                }).prop('selected', true);
+
                 $('#status_tanah').val(status_tanah);
                 $('#sertif_tanah').val(sertif_tanah);
                 $('#status_bangunan').val(status_bangunan);
-                $('#imb').val(imb);
+
                 $('#keterangan').val(keterangan);
                 
                 $('#edit_form').attr('action', '/operator/edit/sekretariat/tanah_dan_bangunan/' + id);

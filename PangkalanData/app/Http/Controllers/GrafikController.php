@@ -34,17 +34,21 @@ class GrafikController extends Controller
     //GRAFIK S 1
     public function ga1()
     {
-        $anggaran = Anggaran::all();
-        // $tahun_angaran = \App\
+        // $anggaran = Anggaran::whereYear('tahun_anggaran', '=', 2018)
+        //     ->get();
+
+        $anggaran = Anggaran::orderBy('tahun_anggaran')->get();
 
         // menyiapkan data untuk chart
-        $categories = [];
+        $tahun_anggaran = [];
+        $nilai_anggaran = [];
 
         foreach ($anggaran as $a) {
-            $categories[] = $a->nilai_anggaran;
+            $tahun_anggaran[] = $a->tahun_anggaran;
+            $nilai_anggaran[] = $a->nilai_anggaran;
         }
 
-        return view('GRAFIK.SEKRETARIAT.ga1', ['categories' => $categories]);
+        return view('GRAFIK.SEKRETARIAT.ga1', compact('tahun_anggaran', 'nilai_anggaran'));
     }
 
     public function ga2()
