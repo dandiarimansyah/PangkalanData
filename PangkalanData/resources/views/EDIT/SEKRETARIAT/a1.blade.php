@@ -21,7 +21,6 @@
         <th>EDIT DATA ANGGARAN UNIT/SATUAN KERJA PER TAHUN</th>
     </div>
 
-
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
@@ -36,13 +35,12 @@
             </thead>
 
             <tbody>
-
                 @forelse ($anggaran as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> tahun_anggaran}}</td>
                         <td>{{ $a -> unit}}</td>
-                        <td id="rupiah" data-id="{{ $a->id }}">{{ $a -> nilai_anggaran}}</td>
+                        <td class="rupiah" data-nilai="{{ $a->nilai_anggaran }}">{{ $a -> nilai_anggaran}}</td>
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit"
                                 id="edit_item" 

@@ -49,7 +49,7 @@
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> nilai_realisasi}}</td>
                         <td>{{ $a -> unit}}</td>
-                        <td>{{ $a -> besar_dana}}</td>
+                        <td class="rupiah" data-nilai="{{ $a->besar_dana }}">{{ $a -> besar_dana}}</td>
                         <td>{{ $a -> keterangan}}</td>
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit"

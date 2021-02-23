@@ -57,7 +57,7 @@
                         <td>{{ $a -> tahun_anggaran}}</td>
                         <td>{{ $a -> unit}}</td>
                         
-                        <td class="rupiah" data-id="{{ $a->id }}">{{ $a -> nilai_anggaran}}</td>
+                        <td class="rupiah" data-nilai="{{ $a->nilai_anggaran }}">{{ $a -> nilai_anggaran}}</td>
 
                         <td style="display: flex; justify-content:center">
                             <button type="button" class="edit"
