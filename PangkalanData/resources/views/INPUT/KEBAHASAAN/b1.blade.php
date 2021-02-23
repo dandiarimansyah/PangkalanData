@@ -23,6 +23,14 @@
 
   <div class="judul">
     <th>INPUT KAMUS, ENSIKLOPEDIA, TESAURUS, GLOSARIUM DAN LEMA</th>
+
+    <div class="import-input">
+      <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
+      <button loc="{{ asset('/Template/Template Kamus Ensiklopedia.xlsx')}}" href="/import/kebahasaan/kamus_ensiklopedia" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        IMPORT EXCEL
+      </button>
+    </div>
+
   </div>
 
   <div class="wrapper">

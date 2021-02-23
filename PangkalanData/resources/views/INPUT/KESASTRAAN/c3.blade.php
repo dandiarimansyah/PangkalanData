@@ -23,6 +23,14 @@
     
     <div class="judul">
         <th>INPUT DATA MUSIKALISASI PUISI NASIONAL</th>
+
+        <div class="import-input">
+      <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
+      <button loc="{{ asset('/Template/Template Musikalisasi Puisi Nasional.xlsx')}}" href="/import/kesastraan/musikalisasi_puisi_nasional" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        IMPORT EXCEL
+      </button>
+    </div>
+
     </div>
 
   <div class="wrapper">

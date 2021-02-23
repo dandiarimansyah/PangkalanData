@@ -23,6 +23,14 @@
 
   <div class="judul">
     <th>INPUT DATA INVENTARISASI BARANG MILIK NEGARA</th>
+
+    <div class="import-input">
+      <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
+      <button loc="{{ asset('/Template/Template Inventarisasi BMN.xlsx')}}" href="/import/sekretariat/inventarisasi_bmn" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        IMPORT EXCEL
+      </button>
+    </div>
+
   </div>
 
   <div class="wrapper">

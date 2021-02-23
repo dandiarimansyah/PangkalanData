@@ -23,6 +23,14 @@
 
   <div class="judul">
     <th>INPUT DATA PESULUH</th>
+
+    <div class="import-input">
+      <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
+      <button loc="{{ asset('/Template/Template Pesuluh.xlsx')}}" href="/import/kebahasaan/pesuluh" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        IMPORT EXCEL
+      </button>
+    </div>
+
   </div>
 
   <p style="text-align: center; font-size:15px">Silahkan Pilih Data Penyuluhan Terlebih Dahulu</p>

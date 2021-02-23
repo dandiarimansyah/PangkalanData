@@ -26,7 +26,7 @@
 
     <div class="import-input">
       <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
-      <button loc="{{ asset('/Template/Template Realisasi_Anggaran.xlsx')}}" href="/import/sekretariat/realisasi_anggaran" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+      <button loc="{{ asset('/Template/Template Realisasi Anggaran.xlsx')}}" href="/import/sekretariat/realisasi_anggaran" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
         IMPORT EXCEL
       </button>
     </div>
