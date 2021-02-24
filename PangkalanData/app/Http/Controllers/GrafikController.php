@@ -155,32 +155,98 @@ class GrafikController extends Controller
     }
     public function gb2()
     {
-        return view('GRAFIK.KEBAHASAAN.gb2');
+        $data = Jurnal::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.KEBAHASAAN.gb2', compact('tahun', 'total'));
     }
     public function gb3()
     {
-        return view('GRAFIK.KEBAHASAAN.gb3');
+        $data = Terbitan_Umum::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.KEBAHASAAN.gb3', compact('tahun', 'total'));
     }
     public function gb4()
     {
-        return view('GRAFIK.KEBAHASAAN.gb4');
+        $data = Penyuluhan::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.KEBAHASAAN.gb4', compact('tahun', 'total'));
     }
 
     //GRAFIK S 3
     public function gc1()
     {
-        return view('GRAFIK.KESASTRAAN.gc1');
+        $data = Bengkel_Sastra_Dan_Bahasa::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.KESASTRAAN.gc1', compact('tahun', 'total'));
     }
 
     //GRAFIK S 4
     public function gd1()
     {
-        return view('GRAFIK.KOMUNITAS.gd1');
+        $data = Komunitas_Bahasa::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.KOMUNITAS.gd1', compact('tahun', 'total'));
     }
 
     //GRAFIK S 5
     public function ge1()
     {
-        return view('GRAFIK.PENELITIAN.ge1');
+        $data = Penelitian::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.PENELITIAN.ge1', compact('tahun', 'total'));
     }
 }
