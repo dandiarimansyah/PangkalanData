@@ -99,16 +99,59 @@ class GrafikController extends Controller
     {
         $data = Kamus::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
 
-        // menyiapkan data untuk chart
+        $KAMUS = Kamus::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")
+            ->where('kategori', 'KAMUS')
+            ->groupBy('tahun')->get();
+
+        $ENSIKLOPEDIA = Kamus::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")
+            ->where('kategori', 'ENSIKLOPEDIA')
+            ->groupBy('tahun')->get();
+
+        $TESAURUS = Kamus::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")
+            ->where('kategori', 'TESAURUS')
+            ->groupBy('tahun')->get();
+
+        $GLOSARIUM = Kamus::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")
+            ->where('kategori', 'GLOSARIUM')
+            ->groupBy('tahun')->get();
+
+        $LEMA = Kamus::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")
+            ->where('kategori', 'LEMA')
+            ->groupBy('tahun')->get();
+
+        // // menyiapkan data untuk chart
         $tahun = [];
-        $total = [];
+        $KAMUS_T = [];
+        $ENSIKLOPEDIA_T = [];
+        $TESAURUS_T = [];
+        $GLOSARIUM_T = [];
+        $LEMA_T = [];
 
         foreach ($data as $a) {
             $tahun[] = $a->tahun;
-            $total[] = $a->total;
         }
 
-        return view('GRAFIK.KEBAHASAAN.gb1', compact('tahun', 'total'));
+        foreach ($KAMUS as $a) {
+            $KAMUS_T[] = $a->total;
+        }
+
+        foreach ($ENSIKLOPEDIA as $a) {
+            $ENSIKLOPEDIA_T[] = $a->total;
+        }
+
+        foreach ($TESAURUS as $a) {
+            $TESAURUS_T[] = $a->total;
+        }
+
+        foreach ($GLOSARIUM as $a) {
+            $GLOSARIUM_T[] = $a->total;
+        }
+
+        foreach ($LEMA as $a) {
+            $LEMA_T[] = $a->total;
+        }
+
+        return view('GRAFIK.KEBAHASAAN.gb1', compact('KAMUS_T', 'ENSIKLOPEDIA_T', 'TESAURUS_T', 'GLOSARIUM_T', 'LEMA_T', 'tahun'));
     }
     public function gb2()
     {

@@ -24,7 +24,7 @@
         type: 'column'
     },
     title: {
-        text: 'JUMLAH DATA KAMUS PER TAHUN'
+        text: 'JUMLAH DATA KAMUS/ESIKLOPEDIA/TESAURUS/GLOSAURUM/LEMA PER TAHUN'
     },
 
     xAxis: {
@@ -53,7 +53,23 @@
     },
     series: [{
         name: 'KAMUS',
-        data: {!!json_encode($total)!!},
+        data: {!!json_encode($KAMUS_T)!!},
+
+    }, {
+        name: 'ENSIKLOPEDIA',
+        data: {!!json_encode($ENSIKLOPEDIA_T)!!},
+
+    }, {
+        name: 'TESAURUS',
+        data: {!!json_encode($TESAURUS_T)!!},
+
+    }, {
+        name: 'GLOSAURUM',
+        data: {!!json_encode($GLOSARIUM_T)!!},
+
+    }, {
+        name: 'LEMA',
+        data: {!!json_encode($LEMA_T)!!},
 
     }]
 });
