@@ -107,13 +107,13 @@ body {
 }
 
 .gambar_beranda img {
-    border: 20px solid rgb(236, 236, 236);
+    border: 20px solid rgba(180, 221, 255, 0.541);
     border-radius: 10px;
 }
 
 .gambar_beranda .caption {
     padding: 10px;
-    background: rgb(150, 90, 13);
+    background: rgba(0, 0, 0, 0.623);
     color: rgb(255, 255, 255);
 }
 

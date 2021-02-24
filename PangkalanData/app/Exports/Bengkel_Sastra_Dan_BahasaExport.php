@@ -44,6 +44,7 @@ class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, Wi
                 ->where('nama_kegiatan', $this->nama_kegiatan)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }
