@@ -149,6 +149,7 @@ class LaporanController extends Controller
         } else {
             $data = Anggaran::all();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return view('LAPORAN.SEKRETARIAT.tampil_la1', compact('data', 'pilih', 'tahun_anggaran'));
     }
@@ -170,12 +171,18 @@ class LaporanController extends Controller
             $data = Realisasi_Anggaran::all();
         }
 
+
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.SEKRETARIAT.tampil_la2', compact('data', 'pilih', 'tahun_anggaran'));
     }
 
     //===================================================================================================
     public function tampil_la3(Request $request)
     {
+
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.SEKRETARIAT.tampil_la3', compact('data'));
     }
 
@@ -192,6 +199,9 @@ class LaporanController extends Controller
                 ->orWhere('kategori', $request->kategori)
                 ->get();
         }
+
+
+        $data = $data->where('validasi', 'sudah');
 
         return view('LAPORAN.SEKRETARIAT.tampil_la4', compact('data', 'kategori', 'perihal'));
     }
@@ -213,18 +223,26 @@ class LaporanController extends Controller
                 ->where('status_bangunan', $request->status_bangunan)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.SEKRETARIAT.tampil_la5', compact('data', 'status_tanah', 'status_bangunan'));
     }
 
     //===================================================================================================
     public function tampil_la6(Request $request)
     {
+
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.SEKRETARIAT.tampil_la6', compact('data'));
     }
 
     //===================================================================================================
     public function tampil_la7(Request $request)
     {
+
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.SEKRETARIAT.tampil_la7', compact('data'));
     }
 
@@ -311,6 +329,9 @@ class LaporanController extends Controller
         /////////////
 
 
+
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KEBAHASAAN.tampil_lb1', compact('data', 'kategori', 'judul', 'info_produk', 'tim_redaksi'));
     }
 
@@ -359,6 +380,8 @@ class LaporanController extends Controller
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KEBAHASAAN.tampil_lb2', compact('data', 'kategori', 'judul', 'info_produk', 'tim_redaksi'));
     }
 
@@ -407,6 +430,8 @@ class LaporanController extends Controller
                 ->where('penulis', $request->penulis)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KEBAHASAAN.tampil_lb3', compact('data', 'kategori', 'judul', 'info_produk', 'penulis'));
     }
 
@@ -455,6 +480,8 @@ class LaporanController extends Controller
                 ->where('sasaran', $request->sasaran)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KEBAHASAAN.tampil_lb4', compact('data', 'nama_kegiatan', 'provinsi', 'kota', 'sasaran'));
     }
 
@@ -494,6 +521,8 @@ class LaporanController extends Controller
                 ->where('instansi', 'like', '%' . $request->instansi . '%')
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KEBAHASAAN.tampil_lb5', compact('data', 'nama', 'tingkat', 'instansi'));
     }
 
@@ -537,6 +566,8 @@ class LaporanController extends Controller
                 ->where('deskripsi', $request->deskripsi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KEBAHASAAN.tampil_lb6', compact('data', 'kategori', 'tahun', 'deskripsi'));
     }
 
@@ -578,6 +609,8 @@ class LaporanController extends Controller
                 ->orWhere('pemenang_3_2', $request->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KEBAHASAAN.tampil_lb7', compact('data', 'provinsi', 'pemenang', 'tahun'));
     }
 
@@ -619,6 +652,8 @@ class LaporanController extends Controller
                 ->orWhere('pemenang_3_2', $request->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KEBAHASAAN.tampil_lb8', compact('data', 'provinsi', 'pemenang', 'tahun'));
     }
 
@@ -647,6 +682,8 @@ class LaporanController extends Controller
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KESASTRAAN.tampil_lc1', compact('data', 'nama_kegiatan', 'kota', 'provinsi'));
     }
 
@@ -690,6 +727,8 @@ class LaporanController extends Controller
                 ->where('deskripsi', $request->deskripsi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KESASTRAAN.tampil_lc2', compact('data', 'kategori', 'tahun', 'deskripsi'));
     }
 
@@ -720,6 +759,8 @@ class LaporanController extends Controller
                 ->orWhere('pemenang_3', $request->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KESASTRAAN.tampil_lc3', compact('data', 'pemenang', 'tahun'));
     }
 
@@ -755,6 +796,8 @@ class LaporanController extends Controller
                 ->orWhere('pemenang_3', $request->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KESASTRAAN.tampil_lc4', compact('data', 'pemenang', 'tahun', 'provinsi'));
     }
 
@@ -804,6 +847,8 @@ class LaporanController extends Controller
                 ->where('alamat', $request->alamat)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KOMUNITAS.tampil_ld1', compact('data', 'provinsi', 'kota', 'nama_komunitas', 'alamat'));
     }
 
@@ -852,6 +897,8 @@ class LaporanController extends Controller
                 ->where('alamat', $request->alamat)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.KOMUNITAS.tampil_ld2', compact('data', 'provinsi', 'kota', 'nama_komunitas', 'alamat'));
     }
 
@@ -925,6 +972,8 @@ class LaporanController extends Controller
                 ->orWhere('judul', 'like', '%' . $request->judul . '%')
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
+
         return view('LAPORAN.PENELITIAN.tampil_le1', compact('data', 'peneliti', 'abstrak', 'tahun_terbit', 'judul'));
     }
 }

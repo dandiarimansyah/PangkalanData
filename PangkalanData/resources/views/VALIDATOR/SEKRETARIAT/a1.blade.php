@@ -152,7 +152,6 @@
 
 @push('scripts')
       <script>
-
           $(document).on('click','#edit_item',function(){
                 let unit = $(this).data('unit');
                 let tahun_anggaran = $(this).data('tahun_anggaran');
