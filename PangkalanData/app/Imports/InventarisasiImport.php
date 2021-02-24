@@ -16,6 +16,7 @@ class InventarisasiImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new Inventarisasi([
+            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
             'tahun_anggaran' => $row['tahun_anggaran'],
             'laptop' => $row['laptop'],
             'komputer' => $row['komputer'],

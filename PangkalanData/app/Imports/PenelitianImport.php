@@ -16,6 +16,7 @@ class PenelitianImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new Penelitian([
+            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
             'kategori'  => $row['kategori'],
             'peneliti' => $row['peneliti'],
             'judul' => $row['judul'],
