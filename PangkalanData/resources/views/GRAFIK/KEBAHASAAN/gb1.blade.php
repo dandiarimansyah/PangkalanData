@@ -24,7 +24,7 @@
         type: 'column'
     },
     title: {
-        text: 'JUMLAH DATA KAMUS PER TAHUN'
+        text: 'JUMLAH DATA KAMUS/ENSIKLOPEDIA/TESAURUS/GLOSARIUM/LEMA PER TAHUN'
     },
 
     xAxis: {
@@ -52,7 +52,7 @@
         }
     },
     series: [{
-        name: 'KAMUS',
+        name: 'KAMUS/ENSIKLOPEDIA/TESAURUS/GLOSARIUM/LEMA',
         data: {!!json_encode($total)!!},
 
     }]

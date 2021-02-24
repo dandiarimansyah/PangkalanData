@@ -53,7 +53,7 @@
         }
     },
     series: [{
-        name: 'Kerja Sama',
+        name: 'KERJA SAMA',
         data: {!!json_encode($total)!!},
 
     }]

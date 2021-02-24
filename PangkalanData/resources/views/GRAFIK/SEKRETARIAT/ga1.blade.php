@@ -55,7 +55,7 @@
         }
     },
     series: [{
-        name: 'Anggaran',
+        name: 'ANGGARAN',
         data: {!!json_encode($total)!!},
 
     }]

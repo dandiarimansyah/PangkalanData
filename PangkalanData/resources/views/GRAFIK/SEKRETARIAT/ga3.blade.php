@@ -53,7 +53,7 @@
         }
     },
     series: [{
-        name: 'Tanah dan Bangunan',
+        name: 'TANAH DAN BANGUNAN',
         data: {!!json_encode($total)!!},
 
     }]

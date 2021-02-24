@@ -53,7 +53,7 @@
         }
     },
     series: [{
-        name: 'Perpustakaan',
+        name: 'PERPUSTAKAAN',
         data: {!!json_encode($total)!!},
 
     }]
