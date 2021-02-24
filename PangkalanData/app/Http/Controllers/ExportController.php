@@ -65,6 +65,7 @@ class ExportController extends Controller
         } else {
             $data = Anggaran::all();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a1', compact('data'));
 
@@ -81,6 +82,7 @@ class ExportController extends Controller
         } else {
             $data = Realisasi_Anggaran::all();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a2', compact('data'));
 
@@ -92,6 +94,7 @@ class ExportController extends Controller
     public function pdf_a3(Request $request)
     {
         $data = Kepegawaian::all();
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a3', compact('data'));
 
@@ -109,6 +112,7 @@ class ExportController extends Controller
                 ->orWhere('kategori', $request->kategori)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a4', compact('data'));
 
@@ -130,6 +134,7 @@ class ExportController extends Controller
                 ->where('status_bangunan', $request->status_bangunan)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a5', compact('data'));
 
@@ -141,6 +146,7 @@ class ExportController extends Controller
     public function pdf_a6(Request $request)
     {
         $data = Perpustakaan::all();
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a6', compact('data'));
 
@@ -152,6 +158,7 @@ class ExportController extends Controller
     public function pdf_a7(Request $request)
     {
         $data = Inventarisasi::all();
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.SEKRETARIAT.a7', compact('data'));
 
@@ -200,6 +207,7 @@ class ExportController extends Controller
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KEBAHASAAN.b1', compact('data'));
 
@@ -247,6 +255,7 @@ class ExportController extends Controller
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KEBAHASAAN.b2', compact('data'));
 
@@ -294,6 +303,7 @@ class ExportController extends Controller
                 ->where('penulis', $request->penulis)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KEBAHASAAN.b3', compact('data'));
 
@@ -341,6 +351,7 @@ class ExportController extends Controller
                 ->where('sasaran', $request->sasaran)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KEBAHASAAN.b4', compact('data'));
 
@@ -380,6 +391,7 @@ class ExportController extends Controller
                 ->where('instansi', 'like', '%' . $request->instansi . '%')
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KEBAHASAAN.b5', compact('data'));
 
@@ -419,6 +431,7 @@ class ExportController extends Controller
                 ->where('deskripsi', $request->deskripsi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KEBAHASAAN.b6', compact('data'));
 
@@ -456,6 +469,7 @@ class ExportController extends Controller
                 ->orWhere('pemenang_3_2', $request->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KEBAHASAAN.b7', compact('data'));
 
@@ -493,6 +507,7 @@ class ExportController extends Controller
                 ->orWhere('pemenang_3_2', $request->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KEBAHASAAN.b8', compact('data'));
 
@@ -521,6 +536,7 @@ class ExportController extends Controller
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KESASTRAAN.c1', compact('data'));
 
@@ -560,6 +576,7 @@ class ExportController extends Controller
                 ->where('deskripsi', $request->deskripsi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KESASTRAAN.c2', compact('data'));
 
@@ -587,6 +604,7 @@ class ExportController extends Controller
                 ->orWhere('pemenang_3', $request->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KESASTRAAN.c3', compact('data'));
 
@@ -618,6 +636,7 @@ class ExportController extends Controller
                 ->orWhere('pemenang_3', $request->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KESASTRAAN.c4', compact('data'));
 
@@ -666,6 +685,7 @@ class ExportController extends Controller
                 ->where('alamat', $request->alamat)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KOMUNITAS.d1', compact('data'));
 
@@ -713,6 +733,7 @@ class ExportController extends Controller
                 ->where('alamat', $request->alamat)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.KOMUNITAS.d2', compact('data'));
 
@@ -781,6 +802,7 @@ class ExportController extends Controller
                 ->orWhere('judul', 'like', '%' . $request->judul . '%')
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         $pdf = PDF::loadView('PDF.PENELITIAN.e1', compact('data'));
 

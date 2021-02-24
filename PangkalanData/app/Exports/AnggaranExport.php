@@ -34,6 +34,7 @@ class AnggaranExport implements FromCollection, WithMapping, WithHeadings, Shoul
         } else {
             $data = Anggaran::all();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

@@ -14,14 +14,21 @@
 
     <div class="container">
       <div class="forms-container">
+
+        <div class="balai">
+          <div class="tulisan">
+            <h1>Sistem Pangkalan Data</h1>
+            <h1>Balai Bahasa Provinsi Jawa Tengah</h1>
+          </div>
+        </div>
+
         <div class="signin-signup">
-  <h1 style="font-size: 30px; margin-top:-390px; margin-left:100px;">Sistem Pangkalan Data Balai Bahasa</h1>
 
           <form action="{{url('proses_login')}}" method="POST" id="logForm">
             @csrf
 
             
-            <h2 class="title">Masuk Validator / Operator / Tamu</h2>
+            <h2 class="title">Silahkan Masuk</h2>
 
             @if (session('error'))
               <div class="salah-login">{{ session('error') }}</div>
