@@ -798,7 +798,7 @@ class ExportController extends Controller
 
         return Excel::download($export, 'Laporan Anggaran Excel.xlsx');
     }
-//=======================================================================================
+    //=======================================================================================
     public function excel_a2(Request $request)
     {
         $export = new Realisasi_AnggaranExport($request->pilih, $request->tahun_anggaran);
@@ -822,130 +822,130 @@ class ExportController extends Controller
     //=======================================================================================
     public function excel_a5(Request $request)
     {
-         $export = new Tanah_BangunanExport($request->status_tanah, $request->status_bangunan);
+        $export = new Tanah_BangunanExport($request->status_tanah, $request->status_bangunan);
 
         return Excel::download($export, 'Laporan Tanah dan Bangunan Excel.xlsx');
     }
     //=======================================================================================
     public function excel_a6(Request $request)
     {
-         $export = new PerpustakaanExport;
+        $export = new PerpustakaanExport;
 
         return Excel::download($export, 'Laporan Perpustakaan Excel.xlsx');
     }
     //=======================================================================================
     public function excel_a7(Request $request)
     {
-         $export = new InventarisasiExport;
+        $export = new InventarisasiExport;
 
         return Excel::download($export, 'Laporan Inventarisasi BMN Excel.xlsx');
     }
-//=======================================================================================
+    //=======================================================================================
     //EXCEL S 2
     public function excel_b1(Request $request)
     {
-         $export = new KamusExport($request->info_produk, $request->judul, $request->tim_redaksi, $request->kategori);
+        $export = new KamusExport($request->info_produk, $request->judul, $request->tim_redaksi, $request->kategori);
 
         return Excel::download($export, 'Laporan Kamus/Ensiklopedia Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b2(Request $request)
     {
-         $export = new JurnalExport($request->info_produk, $request->judul, $request->tim_redaksi, $request->kategori);
+        $export = new JurnalExport($request->info_produk, $request->judul, $request->tim_redaksi, $request->kategori);
 
         return Excel::download($export, 'Laporan Jurnal/Majalah Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b3(Request $request)
     {
-         $export = new Terbitan_UmumExport($request->info_produk, $request->judul, $request->penulis, $request->kategori);
+        $export = new Terbitan_UmumExport($request->info_produk, $request->judul, $request->penulis, $request->kategori);
 
         return Excel::download($export, 'Laporan Terbitan Umum Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b4(Request $request)
     {
-         $export = new PenyuluhanExport($request->kota, $request->nama_kegiatan, $request->sasaran, $request->provinsi);
+        $export = new PenyuluhanExport($request->kota, $request->nama_kegiatan, $request->sasaran, $request->provinsi);
 
         return Excel::download($export, 'Laporan Penyuluhan Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b5(Request $request)
     {
-         $export = new PesuluhExport($request->tingkat, $request->nama, $request->instansi);
+        $export = new PesuluhExport($request->tingkat, $request->nama, $request->instansi);
 
         return Excel::download($export, 'Laporan Pesuluh Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b6(Request $request)
     {
-         $export = new Penghargaan_BahasaExport($request->kategori, $request->tahun, $request->deskripsi);
+        $export = new Penghargaan_BahasaExport($request->kategori, $request->tahun, $request->deskripsi);
 
         return Excel::download($export, 'Laporan Penghargaan Bahasa Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b7(Request $request)
     {
-         $export = new Duta_NasionalExport($request->tahun, $request->pemenang, $request->provinsi);
+        $export = new Duta_NasionalExport($request->tahun, $request->pemenang, $request->provinsi);
 
         return Excel::download($export, 'Laporan Duta Bahasa Nasional Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b8(Request $request)
     {
-         $export = new Duta_ProvinsiExport($request->tahun, $request->pemenang, $request->provinsi);
+        $export = new Duta_ProvinsiExport($request->tahun, $request->pemenang, $request->provinsi);
 
         return Excel::download($export, 'Laporan Duta Bahasa Provinsi Excel.xlsx');
     }
-//=======================================================================================
+    //=======================================================================================
     //EXCEL S 3
     public function excel_c1(Request $request)
     {
-         $export = new Bengkel_Sastra_Dan_BahasaExport($request->nama_kegiatan, $request->kota,, $request->provinsi);
+        $export = new Bengkel_Sastra_Dan_BahasaExport($request->nama_kegiatan, $request->kota, $request->provinsi);
 
         return Excel::download($export, 'Laporan Bengkel Sastra dan Bahasa Excel.xlsx');
     }
     //=======================================================================================
     public function excel_c2(Request $request)
     {
-         $export = new Penghargaan_SastraExport($request->kategori, $request->tahun, $request->deskripsi);
+        $export = new Penghargaan_SastraExport($request->kategori, $request->tahun, $request->deskripsi);
 
         return Excel::download($export, 'Laporan Penghargaan Sastra Excel.xlsx');
     }
     //=======================================================================================
     public function excel_c3(Request $request)
     {
-         $export = new Musikalisasi_Puisi_NasionalExport($request->tahun, $request->pemenang);
+        $export = new Musikalisasi_Puisi_NasionalExport($request->tahun, $request->pemenang);
 
         return Excel::download($export, 'Laporan Musikalisasi Puisi Nasional Excel.xlsx');
     }
     //=======================================================================================
     public function excel_c4(Request $request)
     {
-         $export = new Musikalisasi_Puisi_ProvinsiExport($request->provinsi, $request->tahun, $request->pemenang);
+        $export = new Musikalisasi_Puisi_ProvinsiExport($request->provinsi, $request->tahun, $request->pemenang);
 
         return Excel::download($export, 'Laporan Musikalisasi Puisi Provinsi Excel.xlsx');
     }
-//=======================================================================================
+    //=======================================================================================
     //EXCEL S 4
     public function excel_d1(Request $request)
     {
-         $export = new Komunitas_BahasaExport($request->kota, $request->nama_komunitas, $request->alamat, $request->provinsi);
+        $export = new Komunitas_BahasaExport($request->kota, $request->nama_komunitas, $request->alamat, $request->provinsi);
 
         return Excel::download($export, 'Laporan Komunitas Bahasa Excel.xlsx');
     }
     //=======================================================================================
     public function excel_d2(Request $request)
     {
-         $export = new Komunitas_SastraExport($request->kota, $request->nama_komunitas, $request->alamat, $request->provinsi);
+        $export = new Komunitas_SastraExport($request->kota, $request->nama_komunitas, $request->alamat, $request->provinsi);
 
         return Excel::download($export, 'Laporan Komunitas Sastra Excel.xlsx');
     }
-//=======================================================================================
+    //=======================================================================================
     //EXCEL S 5
     public function excel_e1(Request $request)
     {
-         $export = new PenelitianExport($request->tahun_terbit, $request->judul, $request->peneliti, $request->abstrak);
+        $export = new PenelitianExport($request->tahun_terbit, $request->judul, $request->peneliti, $request->abstrak);
 
         return Excel::download($export, 'Laporan Penelitian Excel.xlsx');
     }

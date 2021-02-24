@@ -41,7 +41,6 @@ class AnggaranExport implements FromCollection, WithMapping, WithHeadings, Shoul
     public function map($data): array
     {
         return [
-            $data->unit,
             $data->tahun_anggaran,
             $data->nilai_anggaran
         ];
@@ -51,7 +50,6 @@ class AnggaranExport implements FromCollection, WithMapping, WithHeadings, Shoul
     {
         return [
             [
-                'Unit',
                 'Tahun Anggaran',
                 'Nilai Anggaran',
             ]
