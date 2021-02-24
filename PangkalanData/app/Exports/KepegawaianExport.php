@@ -25,7 +25,7 @@ class KepegawaianExport implements FromCollection, WithMapping, WithHeadings, Sh
     {
         return [
             $data->tanggal_diperbarui,
-            $data->unit,
+            // $data->unit,
             $data->semua_kelamin,
             $data->laki,
             $data->perempuan,
@@ -61,7 +61,7 @@ class KepegawaianExport implements FromCollection, WithMapping, WithHeadings, Sh
         return [
             [
                 'Tanggal Diperbarui',
-                'Unit',
+                // 'Unit',
                 'Jumlah Pegawai',
                 'Laki-Laki',
                 'Perempuan',

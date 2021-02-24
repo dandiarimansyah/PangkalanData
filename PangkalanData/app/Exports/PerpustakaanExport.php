@@ -26,7 +26,7 @@ class PerpustakaanExport implements FromCollection, WithMapping, WithHeadings, S
     {
         return [
             $data->provinsi,
-            $data->unit,
+            // $data->unit,
             $data->jumlah_buku,
             $data->jumlah_judul,
             $data->jenis_buku,
@@ -40,7 +40,7 @@ class PerpustakaanExport implements FromCollection, WithMapping, WithHeadings, S
         return [
             [
                 'Provinsi',
-                'Unit Kerja',
+                // 'Unit Kerja',
                 'Jumlah Buku',
                 'Jumlah Judul',
                 'Jenis Buku',

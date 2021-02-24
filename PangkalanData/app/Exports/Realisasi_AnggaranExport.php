@@ -40,7 +40,7 @@ class Realisasi_AnggaranExport implements FromCollection, WithMapping, WithHeadi
     public function map($data): array
     {
         return [
-            $data->unit,
+            // $data->unit,
             $data->nilai_realisasi,
             $data->besar_dana,
             $data->keterangan,
@@ -51,7 +51,7 @@ class Realisasi_AnggaranExport implements FromCollection, WithMapping, WithHeadi
     {
         return [
             [
-                'Unit',
+                // 'Unit',
                 'Nilai Realisasi',
                 'Besar Dana',
                 'Keterangan',

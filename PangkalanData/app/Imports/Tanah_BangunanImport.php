@@ -16,6 +16,7 @@ class Tanah_BangunanImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new Tanah_Bangunan([
+            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
             'alamat' => $row['alamat'],
             'status_tanah' => $row['status_tanah'],
             'sertif_tanah' => $row['sertif_tanah'],

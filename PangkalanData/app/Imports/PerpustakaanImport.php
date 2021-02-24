@@ -16,6 +16,7 @@ class PerpustakaanImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new Perpustakaan([
+            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
             'provinsi'  => $row['provinsi'],
             'jumlah_buku' => $row['jumlah_buku'],
             'jumlah_judul' => $row['jumlah_judul'],
