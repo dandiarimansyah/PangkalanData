@@ -38,6 +38,7 @@ class Tanah_BangunanExport implements FromCollection, WithMapping, WithHeadings,
                 ->where('status_bangunan', $this->status_bangunan)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

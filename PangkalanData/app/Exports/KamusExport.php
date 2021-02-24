@@ -68,6 +68,7 @@ class KamusExport implements FromCollection, WithMapping, WithHeadings, ShouldAu
                 ->where('tim_redaksi', $this->tim_redaksi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

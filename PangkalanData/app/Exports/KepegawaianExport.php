@@ -18,6 +18,8 @@ class KepegawaianExport implements FromCollection, WithMapping, WithHeadings, Sh
      */
     public function collection()
     {
+        $data = $data->where('validasi', 'sudah');
+        
         return Kepegawaian::all();
     }
 

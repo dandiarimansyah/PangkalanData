@@ -68,6 +68,7 @@ class Komunitas_BahasaExport implements FromCollection, WithMapping, WithHeading
                 ->where('alamat', $this->alamat)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

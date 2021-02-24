@@ -68,6 +68,7 @@ class Terbitan_UmumExport implements FromCollection, WithMapping, WithHeadings, 
                 ->where('penulis', $this->penulis)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }
