@@ -52,8 +52,12 @@
         }
     },
     series: [{
-        name: 'KOMUNITAS BAHASA DAN SASTRA',
-        data: {!!json_encode($total)!!},
+        name: 'KOMUNITAS BAHASA',
+        data: {!!json_encode($BAHASA_T)!!},
+
+    }, {
+        name: 'KOMUNITAS BAHASA',
+        data: {!!json_encode($SASTRA_T)!!},
 
     }]
 });

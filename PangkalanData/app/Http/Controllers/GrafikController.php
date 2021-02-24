@@ -119,7 +119,7 @@ class GrafikController extends Controller
             ->where('kategori', 'LEMA')
             ->groupBy('tahun')->get();
 
-        // // menyiapkan data untuk chart
+        // menyiapkan data untuk chart
         $tahun = [];
         $KAMUS_T = [];
         $ENSIKLOPEDIA_T = [];
@@ -202,7 +202,8 @@ class GrafikController extends Controller
     //GRAFIK S 3
     public function gc1()
     {
-        $data = Bengkel_Sastra_Dan_Bahasa::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+        $data = Bengkel_Sastra_Dan_Bahasa::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")
+            ->groupBy('tahun')->get();
 
         // menyiapkan data untuk chart
         $tahun = [];
@@ -221,16 +222,31 @@ class GrafikController extends Controller
     {
         $data = Komunitas_Bahasa::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
 
+        $BAHASA = Komunitas_Bahasa::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")
+            ->groupBy('tahun')->get();
+
+        $SASTRA = Komunitas_Sastra::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")
+            ->groupBy('tahun')->get();
+
         // menyiapkan data untuk chart
         $tahun = [];
-        $total = [];
+        $BAHASA_T = [];
+        $SASTRA_T = [];
 
         foreach ($data as $a) {
             $tahun[] = $a->tahun;
-            $total[] = $a->total;
         }
 
-        return view('GRAFIK.KOMUNITAS.gd1', compact('tahun', 'total'));
+        foreach ($BAHASA as $a) {
+            $BAHASA_T[] = $a->total;
+        }
+
+        foreach ($SASTRA as $a) {
+            $SASTRA_T[] = $a->total;
+        }
+
+
+        return view('GRAFIK.KOMUNITAS.gd1', compact('tahun', 'BAHASA_T', 'SASTRA_T'));
     }
 
     //GRAFIK S 5
