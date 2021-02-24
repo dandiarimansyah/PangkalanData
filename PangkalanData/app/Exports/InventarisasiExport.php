@@ -24,7 +24,7 @@ class InventarisasiExport implements FromCollection, WithMapping, WithHeadings, 
     public function map($data): array
     {
         return [
-            $data->unit,
+            // $data->unit,
             $data->tahun_anggaran,
             $data->laptop,
             $data->komputer,
@@ -45,7 +45,7 @@ class InventarisasiExport implements FromCollection, WithMapping, WithHeadings, 
     {
         return [
             [
-                'Unit',
+                // 'Unit',
                 'Tahun Anggaran',
                 'Laptop',
                 'Komputer',

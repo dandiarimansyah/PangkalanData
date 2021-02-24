@@ -96,7 +96,7 @@ class PenelitianExport implements FromCollection, WithMapping, WithHeadings, Sho
     {
         return [
             $data->kategori,
-            $data->unit,
+            // $data->unit,
             $data->peneliti,
             $data->judul,
             $data->kerja_sama,
@@ -114,7 +114,7 @@ class PenelitianExport implements FromCollection, WithMapping, WithHeadings, Sho
         return [
             [
                 'Kategori',
-                'Unit',
+                // 'Unit',
                 'Peneliti',
                 'Judul',
                 'Kerja Sama',
