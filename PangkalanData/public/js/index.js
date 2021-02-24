@@ -60,37 +60,39 @@ $(document).on('click', '#pesan', function(e){
 
 
 //Validasi Confirmation
-$(document).on('click','#tombol_validasi',function(e){
-    e.preventDefault();
-    var url = $(this).attr('href');
+// $(document).on('click','#tombol_validasi',function(e){
+//     e.preventDefault();
+//     let url = $(this).attr('href');
     
-    Swal.fire({
-        title: 'Validasi Data?',
-        text: "Data yang telah dicentang akan divalidasi!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#028B40',
-        cancelButtonColor: '#d33',
-        cancelButtonText: 'Batal',
-        confirmButtonText: 'Validasi',
-        reverseButtons: true
-        }).then((result) => {
-        if (result.isConfirmed) {
-            let data = []
-            $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
+//     Swal.fire({
+//         title: 'Validasi Data?',
+//         text: "Data yang telah dicentang akan divalidasi!",
+//         icon: 'warning',
+//         showCancelButton: true,
+//         confirmButtonColor: '#028B40',
+//         cancelButtonColor: '#d33',
+//         cancelButtonText: 'Batal',
+//         confirmButtonText: 'Validasi',
+//         reverseButtons: true
+//         }).then((result) => {
+//         if (result.isConfirmed) {
+//             let data = []
+//             $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
     
-            $.ajax({
-                type: "post",
-                url: url,
-                data: {_token:'{{ csrf_token() }}', id: data},
-                dataType:"json",
-                complete: function(){
-                    location.reload();
-                }
-            });
-        }
-    })
-})
+//             $.ajax({
+//                 type: "post",
+//                 url: url,
+//                 data: {_token:'{{ csrf_token() }}', id: data},
+//                 dataType:"json",
+//                 complete: function(){
+//                     console.log("halo");
+//                     location.reload();
+//                 }
+//             });
+//         }
+//     })
+// })
+  
 
 var flash = $('#flash').data('flash');
 var url = $('#flash').data('url');

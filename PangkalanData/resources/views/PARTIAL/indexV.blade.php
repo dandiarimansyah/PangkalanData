@@ -40,16 +40,22 @@
                     <li class="{{ (request()->is('media*')) ? 'aktif' : 'nonaktif' }}"><a href="/media">MEDIA</a></li>
                     <li class="{{ (request()->is('laporan*')) ? 'aktif' : 'nonaktif' }}"><a href="/laporan">LAPORAN</a></li>
                     <li class="{{ (request()->is('grafik*')) ? 'aktif' : 'nonaktif' }}"><a href="/grafik">GRAFIK</a></li>
+                    <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
+
                 @elseif (auth()->user()->level == 'validator')
                     <li class="{{ (request()->is('validator*')) ? 'aktif' : 'nonaktif' }}"><a href="/validator/validasi">VALIDASI</a></li>
                     <li class="{{ (request()->is('media*')) ? 'aktif' : 'nonaktif' }}"><a href="/media">MEDIA</a></li>
                     <li class="{{ (request()->is('laporan*')) ? 'aktif' : 'nonaktif' }}"><a href="/laporan">LAPORAN</a></li>
                     <li class="{{ (request()->is('grafik*')) ? 'aktif' : 'nonaktif' }}"><a href="/grafik">GRAFIK</a></li>
+                    <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
+
                 @elseif (auth()->user()->level == 'tamu')
                     <li class="{{ (request()->is('data*')) ? 'aktif' : 'nonaktif' }}"><a href="/data">DATA</a></li>
                     <li class="{{ (request()->is('media*')) ? 'aktif' : 'nonaktif' }}"><a href="/media">MEDIA</a></li>
                     <li class="{{ (request()->is('laporan*')) ? 'aktif' : 'nonaktif' }}"><a href="/laporan">LAPORAN</a></li>
                     <li class="{{ (request()->is('grafik*')) ? 'aktif' : 'nonaktif' }}"><a href="/grafik">GRAFIK</a></li>
+                    <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
+
                 @elseif (auth()->user()->level == 'admin')
                     <li class="{{ (request()->is('admin*')) ? 'aktif' : 'nonaktif' }}"><a href="/admin/akun">AKUN</a></li>
                     <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
@@ -127,17 +133,50 @@
         
         @include('sweetalert::alert')
 
+        <script>
+            $(document).on('click','#tombol_validasi',function(e){
+                e.preventDefault();
+                let url = $(this).attr('href');
+                
+                Swal.fire({
+                    title: 'Validasi Data?',
+                    text: "Data yang telah dicentang akan divalidasi!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#028B40',
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Batal',
+                    confirmButtonText: 'Validasi',
+                    reverseButtons: true
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        let data = []
+                        $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
+                
+                        $.ajax({
+                            type: "post",
+                            url: url,
+                            data: {_token:'{{ csrf_token() }}', id: data},
+                            dataType:"json",
+                            complete: function(){
+                                console.log("halo");
+                                location.reload();
+                            }
+                        });
+                    }
+                })
+            })
+        </script>
+        
+        <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
+
         <script src="{{ asset('sweetalert2/sweetalert2.min.js')}}"></script>
         <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
-        {{-- <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js">
-        </script> --}}
+
         <script src="https://code.highcharts.com/highcharts.js"></script>
-
+     
         @stack('scripts')
-
-        <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
 
     </body>
 </html>

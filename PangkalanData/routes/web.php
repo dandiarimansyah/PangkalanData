@@ -219,8 +219,6 @@ Route::group(['middleware' => ['auth']], function () {
         //EDIT KATEGORI E
         Route::get('/operator/edit/penelitian/penelitian', [EditController::class, 'e1']);
 
-
-
         //HAPUS KATEGORI A
         Route::get('/operator/edit/sekretariat/anggaran/hapus/{id}', [HapusController::class, 'hapus_a1']);
         Route::get('/operator/edit/sekretariat/realisasi_anggaran/hapus/{id}', [HapusController::class, 'hapus_a2']);
