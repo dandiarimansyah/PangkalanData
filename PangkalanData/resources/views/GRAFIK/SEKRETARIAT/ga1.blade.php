@@ -27,23 +27,23 @@
         type: 'column'
     },
     title: {
-        text: 'DATA ANGGARAN PER TAHUN'
+        text: 'JUMLAH DATA ANGGARAN PER TAHUN'
     },
 
     xAxis: {
-        categories: {!!json_encode($tahun_anggaran)!!},
+        categories: {!!json_encode($tahun)!!},
         crosshair: true
     },
     yAxis: {
-        min: 10,
+        min: 0,
         title: {
-            text: 'Nilai Anggaran'
+            text: 'Banyak Data'
         }
     },
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} Rupiah</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:1f}</b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true
@@ -56,7 +56,7 @@
     },
     series: [{
         name: 'Anggaran',
-        data: {!!json_encode($nilai_anggaran)!!},
+        data: {!!json_encode($total)!!},
 
     }]
 });

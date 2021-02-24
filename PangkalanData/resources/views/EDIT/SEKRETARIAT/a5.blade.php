@@ -50,7 +50,7 @@
               @forelse ($tanah_bangunan as $key => $a)
                   <tr>
                       <td>{{ $key + 1}}</td>
-                      <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
+                      <td>{{ $a -> created_at->format('m-d-Y')}}</td>
                       <td>{{ $a -> kantor}}</td>
                       <td>{{ $a -> status_tanah}}</td>
                       <td>{{ $a -> sertif_tanah}}</td>
@@ -96,8 +96,6 @@
               @endforelse
 
             </tbody>
-
-
         </table>
 
     </div>

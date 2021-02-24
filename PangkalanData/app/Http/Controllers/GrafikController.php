@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Grafik;
+use Carbon\Carbon;
 
 use Illuminate\Http\Request;
 
@@ -34,40 +34,81 @@ class GrafikController extends Controller
     //GRAFIK S 1
     public function ga1()
     {
-        // $anggaran = Anggaran::whereYear('tahun_anggaran', '=', 2018)
-        //     ->get();
-
-        $anggaran = Anggaran::orderBy('tahun_anggaran')->get();
+        $data = Anggaran::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
 
         // menyiapkan data untuk chart
-        $tahun_anggaran = [];
-        $nilai_anggaran = [];
+        $tahun = [];
+        $total = [];
 
-        foreach ($anggaran as $a) {
-            $tahun_anggaran[] = $a->tahun_anggaran;
-            $nilai_anggaran[] = $a->nilai_anggaran;
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
         }
 
-        return view('GRAFIK.SEKRETARIAT.ga1', compact('tahun_anggaran', 'nilai_anggaran'));
+        return view('GRAFIK.SEKRETARIAT.ga1', compact('tahun', 'total'));
     }
 
     public function ga2()
     {
-        return view('GRAFIK.SEKRETARIAT.ga2');
+        $data = Kerja_Sama::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.SEKRETARIAT.ga2', compact('tahun', 'total'));
     }
     public function ga3()
     {
-        return view('GRAFIK.SEKRETARIAT.ga3');
+        $data = Tanah_Bangunan::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.SEKRETARIAT.ga3', compact('tahun', 'total'));
     }
     public function ga4()
     {
-        return view('GRAFIK.SEKRETARIAT.ga4');
+        $data = Tanah_Bangunan::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.SEKRETARIAT.ga4', compact('tahun', 'total'));
     }
 
     //GRAFIK S 2
     public function gb1()
     {
-        return view('GRAFIK.KEBAHASAAN.gb1');
+        $data = Kamus::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
+
+        // menyiapkan data untuk chart
+        $tahun = [];
+        $total = [];
+
+        foreach ($data as $a) {
+            $tahun[] = $a->tahun;
+            $total[] = $a->total;
+        }
+
+        return view('GRAFIK.KEBAHASAAN.gb1', compact('tahun', 'total'));
     }
     public function gb2()
     {

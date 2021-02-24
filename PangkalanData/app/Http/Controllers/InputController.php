@@ -308,7 +308,6 @@ class InputController extends Controller
     public function store_a6(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required'],
             'jenis_buku' => ['required'],
             'jumlah_buku' => ['nullable', 'numeric'],
             'jumlah_judul' => ['nullable', 'numeric'],
@@ -316,7 +315,7 @@ class InputController extends Controller
         ]);
 
         $data = new Perpustakaan();
-        $data->provinsi = $request->provinsi;
+        $data->provinsi = "Jawa Tengah";
         $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->jumlah_buku = $request->jumlah_buku;
         $data->jumlah_judul = $request->jumlah_judul;
@@ -465,13 +464,12 @@ class InputController extends Controller
     public function store_b4(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required'],
             'kota' => ['required'],
             'jumlah_peserta' => ['nullable', 'numeric'],
         ]);
 
         $data = new Penyuluhan();
-        $data->provinsi = $request->provinsi;
+        $data->provinsi = "Jawa Tengah";
         $data->kota = $request->kota;
         $data->nama_kegiatan = $request->nama_kegiatan;
         $data->tanggal_awal = $request->tanggal_awal;
@@ -538,12 +536,11 @@ class InputController extends Controller
     public function store_b7(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required'],
             'tahun' => ['nullable', 'numeric'],
         ]);
 
         $data = new Duta_Nasional();
-        $data->provinsi = $request->provinsi;
+        $data->provinsi = "Jawa Tengah";
         $data->tahun = $request->tahun;
         $data->pemenang_1_1 = $request->pemenang_1_1;
         $data->pemenang_1_2 = $request->pemenang_1_2;
@@ -567,12 +564,11 @@ class InputController extends Controller
     public function store_b8(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required'],
             'tahun' => ['nullable', 'numeric'],
         ]);
 
         $data = new Duta_Provinsi();
-        $data->provinsi = $request->provinsi;
+        $data->provinsi = "Jawa Tengah";
         $data->tahun = $request->tahun;
         $data->pemenang_1_1 = $request->pemenang_1_1;
         $data->pemenang_1_2 = $request->pemenang_1_2;
@@ -599,7 +595,6 @@ class InputController extends Controller
     public function store_c1(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required'],
             'kota' => ['required'],
             'jumlah_peserta' => ['nullable', 'numeric'],
             'jumlah_sekolah' => ['nullable', 'numeric'],
@@ -607,7 +602,7 @@ class InputController extends Controller
         ]);
 
         $data = new Bengkel_Sastra_Dan_Bahasa();
-        $data->provinsi = $request->provinsi;
+        $data->provinsi = "Jawa Tengah";
         $data->kota = $request->kota;
         $data->nama_kegiatan = $request->nama_kegiatan;
         $data->tanggal_awal_pelaksanaan = $request->tanggal_awal_pelaksanaan;
@@ -678,12 +673,11 @@ class InputController extends Controller
     public function store_c4(Request $request)
     {
         $request->validate([
-            'provinsi' => ['required'],
             'tahun' => ['nullable', 'numeric'],
         ]);
 
         $data = new Musikalisasi_Puisi_Provinsi();
-        $data->provinsi = $request->provinsi;
+        $data->provinsi = "Jawa Tengah";
         $data->tahun = $request->tahun;
         $data->pemenang_1 = $request->pemenang_1;
         $data->pemenang_2 = $request->pemenang_2;
@@ -705,13 +699,12 @@ class InputController extends Controller
     {
         $request->validate([
             'nama_komunitas' => ['required'],
-            'provinsi' => ['required'],
             'kota' => ['required'],
         ]);
 
         $data = new Komunitas_Bahasa();
         $data->nama_komunitas = $request->nama_komunitas;
-        $data->provinsi = $request->provinsi;
+        $data->provinsi = "Jawa Tengah";
         $data->kota = $request->kota;
         $data->kecamatan = $request->kecamatan;
         $data->alamat = $request->alamat;
@@ -726,13 +719,12 @@ class InputController extends Controller
     {
         $request->validate([
             'nama_komunitas' => ['required'],
-            'provinsi' => ['required'],
             'kota' => ['required'],
         ]);
 
         $data = new Komunitas_Sastra();
         $data->nama_komunitas = $request->nama_komunitas;
-        $data->provinsi = $request->provinsi;
+        $data->provinsi = "Jawa Tengah";
         $data->kota = $request->kota;
         $data->kecamatan = $request->kecamatan;
         $data->alamat = $request->alamat;
