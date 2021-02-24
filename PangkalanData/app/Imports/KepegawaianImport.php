@@ -20,6 +20,7 @@ class KepegawaianImport implements ToModel, WithHeadingRow
         $tanggal = new Carbon();
 
         return new Kepegawaian([
+            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
             'tanggal_diperbarui'  => $tanggal,
             'semua_kelamin' => $row['semua_kelamin'],
             'laki' => $row['jumlah_laki'],

@@ -16,6 +16,7 @@ class AnggaranImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new Anggaran([
+            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
             'tahun_anggaran' => $row['tahun_anggaran'],
             'nilai_anggaran' => $row['nilai_anggaran'],
         ]);
