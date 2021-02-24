@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\ValidatorController;
@@ -71,6 +72,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/operator/edit/komunitas/komunitas_sastra/{id}', [EditController::class, 'update_d2']);
     //UPDATE KATEGORI E
     Route::put('/operator/edit/penelitian/penelitian/{id}', [EditController::class, 'update_e1']);
+
+    //ADMIN
+    Route::group(['middleware' => ['AkunLoginMiddleware:admin']], function () {
+        Route::get('/admin/akun', [AdminController::class, 'akun']);
+    });
 
     //GUEST
     Route::group(['middleware' => ['AkunLoginMiddleware:tamu']], function () {

@@ -15,7 +15,6 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('sweetalert2/sweetalert2.min.css') }}">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 
-
     </head>
 
     <body>
@@ -27,26 +26,36 @@
                     <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Validator</span> </div>
                 @elseif (Auth::user()->level == 'tamu')
                     <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Tamu</span> </div>
+                @elseif (Auth::user()->level == 'admin')
+                    <div class="logo"> Pangkalan Data <span style="color: rgb(255, 255, 81)">Admin</span> </div>
                 @endif
             @endauth
 
             <ul>
-                @auth
-                    <li class="{{ (request()->is('beranda*')) ? 'aktif' : 'nonaktif' }}"><a href="/beranda">BERANDA</a></li>    
-                    @if (auth()->user()->level == 'operator')
-                        <li class="{{ (request()->is('operator/input*')) ? 'aktif' : 'nonaktif' }}"><a href="/operator/input">INPUT</a></li>    
-                        <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : 'nonaktif' }}"><a href="/operator/edit">EDIT</a></li>
-                    @elseif (auth()->user()->level == 'validator')
-                        <li class="{{ (request()->is('validator*')) ? 'aktif' : 'nonaktif' }}"><a href="/validator/validasi">VALIDASI</a></li>
-                    @else
-                        <li class="{{ (request()->is('data*')) ? 'aktif' : 'nonaktif' }}"><a href="/data">DATA</a></li>
-                    @endif
+            @auth
+                <li class="{{ (request()->is('beranda*')) ? 'aktif' : 'nonaktif' }}"><a href="/beranda">BERANDA</a></li>    
+                @if (auth()->user()->level == 'operator')
+                    <li class="{{ (request()->is('operator/input*')) ? 'aktif' : 'nonaktif' }}"><a href="/operator/input">INPUT</a></li>    
+                    <li class="{{ (request()->is('operator/edit*')) ? 'aktif' : 'nonaktif' }}"><a href="/operator/edit">EDIT</a></li>
                     <li class="{{ (request()->is('media*')) ? 'aktif' : 'nonaktif' }}"><a href="/media">MEDIA</a></li>
                     <li class="{{ (request()->is('laporan*')) ? 'aktif' : 'nonaktif' }}"><a href="/laporan">LAPORAN</a></li>
                     <li class="{{ (request()->is('grafik*')) ? 'aktif' : 'nonaktif' }}"><a href="/grafik">GRAFIK</a></li>
-                    <li class="{{ (request()->is('forum*')) ? 'aktif' : 'nonaktif' }}"><a href="/forum">FORUM</a></li>
+                @elseif (auth()->user()->level == 'validator')
+                    <li class="{{ (request()->is('validator*')) ? 'aktif' : 'nonaktif' }}"><a href="/validator/validasi">VALIDASI</a></li>
+                    <li class="{{ (request()->is('media*')) ? 'aktif' : 'nonaktif' }}"><a href="/media">MEDIA</a></li>
+                    <li class="{{ (request()->is('laporan*')) ? 'aktif' : 'nonaktif' }}"><a href="/laporan">LAPORAN</a></li>
+                    <li class="{{ (request()->is('grafik*')) ? 'aktif' : 'nonaktif' }}"><a href="/grafik">GRAFIK</a></li>
+                @elseif (auth()->user()->level == 'tamu')
+                    <li class="{{ (request()->is('data*')) ? 'aktif' : 'nonaktif' }}"><a href="/data">DATA</a></li>
+                    <li class="{{ (request()->is('media*')) ? 'aktif' : 'nonaktif' }}"><a href="/media">MEDIA</a></li>
+                    <li class="{{ (request()->is('laporan*')) ? 'aktif' : 'nonaktif' }}"><a href="/laporan">LAPORAN</a></li>
+                    <li class="{{ (request()->is('grafik*')) ? 'aktif' : 'nonaktif' }}"><a href="/grafik">GRAFIK</a></li>
+                @elseif (auth()->user()->level == 'admin')
+                    <li class="{{ (request()->is('admin*')) ? 'aktif' : 'nonaktif' }}"><a href="/admin/akun">AKUN</a></li>
                     <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
-                @endauth
+                @endif
+            @endauth
+
             </ul>
         </nav>
 

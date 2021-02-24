@@ -40,6 +40,8 @@ class AuthController extends Controller
                 return redirect()->intended('/beranda');
             } else if ($user->level == 'tamu') {
                 return redirect()->intended('/beranda');
+            } else if ($user->level == 'admin') {
+                return redirect()->intended('/beranda');
             }
             return redirect()->intended('/login');
         }

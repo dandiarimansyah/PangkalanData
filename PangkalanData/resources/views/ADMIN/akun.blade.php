@@ -3,9 +3,9 @@
 @section('content')
 
     <div class="content">
-        <header>HALAMAN GRAFIK</header>
+        <header>HALAMAN AKUN</header>
     </div>
 
-@include('PARTIAL.MenuGrafik')
+@include('PARTIAL.MenuAkun')
 
 @endsection

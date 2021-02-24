@@ -61,6 +61,27 @@
                 bottom: 0;
                 background-color: #005fec;
             }
-        </style>                
+        </style>        
+    @elseif (Auth::user()->level == 'admin')
+    <style>
+        nav {
+            background: #d64400;
+            max-height: 70px;
+        }
+        nav ul li {
+            float: left;
+            display: inline-block;
+            background: #d64400;
+            margin: 0 5px;
+        }
+        .footer {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px 0 10px 0;
+            text-align: center;
+            bottom: 0;
+            background-color: #d64400;
+        }
+    </style>          
     @endif
 @endauth

@@ -35,6 +35,13 @@ class AkunSeeder extends Seeder
                 'email' => 'tamu@gmail.com',
                 'level' => 'tamu',
                 'password' => bcrypt('tamu123')
+            ],
+            [
+                'username' => 'admin',
+                'name' => 'Akun Admin',
+                'email' => 'admin@gmail.com',
+                'level' => 'admin',
+                'password' => bcrypt('admin123')
             ]
         ];
         foreach ($user as $key => $value) {
