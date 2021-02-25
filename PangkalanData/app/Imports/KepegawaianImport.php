@@ -4,7 +4,7 @@ namespace App\Imports;
 
 use Carbon\Carbon;
 
-use App\Kepegawaian;
+use App\Models\Kepegawaian;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
@@ -25,30 +25,30 @@ class KepegawaianImport implements ToModel, WithHeadingRow
             'semua_kelamin' => $row['semua_kelamin'],
             'laki' => $row['jumlah_laki'],
             'perempuan' => $row['jumlah_perempuan'],
-            'S3' => $row['S3'],
-            'S2' => $row['S2'],
-            'S1' => $row['S1'],
-            'D3' => $row['D3'],
-            'SMA' => $row['SMA'],
-            'SMP' => $row['SMP'],
-            'SD' => $row['SD'],
-            'T_4E' => $row['IV/e'],
-            'T_4D' => $row['IV/d'],
-            'T_4C' => $row['IV/c'],
-            'T_4B' => $row['IV/b'],
-            'T_4A' => $row['IV/a'],
-            'T_3D' => $row['III/d'],
-            'T_3C' => $row['III/c'],
-            'T_3B' => $row['III/b'],
-            'T_3A' => $row['III/a'],
-            'T_2D' => $row['II/d'],
-            'T_2C' => $row['II/c'],
-            'T_2B' => $row['II/b'],
-            'T_2A' => $row['II/a'],
-            'T_1D' => $row['I/d'],
-            'T_1C' => $row['I/c'],
-            'T_1B' => $row['I/b'],
-            'T_1A' => $row['I/a'],
+            'S3' => $row['s3'],
+            'S2' => $row['s2'],
+            'S1' => $row['s1'],
+            'D3' => $row['d3'],
+            'SMA' => $row['sma'],
+            'SMP' => $row['smp'],
+            'SD' => $row['sd'],
+            'T_4E' => $row['ive'],
+            'T_4D' => $row['ivd'],
+            'T_4C' => $row['ivc'],
+            'T_4B' => $row['ivb'],
+            'T_4A' => $row['iva'],
+            'T_3D' => $row['iiid'],
+            'T_3C' => $row['iiic'],
+            'T_3B' => $row['iiib'],
+            'T_3A' => $row['iiia'],
+            'T_2D' => $row['iid'],
+            'T_2C' => $row['iic'],
+            'T_2B' => $row['iib'],
+            'T_2A' => $row['iia'],
+            'T_1D' => $row['id'],
+            'T_1C' => $row['ic'],
+            'T_1B' => $row['ib'],
+            'T_1A' => $row['ia'],
         ]);
     }
 }

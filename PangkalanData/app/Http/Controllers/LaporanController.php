@@ -178,10 +178,9 @@ class LaporanController extends Controller
     }
 
     //===================================================================================================
-    public function tampil_la3(Request $request)
+    public function tampil_la3()
     {
-
-        $data = $data->where('validasi', 'sudah');
+        $data = Kepegawaian::all()->where('validasi', 'sudah');
 
         return view('LAPORAN.SEKRETARIAT.tampil_la3', compact('data'));
     }

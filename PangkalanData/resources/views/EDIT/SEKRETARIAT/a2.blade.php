@@ -21,12 +21,12 @@
         <th>EDIT DATA REALISASI ANGGARAN UNIT/SATUAN KERJA</th>
     </div>
 
-    {{-- <div class="tombol-kembali">
-        <a  type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false" href="/operator/edit">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
-            Kembali ke Menu Edit
+    <div class="input-baru">
+        <a href="{{ URL("/operator/input/sekretariat/realisasi_anggaran")}}" type="button" class="btn btn-primary">
+            <i style="margin-right: 4px" class="fa fa-file-text-o" aria-hidden="true"></i>
+            INPUT DATA BARU
         </a>
-    </div> --}}
+    </div>
     
     <!-- TABLE -->
     <div class="validasi">

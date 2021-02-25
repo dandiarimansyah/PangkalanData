@@ -7,7 +7,7 @@
         <div class="dropdown-menu">
             <a class="dropdown-item" href="/laporan/sekretariat/anggaran">Anggaran</a>
             <a class="dropdown-item" href="/laporan/sekretariat/realisasi_anggaran">Realisasi Anggaran</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/kepegawaian">Kepegawaian</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/kepegawaian/tampil">Kepegawaian</a>
             <a class="dropdown-item" href="/laporan/sekretariat/kerja_sama">Kerja Sama</a>
             <a class="dropdown-item" href="/laporan/sekretariat/tanah_dan_bangunan">Tanah dan Bangunan</a>
             <a class="dropdown-item" href="/laporan/sekretariat/perpustakaan">Perpustakaan</a>

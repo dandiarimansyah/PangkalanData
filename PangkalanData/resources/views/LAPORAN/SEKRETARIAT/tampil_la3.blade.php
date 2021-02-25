@@ -6,26 +6,8 @@
 
 <div class="isi-konten">
 
-@if ($errors->any())
-    <div class="error">
-        <p>----- Pesan Error -----</p>
-    @foreach ($errors->all() as $error)
-        <div class="errors">
-        {{ $error }}
-        </div>
-    @endforeach
-    </div>
-@endif
-
-    <div class="tombol-kembali">
-        <button onclick="back()" type="button" class="btn">
-            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-            <span>KEMBALI</span>
-        </button>
-    </div>
-
     <div class="judul">
-        <th>LAPORAN DATA KEPEGAWAIAN UNIT/SATUAN KERJA</th>
+        <th>DATA KEPEGAWAIAN</th>
     </div>
 
     @auth
@@ -43,15 +25,14 @@
     </div>
     @endif
     @endauth
-
+    
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table" id="datatable">
-            <thead>
+        <table class="content-table" id="datatable">            
+        <thead>
                 <tr>
                     <th rowspan="2">NO</th>
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
-                    <th rowspan="2">UNIT/SATUAN KERJA</th>
                     <th colspan="3">JUMLAH PEGAWAI</th>
                     <th colspan="7">TINGKAT PENDIDIKAN</th>
                     <th colspan="17">PANGKAT/GOLONGAN</th>
@@ -93,7 +74,6 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
-                        <td>{{ $a -> unit }}</td>
                         <td>{{ $a -> semua_kelamin}}</td>
                         <td>{{ $a -> laki}}</td>
                         <td>{{ $a -> perempuan}}</td>
@@ -130,9 +110,11 @@
                 @endforelse
 
             </tbody>
+
         </table>
 
     </div>
 </div>
+
 
 @endsection

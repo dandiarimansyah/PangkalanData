@@ -37,12 +37,11 @@
 
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table" id="datatable">
+        <table class="content-table">
             <thead>
                 <tr>
                     <th rowspan="2">NO</th>
-                    <th rowspan="2">TANGGAL DIPERBAHARUI</th>
-                    <th rowspan="2">UNIT/SATUAN KERJA</th>
+                    <th rowspan="2" style="max-width: 120px">TANGGAL DIPERBAHARUI</th>
                     <th colspan="3">JUMLAH PEGAWAI</th>
                     <th colspan="7">TINGKAT PENDIDIKAN</th>
                     <th colspan="17">PANGKAT/GOLONGAN</th>
@@ -85,8 +84,7 @@
                 @forelse ($kepegawaian as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> tanggal_diperbarui}}</td>
-                        <td> Balai Bahasa Jawa Tengah</td>
+                        <td>{{ \Carbon\Carbon::parse($a->tanggal_diperbarui)->format('d-m-Y')}}</td>
                         <td>{{ $a -> semua_kelamin}}</td>
                         <td>{{ $a -> laki}}</td>
                         <td>{{ $a -> perempuan}}</td>

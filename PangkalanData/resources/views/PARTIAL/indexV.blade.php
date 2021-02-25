@@ -110,7 +110,7 @@
                 @csrf
                     <div class="modal-body">
                         <div class="template">
-                            <p>Import harus menggunakan template!</p>
+                            <p>Import Data harus menggunakan template!</p>
                             <p>Jika belum mempunyai template,</p>
                             <p>Silahkan unduh template dibawah</p>
                             <p>

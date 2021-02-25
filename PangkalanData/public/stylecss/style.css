@@ -11,6 +11,16 @@ body {
     background: #f2f2f2;
 }
 
+.input-baru {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.input-baru a {
+    border-bottom: 5px solid black;
+}
+
 .import-input {
     margin: auto;
     margin-top: 20px;
@@ -26,6 +36,10 @@ body {
     text-align: center;
     font-size: 18px;
     margin: 5px 0 5px 0;
+}
+
+.import-input button {
+    border-bottom: 4px solid black;
 }
 
 .template {
@@ -377,7 +391,7 @@ p {
 
 .content-table {
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 15px 0;
     font-size: 0.8em;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
@@ -445,7 +459,7 @@ p {
     display: flex;
     justify-content: center;
     margin: auto;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 20px;
 }
 
@@ -454,6 +468,12 @@ p {
     margin-top: 10px;
     font-weight: bold;
     font-size: 30px;
+}
+
+.judul a,
+.judul button {
+    border-bottom: 4px solid black;
+    /* box-shadow: 0px 4px #000000; */
 }
 
 .ketjudul {
