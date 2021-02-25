@@ -552,4 +552,18 @@ Route::group(['middleware' => ['auth']], function () {
     //FORUM KONTAK ADMIN
     Route::get('/forum/kontak_admin', [ForumController::class, 'f2']);
     Route::post('/forum/kontak_admin', [ForumController::class, 'Store_f2']);
+
+    ////========================================== FORUM ===================
+    //OPERATOR
+    Route::get('/admin/akun_operator', [AdminController::class, 'su1']);
+    Route::post('/admin/akun_operator', [AdminController::class, 'su1']);
+
+    //OPERATOR
+    Route::get('/admin/akun_validator', [AdminController::class, 'su2']);
+    Route::post('/admin/akun_validator', [AdminController::class, 'su2']);
+
+        //OPERATOR
+    Route::get('/admin/akun_tamu', [AdminController::class, 'su3']);
+    Route::post('/admin/akun_tamu', [AdminController::class, 'su3']);
+
 });

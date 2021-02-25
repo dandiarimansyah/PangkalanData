@@ -10,4 +10,19 @@ class AdminController extends Controller
     {
         return view('ADMIN.akun');
     }
+
+    public function su1()
+    {
+        return view('ADMIN.akun_operator');
+    }
+
+    public function su2()
+    {
+        return view('ADMIN.akun_validator');
+    }
+
+    public function su3()
+    {
+        return view('ADMIN.akun_tamu');
+    }
 }
