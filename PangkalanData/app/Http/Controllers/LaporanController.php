@@ -231,7 +231,7 @@ class LaporanController extends Controller
     public function tampil_la6(Request $request)
     {
 
-        $data = $data->where('validasi', 'sudah');
+        $data = Perpustakaan::all()->where('validasi', 'sudah');
 
         return view('LAPORAN.SEKRETARIAT.tampil_la6', compact('data'));
     }
@@ -240,7 +240,7 @@ class LaporanController extends Controller
     public function tampil_la7(Request $request)
     {
 
-        $data = $data->where('validasi', 'sudah');
+        $data = Inventarisasi::all()->where('validasi', 'sudah');
 
         return view('LAPORAN.SEKRETARIAT.tampil_la7', compact('data'));
     }

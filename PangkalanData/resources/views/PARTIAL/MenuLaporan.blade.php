@@ -10,8 +10,8 @@
             <a class="dropdown-item" href="/laporan/sekretariat/kepegawaian/tampil">Kepegawaian</a>
             <a class="dropdown-item" href="/laporan/sekretariat/kerja_sama">Kerja Sama</a>
             <a class="dropdown-item" href="/laporan/sekretariat/tanah_dan_bangunan">Tanah dan Bangunan</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/perpustakaan">Perpustakaan</a>
-            <a class="dropdown-item" href="/laporan/sekretariat/inventarisasi_bmn">Inventarisasi BMN</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/perpustakaan/tampil">Perpustakaan</a>
+            <a class="dropdown-item" href="/laporan/sekretariat/inventarisasi_bmn/tampil">Inventarisasi BMN</a>
         </div>
     </div>
 

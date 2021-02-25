@@ -7,7 +7,7 @@
 <div class="isi-konten">
 
     <div class="judul">
-        <th>DATA KEPEGAWAIAN</th>
+        <th>LAPORAN DATA KEPEGAWAIAN</th>
     </div>
 
     @auth
