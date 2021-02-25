@@ -1,19 +1,19 @@
 <div class="menu">
     <div class="btn-group kategori">
-        <button type="button" class="btn tombol-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="/admin/akun_operator" type="button" class="btn tombol-menu" aria-haspopup="true" aria-expanded="false">
             Akun Operator
-        </button>
+        </a>
     </div>
 
     <div class="btn-group kategori">
-        <button type="button" class="btn tombol-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="/admin/akun_validator" type="button" class="btn tombol-menu" aria-haspopup="true" aria-expanded="false">
             Akun Validator
-        </button>
+        </a>
     </div>
 
     <div class="btn-group kategori">
-        <button type="button" class="btn tombol-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="/admin/akun_tamu" type="button" class="btn tombol-menu" aria-haspopup="true" aria-expanded="false">
             Akun Tamu
-        </button>
+        </a>
     </div>
 </div>
