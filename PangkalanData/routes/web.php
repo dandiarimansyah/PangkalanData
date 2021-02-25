@@ -28,6 +28,10 @@ use App\Http\Controllers\ImportController;
 |
 */
 
+Route::get('/', function () {
+    return redirect('/login');
+});
+
 // Login
 // Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::get('login', [AuthController::class, 'login2'])->name('login');
@@ -562,8 +566,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/akun_validator', [AdminController::class, 'su2']);
     Route::post('/admin/akun_validator', [AdminController::class, 'su2']);
 
-        //OPERATOR
+    //OPERATOR
     Route::get('/admin/akun_tamu', [AdminController::class, 'su3']);
     Route::post('/admin/akun_tamu', [AdminController::class, 'su3']);
-
 });
