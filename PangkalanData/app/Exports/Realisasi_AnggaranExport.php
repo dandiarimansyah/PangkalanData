@@ -33,6 +33,7 @@ class Realisasi_AnggaranExport implements FromCollection, WithMapping, WithHeadi
         } else {
             $data = Realisasi_Anggaran::all();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

@@ -54,6 +54,7 @@ class Duta_ProvinsiExport implements FromCollection, WithMapping, WithHeadings, 
                 ->orWhere('pemenang_3_2', $this->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

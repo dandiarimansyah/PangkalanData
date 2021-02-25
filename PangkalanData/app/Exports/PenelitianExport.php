@@ -88,6 +88,7 @@ class PenelitianExport implements FromCollection, WithMapping, WithHeadings, Sho
                 ->orWhere('judul', 'like', '%' . $this->judul . '%')
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

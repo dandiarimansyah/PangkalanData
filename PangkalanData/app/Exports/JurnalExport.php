@@ -68,6 +68,7 @@ class JurnalExport implements FromCollection, WithMapping, WithHeadings, ShouldA
                 ->where('tim_redaksi', $this->tim_redaksi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

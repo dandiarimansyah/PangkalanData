@@ -19,6 +19,8 @@ class PerpustakaanExport implements FromCollection, WithMapping, WithHeadings, S
      */
     public function collection()
     {
+        $data = $data->where('validasi', 'sudah');
+        
         return Perpustakaan::all();
     }
 

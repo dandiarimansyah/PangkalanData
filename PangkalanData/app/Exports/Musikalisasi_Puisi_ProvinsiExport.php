@@ -48,6 +48,7 @@ class Musikalisasi_Puisi_ProvinsiExport implements FromCollection, WithMapping, 
                 ->orWhere('pemenang_3', $this->pemenang)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

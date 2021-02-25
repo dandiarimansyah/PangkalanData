@@ -64,7 +64,7 @@
                             @if (Auth::user()->level != 'tamu')
                                 @if ($a->media == "")
                                 <div style="margin:5px auto">
-                                    <form method="POST" id="media_form" role="form" action="/media/sekretariat/kerja_sama/{{ $a->id }}" enctype="multipart/form-data">
+                                    <form method="POST" id="media_form" role="form" action="/media/kesastraan/bengkel_sastra_dan_bahasa/{{ $a->id }}" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
                                         <input style="width: 200px" type="file" name="media">
@@ -75,7 +75,7 @@
                                 </div>
                                 @else
                                     <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
-                                    <a id="hapus_media" href="{{ url('/media/sekretariat/kerja_sama/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Media</a>
+                                    <a id="hapus_media" href="{{ url('/media/kesastraan/bengkel_sastra_dan_bahasa/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Media</a>
                                 @endif
                             @else
                                 @if ($a->media == "")

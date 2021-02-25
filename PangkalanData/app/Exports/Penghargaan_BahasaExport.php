@@ -58,6 +58,7 @@ class Penghargaan_BahasaExport implements FromCollection, WithMapping, WithHeadi
                 ->where('deskripsi', $this->deskripsi)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

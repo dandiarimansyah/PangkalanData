@@ -58,6 +58,7 @@ class PesuluhExport implements FromCollection, WithMapping, WithHeadings, Should
                 ->where('instansi', 'like', '%' . $this->instansi . '%')
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }

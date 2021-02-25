@@ -68,6 +68,7 @@ class PenyuluhanExport implements FromCollection, WithMapping, WithHeadings, Sho
                 ->where('sasaran', $this->sasaran)
                 ->get();
         }
+        $data = $data->where('validasi', 'sudah');
 
         return $data;
     }
