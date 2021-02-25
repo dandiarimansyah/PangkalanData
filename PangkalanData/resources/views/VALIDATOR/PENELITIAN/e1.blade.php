@@ -51,7 +51,7 @@
                     <th>LAMA PENELITIAN</th>
                     <th>PUBLIKASI</th>
                     <th>TAHUN TERBIT</th>
-                    <th>MEDIA</th>
+                    <th>DOKUMEN</th>
                     <th>EDIT</th>
                     <th>VALIDASI</th>
                 </tr>
@@ -78,7 +78,7 @@
                                 <p style="font-size: 12px">Tidak ada Dokumen</p>
                             </div>
                             @else
-                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
+                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Dokumen</a>
                             @endif
                         </td>
 

@@ -569,8 +569,6 @@ class MediaController extends Controller
             'media' => ['required'],
         ]);
 
-        dd($request);
-
         if ($request->media == null) {
             $media = null;
         } else {
