@@ -62,26 +62,33 @@
                 @forelse ($penelitian as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">Edit</button>
-                        </td>
                         <td>{{ $a -> tanggal_awal}}</td>
                         <td>{{ $a -> tanggal_akhir}}</td>
                         <td>{{ $a -> unit}}</td>
                         <td>{{ $a -> judul}}</td>
                         <td>{{ $a -> peneliti}}</td>
+                        <td>{{ $a -> kerja_sama}}</td>
                         <td>{{ $a -> abstrak}}</td>
                         <td>{{ $a -> lama_penelitian}}</td>
                         <td>{{ $a -> publikasi}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
-                        <td>{{ $a -> file}}</td>
+                        <td>
+                            @if ($a->media == "")
+                            <div style="margin:5px auto">
+                                <p style="font-size: 12px">Tidak ada Dokumen</p>
+                            </div>
+                            @else
+                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
+                            @endif
+                        </td>
 
-                        <td style="display: flex; justify-content:center">
+                        <td>
                         <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 
                                 data-target="#edit-modal"
-                                data-id="{{ $a->id }}"                                data-unit="{{ $a->unit }}"
+                                data-id="{{ $a->id }}"
+                                data-unit="{{ $a->unit }}"
                                 data-peneliti="{{ $a->peneliti }}"
                                 data-judul="{{ $a->judul }}"
                                 data-kerja_sama="{{ $a->kerja_sama }}"

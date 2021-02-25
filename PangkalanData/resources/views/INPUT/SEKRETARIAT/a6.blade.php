@@ -54,15 +54,10 @@
             </div>
         </div>  -->
 
-        <div class="alert-danger">{{ $errors->first('unit') }}</div>
-        <div class="inputfield-select">
-            <label>Unit Kerja*</label>
-            <div class="custom_select">
-              <select name="unit">
-                <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
-              </select>
-            </div>
-        </div> 
+        <div class="inputfield">
+          <label>Unit/Satuan Kerja</label>
+          <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
+      </div> 
 
         <div class="alert-danger">{{ $errors->first('jumlah_buku') }}</div>
         <div class="inputfield">

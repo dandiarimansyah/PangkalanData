@@ -102,7 +102,7 @@ class MediaController extends Controller
 
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
-    
+
     //============================================================== MEDIA S2
     public function mb1()
     {
@@ -143,7 +143,7 @@ class MediaController extends Controller
 
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
-    
+
     //==============================================================
     public function mb2()
     {
@@ -184,7 +184,7 @@ class MediaController extends Controller
 
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
-    
+
     //==============================================================
     public function mb3()
     {
@@ -225,7 +225,7 @@ class MediaController extends Controller
 
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
-    
+
     //==============================================================
     public function mb4()
     {
@@ -266,7 +266,7 @@ class MediaController extends Controller
 
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
-    
+
     //==============================================================
     public function mb5()
     {
@@ -307,7 +307,7 @@ class MediaController extends Controller
 
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
-    
+
     //==============================================================
     public function mb6()
     {
@@ -348,7 +348,7 @@ class MediaController extends Controller
 
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
-    
+
     //==============================================================
     public function mb7()
     {
@@ -390,7 +390,7 @@ class MediaController extends Controller
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
 
-    
+
     //============================================================== MEDIA S 3
     public function mc1()
     {
@@ -513,7 +513,7 @@ class MediaController extends Controller
 
         return back()->with('toast_success', 'Media Berhasil Dihapus!');;
     }
-    
+
     //==============================================================
     public function mc4()
     {
@@ -568,6 +568,8 @@ class MediaController extends Controller
         $request->validate([
             'media' => ['required'],
         ]);
+
+        dd($request);
 
         if ($request->media == null) {
             $media = null;

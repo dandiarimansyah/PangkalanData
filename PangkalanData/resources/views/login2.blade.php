@@ -10,15 +10,16 @@
   </head>
 
   <body>
+    <div class="semua">
+      <div class="kiri">
+        <img class="gambar_balai" src="{{ asset('Gambar/balai_fix.jpg')}}" alt="">
 
-
-    <div class="container">
-      <div class="forms-container">
-
+      </div>
+      <div class="kanan">
         <div class="balai">
           <div class="tulisan">
-            <h1>Sistem Pangkalan Data</h1>
-            <h1>Balai Bahasa Provinsi Jawa Tengah</h1>
+            <h1>SISTEM PANGKALAN DATA</h1>
+            <h1>BALAI BAHASA PROVINSI JAWA TENGAH</h1>
           </div>
         </div>
 
@@ -26,9 +27,8 @@
 
           <form action="{{url('proses_login')}}" method="POST" id="logForm">
             @csrf
-
             
-            <h2 class="title">Silahkan Masuk</h2>
+            <h2 class="masuk">Silahkan Masuk</h2>
 
             @if (session('error'))
               <div class="salah-login">{{ session('error') }}</div>
@@ -58,10 +58,56 @@
         
             <button class="btn solid" type="submit">Masuk</button>
 
-            <!-- <a href="{{url('/')}}" class="kembali"> 
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> 
-                Kembali ke Halaman Tamu
-            </a> -->
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    {{-- <div class="container">
+      <div class="forms-container">
+
+        <div class="balai">
+          <div class="tulisan">
+            <h1>Sistem Pangkalan Data</h1>
+            <h1>Balai Bahasa Provinsi Jawa Tengah</h1>
+          </div>
+        </div>
+
+        <div class="signin-signup">
+
+          <form action="{{url('proses_login')}}" method="POST" id="logForm">
+            @csrf
+            
+            <h2 >Silahkan Masuk</h2>
+
+            @if (session('error'))
+              <div class="salah-login">{{ session('error') }}</div>
+            @endif
+
+            @error('username')
+                <span class="wajib-diisi" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" name="username" placeholder="Nama Pengguna"/>
+            </div>
+
+            @error('password')
+                <span class="wajib-diisi" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="password" placeholder="Kata Sandi"/>
+            </div>
+        
+            <button class="btn solid" type="submit">Masuk</button>
 
           </form>
         </div>
@@ -72,8 +118,7 @@
           <img src="{{ asset("img/validator.png")}}" class="image"/>
         </div>
 
-    </div>
+    </div> --}}
 
-    <script src="{{ asset("js/app.js")}}"></script>
   </body>
 </html>
