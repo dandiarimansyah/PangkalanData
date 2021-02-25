@@ -29,7 +29,7 @@
         </div>
 
         <div class="btn-group kategori">
-            <button id="tombol_validasi" type="button" class="btn btn-success" style="border-radius: 5px">
+            <button href="{{ URL('validator/kebahasaan/duta_bahasa_nasional')}}" id="tombol_validasi" type="button" class="btn btn-success" style="border-radius: 5px">
                 VALIDASI DATA
             </button>
         </div>
