@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -13,16 +14,22 @@ class AdminController extends Controller
 
     public function su1()
     {
-        return view('ADMIN.akun_operator');
+        $operator = User::all()->where("level", "operator");
+
+        return view('ADMIN.akun_operator', compact('operator'));
     }
 
     public function su2()
     {
-        return view('ADMIN.akun_validator');
+        $operator = User::all()->where("level", "validator");
+
+        return view('ADMIN.akun_validator', compact('operator'));
     }
 
     public function su3()
     {
-        return view('ADMIN.akun_tamu');
+        $operator = User::all()->where("level", "tamu");
+
+        return view('ADMIN.akun_tamu', compact('operator'));
     }
 }
