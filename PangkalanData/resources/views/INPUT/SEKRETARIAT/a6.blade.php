@@ -97,7 +97,7 @@
         <div class="inputfield" style="margin-top: -8px">
           <label></label>
           <input placeholder="Tuliskan jenis buku..." id="jenis_buku_2" style='display:none;' name="jenis_buku_2" type="text" class="input">
-        </div>   
+        </div>
 
         <div class="alert-danger">{{ $errors->first('jumlah_pengunjung') }}</div>
         <div class="inputfield">
