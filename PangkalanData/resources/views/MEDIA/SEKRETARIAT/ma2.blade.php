@@ -7,7 +7,7 @@
 <div class="isi-konten">
 
     <div class="judul">
-        <th>MEDIA DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
+        <th>DOKUMEN DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
     </div>
 
     <!-- <div class="" style=" display:flex; justify-content:center">
@@ -34,7 +34,7 @@
                 <th rowspan="2">KONDISI</th>
                 <th rowspan="2">STATUS PEMEROLEHAN</th>
                 <th rowspan="2">KETERANGAN</th>
-                <th rowspan="2">MEDIA</th>
+                <th rowspan="2">DOKUMEN</th>
             </tr>
             <tr>
                 <th>STATUS</th>
@@ -75,16 +75,16 @@
                                 </form>
                             </div>
                             @else
-                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
-                                <a id="hapus_media" href="{{ url('/media/sekretariat/tanah_dan_bangunan/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Media</a>
+                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Dokumen</a>
+                                <a id="hapus_media" href="{{ url('/media/sekretariat/tanah_dan_bangunan/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Dokumen</a>
                             @endif
                         @else
                             @if ($a->media == "")
                             <div style="margin:5px auto">
-                                <p style="font-size: 12px">Tidak ada Media</p>
+                                <p style="font-size: 12px">Tidak ada Dokumen</p>
                             </div>
                             @else
-                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
+                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Dokumen</a>
                             @endif
                         @endif
                     @endauth

@@ -6,7 +6,7 @@
 @section('content')
 
     <div class="content">
-        <header>HALAMAN MEDIA</header>
+        <header>HALAMAN DOKUMEN</header>
     </div>
 
 @include('PARTIAL.MenuMedia')

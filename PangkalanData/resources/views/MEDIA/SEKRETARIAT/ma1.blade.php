@@ -18,7 +18,7 @@
     @endif
 
     <div class="judul">
-        <th>MEDIA DATA KERJA SAMA</th>
+        <th>DOKUMEN DATA KERJA SAMA</th>
     </div>
 <!-- 
     <div class="" style=" display:flex; justify-content:center">
@@ -46,7 +46,7 @@
                     <th>PERIHAL</th>
                     <th>KETERANGAN</th>
                     <th>DITANDATANGANI</th>
-                    <th>MEDIA</th>
+                    <th>DOKUMEN</th>
                 </tr>
             </thead>
 
@@ -80,16 +80,16 @@
                                     </form>
                                 </div>
                                 @else
-                                    <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
-                                    <a id="hapus_media" href="{{ url('/media/sekretariat/kerja_sama/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Media</a>
+                                    <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Dokumen</a>
+                                    <a id="hapus_media" href="{{ url('/media/sekretariat/kerja_sama/hapus/' . $a->id) }}" style="margin-left:12px; color:white" class="btn btn-sm btn-danger">Hapus Dokumen</a>
                                 @endif
                             @else
                                 @if ($a->media == "")
                                 <div style="margin:5px auto">
-                                    <p style="font-size: 12px">Tidak ada Media</p>
+                                    <p style="font-size: 12px">Tidak ada Dokumen</p>
                                 </div>
                                 @else
-                                    <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Media</a>
+                                    <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Dokumen</a>
                                 @endif
                             @endif
                         @endauth
@@ -130,7 +130,7 @@
     <div id="modal-media" class="modal-dialog" role="document">
     <div id="modal-content" class="modal-content">
         <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">MEDIA</h5>
+        <h5 class="modal-title" id="exampleModalLabel">DOKUMEN</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
