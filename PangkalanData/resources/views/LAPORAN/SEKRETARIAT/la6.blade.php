@@ -13,19 +13,14 @@
     @auth
         @if (Auth::user()->level != 'tamu')
     <div class="judul" style="display:flex; justify-content:center">
-        <button onclick="back()" type="button" class="btn btn-secondary" style="border-radius: 5px; margin-right:15px; width: 130px">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i> 
-            KEMBALI
-        </button>
         <a href="{{ url('/pdf/sekretariat/perpustakaan')}}" target="_blank" type="button" class="btn btn-info" style="border-radius: 5px;margin-right:15px;">
+            <i style="margin-right: 4px" class="fa fa-file-pdf-o" aria-hidden="true"></i>
             EXPORT KE PDF
         </a>
         <a href="{{ url('/excel/sekretariat/perpustakaan')}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+            <i style="margin-right: 4px" class="fa fa-file-excel-o" aria-hidden="true"></i>
             EXPORT KE EXCEL
         </a>
-        <button loc="{{ asset('/Template/Template Perpustakaan.xlsx')}}" href="/import/sekretariat/perpustakaan" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
-            IMPORT EXCEL
-        </button>
     </div>
     @endif
     @endauth

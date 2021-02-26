@@ -32,14 +32,13 @@
         @if (Auth::user()->level != 'tamu')
     <div class="judul" style="display:flex; justify-content:center">
         <a href="{{ url("/pdf/sekretariat/tanah_dan_bangunan?status_tanah={$status_tanah}&status_bangunan={$status_bangunan}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
+            <i style="margin-right: 4px" class="fa fa-file-pdf-o" aria-hidden="true"></i>
             EXPORT KE PDF
         </a>
         <a href="{{ url("/excel/sekretariat/tanah_dan_bangunan?status_tanah={$status_tanah}&status_bangunan={$status_bangunan}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+            <i style="margin-right: 4px" class="fa fa-file-excel-o" aria-hidden="true"></i>  
             EXPORT KE EXCEL
         </a>
-        <button loc="{{ asset('/Template/Template Tanah dan Bangunan.xlsx')}}" href="/import/sekretariat/tanah_dan_bangunan" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
-            IMPORT EXCEL
-        </button>
     </div>
     @endif
     @endauth
