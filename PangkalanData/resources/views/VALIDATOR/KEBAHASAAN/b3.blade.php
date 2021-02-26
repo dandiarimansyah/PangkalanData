@@ -47,9 +47,9 @@
                     <th>ISBN</th>
                     <th>TAHUN TERBIT</th>
                     <th>DESKRIPSI FISIK</th>
-                    <th>UNIT/SATKER</th>
+                    <!-- <th>UNIT/SATKER</th> -->
                     <th>INFO PRODUK</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                     <th>EDIT</th>
                     <th>VALIDASI</th>
                 </tr>
@@ -67,8 +67,8 @@
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> deskripsi}}</td>
                         <td>{{ $a -> info_produk}}</td>
-                        <td></td>
-                        <td></td>
+                        <!-- <td></td> -->
+                        <!-- <td></td> -->
                         
                         <td style="display: flex; justify-content:center">
                         <button type="button" class="edit"

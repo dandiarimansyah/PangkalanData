@@ -47,7 +47,7 @@
                     <th>PEMENANG III</th>
                     <th>FAVORIT</th>
                     <th>KETERANGAN</th>
-                    <th>MEDIA</th>
+                    <!-- <th>MEDIA</th> -->
                     <th>EDIT</th>
                     <th>VALIDASI</th>
                 </tr>
@@ -64,7 +64,7 @@
                         <td>{{ $a -> pemenang_3}}</td>
                         <td>{{ $a -> favorit}}</td>
                         <td>{{ $a -> keterangan}}</td>
-                        <td></td>
+                        <!-- <td></td> -->
 
                         <td style="display: flex; justify-content:center">
                         <button type="button" class="edit"

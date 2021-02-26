@@ -42,7 +42,7 @@
                 <tr>
                     <th>NO</th>
                     <th>TANGGAL KERJA SAMA</th>
-                    <th>UNIT/SATUAN KERJA</th>
+                    <!-- <th>UNIT/SATUAN KERJA</th> -->
                     <th>INSTANSI</th>
                     <th>KATEGORI</th>
                     <th>NO. KERJA SAMA</th>
@@ -61,7 +61,7 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>Mulai:{{ $a -> tanggal_awal}} <br> Berakhir:{{ $a -> tanggal_akhir}}  </td>
-                        <td>Balai Bahasa Jawa Tengah</td>
+                        <!-- <td>Balai Bahasa Jawa Tengah</td> -->
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> kategori}}</td>
                         <td>{{ $a -> nomor}}</td>
