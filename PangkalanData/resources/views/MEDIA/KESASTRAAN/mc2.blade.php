@@ -10,7 +10,7 @@
         <th>MEDIA DATA PENGHARGAAN SATRA</th>
     </div>
 
-    <div class="" style=" display:flex; justify-content:center">
+    <!-- <div class="" style=" display:flex; justify-content:center">
         <div class="input-group" style="width: 30%; padding:20px;">
             <input type="text" class="form-control" placeholder="Cari">
             <div class="input-group-append">
@@ -19,7 +19,7 @@
             </button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- TABLE -->
     <div class="validasi">

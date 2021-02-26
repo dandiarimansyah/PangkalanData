@@ -20,7 +20,7 @@
     <div class="judul">
         <th>MEDIA DATA KERJA SAMA</th>
     </div>
-
+<!-- 
     <div class="" style=" display:flex; justify-content:center">
         <div class="input-group" style="width: 30%; padding:20px;">
             <input type="text" class="form-control" placeholder="Cari">
@@ -30,7 +30,8 @@
             </button>
             </div>
         </div>
-    </div>
+    </div> -->
+    
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
