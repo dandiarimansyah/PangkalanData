@@ -21,6 +21,13 @@
         <th>EDIT DATA MUSIKALISASI PUISI NASIONAL</th>
     </div>
 
+    <div class="input-baru">
+        <a href="{{ URL("/operator/input/kesastraan/musikalisasi_puisi_nasional")}}" type="button" class="btn btn-primary">
+            <i style="margin-right: 4px" class="fa fa-file-text-o" aria-hidden="true"></i>
+            INPUT DATA BARU
+        </a>
+    </div>
+
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table">
