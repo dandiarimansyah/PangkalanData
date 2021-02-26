@@ -40,10 +40,10 @@
       <form role="form" action="/operator/input/sekretariat/tanah_dan_bangunan" method="POST" enctype="multipart/form-data">
           @csrf
 
-          <div class="inputfield">
+          <!-- <div class="inputfield">
             <label>Unit/Satuan Kerja</label>
             <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
-        </div> 
+        </div>  -->
 
         <div class="alert-danger">{{ $errors->first('alamat') }}</div>
         <div class="inputfield">

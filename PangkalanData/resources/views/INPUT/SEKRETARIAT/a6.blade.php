@@ -55,10 +55,10 @@
             </div>
         </div>  -->
 
-        <div class="inputfield">
+        <!-- <div class="inputfield">
           <label>Unit/Satuan Kerja</label>
           <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
-      </div> 
+      </div>  -->
 
         <div class="alert-danger">{{ $errors->first('jumlah_buku') }}</div>
         <div class="inputfield">

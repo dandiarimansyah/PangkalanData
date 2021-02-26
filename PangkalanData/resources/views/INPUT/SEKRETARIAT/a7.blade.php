@@ -40,10 +40,10 @@
       <form role="form" action="/operator/input/sekretariat/inventarisasi_bmn" method="POST">
           @csrf
 
-        <div class="inputfield">
+        <!-- <div class="inputfield">
             <label>Unit/Satuan Kerja</label>
             <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
-        </div> 
+        </div>  -->
 
         <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
         <div class="inputfield">

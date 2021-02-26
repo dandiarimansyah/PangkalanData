@@ -6,6 +6,13 @@
 
 @include('PARTIAL.MenuLaporan')
 
+    <div class="tombol-kembali">
+        <button onclick="back()" type="button" class="btn">
+            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            <span>KEMBALI</span>
+        </button>
+    </div>
+
     <div class="judul">
         <th>DATA INVENTARISASI BARANG MILIK NEGARA</th>
     </div>
