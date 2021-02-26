@@ -57,7 +57,7 @@
                     <th>PENERBIT</th>
                     <th>LINGKUP</th>
                     <th>KETERANGAN</th>
-                    <th>UNIT/SATKER</th>
+                    <!-- <th>UNIT/SATKER</th> -->
                     <th>INFO PRODUK</th>
                     <!-- <th>MEDIA</th> -->
                 </tr>
@@ -76,7 +76,7 @@
                       <td>{{ $a -> penerbit}}</td>
                       <td>{{ $a -> lingkup}}</td>
                       <td>{{ $a -> keterangan}}</td>
-                      <td>Balai Bahasa Jawa Tengah</td>
+                      <!-- <td>Balai Bahasa Jawa Tengah</td> -->
                       <!-- <td>{{ $a -> tahun_terbit}}</td> -->
                       <td>{{ $a -> info_produk}}</td>
                   </tr>

@@ -57,7 +57,7 @@
                     <th>PENERBIT</th>
                     <th>LINGKUP</th>
                     <th>KETERANGAN</th>
-                    <th>UNIT/SATKER</th>
+                    <!-- <th>UNIT/SATKER</th> -->
                     <th>INFO PRODUK</th>
                     <!-- <th>MEDIA</th> -->
                 </tr>
@@ -73,10 +73,10 @@
                       <td>{{ $a -> edisi}}</td>
                       <td>{{ $a -> tim_redaksi}}</td>
                       <td>{{ $a -> no_isbn}}</td>
-                      <td>{{ $a -> lingkup}}</td>
                       <td>{{ $a -> penerbit}}</td>
-                      <td>{{ $a -> tahun_terbit}}</td>
+                      <td>{{ $a -> lingkup}}</td>
                       <td>{{ $a -> keterangan}}</td>
+                      <!-- <td>{{ $a -> tahun_terbit}}</td> -->
                       <td>{{ $a -> info_produk}}</td>
 
                   </tr>

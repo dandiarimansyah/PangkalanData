@@ -50,7 +50,7 @@
                 <tr>
                     <th>NO</th>
                     <th>TANGGAL KERJA SAMA</th>
-                    <th>UNIT/SATUAN KERJA</th>
+                    <!-- <th>UNIT/SATUAN KERJA</th> -->
                     <th>INSTANSI</th>
                     <th>KATEGORI</th>
                     <th>NO. KERJA SAMA</th>
@@ -73,7 +73,7 @@
                             @else
                                 Berakhir: {{ \Carbon\Carbon::parse($a->tanggal_akhir)->format('d-m-Y')}}
                             @endif
-                        <td>Balai Bahasa Jawa Tengah</td>
+                        <!-- <td>Balai Bahasa Jawa Tengah</td> -->
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> kategori}}</td>
                         <td>{{ $a -> nomor}}</td>
