@@ -30,7 +30,7 @@
                     <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
-                    <th>KATEGORI</th>
+                    <!-- <th>KATEGORI</th> -->
                     <th>KEGIATAN</th>
                     <th>PEMATERI</th>
                     <th>JUMLAH PESERTA</th>
@@ -50,7 +50,7 @@
                         <td>{{ $a -> provinsi}}</td>
                         <td>{{ $a -> kota}}</td>
                         <td>{{ $a -> tanggal_awal_pelaksanaan}} <br> {{ $a -> tanggal_akhir_pelaksanaan}}</td>
-                        <td></td>
+                        <!-- <td></td> -->
                         <td>{{ $a -> nama_kegiatan}}</td>
                         <td>{{ $a -> pemateri}}</td>
                         <td>{{ $a -> jumlah_peserta}}</td>

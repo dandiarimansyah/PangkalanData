@@ -35,8 +35,8 @@
                 <tr>
                     <th rowspan="2">NO</th>
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
-                    <th rowspan="2">BALAI/KANTOR</th>
-                    <th rowspan="2">TAHUN ANGGARAN</th>
+                    <!-- <th rowspan="2">BALAI/KANTOR</th> -->
+                    <!-- <th rowspan="2">TAHUN ANGGARAN</th> -->
                     <th colspan="8">ELEKTRONIK</th>
                     <th rowspan="2">FURNITURE</th>
                     <th colspan="3">KENDARAAN</th>
@@ -63,8 +63,8 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
-                        <td>{{ $a -> unit}}</td>
-                        <td></td>
+                        <!-- <td>{{ $a -> unit}}</td> -->
+                        <!-- <td></td> -->
                         <td>{{ $a -> laptop}}</td>
                         <td>{{ $a -> komputer}}</td>
                         <td>{{ $a -> printer}}</td>

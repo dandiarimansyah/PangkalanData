@@ -36,7 +36,7 @@
                     <th>NO</th>
                     <th>TANGGAL DIPERBAHARUI</th>
                     <th>PROVINSI</th>
-                    <th>UNIT KERJA</th>
+                    <!-- <th>UNIT KERJA</th> -->
                     <th>JUMLAH BUKU</th>
                     <th>JUMLAH JUDUL</th>
                     <th>JENIS</th>
@@ -53,7 +53,7 @@
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
                         <td>{{ $a -> provinsi}}</td>
-                        <td>{{ $a -> unit}}</td>
+                        <!-- <td>{{ $a -> unit}}</td> -->
                         <td>{{ $a -> jumlah_buku}}</td>
                         <td>{{ $a -> jumlah_judul}}</td>
                         <td>{{ $a -> jenis_buku}}</td>

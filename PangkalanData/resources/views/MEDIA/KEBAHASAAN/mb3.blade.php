@@ -33,7 +33,7 @@
                     <th>ISBN</th>
                     <th>TAHUN TERBIT</th>
                     <th>DESKRIPSI FISIK</th>
-                    <th>UNIT/SATKER</th>
+                    <!-- <th>UNIT/SATKER</th> -->
                     <th>INFO PRODUK</th>
                     <th>MEDIA</th>
                 </tr>
@@ -50,7 +50,7 @@
                         <td>{{ $a -> no_isbn}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> deskripsi}}</td>
-                        <td>Balai Bahasa Jawa Tengah</td>
+                        <!-- <td>Balai Bahasa Jawa Tengah</td> -->
                         <td>{{ $a -> info_produk}}</td>
                         
                         <td>

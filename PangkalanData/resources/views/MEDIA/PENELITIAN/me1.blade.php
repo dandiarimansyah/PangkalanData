@@ -29,7 +29,7 @@
                     <th>NO</th>
                     <th>TGL.MULAI</th>
                     <th>TGL.SELESAI</th>
-                    <th>UNIT/SATUAN KERJA</th>
+                    <!-- <th>UNIT/SATUAN KERJA</th> -->
                     <th>JUDUL</th>
                     <th>PENELITI</th>
                     <th>KERJA SAMA</th>
@@ -48,7 +48,7 @@
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> tanggal_awal}}</td>
                         <td>{{ $a -> tanggal_akhir}}</td>
-                        <td>{{ $a -> unit}}</td>
+                        <!-- <td>{{ $a -> unit}}</td> -->
                         <td>{{ $a -> judul}}</td>
                         <td>{{ $a -> peneliti}}</td>
                         <td>{{ $a -> kerja_sama}}</td>
