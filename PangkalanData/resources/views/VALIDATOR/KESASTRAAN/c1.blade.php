@@ -52,6 +52,7 @@
                     <th>JUMLAH DIBINA</th>
                     <th>SEKOLAH YANG DIBINA</th>
                     <th>AKTIVITAS</th>
+                    <th>DOKUMEN</th>
                     <th>EDIT</th>
                     <th>VALIDASI</th>
                 </tr>
@@ -73,6 +74,16 @@
                         <td>{{ $a -> jumlah_sekolah_yang_dibina}}</td>
                         <td>{{ $a -> nama_sekolah_yang_dibina}}</td>
                         <td>{{ $a -> aktivitas}}</td>
+
+                        <td>
+                            @if ($a->media == "")
+                            <div style="margin:5px auto">
+                                <p style="font-size: 12px">Tidak ada Dokumen</p>
+                            </div>
+                            @else
+                                <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Dokumen</a>
+                            @endif
+                        </td>
 
                         <td style="display: flex; justify-content:center">
                         <button type="button" class="edit"
