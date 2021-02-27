@@ -2,34 +2,34 @@
 
 namespace App\Imports;
 
-use App\Inventarisasi;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Inventarisasi;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class InventarisasiImport implements ToModel, WithHeadingRow
+class InventarisasiImport implements ToCollection
 {
-    /**
-     * @param array $row
-     *
-     * @return \Illuminate\Database\Eloquent\Model|null
-     */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Inventarisasi([
-            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
-            'tahun_anggaran' => $row['tahun_anggaran'],
-            'laptop' => $row['laptop'],
-            'komputer' => $row['komputer'],
-            'printer' => $row['printer'],
-            'fotocopy' => $row['fotocopy'],
-            'faximili' => $row['faximili'],
-            'LCD' => $row['LCD'],
-            'TV' => $row['TV'],
-            'lain' => $row['lain'],
-            'furniture' => $row['furniture'],
-            'roda_dua' => $row['roda_dua'],
-            'roda_empat' => $row['roda_empat'],
-            'roda_enam' => $row['roda_enam'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                Inventarisasi::create([
+                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    'tahun_anggaran' => $row[3],
+                    'laptop' => $row[4],
+                    'komputer' => $row[5],
+                    'printer' => $row[6],
+                    'fotocopy' => $row[7],
+                    'faximili' => $row[8],
+                    'LCD' => $row[9],
+                    'TV' => $row[10],
+                    'lain' => $row[11],
+                    'furniture' => $row[12],
+                    'roda_dua' => $row[13],
+                    'roda_empat' => $row[14],
+                    'roda_enam' => $row[15],
+                ]);
+            }
+        }
     }
 }

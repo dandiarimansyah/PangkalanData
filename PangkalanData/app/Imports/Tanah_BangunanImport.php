@@ -2,30 +2,35 @@
 
 namespace App\Imports;
 
-use App\Tanah_Bangunan;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Tanah_Bangunan;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class Tanah_BangunanImport implements ToModel, WithHeadingRow
+class Tanah_BangunanImport implements ToCollection
 {
-    /**
-     * @param array $row
-     *
-     * @return \Illuminate\Database\Eloquent\Model|null
-     */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Tanah_Bangunan([
-            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
-            'alamat' => $row['alamat'],
-            'status_tanah' => $row['status_tanah'],
-            'sertif_tanah' => $row['sertif_tanah'],
-            'status_bangunan' => $row['status_bangunan'],
-            'imb' => $row['imb'],
-            'kondisi' => $row['kondisi'],
-            'status_peroleh' => $row['status_peroleh'],
-            'keterangan' => $row['keterangan'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Tanah_Bangunan::create([
+                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    'alamat' => $row[3],
+                    'status_tanah' => $row[4],
+                    'sertif_tanah' => $row[5],
+                    'status_bangunan' => $row[6],
+                    'imb' => $row[7],
+                    'kondisi' => $row[8],
+                    'status_peroleh' => $row[9],
+                    'keterangan' => $row[10],
+                ]);
+            }
+        }
     }
 }

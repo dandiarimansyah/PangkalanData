@@ -2,27 +2,33 @@
 
 namespace App\Imports;
 
-use App\Perpustakaan;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Perpustakaan;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class PerpustakaanImport implements ToModel, WithHeadingRow
+class PerpustakaanImport implements ToCollection
 {
-    /**
-     * @param array $row
-     *
-     * @return \Illuminate\Database\Eloquent\Model|null
-     */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Perpustakaan([
-            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
-            'provinsi'  => $row['provinsi'],
-            'jumlah_buku' => $row['jumlah_buku'],
-            'jumlah_judul' => $row['jumlah_judul'],
-            'jenis_buku' => $row['jenis_buku'],
-            'jumlah_pengunjung' => $row['jumlah_pengunjung'],
-            'sumber_data' => $row['sumber_data'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Perpustakaan::create([
+                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    'provinsi' => $row[3],
+                    'jumlah_buku' => $row[4],
+                    'jumlah_judul' => $row[5],
+                    'jenis_buku' => $row[6],
+                    'jumlah_pengunjung' => $row[7],
+                    'sumber_data' => $row[8],
+                ]);
+            }
+        }
     }
 }

@@ -2,33 +2,38 @@
 
 namespace App\Imports;
 
-use App\Penelitian;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Penelitian;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class PenelitianImport implements ToModel, WithHeadingRow
+class PenelitianImport implements ToCollection
 {
-    /**
-     * @param array $row
-     *
-     * @return \Illuminate\Database\Eloquent\Model|null
-     */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Penelitian([
-            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
-            'kategori'  => $row['kategori'],
-            'peneliti' => $row['peneliti'],
-            'judul' => $row['judul'],
-            'kerja_sama' => $row['kerja_sama'],
-            'tanggal_awal' => $row['tanggal_awal'],
-            'tanggal_akhir' => $row['tanggal_akhir'],
-            'lama_penelitian' => $row['lama_penelitian'],
-            'tipe_waktu' => $row['tipe_waktu'],
-            'publikasi' => $row['publikasi'],
-            'tahun_terbit' => $row['tahun_terbit'],
-            'abstrak' => $row['abstrak'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Penelitian::create([
+                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    'kategori' => $row[3],
+                    'peneliti' => $row[4],
+                    'judul' => $row[5],
+                    'kerja_sama' => $row[6],
+                    'tanggal_awal' => $row[7],
+                    'tanggal_akhir' => $row[8],
+                    'lama_penelitian' => $row[9],
+                    'tipe_waktu' => $row[10],
+                    'publikasi' => $row[11],
+                    'tahun_terbit' => $row[12],
+                    'abstrak' => $row[13],
+                ]);
+            }
+        }
     }
 }

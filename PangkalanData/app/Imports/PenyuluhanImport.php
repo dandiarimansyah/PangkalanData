@@ -2,30 +2,35 @@
 
 namespace App\Imports;
 
-use App\Penyuluhan;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Penyuluhan;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class PenyuluhanImport implements ToModel, WithHeadingRow
+class PenyuluhanImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Penyuluhan([
-            'provinsi'  => $row['provinsi'],
-            'kota' => $row['kota'],
-            'nama_kegiatan' => $row['nama_kegiatan'],
-            'tanggal_awal' => $row['tanggal_awal'],
-            'tanggal_akhir' => $row['tanggal_akhir'],
-            'narasumber' => $row['narasumber'],
-            'sasaran' => $row['sasaran'],
-            'jumlah_peserta' => $row['jumlah_peserta'],
-            'materi' => $row['materi'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Penyuluhan::create([
+                    'provinsi' => $row[3],
+                    'kota' => $row[4],
+                    'nama_kegiatan' => $row[5],
+                    'tanggal_awal' => $row[6],
+                    'tanggal_akhir' => $row[7],
+                    'narasumber' => $row[8],
+                    'sasaran' => $row[9],
+                    'jumlah_peserta' => $row[10],
+                    'materi' => $row[11],
+                ]);
+            }
+        }
     }
 }

@@ -2,27 +2,33 @@
 
 namespace App\Imports;
 
-use App\Komunitas_Sastra;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Komunitas_Sastra;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class Komunitas_SastraImport implements ToModel, WithHeadingRow
+class Komunitas_SastraImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Komunitas_Sastra([
-            'nama_komunitas'  => $row['nama_komunitas'],
-            'provinsi' => $row['provinsi'],
-            'kota' => $row['kota'],
-            'kecamatan' => $row['kecamatan'],
-            'alamat' => $row['alamat'],
-            'koordinat' => $row['koordinat'],
-            'keterangan' => $row['keterangan'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Komunitas_Sastra::create([
+                    'nama_komunitas' => $row[3],
+                    'provinsi' => $row[4],
+                    'kota' => $row[5],
+                    'kecamatan' => $row[6],
+                    'alamat' => $row[7],
+                    'koordinat' => $row[8],
+                    'keterangan' => $row[9],
+                ]);
+            }
+        }
     }
 }

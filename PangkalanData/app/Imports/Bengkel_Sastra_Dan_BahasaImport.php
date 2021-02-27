@@ -2,32 +2,38 @@
 
 namespace App\Imports;
 
-use App\Bengkel_Sastra_Dan_Bahasa;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Bengkel_Sastra_Dan_Bahasa;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class Bengkel_Sastra_Dan_BahasaImport implements ToModel, WithHeadingRow
+class Bengkel_Sastra_Dan_BahasaImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Bengkel_Sastra_Dan_Bahasa([
-            'provinsi'  => $row['provinsi'],
-            'kota' => $row['kota'],
-            'nama_kegiatan' => $row['nama_kegiatan'],
-            'tanggal_awal_pelaksanaan' => $row['tanggal_awal_pelaksanaan'],
-            'tanggal_akhir_pelaksanaan' => $row['tanggal_akhir_pelaksanaan'],
-            'pemateri' => $row['pemateri'],
-            'jumlah_peserta' => $row['jumlah_peserta'],
-            'jumlah_sekolah' => $row['jumlah_sekolah'],
-            'jumlah_sekolah_yang_dibina' => $row['jumlah_sekolah_yang_dibina'],
-            'nama_sekolah_yang_dibina' => $row['nama_sekolah_yang_dibina'],
-            'aktivitas' => $row['aktivitas'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                $tgl = ($row[6] - 25569) * 86400;
+                $tanggal = gmdate('Y-m-d', $tgl);
+
+                $tgl2 = ($row[7] - 25569) * 86400;
+                $tanggal2 = gmdate('Y-m-d', $tgl2);
+                // dd($tanggal2);
+
+                Bengkel_Sastra_Dan_Bahasa::create([
+                    'provinsi' => $row[3],
+                    'kota' => $row[4],
+                    'nama_kegiatan' => $row[5],
+                    'tanggal_awal_pelaksanaan' => $tanggal,
+                    'tanggal_akhir_pelaksanaan' => $tanggal2,
+                    'pemateri' => $row[8],
+                    'jumlah_peserta' => $row[9],
+                    'jumlah_sekolah' => $row[10],
+                    'jumlah_sekolah_yang_dibina' => $row[11],
+                    'nama_sekolah_yang_dibina' => $row[12],
+                    'aktivitas' => $row[13],
+                ]);
+            }
+        }
     }
 }

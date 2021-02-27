@@ -2,28 +2,33 @@
 
 namespace App\Imports;
 
-use App\Terbitan_Umum;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Terbitan_Umum;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class Terbitan_UmumImport implements ToModel, WithHeadingRow
+class Terbitan_UmumImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Terbitan_Umum([
-            'kategori'  => $row['kategori'],
-            'judul' => $row['judul'],
-            'penulis' => $row['penulis'],
-            'no_isbn' => $row['no_isbn'],
-            'tahun_terbit' => $row['tahun_terbit'],
-            'deskripsi' => $row['deskripsi'],
-            'info_produk' => $row['info_produk'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Terbitan_Umum::create([
+                    'kategori' => $row[3],
+                    'judul' => $row[4],
+                    'penulis' => $row[5],
+                    'no_isbn' => $row[6],
+                    'tahun_terbit' => $row[7],
+                    'deskripsi' => $row[8],
+                    'info_produk' => $row[9],
+                ]);
+            }
+        }
     }
 }

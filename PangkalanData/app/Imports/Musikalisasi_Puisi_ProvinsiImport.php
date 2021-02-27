@@ -2,28 +2,34 @@
 
 namespace App\Imports;
 
-use App\Musikalisasi_Puisi_Provinsi;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Musikalisasi_Puisi_Provinsi;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class Musikalisasi_Puisi_ProvinsiImport implements ToModel, WithHeadingRow
+class Musikalisasi_Puisi_ProvinsiImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Musikalisasi_Puisi_Provinsi([
-            'provinsi'  => $row['provinsi'],
-            'tahun' => $row['tahun'],
-            'pemenang_1' => $row['pemenang_1'],
-            'pemenang_2' => $row['pemenang_2'],
-            'pemenang_3' => $row['pemenang_3'],
-            'favorit' => $row['favorit'],
-            'keterangan' => $row['keterangan'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Musikalisasi_Puisi_Provinsi::create([
+                    'provinsi' => $row[3],
+                    'tahun' => $row[4],
+                    'pemenang_1' => $row[5],
+                    'pemenang_2' => $row[6],
+                    'pemenang_3' => $row[7],
+                    'favorit' => $row[8],
+                    'perihal' => $row[9],
+                    'keterangan' => $row[10],
+                ]);
+            }
+        }
     }
 }

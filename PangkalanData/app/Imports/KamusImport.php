@@ -2,31 +2,36 @@
 
 namespace App\Imports;
 
-use App\Kamus;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Kamus;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class KamusImport implements ToModel, WithHeadingRow
+class KamusImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Kamus([
-            'kategori'  => $row['kategori'],
-            'judul' => $row['judul'],
-            'tim_redaksi' => $row['tim_redaksi'],
-            'edisi' => $row['edisi'],
-            'no_isbn' => $row['no_isbn'],
-            'lingkup' => $row['lingkup'],
-            'penerbit' => $row['penerbit'],
-            'tahun_terbit' => $row['tahun_terbit'],
-            'keterangan' => $row['keterangan'],
-            'info_produk' => $row['info_produk'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Kamus::create([
+                    'kategori' => $row[3],
+                    'judul' => $row[4],
+                    'tim_redaksi' => $row[5],
+                    'edisi' => $row[6],
+                    'no_isbn' => $row[7],
+                    'lingkup' => $row[8],
+                    'penerbit' => $row[9],
+                    'tahun_terbit' => $row[10],
+                    'keterangan' => $row[11],
+                    'info_produk' => $row[12],
+                ]);
+            }
+        }
     }
 }

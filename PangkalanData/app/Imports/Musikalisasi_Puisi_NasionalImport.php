@@ -2,27 +2,33 @@
 
 namespace App\Imports;
 
-use App\Musikalisasi_Puisi_Nasional;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Musikalisasi_Puisi_Nasional;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class Musikalisasi_Puisi_NasionalImport implements ToModel, WithHeadingRow
+class Musikalisasi_Puisi_NasionalImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Musikalisasi_Puisi_Nasional([
-            'tahun'  => $row['tahun'],
-            'pemenang_1' => $row['pemenang_1'],
-            'pemenang_2' => $row['pemenang_2'],
-            'pemenang_3' => $row['keterangan'],
-            'favorit' => $row['favorit'],
-            'keterangan' => $row['keterangan'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Musikalisasi_Puisi_Nasional::create([
+                    'tahun' => $row[3],
+                    'pemenang_1' => $row[4],
+                    'pemenang_2' => $row[5],
+                    'pemenang_3' => $row[6],
+                    'favorit' => $row[7],
+                    'perihal' => $row[8],
+                    'keterangan' => $row[9],
+                ]);
+            }
+        }
     }
 }

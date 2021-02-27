@@ -2,32 +2,37 @@
 
 namespace App\Imports;
 
-use App\Kerja_Sama;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Kerja_Sama;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class Kerja_SamaImport implements ToModel, WithHeadingRow
+class Kerja_SamaImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Kerja_Sama([
-            'kategori'  => $row['kategori'],
-            'instansi' => $row['instansi'],
-            'tanggal_awal' => $row['tanggal_awal'],
-            'tanggal_akhir' => $row['tanggal_akhir'],
-            'nomor' => $row['nomor'],
-            'perihal' => $row['perihal'],
-            'keterangan' => $row['keterangan'],
-            'ttd_1' => $row['ttd_1'],
-            'instansi_1' => $row['instansi_1'],
-            'ttd_2' => $row['ttd_2'],
-            'instansi_2' => $row['instansi_2'],
-            'media' => $row['media'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Kerja_Sama::create([
+                    'kategori' => $row[3],
+                    'instansi' => $row[4],
+                    'tanggal_awal' => $row[5],
+                    'tanggal_akhir' => $row[6],
+                    'nomor' => $row[7],
+                    'perihal' => $row[8],
+                    'keterangan' => $row[9],
+                    'ttd_1' => $row[10],
+                    'instansi_1' => $row[11],
+                    'ttd_2' => $row[12],
+                    'instansi_2' => $row[13],
+                ]);
+            }
+        }
     }
 }

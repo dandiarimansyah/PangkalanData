@@ -2,26 +2,33 @@
 
 namespace App\Imports;
 
-use App\Pesuluh;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use App\Models\Pesuluh;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class PesuluhImport implements ToModel, WithHeadingRow
+class PesuluhImport implements ToCollection
 {
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Pesuluh([
-            'nama'  => $row['nama'],
-            'tempat_lahir' => $row['tempat_lahir'],
-            'tanggal_lahir' => $row['tanggal_lahir'],
-            'instansi' => $row['instansi'],
-            'tingkat' => $row['tingkat'],
-            'id_penyuluhan' => $row['id_penyuluhan'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                // $tgl = ($row[6] - 25569) * 86400;
+                // $tanggal = gmdate('Y-m-d', $tgl);
+
+                // $tgl2 = ($row[7] - 25569) * 86400;
+                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+
+                Pesuluh::create([
+                    'nama' => $row[3],
+                    'tempat_lahir' => $row[4],
+                    'tanggal_lahir' => $row[5],
+                    'tanggal_akhir' => $row[6],
+                    'instansi' => $row[7],
+                    'tingkat' => $row[8],
+                    'id_penyuluhan' => $row[9],
+                ]);
+            }
+        }
     }
 }

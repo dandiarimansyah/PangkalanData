@@ -3,23 +3,23 @@
 namespace App\Imports;
 
 use App\Models\Realisasi_Anggaran;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class Realisasi_AnggaranImport implements ToModel, WithHeadingRow
+class Realisasi_AnggaranImport implements ToCollection
 {
-    /**
-     * @param array $row
-     *
-     * @return \Illuminate\Database\Eloquent\Model|null
-     */
-    public function model(array $row)
+    public function collection(Collection $collection)
     {
-        return new Realisasi_Anggaran([
-            'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
-            'nilai_realisasi' => $row['tahun_realisasi'],
-            'besar_dana' => $row['besar_dana'],
-            'keterangan' => $row['keterangan'],
-        ]);
+        foreach ($collection as $key => $row) {
+            if ($key >= 1) {
+
+                Realisasi_Anggaran::create([
+                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    'nilai_realisasi' => $row[3],
+                    'besar_dana' => $row[4],
+                    'keterangan' => $row[5],
+                ]);
+            }
+        }
     }
 }
