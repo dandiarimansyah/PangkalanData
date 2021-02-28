@@ -11,7 +11,7 @@ class Tanah_BangunanImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 1) {
+            if ($key >= 2) {
 
                 // $tgl = ($row[6] - 25569) * 86400;
                 // $tanggal = gmdate('Y-m-d', $tgl);
@@ -20,7 +20,7 @@ class Tanah_BangunanImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Tanah_Bangunan::create([
-                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
                     'alamat' => $row[3],
                     'status_tanah' => $row[4],
                     'sertif_tanah' => $row[5],

@@ -11,7 +11,7 @@ class PenelitianImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 1) {
+            if ($key >= 2) {
 
                 // $tgl = ($row[6] - 25569) * 86400;
                 // $tanggal = gmdate('Y-m-d', $tgl);
@@ -20,7 +20,7 @@ class PenelitianImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Penelitian::create([
-                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
                     'kategori' => $row[3],
                     'peneliti' => $row[4],
                     'judul' => $row[5],

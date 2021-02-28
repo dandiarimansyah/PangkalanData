@@ -11,10 +11,10 @@ class Realisasi_AnggaranImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 1) {
+            if ($key >= 2) {
 
                 Realisasi_Anggaran::create([
-                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
                     'nilai_realisasi' => $row[3],
                     'besar_dana' => $row[4],
                     'keterangan' => $row[5],

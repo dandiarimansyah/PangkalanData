@@ -13,7 +13,7 @@ class KepegawaianImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 1) {
+            if ($key >= 2) {
 
                 // $tgl = ($row[6] - 25569) * 86400;
                 // $tanggal = gmdate('Y-m-d', $tgl);
@@ -23,7 +23,7 @@ class KepegawaianImport implements ToCollection
                 $tanggal = new Carbon();
 
                 Kepegawaian::create([
-                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
                     'tanggal_diperbarui'  => $tanggal,
                     'semua_kelamin' => $row[3],
                     'laki' => $row[4],

@@ -11,7 +11,7 @@ class PenyuluhanImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 1) {
+            if ($key >= 2) {
 
                 // $tgl = ($row[6] - 25569) * 86400;
                 // $tanggal = gmdate('Y-m-d', $tgl);
@@ -20,15 +20,15 @@ class PenyuluhanImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Penyuluhan::create([
-                    'provinsi' => $row[3],
-                    'kota' => $row[4],
-                    'nama_kegiatan' => $row[5],
-                    'tanggal_awal' => $row[6],
-                    'tanggal_akhir' => $row[7],
-                    'narasumber' => $row[8],
-                    'sasaran' => $row[9],
-                    'jumlah_peserta' => $row[10],
-                    'materi' => $row[11],
+                    // 'provinsi' => $row[3],
+                    'kota' => $row[3],
+                    'nama_kegiatan' => $row[4],
+                    'tanggal_awal' => $row[5],
+                    'tanggal_akhir' => $row[6],
+                    'narasumber' => $row[7],
+                    'sasaran' => $row[8],
+                    'jumlah_peserta' => $row[9],
+                    'materi' => $row[10],
                 ]);
             }
         }

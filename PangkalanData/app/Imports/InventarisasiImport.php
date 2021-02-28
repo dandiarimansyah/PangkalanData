@@ -11,10 +11,10 @@ class InventarisasiImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 1) {
+            if ($key >= 2) {
 
                 Inventarisasi::create([
-                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
                     'tahun_anggaran' => $row[3],
                     'laptop' => $row[4],
                     'komputer' => $row[5],

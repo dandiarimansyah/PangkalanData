@@ -11,7 +11,7 @@ class PerpustakaanImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 1) {
+            if ($key >= 2) {
 
                 // $tgl = ($row[6] - 25569) * 86400;
                 // $tanggal = gmdate('Y-m-d', $tgl);
@@ -20,13 +20,13 @@ class PerpustakaanImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Perpustakaan::create([
-                    'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
-                    'provinsi' => $row[3],
-                    'jumlah_buku' => $row[4],
-                    'jumlah_judul' => $row[5],
-                    'jenis_buku' => $row[6],
-                    'jumlah_pengunjung' => $row[7],
-                    'sumber_data' => $row[8],
+                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
+                    // 'provinsi' => $row[3],
+                    'jumlah_buku' => $row[3],
+                    'jumlah_judul' => $row[4],
+                    'jenis_buku' => $row[5],
+                    'jumlah_pengunjung' => $row[6],
+                    'sumber_data' => $row[7],
                 ]);
             }
         }
