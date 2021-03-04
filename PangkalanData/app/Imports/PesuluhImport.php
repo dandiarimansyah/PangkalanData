@@ -23,10 +23,9 @@ class PesuluhImport implements ToCollection
                     'nama' => $row[3],
                     'tempat_lahir' => $row[4],
                     'tanggal_lahir' => $row[5],
-                    'tanggal_akhir' => $row[6],
-                    'instansi' => $row[7],
-                    'tingkat' => $row[8],
-                    'id_penyuluhan' => $row[9],
+                    'instansi' => $row[6],
+                    'tingkat' => $row[7],
+                    'id_penyuluhan' => $row[8],
                 ]);
             }
         }

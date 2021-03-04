@@ -10,6 +10,17 @@ body {
     /* min-width: max-content; */
     background: #ffffff;
 }
+/* 
+th.sorting {
+    padding-right: 10px !important;
+}
+
+th.sorting::before,
+th.sorting::after,
+th.sorting_asc::before,
+th.sorting_asc::after {
+    content: none !important;
+} */
 
 .input-baru {
     display: flex;
@@ -413,9 +424,10 @@ p {
 }
 
 .content-table th {
+    font-size: 12px;
     border-right: 1px solid white;
     border-bottom: 1px solid white;
-    padding: 5px 10px 5px 10px;
+    padding: 10px 10px 10px 10px !important;
     text-align: center;
 }
 
@@ -468,6 +480,7 @@ p {
     margin-top: 10px;
     font-weight: bold;
     font-size: 30px;
+    margin-bottom: 15px;
 }
 
 .judul a,

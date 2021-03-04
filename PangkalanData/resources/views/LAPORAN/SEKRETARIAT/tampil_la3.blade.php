@@ -1,5 +1,24 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuLaporan')
@@ -35,6 +54,7 @@
     <!-- TABLE -->
     <div class="validasi">
         <table class="content-table" id="datatable">            
+        {{-- <table class="content-table"> --}}
         <thead>
                 <tr>
                     <th rowspan="2">NO</th>

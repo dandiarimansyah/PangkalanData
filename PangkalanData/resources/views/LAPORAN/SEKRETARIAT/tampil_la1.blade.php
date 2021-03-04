@@ -30,7 +30,7 @@
 
     @auth
         @if (Auth::user()->level != 'tamu')
-            <div class="judul" style="display:flex; justify-content:center; margin-bottom:15px">
+            <div class="judul" style="display:flex; justify-content:center;">
                 <a href="{{ url("/pdf/sekretariat/anggaran?pilih={$pilih}&tahun_anggaran={$tahun_anggaran}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
                     <i style="margin-right: 4px" class="fa fa-file-pdf-o" aria-hidden="true"></i>
                     EXPORT KE PDF
@@ -51,7 +51,7 @@
                 <tr>
                     <th>NO</th>
                     <th>TAHUN ANGGARAN</th>
-                    <th>NILAI ANGGARAN(Rp.)</th>
+                    <th style="min-width: 270px">NILAI ANGGARAN</th>
                 </tr>
             </thead>
 

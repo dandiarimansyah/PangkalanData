@@ -96,10 +96,11 @@ class ExportController extends Controller
         $data = Kepegawaian::all();
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.SEKRETARIAT.a3', compact('data'));
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a3', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Kepegawaian.pdf');
+        // return view('PDF.SEKRETARIAT.a3', compact('data'));
     }
 
     //=======================================================================================

@@ -8,6 +8,10 @@
         *{
             font-family: 'Times New Roman', Times, serif
         }
+        body{
+            margin: auto;
+            width: max-content;
+        }
         .validasi {
             margin: auto;
             margin-top: 15px;
@@ -21,11 +25,12 @@
         .dalam td{
             font-size: 12px;
         }
-
         table{
             text-align: center;
         }
-        tr th{
+        .dalam th{
+            vertical-align: middle;
+            padding: 12px 6px 12px 6px;
             font-size: 12px;
         }
     </style>
@@ -43,7 +48,6 @@
             <tr>
                     <th rowspan="2">NO</th>
                     <th rowspan="2">TANGGAL DIPERBAHARUI</th>
-                    <th rowspan="2">UNIT/SATUAN KERJA</th>
                     <th colspan="3">JUMLAH PEGAWAI</th>
                     <th colspan="7">TINGKAT PENDIDIKAN</th>
                     <th colspan="17">PANGKAT/GOLONGAN</th>
@@ -82,7 +86,6 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
-                        <td>{{ $a -> unit }}</td>
                         <td>{{ $a -> semua_kelamin}}</td>
                         <td>{{ $a -> laki}}</td>
                         <td>{{ $a -> perempuan}}</td>

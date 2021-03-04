@@ -24,13 +24,13 @@
   <div class="judul">
     <th>INPUT DATA PESULUH</th>
 
-    <div class="import-input">
+    {{-- <div class="import-input">
       <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
       <button loc="{{ asset('/Template/Template Pesuluh.xlsx')}}" href="/import/kebahasaan/pesuluh" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
         <i style="margin-right: 4px" class="fa fa-upload" aria-hidden="true"></i>
         IMPORT EXCEL
       </button>
-    </div>
+    </div> --}}
 
   </div>
 
@@ -50,7 +50,7 @@
                 <th>SASARAN</th>
                 <th>JUMLAH</th>
                 <th>MATERI</th>
-                <th>MEDIA</th>
+                <th>DOKUMEN</th>
                 <th>PILIH</th>
             </tr>
         </thead>
@@ -67,7 +67,15 @@
                     <td>{{ $a -> sasaran}}</td>
                     <td>{{ $a -> jumlah_peserta}}</td>
                     <td>{{ $a -> materi}}</td>
-                    <td>{{ $a -> media}}</td>
+                    <td>
+                        @if ($a->media == "")
+                        <div style="margin:5px auto">
+                            <p style="font-size: 12px">Tidak ada Dokumen</p>
+                        </div>
+                        @else
+                            <a target="_blank" type="button" class="btn btn-sm btn-success" href="{{ Storage::url($a->media) }}">Dokumen</a>
+                        @endif
+                    </td>
                     
                     <td style="display: flex; justify-content:center">
                         <a class="edit" href="{{ url('/operator/input/kebahasaan/pesuluh/' . $a->id) }}" data-toggle="tooltip">Pilih</a>

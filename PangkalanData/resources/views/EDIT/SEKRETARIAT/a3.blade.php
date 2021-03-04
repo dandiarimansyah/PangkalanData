@@ -1,5 +1,28 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    .content-table th {
+        padding: 10px 8px 10px 8px !important;
+    }
+
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuEdit')
@@ -30,11 +53,11 @@
 
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table">
+        <table class="content-table" id="datatable">
             <thead>
                 <tr>
                     <th rowspan="2">NO</th>
-                    <th rowspan="2">TANGGAL DIPERBAHARUI</th>
+                    <th style="max-width: 100px" rowspan="2">TANGGAL DIPERBARUI</th>
                     <!-- <th rowspan="2">UNIT/SATUAN KERJA</th> -->
                     <th colspan="3">JUMLAH PEGAWAI</th>
                     <th colspan="7">TINGKAT PENDIDIKAN</th>
