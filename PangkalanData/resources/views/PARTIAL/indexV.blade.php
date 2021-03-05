@@ -59,7 +59,7 @@
                     <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
 
                 @elseif (auth()->user()->level == 'admin')
-                    <li class="{{ (request()->is('admin*')) ? 'aktif' : 'nonaktif' }}"><a href="/admin/akun">AKUN</a></li>
+                    <li class="{{ (request()->is('admin*')) ? 'aktif' : 'nonaktif' }}"><a href="/admin/akun_operator">AKUN</a></li>
                     <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
                 @endif
             @endauth

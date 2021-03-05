@@ -6,24 +6,40 @@
 
 <div class="isi-konten">
 
+    @if ($errors->any())
+        <div class="error">
+            <p>----- Pesan Error -----</p>
+        @foreach ($errors->all() as $error)
+            <div class="errors">
+            {{ $error }}
+            </div>
+        @endforeach
+        </div>
+    @endif
+
     <div class="judul">
         <th>AKUN OPERATOR</th>
 
-        <div class="import-input">
+        {{-- <div class="import-input">
             <h6>Klik "TAMBAH AKUN" untuk menambahkan Operator Baru</h6>
             <button loc="{{ asset('/Template/Template Kamus Ensiklopedia.xlsx')}}" href="/import/kebahasaan/kamus_ensiklopedia" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
                 TAMBAH AKUN
             </button>
-        </div>
+        </div> --}}
 
     </div>
 
      <!-- TABLE -->
      <div class="validasi">
-        <table class="content-table" id="datatable">
+        <div>
+            <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#add-modal">
+              <i style="margin: 0" class="fa fa-plus" aria-hidden="true"></i>   
+                  TAMBAH AKUN OPERATOR
+             </button>
+        <table class="content-table">
             <thead>
                 <tr>
-                    <th>NO ID</th>
+                    <th>NO</th>
                     <th>Nama Operator</th>
                     <th>Username</th>
                     <th>Password</th>
@@ -42,26 +58,18 @@
                            <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 
-                                data-target="#edit-modal"
-                                data-id="{{ $a->id }}"                                data-unit="{{ $a->unit }}"
-                                data-peneliti="{{ $a->peneliti }}"
-                                data-judul="{{ $a->judul }}"
-                                data-kerja_sama="{{ $a->kerja_sama }}"
-                                data-tanggal_awal="{{ $a->tanggal_awal }}"
-                                data-tanggal_akhir="{{ $a->tanggal_akhir }}"
-                                data-lama_penelitian="{{ $a->lama_penelitian }}"
-                                data-tipe_waktu="{{ $a->tipe_waktu }}"
-                                data-publikasi="{{ $a->publikasi }}"
-                                data-tahun_terbit="{{ $a->tahun_terbit }}"
-                                data-abstrak="{{ $a->abstrak }}"
+                                data-target="#edit_akun-modal"
+                                data-id="{{ $a->id }}"                             
+                                data-name="{{ $a->name }}"
+                                data-username="{{ $a->username }}"
                             >Edit</button>
 
-                            <a class="hapus" href="{{ url('/operator/edit/penelitian/penelitian/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
+                            <a class="hapus" href="{{ url('/admin/akun_operator/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="16" align="center">Tidak ada Data</td>
+                        <td colspan="4" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
             </tbody>
@@ -69,5 +77,110 @@
         </table>
 
      </div>
+    </div>
+
+    {{-- POP UP ADD --}}
+    <div class="modal fade" id="add-modal">
+        <div id="modal-add" class="modal-dialog" role="document">
+        <div id="modal-content" class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">TAMBAH AKUN OPERATOR BARU</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="wrapper" style="margin: 0">
+                    <div class="form">
+                        <form id="add_form" action="/admin/akun_operator" method="POST">
+                            @csrf
+
+                        <div class="inputfield">
+                            <label>Nama Operator*</label>
+                            <input name="name" type="text" class="input">
+                        </div> 
+                        
+                        <div class="inputfield">
+                            <label>Username*</label>
+                            <input name="username" type="text" class="input">
+                        </div> 
+                
+                        <div class="inputfield">
+                            <label>Password*</label>
+                            <input name="password" type="text" class="input">
+                        </div> 
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    {{-- POP UP EDIT --}}
+    <div class="modal fade" id="edit_akun-modal">
+        <div id="modal-edit" class="modal-dialog" role="document">
+        <div id="modal-content" class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">EDIT AKUN OPERATOR</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="wrapper" style="margin: 0">
+                    <div class="form">
+                        <form id="edit_akun_form" action="" method="POST">
+                            @csrf
+                            @method('PUT')
+
+                        <div class="inputfield">
+                            <label>Nama Operator</label>
+                            <input name="name" id="name" type="text" class="input">
+                        </div> 
+                        
+                        <div class="inputfield">
+                            <label>Username</label>
+                            <input name="username" id="username" type="text" class="input">
+                        </div> 
+                
+                        <div class="inputfield">
+                            <label>Password</label>
+                            <input name="password" id="password" type="text" class="input" placeholder="Tidak Harus diisi">
+                        </div> 
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 
 @endsection
+
+@push('scripts')
+      <script>
+          $(document).on('click','#edit_item',function(){
+                let name = $(this).data('name');
+                let username = $(this).data('username');
+                let id = $(this).data('id');
+
+                $('#name').val(name);
+                $('#username').val(username);
+                
+                $('#edit_akun_form').attr('action', '/admin/edit_akun/' + id);
+          })
+      </script>
+@endpush
