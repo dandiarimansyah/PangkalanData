@@ -53,8 +53,11 @@
         }
     },
     series: [{
-        name: 'KERJA SAMA',
-        data: {!!json_encode($total)!!},
+        name: 'INTERNAL',
+        data: {!!json_encode($INTERNAL_T)!!},
+    }, {
+        name: 'EKSTERNAL',
+        data: {!!json_encode($EKSTERNAL_T)!!},
 
     }]
 });

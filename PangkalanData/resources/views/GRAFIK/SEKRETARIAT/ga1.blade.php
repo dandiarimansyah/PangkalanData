@@ -27,7 +27,7 @@
         type: 'column'
     },
     title: {
-        text: 'JUMLAH DATA ANGGARAN PER TAHUN'
+        text: 'BESAR DANA ANGGARAN PER TAHUN'
     },
 
     xAxis: {

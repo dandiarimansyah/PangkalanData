@@ -75,3 +75,12 @@
     </div>
 
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function () {
+            // $("#datatable_filter label").html("Cari:");
+            
+        })
+    </script>
+@endpush

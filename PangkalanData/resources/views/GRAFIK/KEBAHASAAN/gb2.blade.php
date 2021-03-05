@@ -53,8 +53,11 @@
         }
     },
     series: [{
-        name: 'JURNAL/MAJALAH',
-        data: {!!json_encode($total)!!},
+        name: 'JURNAL',
+        data: {!!json_encode($JURNAL_T)!!},
+    }, {
+        name: 'MAJALAH',
+        data: {!!json_encode($MAJALAH_T)!!},
 
     }]
 });

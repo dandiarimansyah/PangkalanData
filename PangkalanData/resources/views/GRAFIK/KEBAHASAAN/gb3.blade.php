@@ -53,8 +53,11 @@
         }
     },
     series: [{
-        name: 'TERBITAN UMUM',
-        data: {!!json_encode($total)!!},
+        name: 'BAHASA',
+        data: {!!json_encode($BAHASA_T)!!},
+    }, {
+        name: 'SASTRA',
+        data: {!!json_encode($SASTRA_T)!!},
 
     }]
 });

@@ -56,7 +56,7 @@
         data: {!!json_encode($BAHASA_T)!!},
 
     }, {
-        name: 'KOMUNITAS BAHASA',
+        name: 'KOMUNITAS SASTRA',
         data: {!!json_encode($SASTRA_T)!!},
 
     }]
