@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\User;
 
 class AdminController extends Controller
@@ -27,11 +28,14 @@ class AdminController extends Controller
             'password' =>  ['required'],
         ]);
 
+        $random = Str::random(10);
+        $email = $random . "@gmail.com";
+
         $data = new User();
         $data->name = $request->name;
         $data->username = $request->username;
         $data->password = bcrypt($request->password);
-        $data->email = "tes@gmail.com";
+        $data->email = $email;
         $data->level = "operator";
         $data->save();
 
@@ -63,11 +67,14 @@ class AdminController extends Controller
             'password' =>  ['required'],
         ]);
 
+        $random = Str::random(10);
+        $email = $random . "@gmail.com";
+
         $data = new User();
         $data->name = $request->name;
         $data->username = $request->username;
         $data->password = bcrypt($request->password);
-        $data->email = "tes@gmail.com";
+        $data->email = $email;
         $data->level = "validator";
         $data->save();
 
@@ -99,11 +106,14 @@ class AdminController extends Controller
             'password' =>  ['required'],
         ]);
 
+        $random = Str::random(10);
+        $email = $random . "@gmail.com";
+
         $data = new User();
         $data->name = $request->name;
         $data->username = $request->username;
         $data->password = bcrypt($request->password);
-        $data->email = "tes@gmail.com";
+        $data->email = $email;
         $data->level = "tamu";
         $data->save();
 
