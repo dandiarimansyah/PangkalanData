@@ -43,7 +43,7 @@
                 <tr>
                     <th>NO</th>
                     <th>TANGGAL REALISASI</th>
-                    <th>UNIT/SATUAN KERJA</th>
+                    <!-- <th>UNIT/SATUAN KERJA</th> -->
                     <th>NILAI REALISASI(Rp.)</th>
                     <th>KETERANGAN</th>
                 </tr>
@@ -52,13 +52,13 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> nilai_realisasi}}</td>
-                        <td>{{ $a -> unit}}</td>
+                        <!-- <td>{{ $a -> unit}}</td> -->
                         <td>{{ $a -> besar_dana}}</td>
                         <td>{{ $a -> keterangan}}</td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="6" align="center">Tidak ada Data</td>
+                        <td colspan="4" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 

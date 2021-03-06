@@ -71,7 +71,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="11" align="center">Tidak ada Data</td>
+                        <td colspan="10" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 

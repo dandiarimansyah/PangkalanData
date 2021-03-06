@@ -43,7 +43,7 @@
                 <tr>
                     <th rowspan="2">NO</th>
                     <th rowspan="2">TANGGAL DATA</th>
-                    <th rowspan="2">BALAI/KANTOR</th>
+                    <!-- <th rowspan="2">BALAI/KANTOR</th> -->
                     <th colspan="2">TANAH</th>
                     <th colspan="2">BANGUNAN</th>
                     <th rowspan="2">KONDISI</th>
@@ -63,7 +63,7 @@
                   <tr>
                       <td>{{ $key + 1}}</td>
                       <td>{{ $a -> updated_at->format('m-d-Y')}}</td>
-                      <td>{{ $a -> kantor}}</td>
+                      <!-- <td>{{ $a -> kantor}}</td> -->
                       <td>{{ $a -> status_tanah}}</td>
                       <td>{{ $a -> sertif_tanah}}</td>
                       <td>{{ $a -> status_bangunan}}</td>
