@@ -97,7 +97,7 @@
                             <div class="validate"> 
                             @if ($a -> validasi == "belum")
                             <form action="" method="POST">
-                                <input class="check" type="checkbox" value="sudah" name="validasi">
+                                <input data-id="{{ $a->id }}" class="check" type="checkbox" value="sudah" name="validasi">
                             </form>
                             @else
                                 <p>Tervalidasi</p>
@@ -107,7 +107,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="16" align="center">Tidak ada Data</td>
+                        <td colspan="11" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 

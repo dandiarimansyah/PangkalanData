@@ -303,7 +303,7 @@ class EditController extends Controller
                 'instansi_1' => $request->get('instansi_1'),
                 'ttd_2' => $request->get('ttd_2'),
                 'instansi_2' => $request->get('instansi_2'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -324,7 +324,7 @@ class EditController extends Controller
                 'kondisi' => $request->get('kondisi'),
                 'status_peroleh' => $request->get('status_peroleh'),
                 'keterangan' => $request->get('keterangan'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -416,7 +416,7 @@ class EditController extends Controller
                 'tahun_terbit' => $request->get('tahun_terbit'),
                 'keterangan' => $request->get('keterangan'),
                 'info_produk' => $request->get('info_produk'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -444,7 +444,7 @@ class EditController extends Controller
                 'penerbit' => $request->get('penerbit'),
                 'keterangan' => $request->get('keterangan'),
                 'info_produk' => $request->get('info_produk'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -468,7 +468,7 @@ class EditController extends Controller
                 'tahun_terbit' => $request->get('tahun_terbit'),
                 'deskripsi' => $request->get('deskripsi'),
                 'info_produk' => $request->get('info_produk'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -494,7 +494,7 @@ class EditController extends Controller
                 'sasaran' => $request->get('sasaran'),
                 'jumlah_peserta' => $request->get('jumlah_peserta'),
                 'materi' => $request->get('materi'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -534,7 +534,7 @@ class EditController extends Controller
                 'kategori' => $request->get('kategori'),
                 'tahun' => $request->get('tahun'),
                 'deskripsi' => $request->get('deskripsi'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -559,7 +559,7 @@ class EditController extends Controller
                 'pemenang_3_1' => $request->get('pemenang_3_1'),
                 'pemenang_3_2' => $request->get('pemenang_3_2'),
                 'keterangan' => $request->get('keterangan'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -586,7 +586,7 @@ class EditController extends Controller
                 'favorit_1' => $request->get('favorit_1'),
                 'favorit_2' => $request->get('favorit_2'),
                 'keterangan' => $request->get('keterangan'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -617,7 +617,7 @@ class EditController extends Controller
                 'jumlah_sekolah_yang_dibina' => $request->get('jumlah_sekolah_yang_dibina'),
                 'nama_sekolah_yang_dibina' => $request->get('nama_sekolah_yang_dibina'),
                 'aktivitas' => $request->get('aktivitas'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -636,7 +636,7 @@ class EditController extends Controller
                 'kategori' => $request->get('kategori'),
                 'tahun' => $request->get('tahun'),
                 'deskripsi' => $request->get('deskripsi'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -657,7 +657,7 @@ class EditController extends Controller
                 'pemenang_3' => $request->get('pemenang_3'),
                 'favorit' => $request->get('favorit'),
                 'keterangan' => $request->get('keterangan'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
@@ -680,7 +680,7 @@ class EditController extends Controller
                 'pemenang_3' => $request->get('pemenang_3'),
                 'favorit' => $request->get('favorit'),
                 'keterangan' => $request->get('keterangan'),
-                'media' => $request->get('media'),
+                // 'media' => $request->get('media'),
             ]);
 
         return back()->with('toast_success', 'Data Berhasil Diedit!');
