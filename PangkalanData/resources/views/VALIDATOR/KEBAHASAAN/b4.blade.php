@@ -17,11 +17,11 @@
     </div>
 
     <div class="menu" style="display:flex; justify-content:center; margin-top:3px;">
-        <div class="btn-group kategori">
+        <!-- <div class="btn-group kategori">
             <button type="button" class="btn btn-primary" style="border-radius: 5px" aria-haspopup="true" aria-expanded="false">
                 EKSPOR KE PDF 
             </button>
-        </div>
+        </div> -->
         
         <div class="pilih_semua">
             <label for="valid">PILIH SEMUA</label>
