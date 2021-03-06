@@ -28,19 +28,15 @@ class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, Wi
     public function collection()
     {
         if ($this->nama_kegiatan == '' and $this->kota == '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $this->provinsi)
-                ->get();
+            $data = Bengkel_Sastra_Dan_Bahasa::all();
         } elseif ($this->nama_kegiatan != '' and $this->kota == '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $this->provinsi)
-                ->where('nama_kegiatan', $this->nama_kegiatan)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('nama_kegiatan', $this->nama_kegiatan)
                 ->get();
         } elseif ($this->nama_kegiatan == '' and $this->kota != '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('kota', $this->kota)
                 ->get();
         } elseif ($this->nama_kegiatan != '' and $this->kota != '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('kota', $this->kota)
                 ->where('nama_kegiatan', $this->nama_kegiatan)
                 ->get();
         }
@@ -52,7 +48,6 @@ class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, Wi
     public function map($data): array
     {
         return [
-            $data->provinsi,
             $data->kota,
             $data->tanggal_awal_pelaksanaan,
             $data->tanggal_akhir_pelaksanaan,
@@ -69,7 +64,6 @@ class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, Wi
     {
         return [
             [
-                'Provinsi',
                 'Kota',
                 'Tanggal Awal',
                 'Tanggal Akhir',

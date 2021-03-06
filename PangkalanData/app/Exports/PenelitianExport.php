@@ -103,7 +103,7 @@ class PenelitianExport implements FromCollection, WithMapping, WithHeadings, Sho
             $data->kerja_sama,
             $data->tanggal_awal,
             $data->tanggal_akhir,
-            $data->lama_penelitian + '' + $data->tipe_waktu,
+            $data->lama_penelitian . ' ' . $data->tipe_waktu,
             $data->publikasi,
             $data->tahun_terbit,
             $data->abstrak,

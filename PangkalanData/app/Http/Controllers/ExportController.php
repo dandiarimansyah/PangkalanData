@@ -521,19 +521,15 @@ class ExportController extends Controller
     public function pdf_c1(Request $request)
     {
         if ($request->nama_kegiatan == '' and $request->kota == '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Bengkel_Sastra_Dan_Bahasa::all();
         } elseif ($request->nama_kegiatan != '' and $request->kota == '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('nama_kegiatan', $request->nama_kegiatan)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         } elseif ($request->nama_kegiatan == '' and $request->kota != '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('kota', $request->kota)
                 ->get();
         } elseif ($request->nama_kegiatan != '' and $request->kota != '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('kota', $request->kota)
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         }
@@ -617,21 +613,17 @@ class ExportController extends Controller
     public function pdf_c4(Request $request)
     {
         if ($request->tahun == '' and $request->pemenang == '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Musikalisasi_Puisi_Provinsi::all();
         } else if ($request->tahun != '' and $request->pemenang == '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
-                ->where('tahun', $request->tahun)
+            $data = Musikalisasi_Puisi_Provinsi::where('tahun', $request->tahun)
                 ->get();
         } else if ($request->tahun == '' and $request->pemenang != '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
-                ->where('pemenang_1', $request->pemenang)
+            $data = Musikalisasi_Puisi_Provinsi::where('pemenang_1', $request->pemenang)
                 ->orWhere('pemenang_2', $request->pemenang)
                 ->orWhere('pemenang_3', $request->pemenang)
                 ->get();
         } else {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
-                ->where('tahun', $request->tahun)
+            $data = Musikalisasi_Puisi_Provinsi::where('tahun', $request->tahun)
                 ->where('pemenang_1', $request->pemenang)
                 ->orWhere('pemenang_2', $request->pemenang)
                 ->orWhere('pemenang_3', $request->pemenang)
@@ -869,14 +861,14 @@ class ExportController extends Controller
     {
         $export = new KamusExport($request->info_produk, $request->judul, $request->tim_redaksi, $request->kategori);
 
-        return Excel::download($export, 'Laporan Kamus/Ensiklopedia Excel.xlsx');
+        return Excel::download($export, 'Laporan Kamus Ensiklopedia Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b2(Request $request)
     {
         $export = new JurnalExport($request->info_produk, $request->judul, $request->tim_redaksi, $request->kategori);
 
-        return Excel::download($export, 'Laporan Jurnal/Majalah Excel.xlsx');
+        return Excel::download($export, 'Laporan Jurnal Majalah Excel.xlsx');
     }
     //=======================================================================================
     public function excel_b3(Request $request)
@@ -924,7 +916,7 @@ class ExportController extends Controller
     //EXCEL S 3
     public function excel_c1(Request $request)
     {
-        $export = new Bengkel_Sastra_Dan_BahasaExport($request->nama_kegiatan, $request->kota, $request->provinsi);
+        $export = new Bengkel_Sastra_Dan_BahasaExport($request->nama_kegiatan, $request->kota);
 
         return Excel::download($export, 'Laporan Bengkel Sastra dan Bahasa Excel.xlsx');
     }
@@ -945,7 +937,7 @@ class ExportController extends Controller
     //=======================================================================================
     public function excel_c4(Request $request)
     {
-        $export = new Musikalisasi_Puisi_ProvinsiExport($request->provinsi, $request->tahun, $request->pemenang);
+        $export = new Musikalisasi_Puisi_ProvinsiExport($request->tahun, $request->pemenang);
 
         return Excel::download($export, 'Laporan Musikalisasi Puisi Provinsi Excel.xlsx');
     }

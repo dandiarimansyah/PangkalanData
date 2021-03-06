@@ -28,21 +28,17 @@ class Musikalisasi_Puisi_ProvinsiExport implements FromCollection, WithMapping, 
     public function collection()
     {
         if ($this->tahun == '' and $this->pemenang == '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $this->provinsi)
-                ->get();
+            $data = Musikalisasi_Puisi_Provinsi::all();
         } else if ($this->tahun != '' and $this->pemenang == '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $this->provinsi)
-                ->where('tahun', $this->tahun)
+            $data = Musikalisasi_Puisi_Provinsi::where('tahun', $this->tahun)
                 ->get();
         } else if ($this->tahun == '' and $this->pemenang != '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $this->provinsi)
-                ->where('pemenang_1', $this->pemenang)
+            $data = Musikalisasi_Puisi_Provinsi::where('pemenang_1', $this->pemenang)
                 ->orWhere('pemenang_2', $this->pemenang)
                 ->orWhere('pemenang_3', $this->pemenang)
                 ->get();
         } else {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $this->provinsi)
-                ->where('tahun', $this->tahun)
+            $data = Musikalisasi_Puisi_Provinsi::where('tahun', $this->tahun)
                 ->where('pemenang_1', $this->pemenang)
                 ->orWhere('pemenang_2', $this->pemenang)
                 ->orWhere('pemenang_3', $this->pemenang)
@@ -56,7 +52,6 @@ class Musikalisasi_Puisi_ProvinsiExport implements FromCollection, WithMapping, 
     public function map($data): array
     {
         return [
-            $data->provinsi,
             $data->tahun,
             $data->pemenang_1,
             $data->pemenang_2,
@@ -70,7 +65,6 @@ class Musikalisasi_Puisi_ProvinsiExport implements FromCollection, WithMapping, 
     {
         return [
             [
-                'Provinsi',
                 'Tahun',
                 'Pemenang 1',
                 'Pemenang 2',

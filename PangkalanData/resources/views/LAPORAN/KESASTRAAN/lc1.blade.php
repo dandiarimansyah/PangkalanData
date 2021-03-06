@@ -61,12 +61,12 @@
             </div>
         </div>  -->
 
-        <div class="inputfield-select">
+        {{-- <div class="inputfield-select">
             <label>Berdasarkan Provinsi*</label>
             <div class="custom_select">
               <select name="provinsi">
                 <option value="Jawa Tengah">Jawa Tengah</option>
-                <!-- <option value="">[SEMUA]</option>
+                <option value="">[SEMUA]</option>
                 <option value="">Aceh</option>
                 <option value="">Sumatera Utara</option>
                 <option value="">Sumatera Barat</option>
@@ -99,10 +99,10 @@
                 <option value="">Maluku Utara</option>
                 <option value="">Papua Barat</option>
                 <option value="">Papua</option>
-                <option value="">Kalimantan Utara</option> -->
+                <option value="">Kalimantan Utara</option>
               </select>
             </div>
-        </div> 
+        </div>  --}}
 
         <div class="inputfield">
             <label>Berdasarkan Kabupaten/Kota</label>

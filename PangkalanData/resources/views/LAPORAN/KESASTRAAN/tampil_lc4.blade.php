@@ -31,10 +31,10 @@
     @auth
         @if (Auth::user()->level != 'tamu')
     <div class="judul" style="display:flex; justify-content:center">
-        <a href="{{ url("/pdf/kesastraan/musikalisasi_puisi_provinsi?pemenang={$pemenang}&tahun={$tahun}&provinsi={$provinsi}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/pdf/kesastraan/musikalisasi_puisi_provinsi?pemenang={$pemenang}&tahun={$tahun}")}}" target="_blank" type="button" class="btn btn-danger" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE PDF
         </a>
-        <a href="{{ url("/excel/kesastraan/musikalisasi_puisi_provinsi?pemenang={$pemenang}&tahun={$tahun}&provinsi={$provinsi}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
+        <a href="{{ url("/excel/kesastraan/musikalisasi_puisi_provinsi?pemenang={$pemenang}&tahun={$tahun}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
         <!-- <button loc="{{ asset('/Template/Template Musikalisasi Puisi Provinsi.xlsx')}}" href="/import/kesastraan/musikalisasi_puisi_provinsi" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
@@ -51,7 +51,6 @@
                 <tr>
                     <th>NO</th>
                     <th>TAHUN</th>
-                    <th>PROVINSI</th>
                     <th>PEMENANG I</th>
                     <th>PEMENANG II</th>
                     <th>PEMENANG III</th>
@@ -67,7 +66,6 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> tahun}}</td>
-                        <td>{{ $a -> provinsi}}</td>
                         <td>{{ $a -> pemenang_1}}</td>
                         <td>{{ $a -> pemenang_2}}</td>
                         <td>{{ $a -> pemenang_3}}</td>

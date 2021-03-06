@@ -36,7 +36,6 @@ class Kerja_SamaExport implements FromCollection, WithMapping, WithHeadings, Sho
         }
         $data = $data->where('validasi', 'sudah');
 
-
         return $data;
     }
 

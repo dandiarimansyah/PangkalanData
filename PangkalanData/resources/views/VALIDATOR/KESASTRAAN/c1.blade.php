@@ -85,7 +85,7 @@
                             @endif
                         </td>
 
-                        <td style="display: flex; justify-content:center">
+                        <td >
                         <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 

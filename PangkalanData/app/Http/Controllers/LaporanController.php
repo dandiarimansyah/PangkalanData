@@ -662,28 +662,23 @@ class LaporanController extends Controller
     {
         $nama_kegiatan = $request->nama_kegiatan;
         $kota = $request->kota;
-        $provinsi = $request->provinsi;
 
         if ($request->nama_kegiatan == '' and $request->kota == '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Bengkel_Sastra_Dan_Bahasa::all();
         } elseif ($request->nama_kegiatan != '' and $request->kota == '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('nama_kegiatan', $request->nama_kegiatan)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         } elseif ($request->nama_kegiatan == '' and $request->kota != '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('kota', $request->kota)
                 ->get();
         } elseif ($request->nama_kegiatan != '' and $request->kota != '') {
-            $data = Bengkel_Sastra_Dan_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Bengkel_Sastra_Dan_Bahasa::where('kota', $request->kota)
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');
 
-        return view('LAPORAN.KESASTRAAN.tampil_lc1', compact('data', 'nama_kegiatan', 'kota', 'provinsi'));
+        return view('LAPORAN.KESASTRAAN.tampil_lc1', compact('data', 'nama_kegiatan', 'kota'));
     }
 
     //===================================================================================================
@@ -772,24 +767,19 @@ class LaporanController extends Controller
 
         $pemenang = $request->pemenang;
         $tahun = $request->tahun;
-        $provinsi = $request->provinsi;
 
         if ($request->tahun == '' and $request->pemenang == '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Musikalisasi_Puisi_Provinsi::all();
         } else if ($request->tahun != '' and $request->pemenang == '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
-                ->where('tahun', $request->tahun)
+            $data = Musikalisasi_Puisi_Provinsi::where('tahun', $request->tahun)
                 ->get();
         } else if ($request->tahun == '' and $request->pemenang != '') {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
-                ->where('pemenang_1', $request->pemenang)
+            $data = Musikalisasi_Puisi_Provinsi::where('pemenang_1', $request->pemenang)
                 ->orWhere('pemenang_2', $request->pemenang)
                 ->orWhere('pemenang_3', $request->pemenang)
                 ->get();
         } else {
-            $data = Musikalisasi_Puisi_Provinsi::where('provinsi', $request->provinsi)
-                ->where('tahun', $request->tahun)
+            $data = Musikalisasi_Puisi_Provinsi::where('tahun', $request->tahun)
                 ->where('pemenang_1', $request->pemenang)
                 ->orWhere('pemenang_2', $request->pemenang)
                 ->orWhere('pemenang_3', $request->pemenang)
@@ -797,7 +787,7 @@ class LaporanController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        return view('LAPORAN.KESASTRAAN.tampil_lc4', compact('data', 'pemenang', 'tahun', 'provinsi'));
+        return view('LAPORAN.KESASTRAAN.tampil_lc4', compact('data', 'pemenang', 'tahun'));
     }
 
     //LAPORAN S 4

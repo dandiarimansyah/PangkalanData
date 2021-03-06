@@ -18,9 +18,9 @@ class InventarisasiExport implements FromCollection, WithMapping, WithHeadings, 
      */
     public function collection()
     {
-        $data = $data->where('validasi', 'sudah');
-        
-        return Inventarisasi::all();
+        $data = Inventarisasi::all()->where('validasi', 'sudah');
+
+        return $data;
     }
 
     public function map($data): array

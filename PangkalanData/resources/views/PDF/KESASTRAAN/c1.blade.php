@@ -45,7 +45,6 @@
                     <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
-                    <th>KATEGORI</th>
                     <th>KEGIATAN</th>
                     <th>PEMATERI</th>
                     <th>JUMLAH PESERTA</th>
@@ -73,7 +72,6 @@
                             @else
                                 -
                             @endif 
-                        <td></td>
                         <td>{{ $a -> nama_kegiatan}}</td>
                         <td>{{ $a -> pemateri}}</td>
                         <td>{{ $a -> jumlah_peserta}}</td>

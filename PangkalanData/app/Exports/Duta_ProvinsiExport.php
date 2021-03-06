@@ -16,10 +16,11 @@ class Duta_ProvinsiExport implements FromCollection, WithMapping, WithHeadings, 
     private $tahun;
     private $pemenang;
 
-    public function __construct($tahun, $pemenang)
+    public function __construct($tahun, $pemenang, $provinsi)
     {
         $this->tahun = $tahun;
         $this->pemenang = $pemenang;
+        $this->provinsi = $provinsi;
     }
 
     /**
