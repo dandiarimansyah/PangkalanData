@@ -37,9 +37,9 @@
         <a href="{{ url("/excel/kesastraan/musikalisasi_puisi_provinsi?pemenang={$pemenang}&tahun={$tahun}&provinsi={$provinsi}")}}" target="_blank" type="button" class="btn btn-success" style="border-radius: 5px;margin-right:15px;">
             EXPORT KE EXCEL
         </a>
-        <button loc="{{ asset('/Template/Template Musikalisasi Puisi Provinsi.xlsx')}}" href="/import/kesastraan/musikalisasi_puisi_provinsi" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+        <!-- <button loc="{{ asset('/Template/Template Musikalisasi Puisi Provinsi.xlsx')}}" href="/import/kesastraan/musikalisasi_puisi_provinsi" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
             IMPORT EXCEL
-        </button>
+        </button> -->
     </div>
     @endif
     @endauth
