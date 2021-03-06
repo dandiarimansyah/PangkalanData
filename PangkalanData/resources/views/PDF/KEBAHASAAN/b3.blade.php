@@ -48,7 +48,7 @@
                     <th>ISBN</th>
                     <th>TAHUN TERBIT</th>
                     <th>DESKRIPSI FISIK</th>
-                    <th>UNIT/SATKER</th>
+                    <!-- <th>UNIT/SATKER</th> -->
                     <th>INFO PRODUK</th>
                 </tr>
 
@@ -62,14 +62,12 @@
                         <td>{{ $a -> no_isbn}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
                         <td>{{ $a -> deskripsi}}</td>
-                        <td>Balai Bahasa Jawa Tengah</td>
-                        <td>{{ $a -> info_produk}}</td>
-                        
-                        
+                        <!-- <td>Balai Bahasa Jawa Tengah</td> -->
+                        <td>{{ $a -> info_produk}}</td>                        
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="16" align="center">Tidak ada Data</td>
+                        <td colspan="8" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 

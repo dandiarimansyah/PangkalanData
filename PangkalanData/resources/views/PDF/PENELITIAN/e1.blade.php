@@ -44,7 +44,7 @@
                     <th>NO</th>
                     <th>TGL.MULAI</th>
                     <th>TGL.SELESAI</th>
-                    <th>UNIT/SATUAN KERJA</th>
+                    <!-- <th>UNIT/SATUAN KERJA</th> -->
                     <th>JUDUL</th>
                     <th>PENELITI</th>
                     <th>KERJA SAMA</th>
@@ -73,7 +73,7 @@
                                 -
                             @endif 
                         </td>
-                        <td>{{ $a -> unit}}</td>
+                        <!-- <td>{{ $a -> unit}}</td> -->
                         <td>{{ $a -> judul}}</td>
                         <td>{{ $a -> peneliti}}</td>
                         <td>{{ $a -> kerja_sama}}</td>
@@ -86,7 +86,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="14" align="center">Tidak ada Data</td>
+                        <td colspan="10" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 

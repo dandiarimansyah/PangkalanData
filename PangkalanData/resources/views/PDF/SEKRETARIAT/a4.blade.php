@@ -43,6 +43,10 @@
                 <tr>
                     <th>NO</th>
                     <th>TANGGAL KERJA SAMA</th>
+<<<<<<< HEAD
+                    <!-- <th>UNIT/SATUAN KERJA</th> -->
+=======
+>>>>>>> 028157bc5bbb0d81d1db35b1e917517da23bbb05
                     <th>INSTANSI</th>
                     <th>KATEGORI</th>
                     <th>NO. KERJA SAMA</th>
@@ -62,6 +66,7 @@
                             @else
                                 Berakhir: {{ \Carbon\Carbon::parse($a->tanggal_akhir)->format('d-m-Y')}}
                             @endif
+                        <!-- <td>Balai Bahasa Jawa Tengah</td> -->
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> kategori}}</td>
                         <td>{{ $a -> nomor}}</td>
@@ -73,7 +78,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="16" align="center">Tidak ada Data</td>
+                        <td colspan="8" align="center">Tidak ada Data</td>
                     </tr>
                 @endforelse
 
