@@ -13,10 +13,10 @@ use Maatwebsite\Excel\Concerns\WithStyles;
 
 class Kerja_SamaExport implements FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithEvents
 {
-    private $perihal;
     private $kategori;
+    private $perihal;
 
-    public function __construct($perihal, $kategori)
+    public function __construct($kategori, $perihal)
     {
         $this->perihal = $perihal;
         $this->kategori = $kategori;
@@ -35,6 +35,7 @@ class Kerja_SamaExport implements FromCollection, WithMapping, WithHeadings, Sho
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');
+
 
         return $data;
     }

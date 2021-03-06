@@ -67,7 +67,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.SEKRETARIAT.a1', compact('data'));
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a1', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Anggaran.pdf');
@@ -84,7 +84,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.SEKRETARIAT.a2', compact('data'));
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a2', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Realisasi Anggaran.pdf');
@@ -100,7 +100,7 @@ class ExportController extends Controller
 
         // return $pdf->stream();
         return $pdf->download('Laporan Kepegawaian.pdf');
-        // return view('PDF.SEKRETARIAT.a3', compact('data'));
+        // return view('PDF.SEKRETARIAT.a3', compact('data'))->setPaper('a4', 'landscape');
     }
 
     //=======================================================================================
@@ -115,7 +115,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.SEKRETARIAT.a4', compact('data'));
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a4', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Kerja Sama.pdf');
@@ -137,7 +137,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.SEKRETARIAT.a5', compact('data'));
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a5', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Tanah dan Bangunan.pdf');
@@ -149,7 +149,7 @@ class ExportController extends Controller
         $data = Perpustakaan::all();
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.SEKRETARIAT.a6', compact('data'));
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a6', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Perpustakaan.pdf');
@@ -161,7 +161,7 @@ class ExportController extends Controller
         $data = Inventarisasi::all();
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.SEKRETARIAT.a7', compact('data'));
+        $pdf = PDF::loadView('PDF.SEKRETARIAT.a7', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Inventarisasi BMN.pdf');
@@ -210,7 +210,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KEBAHASAAN.b1', compact('data'));
+        $pdf = PDF::loadView('PDF.KEBAHASAAN.b1', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Kamus/Ensiklopedia.pdf');
@@ -258,7 +258,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KEBAHASAAN.b2', compact('data'));
+        $pdf = PDF::loadView('PDF.KEBAHASAAN.b2', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Jurnal/Majalah.pdf');
@@ -306,7 +306,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KEBAHASAAN.b3', compact('data'));
+        $pdf = PDF::loadView('PDF.KEBAHASAAN.b3', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Terbitan Umum.pdf');
@@ -354,7 +354,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KEBAHASAAN.b4', compact('data'));
+        $pdf = PDF::loadView('PDF.KEBAHASAAN.b4', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Penyuluhan.pdf');
@@ -394,7 +394,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KEBAHASAAN.b5', compact('data'));
+        $pdf = PDF::loadView('PDF.KEBAHASAAN.b5', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Pesuluh.pdf');
@@ -434,7 +434,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KEBAHASAAN.b6', compact('data'));
+        $pdf = PDF::loadView('PDF.KEBAHASAAN.b6', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Penghargaan Bahasa.pdf');
@@ -472,7 +472,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KEBAHASAAN.b7', compact('data'));
+        $pdf = PDF::loadView('PDF.KEBAHASAAN.b7', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Duta Bahasa Nasional.pdf');
@@ -510,7 +510,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KEBAHASAAN.b8', compact('data'));
+        $pdf = PDF::loadView('PDF.KEBAHASAAN.b8', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Duta Bahasa Provinsi.pdf');
@@ -539,7 +539,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KESASTRAAN.c1', compact('data'));
+        $pdf = PDF::loadView('PDF.KESASTRAAN.c1', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Bengkel Sastra dan Bahasa.pdf');
@@ -579,7 +579,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KESASTRAAN.c2', compact('data'));
+        $pdf = PDF::loadView('PDF.KESASTRAAN.c2', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Penghargaan Sastra.pdf');
@@ -607,7 +607,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KESASTRAAN.c3', compact('data'));
+        $pdf = PDF::loadView('PDF.KESASTRAAN.c3', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Musikalisasi Puisi Nasional.pdf');
@@ -639,7 +639,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KESASTRAAN.c4', compact('data'));
+        $pdf = PDF::loadView('PDF.KESASTRAAN.c4', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Musikalisasi Puisi Provinsi.pdf');
@@ -688,7 +688,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KOMUNITAS.d1', compact('data'));
+        $pdf = PDF::loadView('PDF.KOMUNITAS.d1', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Komunitas Bahasa.pdf');
@@ -736,7 +736,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.KOMUNITAS.d2', compact('data'));
+        $pdf = PDF::loadView('PDF.KOMUNITAS.d2', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Komunitas Sastra.pdf');
@@ -805,7 +805,7 @@ class ExportController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        $pdf = PDF::loadView('PDF.PENELITIAN.e1', compact('data'));
+        $pdf = PDF::loadView('PDF.PENELITIAN.e1', compact('data'))->setPaper('a4', 'landscape');
 
         // return $pdf->stream();
         return $pdf->download('Laporan Penelitian.pdf');

@@ -22,7 +22,7 @@
             <label>Berdasarkan Kategori</label>
             <div class="custom_select">
               <select name="kategori">
-                <option value="semua">[SEMUA]</option>
+                <option selected value="semua">[SEMUA]</option>
                 <option value="internal">Internal</option>
                 <option value="eksternal">Eksternal</option>
               </select>
