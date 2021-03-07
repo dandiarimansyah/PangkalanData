@@ -22,7 +22,7 @@
     </div> -->
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table">
+        <table class="content-table" id="datatable">
             <thead>
                 <tr>
                     <th>NO</th>
