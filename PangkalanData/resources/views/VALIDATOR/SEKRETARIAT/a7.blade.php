@@ -40,7 +40,7 @@
         <table class="content-table" id="datatable">
             <thead>
                 <tr>
-                    <!-- <th rowspan="2">TANGGAL DIPERBAHARUI</th> -->
+                    <!-- <th rowspan="2">TANGGAL DIPERBARUI</th> -->
                     <!-- <th rowspan="2">BALAI/KANTOR</th> -->
                     <!-- <th rowspan="2">TAHUN ANGGARAN</th> -->
                     <th colspan="8">ELEKTRONIK</th>

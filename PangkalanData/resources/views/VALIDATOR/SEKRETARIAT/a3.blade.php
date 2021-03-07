@@ -41,7 +41,7 @@
             <thead>
                 <tr>
                     <th rowspan="2">NO</th>
-                    <th rowspan="2" style="max-width: 120px">TANGGAL DIPERBAHARUI</th>
+                    <th rowspan="2" style="max-width: 120px">TANGGAL DIPERBARUI</th>
                     <th colspan="3">JUMLAH PEGAWAI</th>
                     <th colspan="7">TINGKAT PENDIDIKAN</th>
                     <th colspan="17">PANGKAT/GOLONGAN</th>

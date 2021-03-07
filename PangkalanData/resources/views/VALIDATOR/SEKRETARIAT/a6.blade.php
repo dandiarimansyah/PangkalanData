@@ -41,7 +41,7 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <!-- <th>TANGGAL DIPERBAHARUI</th> -->
+                    <!-- <th>TANGGAL DIPERBARUI</th> -->
                     <th>PROVINSI</th>
                     <!-- <th>UNIT KERJA</th> -->
                     <th>JUMLAH BUKU</th>
