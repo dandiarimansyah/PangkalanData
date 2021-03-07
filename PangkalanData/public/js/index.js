@@ -34,9 +34,7 @@ $('#valid').click(function() {
 });
 
 $(document).ready(function () {
-    var table = $('#datatable').DataTable({
-        responsive: true,
-    });
+    var table = $('#datatable').DataTable();
 })
 
 $(document).on('click', '#pesan', function(e){

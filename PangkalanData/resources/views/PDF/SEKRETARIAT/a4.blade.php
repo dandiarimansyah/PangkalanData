@@ -43,10 +43,6 @@
                 <tr>
                     <th>NO</th>
                     <th>TANGGAL KERJA SAMA</th>
-<<<<<<< HEAD
-                    <!-- <th>UNIT/SATUAN KERJA</th> -->
-=======
->>>>>>> 028157bc5bbb0d81d1db35b1e917517da23bbb05
                     <th>INSTANSI</th>
                     <th>KATEGORI</th>
                     <th>NO. KERJA SAMA</th>

@@ -25,12 +25,12 @@
 
 <div class="isi-konten">
 
-    <div class="tombol-kembali">
+    {{-- <div class="tombol-kembali">
         <button onclick="back()" type="button" class="btn">
             <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             <span>KEMBALI</span>
         </button>
-    </div>
+    </div> --}}
 
     <div class="judul">
         <th>LAPORAN DATA KEPEGAWAIAN</th>

@@ -24,13 +24,6 @@
         </button>
     </div> --}}
 
-    <div class="tombol-kembali">
-        <button onclick="back()" type="button" class="btn">
-            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-            <span>KEMBALI</span>
-        </button>
-    </div>
-
     <div class="judul">
         <th>LAPORAN DATA PERPUSTAKAAN</th>
     </div>
