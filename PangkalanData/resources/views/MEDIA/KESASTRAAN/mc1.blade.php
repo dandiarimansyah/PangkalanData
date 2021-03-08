@@ -27,8 +27,13 @@
             <thead>
                 <tr>
                     <th>NO</th>
+<<<<<<< HEAD
                     {{-- <th>PROVINSI</th> --}}
                     <th style="max-width: 70px">KABUPATEN/ KOTA</th>
+=======
+                    <!-- <th>PROVINSI</th> -->
+                    <th>KABUPATEN/KOTA</th>
+>>>>>>> 921d0e34a8324921df123628940ad15e8f373d63
                     <th>TANGGAL</th>
                     <!-- <th>KATEGORI</th> -->
                     <th>KEGIATAN</th>
@@ -46,7 +51,11 @@
                 @forelse ($bengkel_sastra_dan_bahasa as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
+<<<<<<< HEAD
                         {{-- <td>{{ $a -> provinsi}}</td> --}}
+=======
+
+>>>>>>> 921d0e34a8324921df123628940ad15e8f373d63
                         <td>{{ $a -> kota}}</td>
                         <td>{{ $a -> tanggal_awal_pelaksanaan}} <br> {{ $a -> tanggal_akhir_pelaksanaan}}</td>
                         <!-- <td></td> -->
