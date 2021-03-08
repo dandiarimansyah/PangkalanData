@@ -34,11 +34,11 @@
     
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table">            
+        <table class="content-table" id="datatable">            
         <thead>
                 <tr>
                     <th rowspan="2">NO</th>
-                    <th rowspan="2">TANGGAL DIPERBAHARUI</th>
+                    <th rowspan="2">TANGGAL DIPERBARUI</th>
                     <th colspan="3">JUMLAH PEGAWAI</th>
                     <th colspan="7">TINGKAT PENDIDIKAN</th>
                     <th colspan="17">PANGKAT/GOLONGAN</th>

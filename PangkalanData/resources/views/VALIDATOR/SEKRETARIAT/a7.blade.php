@@ -59,8 +59,12 @@
         <table class="content-table" id="datatable">
             <thead>
                 <tr>
+<<<<<<< HEAD
                     <th rowspan="2">NO</th>
                     <th style="max-width: 90px" rowspan="2">TANGGAL DIPERBARUI</th>
+=======
+                    <!-- <th rowspan="2">TANGGAL DIPERBARUI</th> -->
+>>>>>>> ab5034074e43e88385d70cea723bd58aa715abea
                     <!-- <th rowspan="2">BALAI/KANTOR</th> -->
                     <th style="max-width: 90px" rowspan="2">TAHUN ANGGARAN</th>
                     <th colspan="8">ELEKTRONIK</th>

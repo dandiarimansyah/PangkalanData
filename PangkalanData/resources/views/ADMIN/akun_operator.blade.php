@@ -36,7 +36,7 @@
               <i style="margin: 0" class="fa fa-plus" aria-hidden="true"></i>   
                   TAMBAH AKUN OPERATOR
              </button>
-        <table class="content-table">
+        <table class="content-table" id="datatable">
             <thead>
                 <tr>
                     <th>NO</th>

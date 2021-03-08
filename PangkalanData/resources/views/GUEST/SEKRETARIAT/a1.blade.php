@@ -12,8 +12,8 @@
 
     <!-- TABLE -->
     <div class="validasi">
-        <table class="content-table">
-            <thead>
+        <table class="content-table" id="datatable">
+            <thead> 
                 <tr>
                     <th>NO</th>
                     <th>TAHUN ANGGARAN</th>
