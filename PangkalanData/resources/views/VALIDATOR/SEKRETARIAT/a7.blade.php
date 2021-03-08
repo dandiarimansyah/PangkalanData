@@ -1,5 +1,24 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuValidasi')
@@ -40,13 +59,13 @@
         <table class="content-table" id="datatable">
             <thead>
                 <tr>
-                    <!-- <th rowspan="2">TANGGAL DIPERBAHARUI</th> -->
+                    <th rowspan="2">NO</th>
+                    <th style="max-width: 90px" rowspan="2">TANGGAL DIPERBARUI</th>
                     <!-- <th rowspan="2">BALAI/KANTOR</th> -->
-                    <!-- <th rowspan="2">TAHUN ANGGARAN</th> -->
+                    <th style="max-width: 90px" rowspan="2">TAHUN ANGGARAN</th>
                     <th colspan="8">ELEKTRONIK</th>
                     <th rowspan="2">FURNITURE</th>
                     <th colspan="3">KENDARAAN</th>
-                    <th rowspan="2">NO</th>
                     <th rowspan="2">EDIT</th>
                     <th rowspan="2">VALIDASI</th>
                 </tr>
@@ -56,12 +75,12 @@
                     <th>PRINTER</th>
                     <th>FOTOCOPY</th>
                     <th>FAXIMILI</th>
-                    <th>LCD PROJECTOR</th>
+                    <th style="max-width: 100px">LCD PROJECTOR</th>
                     <th>TV</th>
-                    <th>LAIN-LAIN</th>
-                    <th>RODA 2</th>
-                    <th>RODA 4</th>
-                    <th>RODA 6</th>
+                    <th style="max-width: 60px">LAIN-LAIN</th>
+                    <th style="max-width: 50px">RODA 2</th>
+                    <th style="max-width: 50px">RODA 4</th>
+                    <th style="max-width: 50px">RODA 6</th>
                 </tr>
             </thead>
 
@@ -70,9 +89,9 @@
                 @forelse ($inventarisasi as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <!-- <td></td> -->
+                        <td>{{ $a -> updated_at->format('d-m-Y')}}</td>
                         <!-- <td>{{ $a -> unit}}</td> -->
-                        <!-- <td></td> -->
+                        <td>{{ $a -> tahun_anggaran}}</td>
                         <td>{{ $a -> laptop}}</td>
                         <td>{{ $a -> komputer}}</td>
                         <td>{{ $a -> printer}}</td>

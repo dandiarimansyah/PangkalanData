@@ -19,7 +19,6 @@
 </style>
 @endsection
 
-
 @section('content')
 
 @include('PARTIAL.MenuLaporan')
