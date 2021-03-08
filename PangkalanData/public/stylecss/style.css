@@ -540,6 +540,11 @@ p {
     border-radius: 10px;
 }
 
+.narasumber_css {
+    margin-right: 10px !important;
+    margin-left: 35px !important;
+}
+
 .inputfield,
 .inputfield-date,
 .inputfield-select,
