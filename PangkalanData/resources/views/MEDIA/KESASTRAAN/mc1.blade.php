@@ -27,27 +27,26 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>PROVINSI</th>
-                    <th>KABUPATEN/KOTA</th>
+                    {{-- <th>PROVINSI</th> --}}
+                    <th style="max-width: 70px">KABUPATEN/ KOTA</th>
                     <th>TANGGAL</th>
                     <!-- <th>KATEGORI</th> -->
                     <th>KEGIATAN</th>
                     <th>PEMATERI</th>
-                    <th>JUMLAH PESERTA</th>
-                    <th>JUMLAH SEKOLAH</th>
-                    <th>JUMLAH DIBINA</th>
-                    <th>SEKOLAH YANG DIBINA</th>
+                    <th style="max-width: 70px">JUMLAH PESERTA</th>
+                    <th style="max-width: 70px">JUMLAH SEKOLAH</th>
+                    <th style="max-width: 70px">JUMLAH DIBINA</th>
+                    <th style="max-width: 90px">SEKOLAH YANG DIBINA</th>
                     <th>AKTIVITAS</th>
                     <th>DOKUMEN</th>
                 </tr>
             </thead>
 
             <tbody>
-
                 @forelse ($bengkel_sastra_dan_bahasa as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> provinsi}}</td>
+                        {{-- <td>{{ $a -> provinsi}}</td> --}}
                         <td>{{ $a -> kota}}</td>
                         <td>{{ $a -> tanggal_awal_pelaksanaan}} <br> {{ $a -> tanggal_akhir_pelaksanaan}}</td>
                         <!-- <td></td> -->

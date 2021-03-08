@@ -7,7 +7,7 @@
 <div class="isi-konten">
 
     <div class="judul">
-        <th>DOKUMEN DATA INVENTARISASI TANAH DAN BANGUNAN BALAI/KANTOR BAHASA</th>
+        <th>DOKUMEN DATA TANAH DAN BANGUNAN</th>
     </div>
 
     <!-- <div class="" style=" display:flex; justify-content:center">
@@ -34,7 +34,7 @@
                 <th rowspan="2">KONDISI</th>
                 <th rowspan="2">STATUS PEMEROLEHAN</th>
                 <th rowspan="2">KETERANGAN</th>
-                <th rowspan="2">DOKUMEN</th>
+                <th style="max-width: 240px" rowspan="2">DOKUMEN</th>
             </tr>
             <tr>
                 <th>STATUS</th>

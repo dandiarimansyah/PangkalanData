@@ -96,21 +96,6 @@
 
                         </td>
 
-                        {{-- <td>
-                            <video width="360" controls>
-                                <source id="frame" src="{{ Storage::url($a->media) }}" style="width: 600px">
-                            </video>
-                        </td> --}}
-
-                        {{-- <td>
-                            <button type="button" class="edit"
-                                id="media_item" 
-                                data-toggle="modal" 
-                                data-target="#media-modal"
-                                data-media="{{ $a->media }}"
-                            >Media</button>
-                        </td> --}}
-
                     </tr>
                 @empty
                     <tr>

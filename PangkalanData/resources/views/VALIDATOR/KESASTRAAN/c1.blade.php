@@ -1,5 +1,28 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    .content-table th {
+        padding: 10px 8px 10px 8px !important;
+    }
+
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuValidasi')
@@ -42,15 +65,15 @@
                 <tr>
                     <th>NO</th>
                     <th>PROVINSI</th>
-                    <th>KABUPATEN/KOTA</th>
+                    <th style="max-width: 70px">KABUPATEN/ KOTA</th>
                     <th>TANGGAL</th>
                     <!-- <th>KATEGORI</th> -->
                     <th>KEGIATAN</th>
                     <th>PEMATERI</th>
-                    <th>JUMLAH PESERTA</th>
-                    <th>JUMLAH SEKOLAH</th>
-                    <th>JUMLAH DIBINA</th>
-                    <th>SEKOLAH YANG DIBINA</th>
+                    <th style="max-width: 70px">JUMLAH PESERTA</th>
+                    <th style="max-width: 70px">JUMLAH SEKOLAH</th>
+                    <th style="max-width: 70px">JUMLAH DIBINA</th>
+                    <th style="max-width: 90px">SEKOLAH YANG DIBINA</th>
                     <th>AKTIVITAS</th>
                     <th>DOKUMEN</th>
                     <th>EDIT</th>
