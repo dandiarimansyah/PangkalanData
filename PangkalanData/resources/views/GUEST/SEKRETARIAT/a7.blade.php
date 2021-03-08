@@ -35,15 +35,9 @@
             <thead>
                 <tr>
                     <th rowspan="2">NO</th>
-<<<<<<< HEAD
                     <th style="max-width: 90px" rowspan="2">TANGGAL DIPERBARUI</th>
                     <!-- <th rowspan="2">BALAI/KANTOR</th> -->
                     <th style="max-width: 90px" rowspan="2">TAHUN ANGGARAN</th>
-=======
-                    <th rowspan="2">TANGGAL DIPERBARUI</th>
-                    <th rowspan="2">BALAI/KANTOR</th>
-                    <th rowspan="2">TAHUN ANGGARAN</th>
->>>>>>> ab5034074e43e88385d70cea723bd58aa715abea
                     <th colspan="8">ELEKTRONIK</th>
                     <th rowspan="2">FURNITURE</th>
                     <th colspan="3">KENDARAAN</th>
