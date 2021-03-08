@@ -626,11 +626,12 @@ p {
 }
 
 .inputfield-kecil a {
-    padding: 5px;
+    padding: 5px 8px 5px 8px;
     margin-left: 20px;
     text-decoration: none;
-    background-color: rgb(149, 255, 181);
-    color: black;
+    /* background-color: rgb(149, 255, 181); */
+    border: 1px solid black;
+    /* color: black; */
 }
 
 /* DATE */
