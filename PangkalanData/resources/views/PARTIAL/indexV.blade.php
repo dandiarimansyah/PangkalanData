@@ -20,6 +20,8 @@
     </head>
 
     <body>
+        <div id="all-content">
+
         <nav>
             @auth
                 @if (Auth::user()->level == 'operator')
@@ -59,7 +61,7 @@
                     <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
 
                 @elseif (auth()->user()->level == 'admin')
-                    <li class="{{ (request()->is('admin*')) ? 'aktif' : 'nonaktif' }}"><a href="/admin/akun_operator">AKUN</a></li>
+                    <li class="{{ (request()->is('admin*')) ? 'aktif' : 'nonaktif' }}"><a href="/admin/akun_operator">KELOLA AKUN</a></li>
                     <li><a href="#" class="logout" data-toggle="modal" data-target="#exampleModal">KELUAR</a></li>
                 @endif
             @endauth
@@ -97,6 +99,9 @@
             <h5>Jalan Elang Raya No.1, Mangunharjo, Tembalang, Sendangmulyo, Tembalang, Kota Semarang, Jawa Tengah 50272</h5>
             <h5>Pos-el: balaibahasa.jateng@kemdikbud.go.id</h5>
         </footer>
+
+    </div>
+
 
         <!-- Modal Import Data -->
         <div class="modal fade" id="import" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

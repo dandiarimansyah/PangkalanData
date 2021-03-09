@@ -12,11 +12,12 @@
                 margin: 0 5px;
             }
             .footer {
-                margin-top: 15px;
                 width: 100%;
                 padding: 10px 0 10px 0;
+                height: 100px;
                 text-align: center;
-                bottom: 0;
+                position: absolute;
+                left: 0;
                 background-color: #00587a;
             }
         </style>
@@ -33,11 +34,13 @@
                 margin: 0 5px;
             }
             .footer {
-                margin-top: 15px;
                 width: 100%;
                 padding: 10px 0 10px 0;
+                height: 100px;
                 text-align: center;
-                bottom: 0;
+                position: absolute;
+                /* bottom: 0; */
+                left: 0;
                 background-color: #028b40;
             }
         </style>                
@@ -54,11 +57,13 @@
                 margin: 0 5px;
             }
             .footer {
-                margin-top: 15px;
                 width: 100%;
                 padding: 10px 0 10px 0;
+                height: 100px;
                 text-align: center;
-                bottom: 0;
+                position: absolute;
+                /* bottom: 0; */
+                left: 0;
                 background-color: #005fec;
             }
         </style>        
@@ -75,11 +80,13 @@
             margin: 0 5px;
         }
         .footer {
-            margin-top: 15px;
             width: 100%;
             padding: 10px 0 10px 0;
+            height: 100px;
             text-align: center;
-            bottom: 0;
+            position: absolute;
+            /* bottom: 0; */
+            left: 0;
             background-color: #d64400;
         }
     </style>          

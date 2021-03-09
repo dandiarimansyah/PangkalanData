@@ -19,23 +19,18 @@
 
     <div class="judul">
         <th>AKUN VALIDATOR</th>
-
-        {{-- <div class="import-input">
-            <h6>Klik "TAMBAH AKUN" untuk menambahkan Validator Baru</h6>
-            <button loc="{{ asset('/Template/Template Kamus Ensiklopedia.xlsx')}}" href="/import/kebahasaan/kamus_ensiklopedia" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
-                TAMBAH AKUN
-            </button>
-        </div> --}}
-
     </div>
     
        <!-- TABLE -->
        <div class="validasi">
            <div>
-            <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#add-modal">
-                <i style="margin: 0" class="fa fa-plus" aria-hidden="true"></i>   
-                    TAMBAH AKUN VALIDATOR
-               </button>
+            <div class="input-baru">
+                <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#add-modal">
+                    <i style="margin: 0" class="fa fa-plus" aria-hidden="true"></i>   
+                        TAMBAH AKUN VALIDATOR
+                   </button>
+            </div>
+            
         <table class="content-table" id="datatable">
             <thead>
                 <tr>

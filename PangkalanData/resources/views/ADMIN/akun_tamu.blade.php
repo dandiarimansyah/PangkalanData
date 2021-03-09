@@ -32,10 +32,13 @@
      <!-- TABLE -->
      <div class="validasi">
         <div>
-            <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#add-modal">
-                <i style="margin: 0" class="fa fa-plus" aria-hidden="true"></i>   
-                  TAMBAH AKUN TAMU
-             </button>
+            <div class="input-baru">
+                <button type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#add-modal">
+                    <i style="margin: 0" class="fa fa-plus" aria-hidden="true"></i>   
+                      TAMBAH AKUN TAMU
+                 </button>
+            </div>
+            
         <table class="content-table" id="datatable">
             <thead>
                 <tr>

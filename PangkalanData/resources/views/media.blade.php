@@ -9,7 +9,7 @@
     <div class="content">
         <header style="margin-bottom: 40px">HALAMAN DOKUMEN</header>
         <div>
-            <img style="height: 250px" src="{{ asset('Gambar/4.png')}}" alt="">
+            <img style="height: 300px" src="{{ asset('Gambar/10.jpg')}}" alt="">
         </div>
     </div>
 </div>

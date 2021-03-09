@@ -16,7 +16,7 @@
         @endforeach
         </div>
     @endif
-
+    
     <div class="judul">
         <th>EDIT DATA KERJA SAMA</th>
     </div>
