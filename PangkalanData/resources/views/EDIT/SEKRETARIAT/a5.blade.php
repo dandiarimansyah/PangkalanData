@@ -258,10 +258,11 @@
 
                 let id = $(this).data('id');
 
+
                 $('#kantor option').filter(function(){
                     return ($(this).val() == kantor)
                 }).prop('selected', true);
-
+                
                 $('#kondisi option').filter(function(){
                     return ($(this).val() == kondisi)
                 }).prop('selected', true);
@@ -270,13 +271,21 @@
                     return ($(this).val() == status_peroleh)
                 }).prop('selected', true);
 
-                $('#imb input').filter(function(){
+                $('input[name = "imb"]').filter(function(){
                     return ($(this).val() == imb)
-                }).prop('selected', true);
+                }).prop('checked', true);
 
-                $('#status_tanah').val(status_tanah);
-                $('#sertif_tanah').val(sertif_tanah);
-                $('#status_bangunan').val(status_bangunan);
+                $('input[name = "status_tanah"]').filter(function(){
+                    return ($(this).val() == status_tanah)
+                }).prop('checked', true);
+
+                $('input[name = "sertif_tanah"]').filter(function(){
+                    return ($(this).val() == sertif_tanah)
+                }).prop('checked', true);
+
+                $('input[name = "status_bangunan"]').filter(function(){
+                    return ($(this).val() == status_bangunan)
+                }).prop('checked', true);
 
                 $('#keterangan').val(keterangan);
                 
