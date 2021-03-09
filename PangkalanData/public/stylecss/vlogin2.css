@@ -69,19 +69,29 @@ body {
 }
 
 .wajib-diisi {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    /* font-family: Georgia, "Times New Roman", Times, serif; */
     display: block;
-    color: rgb(255, 32, 32);
+    font-size: 16px;
+    color: #ff8b8b;
     text-align: right;
     width: 350px;
+    text-shadow: 1px 0 0 rgb(0, 0, 0), -1px 0 0 rgb(0, 0, 0),
+        0 1px 0 rgb(0, 0, 0), 0 -1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0),
+        -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0),
+        -1px 1px 0 rgb(0, 0, 0);
 }
 
 .salah-login {
     display: block;
-    color: rgb(255, 32, 32);
+    font-size: 16px;
     text-align: center;
+    color: #ff8b8b;
     width: 350px;
     font-weight: bold;
+    text-shadow: 1px 0 0 rgb(0, 0, 0), -1px 0 0 rgb(0, 0, 0),
+        0 1px 0 rgb(0, 0, 0), 0 -1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0),
+        -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0),
+        -1px 1px 0 rgb(0, 0, 0);
 }
 
 .container {
