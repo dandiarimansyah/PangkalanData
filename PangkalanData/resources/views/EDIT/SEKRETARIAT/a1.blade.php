@@ -89,10 +89,10 @@
                                 @csrf
                                 @method('PUT')
 
-                            <div class="inputfield">
+                            {{-- <div class="inputfield">
                                 <label>Unit/Satuan Kerja</label>
                                 <input name="unit" readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
-                            </div> 
+                            </div>  --}}
                             
                             <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
                             <div class="inputfield">
