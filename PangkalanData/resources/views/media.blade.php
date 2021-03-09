@@ -1,14 +1,18 @@
-{{-- if login by operator maka extend operator, kalo validator ya validator --}}
-{{-- @extends(\Auth::check() ? 'layouts.adminPanel' : 'layouts.home') --}}
-
 @extends('PARTIAL.indexV')
 
 @section('content')
 
-    <div class="content">
-        <header>HALAMAN DOKUMEN</header>
-    </div>
-
 @include('PARTIAL.MenuMedia')
+
+<div class="isi-konten">
+
+    <div class="content">
+        <header style="margin-bottom: 40px">HALAMAN DOKUMEN</header>
+        <div>
+            <img style="height: 250px" src="{{ asset('Gambar/4.png')}}" alt="">
+        </div>
+    </div>
+</div>
+
 
 @endsection
