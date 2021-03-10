@@ -129,7 +129,7 @@
                             @csrf
                             @method('PUT')
                     
-                        <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
+                        <!-- <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
                         <div class="inputfield-select">
                             <label>Provinsi*</label>
                             <div class="custom_select">
@@ -137,7 +137,7 @@
                                 <option value="Jawa Tengah">Jawa Tengah</option>
                             </select>
                             </div>
-                        </div> 
+                        </div>  -->
 
                         <div class="alert-danger">{{ $errors->first('unit') }}</div>
                         <div class="inputfield-select">

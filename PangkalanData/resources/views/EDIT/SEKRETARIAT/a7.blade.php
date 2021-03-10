@@ -150,7 +150,7 @@
                             @csrf
                             @method('PUT')
                     
-                        <div class="alert-danger">{{ $errors->first('unit') }}</div>
+                        <!-- <div class="alert-danger">{{ $errors->first('unit') }}</div>
                         <div class="inputfield-select">
                             <label>Unit/Satuan Kerja*</label>
                             <div class="custom_select">
@@ -158,7 +158,7 @@
                                 <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
                             </select>
                             </div>
-                        </div> 
+                        </div>  -->
 
                         <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
                         <div class="inputfield">
