@@ -26,7 +26,7 @@ class CreatePenelitianTable extends Migration
             $table->string("tipe_waktu")->nullable();
             $table->string("publikasi")->nullable();
             $table->string("tahun_terbit")->nullable();
-            $table->string("abstrak");
+            $table->longText("abstrak");
             $table->string('media')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();

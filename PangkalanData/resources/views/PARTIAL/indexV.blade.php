@@ -144,7 +144,7 @@
             $(document).on('click','#tombol_validasi',function(e){
                 e.preventDefault();
                 let url = $(this).attr('href');
-                
+
                 Swal.fire({
                     title: 'Validasi Data?',
                     text: "Data yang telah dicentang akan divalidasi!",
@@ -166,7 +166,6 @@
                             data: {_token:'{{ csrf_token() }}', id: data},
                             dataType:"json",
                             complete: function(){
-                                console.log("halo");
                                 location.reload();
                             }
                         });
