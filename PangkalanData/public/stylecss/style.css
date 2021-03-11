@@ -11,6 +11,17 @@ body {
     background: #ffffff;
 }
 
+.berdasarkan p,
+.berdasarkan h1 {
+    font-size: 17px;
+}
+
+.input_tahun {
+    width: 60px;
+    height: 35px;
+    padding: 0 5px 0 5px;
+}
+
 .input-baru {
     display: flex;
     justify-content: center;

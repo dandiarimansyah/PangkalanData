@@ -8,6 +8,18 @@
 
     <div class="judul">
         <th>DATA PENYULUHAN</th>
+        <form action="" method="GET">
+            @csrf
+            <div class="berdasarkan">
+                <h1>Berdasarkan Tahun</h1>
+                <p>
+                    <span><input class="input_tahun ml-2" name="awal" type="text" value="{{$tahun_awal}}"></span> 
+                    -
+                    <span><input class="input_tahun" name="akhir" type="text" value="{{$tahun_akhir}}"></span>  
+                    <button class="btn btn-success btn-sm ml-2" type="submit">Tampilkan</button>
+                </p>
+            </div>
+        </form>
     </div>
 
     <div style="display: flex; justify-content:center">
