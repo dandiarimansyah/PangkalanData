@@ -1,5 +1,28 @@
 @extends('PARTIAL.indexV')
 
+<style>
+    #more  {display:  none;}
+
+    #abstrak-model .modal-dialog{
+        max-width: 1000px !important;
+    }
+
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+
 @section('content')
 
 @include('PARTIAL.MenuLaporan')
@@ -86,7 +109,16 @@
                         <td>{{ $a -> judul}}</td>
                         <td>{{ $a -> peneliti}}</td>
                         <td>{{ $a -> kerja_sama}}</td>
-                        <td>{{ $a -> abstrak}}</td>
+                        @if (strlen($a->abstrak) > 100)
+                            <td style="max-width: 250px; text-align: justify">
+                                {{ \Illuminate\Support\Str::limit($a->abstrak, 100, $end='...') }}
+                                <span id="dots"></span>
+                                <span id="more">{{ substr($a->abstrak, 100) }}</span>
+                                <button data-isi="{{ $a -> abstrak}}" id="abstrak_tombol" type="button" data-toggle="modal" data-target="#abstrak-model">Selengkapnya</button>
+                            </td>
+                        @else
+                            <td style="max-width: 250px">{{ $a -> abstrak}}</td>
+                        @endif
                         <td>{{ $a -> lama_penelitian}} {{ $a -> tipe_waktu}}</td>
                         <td>{{ $a -> publikasi}}</td>
                         <td>{{ $a -> tahun_terbit}}</td>
@@ -104,4 +136,37 @@
 
     </div>
 
+    <div class="modal fade" id="abstrak-model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Abstrak</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <form id="import_form" action="" method="POST" enctype="multipart/form-data">
+            @csrf
+                <div class="modal-body">
+                    <div class="template">
+                        <p style="text-align: justify" id="abstrak_lengkap"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+
 @endsection
+
+@push('scripts')
+      <script>
+          $(document).on('click','#abstrak_tombol',function(){
+            let isi = $(this).data('isi');
+            $("#abstrak_lengkap").html(isi);
+          })
+        </script>
+@endpush

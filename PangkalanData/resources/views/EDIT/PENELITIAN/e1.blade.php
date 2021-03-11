@@ -3,7 +3,7 @@
 <style>
     #more  {display:  none;}
 
-    .modal-dialog{
+    #abstrak-model .modal-dialog{
         max-width: 1000px !important;
     }
 
