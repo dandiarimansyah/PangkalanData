@@ -40,58 +40,6 @@
             </tbody>
         </table>
 
-    </div>
-
-    <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div id="modal-edit" class="modal-dialog" role="document">
-          <div id="modal-content" class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <div class="wrapper" style="margin: 0">
-                    {{-- <div class="form">
-                        <form role="form" action="" method="POST">
-                            @csrf
-                            @method('PUT')
-                  
-                          <div class="alert-danger">{{ $errors->first('unit') }}</div>
-                          <div class="inputfield-select">
-                              <label>Unit/Satuan Kerja*</label>
-                              <div class="custom_select">
-                                <select name="unit">
-                                  <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
-                                </select>
-                              </div>
-                          </div>
-                          
-                          <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
-                          <div class="inputfield">
-                              <label>Tahun Anggaran*</label>
-                              <input name="tahun_anggaran" value="{{ old('tahun_anggaran', $anggaran->tahun_anggaran) }}" type="text" class="input">
-                          </div> 
-                  
-                          <div class="alert-danger">{{ $errors->first('nilai_anggaran') }}</div>
-                          <div class="inputfield">
-                              <label>Nilai Anggaran (Rp.)</label>
-                              <input name="nilai_anggaran" value="{{ old('tahun_anggaran', $anggaran->nilai_anggaran) }}" type="text" class="input">
-                          </div>  
-                          
-                          <div class="tombol">
-                            <input type="reset" value="Ulangi" class="reset">
-                            <input type="submit" value="Simpan" class="inputan">
-                          </div>
-                  
-                        </form> --}}
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+    </div> 
 
 @endsection
