@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="{{ asset('Gambar/icon2.png') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('stylecss/style.css') }}">
 
         @include('PARTIAL.StyleCSS')
@@ -16,6 +17,8 @@
 
         <link rel="stylesheet" type="text/css" href="{{ asset('sweetalert2/sweetalert2.min.css') }}">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+        <title>Balai Bahasa Provinsi Jawa Tengah</title>
 
     </head>
 

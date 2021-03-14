@@ -34,7 +34,7 @@ Route::get('/', function () {
 
 // Login
 // Route::get('login', [AuthController::class, 'login'])->name('login');
-Route::get('login', [AuthController::class, 'login2'])->name('login');
+Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('proses_login', [AuthController::class, 'proses_login'])->name('proses_login');
 
 Route::get('/logout', function () {
