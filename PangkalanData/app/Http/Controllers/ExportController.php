@@ -49,6 +49,7 @@ use App\Exports\Penghargaan_SastraExport;
 use App\Exports\PenyuluhanExport;
 use App\Exports\PerpustakaanExport;
 use App\Exports\PesuluhExport;
+use App\Exports\PesuluhExportPilih;
 use App\Exports\Tanah_BangunanExport;
 use App\Exports\Terbitan_UmumExport;
 
@@ -890,6 +891,12 @@ class ExportController extends Controller
         $export = new PesuluhExport($request->tingkat, $request->nama, $request->instansi);
 
         return Excel::download($export, 'Laporan Pesuluh Excel.xlsx');
+    }
+    public function excel_b5_pilih(Request $request)
+    {
+        $export = new PesuluhExportPilih($request->id_penyuluhan);
+
+        return Excel::download($export, 'Template Pesuluh.xlsx');
     }
     //=======================================================================================
     public function excel_b6(Request $request)

@@ -87,8 +87,9 @@ class InputController extends Controller
     public function pilih_b5($id)
     {
         $penyuluhan = Penyuluhan::find($id);
+        $id_penyuluhan = $penyuluhan->id;
 
-        return view('INPUT.KEBAHASAAN.b5_pilih', compact('penyuluhan'));
+        return view('INPUT.KEBAHASAAN.b5_pilih', compact('id_penyuluhan', 'penyuluhan'));
     }
     public function b6()
     {

@@ -505,6 +505,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/excel/kebahasaan/terbitan_umum', [ExportController::class, 'excel_b3']);
     Route::get('/excel/kebahasaan/penyuluhan', [ExportController::class, 'excel_b4']);
     Route::get('/excel/kebahasaan/pesuluh', [ExportController::class, 'excel_b5']);
+    Route::get('/excel/kebahasaan/pesuluh_pilih', [ExportController::class, 'excel_b5_pilih']);
     Route::get('/excel/kebahasaan/penghargaan_nasional', [ExportController::class, 'excel_b6']);
     Route::get('/excel/kebahasaan/duta_bahasa_nasional', [ExportController::class, 'excel_b7']);
     Route::get('/excel/kebahasaan/duta_bahasa_provinsi', [ExportController::class, 'excel_b8']);
