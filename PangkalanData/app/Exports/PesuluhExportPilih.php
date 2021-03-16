@@ -3,6 +3,7 @@
 namespace App\Exports;
 
 use App\Models\Pesuluh;
+use App\Models\Penyuluhan;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithHeadings;
@@ -26,12 +27,13 @@ class PesuluhExportPilih implements FromCollection, WithMapping, WithHeadings, S
     public function collection()
     {
         $data = Pesuluh::where('id_penyuluhan', $this->id_penyuluhan)->get();
+        // $data = Penyuluhan::find($this->id_penyuluhan)->first();
+        // dd($data);
         return $data;
     }
 
     public function map($data): array
     {
-
         return [
             $data->id_penyuluhan,
         ];

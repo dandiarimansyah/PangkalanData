@@ -23,6 +23,7 @@ use App\Imports\PenelitianImport;
 use App\Imports\Penghargaan_BahasaImport;
 use App\Imports\Penghargaan_SastraImport;
 use App\Imports\PenyuluhanImport;
+use App\Models\Pesuluh;
 use App\Imports\PerpustakaanImport;
 use App\Imports\PesuluhImport;
 use App\Imports\Tanah_BangunanImport;
@@ -158,12 +159,33 @@ class ImportController extends Controller
     }
     public function import_b5(Request $request)
     {
-        $file = $request->file('file');
-        $namaFile = $file->getClientOriginalName();
-        $file->move('Pesuluh', $namaFile);
+        // $file = $request->file('file');
+        // $namaFile = $file->getClientOriginalName();
+        // $file->move('Pesuluh', $namaFile);
 
-        Excel::import(new PesuluhImport, public_path('/Pesuluh/' . $namaFile));
-        File::delete(public_path('/Pesuluh/' . $namaFile));
+        // Excel::import(new PesuluhImport, public_path('/Pesuluh/' . $namaFile));
+        // File::delete(public_path('/Pesuluh/' . $namaFile));
+
+        $data = Excel::toCollection(new PesuluhImport(), $request->file('file'));
+
+        foreach ($data[0] as $key => $a) {
+            if ($key == 1) {
+                $id = $a[0];
+            }
+        }
+
+        foreach ($data[0] as $key => $a) {
+            if ($key >= 1) {
+                $data = new Pesuluh();
+                $data->nama = $a[1];
+                $data->tempat_lahir = $a[2];
+                $data->tanggal_lahir = $a[3];
+                $data->instansi = $a[4];
+                $data->tingkat = $a[5];
+                $data->id_penyuluhan = $id;
+                $data->save();
+            }
+        }
 
         return redirect('/operator/edit/kebahasaan/pesuluh')->with('toast_success', 'Import Data Berhasil!');
     }

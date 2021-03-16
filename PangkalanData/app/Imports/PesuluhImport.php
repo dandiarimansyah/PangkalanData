@@ -19,7 +19,16 @@ class PesuluhImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Pesuluh::create([
+                // Pesuluh::create([
+                //     'id_penyuluhan' => $row[0],
+                //     'nama' => $row[1],
+                //     'tempat_lahir' => $row[2],
+                //     'tanggal_lahir' => $row[3],
+                //     'instansi' => $row[4],
+                //     'tingkat' => $row[5],
+                // ]);
+
+                return new Pesuluh([
                     'id_penyuluhan' => $row[0],
                     'nama' => $row[1],
                     'tempat_lahir' => $row[2],
