@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Forum extends Model
+class Foto extends Model
 {
     use HasFactory;
 
-    protected $table = "forum";
+    protected $table = "foto";
 
-    protected $fillable = ['pengguna', 'balai', 'lengkap', 'saran'];
+    protected $fillable = ['gambar'];
 }

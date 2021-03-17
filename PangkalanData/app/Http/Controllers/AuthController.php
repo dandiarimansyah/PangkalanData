@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Foto;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -9,7 +11,9 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return view('login');
+        $foto_login = Foto::where('id', "1")->get();
+
+        return view('login', compact('foto_login'));
     }
 
     public function proses_login(Request $request)

@@ -429,10 +429,10 @@ p {
     padding: 2px 10px;
     width: max-content;
     height: 35px;
-    background-color: #ffd3a0;
+    background-color: #fff27d;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
-    box-shadow: 1px 2px #000000;
+    box-shadow: 2px 4px #af5002;
     cursor: pointer;
 }
 
@@ -442,8 +442,8 @@ p {
     padding: 2px 10px;
     width: max-content;
     height: 35px;
-    background-color: #ffea83;
-    border: 1px solid rgb(0, 0, 0);
+    background-color: #ffe658;
+    /* border: 1px solid rgb(0, 0, 0); */
     border-radius: 5px;
     box-shadow: 1px 2px #ddb800;
     cursor: pointer;

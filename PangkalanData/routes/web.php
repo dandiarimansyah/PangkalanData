@@ -81,7 +81,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['AkunLoginMiddleware:admin']], function () {
         Route::get('/admin/akun', [AdminController::class, 'akun']);
 
-        ////========================================== ADMIN ===================
+        ////========================================== KELOLA AKUN  ===================
         Route::put('/admin/edit_akun/{id}', [AdminController::class, 'update_akun']);
         //OPERATOR
         Route::get('/admin/akun_operator', [AdminController::class, 'su1']);
@@ -97,6 +97,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/admin/akun_tamu', [AdminController::class, 'su3']);
         Route::post('/admin/akun_tamu', [AdminController::class, 'tambah_su3']);
         Route::get('/admin/akun_tamu/hapus/{id}', [AdminController::class, 'hapus_su3']);
+
+        ////========================================== KELOLA FOTO  ===================
+        Route::get('/admin/kelola_foto', [AdminController::class, 'kelola_foto']);
+        Route::put('/admin/kelola_foto/{id}', [AdminController::class, 'update_foto']);
     });
 
     //GUEST

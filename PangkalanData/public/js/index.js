@@ -2,6 +2,7 @@ $('.icon').click(function(){
 $('span').toggleClass("cancel");
 });
 
+
 //DATE Format
 // $("#date").on("change", function() {
 //     this.setAttribute(

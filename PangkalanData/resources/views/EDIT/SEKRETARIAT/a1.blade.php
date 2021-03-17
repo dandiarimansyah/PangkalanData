@@ -124,6 +124,42 @@
 @push('scripts')
       <script>
 
+        //   //Bahasa Indo Datatable
+        //     $(document).ready(function () {
+        //         // let elemen9 = $("#datatable_length label select");
+        //         let elemen1 = $("#datatable_length");
+        //         let elemen2 = document.getElementById("datatable_filter");
+        //         let elemen3 = document.getElementById("datatable_info");
+
+        //         elemen1.html(" ");
+        //         elemen2.innerHTML = " ";
+        //         elemen3.innerHTML = " ";
+
+        //         var select = $("<select name='datatable_length' aria-controls='datatable' class='custom-select custom-select-sm form-control form-control-sm'><option value='10'>10</option><option value='25'>25</option><option value='50'>50</option><option value='100'>100</option></select>");
+                
+        //         var label1 = $("<label></label>").text("Tampil ");
+        //         label1.append(select);
+        //         label1.append(" baris");
+        //         elemen1.append(label1);
+
+        //         var label2 = document.createElement("label");
+        //         var input = document.createElement("input");
+
+        //         var aria = document.createAttribute("aria-controls");
+        //         aria.value = "datatable";
+        //         var type = document.createAttribute("type");
+        //         type.value = "search";
+
+        //         input.setAttributeNode(aria);
+        //         input.setAttributeNode(type);
+        //         input.className = "form-control form-control-sm";
+
+        //         label2.innerHTML = "Cari :";
+        //         label2.appendChild(input);
+
+        //         elemen2.appendChild(label2);
+        //     })
+
           $(document).on('click','#edit_item',function(){
                 let unit = $(this).data('unit');
                 let tahun_anggaran = $(this).data('tahun_anggaran');

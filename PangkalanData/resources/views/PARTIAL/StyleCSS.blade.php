@@ -16,6 +16,7 @@
                 padding: 10px 0 10px 0;
                 height: 100px;
                 text-align: center;
+                /* bottom: 0; */
                 position: absolute;
                 left: 0;
                 background-color: #00587a;

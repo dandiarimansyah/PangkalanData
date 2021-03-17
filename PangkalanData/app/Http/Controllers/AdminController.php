@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\User;
+use App\Models\Foto;
 
 class AdminController extends Controller
 {
@@ -130,6 +131,31 @@ class AdminController extends Controller
     }
 
     public function update_akun($id, Request $request)
+    {
+        $request->validate([
+            'name' => ['required'],
+            'username' => ['required'],
+        ]);
+
+        $data = User::where('id', $id)
+            ->update([
+                'name' => $request->get('name'),
+                'username' => $request->get('username'),
+                'password' => bcrypt($request->get('password')),
+            ]);
+
+        return back()->with('toast_success', 'Akun Berhasil Diedit!');
+    }
+
+    public function kelola_foto()
+    {
+        $foto_login = Foto::where('id', '1')->get();
+        $foto_beranda = Foto::where('id', '!=', '1')->get();
+
+        return view('ADMIN.kelola_foto', compact('foto_login', 'foto_beranda'));
+    }
+
+    public function update_foto($id, Request $request)
     {
         $request->validate([
             'name' => ['required'],
