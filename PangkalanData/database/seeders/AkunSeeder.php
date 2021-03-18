@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Foto;
 use Illuminate\Database\Seeder;
 
 class AkunSeeder extends Seeder
@@ -48,20 +47,5 @@ class AkunSeeder extends Seeder
         foreach ($user as $key => $value) {
             User::create($value);
         }
-
-        $foto = [
-            [
-                'gambar' => 'balai_fix.jpg'
-            ],
-            [
-                'gambar' => 'balai.jpg'
-            ],
-            [
-                'gambar' => 'balai2.jpg'
-            ],
-            [
-                'gambar' => 'balai3.jpg'
-            ],
-        ]
     }
 }
