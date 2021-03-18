@@ -60,60 +60,26 @@ $(document).on('click', '#pesan', function(e){
 })
 
 
-//Validasi Confirmation
-// $(document).on('click','#tombol_validasi',function(e){
-//     e.preventDefault();
-//     let url = $(this).attr('href');
-    
+
+// var flash = $('#flash').data('flash');
+// var url = $('#flash').data('url');
+// if(flash){
 //     Swal.fire({
-//         title: 'Validasi Data?',
-//         text: "Data yang telah dicentang akan divalidasi!",
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonColor: '#028B40',
-//         cancelButtonColor: '#d33',
-//         cancelButtonText: 'Batal',
-//         confirmButtonText: 'Validasi',
-//         reverseButtons: true
-//         }).then((result) => {
-//         if (result.isConfirmed) {
-//             let data = []
-//             $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
-    
-//             $.ajax({
-//                 type: "post",
-//                 url: url,
-//                 data: {_token:'{{ csrf_token() }}', id: data},
-//                 dataType:"json",
-//                 complete: function(){
-//                     console.log("halo");
-//                     location.reload();
-//                 }
-//             });
+//         icon: 'success',
+//         html: '<a href="' + url + '" class="btn btn-success" style="display:inline-block">Klik untuk Lihat Data</a> ',
+//         title: 'Sukses',
+//         toast: true,
+//         position: 'top',
+//         showConfirmButton: false,
+//         timer: 3500,
+//         timerProgressBar: true,
+//         text: flash,
+//         didOpen: (toast) => {
+//             toast.addEventListener('mouseenter', Swal.stopTimer)
+//             toast.addEventListener('mouseleave', Swal.resumeTimer)
 //         }
 //     })
-// })
-  
-
-var flash = $('#flash').data('flash');
-var url = $('#flash').data('url');
-if(flash){
-    Swal.fire({
-        icon: 'success',
-        html: '<a href="' + url + '" class="btn btn-success" style="display:inline-block">Klik untuk Lihat Data</a> ',
-        title: 'Sukses',
-        toast: true,
-        position: 'top',
-        showConfirmButton: false,
-        timer: 3500,
-        timerProgressBar: true,
-        text: flash,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-    })
-}
+// }
 
 $(document).on('click', '#hapus_media', function(e){
     e.preventDefault();

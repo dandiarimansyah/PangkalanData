@@ -11,7 +11,7 @@ class Bengkel_Sastra_Dan_BahasaImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 2) {
+            if ($key >= 2 && $row[3] != null) {
 
                 $tgl = ($row[5] - 25569) * 86400;
                 $tanggal = gmdate('Y-m-d', $tgl);

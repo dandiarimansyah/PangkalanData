@@ -143,6 +143,8 @@
         </div>
         
         @include('sweetalert::alert')
+        
+        <script src="{{ asset('sweetalert2/sweetalert2.min.js')}}"></script>
 
         <script>
             $(document).on('click','#tombol_validasi',function(e){
@@ -176,11 +178,30 @@
                     }
                 })
             })
+
+            var flash = $('#flash').data('flash');
+            var url = $('#flash').data('url');
+            if(flash){
+                Swal.fire({
+                    icon: 'success',
+                    html: '<a href="' + url + '" class="btn btn-success" style="display:inline-block">Klik untuk Lihat Data</a> ',
+                    title: 'Sukses',
+                    toast: true,
+                    position: 'top',
+                    showConfirmButton: false,
+                    timer: 3500,
+                    timerProgressBar: true,
+                    text: flash,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+            }
         </script>
         
         <script type="text/javascript" src="{{ URL::asset('js/index.js') }}"></script>
 
-        <script src="{{ asset('sweetalert2/sweetalert2.min.js')}}"></script>
         <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
 
