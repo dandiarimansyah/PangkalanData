@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\User;
 use App\Models\Foto;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
@@ -155,20 +157,56 @@ class AdminController extends Controller
         return view('ADMIN.kelola_foto', compact('foto_login', 'foto_beranda'));
     }
 
+    public function tambah_foto_beranda(Request $request)
+    {
+        $request->validate([
+            'file' => ['required', 'max:10000', 'image'],
+        ]);
+
+        $filenameWithExt = $request->file('file')->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $request->file('file')->getClientOriginalExtension();
+        $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+        $path = $request->file('file')->storeAs('public/Foto', $filenameSimpan);
+
+        $data = new Foto();
+        $data->gambar = $filenameSimpan;
+        $data->save();
+
+        return back()->with('toast_success', 'Foto Berhasil Diunggah!');
+    }
+
     public function update_foto($id, Request $request)
     {
         $request->validate([
-            'name' => ['required'],
-            'username' => ['required'],
+            'file' => ['required', 'max:10000', 'image'],
         ]);
 
-        $data = User::where('id', $id)
+        $data = Foto::find($id);
+        Storage::delete('public/Foto/' . $data->gambar);
+
+        $filenameWithExt = $request->file('file')->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $request->file('file')->getClientOriginalExtension();
+        $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+        $path = $request->file('file')->storeAs('public/Foto', $filenameSimpan);
+
+        $data = Foto::where('id', $id)
             ->update([
-                'name' => $request->get('name'),
-                'username' => $request->get('username'),
-                'password' => bcrypt($request->get('password')),
+                'gambar' => $filenameSimpan
             ]);
 
-        return back()->with('toast_success', 'Akun Berhasil Diedit!');
+        return back()->with('toast_success', 'Foto Berhasil Diubah!');
+    }
+
+    public function hapus_foto($id)
+    {
+        $data = Foto::find($id);
+        Storage::delete($data->gambar);
+
+        $data = Foto::where('id', $id)
+            ->delete();
+
+        return back()->with('toast_success', 'Foto Berhasil Dihapus!');
     }
 }

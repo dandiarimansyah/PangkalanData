@@ -11,6 +11,56 @@ body {
     background: #ffffff;
 }
 
+.judul_foto {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(170, 45, 0);
+}
+
+.foto_login {
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px 50px 20px;
+}
+
+.foto_login .card {
+    border: 3px solid black;
+}
+
+.tombol_foto {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.tombol_foto a,
+.tombol_foto button,
+.tombol_foto input {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    padding: 6px;
+    cursor: pointer;
+    width: 140px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.tombol_foto button:hover,
+.tombol_foto a:hover {
+    text-decoration: none;
+    color: rgb(255, 253, 145);
+}
+
+.tombol_foto .foto1 {
+    background-color: #0043a7;
+}
+
+.tombol_foto .foto2 {
+    background-color: #a72700;
+}
+
 .berdasarkan p,
 .berdasarkan h1 {
     font-size: 17px;

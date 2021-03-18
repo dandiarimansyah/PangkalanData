@@ -16,16 +16,16 @@ class FotoSeeder extends Seeder
     {
         $foto = [
             [
-                'gambar' => 'balai_fix.jpg'
+                'gambar' => 'foto_login.jpg'
             ],
             [
-                'gambar' => 'balai.jpg'
+                'gambar' => 'foto_beranda_1.jpg'
             ],
             [
-                'gambar' => 'balai2.jpg'
+                'gambar' => 'foto_beranda_2.jpg'
             ],
             [
-                'gambar' => 'balai3.jpg'
+                'gambar' => 'foto_beranda_3.jpg'
             ],
         ];
         foreach ($foto as $key => $value) {

@@ -17,7 +17,7 @@ use App\Models\Penghargaan_Sastra;
 use App\Models\Penyuluhan;
 use App\Models\Tanah_Bangunan;
 use App\Models\Terbitan_Umum;
-use Storage;
+use Illuminate\Support\Facades\Storage;
 
 class MediaController extends Controller
 {
@@ -46,7 +46,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_ma1($id)
@@ -59,7 +59,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -87,7 +87,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_ma2($id)
@@ -100,7 +100,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //============================================================== MEDIA S2
@@ -128,7 +128,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mb1($id)
@@ -141,7 +141,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -169,7 +169,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mb2($id)
@@ -182,7 +182,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -210,7 +210,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mb3($id)
@@ -223,7 +223,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -251,7 +251,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mb4($id)
@@ -264,7 +264,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -292,7 +292,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mb5($id)
@@ -305,7 +305,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -333,7 +333,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mb6($id)
@@ -346,7 +346,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -374,7 +374,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mb7($id)
@@ -387,7 +387,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
 
@@ -416,7 +416,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mc1($id)
@@ -429,7 +429,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -457,7 +457,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mc2($id)
@@ -470,7 +470,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -498,7 +498,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mc3($id)
@@ -511,7 +511,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //==============================================================
@@ -539,7 +539,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_mc4($id)
@@ -552,7 +552,7 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 
     //============================================================== MEDIA S5
@@ -580,7 +580,7 @@ class MediaController extends Controller
                 'media' => $media,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Diunggah!');
+        return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
     }
 
     public function hapus_me1($id)
@@ -593,6 +593,6 @@ class MediaController extends Controller
                 'media' => null,
             ]);
 
-        return back()->with('toast_success', 'Media Berhasil Dihapus!');;
+        return back()->with('toast_success', 'Dokumen Berhasil Dihapus!');;
     }
 }

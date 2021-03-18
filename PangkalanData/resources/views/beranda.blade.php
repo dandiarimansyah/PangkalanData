@@ -30,7 +30,7 @@
           @else
             <div class="carousel-item">
           @endif
-            <img class="gambar_carousel" src="{{ asset('Gambar/Beranda/'.$a->gambar)}}">
+            <img class="gambar_carousel" src="{{ Storage::url('Foto/' . $a->gambar) }}">
           </div>
         @endforeach
       </div>

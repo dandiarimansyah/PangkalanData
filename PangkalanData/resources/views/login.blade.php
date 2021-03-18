@@ -14,7 +14,7 @@
   <body>
     <div class="semua">
       <div class="kiri">
-        <img class="gambar_balai" src="{{ asset('Gambar/Beranda/'.$foto_login[0]->gambar)}}" alt="">
+        <img class="gambar_balai" src="{{ Storage::url('Foto/' . $foto_login[0]->gambar) }}" alt="">
 
       </div>
       <div class="kanan">
