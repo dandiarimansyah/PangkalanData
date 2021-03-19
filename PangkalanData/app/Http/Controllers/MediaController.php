@@ -38,12 +38,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/kerja_sama');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/kerja_sama', $filenameSimpan);
         }
 
         $data = Kerja_Sama::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -79,12 +83,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/tanah_dan_bangunan');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/tanah_dan_bangunan', $filenameSimpan);
         }
 
         $data = Tanah_Bangunan::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -120,12 +128,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/kamus_ensiklopedia');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/kamus_ensiklopedia', $filenameSimpan);
         }
 
         $data = Kamus::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -161,12 +173,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/jurnal_majalah');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/jurnal_majalah', $filenameSimpan);
         }
 
         $data = Jurnal::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -202,12 +218,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/terbitan_umum');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/terbitan_umum', $filenameSimpan);
         }
 
         $data = Terbitan_Umum::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -243,12 +263,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/penyuluhan');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/penyuluhan', $filenameSimpan);
         }
 
         $data = Penyuluhan::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -284,12 +308,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/penghargaan_bahasa');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/penghargaan_bahasa', $filenameSimpan);
         }
 
         $data = Penghargaan_Bahasa::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -325,12 +353,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/duta_bahasa_nasional');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/duta_bahasa_nasional', $filenameSimpan);
         }
 
         $data = Duta_Nasional::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -366,12 +398,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/duta_bahasa_provinsi');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/duta_bahasa_provinsi', $filenameSimpan);
         }
 
         $data = Duta_Provinsi::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -408,12 +444,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/bengkel_sastra_dan_bahasa');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/bengkel_sastra_dan_bahasa', $filenameSimpan);
         }
 
         $data = Bengkel_Sastra_Dan_Bahasa::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -449,12 +489,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/penghargaan_sastra');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/penghargaan_sastra', $filenameSimpan);
         }
 
         $data = Penghargaan_Sastra::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -490,12 +534,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/musikalisasi_puisi_nasional');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/musikalisasi_puisi_nasional', $filenameSimpan);
         }
 
         $data = Musikalisasi_Puisi_Nasional::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -531,12 +579,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/musikalisasi_puisi_provinsi');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/musikalisasi_puisi_provinsi', $filenameSimpan);
         }
 
         $data = Musikalisasi_Puisi_Provinsi::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');
@@ -572,12 +624,16 @@ class MediaController extends Controller
         if ($request->media == null) {
             $media = null;
         } else {
-            $media = $request->media->store('public/penelitian');
+            $filenameWithExt = $request->file('media')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('media')->storeAs('public/penelitian', $filenameSimpan);
         }
 
         $data = Penelitian::where('id', $id)
             ->update([
-                'media' => $media,
+                'media' => $path,
             ]);
 
         return back()->with('toast_success', 'Dokumen Berhasil Diunggah!');

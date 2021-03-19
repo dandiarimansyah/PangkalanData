@@ -157,6 +157,26 @@ class AdminController extends Controller
         return view('ADMIN.kelola_foto', compact('foto_login', 'foto_beranda'));
     }
 
+    public function tambah_foto_login(Request $request)
+    {
+        $request->validate([
+            'file' => ['required', 'max:10000', 'image'],
+        ]);
+
+        $filenameWithExt = $request->file('file')->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $request->file('file')->getClientOriginalExtension();
+        $filenameSimpan = $filename . '_' . time() . '.' . $extension;
+        $path = $request->file('file')->storeAs('public/Foto', $filenameSimpan);
+
+        $data = new Foto();
+        $data->id = 1;
+        $data->gambar = $filenameSimpan;
+        $data->save();
+
+        return back()->with('toast_success', 'Foto Berhasil Diunggah!');
+    }
+
     public function tambah_foto_beranda(Request $request)
     {
         $request->validate([

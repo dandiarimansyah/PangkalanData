@@ -21,26 +21,49 @@
 
     <h1 class="judul_foto">FOTO HALAMAN LOGIN</h1>
     
-    <div class="foto_login">
-        <div class="card" style="width: 600px;">
-            <img class="card-img-top" src="{{ Storage::url('Foto/' . $foto_login[0]->gambar) }}" alt="Card image cap">
-            <div class="tombol_foto">
-                <button type="button"
-                    id="edit_item" class="foto1"
-                    data-toggle="modal" 
-                    data-target="#edit-modal"
-                    data-id="{{ $foto_login[0]->id }}"
-                    >Ganti Foto
-                </button>
+    @if (!$foto_login->isEmpty())
+        <div class="foto_login">
+            <div class="card" style="width: 600px;">
+                <img class="card-img-top" src="{{ Storage::url('Foto/' . $foto_login[0]->gambar) }}" alt="Card image cap">
+                <div class="tombol_foto">
+                    <button type="button"
+                        id="edit_item" class="foto1"
+                        data-toggle="modal" 
+                        data-target="#edit-modal"
+                        data-id="{{ $foto_login[0]->id }}"
+                        >Ganti Foto
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
+    @else
+        <div class="foto_login">
+            {{-- <div class="card" style="width: 600px;"> --}}
+                <div class="wrapper" style="padding: 0">
+                    <div class="form">
+                        <form id="edit_form" action="{{ url('/admin/kelola_foto/tambah_foto_login')}}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                                <div class="modal-body">
+                                    <p style="font-size: 16px; margin-top:5px">Pilih foto untuk diunggah!</p>
+                                    <input name="file" type="file" required='required' oninvalid="this.setCustomValidity('Silahkan Masukkan Foto!')"
+                                    oninput="this.setCustomValidity('')">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                    <button type="submit" class="btn btn-primary">Unggah</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            {{-- </div> --}}
+        </div>
+    @endif
 
     <h1 class="judul_foto">FOTO HALAMAN BERANDA</h1>
 
     <div class="input-baru">
         <button href="{{ url('/admin/kelola_foto/tambah_foto_beranda')}}" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#tambah-modal">
-            <i style="margin-right: 4px" class="fa fa-upload" aria-hidden="true"></i>
+            <i style="margin-right: 4px" class="fa fa-picture-o" aria-hidden="true"></i>
             TAMBAH FOTO BERANDA
           </button>
     </div>
@@ -48,7 +71,7 @@
     <div class="foto_login">
         <div class="row">
             @foreach ($foto_beranda as $key => $a)
-                <div class="col-sm-4" style="margin-top: 20px">
+                <div class="col-sm-4" style="margin-top: 10px">
                     <div class="card">
                         <img class="card-img-top" src="{{ Storage::url('Foto/' . $a->gambar) }}" alt="Foto">
                         <div class="tombol_foto">

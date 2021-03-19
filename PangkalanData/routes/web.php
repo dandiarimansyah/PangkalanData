@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GuestController;
@@ -38,7 +40,7 @@ Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('proses_login', [AuthController::class, 'proses_login'])->name('proses_login');
 
 Route::get('/logout', function () {
-    auth()->logout();
+    Auth::logout();
     return redirect('/login');
 });
 

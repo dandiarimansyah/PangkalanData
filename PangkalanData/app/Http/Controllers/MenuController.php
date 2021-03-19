@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\ForumController;
-use App\Models\Forum;
 use App\Models\Foto;
 
 use Illuminate\Http\Request;
@@ -37,11 +36,11 @@ class MenuController extends Controller
 
         return view('grafik', compact('user'));
     }
-    public function forum()
-    {
-        $user = Auth::user();
-        $forum = Forum::all();
+    // public function forum()
+    // {
+    //     $user = Auth::user();
+    //     $forum = Forum::all();
 
-        return view('forum', compact('user', 'forum'));
-    }
+    //     return view('forum', compact('user', 'forum'));
+    // }
 }
