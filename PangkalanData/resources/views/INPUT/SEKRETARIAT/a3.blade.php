@@ -26,7 +26,7 @@
 
     <div class="import-input">
       <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
-      <button loc="{{ asset('/Template/Template Kepegawaian.xlsx')}}" href="/import/sekretariat/kepegawaian" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+      <button loc="{{ asset('/Template/Template Kepegawaian.xlsx')}}" href="{{ url('/import/sekretariat/kepegawaian')}}" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
         <i style="margin-right: 4px" class="fa fa-upload" aria-hidden="true"></i>
         IMPORT EXCEL
       </button>
@@ -44,7 +44,7 @@
   <div class="wrapper">
       <div class="form">
 
-        <form role="form" action="/operator/input/sekretariat/kepegawaian" method="POST">
+        <form role="form" action="{{url('/operator/input/sekretariat/kepegawaian')}}" method="POST">
           @csrf
 
         <!-- <div class="inputfield">
