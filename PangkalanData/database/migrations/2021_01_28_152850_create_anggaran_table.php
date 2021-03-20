@@ -15,7 +15,6 @@ class CreateAnggaranTable extends Migration
     {
         Schema::create('anggaran', function (Blueprint $table) {
             $table->id();
-            $table->string('unit');
             $table->string('tahun_anggaran');
             $table->bigInteger('nilai_anggaran')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');

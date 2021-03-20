@@ -15,7 +15,6 @@ class CreateDutaNasionalTable extends Migration
     {
         Schema::create('duta_nasional', function (Blueprint $table) {
             $table->id();
-            $table->string('provinsi');
             $table->string('tahun')->nullable();
             $table->string('pemenang_1_1')->nullable();
             $table->string('pemenang_1_2')->nullable();

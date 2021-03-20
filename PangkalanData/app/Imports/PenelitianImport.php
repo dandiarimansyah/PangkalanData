@@ -20,7 +20,6 @@ class PenelitianImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Penelitian::create([
-                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
                     'kategori' => $row[3],
                     'peneliti' => $row[4],
                     'judul' => $row[5],

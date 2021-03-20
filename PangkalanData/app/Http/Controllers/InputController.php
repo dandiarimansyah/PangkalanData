@@ -158,13 +158,13 @@ class InputController extends Controller
     public function store_a2(Request $request)
     {
         $request->validate([
-            'nilai_realisasi' => ['numeric'],
+            'tahun_realisasi' => ['numeric'],
             'besar_dana' => ['numeric'],
         ]);
 
         $data = new Realisasi_Anggaran();
         $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
-        $data->nilai_realisasi = $request->nilai_realisasi;
+        $data->tahun_realisasi = $request->tahun_realisasi;
         $data->besar_dana = $request->besar_dana;
         $data->keterangan = $request->keterangan;
         $data->save();
@@ -208,7 +208,6 @@ class InputController extends Controller
 
         $data = new Kepegawaian();
         $data->tanggal_diperbarui = $tanggal;
-        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->semua_kelamin = $request->semua_kelamin;
         $data->laki = $request->laki;
         $data->perempuan = $request->perempuan;
@@ -286,7 +285,6 @@ class InputController extends Controller
         $request->validate([]);
 
         $data = new Tanah_Bangunan();
-        $data->kantor = "Balai Bahasa Provinsi Jawa Tengah";
         $data->alamat = $request->alamat;
         $data->status_tanah = $request->status_tanah;
         $data->sertif_tanah = $request->sertif_tanah;
@@ -316,8 +314,6 @@ class InputController extends Controller
         ]);
 
         $data = new Perpustakaan();
-        $data->provinsi = "Jawa Tengah";
-        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->jumlah_buku = $request->jumlah_buku;
         $data->jumlah_judul = $request->jumlah_judul;
 
@@ -352,7 +348,6 @@ class InputController extends Controller
         ]);
 
         $data = new Inventarisasi();
-        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->tahun_anggaran = $request->tahun_anggaran;
         $data->laptop = $request->laptop;
         $data->komputer = $request->komputer;
@@ -470,7 +465,6 @@ class InputController extends Controller
         ]);
 
         $data = new Penyuluhan();
-        $data->provinsi = "Jawa Tengah";
         $data->kota = $request->kota;
         $data->nama_kegiatan = $request->nama_kegiatan;
         $data->tanggal_awal = $request->tanggal_awal;
@@ -541,7 +535,6 @@ class InputController extends Controller
         ]);
 
         $data = new Duta_Nasional();
-        $data->provinsi = "Jawa Tengah";
         $data->tahun = $request->tahun;
         $data->pemenang_1_1 = $request->pemenang_1_1;
         $data->pemenang_1_2 = $request->pemenang_1_2;
@@ -569,7 +562,6 @@ class InputController extends Controller
         ]);
 
         $data = new Duta_Provinsi();
-        $data->provinsi = "Jawa Tengah";
         $data->tahun = $request->tahun;
         $data->pemenang_1_1 = $request->pemenang_1_1;
         $data->pemenang_1_2 = $request->pemenang_1_2;
@@ -603,7 +595,6 @@ class InputController extends Controller
         ]);
 
         $data = new Bengkel_Sastra_Dan_Bahasa();
-        $data->provinsi = "Jawa Tengah";
         $data->kota = $request->kota;
         $data->nama_kegiatan = $request->nama_kegiatan;
         $data->tanggal_awal_pelaksanaan = $request->tanggal_awal_pelaksanaan;
@@ -678,7 +669,6 @@ class InputController extends Controller
         ]);
 
         $data = new Musikalisasi_Puisi_Provinsi();
-        $data->provinsi = "Jawa Tengah";
         $data->tahun = $request->tahun;
         $data->pemenang_1 = $request->pemenang_1;
         $data->pemenang_2 = $request->pemenang_2;
@@ -705,7 +695,6 @@ class InputController extends Controller
 
         $data = new Komunitas_Bahasa();
         $data->nama_komunitas = $request->nama_komunitas;
-        $data->provinsi = "Jawa Tengah";
         $data->kota = $request->kota;
         $data->kecamatan = $request->kecamatan;
         $data->alamat = $request->alamat;
@@ -725,7 +714,6 @@ class InputController extends Controller
 
         $data = new Komunitas_Sastra();
         $data->nama_komunitas = $request->nama_komunitas;
-        $data->provinsi = "Jawa Tengah";
         $data->kota = $request->kota;
         $data->kecamatan = $request->kecamatan;
         $data->alamat = $request->alamat;
@@ -749,7 +737,6 @@ class InputController extends Controller
 
         $data = new Penelitian();
         $data->kategori = $request->kategori;
-        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->peneliti = $request->peneliti;
         $data->judul = $request->judul;
         $data->kerja_sama = $request->kerja_sama;

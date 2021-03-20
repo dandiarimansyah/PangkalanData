@@ -42,7 +42,7 @@ class Realisasi_AnggaranExport implements FromCollection, WithMapping, WithHeadi
     {
         return [
             // $data->unit,
-            $data->nilai_realisasi,
+            $data->tahun_realisasi,
             $data->besar_dana,
             $data->keterangan,
         ];

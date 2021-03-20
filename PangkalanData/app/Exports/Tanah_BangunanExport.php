@@ -46,7 +46,6 @@ class Tanah_BangunanExport implements FromCollection, WithMapping, WithHeadings,
     public function map($data): array
     {
         return [
-            $data->kantor,
             $data->alamat,
             $data->status_tanah,
             $data->sertif_tanah,
@@ -62,7 +61,6 @@ class Tanah_BangunanExport implements FromCollection, WithMapping, WithHeadings,
     {
         return [
             [
-                'Kantor',
                 'Alamat',
                 'Status Tanah',
                 'Sertif Tanah',

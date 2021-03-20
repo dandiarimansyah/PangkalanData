@@ -14,8 +14,7 @@ class Realisasi_AnggaranImport implements ToCollection
             if ($key >= 2 && ($row[3] != null || $row[4] != null || $row[5] != null)) {
 
                 Realisasi_Anggaran::create([
-                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
-                    'nilai_realisasi' => $row[3],
+                    'tahun_realisasi' => $row[3],
                     'besar_dana' => $row[4],
                     'keterangan' => $row[5],
                 ]);

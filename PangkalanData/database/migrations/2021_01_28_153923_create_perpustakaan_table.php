@@ -15,8 +15,6 @@ class CreatePerpustakaanTable extends Migration
     {
         Schema::create('perpustakaan', function (Blueprint $table) {
             $table->id();
-            $table->string('provinsi');
-            $table->string('unit');
             $table->integer('jumlah_buku')->nullable();
             $table->integer('jumlah_judul')->nullable();
             $table->longText('jenis_buku')->nullable();

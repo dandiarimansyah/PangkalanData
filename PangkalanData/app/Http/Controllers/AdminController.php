@@ -38,7 +38,7 @@ class AdminController extends Controller
         $data->name = $request->name;
         $data->username = $request->username;
         $data->password = bcrypt($request->password);
-        $data->email = $email;
+        // $data->email = $email;
         $data->level = "operator";
         $data->save();
 
@@ -77,7 +77,7 @@ class AdminController extends Controller
         $data->name = $request->name;
         $data->username = $request->username;
         $data->password = bcrypt($request->password);
-        $data->email = $email;
+        // $data->email = $email;
         $data->level = "validator";
         $data->save();
 
@@ -116,7 +116,7 @@ class AdminController extends Controller
         $data->name = $request->name;
         $data->username = $request->username;
         $data->password = bcrypt($request->password);
-        $data->email = $email;
+        // $data->email = $email;
         $data->level = "tamu";
         $data->save();
 

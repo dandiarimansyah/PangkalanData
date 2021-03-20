@@ -16,14 +16,12 @@ class Komunitas_BahasaExport implements FromCollection, WithMapping, WithHeading
     private $kota;
     private $nama_komunitas;
     private $alamat;
-    private $provinsi;
 
-    public function __construct($kota, $nama_komunitas, $alamat, $provinsi)
+    public function __construct($kota, $nama_komunitas, $alamat)
     {
         $this->kota = $kota;
         $this->nama_komunitas = $nama_komunitas;
         $this->alamat = $alamat;
-        $this->provinsi = $provinsi;
     }
 
     /**
@@ -32,38 +30,30 @@ class Komunitas_BahasaExport implements FromCollection, WithMapping, WithHeading
     public function collection()
     {
         if ($this->kota == '' and $this->nama_komunitas == '' and $this->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $this->provinsi)
-                ->get();
+            $data = Komunitas_Bahasa::all();
         } elseif ($this->kota != '' and $this->nama_komunitas == '' and $this->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Komunitas_Bahasa::where('kota', $this->kota)
                 ->get();
         } elseif ($this->kota == '' and $this->nama_komunitas != '' and $this->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $this->provinsi)
-                ->where('nama_komunitas', $this->nama_komunitas)
+            $data = Komunitas_Bahasa::where('nama_komunitas', $this->nama_komunitas)
                 ->get();
         } elseif ($this->kota == '' and $this->nama_komunitas == '' and $this->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $this->provinsi)
-                ->where('alamat', $this->alamat)
+            $data = Komunitas_Bahasa::where('alamat', $this->alamat)
                 ->get();
         } elseif ($this->kota != '' and $this->nama_komunitas != '' and $this->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Komunitas_Bahasa::where('kota', $this->kota)
                 ->where('nama_komunitas', $this->nama_komunitas)
                 ->get();
         } elseif ($this->kota != '' and $this->nama_komunitas == '' and $this->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Komunitas_Bahasa::where('kota', $this->kota)
                 ->where('alamat', $this->alamat)
                 ->get();
         } elseif ($this->kota == '' and $this->nama_komunitas != '' and $this->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $this->provinsi)
-                ->where('alamat', $this->alamat)
+            $data = Komunitas_Bahasa::where('alamat', $this->alamat)
                 ->where('nama_komunitas', $this->nama_komunitas)
                 ->get();
         } elseif ($this->kota != '' and $this->nama_komunitas != '' and $this->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Komunitas_Bahasa::where('kota', $this->kota)
                 ->where('nama_komunitas', $this->nama_komunitas)
                 ->where('alamat', $this->alamat)
                 ->get();
@@ -77,7 +67,6 @@ class Komunitas_BahasaExport implements FromCollection, WithMapping, WithHeading
     {
         return [
             $data->nama_komunitas,
-            $data->provinsi,
             $data->kota,
             $data->kecamatan,
             $data->alamat,

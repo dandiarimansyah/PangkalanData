@@ -20,7 +20,6 @@ class Musikalisasi_Puisi_ProvinsiImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Musikalisasi_Puisi_Provinsi::create([
-                    // 'provinsi' => $row[3],
                     'tahun' => $row[3],
                     'pemenang_1' => $row[4],
                     'pemenang_2' => $row[5],

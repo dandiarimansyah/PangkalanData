@@ -20,8 +20,6 @@ class PerpustakaanImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Perpustakaan::create([
-                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
-                    // 'provinsi' => $row[3],
                     'jumlah_buku' => $row[3],
                     'jumlah_judul' => $row[4],
                     'jenis_buku' => $row[5],

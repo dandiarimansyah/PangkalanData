@@ -16,14 +16,12 @@ class PenyuluhanExport implements FromCollection, WithMapping, WithHeadings, Sho
     private $kota;
     private $nama_kegiatan;
     private $sasaran;
-    private $provinsi;
 
-    public function __construct($kota, $nama_kegiatan, $sasaran, $provinsi)
+    public function __construct($kota, $nama_kegiatan, $sasaran)
     {
         $this->kota = $kota;
         $this->nama_kegiatan = $nama_kegiatan;
         $this->sasaran = $sasaran;
-        $this->provinsi = $provinsi;
     }
 
     /**
@@ -32,38 +30,30 @@ class PenyuluhanExport implements FromCollection, WithMapping, WithHeadings, Sho
     public function collection()
     {
         if ($this->kota == '' and $this->nama_kegiatan == '' and $this->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $this->provinsi)
-                ->get();
+            $data = Penyuluhan::all();
         } elseif ($this->kota != '' and $this->nama_kegiatan == '' and $this->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Penyuluhan::where('kota', $this->kota)
                 ->get();
         } elseif ($this->kota == '' and $this->nama_kegiatan != '' and $this->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $this->provinsi)
-                ->where('nama_kegiatan', $this->nama_kegiatan)
+            $data = Penyuluhan::where('nama_kegiatan', $this->nama_kegiatan)
                 ->get();
         } elseif ($this->kota == '' and $this->nama_kegiatan == '' and $this->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $this->provinsi)
-                ->where('sasaran', $this->sasaran)
+            $data = Penyuluhan::where('sasaran', $this->sasaran)
                 ->get();
         } elseif ($this->kota != '' and $this->nama_kegiatan != '' and $this->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Penyuluhan::where('kota', $this->kota)
                 ->where('nama_kegiatan', $this->nama_kegiatan)
                 ->get();
         } elseif ($this->kota != '' and $this->nama_kegiatan == '' and $this->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Penyuluhan::where('kota', $this->kota)
                 ->where('sasaran', $this->sasaran)
                 ->get();
         } elseif ($this->kota == '' and $this->nama_kegiatan != '' and $this->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $this->provinsi)
-                ->where('sasaran', $this->sasaran)
+            $data = Penyuluhan::where('sasaran', $this->sasaran)
                 ->where('nama_kegiatan', $this->nama_kegiatan)
                 ->get();
         } elseif ($this->kota != '' and $this->nama_kegiatan != '' and $this->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $this->provinsi)
-                ->where('kota', $this->kota)
+            $data = Penyuluhan::where('kota', $this->kota)
                 ->where('nama_kegiatan', $this->nama_kegiatan)
                 ->where('sasaran', $this->sasaran)
                 ->get();
@@ -76,7 +66,6 @@ class PenyuluhanExport implements FromCollection, WithMapping, WithHeadings, Sho
     public function map($data): array
     {
         return [
-            $data->provinsi,
             $data->kota,
             $data->nama_kegiatan,
             $data->tanggal_awal,
@@ -92,7 +81,6 @@ class PenyuluhanExport implements FromCollection, WithMapping, WithHeadings, Sho
     {
         return [
             [
-                'Provinsi',
                 'Kota',
                 'Nama Kegiatan',
                 'Tanggal Awal',

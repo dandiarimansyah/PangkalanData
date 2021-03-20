@@ -15,7 +15,6 @@ class CreateInventarisasiTable extends Migration
     {
         Schema::create('inventarisasi', function (Blueprint $table) {
             $table->id();
-            $table->string('unit');
             $table->string('tahun_anggaran');
             $table->integer('laptop')->nullable();
             $table->integer('komputer')->nullable();

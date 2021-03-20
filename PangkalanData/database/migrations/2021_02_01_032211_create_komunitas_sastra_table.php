@@ -16,7 +16,6 @@ class CreateKomunitasSastraTable extends Migration
         Schema::create('komunitas_sastra', function (Blueprint $table) {
             $table->id();
             $table->string("nama_komunitas");
-            $table->string("provinsi");
             $table->string("kota");
             $table->string("kecamatan")->nullable();
             $table->string("alamat")->nullable();

@@ -23,7 +23,6 @@ class KepegawaianImport implements ToCollection
                 $tanggal = new Carbon();
 
                 Kepegawaian::create([
-                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
                     'tanggal_diperbarui'  => $tanggal,
                     'semua_kelamin' => $row[3],
                     'laki' => $row[4],

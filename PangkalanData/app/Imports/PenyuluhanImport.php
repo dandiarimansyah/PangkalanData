@@ -20,7 +20,6 @@ class PenyuluhanImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Penyuluhan::create([
-                    // 'provinsi' => $row[3],
                     'kota' => $row[3],
                     'nama_kegiatan' => $row[4],
                     'tanggal_awal' => $row[5],

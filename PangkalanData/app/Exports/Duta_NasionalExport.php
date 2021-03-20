@@ -16,11 +16,10 @@ class Duta_NasionalExport implements FromCollection, WithMapping, WithHeadings, 
     private $tahun;
     private $pemenang;
 
-    public function __construct($tahun, $pemenang, $provinsi)
+    public function __construct($tahun, $pemenang)
     {
         $this->tahun = $tahun;
         $this->pemenang = $pemenang;
-        $this->provinsi = $provinsi;
     }
 
     /**
@@ -29,15 +28,12 @@ class Duta_NasionalExport implements FromCollection, WithMapping, WithHeadings, 
     public function collection()
     {
         if ($this->tahun == '' and $this->pemenang == '') {
-            $data = Duta_Nasional::where('provinsi', $this->provinsi)
-                ->get();
+            $data = Duta_Nasional::all();
         } elseif ($this->tahun != '' and $this->pemenang == '') {
-            $data = Duta_Nasional::where('provinsi', $this->provinsi)
-                ->where('tahun', $this->tahun)
+            $data = Duta_Nasional::where('tahun', $this->tahun)
                 ->get();
         } elseif ($this->tahun == '' and $this->pemenang != '') {
-            $data = Duta_Nasional::where('provinsi', $this->provinsi)
-                ->where('pemenang_1_1', $this->pemenang)
+            $data = Duta_Nasional::where('pemenang_1_1', $this->pemenang)
                 ->orWhere('pemenang_1_2', $this->pemenang)
                 ->orWhere('pemenang_2_1', $this->pemenang)
                 ->orWhere('pemenang_2_2', $this->pemenang)
@@ -46,7 +42,6 @@ class Duta_NasionalExport implements FromCollection, WithMapping, WithHeadings, 
                 ->get();
         } elseif ($this->tahun != '' and $this->pemenang != '') {
             $data = Duta_Nasional::where('tahun', $this->tahun)
-                ->where('provinsi', $this->provinsi)
                 ->where('pemenang_1_1', $this->pemenang)
                 ->orWhere('pemenang_1_2', $this->pemenang)
                 ->orWhere('pemenang_2_1', $this->pemenang)
@@ -63,7 +58,6 @@ class Duta_NasionalExport implements FromCollection, WithMapping, WithHeadings, 
     public function map($data): array
     {
         return [
-            $data->provinsi,
             $data->tahun,
             $data->pemenang_1_1,
             $data->pemenang_1_2,
@@ -79,7 +73,6 @@ class Duta_NasionalExport implements FromCollection, WithMapping, WithHeadings, 
     {
         return [
             [
-                'Provinsi',
                 'Tahun',
                 'Pemenang I (1)',
                 'Pemenang I (2)',

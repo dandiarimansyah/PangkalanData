@@ -15,8 +15,7 @@ class CreateRealisasiAnggaranTable extends Migration
     {
         Schema::create('realisasi_anggaran', function (Blueprint $table) {
             $table->id();
-            $table->string('unit');
-            $table->string('nilai_realisasi');
+            $table->string('tahun_realisasi');
             $table->bigInteger('besar_dana');
             $table->longText('keterangan')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');

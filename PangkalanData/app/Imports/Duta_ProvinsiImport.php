@@ -20,7 +20,6 @@ class Duta_ProvinsiImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Duta_Provinsi::create([
-                    // 'provinsi' => $row[3],
                     'tahun' => $row[3],
                     'pemenang_1_1' => $row[4],
                     'pemenang_1_2' => $row[5],

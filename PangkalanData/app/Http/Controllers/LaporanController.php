@@ -249,29 +249,6 @@ class LaporanController extends Controller
     //===================================================================================================
     public function tampil_lb1(Request $request)
     {
-        // $j = $request->judul;
-        // $t = $request->tim_redaksi;
-        // $i = $request->info_produk;
-
-        // if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '') {
-        //     $data = Kamus::where('kategori', $request->kategori)
-        //         ->get();
-        // } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '') {
-        //     $data = Kamus::where('kategori', $request->kategori)
-        //         ->where('info_produk', $request->info_produk)
-        //         ->where('judul', $request->judul)
-        //         ->where('tim_redaksi', $request->tim_redaksi)
-        //         ->get();
-        // } else {
-        //     $data = Kamus::where('kategori', $request->kategori)
-        //         ->where(function ($query) use ($j, $t, $i) {
-        //             $query->where('judul', $j)
-        //                 ->orWhere('tim_redaksi', $t)
-        //                 ->orWhere('info_produk', $i);
-        //         })
-        //         ->get();
-        // }
-
         $info_produk = $request->info_produk;
         $judul = $request->judul;
         $tim_redaksi = $request->tim_redaksi;
@@ -440,48 +417,39 @@ class LaporanController extends Controller
         $kota = $request->kota;
         $nama_kegiatan = $request->nama_kegiatan;
         $sasaran = $request->sasaran;
-        $provinsi = $request->provinsi;
 
         if ($request->kota == '' and $request->nama_kegiatan == '' and $request->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Penyuluhan::all();
         } elseif ($request->kota != '' and $request->nama_kegiatan == '' and $request->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Penyuluhan::where('kota', $request->kota)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_kegiatan != '' and $request->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('nama_kegiatan', $request->nama_kegiatan)
+            $data = Penyuluhan::where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_kegiatan == '' and $request->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('sasaran', $request->sasaran)
+            $data = Penyuluhan::where('sasaran', $request->sasaran)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_kegiatan != '' and $request->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Penyuluhan::where('kota', $request->kota)
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_kegiatan == '' and $request->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Penyuluhan::where('kota', $request->kota)
                 ->where('sasaran', $request->sasaran)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_kegiatan != '' and $request->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('sasaran', $request->sasaran)
+            $data = Penyuluhan::where('sasaran', $request->sasaran)
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_kegiatan != '' and $request->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Penyuluhan::where('kota', $request->kota)
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->where('sasaran', $request->sasaran)
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');
 
-        return view('LAPORAN.KEBAHASAAN.tampil_lb4', compact('data', 'nama_kegiatan', 'provinsi', 'kota', 'sasaran'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb4', compact('data', 'nama_kegiatan', 'kota', 'sasaran'));
     }
 
     //===================================================================================================
@@ -579,18 +547,14 @@ class LaporanController extends Controller
 
         $tahun = $request->tahun;
         $pemenang = $request->pemenang;
-        $provinsi = $request->provinsi;
 
         if ($request->tahun == '' and $request->pemenang == '') {
-            $data = Duta_Nasional::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Duta_Nasional::all();
         } elseif ($request->tahun != '' and $request->pemenang == '') {
-            $data = Duta_Nasional::where('provinsi', $request->provinsi)
-                ->where('tahun', $request->tahun)
+            $data = Duta_Nasional::where('tahun', $request->tahun)
                 ->get();
         } elseif ($request->tahun == '' and $request->pemenang != '') {
-            $data = Duta_Nasional::where('provinsi', $request->provinsi)
-                ->where('pemenang_1_1', $request->pemenang)
+            $data = Duta_Nasional::where('pemenang_1_1', $request->pemenang)
                 ->orWhere('pemenang_1_2', $request->pemenang)
                 ->orWhere('pemenang_2_1', $request->pemenang)
                 ->orWhere('pemenang_2_2', $request->pemenang)
@@ -599,7 +563,6 @@ class LaporanController extends Controller
                 ->get();
         } elseif ($request->tahun != '' and $request->pemenang != '') {
             $data = Duta_Nasional::where('tahun', $request->tahun)
-                ->where('provinsi', $request->provinsi)
                 ->where('pemenang_1_1', $request->pemenang)
                 ->orWhere('pemenang_1_2', $request->pemenang)
                 ->orWhere('pemenang_2_1', $request->pemenang)
@@ -610,7 +573,7 @@ class LaporanController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        return view('LAPORAN.KEBAHASAAN.tampil_lb7', compact('data', 'provinsi', 'pemenang', 'tahun'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb7', compact('data', 'pemenang', 'tahun'));
     }
 
     //===================================================================================================
@@ -622,18 +585,14 @@ class LaporanController extends Controller
 
         $tahun = $request->tahun;
         $pemenang = $request->pemenang;
-        $provinsi = $request->provinsi;
 
         if ($request->tahun == '' and $request->pemenang == '') {
-            $data = Duta_Provinsi::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Duta_Provinsi::all();
         } elseif ($request->tahun != '' and $request->pemenang == '') {
-            $data = Duta_Provinsi::where('provinsi', $request->provinsi)
-                ->where('tahun', $request->tahun)
+            $data = Duta_Provinsi::where('tahun', $request->tahun)
                 ->get();
         } elseif ($request->tahun == '' and $request->pemenang != '') {
-            $data = Duta_Provinsi::where('provinsi', $request->provinsi)
-                ->where('pemenang_1_1', $request->pemenang)
+            $data = Duta_Provinsi::where('pemenang_1_1', $request->pemenang)
                 ->orWhere('pemenang_1_2', $request->pemenang)
                 ->orWhere('pemenang_2_1', $request->pemenang)
                 ->orWhere('pemenang_2_2', $request->pemenang)
@@ -642,7 +601,6 @@ class LaporanController extends Controller
                 ->get();
         } elseif ($request->tahun != '' and $request->pemenang != '') {
             $data = Duta_Provinsi::where('tahun', $request->tahun)
-                ->where('provinsi', $request->provinsi)
                 ->where('pemenang_1_1', $request->pemenang)
                 ->orWhere('pemenang_1_2', $request->pemenang)
                 ->orWhere('pemenang_2_1', $request->pemenang)
@@ -653,7 +611,7 @@ class LaporanController extends Controller
         }
         $data = $data->where('validasi', 'sudah');
 
-        return view('LAPORAN.KEBAHASAAN.tampil_lb8', compact('data', 'provinsi', 'pemenang', 'tahun'));
+        return view('LAPORAN.KEBAHASAAN.tampil_lb8', compact('data', 'pemenang', 'tahun'));
     }
 
     //LAPORAN S 3
@@ -797,48 +755,39 @@ class LaporanController extends Controller
         $kota = $request->kota;
         $nama_komunitas = $request->nama_komunitas;
         $alamat = $request->alamat;
-        $provinsi = $request->provinsi;
 
         if ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Komunitas_Bahasa::all();
         } elseif ($request->kota != '' and $request->nama_komunitas == '' and $request->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Bahasa::where('kota', $request->kota)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas != '' and $request->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('nama_komunitas', $request->nama_komunitas)
+            $data = Komunitas_Bahasa::where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('alamat', $request->alamat)
+            $data = Komunitas_Bahasa::where('alamat', $request->alamat)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas != '' and $request->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Bahasa::where('kota', $request->kota)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas == '' and $request->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Bahasa::where('kota', $request->kota)
                 ->where('alamat', $request->alamat)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas != '' and $request->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('alamat', $request->alamat)
+            $data = Komunitas_Bahasa::where('alamat', $request->alamat)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas != '' and $request->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Bahasa::where('kota', $request->kota)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->where('alamat', $request->alamat)
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');
 
-        return view('LAPORAN.KOMUNITAS.tampil_ld1', compact('data', 'provinsi', 'kota', 'nama_komunitas', 'alamat'));
+        return view('LAPORAN.KOMUNITAS.tampil_ld1', compact('data', 'kota', 'nama_komunitas', 'alamat'));
     }
 
     //===================================================================================================
@@ -847,48 +796,39 @@ class LaporanController extends Controller
         $kota = $request->kota;
         $nama_komunitas = $request->nama_komunitas;
         $alamat = $request->alamat;
-        $provinsi = $request->provinsi;
 
         if ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat == '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Komunitas_Sastra::all();
         } elseif ($request->kota != '' and $request->nama_komunitas == '' and $request->alamat == '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Sastra::where('kota', $request->kota)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas != '' and $request->alamat == '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('nama_komunitas', $request->nama_komunitas)
+            $data = Komunitas_Sastra::where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat != '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('alamat', $request->alamat)
+            $data = Komunitas_Sastra::where('alamat', $request->alamat)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas != '' and $request->alamat == '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Sastra::where('kota', $request->kota)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas == '' and $request->alamat != '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Sastra::where('kota', $request->kota)
                 ->where('alamat', $request->alamat)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas != '' and $request->alamat != '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('alamat', $request->alamat)
+            $data = Komunitas_Sastra::where('alamat', $request->alamat)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas != '' and $request->alamat != '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Sastra::where('kota', $request->kota)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->where('alamat', $request->alamat)
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');
 
-        return view('LAPORAN.KOMUNITAS.tampil_ld2', compact('data', 'provinsi', 'kota', 'nama_komunitas', 'alamat'));
+        return view('LAPORAN.KOMUNITAS.tampil_ld2', compact('data', 'kota', 'nama_komunitas', 'alamat'));
     }
 
     //LAPORAN S 5

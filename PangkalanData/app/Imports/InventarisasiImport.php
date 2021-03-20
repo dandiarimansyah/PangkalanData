@@ -14,7 +14,6 @@ class InventarisasiImport implements ToCollection
             if ($key >= 2) {
 
                 Inventarisasi::create([
-                    // 'unit' => 'Balai Bahasa Provinsi Jawa Tengah',
                     'tahun_anggaran' => $row[3],
                     'laptop' => $row[4],
                     'komputer' => $row[5],

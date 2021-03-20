@@ -21,7 +21,6 @@ class Komunitas_SastraImport implements ToCollection
 
                 Komunitas_Sastra::create([
                     'nama_komunitas' => $row[3],
-                    // 'provinsi' => $row[4],
                     'kota' => $row[4],
                     'kecamatan' => $row[5],
                     'alamat' => $row[6],

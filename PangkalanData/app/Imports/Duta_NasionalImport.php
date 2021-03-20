@@ -14,7 +14,6 @@ class Duta_NasionalImport implements ToCollection
             if ($key >= 2) {
 
                 Duta_Nasional::create([
-                    // 'provinsi' => $row[3],
                     'tahun' => $row[3],
                     'pemenang_1_1' => $row[4],
                     'pemenang_1_2' => $row[5],

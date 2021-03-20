@@ -15,7 +15,6 @@ class CreateMusikalisasiPuisiProvinsiTable extends Migration
     {
         Schema::create('musikalisasi_puisi_provinsi', function (Blueprint $table) {
             $table->id();
-            $table->string("provinsi");
             $table->string("tahun")->nullable();
             $table->string("pemenang_1")->nullable();
             $table->string("pemenang_2")->nullable();

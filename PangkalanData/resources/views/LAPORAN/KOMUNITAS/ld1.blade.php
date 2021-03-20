@@ -17,7 +17,7 @@
           <form action="{{ URL('/laporan/komunitas/komunitas_bahasa/tampil')}}" method="GET">
             @csrf
 
-        <div class="inputfield-select">
+        {{-- <div class="inputfield-select">
             <label>Berdasarkan Provinsi</label>
             <div class="custom_select">
               <select name="provinsi">
@@ -57,7 +57,7 @@
                 <option value="">Kalimantan Utara</option> -->
               </select>
             </div>
-        </div> 
+        </div>  --}}
 
         <div class="inputfield-select">
           <label>Berdasarkan Kabupaten/Kota</label>

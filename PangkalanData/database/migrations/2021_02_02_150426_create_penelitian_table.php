@@ -16,7 +16,6 @@ class CreatePenelitianTable extends Migration
         Schema::create('penelitian', function (Blueprint $table) {
             $table->id();
             $table->string("kategori");
-            $table->string("unit");
             $table->string("peneliti");
             $table->string("judul");
             $table->string("kerja_sama")->nullable();
