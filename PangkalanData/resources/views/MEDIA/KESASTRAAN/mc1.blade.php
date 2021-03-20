@@ -63,7 +63,7 @@
                             @if (Auth::user()->level != 'tamu')
                                 @if ($a->media == "")
                                 <div style="margin:5px auto">
-                                    <form method="POST" id="media_form" role="form" action="/media/kesastraan/bengkel_sastra_dan_bahasa/{{ $a->id }}" enctype="multipart/form-data">
+                                    <form method="POST" id="media_form" role="form" action="{{ url('/media/kesastraan/bengkel_sastra_dan_bahasa/' . $a->id)}}" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
                                         <input style="width: 200px" type="file" name="media">
