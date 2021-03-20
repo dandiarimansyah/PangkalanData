@@ -13,7 +13,7 @@ class KepegawaianImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 2) {
+            if ($key >= 2&& ($row[3] != null || $row[4] != null || $row[5] != null || $row[6] != null || $row[7] != null || $row[8] != null || $row[9] != null || $row[10] != null || $row[11] != null || $row[12] != null || $row[13] != null || $row[14] != null || $row[15] != null || $row[16] != null || $row[17] != null || $row[18] != null || $row[19] != null || $row[20] != null || $row[21] != null || $row[22] != null || $row[23] != null || $row[24] != null || $row[25] != null || $row[26] != null || $row[27] != null || $row[28] != null || $row[29] != null)) {
 
                 // $tgl = ($row[6] - 25569) * 86400;
                 // $tanggal = gmdate('Y-m-d', $tgl);

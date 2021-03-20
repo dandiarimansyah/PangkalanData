@@ -11,7 +11,7 @@ class InventarisasiImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 2) {
+            if ($key >= 2  && ($row[3] != null)) {
 
                 Inventarisasi::create([
                     'tahun_anggaran' => $row[3],

@@ -11,7 +11,7 @@ class Musikalisasi_Puisi_NasionalImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 2) {
+            if ($key >= 2 && ($row[3] != null || $row[4] != null || $row[5] != null || $row[6] != null || $row[7] != null || $row[8] != null || $row[9] != null)) {
 
                 // $tgl = ($row[6] - 25569) * 86400;
                 // $tanggal = gmdate('Y-m-d', $tgl);
