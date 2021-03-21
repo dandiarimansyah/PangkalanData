@@ -32,7 +32,7 @@ class AdminController extends Controller
         ]);
 
         $random = Str::random(10);
-        $email = $random . "@gmail.com";
+        // $email = $random . "@gmail.com";
 
         $data = new User();
         $data->name = $request->name;
@@ -71,7 +71,7 @@ class AdminController extends Controller
         ]);
 
         $random = Str::random(10);
-        $email = $random . "@gmail.com";
+        // $email = $random . "@gmail.com";
 
         $data = new User();
         $data->name = $request->name;
@@ -110,7 +110,7 @@ class AdminController extends Controller
         ]);
 
         $random = Str::random(10);
-        $email = $random . "@gmail.com";
+        // $email = $random . "@gmail.com";
 
         $data = new User();
         $data->name = $request->name;

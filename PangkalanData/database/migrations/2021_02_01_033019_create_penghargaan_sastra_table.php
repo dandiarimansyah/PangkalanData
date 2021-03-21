@@ -17,7 +17,7 @@ class CreatePenghargaanSastraTable extends Migration
             $table->id();
             $table->string("kategori");
             $table->string("tahun")->nullable();
-            $table->string("deskripsi")->nullable();
+            $table->longText("deskripsi")->nullable();
             $table->string('media')->nullable();
             $table->enum('validasi', ['belum', 'sudah'])->default('belum');
             $table->timestamps();
