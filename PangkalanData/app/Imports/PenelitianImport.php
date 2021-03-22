@@ -13,11 +13,11 @@ class PenelitianImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 2 && ($row[3] != null || $row[4] != null || $row[5] != null || $row[13] != null)) {
 
-                $tgl = ($row[7] - 25569) * 86400;
-                $tanggal = gmdate('Y-m-d', $tgl);
+                $tgl = explode("/", $row[7]);
+                $tanggal = $tgl[2] . "-" . $tgl[1] . "-" . $tgl[0];
 
-                $tgl2 = ($row[8] - 25569) * 86400;
-                $tanggal2 = gmdate('Y-m-d', $tgl2);
+                $tgl2 = explode("/", $row[8]);
+                $tanggal2 = $tgl2[2] . "-" . $tgl2[1] . "-" . $tgl2[0];
 
                 $data = new Penelitian();
                 $data->kategori = $row[3];

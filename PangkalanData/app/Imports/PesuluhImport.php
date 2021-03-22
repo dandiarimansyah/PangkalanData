@@ -13,8 +13,8 @@ class PesuluhImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 1  && ($row[1] != null)) {
 
-                $tgl = ($row[3] - 25569) * 86400;
-                $tanggal = gmdate('Y-m-d', $tgl);
+                $tgl = explode("/", $row[3]);
+                $tanggal = $tgl[2] . "-" . $tgl[1] . "-" . $tgl[0];
 
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
