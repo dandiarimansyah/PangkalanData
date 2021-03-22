@@ -41,9 +41,7 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <!-- <th>TANGGAL DIPERBARUI</th> -->
-                    <!-- <th>PROVINSI</th> -->
-                    <!-- <th>UNIT KERJA</th> -->
+                    <th>TANGGAL DIPERBARUI</th> 
                     <th>JUMLAH BUKU</th>
                     <th>JUMLAH JUDUL</th>
                     <th>JENIS</th>
@@ -59,9 +57,7 @@
                 @forelse ($perpustakaan as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <!-- <td></td> -->
-                        <!-- <td>{{ $a -> provinsi}}</td> -->
-                        <!-- <td>{{ $a -> unit}}</td> -->
+                        <td>{{ $a -> updated_at->format('d-m-Y')}}</td>
                         <td>{{ $a -> jumlah_buku}}</td>
                         <td>{{ $a -> jumlah_judul}}</td>
                         <td>{{ $a -> jenis_buku}}</td>

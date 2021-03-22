@@ -1,5 +1,29 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    .content-table th, .content-table td {
+        padding: 10px 8px 10px 8px !important;
+        max-width: 170px !important;
+    }
+
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuValidasi')
@@ -60,7 +84,21 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> kota}}</td>
-                        <td>{{ $a -> tanggal_awal}} - {{ $a -> tanggal_akhir}}</td>
+                        <td>
+                            @if ($a -> tanggal_awal != null)
+                                {{ \Carbon\Carbon::parse($a->tanggal_awal)->format('d-m-Y')}}
+                            @else
+                                -
+                            @endif
+                            <br>
+                            s.d
+                            <br>
+                            @if ($a -> tanggal_akhir != null)
+                                {{ \Carbon\Carbon::parse($a->tanggal_akhir)->format('d-m-Y')}}
+                            @else
+                                -
+                            @endif 
+                        </td>
                         <td>{{ $a -> nama_kegiatan}}</td>
                         <td>{{ $a -> narasumber}}</td>
                         <td>{{ $a -> sasaran}}</td>
@@ -76,7 +114,7 @@
                             @endif
                         </td>
                         
-                        <td style="display: flex; justify-content:center">
+                        <td>
                         <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 

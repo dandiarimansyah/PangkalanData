@@ -22,6 +22,7 @@
                     <th>TIM REDAKSI</th>
                     <th>ISBN</th>
                     <th>PENERBIT</th>
+                    <th>TAHUN TERBIT</th>
                     <th>LINGKUP</th>
                     <th>KETERANGAN</th>
                     <th>UNIT/SATKER</th>
@@ -45,7 +46,6 @@
                       <td>{{ $a -> tahun_terbit}}</td>
                       <td>{{ $a -> keterangan}}</td>
                       <td>{{ $a -> info_produk}}</td>
-                      <!-- <td></td> -->
                   </tr>
               @empty
                   <tr>

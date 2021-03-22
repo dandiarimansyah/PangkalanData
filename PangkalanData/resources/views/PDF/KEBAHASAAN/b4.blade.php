@@ -63,7 +63,9 @@
                             @else
                                 -
                             @endif
-                                s.d
+                            <br>
+                            s.d
+                            <br>
                             @if ($a -> tanggal_akhir != null)
                                 {{ \Carbon\Carbon::parse($a->tanggal_akhir)->format('d-m-Y')}}
                             @else

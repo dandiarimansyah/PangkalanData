@@ -146,21 +146,6 @@
                             @csrf
                             @method('PUT')
                     
-                      <div class="alert-danger">{{ $errors->first('kantor') }}</div>
-                      <div class="inputfield-select">
-                          <label>	Balai/Kantor*</label>
-                          <div class="custom_select">
-                            <select id="kantor" name="kantor">
-                              <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
-                            </select>
-                          </div>
-                      </div> 
-
-                      <div class="alert-danger">{{ $errors->first('alamat') }}</div>
-                      <div class="inputfield">
-                          <label>Alamat</label>
-                          <textarea id="alamat" name="alamat" class="textarea"></textarea>
-                      </div>  
 
                       <div class="inputfield-radio">
                         <label class="label-atas">Status Tanah</label>
@@ -268,6 +253,7 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
+            let alamat = $(this).data('alamat');
                 let kantor = $(this).data('kantor');
                 let kondisi = $(this).data('kondisi');
                 let status_peroleh = $(this).data('status_peroleh');
@@ -283,7 +269,7 @@
                 $('#kantor option').filter(function(){
                     return ($(this).val() == kantor)
                 }).prop('selected', true);
-
+                
                 $('#kondisi option').filter(function(){
                     return ($(this).val() == kondisi)
                 }).prop('selected', true);
@@ -292,10 +278,23 @@
                     return ($(this).val() == status_peroleh)
                 }).prop('selected', true);
 
-                $('#status_tanah').val(status_tanah);
-                $('#sertif_tanah').val(sertif_tanah);
-                $('#status_bangunan').val(status_bangunan);
-                $('#imb').val(imb);
+                $('input[name = "imb"]').filter(function(){
+                    return ($(this).val() == imb)
+                }).prop('checked', true);
+
+                $('input[name = "status_tanah"]').filter(function(){
+                    return ($(this).val() == status_tanah)
+                }).prop('checked', true);
+
+                $('input[name = "sertif_tanah"]').filter(function(){
+                    return ($(this).val() == sertif_tanah)
+                }).prop('checked', true);
+
+                $('input[name = "status_bangunan"]').filter(function(){
+                    return ($(this).val() == status_bangunan)
+                }).prop('checked', true);
+
+                $('#alamat').val(alamat);
                 $('#keterangan').val(keterangan);
                 
                 $('#edit_form').attr('action', '/operator/edit/sekretariat/tanah_dan_bangunan/' + id);

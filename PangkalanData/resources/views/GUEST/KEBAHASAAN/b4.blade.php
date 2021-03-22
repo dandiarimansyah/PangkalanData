@@ -33,8 +33,21 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> kota}}</td>
-                        <td>{{ $a -> tanggal_awal}} - {{ $a -> tanggal_akhir}}</td>
-                        <td>{{ $a -> nama_kegiatan}}</td>
+                        <td>
+                            @if ($a -> tanggal_awal != null)
+                                {{ \Carbon\Carbon::parse($a->tanggal_awal)->format('d-m-Y')}}
+                            @else
+                                -
+                            @endif
+                            <br>
+                            s.d
+                            <br>
+                            @if ($a -> tanggal_akhir != null)
+                                {{ \Carbon\Carbon::parse($a->tanggal_akhir)->format('d-m-Y')}}
+                            @else
+                                -
+                            @endif 
+                        </td>                        <td>{{ $a -> nama_kegiatan}}</td>
                         <td>{{ $a -> narasumber}}</td>
                         <td>{{ $a -> sasaran}}</td>
                         <td>{{ $a -> jumlah_peserta}}</td>

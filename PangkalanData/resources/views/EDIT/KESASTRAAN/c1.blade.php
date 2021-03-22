@@ -63,11 +63,14 @@
                                 -
                             @endif
                             <br>
+                            s.d
+                            <br>
                             @if ($a -> tanggal_akhir_pelaksanaan != null)
                                 {{ \Carbon\Carbon::parse($a->tanggal_akhir_pelaksanaan)->format('d-m-Y')}}
                             @else
                                 -
-                            @endif 
+                            @endif
+                        </td>
                         <!-- <td></td> -->
                         <td>{{ $a -> nama_kegiatan}}</td>
                         <td>{{ $a -> pemateri}}</td>
