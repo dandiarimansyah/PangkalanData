@@ -55,7 +55,7 @@
                         <td>1. {{ $a -> pemenang_3_1}} <br> 2. {{ $a -> pemenang_3_2}}</td>
                         <td>{{ $a -> keterangan}}</td>
 
-                        <td style="display: flex; justify-content:center">
+                        <td>
                             <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 

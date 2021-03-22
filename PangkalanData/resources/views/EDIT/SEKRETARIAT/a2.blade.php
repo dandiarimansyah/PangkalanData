@@ -51,7 +51,7 @@
                         <!-- <td>{{ $a -> unit}}</td> -->
                         <td class="rupiah" data-nilai="{{ $a->besar_dana }}">{{ $a -> besar_dana}}</td>
                         <td>{{ $a -> keterangan}}</td>
-                        <td style="display: flex; justify-content:center">
+                        <td>
                             <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 

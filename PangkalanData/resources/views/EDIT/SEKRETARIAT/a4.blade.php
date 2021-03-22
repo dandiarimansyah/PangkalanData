@@ -68,7 +68,7 @@
                         <td>1. {{ $a -> ttd_1}} <br>2. {{ $a -> ttd_2}}</td>
                         <!-- <td>{{ $a -> instansi_1}}{{ $a -> instansi_2}}</td> -->
 
-                        <td style="display: flex; justify-content:center">
+                        <td>
                             <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 

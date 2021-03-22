@@ -57,7 +57,7 @@
                         <td>{{ $a -> jumlah_pengunjung}}</td>
                         <td>{{ $a -> sumber_data}}</td>
 
-                        <td style="display: flex; justify-content:center">
+                        <td>
                             <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 
