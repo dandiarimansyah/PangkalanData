@@ -17,17 +17,18 @@ class PenyuluhanImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 2  && ($row[3] != null)) {
 
-                $tgl = explode("/", $row[5]);
-                $tanggal = $tgl[2] . "-" . $tgl[1] . "-" . $tgl[0];
+                // $tgl = explode("/", $row[5]);
+                // $tanggal = $tgl[2] . "-" . $tgl[1] . "-" . $tgl[0];
 
-                $tgl2 = explode("/", $row[6]);
-                $tanggal2 = $tgl2[2] . "-" . $tgl2[1] . "-" . $tgl2[0];
+                // $tgl2 = explode("/", $row[6]);
+                // $tanggal2 = $tgl2[2] . "-" . $tgl2[1] . "-" . $tgl2[0];
+                // dd($tanggal);
 
-                // $tgl = ($row[5] - 25569) * 86400;
-                // $tanggal = gmdate('Y-m-d', $tgl);
+                $tgl = ($row[5] - 25569) * 86400;
+                $tanggal = gmdate('Y-m-d', $tgl);
 
-                // $tgl2 = ($row[6] - 25569) * 86400;
-                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+                $tgl2 = ($row[6] - 25569) * 86400;
+                $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 $data = new Penyuluhan();
                 $data->kota = $row[3];
