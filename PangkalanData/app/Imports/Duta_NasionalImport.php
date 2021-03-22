@@ -13,16 +13,16 @@ class Duta_NasionalImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 2 && ($row[3] != null || $row[4] != null || $row[5] != null || $row[6] != null || $row[7] != null || $row[8] != null || $row[9] != null || $row[10] != null)) {
 
-                Duta_Nasional::create([
-                    'tahun' => $row[3],
-                    'pemenang_1_1' => $row[4],
-                    'pemenang_1_2' => $row[5],
-                    'pemenang_2_1' => $row[6],
-                    'pemenang_2_2' => $row[7],
-                    'pemenang_3_1' => $row[8],
-                    'pemenang_3_2' => $row[9],
-                    'keterangan' => $row[10],
-                ]);
+                $data = new Duta_Nasional();
+                $data->tahun = $row[3];
+                $data->pemenang_1_1 = $row[4];
+                $data->pemenang_1_2 = $row[5];
+                $data->pemenang_2_1 = $row[6];
+                $data->pemenang_2_2 = $row[7];
+                $data->pemenang_3_1 = $row[8];
+                $data->pemenang_3_2 = $row[9];
+                $data->keterangan = $row[10];
+                $data->save();
             }
         }
     }

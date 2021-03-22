@@ -19,11 +19,11 @@ class Penghargaan_BahasaImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Penghargaan_Bahasa::create([
-                    'kategori' => $row[3],
-                    'tahun' => $row[4],
-                    'deskripsi' => $row[5],
-                ]);
+                $data = new Penghargaan_Bahasa();
+                $data->kategori = $row[3];
+                $data->tahun = $row[4];
+                $data->deskripsi = $row[5];
+                $data->save();
             }
         }
     }

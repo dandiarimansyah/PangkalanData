@@ -19,13 +19,13 @@ class PerpustakaanImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Perpustakaan::create([
-                    'jumlah_buku' => $row[3],
-                    'jumlah_judul' => $row[4],
-                    'jenis_buku' => $row[5],
-                    'jumlah_pengunjung' => $row[6],
-                    'sumber_data' => $row[7],
-                ]);
+                $data = new Perpustakaan();
+                $data->jumlah_buku = $row[3];
+                $data->jumlah_judul = $row[4];
+                $data->jenis_buku = $row[5];
+                $data->jumlah_pengunjung = $row[6];
+                $data->sumber_data = $row[7];
+                $data->save();
             }
         }
     }

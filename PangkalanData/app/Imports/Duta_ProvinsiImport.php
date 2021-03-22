@@ -19,18 +19,18 @@ class Duta_ProvinsiImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Duta_Provinsi::create([
-                    'tahun' => $row[3],
-                    'pemenang_1_1' => $row[4],
-                    'pemenang_1_2' => $row[5],
-                    'pemenang_2_1' => $row[6],
-                    'pemenang_2_2' => $row[7],
-                    'pemenang_3_1' => $row[8],
-                    'pemenang_3_2' => $row[9],
-                    'favorit_1' => $row[10],
-                    'favorit_2' => $row[11],
-                    'keterangan' => $row[12],
-                ]);
+                $data = new Duta_Provinsi();
+                $data->tahun = $row[3];
+                $data->pemenang_1_1 = $row[4];
+                $data->pemenang_1_2 = $row[5];
+                $data->pemenang_2_1 = $row[6];
+                $data->pemenang_2_2 = $row[7];
+                $data->pemenang_3_1 = $row[8];
+                $data->pemenang_3_2 = $row[9];
+                $data->favorit_1 = $row[10];
+                $data->favorit_2 = $row[11];
+                $data->keterangan = $row[12];
+                $data->save();
             }
         }
     }

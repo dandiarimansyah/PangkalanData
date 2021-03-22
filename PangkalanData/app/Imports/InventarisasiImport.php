@@ -13,21 +13,21 @@ class InventarisasiImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 2  && ($row[3] != null)) {
 
-                Inventarisasi::create([
-                    'tahun_anggaran' => $row[3],
-                    'laptop' => $row[4],
-                    'komputer' => $row[5],
-                    'printer' => $row[6],
-                    'fotocopy' => $row[7],
-                    'faximili' => $row[8],
-                    'LCD' => $row[9],
-                    'TV' => $row[10],
-                    'lain' => $row[11],
-                    'furniture' => $row[12],
-                    'roda_dua' => $row[13],
-                    'roda_empat' => $row[14],
-                    'roda_enam' => $row[15],
-                ]);
+                $data = new Inventarisasi();
+                $data->tahun_anggaran = $row[3];
+                $data->laptop = $row[4];
+                $data->komputer = $row[5];
+                $data->printer = $row[6];
+                $data->fotocopy = $row[7];
+                $data->faximili = $row[8];
+                $data->LCD = $row[9];
+                $data->TV = $row[10];
+                $data->lain = $row[11];
+                $data->furniture = $row[12];
+                $data->roda_dua = $row[13];
+                $data->roda_empat = $row[14];
+                $data->roda_enam = $row[15];
+                $data->save();
             }
         }
     }

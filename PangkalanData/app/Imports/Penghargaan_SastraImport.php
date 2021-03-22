@@ -19,11 +19,11 @@ class Penghargaan_SastraImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Penghargaan_Sastra::create([
-                    'kategori' => $row[3],
-                    'tahun' => $row[4],
-                    'deskripsi' => $row[5],
-                ]);
+                $data = new Penghargaan_Sastra();
+                $data->kategori = $row[3];
+                $data->tahun = $row[4];
+                $data->deskripsi = $row[5];
+                $data->save();
             }
         }
     }

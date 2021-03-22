@@ -20,10 +20,10 @@ class AnggaranImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
                 // dd($tanggal2);
 
-                Anggaran::create([
-                    'tahun_anggaran' => $row[3],
-                    'nilai_anggaran' => $row[4],
-                ]);
+                $data = new Anggaran();
+                $data->tahun_anggaran = $row[3];
+                $data->nilai_anggaran = $row[4];
+                $data->save();
             }
         }
     }

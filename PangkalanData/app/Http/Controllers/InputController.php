@@ -415,6 +415,7 @@ class InputController extends Controller
         $data->no_issn = $request->no_issn;
         $data->lingkup = $request->lingkup;
         $data->penerbit = $request->penerbit;
+        $data->tahun_terbit = $request->tahun_terbit;
         $data->keterangan = $request->keterangan;
         $data->info_produk = $request->info_produk;
         if ($request->media == null) {

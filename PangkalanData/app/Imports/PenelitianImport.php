@@ -19,19 +19,19 @@ class PenelitianImport implements ToCollection
                 $tgl2 = ($row[8] - 25569) * 86400;
                 $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Penelitian::create([
-                    'kategori' => $row[3],
-                    'peneliti' => $row[4],
-                    'judul' => $row[5],
-                    'kerja_sama' => $row[6],
-                    'tanggal_awal' => $tanggal,
-                    'tanggal_akhir' => $tanggal2,
-                    'lama_penelitian' => $row[9],
-                    'tipe_waktu' => $row[10],
-                    'publikasi' => $row[11],
-                    'tahun_terbit' => $row[12],
-                    'abstrak' => $row[13],
-                ]);
+                $data = new Penelitian();
+                $data->kategori = $row[3];
+                $data->peneliti = $row[4];
+                $data->judul = $row[5];
+                $data->kerja_sama = $row[6];
+                $data->tanggal_awal = $tanggal;
+                $data->tanggal_akhir = $tanggal2;
+                $data->lama_penelitian = $row[9];
+                $data->tipe_waktu = $row[10];
+                $data->publikasi = $row[11];
+                $data->tahun_terbit = $row[12];
+                $data->abstrak = $row[13];
+                $data->save();
             }
         }
     }

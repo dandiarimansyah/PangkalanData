@@ -19,16 +19,16 @@ class Tanah_BangunanImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Tanah_Bangunan::create([
-                    'alamat' => $row[3],
-                    'status_tanah' => $row[4],
-                    'sertif_tanah' => $row[5],
-                    'status_bangunan' => $row[6],
-                    'imb' => $row[7],
-                    'kondisi' => $row[8],
-                    'status_peroleh' => $row[9],
-                    'keterangan' => $row[10],
-                ]);
+                $data = new Tanah_Bangunan();
+                $data->alamat = $row[3];
+                $data->status_tanah = $row[4];
+                $data->sertif_tanah = $row[5];
+                $data->status_bangunan = $row[6];
+                $data->imb = $row[7];
+                $data->kondisi = $row[8];
+                $data->status_peroleh = $row[9];
+                $data->keterangan = $row[10];
+                $data->save();
             }
         }
     }

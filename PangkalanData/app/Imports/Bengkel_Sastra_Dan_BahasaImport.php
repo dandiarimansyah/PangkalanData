@@ -18,20 +18,19 @@ class Bengkel_Sastra_Dan_BahasaImport implements ToCollection
 
                 $tgl2 = ($row[6] - 25569) * 86400;
                 $tanggal2 = gmdate('Y-m-d', $tgl2);
-                // dd($tanggal2);
 
-                Bengkel_Sastra_Dan_Bahasa::create([
-                    'kota' => $row[3],
-                    'nama_kegiatan' => $row[4],
-                    'tanggal_awal_pelaksanaan' => $tanggal,
-                    'tanggal_akhir_pelaksanaan' => $tanggal2,
-                    'pemateri' => $row[7],
-                    'jumlah_peserta' => $row[8],
-                    'jumlah_sekolah' => $row[9],
-                    'jumlah_sekolah_yang_dibina' => $row[10],
-                    'nama_sekolah_yang_dibina' => $row[11],
-                    'aktivitas' => $row[12],
-                ]);
+                $data = new Bengkel_Sastra_Dan_Bahasa();
+                $data->kota = $row[3];
+                $data->nama_kegiatan = $row[4];
+                $data->tanggal_awal_pelaksanaan = $tanggal;
+                $data->tanggal_akhir_pelaksanaan = $tanggal2;
+                $data->pemateri = $row[7];
+                $data->jumlah_peserta = $row[8];
+                $data->jumlah_sekolah = $row[9];
+                $data->jumlah_sekolah_yang_dibina = $row[10];
+                $data->nama_sekolah_yang_dibina = $row[11];
+                $data->aktivitas = $row[12];
+                $data->save();
             }
         }
     }

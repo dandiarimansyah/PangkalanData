@@ -13,7 +13,6 @@ use Maatwebsite\Excel\Concerns\WithStyles;
 
 class PerpustakaanExport implements FromCollection, WithMapping, WithHeadings, ShouldAutoSize, WithEvents
 {
-
     /**
      * @return \Illuminate\Support\Collection
      */

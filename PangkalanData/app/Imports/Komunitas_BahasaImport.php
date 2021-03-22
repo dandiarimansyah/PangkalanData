@@ -19,14 +19,14 @@ class Komunitas_BahasaImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Komunitas_Bahasa::create([
-                    'nama_komunitas' => $row[3],
-                    'kota' => $row[4],
-                    'kecamatan' => $row[5],
-                    'alamat' => $row[6],
-                    'koordinat' => $row[7],
-                    'keterangan' => $row[8],
-                ]);
+                $data = new Komunitas_Bahasa();
+                $data->nama_komunitas = $row[3];
+                $data->kota = $row[4];
+                $data->kecamatan = $row[5];
+                $data->alamat = $row[6];
+                $data->koordinat = $row[7];
+                $data->keterangan = $row[8];
+                $data->save();
             }
         }
     }

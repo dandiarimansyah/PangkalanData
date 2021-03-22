@@ -19,15 +19,15 @@ class Terbitan_UmumImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Terbitan_Umum::create([
-                    'kategori' => $row[3],
-                    'judul' => $row[4],
-                    'penulis' => $row[5],
-                    'no_isbn' => $row[6],
-                    'tahun_terbit' => $row[7],
-                    'deskripsi' => $row[8],
-                    'info_produk' => $row[9],
-                ]);
+                $data = new Terbitan_Umum();
+                $data->kategori = $row[3];
+                $data->judul = $row[4];
+                $data->penulis = $row[5];
+                $data->no_isbn = $row[6];
+                $data->tahun_terbit = $row[7];
+                $data->deskripsi = $row[8];
+                $data->info_produk = $row[9];
+                $data->save();
             }
         }
     }

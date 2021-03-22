@@ -19,18 +19,18 @@ class JurnalImport implements ToCollection
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                Jurnal::create([
-                    'kategori' => $row[3],
-                    'judul' => $row[4],
-                    'tim_redaksi' => $row[5],
-                    'volume' => $row[6],
-                    'no_issn' => $row[7],
-                    'lingkup' => $row[8],
-                    'penerbit' => $row[9],
-                    'tahun_terbit' => $row[10],
-                    'keterangan' => $row[11],
-                    'info_produk' => $row[12],
-                ]);
+                $data = new Jurnal();
+                $data->kategori = $row[3];
+                $data->judul = $row[4];
+                $data->tim_redaksi = $row[5];
+                $data->volume = $row[6];
+                $data->no_issn = $row[7];
+                $data->lingkup = $row[8];
+                $data->penerbit = $row[9];
+                $data->tahun_terbit = $row[10];
+                $data->keterangan = $row[11];
+                $data->info_produk = $row[12];
+                $data->save();
             }
         }
     }
