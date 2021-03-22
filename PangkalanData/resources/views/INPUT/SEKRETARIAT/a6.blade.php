@@ -40,26 +40,6 @@
       <form role="form" action="{{url('/operator/input/sekretariat/perpustakaan')}}" method="POST">
           @csrf
 
-      <div class="inputfield">
-            <label>Provinsi</label>
-            <input readonly type="text" value="Jawa Tengah" class="input">
-        </div> 
-
-        <!-- <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
-        <div class="inputfield-select">
-            <label>Provinsi*</label>
-            <div class="custom_select">
-              <select name="provinsi">
-                <option value="Jawa Tengah">Jawa Tengah</option>
-              </select>
-            </div>
-        </div>  -->
-
-        <!-- <div class="inputfield">
-          <label>Unit/Satuan Kerja</label>
-          <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
-      </div>  -->
-
         <div class="alert-danger">{{ $errors->first('jumlah_buku') }}</div>
         <div class="inputfield">
             <label>Jumlah Buku</label>

@@ -199,7 +199,6 @@ class LaporanController extends Controller
                 ->get();
         }
 
-
         $data = $data->where('validasi', 'sudah');
 
         return view('LAPORAN.SEKRETARIAT.tampil_la4', compact('data', 'kategori', 'perihal'));
