@@ -45,13 +45,8 @@
   <div class="wrapper">
     <div class="form">
 
-    <form role="form" action="{{url('/operator/input/kebahasaan/pesuluh/{{$penyuluhan->id}}')}}" method="POST">
+    <form role="form" action="{{url('/operator/input/kebahasaan/pesuluh/'.$penyuluhan->id)}}" method="POST">
         @csrf
-
-      <div class="inputfield">
-          <label>Provinsi</label>
-          <input readonly type="text" value="{{$penyuluhan->provinsi}}" class="input">
-      </div> 
 
       <div class="inputfield">
           <label>Kabupaten/Kota</label>

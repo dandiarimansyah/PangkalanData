@@ -16,7 +16,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>KEGIATAN</th>
                     <th>TAHUN</th>
@@ -33,18 +32,15 @@
                 @forelse ($pesuluh as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        {{-- <td>{{ $a -> $penyuluhan -> provinsi}}</td> --}}
-                        {{-- <td>{{ $a -> $penyuluhan -> kota}}</td> --}}
-                        {{-- <td>{{ $a -> $penyuluhan -> nama_kegiatan}}</td> --}}
+                        <td>{{ $a -> penyuluhan -> kota}}</td>
+                        <td>{{ $a -> penyuluhan -> nama_kegiatan}}</td>
                         <td>Tahun</td>
                         <td>{{ $a -> nama}}</td>
                         <td>{{ $a -> tempat_lahir}}</td>
                         <td>{{ $a -> tanggal_lahir}}</td>
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> tingkat}}</td>
+
                     </tr>
                 @empty
                     <tr>

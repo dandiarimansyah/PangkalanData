@@ -110,8 +110,8 @@
                                 data-printer="{{ $a->printer }}"
                                 data-fotocopy="{{ $a->fotocopy }}"
                                 data-faximili="{{ $a->faximili }}"
-                                data-LCD="{{ $a->LCD }}"
-                                data-TV="{{ $a->TV }}"
+                                data-lcd="{{ $a->LCD }}"
+                                data-tv="{{ $a->TV }}"
                                 data-lain="{{ $a->lain }}"
                                 data-furniture="{{ $a->furniture }}"
                                 data-roda_dua="{{ $a->roda_dua }}"
@@ -205,13 +205,13 @@
                                 <div class="alert-danger">{{ $errors->first('LCD') }}</div>
                                 <div class="inputfield-list">
                                     <li> <label>LCD Projector</label> </li>
-                                    <input id="LCD" name="LCD" type="text" class="input">
+                                    <input id="lcd" name="LCD" type="text" class="input">
                                 </div> 
 
                                 <div class="alert-danger">{{ $errors->first('TV') }}</div>
                                 <div class="inputfield-list">
                                     <li> <label>TV</label> </li>
-                                    <input id="TV" name="TV" type="text" class="input">
+                                    <input id="tv" name="TV" type="text" class="input">
                                 </div> 
 
                                 <div class="alert-danger">{{ $errors->first('lain') }}</div>
@@ -286,8 +286,8 @@
                 let printer = $(this).data('printer');
                 let fotocopy = $(this).data('fotocopy');
                 let faximili = $(this).data('faximili');
-                let LCD = $(this).data('LCD');
-                let TV = $(this).data('TV');
+                let lcd = $(this).data('lcd');
+                let tv = $(this).data('tv');
                 let lain = $(this).data('lain');
                 let furniture = $(this).data('furniture');
                 let roda_dua = $(this).data('roda_dua');
@@ -306,8 +306,8 @@
                 $('#printer').val(printer);
                 $('#fotocopy').val(fotocopy);
                 $('#faximili').val(faximili);
-                $('#LCD').val(LCD);
-                $('#TV').val(TV);
+                $('#lcd').val(lcd);
+                $('#tv').val(tv);
                 $('#lain').val(lain);
                 $('#furniture').val(furniture);
                 $('#roda_dua').val(roda_dua);

@@ -1,5 +1,29 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    .content-table th, .content-table td {
+        padding: 10px 8px 10px 8px !important;
+        max-width: 170px !important;
+    }
+
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuInput')
@@ -42,7 +66,6 @@
         <thead>
             <tr>
                 <th>NO</th>
-                <th>PROVINSI</th>
                 <th>KABUPATEN/KOTA</th>
                 <th>TANGGAL</th>
                 <th>KEGIATAN</th>
@@ -59,7 +82,6 @@
             @forelse ($penyuluhan as $key => $a)
                 <tr>
                     <td>{{ $key + 1}}</td>
-                    <td>{{ $a -> provinsi}}</td>
                     <td>{{ $a -> kota}}</td>
                     <td>{{ $a -> tanggal_awal}} - {{ $a -> tanggal_akhir}}</td>
                     <td>{{ $a -> nama_kegiatan}}</td>
@@ -77,7 +99,7 @@
                         @endif
                     </td>
                     
-                    <td style="display: flex; justify-content:center">
+                    <td>
                         <a class="edit" href="{{ url('/operator/input/kebahasaan/pesuluh/' . $a->id) }}" data-toggle="tooltip">Pilih</a>
                     </td>
                 </tr>
