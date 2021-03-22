@@ -147,7 +147,6 @@ class InputController extends Controller
         ]);
 
         $data = new Anggaran();
-        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->tahun_anggaran = $request->tahun_anggaran;
         $data->nilai_anggaran = $request->nilai_anggaran;
         $data->save();
@@ -163,7 +162,6 @@ class InputController extends Controller
         ]);
 
         $data = new Realisasi_Anggaran();
-        $data->unit = "Balai Bahasa Provinsi Jawa Tengah";
         $data->tahun_realisasi = $request->tahun_realisasi;
         $data->besar_dana = $request->besar_dana;
         $data->keterangan = $request->keterangan;
