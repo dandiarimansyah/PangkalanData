@@ -17,7 +17,7 @@
                 <tr>
                     <th>NO</th>
                     <th>TAHUN ANGGARAN</th>
-                    <th>UNIT/SATUAN KERJA</th>
+                    <!-- <th>UNIT/SATUAN KERJA</th> -->
                     <th>NILAI ANGGARAN(Rp.)</th>
                 </tr>
             </thead>
@@ -28,7 +28,7 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> tahun_anggaran}}</td>
-                        <td>{{ $a -> unit}}</td>
+                        <!-- <td>{{ $a -> unit}}</td> -->
                         <td class="rupiah" data-nilai="{{ $a->nilai_anggaran }}">{{ $a -> nilai_anggaran}}</td>
                     </tr>
                 @empty
