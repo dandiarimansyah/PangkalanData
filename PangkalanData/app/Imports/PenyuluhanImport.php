@@ -13,17 +13,17 @@ class PenyuluhanImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 2  && ($row[3] != null)) {
 
-                // $tgl = ($row[6] - 25569) * 86400;
-                // $tanggal = gmdate('Y-m-d', $tgl);
+                $tgl = ($row[5] - 25569) * 86400;
+                $tanggal = gmdate('Y-m-d', $tgl);
 
-                // $tgl2 = ($row[7] - 25569) * 86400;
-                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+                $tgl2 = ($row[6] - 25569) * 86400;
+                $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Penyuluhan::create([
                     'kota' => $row[3],
                     'nama_kegiatan' => $row[4],
-                    'tanggal_awal' => $row[5],
-                    'tanggal_akhir' => $row[6],
+                    'tanggal_awal' => $tanggal,
+                    'tanggal_akhir' => $tanggal2,
                     'narasumber' => $row[7],
                     'sasaran' => $row[8],
                     'jumlah_peserta' => $row[9],

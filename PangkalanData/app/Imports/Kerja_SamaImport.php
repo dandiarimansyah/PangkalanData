@@ -13,17 +13,17 @@ class Kerja_SamaImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 2 && ($row[3] != null || $row[4] != null || $row[5] != null)) {
 
-                // $tgl = ($row[6] - 25569) * 86400;
-                // $tanggal = gmdate('Y-m-d', $tgl);
+                $tgl = ($row[5] - 25569) * 86400;
+                $tanggal = gmdate('Y-m-d', $tgl);
 
-                // $tgl2 = ($row[7] - 25569) * 86400;
-                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+                $tgl2 = ($row[6] - 25569) * 86400;
+                $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Kerja_Sama::create([
                     'kategori' => $row[3],
                     'instansi' => $row[4],
-                    'tanggal_awal' => $row[5],
-                    'tanggal_akhir' => $row[6],
+                    'tanggal_awal' => $tanggal,
+                    'tanggal_akhir' => $tanggal2,
                     'nomor' => $row[7],
                     'perihal' => $row[8],
                     'keterangan' => $row[9],

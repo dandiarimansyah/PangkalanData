@@ -13,8 +13,8 @@ class PesuluhImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 1  && ($row[1] != null)) {
 
-                // $tgl = ($row[6] - 25569) * 86400;
-                // $tanggal = gmdate('Y-m-d', $tgl);
+                $tgl = ($row[3] - 25569) * 86400;
+                $tanggal = gmdate('Y-m-d', $tgl);
 
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
@@ -32,7 +32,7 @@ class PesuluhImport implements ToCollection
                     'id_penyuluhan' => $row[0],
                     'nama' => $row[1],
                     'tempat_lahir' => $row[2],
-                    'tanggal_lahir' => $row[3],
+                    'tanggal_lahir' => $tanggal,
                     'instansi' => $row[4],
                     'tingkat' => $row[5],
                 ]);

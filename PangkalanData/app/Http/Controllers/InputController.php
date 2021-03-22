@@ -142,7 +142,7 @@ class InputController extends Controller
     public function store_a1(Request $request)
     {
         $request->validate([
-            'tahun_anggaran' => ['required'],
+            'tahun_anggaran' => ['required', 'numeric'],
             'nilai_anggaran' => ['nullable', 'numeric']
         ]);
 

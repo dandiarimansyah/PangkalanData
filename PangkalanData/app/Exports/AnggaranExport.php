@@ -81,13 +81,4 @@ class AnggaranExport implements FromCollection, WithMapping, WithHeadings, Shoul
             }
         ];
     }
-
-    // public function styles($sheet)
-    // {
-    //     $sheet->setStyle(array(
-    //         'aligment' => array(
-    //             'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
-    //         )
-    //     ));
-    // }
 }

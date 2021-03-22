@@ -13,19 +13,19 @@ class PenelitianImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 2 && ($row[3] != null || $row[4] != null || $row[5] != null || $row[13] != null)) {
 
-                // $tgl = ($row[6] - 25569) * 86400;
-                // $tanggal = gmdate('Y-m-d', $tgl);
+                $tgl = ($row[7] - 25569) * 86400;
+                $tanggal = gmdate('Y-m-d', $tgl);
 
-                // $tgl2 = ($row[7] - 25569) * 86400;
-                // $tanggal2 = gmdate('Y-m-d', $tgl2);
+                $tgl2 = ($row[8] - 25569) * 86400;
+                $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 Penelitian::create([
                     'kategori' => $row[3],
                     'peneliti' => $row[4],
                     'judul' => $row[5],
                     'kerja_sama' => $row[6],
-                    'tanggal_awal' => $row[7],
-                    'tanggal_akhir' => $row[8],
+                    'tanggal_awal' => $tanggal,
+                    'tanggal_akhir' => $tanggal2,
                     'lama_penelitian' => $row[9],
                     'tipe_waktu' => $row[10],
                     'publikasi' => $row[11],
