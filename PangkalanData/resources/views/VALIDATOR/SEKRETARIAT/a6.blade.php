@@ -42,7 +42,7 @@
                 <tr>
                     <th>NO</th>
                     <!-- <th>TANGGAL DIPERBARUI</th> -->
-                    <th>PROVINSI</th>
+                    <!-- <th>PROVINSI</th> -->
                     <!-- <th>UNIT KERJA</th> -->
                     <th>JUMLAH BUKU</th>
                     <th>JUMLAH JUDUL</th>
@@ -60,7 +60,7 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <!-- <td></td> -->
-                        <td>{{ $a -> provinsi}}</td>
+                        <!-- <td>{{ $a -> provinsi}}</td> -->
                         <!-- <td>{{ $a -> unit}}</td> -->
                         <td>{{ $a -> jumlah_buku}}</td>
                         <td>{{ $a -> jumlah_judul}}</td>
