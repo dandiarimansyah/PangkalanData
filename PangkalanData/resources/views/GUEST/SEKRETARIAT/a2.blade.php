@@ -28,7 +28,7 @@
                 @forelse ($realisasi_anggaran as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> nilai_realisasi}}</td>
+                        <td>{{ $a -> tahun_realisasi}}</td>
                         <td>{{ $a -> unit}}</td>
                         <td class="rupiah" data-nilai="{{ $a->besar_dana }}">{{ $a -> besar_dana}}</td>
                         <td>{{ $a -> keterangan}}</td>

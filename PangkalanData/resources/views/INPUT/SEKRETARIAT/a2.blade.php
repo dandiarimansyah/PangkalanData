@@ -44,10 +44,10 @@
             <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
         </div>  -->
 
-        <div class="alert-danger">{{ $errors->first('nilai_realisasi') }}</div>
+        <div class="alert-danger">{{ $errors->first('tahun_realisasi') }}</div>
         <div class="inputfield">
             <label>Nilai Realisasi Hingga Tahun</label>
-            <input name="nilai_realisasi" type="text" class="input">
+            <input name="tahun_realisasi" type="text" class="input">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('besar_dana') }}</div>
