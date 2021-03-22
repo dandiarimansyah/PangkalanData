@@ -45,11 +45,6 @@
             <label>Nama Komunitas</label>
             <input name="nama_komunitas" type="text" class="input">
         </div> 
-
-        <div class="inputfield">
-            <label>Provinsi</label>
-            <input readonly type="text" value="Jawa Tengah" class="input">
-        </div> 
         
         <!-- <div class="alert-danger">{{ $errors->first('provinsi') }}</div>
         <div class="inputfield-select">

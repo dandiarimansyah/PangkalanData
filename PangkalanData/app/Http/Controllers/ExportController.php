@@ -317,38 +317,30 @@ class ExportController extends Controller
     public function pdf_b4(Request $request)
     {
         if ($request->kota == '' and $request->nama_kegiatan == '' and $request->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Penyuluhan::all();
         } elseif ($request->kota != '' and $request->nama_kegiatan == '' and $request->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Penyuluhan::where('kota', $request->kota)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_kegiatan != '' and $request->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('nama_kegiatan', $request->nama_kegiatan)
+            $data = Penyuluhan::where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_kegiatan == '' and $request->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('sasaran', $request->sasaran)
+            $data = Penyuluhan::where('sasaran', $request->sasaran)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_kegiatan != '' and $request->sasaran == '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Penyuluhan::where('kota', $request->kota)
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_kegiatan == '' and $request->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Penyuluhan::where('kota', $request->kota)
                 ->where('sasaran', $request->sasaran)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_kegiatan != '' and $request->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('sasaran', $request->sasaran)
+            $data = Penyuluhan::where('sasaran', $request->sasaran)
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_kegiatan != '' and $request->sasaran != '') {
-            $data = Penyuluhan::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Penyuluhan::where('kota', $request->kota)
                 ->where('nama_kegiatan', $request->nama_kegiatan)
                 ->where('sasaran', $request->sasaran)
                 ->get();
@@ -445,15 +437,12 @@ class ExportController extends Controller
     public function pdf_b7(Request $request)
     {
         if ($request->tahun == '' and $request->pemenang == '') {
-            $data = Duta_Nasional::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Duta_Nasional::all();
         } elseif ($request->tahun != '' and $request->pemenang == '') {
-            $data = Duta_Nasional::where('provinsi', $request->provinsi)
-                ->where('tahun', $request->tahun)
+            $data = Duta_Nasional::where('tahun', $request->tahun)
                 ->get();
         } elseif ($request->tahun == '' and $request->pemenang != '') {
-            $data = Duta_Nasional::where('provinsi', $request->provinsi)
-                ->where('pemenang_1_1', $request->pemenang)
+            $data = Duta_Nasional::where('pemenang_1_1', $request->pemenang)
                 ->orWhere('pemenang_1_2', $request->pemenang)
                 ->orWhere('pemenang_2_1', $request->pemenang)
                 ->orWhere('pemenang_2_2', $request->pemenang)
@@ -462,7 +451,6 @@ class ExportController extends Controller
                 ->get();
         } elseif ($request->tahun != '' and $request->pemenang != '') {
             $data = Duta_Nasional::where('tahun', $request->tahun)
-                ->where('provinsi', $request->provinsi)
                 ->where('pemenang_1_1', $request->pemenang)
                 ->orWhere('pemenang_1_2', $request->pemenang)
                 ->orWhere('pemenang_2_1', $request->pemenang)
@@ -483,15 +471,12 @@ class ExportController extends Controller
     public function pdf_b8(Request $request)
     {
         if ($request->tahun == '' and $request->pemenang == '') {
-            $data = Duta_Provinsi::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Duta_Provinsi::all();
         } elseif ($request->tahun != '' and $request->pemenang == '') {
-            $data = Duta_Provinsi::where('provinsi', $request->provinsi)
-                ->where('tahun', $request->tahun)
+            $data = Duta_Provinsi::where('tahun', $request->tahun)
                 ->get();
         } elseif ($request->tahun == '' and $request->pemenang != '') {
-            $data = Duta_Provinsi::where('provinsi', $request->provinsi)
-                ->where('pemenang_1_1', $request->pemenang)
+            $data = Duta_Provinsi::where('pemenang_1_1', $request->pemenang)
                 ->orWhere('pemenang_1_2', $request->pemenang)
                 ->orWhere('pemenang_2_1', $request->pemenang)
                 ->orWhere('pemenang_2_2', $request->pemenang)
@@ -500,7 +485,6 @@ class ExportController extends Controller
                 ->get();
         } elseif ($request->tahun != '' and $request->pemenang != '') {
             $data = Duta_Provinsi::where('tahun', $request->tahun)
-                ->where('provinsi', $request->provinsi)
                 ->where('pemenang_1_1', $request->pemenang)
                 ->orWhere('pemenang_1_2', $request->pemenang)
                 ->orWhere('pemenang_2_1', $request->pemenang)
@@ -643,38 +627,30 @@ class ExportController extends Controller
     public function pdf_d1(Request $request)
     {
         if ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Komunitas_Bahasa::all();
         } elseif ($request->kota != '' and $request->nama_komunitas == '' and $request->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Bahasa::where('kota', $request->kota)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas != '' and $request->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('nama_komunitas', $request->nama_komunitas)
+            $data = Komunitas_Bahasa::where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('alamat', $request->alamat)
+            $data = Komunitas_Bahasa::where('alamat', $request->alamat)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas != '' and $request->alamat == '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Bahasa::where('kota', $request->kota)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas == '' and $request->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Bahasa::where('kota', $request->kota)
                 ->where('alamat', $request->alamat)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas != '' and $request->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('alamat', $request->alamat)
+            $data = Komunitas_Bahasa::where('alamat', $request->alamat)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas != '' and $request->alamat != '') {
-            $data = Komunitas_Bahasa::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Bahasa::where('kota', $request->kota)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->where('alamat', $request->alamat)
                 ->get();
@@ -691,38 +667,30 @@ class ExportController extends Controller
     public function pdf_d2(Request $request)
     {
         if ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat == '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->get();
+            $data = Komunitas_Sastra::all();
         } elseif ($request->kota != '' and $request->nama_komunitas == '' and $request->alamat == '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Sastra::where('kota', $request->kota)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas != '' and $request->alamat == '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('nama_komunitas', $request->nama_komunitas)
+            $data = Komunitas_Sastra::where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas == '' and $request->alamat != '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('alamat', $request->alamat)
+            $data = Komunitas_Sastra::where('alamat', $request->alamat)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas != '' and $request->alamat == '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Sastra::where('kota', $request->kota)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas == '' and $request->alamat != '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Sastra::where('kota', $request->kota)
                 ->where('alamat', $request->alamat)
                 ->get();
         } elseif ($request->kota == '' and $request->nama_komunitas != '' and $request->alamat != '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('alamat', $request->alamat)
+            $data = Komunitas_Sastra::where('alamat', $request->alamat)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->get();
         } elseif ($request->kota != '' and $request->nama_komunitas != '' and $request->alamat != '') {
-            $data = Komunitas_Sastra::where('provinsi', $request->provinsi)
-                ->where('kota', $request->kota)
+            $data = Komunitas_Sastra::where('kota', $request->kota)
                 ->where('nama_komunitas', $request->nama_komunitas)
                 ->where('alamat', $request->alamat)
                 ->get();

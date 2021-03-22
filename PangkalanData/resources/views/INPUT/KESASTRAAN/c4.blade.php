@@ -40,11 +40,6 @@
       <form role="form" action="{{url('/operator/input/kesastraan/musikalisasi_puisi_provinsi')}}" method="POST" enctype="multipart/form-data">
           @csrf
 
-        <div class="inputfield">
-            <label>Provinsi</label>
-            <input readonly type="text" value="Jawa Tengah" class="input">
-        </div> 
-
         <div class="alert-danger">{{ $errors->first('tahun') }}</div>
         <div class="inputfield-kecil">
             <label>Tahun</label>

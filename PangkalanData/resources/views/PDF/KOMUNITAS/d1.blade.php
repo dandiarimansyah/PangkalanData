@@ -46,7 +46,6 @@
                     <th>ALAMAT</th>
                     <th>KECAMATAN</th>
                     <th>KABUPATEN/KOTA</th>
-                    <th>PROVINSI</th>
                     <th>KOORDINAT</th>
                     <th>KETERANGAN</th>
                 </tr>
@@ -58,7 +57,6 @@
                         <td>{{ $a -> alamat}}</td>
                         <td>{{ $a -> kecamatan}}</td>
                         <td>{{ $a -> kota}}</td>
-                        <td>{{ $a -> provinsi}}</td>
                         <td>{{ $a -> koordinat}}</td>
                         <td>{{ $a -> keterangan}}</td>
 

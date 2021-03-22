@@ -119,6 +119,7 @@ class PenelitianExport implements FromCollection, WithMapping, WithHeadings, Sho
                 'Kerja Sama',
                 'Tgl Awal Penelitian',
                 'Tgl Selesai Penelitian',
+                'Lama Penelitian',
                 'Publikasi',
                 'Tahun Terbit',
                 'Abstrak',

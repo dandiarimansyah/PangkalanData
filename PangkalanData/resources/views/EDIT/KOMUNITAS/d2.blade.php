@@ -38,7 +38,6 @@
                     <th>ALAMAT</th>
                     <th>KECAMATAN</th>
                     <th>KABUPATEN/KOTA</th>
-                    <th>PROVINSI</th>
                     <th>LOKASI</th>
                     <th>KETERANGAN</th>
                     <th>EDIT/HAPUS</th>
@@ -54,7 +53,6 @@
                         <td>{{ $a -> alamat}}</td>
                         <td>{{ $a -> kecamatan}}</td>
                         <td>{{ $a -> kota}}</td>
-                        <td>{{ $a -> provinsi}}</td>
                         <td>
                             <a target="_blank" class="btn btn-warning btn-sm" href="http://www.google.com/maps/place/{{ $a -> koordinat}}">Lokasi Maps</a>
                         </td>
