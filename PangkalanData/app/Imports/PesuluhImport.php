@@ -11,31 +11,23 @@ class PesuluhImport implements ToCollection
     public function collection(Collection $collection)
     {
         foreach ($collection as $key => $row) {
-            if ($key >= 1  && ($row[1] != null)) {
+            if ($key >= 1  && ($row[3] != null)) {
 
-                $tgl = explode("/", $row[3]);
+                $tgl = explode("/", $row[5]);
                 $tanggal = $tgl[2] . "-" . $tgl[1] . "-" . $tgl[0];
 
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
-                // Pesuluh::create([
-                //     'id_penyuluhan' => $row[0],
-                //     'nama' => $row[1],
-                //     'tempat_lahir' => $row[2],
-                //     'tanggal_lahir' => $row[3],
-                //     'instansi' => $row[4],
-                //     'tingkat' => $row[5],
-                // ]);
+                $data = new Pesuluh();
+                $data->nama = $row[3];
+                $data->tempat_lahir = $row[4];
+                $data->tanggal_lahir = $tanggal;
+                $data->instansi = $row[6];
+                $data->tingkat = $row[7];
 
-                return new Pesuluh([
-                    'id_penyuluhan' => $row[0],
-                    'nama' => $row[1],
-                    'tempat_lahir' => $row[2],
-                    'tanggal_lahir' => $tanggal,
-                    'instansi' => $row[4],
-                    'tingkat' => $row[5],
-                ]);
+                $data->id_penyuluhan = $row[8];
+                $data->save();
             }
         }
     }

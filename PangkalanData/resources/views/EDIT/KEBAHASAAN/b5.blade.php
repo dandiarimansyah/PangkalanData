@@ -56,7 +56,7 @@
                         <td>{{ \Carbon\Carbon::parse($a->penyuluhan->tanggal_awal)->format('Y')}}</td>
                         <td>{{ $a -> nama}}</td>
                         <td>{{ $a -> tempat_lahir}}</td>
-                        <td>{{ $a -> tanggal_lahir}}</td>
+                        <td>{{ \Carbon\Carbon::parse($a->tanggal_lahir)->format('d-m-Y')}}</td>
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> tingkat}}</td>
                         

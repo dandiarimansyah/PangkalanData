@@ -14,7 +14,7 @@
 
   <div class="wrapper">
       <div class="form">
-        <form action="{{ URL('/laporan/kebahasaan/penghargaan_nasional/tampil')}}" method="GET">
+        <form action="{{ URL('/laporan/kebahasaan/penghargaan_bahasa/tampil')}}" method="GET">
             @csrf
 
         <div class="inputfield-select">

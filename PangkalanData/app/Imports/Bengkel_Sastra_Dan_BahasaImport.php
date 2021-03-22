@@ -13,6 +13,8 @@ class Bengkel_Sastra_Dan_BahasaImport implements ToCollection
         foreach ($collection as $key => $row) {
             if ($key >= 2 && $row[3] != null) {
 
+                dd($row[5]);
+
                 $tgl = explode("/", $row[5]);
                 $tanggal = $tgl[2] . "-" . $tgl[1] . "-" . $tgl[0];
 
