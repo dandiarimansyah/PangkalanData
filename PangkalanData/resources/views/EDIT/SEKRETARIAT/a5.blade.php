@@ -58,7 +58,6 @@
                   <tr>
                       <td>{{ $key + 1}}</td>
                       <td>{{ $a -> created_at->format('d-m-Y')}}</td>
-                      <!-- <td>{{ $a -> kantor}}</td> -->
                       <td>{{ $a -> status_tanah}}</td>
                       <td>{{ $a -> sertif_tanah}}</td>
                       <td>{{ $a -> status_bangunan}}</td>
@@ -82,6 +81,7 @@
                                 data-toggle="modal" 
                                 data-target="#edit-modal"
                                 data-id="{{ $a->id }}"
+                                data-alamat="{{ $a->alamat }}"
                                 data-kantor="{{ $a->kantor }}"
                                 data-status_tanah="{{ $a->status_tanah }}"
                                 data-sertif_tanah="{{ $a->sertif_tanah }}"
@@ -122,22 +122,6 @@
                     <form id="edit_form" action="" method="POST">
                             @csrf
                             @method('PUT')
-                    
-                      <div class="alert-danger">{{ $errors->first('kantor') }}</div>
-                      <div class="inputfield-select">
-                          <label>	Balai/Kantor*</label>
-                          <div class="custom_select">
-                            <select id="kantor" name="kantor">
-                              <option value="Balai Bahasa Jawa Tengah">Balai Bahasa Jawa Tengah</option>
-                            </select>
-                          </div>
-                      </div> 
-
-                      <div class="alert-danger">{{ $errors->first('alamat') }}</div>
-                      <div class="inputfield">
-                          <label>Alamat</label>
-                          <textarea id="alamat" name="alamat" class="textarea"></textarea>
-                      </div>  
 
                       <div class="inputfield-radio">
                         <label class="label-atas">Status Tanah</label>
@@ -246,6 +230,7 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
+                let alamat = $(this).data('alamat');
                 let kantor = $(this).data('kantor');
                 let kondisi = $(this).data('kondisi');
                 let status_peroleh = $(this).data('status_peroleh');
@@ -257,7 +242,6 @@
                 let keterangan = $(this).data('keterangan');
 
                 let id = $(this).data('id');
-
 
                 $('#kantor option').filter(function(){
                     return ($(this).val() == kantor)
@@ -287,6 +271,7 @@
                     return ($(this).val() == status_bangunan)
                 }).prop('checked', true);
 
+                $('#alamat').val(alamat);
                 $('#keterangan').val(keterangan);
                 
                 $('#edit_form').attr('action', '/operator/edit/sekretariat/tanah_dan_bangunan/' + id);

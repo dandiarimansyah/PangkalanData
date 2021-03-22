@@ -39,13 +39,13 @@
 
     <!-- TABLE -->
     <div class="validasi">
-    <table class="table table-bordered dalam">
+        <table class="table table-bordered dalam">
                 <tr>
                     <th>NO</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
                     <th>KEGIATAN</th>
-                    <th>NARASUMBER</th>
+                    <th style="max-width: 100px">NARASUMBER</th>
                     <th>SASARAN</th>
                     <th>JUMLAH</th>
                     <th>MATERI</th>

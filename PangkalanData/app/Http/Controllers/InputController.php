@@ -462,12 +462,26 @@ class InputController extends Controller
             'jumlah_peserta' => ['nullable', 'numeric'],
         ]);
 
+        $narasumber = [];
+
         $data = new Penyuluhan();
         $data->kota = $request->kota;
         $data->nama_kegiatan = $request->nama_kegiatan;
         $data->tanggal_awal = $request->tanggal_awal;
         $data->tanggal_akhir = $request->tanggal_akhir;
-        $data->narasumber = $request->narasumber;
+
+        for ($i = 1; $i <= $request->jumlah_narasumber; $i++) {
+            $nara = "narasumber" . $i;
+            if ($request->$nara != "") {
+                $narasumber[] .= $request->$nara;
+                if ($i == $request->jumlah_narasumber) {
+                    $data->narasumber .=  $i . "." . $request->$nara;
+                } else {
+                    $data->narasumber .=  $i . "." . $request->$nara . ", ";
+                }
+            }
+        }
+
         $data->sasaran = $request->sasaran;
         $data->jumlah_peserta = $request->jumlah_peserta;
         $data->materi = $request->materi;

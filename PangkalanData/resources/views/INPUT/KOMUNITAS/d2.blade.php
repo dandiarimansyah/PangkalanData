@@ -120,10 +120,10 @@
 
         <div class="alert-danger">{{ $errors->first('koordinat') }}</div>
         <div class="inputfield-kecil">
-            <label>Koordinat</label>
-            <input name="koordinat" type="text" class="input" style="width: 200px">
-            <a href="https://www.google.co.id/maps">Buka Maps</a>
-        </div> 
+          <label>Koordinat</label>
+          <input name="koordinat" type="text" class="input" style="width: 200px">
+          <a target="_blank" class="btn btn-success" href="https://www.google.co.id/maps">Google Maps</a>
+      </div> 
 
         <div class="inputfield">
             <label>Keterangan</label>

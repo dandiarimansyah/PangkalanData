@@ -1,5 +1,29 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    .content-table th, .content-table td {
+        padding: 10px 8px 10px 8px !important;
+        max-width: 170px !important;
+    }
+
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuEdit')
@@ -34,7 +58,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
                     <th>KEGIATAN</th>
@@ -42,7 +65,6 @@
                     <th>SASARAN</th>
                     <th>JUMLAH</th>
                     <th>MATERI</th>
-                    <!-- <th>MEDIA</th> -->
                     <th>EDIT/HAPUS</th>
                 </tr>
             </thead>
@@ -52,7 +74,6 @@
                 @forelse ($penyuluhan as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> provinsi}}</td>
                         <td>{{ $a -> kota}}</td>
                         <td>
                             @if ($a -> tanggal_awal != null)
@@ -73,7 +94,7 @@
                         <td>{{ $a -> jumlah_peserta}}</td>
                         <td>{{ $a -> materi}}</td>
                         
-                        <td style="display: flex; justify-content:center">
+                        <td>
                             <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 

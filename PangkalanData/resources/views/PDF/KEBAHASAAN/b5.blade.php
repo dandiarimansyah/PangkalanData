@@ -42,7 +42,6 @@
     <table class="table table-bordered dalam">
                 <tr>
                     <th>NO</th>
-                    <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>KEGIATAN</th>
                     <th>TAHUN</th>
@@ -57,7 +56,6 @@
                 @forelse ($data as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> penyuluhan -> provinsi}}</td>
                         <td>{{ $a -> penyuluhan -> kota}}</td>
                         <td>{{ $a -> penyuluhan -> nama_kegiatan}}</td>
                         <td>Tahun</td>

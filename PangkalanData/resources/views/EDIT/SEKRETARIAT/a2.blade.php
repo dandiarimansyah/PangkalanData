@@ -58,7 +58,7 @@
                                 data-target="#edit-modal"
                                 data-id="{{ $a->id }}"
                                 data-unit="{{ $a->unit }}"
-                                data-nilai_realisasi="{{ $a->nilai_realisasi }}"
+                                data-tahun_realisasi="{{ $a->tahun_realisasi }}"
                                 data-besar_dana="{{ $a->besar_dana }}"
                                 data-keterangan="{{ $a->keterangan }}"
                             >Edit</button>                            
@@ -102,10 +102,10 @@
                             </div>
                         </div>  -->
                 
-                        <div class="alert-danger">{{ $errors->first('nilai_realisasi') }}</div>
+                        <div class="alert-danger">{{ $errors->first('tahun_realisasi') }}</div>
                         <div class="inputfield">
                             <label>Nilai Realisasi Hingga</label>
-                            <input id="nilai_realisasi" name="nilai_realisasi" type="text" class="input">
+                            <input id="tahun_realisasi" name="tahun_realisasi" type="text" class="input">
                         </div> 
                 
                         <div class="alert-danger">{{ $errors->first('besar_dana') }}</div>
@@ -143,17 +143,12 @@
       <script>
 
           $(document).on('click','#edit_item',function(){
-                let unit = $(this).data('unit');
-                let nilai_realisasi = $(this).data('nilai_realisasi');
+                let tahun_realisasi = $(this).data('tahun_realisasi');
                 let besar_dana = $(this).data('besar_dana');
                 let keterangan = $(this).data('keterangan');
                 let id = $(this).data('id');
 
-                $('#unit option').filter(function(){
-                    return ($(this).val() == unit)
-                }).prop('selected', true);
-
-                $('#nilai_realisasi').val(nilai_realisasi);
+                $('#tahun_realisasi').val(tahun_realisasi);
                 $('#besar_dana').val(besar_dana);
                 $('#keterangan').val(keterangan);
                 
