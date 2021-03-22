@@ -49,7 +49,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <!-- <th>PROVINSI</th> -->
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
                     <th>KEGIATAN</th>

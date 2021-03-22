@@ -27,7 +27,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    {{-- <th>PROVINSI</th> --}}
                     <th style="max-width: 70px">KABUPATEN/ KOTA</th>
                     <th>TANGGAL</th>
                     <!-- <th>KATEGORI</th> -->
@@ -46,7 +45,6 @@
                 @forelse ($bengkel_sastra_dan_bahasa as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        {{-- <td>{{ $a -> provinsi}}</td> --}}
                         <td>{{ $a -> kota}}</td>
                         <td>{{ $a -> tanggal_awal_pelaksanaan}} <br> {{ $a -> tanggal_akhir_pelaksanaan}}</td>
                         <!-- <td></td> -->

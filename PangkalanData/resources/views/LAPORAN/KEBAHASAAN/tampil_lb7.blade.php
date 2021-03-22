@@ -50,7 +50,6 @@
                 <tr>
                     <th>NO</th>
                     <th>TAHUN</th>
-                    <th>ASAL PROVINSI</th>
                     <th>PEMENANG I</th>
                     <th>PEMENANG II</th>
                     <th>PEMENANG III</th>
@@ -65,7 +64,6 @@
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> tahun}}</td>
-                        <td>{{ $a -> provinsi}}</td>
                         <td>1. {{ $a -> pemenang_1_1}} <br> 2. {{ $a -> pemenang_1_2}}</td>
                         <td>1. {{ $a -> pemenang_2_1}} <br> 2. {{ $a -> pemenang_2_2}}</td>
                         <td>1. {{ $a -> pemenang_3_1}} <br> 2. {{ $a -> pemenang_3_2}}</td>

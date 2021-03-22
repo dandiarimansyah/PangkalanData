@@ -16,7 +16,6 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>PROVINSI</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>TANGGAL</th>
                     <th>KEGIATAN</th>
@@ -33,7 +32,6 @@
                 @forelse ($penyuluhan as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> provinsi}}</td>
                         <td>{{ $a -> kota}}</td>
                         <td>{{ $a -> tanggal_awal}} - {{ $a -> tanggal_akhir}}</td>
                         <td>{{ $a -> nama_kegiatan}}</td>
