@@ -45,7 +45,7 @@
                     <th>ALAMAT</th>
                     <th>KECAMATAN</th>
                     <th>KABUPATEN/KOTA</th>
-                    <th>PROVINSI</th>
+                    <!-- <th>PROVINSI</th> -->
                     <th>KOORDINAT</th>
                     <th>KETERANGAN</th>
                     <th>EDIT</th>
@@ -62,7 +62,7 @@
                         <td>{{ $a -> alamat}}</td>
                         <td>{{ $a -> kecamatan}}</td>
                         <td>{{ $a -> kota}}</td>
-                        <td>{{ $a -> provinsi}}</td>
+                        <!-- <td>{{ $a -> provinsi}}</td> -->
                         <td>{{ $a -> koordinat}}</td>
                         <td>{{ $a -> keterangan}}</td>
 
@@ -73,7 +73,7 @@
                                 data-target="#edit-modal"
                                 data-id="{{ $a->id }}"
                                 data-nama_komunitas="{{ $a->nama_komunitas }}"
-                                data-provinsi="{{ $a->provinsi }}"
+                         
                                 data-kota="{{ $a->kota }}"
                                 data-kecamatan="{{ $a->kecamatan }}"
                                 data-alamat="{{ $a->alamat }}"
