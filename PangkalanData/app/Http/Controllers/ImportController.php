@@ -128,12 +128,12 @@ class ImportController extends Controller
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
-        $file->move('Jurnal Umum', $namaFile);
+        $file->move('Jurnal Majalah', $namaFile);
 
-        Excel::import(new JurnalImport, public_path('/Jurnal Umum/' . $namaFile));
-        File::delete(public_path('/Jurnal Umum/' . $namaFile));
+        Excel::import(new JurnalImport, public_path('/Jurnal Majalah/' . $namaFile));
+        File::delete(public_path('/Jurnal Majalah/' . $namaFile));
 
-        return redirect('/operator/edit/kebahasaan/jurnal_umum')->with('toast_success', 'Import Data Berhasil!');
+        return redirect('/operator/edit/kebahasaan/jurnal_majalah')->with('toast_success', 'Import Data Berhasil!');
     }
     public function import_b3(Request $request)
     {
@@ -157,35 +157,47 @@ class ImportController extends Controller
 
         return redirect('/operator/edit/kebahasaan/penyuluhan')->with('toast_success', 'Import Data Berhasil!');
     }
+    // public function import_b5(Request $request)
+    // {
+    //     // $file = $request->file('file');
+    //     // $namaFile = $file->getClientOriginalName();
+    //     // $file->move('Pesuluh', $namaFile);
+
+    //     // Excel::import(new PesuluhImport, public_path('/Pesuluh/' . $namaFile));
+    //     // File::delete(public_path('/Pesuluh/' . $namaFile));
+
+    //     $data = Excel::toCollection(new PesuluhImport(), $request->file('file'));
+
+    //     foreach ($data[0] as $key => $a) {
+    //         if ($key == 1) {
+    //             $id = $a[0];
+    //         }
+    //     }
+
+    //     foreach ($data[0] as $key => $a) {
+    //         if ($key >= 1) {
+    //             dd($a[3]);
+    //             $data = new Pesuluh();
+    //             $data->nama = $a[1];
+    //             $data->tempat_lahir = $a[2];
+    //             $data->tanggal_lahir = $a[3];
+    //             $data->instansi = $a[4];
+    //             $data->tingkat = $a[5];
+    //             $data->id_penyuluhan = $id;
+    //             $data->save();
+    //         }
+    //     }
+
+    //     return redirect('/operator/edit/kebahasaan/pesuluh')->with('toast_success', 'Import Data Berhasil!');
+    // }
     public function import_b5(Request $request)
     {
-        // $file = $request->file('file');
-        // $namaFile = $file->getClientOriginalName();
-        // $file->move('Pesuluh', $namaFile);
+        $file = $request->file('file');
+        $namaFile = $file->getClientOriginalName();
+        $file->move('Pesuluh', $namaFile);
 
-        // Excel::import(new PesuluhImport, public_path('/Pesuluh/' . $namaFile));
-        // File::delete(public_path('/Pesuluh/' . $namaFile));
-
-        $data = Excel::toCollection(new PesuluhImport(), $request->file('file'));
-
-        foreach ($data[0] as $key => $a) {
-            if ($key == 1) {
-                $id = $a[0];
-            }
-        }
-
-        foreach ($data[0] as $key => $a) {
-            if ($key >= 1) {
-                $data = new Pesuluh();
-                $data->nama = $a[1];
-                $data->tempat_lahir = $a[2];
-                $data->tanggal_lahir = $a[3];
-                $data->instansi = $a[4];
-                $data->tingkat = $a[5];
-                $data->id_penyuluhan = $id;
-                $data->save();
-            }
-        }
+        Excel::import(new PesuluhImport, public_path('/Pesuluh/' . $namaFile));
+        File::delete(public_path('/Pesuluh/' . $namaFile));
 
         return redirect('/operator/edit/kebahasaan/pesuluh')->with('toast_success', 'Import Data Berhasil!');
     }
@@ -193,12 +205,12 @@ class ImportController extends Controller
     {
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
-        $file->move('Penghargaan Nasional', $namaFile);
+        $file->move('Penghargaan Bahasa', $namaFile);
 
-        Excel::import(new Penghargaan_BahasaImport, public_path('/Penghargaan Nasional/' . $namaFile));
-        File::delete(public_path('/Penghargaan Nasional/' . $namaFile));
+        Excel::import(new Penghargaan_BahasaImport, public_path('/Penghargaan Bahasa/' . $namaFile));
+        File::delete(public_path('/Penghargaan Bahasa/' . $namaFile));
 
-        return redirect('/operator/edit/kebahasaan/penghargaan_nasional')->with('toast_success', 'Import Data Berhasil!');
+        return redirect('/operator/edit/kebahasaan/penghargaan_bahasa')->with('toast_success', 'Import Data Berhasil!');
     }
     public function import_b7(Request $request)
     {

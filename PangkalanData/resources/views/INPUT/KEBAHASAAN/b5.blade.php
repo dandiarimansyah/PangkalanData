@@ -58,14 +58,23 @@
 
   </div>
 
-  <p style="text-align: center; font-size:15px">Silahkan Pilih Data Penyuluhan Terlebih Dahulu</p>
+  <p style="text-align: center; font-size:18px">Silahkan Pilih Data Penyuluhan Terlebih Dahulu</p>
   
+  <div class="import-input">
+    <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
+    <button loc="{{ asset('/Template/Template Pesuluh.xlsx')}}" href="/import/kebahasaan/pesuluh" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+      <i style="margin-right: 4px" class="fa fa-upload" aria-hidden="true"></i>
+      IMPORT EXCEL
+    </button>
+  </div>
+
   <!-- TABLE -->
   <div class="validasi">
     <table class="content-table" id="datatable">
         <thead>
             <tr>
                 <th>NO</th>
+                <th style="width: 80px">KODE PENYULUHAN</th>
                 <th>KABUPATEN/KOTA</th>
                 <th>TANGGAL</th>
                 <th>KEGIATAN</th>
@@ -82,6 +91,7 @@
             @forelse ($penyuluhan as $key => $a)
                 <tr>
                     <td>{{ $key + 1}}</td>
+                    <td>{{ $a -> id}}</td>
                     <td>{{ $a -> kota}}</td>
                     <td>{{ $a -> tanggal_awal}} - {{ $a -> tanggal_akhir}}</td>
                     <td>{{ $a -> nama_kegiatan}}</td>

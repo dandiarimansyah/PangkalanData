@@ -430,7 +430,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/laporan/kebahasaan/terbitan_umum', [LaporanController::class, 'lb3']);
     Route::get('/laporan/kebahasaan/penyuluhan', [LaporanController::class, 'lb4']);
     Route::get('/laporan/kebahasaan/pesuluh', [LaporanController::class, 'lb5']);
-    Route::get('/laporan/kebahasaan/penghargaan_nasional', [LaporanController::class, 'lb6']);
+    Route::get('/laporan/kebahasaan/penghargaan_bahasa', [LaporanController::class, 'lb6']);
     Route::get('/laporan/kebahasaan/duta_bahasa_nasional', [LaporanController::class, 'lb7']);
     Route::get('/laporan/kebahasaan/duta_bahasa_provinsi', [LaporanController::class, 'lb8']);
     //LAPORAN S 3
@@ -458,7 +458,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/laporan/kebahasaan/terbitan_umum/tampil', [LaporanController::class, 'tampil_lb3']);
     Route::get('/laporan/kebahasaan/penyuluhan/tampil', [LaporanController::class, 'tampil_lb4']);
     Route::get('/laporan/kebahasaan/pesuluh/tampil', [LaporanController::class, 'tampil_lb5']);
-    Route::get('/laporan/kebahasaan/penghargaan_nasional/tampil', [LaporanController::class, 'tampil_lb6']);
+    Route::get('/laporan/kebahasaan/penghargaan_bahasa/tampil', [LaporanController::class, 'tampil_lb6']);
     Route::get('/laporan/kebahasaan/duta_bahasa_nasional/tampil', [LaporanController::class, 'tampil_lb7']);
     Route::get('/laporan/kebahasaan/duta_bahasa_provinsi/tampil', [LaporanController::class, 'tampil_lb8']);
     //TAMPIL LAPORAN S 3
@@ -486,7 +486,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/pdf/kebahasaan/terbitan_umum', [ExportController::class, 'pdf_b3']);
     Route::get('/pdf/kebahasaan/penyuluhan', [ExportController::class, 'pdf_b4']);
     Route::get('/pdf/kebahasaan/pesuluh', [ExportController::class, 'pdf_b5']);
-    Route::get('/pdf/kebahasaan/penghargaan_nasional', [ExportController::class, 'pdf_b6']);
+    Route::get('/pdf/kebahasaan/penghargaan_bahasa', [ExportController::class, 'pdf_b6']);
     Route::get('/pdf/kebahasaan/duta_bahasa_nasional', [ExportController::class, 'pdf_b7']);
     Route::get('/pdf/kebahasaan/duta_bahasa_provinsi', [ExportController::class, 'pdf_b8']);
     //PDF S 3
@@ -515,7 +515,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/excel/kebahasaan/penyuluhan', [ExportController::class, 'excel_b4']);
     Route::get('/excel/kebahasaan/pesuluh', [ExportController::class, 'excel_b5']);
     Route::get('/excel/kebahasaan/pesuluh_pilih', [ExportController::class, 'excel_b5_pilih']);
-    Route::get('/excel/kebahasaan/penghargaan_nasional', [ExportController::class, 'excel_b6']);
+    Route::get('/excel/kebahasaan/penghargaan_bahasa', [ExportController::class, 'excel_b6']);
     Route::get('/excel/kebahasaan/duta_bahasa_nasional', [ExportController::class, 'excel_b7']);
     Route::get('/excel/kebahasaan/duta_bahasa_provinsi', [ExportController::class, 'excel_b8']);
     //EXCEL S 3
@@ -539,11 +539,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/import/sekretariat/inventarisasi_bmn', [ImportController::class, 'import_a7']);
     //IMPORT S 2
     Route::post('/import/kebahasaan/kamus_ensiklopedia', [ImportController::class, 'import_b1']);
-    Route::post('/import/kebahasaan/jurnal_umum', [ImportController::class, 'import_b2']);
+    Route::post('/import/kebahasaan/jurnal_majalah', [ImportController::class, 'import_b2']);
     Route::post('/import/kebahasaan/terbitan_umum', [ImportController::class, 'import_b3']);
     Route::post('/import/kebahasaan/penyuluhan', [ImportController::class, 'import_b4']);
     Route::post('/import/kebahasaan/pesuluh', [ImportController::class, 'import_b5']);
-    Route::post('/import/kebahasaan/penghargaan_nasional', [ImportController::class, 'import_b6']);
+    Route::post('/import/kebahasaan/penghargaan_bahasa', [ImportController::class, 'import_b6']);
     Route::post('/import/kebahasaan/duta_bahasa_nasional', [ImportController::class, 'import_b7']);
     Route::post('/import/kebahasaan/duta_bahasa_provinsi', [ImportController::class, 'import_b8']);
     //IMPORT S 3

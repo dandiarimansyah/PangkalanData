@@ -21,24 +21,31 @@
         </div>
     @endif
 
+    <div class="tombol-kembali">
+      <button onclick="back()" type="button" class="btn">
+          <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+          <span>KEMBALI</span>
+      </button>
+  </div>
+
   <div class="judul">
     <th>INPUT DATA PESULUH</th>
 
-    {{-- <div class="import-input">
+    <div class="import-input">
       <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
-      <button loc="{{ asset('/Template/Template Pesuluh.xlsx')}}" href="{{url('/import/kebahasaan/pesuluh')}}" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
+      <button loc="{{ asset('/Template/Template Pesuluh.xlsx')}}" href="/import/kebahasaan/pesuluh" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
         <i style="margin-right: 4px" class="fa fa-upload" aria-hidden="true"></i>
         IMPORT EXCEL
       </button>
-    </div> --}}
+    </div>
     
-    <div class="import-input">
+    {{-- <div class="import-input">
       <h6>Klik "IMPORT EXCEL" untuk memasukkan data menggunakan file excel.</h6>
       <button loc="{{ url("/excel/kebahasaan/pesuluh_pilih?id_penyuluhan={$id_penyuluhan}")}}" href="/import/kebahasaan/pesuluh" id="import_data" type="button" class="btn btn-primary" style="border-radius: 5px"  data-toggle="modal" data-target="#import">
         <i style="margin-right: 4px" class="fa fa-upload" aria-hidden="true"></i>
         IMPORT EXCEL
       </button>
-    </div>
+    </div> --}}
 
   </div>
 
@@ -47,6 +54,11 @@
 
     <form role="form" action="{{url('/operator/input/kebahasaan/pesuluh/'.$penyuluhan->id)}}" method="POST">
         @csrf
+
+      <div class="inputfield">
+          <label>Kode Penyuluhan</label>
+          <input readonly type="text" value="{{$penyuluhan->id}}" class="input">
+      </div> 
 
       <div class="inputfield">
           <label>Kabupaten/Kota</label>

@@ -26,7 +26,7 @@
             <a class="dropdown-item" href="/laporan/kebahasaan/terbitan_umum">Terbitan Umum</a>
             <a class="dropdown-item" href="/laporan/kebahasaan/penyuluhan">Penyuluhan</a>
             <a class="dropdown-item" href="/laporan/kebahasaan/pesuluh">Pesuluh</a>
-            <a class="dropdown-item" href="/laporan/kebahasaan/penghargaan_nasional">Penghargaan Bahasa</a>
+            <a class="dropdown-item" href="/laporan/kebahasaan/penghargaan_bahasa">Penghargaan Bahasa</a>
             <a class="dropdown-item" href="/laporan/kebahasaan/duta_bahasa_nasional">Duta Bahasa Nasional</a>
             <a class="dropdown-item" href="/laporan/kebahasaan/duta_bahasa_provinsi">Duta Bahasa Provinsi</a>
         </div>
