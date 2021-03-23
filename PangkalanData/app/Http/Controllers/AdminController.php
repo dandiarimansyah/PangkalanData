@@ -27,7 +27,7 @@ class AdminController extends Controller
     {
         $request->validate([
             'name' => ['required'],
-            'username' =>  ['required'],
+            'username' =>  ['required', 'unique:users'],
             'password' =>  ['required'],
         ]);
 
@@ -66,7 +66,7 @@ class AdminController extends Controller
     {
         $request->validate([
             'name' => ['required'],
-            'username' =>  ['required'],
+            'username' =>  ['required', 'unique:users'],
             'password' =>  ['required'],
         ]);
 
@@ -105,7 +105,7 @@ class AdminController extends Controller
     {
         $request->validate([
             'name' => ['required'],
-            'username' =>  ['required'],
+            'username' =>  ['required', 'unique:users'],
             'password' =>  ['required'],
         ]);
 
@@ -136,7 +136,7 @@ class AdminController extends Controller
     {
         $request->validate([
             'name' => ['required'],
-            'username' => ['required'],
+            'username' =>  ['required', 'unique'],
         ]);
 
         $data = User::where('id', $id)
