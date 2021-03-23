@@ -118,7 +118,7 @@
                             @endif
                         </td>
 
-                        <td >
+                        <td>
                         <button type="button" class="edit"
                                 id="edit_item" 
                                 data-toggle="modal" 

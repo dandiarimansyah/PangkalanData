@@ -127,7 +127,6 @@
 
         <div class="tombol">
           <input type="reset" value="Ulangi" class="reset">
-          <input type="Import" value="Import Ms.Excel" class="import">
           <input type="submit" value="Simpan" class="inputan">
         </div> 
 
