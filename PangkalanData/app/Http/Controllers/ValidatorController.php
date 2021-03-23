@@ -286,7 +286,7 @@ class ValidatorController extends Controller
     //VALIDASI KATEGORI A
     public function a1()
     {
-        $anggaran = Anggaran::all();
+        $anggaran = Anggaran::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.SEKRETARIAT.a1', compact('anggaran'));
     }
@@ -304,7 +304,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function a2()
     {
-        $realisasi_anggaran = Realisasi_Anggaran::all();
+        $realisasi_anggaran = Realisasi_Anggaran::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.SEKRETARIAT.a2', compact('realisasi_anggaran'));
     }
@@ -322,7 +322,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function a3()
     {
-        $kepegawaian = Kepegawaian::all();
+        $kepegawaian = Kepegawaian::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.SEKRETARIAT.a3', compact('kepegawaian'));
     }
@@ -341,7 +341,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function a4()
     {
-        $kerja_sama = Kerja_Sama::all();
+        $kerja_sama = Kerja_Sama::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.SEKRETARIAT.a4', compact('kerja_sama'));
     }
@@ -357,7 +357,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function a5()
     {
-        $tanah_bangunan = Tanah_Bangunan::all();
+        $tanah_bangunan = Tanah_Bangunan::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.SEKRETARIAT.a5', compact('tanah_bangunan'));
     }
@@ -374,7 +374,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function a6()
     {
-        $perpustakaan = Perpustakaan::all();
+        $perpustakaan = Perpustakaan::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.SEKRETARIAT.a6', compact('perpustakaan'));
     }
@@ -392,7 +392,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function a7()
     {
-        $inventarisasi = Inventarisasi::all();
+        $inventarisasi = Inventarisasi::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.SEKRETARIAT.a7', compact('inventarisasi'));
     }
@@ -411,7 +411,7 @@ class ValidatorController extends Controller
     //VALIDASI KATEGORI B
     public function b1()
     {
-        $kamus = Kamus::all();
+        $kamus = Kamus::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KEBAHASAAN.b1', compact('kamus'));
     }
@@ -429,7 +429,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function b2()
     {
-        $jurnal = Jurnal::all();
+        $jurnal = Jurnal::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KEBAHASAAN.b2', compact('jurnal'));
     }
@@ -447,7 +447,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function b3()
     {
-        $terbitan_umum = Terbitan_Umum::all();
+        $terbitan_umum = Terbitan_Umum::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KEBAHASAAN.b3', compact('terbitan_umum'));
     }
@@ -465,7 +465,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function b4()
     {
-        $penyuluhan = Penyuluhan::all();
+        $penyuluhan = Penyuluhan::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KEBAHASAAN.b4', compact('penyuluhan'));
     }
@@ -483,8 +483,8 @@ class ValidatorController extends Controller
     //======================================================================
     public function b5()
     {
-        $pesuluh = Pesuluh::all();
-        $penyuluhan = Penyuluhan::all();
+        $pesuluh = Pesuluh::orderBy('validasi', 'ASC')->get();
+        $penyuluhan = Penyuluhan::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KEBAHASAAN.b5', compact('pesuluh', 'penyuluhan'));
     }
@@ -502,7 +502,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function b6()
     {
-        $penghargaan_bahasa = Penghargaan_Bahasa::all();
+        $penghargaan_bahasa = Penghargaan_Bahasa::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KEBAHASAAN.b6', compact('penghargaan_bahasa'));
     }
@@ -520,7 +520,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function b7()
     {
-        $duta_nasional = Duta_Nasional::all();
+        $duta_nasional = Duta_Nasional::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KEBAHASAAN.b7', compact('duta_nasional'));
     }
@@ -538,7 +538,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function b8()
     {
-        $duta_provinsi = Duta_Provinsi::all();
+        $duta_provinsi = Duta_Provinsi::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KEBAHASAAN.b8', compact('duta_provinsi'));
     }
@@ -557,7 +557,7 @@ class ValidatorController extends Controller
     //VALIDASI KATEGORI C
     public function c1()
     {
-        $bengkel_sastra_dan_bahasa = Bengkel_Sastra_Dan_Bahasa::all();
+        $bengkel_sastra_dan_bahasa = Bengkel_Sastra_Dan_Bahasa::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KESASTRAAN.c1', compact('bengkel_sastra_dan_bahasa'));
     }
@@ -575,7 +575,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function c2()
     {
-        $penghargaan_sastra = Penghargaan_Sastra::all();
+        $penghargaan_sastra = Penghargaan_Sastra::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KESASTRAAN.c2', compact('penghargaan_sastra'));
     }
@@ -593,7 +593,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function c3()
     {
-        $musikalisasi_puisi_nasional = Musikalisasi_Puisi_Nasional::all();
+        $musikalisasi_puisi_nasional = Musikalisasi_Puisi_Nasional::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KESASTRAAN.c3', compact('musikalisasi_puisi_nasional'));
     }
@@ -611,7 +611,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function c4()
     {
-        $musikalisasi_puisi_provinsi = Musikalisasi_Puisi_Provinsi::all();
+        $musikalisasi_puisi_provinsi = Musikalisasi_Puisi_Provinsi::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KESASTRAAN.c4', compact('musikalisasi_puisi_provinsi'));
     }
@@ -629,7 +629,7 @@ class ValidatorController extends Controller
     //VALIDASI KATEGORI D
     public function d1()
     {
-        $komunitas_bahasa = Komunitas_Bahasa::all();
+        $komunitas_bahasa = Komunitas_Bahasa::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KOMUNITAS.d1', compact('komunitas_bahasa'));
     }
@@ -647,7 +647,7 @@ class ValidatorController extends Controller
     //======================================================================
     public function d2()
     {
-        $komunitas_sastra = Komunitas_Sastra::all();
+        $komunitas_sastra = Komunitas_Sastra::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.KOMUNITAS.d2', compact('komunitas_sastra'));
     }
@@ -665,7 +665,7 @@ class ValidatorController extends Controller
     //VALIDASI KATEGORI E
     public function e1()
     {
-        $penelitian = Penelitian::all();
+        $penelitian = Penelitian::orderBy('validasi', 'ASC')->get();
 
         return view('VALIDATOR.PENELITIAN.e1', compact('penelitian'));
     }
