@@ -82,7 +82,9 @@
                                 data-id="{{ $a->id }}"
                                 >Ganti Foto
                             </button>
-                            <a class="foto2" href="{{ url('/admin/kelola_foto/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
+                            @if ($key != 0)
+                                <a class="foto2" href="{{ url('/admin/kelola_foto/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
+                            @endif
                         </div>
                     </div>
                 </div>
