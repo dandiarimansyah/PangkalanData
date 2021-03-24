@@ -44,8 +44,8 @@ class Kerja_SamaExport implements FromCollection, WithMapping, WithHeadings, Sho
         return [
             $data->kategori,
             $data->instansi,
-            $data->tanggal_awal,
-            $data->tanggal_akhir,
+            \Carbon\Carbon::parse($data->tanggal_awal)->format('d-m-Y'),
+            \Carbon\Carbon::parse($data->tanggal_akhir)->format('d-m-Y'),
             $data->nomor,
             $data->perihal,
             $data->keterangan,

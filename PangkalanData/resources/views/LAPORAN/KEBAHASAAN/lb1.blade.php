@@ -65,6 +65,7 @@
             <label>Berdasarkan Kategori</label>
             <div class="custom_select">
               <select name="kategori">
+                <option value="">[SEMUA]</option>
                 <option value="KAMUS">KAMUS</option>
                 <option value="ENSIKLOPEDIA">ENSIKLOPEDIA</option>
                 <option value="TESAURUS">TESAURUS</option>

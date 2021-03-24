@@ -65,6 +65,7 @@
           <label>Berdasarkan Kategori</label>
           <div class="custom_select">
             <select name="kategori">
+              <option value="">[SEMUA]</option>
               <option value="Bahasa">Bahasa</option>
               <option value="Sastra">Sastra</option>
             </select>

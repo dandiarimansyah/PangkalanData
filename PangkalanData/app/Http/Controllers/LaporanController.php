@@ -253,58 +253,63 @@ class LaporanController extends Controller
         $tim_redaksi = $request->tim_redaksi;
         $kategori = $request->kategori;
 
-        if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '') {
+        if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '' and $request->kategori == '') {
+            $data = Kamus::all();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '' and $request->kategori != '') {
+            $data = Kamus::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->where('kategori', $request->kategori)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi == '' and $request->kategori == '') {
+            $data = Kamus::where('info_produk', $request->info_produk)
+                ->get();
+        } elseif ($request->judul != '' and $request->info_produk == '' and $request->tim_redaksi == '' and $request->kategori == '') {
+            $data = Kamus::where('judul', 'like', '%' . $request->judul . '%')
+                ->get();
+        } elseif ($request->tim_redaksi != '' and $request->judul == '' and $request->info_produk == '' and $request->kategori == '') {
+            $data = Kamus::where('tim_redaksi', $request->tim_redaksi)
+                ->get();
+        } elseif ($request->kategori != '' and $request->judul == '' and $request->tim_redaksi == '' and $request->info_produk == '') {
             $data = Kamus::where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi == '') {
-            $data = Kamus::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi == '' and $request->kategori == '') {
+            $data = Kamus::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
                 ->get();
-        } elseif ($request->info_produk == '' and $request->judul != '' and $request->tim_redaksi == '') {
-            $data = Kamus::where('kategori', $request->kategori)
-                ->where('judul', $request->judul)
-                ->get();
-        } elseif ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi != '') {
-            $data = Kamus::where('kategori', $request->kategori)
+        } elseif ($request->info_produk != '' and $request->tim_redaksi != '' and $request->judul == '' and $request->kategori == '') {
+            $data = Kamus::where('info_produk', $request->info_produk)
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi == '') {
-            $data = Kamus::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
-                ->where('judul', $request->judul)
+        } elseif ($request->info_produk != '' and $request->kategori != '' and $request->tim_redaksi == '' and $request->judul == '') {
+            $data = Kamus::where('info_produk', $request->info_produk)
+                ->where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi != '') {
-            $data = Kamus::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
+        } elseif ($request->judul != '' and $request->tim_redaksi != '' and $request->info_produk == '' and $request->kategori == '') {
+            $data = Kamus::where('judul', 'like', '%' . $request->judul . '%')
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
-        } elseif ($request->info_produk == '' and $request->judul != '' and $request->tim_redaksi != '') {
-            $data = Kamus::where('kategori', $request->kategori)
-                ->where('tim_redaksi', $request->tim_redaksi)
-                ->where('judul', $request->judul)
+        } elseif ($request->judul != '' and $request->kategori != '' and $request->info_produk == '' and $request->tim_redaksi == '') {
+            $data = Kamus::where('judul', 'like', '%' . $request->judul . '%')
+                ->where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '') {
-            $data = Kamus::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
-                ->where('judul', $request->judul)
+        } elseif ($request->tim_redaksi != '' and $request->kategori != '' and $request->info_produk == '' and $request->judul == '') {
+            $data = Kamus::where('tim_redaksi', $request->tim_redaksi)
+                ->where('kategori', $request->kategori)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '' or $request->kategori == '') {
+            $data = Kamus::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
                 ->where('tim_redaksi', $request->tim_redaksi)
+                ->orWhere('kategori', 'like', '%' . $request->kategori . '%')
+                ->get();
+        } elseif ($request->info_produk != '' or $request->judul != '' and $request->tim_redaksi != '' and $request->kategori == '') {
+            $data = Kamus::where('tim_redaksi', $request->tim_redaksi)
+                ->where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->orWhere('judul', 'like', '%' . $request->judul . '%')
                 ->get();
         }
-
-        /////////////
-        // $a = Model::query();
-
-        // if (kondisi) {
-        //     $a->where();
-        // }
-        // if (kondisi) {
-        //     $a->where();
-        // }
-        // $a->get()
-        /////////////
-
-
-
         $data = $data->where('validasi', 'sudah');
 
         return view('LAPORAN.KEBAHASAAN.tampil_lb1', compact('data', 'kategori', 'judul', 'info_produk', 'tim_redaksi'));
@@ -318,41 +323,61 @@ class LaporanController extends Controller
         $tim_redaksi = $request->tim_redaksi;
         $kategori = $request->kategori;
 
-        if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '') {
+        if ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi == '' and $request->kategori == '') {
+            $data = Jurnal::all();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '' and $request->kategori != '') {
+            $data = Jurnal::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
+                ->where('tim_redaksi', $request->tim_redaksi)
+                ->where('kategori', $request->kategori)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi == '' and $request->kategori == '') {
+            $data = Jurnal::where('info_produk', $request->info_produk)
+                ->get();
+        } elseif ($request->judul != '' and $request->info_produk == '' and $request->tim_redaksi == '' and $request->kategori == '') {
+            $data = Jurnal::where('judul', 'like', '%' . $request->judul . '%')
+                ->get();
+        } elseif ($request->tim_redaksi != '' and $request->judul == '' and $request->info_produk == '' and $request->kategori == '') {
+            $data = Jurnal::where('tim_redaksi', $request->tim_redaksi)
+                ->get();
+        } elseif ($request->kategori != '' and $request->judul == '' and $request->tim_redaksi == '' and $request->info_produk == '') {
             $data = Jurnal::where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi == '') {
-            $data = Jurnal::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi == '' and $request->kategori == '') {
+            $data = Jurnal::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
                 ->get();
-        } elseif ($request->info_produk == '' and $request->judul != '' and $request->tim_redaksi == '') {
-            $data = Jurnal::where('kategori', $request->kategori)
-                ->where('judul', $request->judul)
-                ->get();
-        } elseif ($request->info_produk == '' and $request->judul == '' and $request->tim_redaksi != '') {
-            $data = Jurnal::where('kategori', $request->kategori)
+        } elseif ($request->info_produk != '' and $request->tim_redaksi != '' and $request->judul == '' and $request->kategori == '') {
+            $data = Jurnal::where('info_produk', $request->info_produk)
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi == '') {
-            $data = Jurnal::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
-                ->where('judul', $request->judul)
+        } elseif ($request->info_produk != '' and $request->kategori != '' and $request->tim_redaksi == '' and $request->judul == '') {
+            $data = Jurnal::where('info_produk', $request->info_produk)
+                ->where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul == '' and $request->tim_redaksi != '') {
-            $data = Jurnal::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
+        } elseif ($request->judul != '' and $request->tim_redaksi != '' and $request->info_produk == '' and $request->kategori == '') {
+            $data = Jurnal::where('judul', 'like', '%' . $request->judul . '%')
                 ->where('tim_redaksi', $request->tim_redaksi)
                 ->get();
-        } elseif ($request->info_produk == '' and $request->judul != '' and $request->tim_redaksi != '') {
-            $data = Jurnal::where('kategori', $request->kategori)
-                ->where('tim_redaksi', $request->tim_redaksi)
-                ->where('judul', $request->judul)
+        } elseif ($request->judul != '' and $request->kategori != '' and $request->info_produk == '' and $request->tim_redaksi == '') {
+            $data = Jurnal::where('judul', 'like', '%' . $request->judul . '%')
+                ->where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '') {
-            $data = Jurnal::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
-                ->where('judul', $request->judul)
+        } elseif ($request->tim_redaksi != '' and $request->kategori != '' and $request->info_produk == '' and $request->judul == '') {
+            $data = Jurnal::where('tim_redaksi', $request->tim_redaksi)
+                ->where('kategori', $request->kategori)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->tim_redaksi != '' or $request->kategori == '') {
+            $data = Jurnal::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
                 ->where('tim_redaksi', $request->tim_redaksi)
+                ->orWhere('kategori', 'like', '%' . $request->kategori . '%')
+                ->get();
+        } elseif ($request->info_produk != '' or $request->judul != '' and $request->tim_redaksi != '' and $request->kategori == '') {
+            $data = Jurnal::where('tim_redaksi', $request->tim_redaksi)
+                ->where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->orWhere('judul', 'like', '%' . $request->judul . '%')
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');
@@ -368,41 +393,99 @@ class LaporanController extends Controller
         $penulis = $request->penulis;
         $kategori = $request->kategori;
 
-        if ($request->info_produk == '' and $request->judul == '' and $request->penulis == '') {
+        // if ($request->info_produk == '' and $request->judul == '' and $request->penulis == '') {
+        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
+        //         ->get();
+        // } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis == '') {
+        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
+        //         ->where('info_produk', $request->info_produk)
+        //         ->get();
+        // } elseif ($request->info_produk == '' and $request->judul != '' and $request->penulis == '') {
+        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
+        //         ->where('judul', $request->judul)
+        //         ->get();
+        // } elseif ($request->info_produk == '' and $request->judul == '' and $request->penulis != '') {
+        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
+        //         ->where('penulis', $request->penulis)
+        //         ->get();
+        // } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis == '') {
+        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
+        //         ->where('info_produk', $request->info_produk)
+        //         ->where('judul', $request->judul)
+        //         ->get();
+        // } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis != '') {
+        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
+        //         ->where('info_produk', $request->info_produk)
+        //         ->where('penulis', $request->penulis)
+        //         ->get();
+        // } elseif ($request->info_produk == '' and $request->judul != '' and $request->penulis != '') {
+        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
+        //         ->where('penulis', $request->penulis)
+        //         ->where('judul', $request->judul)
+        //         ->get();
+        // } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis != '') {
+        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
+        //         ->where('info_produk', $request->info_produk)
+        //         ->where('judul', $request->judul)
+        //         ->where('penulis', $request->penulis)
+        //         ->get();
+        // }
+
+        if ($request->info_produk == '' and $request->judul == '' and $request->penulis == '' and $request->kategori == '') {
+            $data = Terbitan_Umum::all();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis != '' and $request->kategori != '') {
+            $data = Terbitan_Umum::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
+                ->where('penulis', $request->penulis)
+                ->where('kategori', $request->kategori)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis == '' and $request->kategori == '') {
+            $data = Terbitan_Umum::where('info_produk', $request->info_produk)
+                ->get();
+        } elseif ($request->judul != '' and $request->info_produk == '' and $request->penulis == '' and $request->kategori == '') {
+            $data = Terbitan_Umum::where('judul', 'like', '%' . $request->judul . '%')
+                ->get();
+        } elseif ($request->penulis != '' and $request->judul == '' and $request->info_produk == '' and $request->kategori == '') {
+            $data = Terbitan_Umum::where('penulis', $request->penulis)
+                ->get();
+        } elseif ($request->kategori != '' and $request->judul == '' and $request->penulis == '' and $request->info_produk == '') {
             $data = Terbitan_Umum::where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis == '') {
-            $data = Terbitan_Umum::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis == '' and $request->kategori == '') {
+            $data = Terbitan_Umum::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
                 ->get();
-        } elseif ($request->info_produk == '' and $request->judul != '' and $request->penulis == '') {
-            $data = Terbitan_Umum::where('kategori', $request->kategori)
-                ->where('judul', $request->judul)
-                ->get();
-        } elseif ($request->info_produk == '' and $request->judul == '' and $request->penulis != '') {
-            $data = Terbitan_Umum::where('kategori', $request->kategori)
+        } elseif ($request->info_produk != '' and $request->penulis != '' and $request->judul == '' and $request->kategori == '') {
+            $data = Terbitan_Umum::where('info_produk', $request->info_produk)
                 ->where('penulis', $request->penulis)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis == '') {
-            $data = Terbitan_Umum::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
-                ->where('judul', $request->judul)
+        } elseif ($request->info_produk != '' and $request->kategori != '' and $request->penulis == '' and $request->judul == '') {
+            $data = Terbitan_Umum::where('info_produk', $request->info_produk)
+                ->where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis != '') {
-            $data = Terbitan_Umum::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
+        } elseif ($request->judul != '' and $request->penulis != '' and $request->info_produk == '' and $request->kategori == '') {
+            $data = Terbitan_Umum::where('judul', 'like', '%' . $request->judul . '%')
                 ->where('penulis', $request->penulis)
                 ->get();
-        } elseif ($request->info_produk == '' and $request->judul != '' and $request->penulis != '') {
-            $data = Terbitan_Umum::where('kategori', $request->kategori)
-                ->where('penulis', $request->penulis)
-                ->where('judul', $request->judul)
+        } elseif ($request->judul != '' and $request->kategori != '' and $request->info_produk == '' and $request->penulis == '') {
+            $data = Terbitan_Umum::where('judul', 'like', '%' . $request->judul . '%')
+                ->where('kategori', $request->kategori)
                 ->get();
-        } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis != '') {
-            $data = Terbitan_Umum::where('kategori', $request->kategori)
-                ->where('info_produk', $request->info_produk)
-                ->where('judul', $request->judul)
+        } elseif ($request->penulis != '' and $request->kategori != '' and $request->info_produk == '' and $request->judul == '') {
+            $data = Terbitan_Umum::where('penulis', $request->penulis)
+                ->where('kategori', $request->kategori)
+                ->get();
+        } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis != '' or $request->kategori == '') {
+            $data = Terbitan_Umum::where('info_produk', $request->info_produk)
+                ->where('judul', 'like', '%' . $request->judul . '%')
                 ->where('penulis', $request->penulis)
+                ->orWhere('kategori', 'like', '%' . $request->kategori . '%')
+                ->get();
+        } elseif ($request->info_produk != '' or $request->judul != '' and $request->penulis != '' and $request->kategori == '') {
+            $data = Terbitan_Umum::where('penulis', $request->penulis)
+                ->where('kategori', $request->kategori)
+                ->where('info_produk', $request->info_produk)
+                ->orWhere('judul', 'like', '%' . $request->judul . '%')
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');

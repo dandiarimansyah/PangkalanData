@@ -80,7 +80,6 @@ class Komunitas_BahasaExport implements FromCollection, WithMapping, WithHeading
         return [
             [
                 'Nama Komunitas',
-                'Provinsi',
                 'Kota',
                 'Kecamatan',
                 'Alamat',

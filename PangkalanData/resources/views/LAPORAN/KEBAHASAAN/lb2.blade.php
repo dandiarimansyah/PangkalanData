@@ -65,6 +65,7 @@
           <label>Kategori*</label>
           <div class="custom_select">
             <select name="kategori">
+              <option value="">[SEMUA]</option>
               <option value="JURNAL">JURNAL</option>
               <option value="MAJALAH">MAJALAH</option>
             </select>

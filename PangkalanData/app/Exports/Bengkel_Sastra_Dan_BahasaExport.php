@@ -49,8 +49,8 @@ class Bengkel_Sastra_Dan_BahasaExport implements FromCollection, WithMapping, Wi
     {
         return [
             $data->kota,
-            $data->tanggal_awal_pelaksanaan,
-            $data->tanggal_akhir_pelaksanaan,
+            \Carbon\Carbon::parse($data->tanggal_awal_pelaksanaan)->format('d-m-Y'),
+            \Carbon\Carbon::parse($data->tanggal_akhir_pelaksanaan)->format('d-m-Y'),
             $data->nama_kegiatan,
             $data->pemateri,
             $data->jumlah_peserta,

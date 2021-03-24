@@ -31,41 +31,61 @@ class Terbitan_UmumExport implements FromCollection, WithMapping, WithHeadings, 
      */
     public function collection()
     {
-        if ($this->info_produk == '' and $this->judul == '' and $this->penulis == '') {
+        if ($this->info_produk == '' and $this->judul == '' and $this->penulis == '' and $this->kategori == '') {
+            $data = Terbitan_Umum::all();
+        } elseif ($this->info_produk != '' and $this->judul != '' and $this->penulis != '' and $this->kategori != '') {
+            $data = Terbitan_Umum::where('info_produk', $this->info_produk)
+                ->where('judul', 'like', '%' . $this->judul . '%')
+                ->where('penulis', $this->penulis)
+                ->where('kategori', $this->kategori)
+                ->get();
+        } elseif ($this->info_produk != '' and $this->judul == '' and $this->penulis == '' and $this->kategori == '') {
+            $data = Terbitan_Umum::where('info_produk', $this->info_produk)
+                ->get();
+        } elseif ($this->judul != '' and $this->info_produk == '' and $this->penulis == '' and $this->kategori == '') {
+            $data = Terbitan_Umum::where('judul', 'like', '%' . $this->judul . '%')
+                ->get();
+        } elseif ($this->penulis != '' and $this->judul == '' and $this->info_produk == '' and $this->kategori == '') {
+            $data = Terbitan_Umum::where('penulis', $this->penulis)
+                ->get();
+        } elseif ($this->kategori != '' and $this->judul == '' and $this->penulis == '' and $this->info_produk == '') {
             $data = Terbitan_Umum::where('kategori', $this->kategori)
                 ->get();
-        } elseif ($this->info_produk != '' and $this->judul == '' and $this->penulis == '') {
-            $data = Terbitan_Umum::where('kategori', $this->kategori)
-                ->where('info_produk', $this->info_produk)
+        } elseif ($this->info_produk != '' and $this->judul != '' and $this->penulis == '' and $this->kategori == '') {
+            $data = Terbitan_Umum::where('info_produk', $this->info_produk)
+                ->where('judul', 'like', '%' . $this->judul . '%')
                 ->get();
-        } elseif ($this->info_produk == '' and $this->judul != '' and $this->penulis == '') {
-            $data = Terbitan_Umum::where('kategori', $this->kategori)
-                ->where('judul', $this->judul)
-                ->get();
-        } elseif ($this->info_produk == '' and $this->judul == '' and $this->penulis != '') {
-            $data = Terbitan_Umum::where('kategori', $this->kategori)
+        } elseif ($this->info_produk != '' and $this->penulis != '' and $this->judul == '' and $this->kategori == '') {
+            $data = Terbitan_Umum::where('info_produk', $this->info_produk)
                 ->where('penulis', $this->penulis)
                 ->get();
-        } elseif ($this->info_produk != '' and $this->judul != '' and $this->penulis == '') {
-            $data = Terbitan_Umum::where('kategori', $this->kategori)
-                ->where('info_produk', $this->info_produk)
-                ->where('judul', $this->judul)
+        } elseif ($this->info_produk != '' and $this->kategori != '' and $this->penulis == '' and $this->judul == '') {
+            $data = Terbitan_Umum::where('info_produk', $this->info_produk)
+                ->where('kategori', $this->kategori)
                 ->get();
-        } elseif ($this->info_produk != '' and $this->judul == '' and $this->penulis != '') {
-            $data = Terbitan_Umum::where('kategori', $this->kategori)
-                ->where('info_produk', $this->info_produk)
+        } elseif ($this->judul != '' and $this->penulis != '' and $this->info_produk == '' and $this->kategori == '') {
+            $data = Terbitan_Umum::where('judul', 'like', '%' . $this->judul . '%')
                 ->where('penulis', $this->penulis)
                 ->get();
-        } elseif ($this->info_produk == '' and $this->judul != '' and $this->penulis != '') {
-            $data = Terbitan_Umum::where('kategori', $this->kategori)
-                ->where('penulis', $this->penulis)
-                ->where('judul', $this->judul)
+        } elseif ($this->judul != '' and $this->kategori != '' and $this->info_produk == '' and $this->penulis == '') {
+            $data = Terbitan_Umum::where('judul', 'like', '%' . $this->judul . '%')
+                ->where('kategori', $this->kategori)
                 ->get();
-        } elseif ($this->info_produk != '' and $this->judul != '' and $this->penulis != '') {
-            $data = Terbitan_Umum::where('kategori', $this->kategori)
-                ->where('info_produk', $this->info_produk)
-                ->where('judul', $this->judul)
+        } elseif ($this->penulis != '' and $this->kategori != '' and $this->info_produk == '' and $this->judul == '') {
+            $data = Terbitan_Umum::where('penulis', $this->penulis)
+                ->where('kategori', $this->kategori)
+                ->get();
+        } elseif ($this->info_produk != '' and $this->judul != '' and $this->penulis != '' or $this->kategori == '') {
+            $data = Terbitan_Umum::where('info_produk', $this->info_produk)
+                ->where('judul', 'like', '%' . $this->judul . '%')
                 ->where('penulis', $this->penulis)
+                ->orWhere('kategori', 'like', '%' . $this->kategori . '%')
+                ->get();
+        } elseif ($this->info_produk != '' or $this->judul != '' and $this->penulis != '' and $this->kategori == '') {
+            $data = Terbitan_Umum::where('penulis', $this->penulis)
+                ->where('kategori', $this->kategori)
+                ->where('info_produk', $this->info_produk)
+                ->orWhere('judul', 'like', '%' . $this->judul . '%')
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');

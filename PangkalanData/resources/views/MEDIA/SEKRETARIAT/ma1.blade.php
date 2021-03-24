@@ -55,7 +55,15 @@
                 @forelse ($kerja_sama as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> tanggal_awal}} <br>sampai<br> {{ $a -> tanggal_akhir}}  </td>
+                        <td>
+                            Mulai: {{ \Carbon\Carbon::parse($a->tanggal_awal)->format('d-m-Y')}} 
+                            <br> 
+                            @if ($a -> tanggal_akhir == null)
+                                Berakhir: - </td>
+                            @else
+                                Berakhir: {{ \Carbon\Carbon::parse($a->tanggal_akhir)->format('d-m-Y')}}
+                            @endif
+                        </td>
                         <!-- <td>Balai Bahasa Jawa Tengah</td> -->
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> kategori}}</td>

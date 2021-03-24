@@ -31,41 +31,61 @@ class JurnalExport implements FromCollection, WithMapping, WithHeadings, ShouldA
      */
     public function collection()
     {
-        if ($this->info_produk == '' and $this->judul == '' and $this->tim_redaksi == '') {
+        if ($this->info_produk == '' and $this->judul == '' and $this->tim_redaksi == '' and $this->kategori == '') {
+            $data = Jurnal::all();
+        } elseif ($this->info_produk != '' and $this->judul != '' and $this->tim_redaksi != '' and $this->kategori != '') {
+            $data = Jurnal::where('info_produk', $this->info_produk)
+                ->where('judul', 'like', '%' . $this->judul . '%')
+                ->where('tim_redaksi', $this->tim_redaksi)
+                ->where('kategori', $this->kategori)
+                ->get();
+        } elseif ($this->info_produk != '' and $this->judul == '' and $this->tim_redaksi == '' and $this->kategori == '') {
+            $data = Jurnal::where('info_produk', $this->info_produk)
+                ->get();
+        } elseif ($this->judul != '' and $this->info_produk == '' and $this->tim_redaksi == '' and $this->kategori == '') {
+            $data = Jurnal::where('judul', 'like', '%' . $this->judul . '%')
+                ->get();
+        } elseif ($this->tim_redaksi != '' and $this->judul == '' and $this->info_produk == '' and $this->kategori == '') {
+            $data = Jurnal::where('tim_redaksi', $this->tim_redaksi)
+                ->get();
+        } elseif ($this->kategori != '' and $this->judul == '' and $this->tim_redaksi == '' and $this->info_produk == '') {
             $data = Jurnal::where('kategori', $this->kategori)
                 ->get();
-        } elseif ($this->info_produk != '' and $this->judul == '' and $this->tim_redaksi == '') {
-            $data = Jurnal::where('kategori', $this->kategori)
-                ->where('info_produk', $this->info_produk)
+        } elseif ($this->info_produk != '' and $this->judul != '' and $this->tim_redaksi == '' and $this->kategori == '') {
+            $data = Jurnal::where('info_produk', $this->info_produk)
+                ->where('judul', 'like', '%' . $this->judul . '%')
                 ->get();
-        } elseif ($this->info_produk == '' and $this->judul != '' and $this->tim_redaksi == '') {
-            $data = Jurnal::where('kategori', $this->kategori)
-                ->where('judul', $this->judul)
-                ->get();
-        } elseif ($this->info_produk == '' and $this->judul == '' and $this->tim_redaksi != '') {
-            $data = Jurnal::where('kategori', $this->kategori)
+        } elseif ($this->info_produk != '' and $this->tim_redaksi != '' and $this->judul == '' and $this->kategori == '') {
+            $data = Jurnal::where('info_produk', $this->info_produk)
                 ->where('tim_redaksi', $this->tim_redaksi)
                 ->get();
-        } elseif ($this->info_produk != '' and $this->judul != '' and $this->tim_redaksi == '') {
-            $data = Jurnal::where('kategori', $this->kategori)
-                ->where('info_produk', $this->info_produk)
-                ->where('judul', $this->judul)
+        } elseif ($this->info_produk != '' and $this->kategori != '' and $this->tim_redaksi == '' and $this->judul == '') {
+            $data = Jurnal::where('info_produk', $this->info_produk)
+                ->where('kategori', $this->kategori)
                 ->get();
-        } elseif ($this->info_produk != '' and $this->judul == '' and $this->tim_redaksi != '') {
-            $data = Jurnal::where('kategori', $this->kategori)
-                ->where('info_produk', $this->info_produk)
+        } elseif ($this->judul != '' and $this->tim_redaksi != '' and $this->info_produk == '' and $this->kategori == '') {
+            $data = Jurnal::where('judul', 'like', '%' . $this->judul . '%')
                 ->where('tim_redaksi', $this->tim_redaksi)
                 ->get();
-        } elseif ($this->info_produk == '' and $this->judul != '' and $this->tim_redaksi != '') {
-            $data = Jurnal::where('kategori', $this->kategori)
-                ->where('tim_redaksi', $this->tim_redaksi)
-                ->where('judul', $this->judul)
+        } elseif ($this->judul != '' and $this->kategori != '' and $this->info_produk == '' and $this->tim_redaksi == '') {
+            $data = Jurnal::where('judul', 'like', '%' . $this->judul . '%')
+                ->where('kategori', $this->kategori)
                 ->get();
-        } elseif ($this->info_produk != '' and $this->judul != '' and $this->tim_redaksi != '') {
-            $data = Jurnal::where('kategori', $this->kategori)
-                ->where('info_produk', $this->info_produk)
-                ->where('judul', $this->judul)
+        } elseif ($this->tim_redaksi != '' and $this->kategori != '' and $this->info_produk == '' and $this->judul == '') {
+            $data = Jurnal::where('tim_redaksi', $this->tim_redaksi)
+                ->where('kategori', $this->kategori)
+                ->get();
+        } elseif ($this->info_produk != '' and $this->judul != '' and $this->tim_redaksi != '' or $this->kategori == '') {
+            $data = Jurnal::where('info_produk', $this->info_produk)
+                ->where('judul', 'like', '%' . $this->judul . '%')
                 ->where('tim_redaksi', $this->tim_redaksi)
+                ->orWhere('kategori', 'like', '%' . $this->kategori . '%')
+                ->get();
+        } elseif ($this->info_produk != '' or $this->judul != '' and $this->tim_redaksi != '' and $this->kategori == '') {
+            $data = Jurnal::where('tim_redaksi', $this->tim_redaksi)
+                ->where('kategori', $this->kategori)
+                ->where('info_produk', $this->info_produk)
+                ->orWhere('judul', 'like', '%' . $this->judul . '%')
                 ->get();
         }
         $data = $data->where('validasi', 'sudah');

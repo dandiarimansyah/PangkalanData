@@ -59,6 +59,7 @@
                             @else
                                 Berakhir: {{ \Carbon\Carbon::parse($a->tanggal_akhir)->format('d-m-Y')}}
                             @endif
+                        </td>
                         <!-- <td>Balai Bahasa Jawa Tengah</td> -->
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> kategori}}</td>

@@ -26,7 +26,7 @@ class KepegawaianExport implements FromCollection, WithMapping, WithHeadings, Sh
     public function map($data): array
     {
         return [
-            $data->tanggal_diperbarui,
+            \Carbon\Carbon::parse($data->tanggal_diperbarui)->format('d-m-Y'),
             $data->semua_kelamin,
             $data->laki,
             $data->perempuan,

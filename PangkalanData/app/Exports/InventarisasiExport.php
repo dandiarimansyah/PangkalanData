@@ -26,6 +26,7 @@ class InventarisasiExport implements FromCollection, WithMapping, WithHeadings, 
     public function map($data): array
     {
         return [
+            $data->updated_at->format('d-m-Y'),
             $data->tahun_anggaran,
             $data->laptop,
             $data->komputer,
@@ -46,6 +47,7 @@ class InventarisasiExport implements FromCollection, WithMapping, WithHeadings, 
     {
         return [
             [
+                'Tanggal Diperbarui',
                 'Tahun Anggaran',
                 'Laptop',
                 'Komputer',

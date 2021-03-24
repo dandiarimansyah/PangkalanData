@@ -46,6 +46,7 @@ class Tanah_BangunanExport implements FromCollection, WithMapping, WithHeadings,
     public function map($data): array
     {
         return [
+            $data->updated_at->format('d-m-Y'),
             $data->alamat,
             $data->status_tanah,
             $data->sertif_tanah,
@@ -61,6 +62,7 @@ class Tanah_BangunanExport implements FromCollection, WithMapping, WithHeadings,
     {
         return [
             [
+                'Tanggal Data',
                 'Alamat',
                 'Status Tanah',
                 'Sertif Tanah',

@@ -26,6 +26,7 @@ class PerpustakaanExport implements FromCollection, WithMapping, WithHeadings, S
     public function map($data): array
     {
         return [
+            $data->updated_at->format('d-m-Y'),
             $data->jumlah_buku,
             $data->jumlah_judul,
             $data->jenis_buku,
@@ -38,6 +39,7 @@ class PerpustakaanExport implements FromCollection, WithMapping, WithHeadings, S
     {
         return [
             [
+                'Tanggal Diperbarui',
                 'Jumlah Buku',
                 'Jumlah Judul',
                 'Jenis Buku',

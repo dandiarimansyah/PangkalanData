@@ -54,23 +54,14 @@ class GrafikController extends Controller
 
         $tahun = range($tahun_awal, $tahun_akhir);
 
-        // $data = Anggaran::where('validasi', 'sudah')->orderBy('tahun_anggaran')->get();
-
         foreach ($tahun as $a) {
             $temp = Anggaran::where('tahun_anggaran', $a)->where('validasi', 'sudah')->first();
-            $total[] = $temp->nilai_anggaran;
+            if ($temp != null) {
+                $total[] = $temp["nilai_anggaran"];
+            } else {
+                $total[] = null;
+            }
         }
-
-        // $data = Anggaran::selectRaw("DATE_FORMAT(created_at, '%Y') AS tahun, COUNT(*) AS total")->groupBy('tahun')->get();
-
-        // menyiapkan data untuk chart
-        // $tahun = [];
-        // $total = [];
-
-        // foreach ($data as $a) {
-        //     $tahun[] = $a->tahun_anggaran;
-        //     $total[] = $a->nilai_anggaran;
-        // }
 
         return view('GRAFIK.SEKRETARIAT.ga1', compact('tahun_awal', 'tahun_akhir', 'tahun', 'total'));
     }

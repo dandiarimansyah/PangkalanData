@@ -27,14 +27,13 @@
         <thead>
             <tr>
                 <th rowspan="2">NO</th>
-                <!-- <th rowspan="2">TANGGAL DATA</th> -->
-                <!-- <th rowspan="2">BALAI/KANTOR</th> -->
+                <th style="max-width: 70px" rowspan="2">TANGGAL DATA</th>
                 <th colspan="2">TANAH</th>
                 <th colspan="2">BANGUNAN</th>
                 <th rowspan="2">KONDISI</th>
-                <th rowspan="2">STATUS PEMEROLEHAN</th>
+                <th style="max-width: 80px"  rowspan="2">STATUS PEMEROLEHAN</th>
                 <th rowspan="2">KETERANGAN</th>
-                <th style="max-width: 240px" rowspan="2">DOKUMEN</th>
+                <th style="max-width: 150px" rowspan="2">DOKUMEN</th>
             </tr>
             <tr>
                 <th>STATUS</th>
@@ -49,9 +48,7 @@
           @forelse ($tanah_bangunan as $key => $a)
               <tr>
                   <td>{{ $key + 1}}</td>
-                  <!-- <td></td> -->
-                  <!-- <td>{{ $a -> kantor}}</td> -->
-                  <!-- <td>{{ $a -> alamat}}</td> -->
+                  <td>{{ $a -> created_at->format('d-m-Y')}}</td>
                   <td>{{ $a -> status_tanah}}</td>
                   <td>{{ $a -> sertif_tanah}}</td>
                   <td>{{ $a -> status_bangunan}}</td>
