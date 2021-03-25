@@ -11,5 +11,5 @@ class Duta_Provinsi extends Model
 
     protected $table = "duta_provinsi";
 
-    protected $fillable = ['provinsi', 'tahun', 'pemenang_1_1', 'pemenang_1_2', 'pemenang_2_1', 'pemenang_2_2', 'pemenang_3_1', 'pemenang_3_2', 'favorit_1', 'favorit_2', 'keterangan', 'media', 'validasi'];
+    protected $fillable = ['tahun', 'pemenang_1_1', 'pemenang_1_2', 'pemenang_2_1', 'pemenang_2_2', 'pemenang_3_1', 'pemenang_3_2', 'favorit_1', 'favorit_2', 'keterangan', 'media', 'validasi'];
 }

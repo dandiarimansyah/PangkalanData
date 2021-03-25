@@ -11,5 +11,5 @@ class Komunitas_Bahasa extends Model
 
     protected $table = "komunitas_bahasa";
 
-    protected $fillable = ['nama_komunitas', 'provinsi', 'kabupaten/kota', 'kecamatan', 'alamat', 'koordinat', 'keterangan', 'validasi'];
+    protected $fillable = ['nama_komunitas', 'kota', 'kecamatan', 'alamat', 'koordinat', 'keterangan', 'validasi'];
 }

@@ -11,5 +11,5 @@ class Komunitas_Sastra extends Model
 
     protected $table = "komunitas_sastra";
 
-    protected $fillable = ['nama_komunitas', 'provinsi', 'kabupaten/kota', 'kecamatan', 'alamat', 'koordinat', 'keterangan', 'validasi'];
+    protected $fillable = ['nama_komunitas', 'kota', 'kecamatan', 'alamat', 'koordinat', 'keterangan', 'validasi'];
 }

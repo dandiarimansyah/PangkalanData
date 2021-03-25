@@ -11,5 +11,5 @@ class Perpustakaan extends Model
 
     protected $table = "perpustakaan";
 
-    protected $fillable = ['provinsi', 'unit', 'jumlah_buku', 'jumlah_judul', 'jenis_buku', 'jumlah_pengunjung', 'sumber_data', 'validasi'];
+    protected $fillable = ['jumlah_buku', 'jumlah_judul', 'jenis_buku', 'jumlah_pengunjung', 'sumber_data', 'validasi'];
 }

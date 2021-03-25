@@ -11,5 +11,5 @@ class Realisasi_Anggaran extends Model
 
     protected $table = "realisasi_anggaran";
 
-    protected $fillable = ['unit', 'nilai_realisasi', 'besar_dana', 'keterangan', 'validasi'];
+    protected $fillable = ['tahun_realisasi', 'besar_dana', 'keterangan', 'validasi'];
 }
