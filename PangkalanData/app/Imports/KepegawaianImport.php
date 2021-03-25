@@ -20,10 +20,10 @@ class KepegawaianImport implements ToCollection
 
                 // $tgl2 = ($row[7] - 25569) * 86400;
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
-                $tanggal = new Carbon();
+                // $tanggal = new Carbon();
 
                 $data = new Kepegawaian();
-                $data->tanggal_diperbarui = $tanggal;
+                // $data->tanggal_diperbarui = $tanggal;
                 $data->semua_kelamin = $row[3];
                 $data->laki = $row[4];
                 $data->perempuan = $row[5];

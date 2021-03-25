@@ -393,44 +393,6 @@ class LaporanController extends Controller
         $penulis = $request->penulis;
         $kategori = $request->kategori;
 
-        // if ($request->info_produk == '' and $request->judul == '' and $request->penulis == '') {
-        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
-        //         ->get();
-        // } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis == '') {
-        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
-        //         ->where('info_produk', $request->info_produk)
-        //         ->get();
-        // } elseif ($request->info_produk == '' and $request->judul != '' and $request->penulis == '') {
-        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
-        //         ->where('judul', $request->judul)
-        //         ->get();
-        // } elseif ($request->info_produk == '' and $request->judul == '' and $request->penulis != '') {
-        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
-        //         ->where('penulis', $request->penulis)
-        //         ->get();
-        // } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis == '') {
-        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
-        //         ->where('info_produk', $request->info_produk)
-        //         ->where('judul', $request->judul)
-        //         ->get();
-        // } elseif ($request->info_produk != '' and $request->judul == '' and $request->penulis != '') {
-        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
-        //         ->where('info_produk', $request->info_produk)
-        //         ->where('penulis', $request->penulis)
-        //         ->get();
-        // } elseif ($request->info_produk == '' and $request->judul != '' and $request->penulis != '') {
-        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
-        //         ->where('penulis', $request->penulis)
-        //         ->where('judul', $request->judul)
-        //         ->get();
-        // } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis != '') {
-        //     $data = Terbitan_Umum::where('kategori', $request->kategori)
-        //         ->where('info_produk', $request->info_produk)
-        //         ->where('judul', $request->judul)
-        //         ->where('penulis', $request->penulis)
-        //         ->get();
-        // }
-
         if ($request->info_produk == '' and $request->judul == '' and $request->penulis == '' and $request->kategori == '') {
             $data = Terbitan_Umum::all();
         } elseif ($request->info_produk != '' and $request->judul != '' and $request->penulis != '' and $request->kategori != '') {

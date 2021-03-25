@@ -244,11 +244,11 @@ class EditController extends Controller
             'T_1A' => ['nullable', 'numeric'],
         ]);
 
-        $tanggal = new Carbon();
+        // $tanggal = new Carbon();
 
         $data = Kepegawaian::where('id', $id)
             ->update([
-                'tanggal_diperbarui' => $tanggal,
+                // 'tanggal_diperbarui' => $tanggal,
                 'semua_kelamin' => $request->get('semua_kelamin'),
                 'laki' => $request->get('laki'),
                 'perempuan' => $request->get('perempuan'),

@@ -202,10 +202,10 @@ class InputController extends Controller
             'T_1A' => ['nullable', 'numeric'],
         ]);
 
-        $tanggal = new Carbon();
+        // $tanggal = new Carbon();
 
         $data = new Kepegawaian();
-        $data->tanggal_diperbarui = $tanggal;
+        // $data->tanggal_diperbarui = $tanggal;
         $data->semua_kelamin = $request->semua_kelamin;
         $data->laki = $request->laki;
         $data->perempuan = $request->perempuan;

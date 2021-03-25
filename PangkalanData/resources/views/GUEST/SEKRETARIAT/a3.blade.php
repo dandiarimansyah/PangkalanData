@@ -58,8 +58,7 @@
                 @forelse ($kepegawaian as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $a -> tanggal_diperbarui}}</td>
-                        <!-- <td>Balai Bahasa Jawa Tengah</td> -->
+                        <td>{{ $a -> updated_at->format('d-m-Y')}}</td>
                         <td>{{ $a -> semua_kelamin}}</td>
                         <td>{{ $a -> laki}}</td>
                         <td>{{ $a -> perempuan}}</td>

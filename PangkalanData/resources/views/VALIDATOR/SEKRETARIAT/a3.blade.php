@@ -107,7 +107,7 @@
                 @forelse ($kepegawaian as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ \Carbon\Carbon::parse($a->tanggal_diperbarui)->format('d-m-Y')}}</td>
+                        <td>{{ $a -> updated_at->format('d-m-Y')}}</td>
                         <td>{{ $a -> semua_kelamin}}</td>
                         <td>{{ $a -> laki}}</td>
                         <td>{{ $a -> perempuan}}</td>

@@ -15,7 +15,6 @@ class CreateKepegawaianTable extends Migration
     {
         Schema::create('kepegawaian', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal_diperbarui');
             $table->integer('semua_kelamin')->nullable();
             $table->integer('laki')->nullable();
             $table->integer('perempuan')->nullable();
