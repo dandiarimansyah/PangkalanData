@@ -7,7 +7,7 @@
 <div class="isi-konten">
 
     <div class="judul">
-        <th>DATA BALAI BAHASA JAWA TENGAH</th>
+        <th>DATA BALAI BAHASA PROVINSI JAWA TENGAH</th>
     </div>
 
     @include('tabel_data')

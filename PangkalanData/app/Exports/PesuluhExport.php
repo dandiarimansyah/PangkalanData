@@ -66,9 +66,11 @@ class PesuluhExport implements FromCollection, WithMapping, WithHeadings, Should
     public function map($data): array
     {
         return [
+            $data->penyuluhan->kota,
+            $data->penyuluhan->nama_kegiatan,
             $data->nama,
             $data->tempat_lahir,
-            $data->tanggal_lahir,
+            \Carbon\Carbon::parse($data->tanggal_lahir)->format('d-m-Y'),
             $data->instansi,
             $data->tingkat,
         ];
@@ -78,6 +80,8 @@ class PesuluhExport implements FromCollection, WithMapping, WithHeadings, Should
     {
         return [
             [
+                'Kota',
+                'Kegiatan',
                 'Nama',
                 'Tempat Lahir',
                 'Tanggal Lahir',

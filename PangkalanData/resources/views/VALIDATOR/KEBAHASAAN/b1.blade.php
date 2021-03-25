@@ -1,5 +1,37 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    .validasi{
+        margin-left: 20px; 
+        margin-right: 20px; 
+    }
+
+    .content-table th {
+        padding: 10px 8px 10px 8px !important;
+    }
+
+    /* th, td{
+        max-width: 120px;
+    } */
+
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuValidasi')

@@ -44,7 +44,6 @@
                     <th>NO</th>
                     <th>KABUPATEN/KOTA</th>
                     <th>KEGIATAN</th>
-                    <th>TAHUN</th>
                     <th>NAMA</th>
                     <th>TEMPAT LAHIR</th>
                     <th>TGL LAHIR</th>
@@ -52,16 +51,14 @@
                     <th>TINGKAT</th>
                 </tr>
 
-
                 @forelse ($data as $key => $a)
                     <tr>
                         <td>{{ $key + 1}}</td>
                         <td>{{ $a -> penyuluhan -> kota}}</td>
                         <td>{{ $a -> penyuluhan -> nama_kegiatan}}</td>
-                        <td>Tahun</td>
                         <td>{{ $a -> nama}}</td>
                         <td>{{ $a -> tempat_lahir}}</td>
-                        <td>{{ $a -> tanggal_lahir}}</td>
+                        <td>{{ \Carbon\Carbon::parse($a->tanggal_lahir)->format('d-m-Y') }}</td>
                         <td>{{ $a -> instansi}}</td>
                         <td>{{ $a -> tingkat}}</td>
                         
