@@ -150,10 +150,14 @@
             $(document).on('click','#tombol_validasi',function(e){
                 e.preventDefault();
                 let url = $(this).attr('href');
+                let data = []
+                $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
+
+                let jumlah = data.length;
 
                 Swal.fire({
                     title: 'Validasi Data?',
-                    text: "Data yang telah dicentang akan divalidasi!",
+                    text: "Jumlah data yang akan divalidasi : " + jumlah,
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#028B40',
@@ -163,8 +167,6 @@
                     reverseButtons: true
                     }).then((result) => {
                     if (result.isConfirmed) {
-                        let data = []
-                        $(".check:checked").each((i, e) => data.push(e.getAttribute('data-id')))
                 
                         $.ajax({
                             type: "post",
