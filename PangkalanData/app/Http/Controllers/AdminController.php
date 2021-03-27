@@ -157,25 +157,25 @@ class AdminController extends Controller
         return view('ADMIN.kelola_foto', compact('foto_login', 'foto_beranda'));
     }
 
-    public function tambah_foto_login(Request $request)
-    {
-        $request->validate([
-            'file' => ['required', 'max:10000', 'image'],
-        ]);
+    // public function tambah_foto_login(Request $request)
+    // {
+    //     $request->validate([
+    //         'file' => ['required', 'max:10000', 'image'],
+    //     ]);
 
-        $filenameWithExt = $request->file('file')->getClientOriginalName();
-        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-        $extension = $request->file('file')->getClientOriginalExtension();
-        $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-        $path = $request->file('file')->storeAs('public/Foto', $filenameSimpan);
+    //     $filenameWithExt = $request->file('file')->getClientOriginalName();
+    //     $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+    //     $extension = $request->file('file')->getClientOriginalExtension();
+    //     $filenameSimpan = "foto_loginxxx" . $extension;
+    //     $path = $request->file('file')->storeAs('public/Foto', $filenameSimpan);
 
-        $data = new Foto();
-        $data->id = 1;
-        $data->gambar = $filenameSimpan;
-        $data->save();
+    //     $data = new Foto();
+    //     $data->id = 1;
+    //     $data->gambar = $filenameSimpan;
+    //     $data->save();
 
-        return back()->with('toast_success', 'Foto Berhasil Diunggah!');
-    }
+    //     return back()->with('toast_success', 'Foto Berhasil Diunggah!');
+    // }
 
     public function tambah_foto_beranda(Request $request)
     {
@@ -196,7 +196,30 @@ class AdminController extends Controller
         return back()->with('toast_success', 'Foto Berhasil Diunggah!');
     }
 
-    public function update_foto($id, Request $request)
+    public function update_foto_login($id, Request $request)
+    {
+        $request->validate([
+            'file' => ['required', 'max:10000', 'image'],
+        ]);
+
+        $data = Foto::find($id);
+        Storage::delete('public/Foto/' . $data->gambar);
+
+        $filenameWithExt = $request->file('file')->getClientOriginalName();
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+        $extension = $request->file('file')->getClientOriginalExtension();
+        $filenameSimpan = "foto_login.png";
+        $path = $request->file('file')->storeAs('public/Foto', $filenameSimpan);
+
+        $data = Foto::where('id', $id)
+            ->update([
+                'gambar' => $filenameSimpan
+            ]);
+
+        return back()->with('toast_success', 'Foto Berhasil Diubah!');
+    }
+
+    public function update_foto_beranda($id, Request $request)
     {
         $request->validate([
             'file' => ['required', 'max:10000', 'image'],

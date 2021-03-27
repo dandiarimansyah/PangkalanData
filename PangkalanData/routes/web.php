@@ -102,9 +102,10 @@ Route::group(['middleware' => ['auth']], function () {
 
         ////========================================== KELOLA FOTO  ===================
         Route::get('/admin/kelola_foto', [AdminController::class, 'kelola_foto']);
-        Route::post('/admin/kelola_foto/tambah_foto_login', [AdminController::class, 'tambah_foto_login']);
+        // Route::post('/admin/kelola_foto/tambah_foto_login', [AdminController::class, 'tambah_foto_login']);
         Route::post('/admin/kelola_foto/tambah_foto_beranda', [AdminController::class, 'tambah_foto_beranda']);
-        Route::post('/admin/kelola_foto/{id}', [AdminController::class, 'update_foto']);
+        Route::post('/admin/kelola_foto_login/{id}', [AdminController::class, 'update_foto_login']);
+        Route::post('/admin/kelola_foto_beranda/{id}', [AdminController::class, 'update_foto_beranda']);
         Route::get('/admin/kelola_foto/hapus/{id}', [AdminController::class, 'hapus_foto']);
     });
 

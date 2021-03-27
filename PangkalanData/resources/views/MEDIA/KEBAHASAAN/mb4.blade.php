@@ -1,5 +1,29 @@
 @extends('PARTIAL.indexV')
 
+@section('style')
+<style>
+    .content-table th, .content-table td {
+        padding: 10px 8px 10px 8px !important;
+        max-width: 190px;
+    }
+
+    th.sorting,
+    th.sorting_asc,
+    th.sorting_desc {
+        padding-right: 10px !important;
+    }
+
+    th.sorting::before,
+    th.sorting::after,
+    th.sorting_asc::before,
+    th.sorting_asc::after,
+    th.sorting_desc::before,
+    th.sorting_desc::after {
+        content: none !important;
+    }
+</style>
+@endsection
+
 @section('content')
 
 @include('PARTIAL.MenuMedia')
@@ -56,13 +80,14 @@
                             @else
                                 -
                             @endif 
-                        </td>                        <td>{{ $a -> nama_kegiatan}}</td>
+                        </td>
+                        <td>{{ $a -> nama_kegiatan}}</td>
                         <td>{{ $a -> narasumber}}</td>
                         <td>{{ $a -> sasaran}}</td>
                         <td>{{ $a -> jumlah_peserta}}</td>
                         <td>{{ $a -> materi}}</td>
                         
-                        <td>
+                        <td style="display: flex; max-width:240px">
                         @auth
                             @if (Auth::user()->level != 'tamu')
                                 @if ($a->media == "")

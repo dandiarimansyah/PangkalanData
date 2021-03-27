@@ -21,16 +21,17 @@
 
     <h1 class="judul_foto">FOTO HALAMAN LOGIN</h1>
     
-    @if (!$foto_login->isEmpty())
+    @if (!$foto_login->isEmpty())        
         <div class="foto_login">
             <div class="card" style="width: 600px;">
-                <img class="card-img-top" src="{{ Storage::url('Foto/' . $foto_login[0]->gambar) }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ Storage::url('Foto/foto_login.png') }}" alt="Foto">
                 <div class="tombol_foto">
                     <button type="button"
                         id="edit_item" class="foto1"
                         data-toggle="modal" 
                         data-target="#edit-modal"
                         data-id="{{ $foto_login[0]->id }}"
+                        data-jenis="login"
                         >Ganti Foto
                     </button>
                 </div>
@@ -38,24 +39,22 @@
         </div>
     @else
         <div class="foto_login">
-            {{-- <div class="card" style="width: 600px;"> --}}
-                <div class="wrapper" style="padding: 0">
-                    <div class="form">
-                        <form id="edit_form" action="{{ url('/admin/kelola_foto/tambah_foto_login')}}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                                <div class="modal-body">
-                                    <p style="font-size: 16px; margin-top:5px">Pilih foto untuk diunggah!</p>
-                                    <input name="file" type="file" required='required' oninvalid="this.setCustomValidity('Silahkan Masukkan Foto!')"
-                                    oninput="this.setCustomValidity('')">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                    <button type="submit" class="btn btn-primary">Unggah</button>
-                                </div>
+            <div class="wrapper" style="padding: 0">
+                <div class="form">
+                    <form id="edit_form" action="{{ url('/admin/kelola_foto/tambah_foto_login')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                            <div class="modal-body">
+                                <p style="font-size: 16px; margin-top:5px">Pilih foto untuk diunggah!</p>
+                                <input name="file" type="file" required='required' oninvalid="this.setCustomValidity('Silahkan Masukkan Foto!')"
+                                oninput="this.setCustomValidity('')">
                             </div>
-                        </form>
-                    </div>
-            {{-- </div> --}}
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary">Unggah</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
         </div>
     @endif
 
@@ -80,6 +79,7 @@
                                 data-toggle="modal" 
                                 data-target="#edit-modal"
                                 data-id="{{ $a->id }}"
+                                data-jenis="beranda"
                                 >Ganti Foto
                             </button>
                             @if ($key != 0)
@@ -166,8 +166,13 @@
     <script>
         $(document).on('click','#edit_item',function(){
             let id = $(this).data('id');
+            let jenis = $(this).data('jenis');
             
-            $('#edit_form').attr('action', '/admin/kelola_foto/' + id);
+            if(jenis == "login"){
+                $('#edit_form').attr('action', '/admin/kelola_foto_login/' + id);
+            }else{
+                $('#edit_form').attr('action', '/admin/kelola_foto_beranda/' + id);
+            }
         })
     </script>
 @endpush

@@ -28,6 +28,10 @@ body {
     border: 3px solid black;
 }
 
+.foto_login img {
+    height: 270px;
+}
+
 .tombol_foto {
     padding: 15px;
     display: flex;
