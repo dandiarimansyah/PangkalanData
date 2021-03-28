@@ -79,7 +79,7 @@
             <label>Berdasarkan Info Produk</label>
             <div class="custom_select">
               <select name="info_produk">
-                <option disabled="disabled" selected="selected" value="">--Pilih Info--</option>
+                <option selected="selected" value="">--Pilih Info--</option>
                 <option value="Produk Pusat">Produk Pusat</option>
                 <option value="Produk Balai/Kantor">Produk Balai/Kantor</option>
                 <option value="Produk Luar">Produk Luar</option>
