@@ -77,8 +77,8 @@ class ExportController extends Controller
     //=======================================================================================
     public function pdf_a2(Request $request)
     {
-        if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
-            $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
+        if ($request->pilih == 'tahun' and $request->tahun_realisasi != '') {
+            $data = Realisasi_Anggaran::where('tahun_realisasi', $request->tahun_realisasi)
                 ->get();
         } else {
             $data = Realisasi_Anggaran::all();

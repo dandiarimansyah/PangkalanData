@@ -158,23 +158,21 @@ class LaporanController extends Controller
     public function tampil_la2(Request $request)
     {
         $request->validate([
-            'tahun_anggaran' => ['nullable', 'numeric'],
+            'tahun_realisasi' => ['nullable', 'numeric'],
         ]);
 
         $pilih = $request->pilih;
-        $tahun_anggaran = $request->tahun_anggaran;
+        $tahun_realisasi = $request->tahun_realisasi;
 
-        if ($request->pilih == 'tahun' and $request->tahun_anggaran != '') {
-            $data = Realisasi_Anggaran::where('tahun_anggaran', $request->tahun_anggaran)
+        if ($request->pilih == 'tahun' and $request->tahun_realisasi != '') {
+            $data = Realisasi_Anggaran::where('tahun_realisasi', $request->tahun_realisasi)
                 ->get();
         } else {
             $data = Realisasi_Anggaran::all();
         }
-
-
         $data = $data->where('validasi', 'sudah');
 
-        return view('LAPORAN.SEKRETARIAT.tampil_la2', compact('data', 'pilih', 'tahun_anggaran'));
+        return view('LAPORAN.SEKRETARIAT.tampil_la2', compact('data', 'pilih', 'tahun_realisasi'));
     }
 
     //===================================================================================================

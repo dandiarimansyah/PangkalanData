@@ -45,7 +45,7 @@
                     <th>NO</th>
                     <th>Nama Tamu</th>
                     <th>Username</th>
-                    <th>Password</th>
+                    {{-- <th>Password</th> --}}
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -56,7 +56,7 @@
                         <td>{{ $loop-> index + 1 }}</td>
                         <td>{{ $a -> name}}</td>
                         <td>{{ $a -> username}}</td>
-                        <td>{{ $a -> password}}</td>
+                        {{-- <td>{{ $a -> password}}</td> --}}
                         <td style="display: flex; justify-content:center;">
                             <button type="button" class="edit"
                                 id="edit_akun" 

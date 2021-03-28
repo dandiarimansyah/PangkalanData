@@ -27,8 +27,8 @@ class Realisasi_AnggaranExport implements FromCollection, WithMapping, WithHeadi
      */
     public function collection()
     {
-        if ($this->pilih == 'tahun' and $this->tahun_anggaran != '') {
-            $data = Realisasi_Anggaran::where('tahun_anggaran', $this->tahun_anggaran)
+        if ($this->pilih == 'tahun' and $this->tahun_realisasi != '') {
+            $data = Realisasi_Anggaran::where('tahun_realisasi', $this->tahun_realisasi)
                 ->get();
         } else {
             $data = Realisasi_Anggaran::all();
@@ -53,7 +53,7 @@ class Realisasi_AnggaranExport implements FromCollection, WithMapping, WithHeadi
         return [
             [
                 // 'Unit',
-                'Nilai Realisasi',
+                'Tahun Realisasi',
                 'Besar Dana',
                 'Keterangan',
             ]

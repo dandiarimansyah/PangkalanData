@@ -36,10 +36,10 @@
           <label style="width: auto" for="tahun">Berdasarkan Tahun</label>
         </div> 
 
-        <div class="alert-danger">{{ $errors->first('tahun_anggaran') }}</div>
+        <div class="alert-danger">{{ $errors->first('tahun_realisasi') }}</div>
         <div class="inputfield-kecil">
             <label>Masukkan Tahun</label>
-            <input id="tahun_anggaran" name="tahun_anggaran" type="text" class="input">
+            <input id="tahun_realisasi" name="tahun_realisasi" type="text" class="input">
         </div>
 
         <div class="tombol">

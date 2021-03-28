@@ -16,7 +16,7 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>TANGGAL REALISASI</th>
+                    <th>TAHUN REALISASI</th>
                     <!-- <th>UNIT/SATUAN KERJA</th> -->
                     <th>NILAI REALISASI(Rp.)</th>
                     <th>KETERANGAN</th>
