@@ -45,11 +45,11 @@
             <input readonly type="text" value="Balai Bahasa Provinsi Jawa Tengah" class="input">
         </div>  -->
 
-        <div class="alert-danger">{{ $errors->first('alamat') }}</div>
+        {{-- <div class="alert-danger">{{ $errors->first('alamat') }}</div>
         <div class="inputfield">
             <label>Alamat</label>
             <textarea name="alamat" class="textarea"></textarea>
-        </div>  
+        </div>   --}}
 
         <div class="inputfield-radio">
           <label class="label-atas">Status Tanah</label>

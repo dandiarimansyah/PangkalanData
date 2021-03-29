@@ -81,8 +81,6 @@
                                 data-toggle="modal" 
                                 data-target="#edit-modal"
                                 data-id="{{ $a->id }}"
-                                data-alamat="{{ $a->alamat }}"
-                                data-kantor="{{ $a->kantor }}"
                                 data-status_tanah="{{ $a->status_tanah }}"
                                 data-sertif_tanah="{{ $a->sertif_tanah }}"
                                 data-status_bangunan="{{ $a->status_bangunan }}"
