@@ -6,7 +6,9 @@
     <p>BALAI BAHASA PROVINSI JAWA TENGAH</p>
   </div>
 
-  <img class="belakang_beranda" src="{{ asset('Gambar/balai3.jpg')}}" alt="">
+  <div class="crop">
+    <img class="belakang_beranda" src="{{ asset('Gambar/balai3.jpg')}}" alt="">
+  </div>
 
   <div class="gambar_beranda">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
