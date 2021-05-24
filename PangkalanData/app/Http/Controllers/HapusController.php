@@ -25,6 +25,7 @@ use App\Models\Perpustakaan;
 use App\Models\Pesuluh;
 use App\Models\Tanah_Bangunan;
 use App\Models\Terbitan_Umum;
+use Illuminate\Support\Facades\Storage;
 
 class HapusController extends Controller
 {
@@ -62,6 +63,7 @@ class HapusController extends Controller
     {
         $data = Kerja_Sama::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -72,6 +74,7 @@ class HapusController extends Controller
     {
         $data = Tanah_Bangunan::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -102,6 +105,7 @@ class HapusController extends Controller
     {
         $data = Kamus::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -112,6 +116,7 @@ class HapusController extends Controller
     {
         $data = Jurnal::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -122,6 +127,7 @@ class HapusController extends Controller
     {
         $data = Terbitan_Umum::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -132,6 +138,7 @@ class HapusController extends Controller
     {
         $data = Penyuluhan::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -152,6 +159,7 @@ class HapusController extends Controller
     {
         $data = Penghargaan_Bahasa::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -162,6 +170,7 @@ class HapusController extends Controller
     {
         $data = Duta_Nasional::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -172,6 +181,7 @@ class HapusController extends Controller
     {
         $data = Duta_Provinsi::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -182,6 +192,7 @@ class HapusController extends Controller
     {
         $data = Bengkel_Sastra_Dan_Bahasa::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -192,6 +203,7 @@ class HapusController extends Controller
     {
         $data = Penghargaan_Sastra::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -202,6 +214,7 @@ class HapusController extends Controller
     {
         $data = Musikalisasi_Puisi_Nasional::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -212,6 +225,7 @@ class HapusController extends Controller
     {
         $data = Musikalisasi_Puisi_Provinsi::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
@@ -242,6 +256,7 @@ class HapusController extends Controller
     {
         $data = Penelitian::find($id);
         if ($data) {
+            Storage::delete($data->media);
             $data->delete();
         }
 
