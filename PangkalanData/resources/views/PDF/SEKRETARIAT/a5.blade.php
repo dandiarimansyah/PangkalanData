@@ -58,7 +58,6 @@
                     <th>IMB</th>
                 </tr>
 
-
               @forelse ($data as $key => $a)
                   <tr>
                       <td>{{ $key + 1}}</td>

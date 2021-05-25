@@ -164,7 +164,7 @@ body {
 
 .belakang_beranda {
     position: absolute;
-    top: 10;
+    top: 10px;
     filter: blur(8px);
     height: 100%;
     width: 100%;
@@ -521,9 +521,9 @@ p {
 }
 
 .content-table thead tr {
-    border-right: 1px solid #222a31cc;
-    border-left: 1px solid #222a31cc;
-    background-color: #222a31cc;
+    border-right: 1px solid #525252;
+    border-left: 1px solid #525252;
+    background-color: #525252;
     color: #ffffff;
     text-align: center;
     /* font-weight: bold; */
@@ -538,8 +538,8 @@ p {
 }
 
 .content-table td {
-    border-right: 1px solid #222a31cc;
-    border-left: 1px solid #222a31cc;
+    border-right: 1px solid #525252;
+    border-left: 1px solid #525252;
     padding: 5px 8px 5px 8px;
     text-align: center;
     border-bottom: 1px solid rgb(199, 199, 199);
@@ -559,18 +559,18 @@ p {
 }
 
 .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #222a31cc;
+    border-bottom: 2px solid #525252;
 }
 
 .content-table tbody tr.active-row {
     font-weight: bold;
-    color: #222a31cc;
+    color: #525252;
 }
 
 .total td {
     background-color: #7c7c7c2d;
     font-weight: bold;
-    border-top: 2px solid #222a31cc;
+    border-top: 2px solid #525252;
 }
 
 .validasi {
@@ -616,7 +616,7 @@ p {
     margin: 15px;
     margin-top: 15px;
     border-radius: 5px;
-    min-height: 66vh;
+    min-height: 67.3vh;
 }
 
 /* FORM INPUT */

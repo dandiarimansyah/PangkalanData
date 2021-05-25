@@ -283,7 +283,7 @@ class InputController extends Controller
         $request->validate([]);
 
         $data = new Tanah_Bangunan();
-        $data->alamat = $request->alamat;
+        // $data->alamat = $request->alamat;
         $data->status_tanah = $request->status_tanah;
         $data->sertif_tanah = $request->sertif_tanah;
         $data->status_bangunan = $request->status_bangunan;

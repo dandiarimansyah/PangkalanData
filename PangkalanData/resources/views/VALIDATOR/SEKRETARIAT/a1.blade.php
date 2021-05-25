@@ -73,9 +73,7 @@
                         <td>
                             <div class="validate"> 
                             @if ($a -> validasi == "belum")
-                            <form action="" method="POST">
                                 <input data-id="{{ $a->id }}" class="check" type="checkbox" value="sudah" name="validasi">
-                            </form>
                             @else
                                 <p>Tervalidasi</p>
                             @endif

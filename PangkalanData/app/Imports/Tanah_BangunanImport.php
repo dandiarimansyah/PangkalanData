@@ -20,7 +20,7 @@ class Tanah_BangunanImport implements ToCollection
                 // $tanggal2 = gmdate('Y-m-d', $tgl2);
 
                 $data = new Tanah_Bangunan();
-                $data->alamat = $row[3];
+                // $data->alamat = $row[3];
                 $data->status_tanah = $row[4];
                 $data->sertif_tanah = $row[5];
                 $data->status_bangunan = $row[6];
