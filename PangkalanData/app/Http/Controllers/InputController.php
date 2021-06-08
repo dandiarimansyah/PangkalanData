@@ -266,7 +266,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/kerja_sama', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/kerja_sama', $filenameSimpan);
         }
         $data->media = $media;
 
@@ -303,7 +303,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/tanah_dan_bangunan', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/tanah_dan_bangunan', $filenameSimpan);
         }
 
         $data->media = $media;
@@ -405,7 +405,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/kamus_ensiklopedia', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/kamus_ensiklopedia', $filenameSimpan);
         }
 
         $data->media = $media;
@@ -443,7 +443,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/jurnal_majalah', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/jurnal_majalah', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
@@ -475,7 +475,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/terbitan_umum', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/terbitan_umum', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
@@ -521,7 +521,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/penyuluhan', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/penyuluhan', $filenameSimpan);
         }
 
         $data->media = $media;
@@ -571,7 +571,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/penghargaan_bahasa', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/penghargaan_bahasa', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
@@ -602,7 +602,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/duta_bahasa_nasional', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/duta_bahasa_nasional', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
@@ -635,7 +635,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/duta_bahasa_provinsi', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/duta_bahasa_provinsi', $filenameSimpan);
         }
 
         $data->media = $media;
@@ -672,7 +672,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/bengkel_sastra_dan_bahasa', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/bengkel_sastra_dan_bahasa', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
@@ -699,7 +699,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/penghargaan_sastra', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/penghargaan_sastra', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
@@ -728,7 +728,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/musikalisasi_puisi_nasional', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/musikalisasi_puisi_nasional', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
@@ -757,7 +757,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/musikalisasi_puisi_provinsi', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/musikalisasi_puisi_provinsi', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
@@ -834,7 +834,7 @@ class InputController extends Controller
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('media')->getClientOriginalExtension();
             $filenameSimpan = $filename . '_' . time() . '.' . $extension;
-            $path = $request->file('media')->storeAs('public/penelitian', $filenameSimpan);
+            $media = $request->file('media')->storeAs('public/penelitian', $filenameSimpan);
         }
         $data->media = $media;
         $data->save();
