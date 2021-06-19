@@ -136,15 +136,21 @@ class AdminController extends Controller
     {
         $request->validate([
             'name' => ['required'],
-            'username' =>  ['required', 'unique'],
+            'username' =>  ['required'],
         ]);
 
         $data = User::where('id', $id)
             ->update([
                 'name' => $request->get('name'),
                 'username' => $request->get('username'),
-                'password' => bcrypt($request->get('password')),
             ]);
+
+        if ($request->get('password')) {
+            $data = User::where('id', $id)
+                ->update([
+                    'password' => bcrypt($request->get('password')),
+                ]);
+        }
 
         return back()->with('toast_success', 'Akun Berhasil Diedit!');
     }
