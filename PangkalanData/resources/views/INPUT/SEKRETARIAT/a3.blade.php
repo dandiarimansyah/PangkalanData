@@ -55,19 +55,19 @@
         <div class="alert-danger">{{ $errors->first('laki') }}</div>
         <div class="inputfield">
             <label>Jumlah Pegawai Laki-Laki</label>
-            <input name="laki" type="text" class="input">
+            <input name="laki" id="jum1" type="text" class="input jum">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('perempuan') }}</div>
         <div class="inputfield">
             <label>Jumlah Pegawai Perempuan</label>
-            <input name="perempuan" type="text" class="input">
+            <input name="perempuan" id="jum2" type="text" class="input jum">
         </div> 
 
         <div class="alert-danger">{{ $errors->first('semua_kelamin') }}</div>
         <div class="inputfield">
             <label>Jumlah Pegawai Keseluruhan</label>
-            <input name="semua_kelamin" type="text" class="input">
+            <input name="semua_kelamin" id="all" type="text" class="input" readonly placeholder="Terisi Otomatis">
         </div> 
 
         <label style="text-align: center; width:100%;font-weight:bold">Jumlah Pegawai per Tingkatan</label>
@@ -193,3 +193,24 @@
 
 </div>
 @endsection
+
+@push('scripts')
+<script>
+  $(document).on("keyup", ".jum", function(e){
+        var jum1 = $("#jum1").val();
+        if(jum1 == ""){
+          jum1 = "0";
+        }
+
+        var jum2 = $("#jum2").val();
+        if(jum2 == ""){
+          jum2 = "0";
+        }
+
+        var all = parseInt(jum1) + parseInt(jum2);
+
+        $("#all").val(all);
+  });
+</script>
+        
+@endpush
