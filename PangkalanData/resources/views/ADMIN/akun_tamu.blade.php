@@ -67,8 +67,11 @@
                                 data-username="{{ $a->username }}"
                                 data-password="{{ $a->password }}"
                             >Edit</button>
+                            
+                            @if ($key != 0)
+                                <a class="hapus" href="{{ url('/admin/akun_tamu/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
+                            @endif
 
-                            <a class="hapus" href="{{ url('/admin/akun_tamu/hapus/' . $a->id) }}" data-toggle="tooltip" id="pesan">Hapus</a>
                         </td>
                     </tr>
                 @empty
